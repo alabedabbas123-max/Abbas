@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">عباس IDE</string>
+
+    <string name="projects">المشاريع</string>
+    <string name="new_project">مشروع جديد</string>
+    <string name="project_name">اسم المشروع</string>
+    <string name="template">القالب</string>
+    <string name="create">إنشاء</string>
+    <string name="cancel">إلغاء</string>
+    <string name="ok">موافق</string>
+    <string name="save">حفظ</string>
+    <string name="save_all">حفظ الكل</string>
+    <string name="discard">تجاهل</string>
+    <string name="close">إغلاق</string>
+    <string name="delete">حذف</string>
+    <string name="remove">إزالة</string>
+    <string name="rename">إعادة تسمية</string>
+    <string name="refresh">تحديث</string>
+    <string name="undo">تراجع</string>
+    <string name="redo">إعادة</string>
+    <string name="settings">الإعدادات</string>
+
+    <string name="new_file">ملف جديد</string>
+    <string name="new_folder">مجلد جديد</string>
+    <string name="explorer">مستكشف الملفات</string>
+    <string name="open_navigation">فتح القائمة</string>
+
+    <string name="no_projects_title">لا توجد مشاريع بعد</string>
+    <string name="no_projects_message">اضغط الزر بالأسفل لإنشاء أول مشروع لك.</string>
+    <string name="no_file_open">لا يوجد ملف مفتوح</string>
+    <string name="open_a_file_message">افتح ملفاً من المستكشف لتبدأ التحرير.</string>
+
+    <string name="remove_project_message">إزالة هذا المشروع من القائمة؟ سيبقى المجلد على الجهاز.</string>
+    <string name="delete_message">حذف \"%1$s\" نهائياً؟</string>
+    <string name="close_tab_message">إغلاق هذا التبويب؟ ستفقد التعديلات غير المحفوظة.</string>
+    <string name="unsaved_changes_message">لديك تعديلات غير محفوظة.</string>
+    <string name="project_folder_missing">مجلد هذا المشروع لم يعد موجوداً.</string>
+
+    <string name="status_format">سطر %1$d، عمود %2$d &#8226; %3$s</string>
+
+    <string name="pref_category_editor">المحرر</string>
+    <string name="pref_theme">سمة الألوان</string>
+    <string name="pref_font_size">حجم الخط</string>
+    <string name="pref_tab_size">عرض الإزاحة</string>
+    <string name="pref_line_numbers">إظهار أرقام الأسطر</string>
+    <string name="pref_word_wrap">التفاف النص</string>
+    <string name="pref_auto_indent">إزاحة تلقائية</string>
+    <string name="pref_auto_close">إغلاق الأقواس تلقائياً</string>
+    <string name="pref_auto_save">الحفظ التلقائي عند الخروج</string>
+
+    <string-array name="theme_entries">
+        <item>داكن</item>
+        <item>فاتح</item>
+    </string-array>
+    <string-array name="font_size_entries">
+        <item>12 sp</item>
+        <item>14 sp</item>
+        <item>16 sp</item>
+        <item>18 sp</item>
+        <item>20 sp</item>
+    </string-array>
+    <string-array name="tab_size_entries">
+        <item>مسافتان</item>
+        <item>4 مسافات</item>
+        <item>8 مسافات</item>
+    </string-array>
+</resources>

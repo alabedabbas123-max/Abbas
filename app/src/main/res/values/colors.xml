@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#4F8CC9</color>
+    <color name="on_primary">#FFFFFF</color>
+    <color name="secondary">#6AAB73</color>
+
+    <color name="surface_dark">#26282C</color>
+    <color name="on_surface_dark">#E6E6E6</color>
+    <color name="on_surface_variant_dark">#9AA0A6</color>
+
+    <color name="explorer_background">#1E1F22</color>
+    <color name="editor_background">#1E1F22</color>
+    <color name="status_bar_background">#26282C</color>
+    <color name="divider">#33FFFFFF</color>
+</resources>

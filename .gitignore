@@ -10,5 +10,3 @@ captures/
 .cxx/
 tools/__pycache__/
 
-# سير عمل إعادة التحزيم ينتج ملفات هنا
-apk-output/*.apk

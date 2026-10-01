@@ -113,14 +113,25 @@ jobs:
           retention-days: 14
           if-no-files-found: warn
 
-      - name: Commit the report back to the branch
+      # Handing the APK back through the branch is the only transfer channel
+      # available: the agent's sandbox cannot reach GitHub's artifact storage.
+      # It is removed from the branch again as soon as it has been collected.
+      - name: Hand the APK back through the branch
         if: always()
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -- KayPro/build.gradle || true
+          mkdir -p apk-output
+          APK=$(ls KayPro/build/outputs/apk/debug/*.apk 2>/dev/null | head -1 || true)
+          if [ -n "$APK" ]; then
+            cp "$APK" "apk-output/KayPro-com.almlkaide.kaypro-debug.apk"
+            sha256sum apk-output/*.apk > apk-output/SHA256SUMS
+            ls -lh apk-output/
+            git add -f apk-output/
+          fi
           git add -f ci-reports/tolerant-build-report.md
           git diff --cached --quiet && echo "no change" && exit 0
-          git commit -m "ci: error-tolerant build report for ${{ github.sha }} [skip ci]"
+          git commit -m "ci: error-tolerant APK + report for ${{ github.sha }} [skip ci]"
           git pull --rebase origin "${{ github.ref_name }}"
           git push origin "HEAD:${{ github.ref_name }}"

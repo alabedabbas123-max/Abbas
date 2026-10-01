@@ -32,13 +32,15 @@ jobs:
 
       - name: Summarise what is inside
         run: |
-          set -e
+          # grep exits 1 when it finds nothing, which is the good outcome here.
+          JAVA=$(find KayPro -name '*.java' | wc -l)
+          LEFT=$(grep -rlE '(^[[:space:]]*L[0-9]+:[[:space:]]*$)|move-exception|monitor-enter' \
+                 --include='*.java' KayPro | wc -l || true)
+          APPID=$(grep -o "applicationId '[^']*'" KayPro/build.gradle || true)
           {
-            echo "- java files: $(find KayPro -name '*.java' | wc -l)"
-            echo "- files with \`goto L\`/\`move-exception\`/\`monitor-enter\` left:"
-            echo "  $(grep -rlE '(^[[:space:]]*L[0-9]+:[[:space:]]*$)|move-exception|monitor-enter' \
-                 --include='*.java' KayPro | wc -l)"
-            echo "- application id: $(grep -o \"applicationId '[^']*'\" KayPro/build.gradle)"
+            echo "- java files: $JAVA"
+            echo "- files still holding a raw Dalvik construct: $LEFT"
+            echo "- $APPID"
           } | tee summary.txt
 
       - name: Publish

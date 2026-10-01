@@ -16,6 +16,7 @@ on:
       - 'tools/tolerant-compile.gradle'
       - '.github/workflows/tolerant-apk.yml'
       - 'KayPro/**'
+      - 'apk-output/**'
   workflow_dispatch:
 
 permissions:

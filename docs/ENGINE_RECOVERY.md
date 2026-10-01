@@ -113,6 +113,30 @@ Dalvik يقفل كائنًا بتعليمتين منفصلتين، وJava لا �
 `javac` يُبلغ الآن عن **32,248 خطأ فحص أنواع**. الفحص أظهر أن جزءًا كبيرًا منها
 ينبع من عيبين **بنيويين لا يمكن إصلاحهما من هذا المصدر**:
 
+### أ-0. مكوّنات معلنة في الـ Manifest بلا شيفرة مصدرية
+
+الدليل الأقطع: من بين 56 مكوّنًا يعلنها `AndroidManifest.xml`، هناك **عشرة
+مكوّنات من التطبيق نفسه لا ملف مصدر لها إطلاقًا** (الباقي من مكتبات خارجية
+تحلّها Gradle):
+
+```
+com.aide.ui.PromoNotificationAlarmReceiver
+com.aide.ui.TrainerRuntimeReceiver
+com.aide.ui.build.java.RunJavaActivity
+com.aide.ui.build.java.RunTrainerJavaActivity
+com.aide.ui.build.javascript.RunJavaScriptActivity
+com.aide.ui.build.nativeexecutable.RunNativeExecutableActivity
+com.aide.ui.build.packagingservice.ExternalPackagingService
+com.aide.ui.preferences.PreferencesActivity
+com.aide.ui.scm.ExternalGitService
+com.aide.ui.trainer.TrainerNotificationAlarmReceiver
+```
+
+وكذلك `com.aide.ui.MainActivity` و`com.aide.ui.AIDEApplication` و
+`com.aide.ui.AIDEEditor` و`com.aide.ui.browsers.BrowserPager` و
+`com.aide.ui.views.editor.OEditor` — كلّها مُشار إليها من ملفات موجودة، ولا
+وجود لملفاتها.
+
 ### أ. ملفات فُقدت بسبب تعارض حالة الأحرف
 
 المُشوِّش (obfuscator) أنتج أسماء أصناف لا تختلف إلا في حالة الأحرف. حين حُزِمت
@@ -180,17 +204,37 @@ abcd/oa.java  abcd/qa.java                 مفقودة تمامًا (لا نس�
   فكّ تجميع **ناقص**، وبعض الأصناف فُقدت نهائيًا، وبنية أخرى فيه لا يمكن
   التعبير عنها بلغة Java أصلًا.
 
-### الطريق الموصِل إلى APK
+### الطريق الموصِل إلى APK — مُنفَّذ ومُختبَر
 
-الطريقة الموثوقة لتغيير حزمة تطبيق مبني من فكّ تجميع ناقص هي العمل على مستوى
-**bytecode** لا على مستوى المصدر:
+تغيير هوية تطبيق لا يستلزم إعادة ترجمته: معرّف التطبيق يعيش في مكان واحد هو
+خاصيّة `package` في الـ Manifest، وهو **مستقلّ تمامًا** عن أسماء حزم Java
+للأصناف داخل الـ DEX. لذا يمكن تغييره وإعادة تجميع نفس الـ DEX دون مساس —
+فيبقى سلوك التطبيق كما شُحن بالضبط.
 
-1. تزويدنا بملف **APK الأصلي** للتطبيق.
-2. إعادة تسمية الحزمة إلى `com.almlkaide.kaypro` على مستوى `AndroidManifest`
-   و`smali` عبر `apktool`، ثم إعادة البناء والتوقيع.
+خطّ الأنابيب جاهز في المستودع:
 
-هذا يُنتج APK قابلًا للتثبيت والاختبار بالحزمة المطلوبة، ويحافظ على سلوك
-التطبيق كما هو لأنه لا يمرّ بإعادة الترجمة من مصدر ناقص.
+| الملف | الدور |
+|---|---|
+| `tools/rewrite_manifest_package.py` | تعديل الـ Manifest بوعي بالعناصر |
+| `tools/repackage_apk.sh` | فكّ · تعديل · مزامنة smali · بناء · محاذاة · توقيع |
+| `.github/workflows/apk-repackage.yml` | تشغيل تلقائي عند وضع APK في `apk-input/` |
+
+**ما يُعاد تسميته:** خاصيّة `package`، الأذونات المخصّصة، سلطات مزوّدي المحتوى
+(authorities)، `taskAffinity`، وسلاسل النص داخل الـ DEX التي تساوي المعرّف
+القديم تمامًا (مقارنات `getPackageName()`).
+
+**ما يُحمى من إعادة التسمية:** أسماء أصناف المكوّنات (`android:name` على
+activity/service/receiver/provider، و`backupAgent`، و`targetActivity`) — تُجعل
+مطلقة مقابل المعرّف **القديم** أولًا كي تبقى مُشيرة إلى أصناف موجودة فعلًا في
+الـ DEX. كذلك تُترك `action` و`category` و`meta-data` دون مساس لأن الـ DEX ما
+زال يُصدر السلاسل القديمة.
+
+تم التحقق من الخطّ كاملًا على تطبيق حقيقي غير تافه (F-Droid) في التشغيل
+`36799517126`: فكّ ← تعديل الهوية ← إعادة بناء ← محاذاة ← توقيع ← تحقّق من
+المعرّف بـ `aapt dump badging` — كل المراحل نجحت.
+
+**ما يلزم منك:** ضع ملف الـ APK الأصلي في `apk-input/` (أو ضع رابط تنزيله في
+`apk-input/SOURCE_URL.txt`) وادفعه إلى الفرع. الناتج يصل في إصدار `apk-latest`.
 
 بديل ثانٍ: تزويدنا بـ **JAR/AAR مبني للمحرّك** (أو مصدره الأصلي غير المُفكَّك)،
 فتُحذف `libraries/java` ويُبنى المشروع من `java/` مقابل المحرّك الجاهز.

@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   validate:
@@ -54,7 +54,6 @@ jobs:
     name: Assemble debug APK
     runs-on: ubuntu-latest
     needs: validate
-    continue-on-error: true
     steps:
       - uses: actions/checkout@v4
 
@@ -68,8 +67,48 @@ jobs:
         run: yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses > /dev/null 2>&1 || true
 
       - name: assembleDebug
+        id: assemble
+        continue-on-error: true
         working-directory: KayPro
-        run: ./gradlew --no-daemon assembleDebug 2>&1 | tee ../assemble-debug.log
+        run: |
+          set -o pipefail
+          ./gradlew --no-daemon --stacktrace assembleDebug 2>&1 | tee ../assemble-debug.log
+
+      - name: Build report
+        if: always()
+        run: |
+          mkdir -p ci-reports
+          {
+            echo "# assembleDebug report"
+            echo
+            echo "- run: ${{ github.run_id }}"
+            echo "- commit: ${{ github.sha }}"
+            echo "- result: ${{ steps.assemble.outcome }}"
+            echo
+            echo '## error summary'
+            echo '```'
+            grep -E '^(/home/runner|.*\.java:[0-9]+:) ?error:|^[0-9]+ errors?$|^FAILURE:|^\* What went wrong:|^> Task .* FAILED' -n assemble-debug.log 2>/dev/null | head -60 || true
+            echo '```'
+            echo
+            echo '## last 150 log lines'
+            echo '```'
+            tail -n 150 assemble-debug.log 2>/dev/null || echo "no log"
+            echo '```'
+          } > ci-reports/assemble-debug-report.md
+          cp assemble-debug.log ci-reports/assemble-debug.log 2>/dev/null || true
+          ls -l KayPro/build/outputs/apk/debug/ 2>/dev/null >> ci-reports/assemble-debug-report.md || true
+          cat ci-reports/assemble-debug-report.md | head -40
+
+      - name: Commit report back to branch
+        if: always()
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f ci-reports/
+          git diff --cached --quiet && echo "no change" && exit 0
+          git commit -m "ci: assembleDebug report for ${{ github.sha }} [skip ci]"
+          git pull --rebase origin "${{ github.ref_name }}"
+          git push origin "HEAD:${{ github.ref_name }}"
 
       - name: Upload APK
         if: always()
@@ -77,12 +116,8 @@ jobs:
         with:
           name: KayPro-debug-apk
           path: KayPro/build/outputs/apk/debug/*.apk
-          if-no-files-found: ignore
+          if-no-files-found: warn
 
-      - name: Upload build log
+      - name: Fail if APK missing
         if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: assemble-debug-log
-          path: assemble-debug.log
-          if-no-files-found: ignore
+        run: test -n "$(ls KayPro/build/outputs/apk/debug/*.apk 2>/dev/null)"

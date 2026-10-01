@@ -1,0 +1,94 @@
+// Gradle init script: compile the recovered engine with ECJ instead of javac,
+// tolerating the errors the decompilation left behind.
+//
+//   ./gradlew -I ../tools/tolerant-compile.gradle assembleDebug
+//
+// Why
+// ---
+// KayPro's sources are a lossy JADX decompilation. 10 of the components the
+// manifest declares have no source file at all, and javac therefore reports
+// ~32k type errors and emits nothing -- so no APK can be produced the normal
+// way (see docs/ENGINE_RECOVERY.md).
+//
+// The Eclipse compiler has a mode javac does not: with -proceedOnError it still
+// writes a class file for every type it was given, replacing the body of each
+// method it could not resolve with `throw new Error("Unresolved compilation
+// problem")`. Everything that *does* resolve keeps working.
+//
+// That is exactly the trade that makes an installable build possible here: the
+// APK contains real code for the parts of the app that survived decompilation,
+// and fails loudly at runtime only where the source is genuinely missing.
+//
+// The script hands ECJ the exact source list and classpath AGP computed for
+// javac, and drops the result into the same output directory, so the rest of
+// the pipeline -- dexing, merging the libraries, packaging, signing -- runs
+// untouched.
+
+def ecjJar = System.getenv('ECJ_JAR')
+def ecjHeap = System.getenv('ECJ_HEAP') ?: '6g'
+
+gradle.projectsEvaluated {
+    gradle.rootProject.allprojects { project ->
+        project.tasks.matching { it.name.startsWith('compile') && it.name.endsWith('JavaWithJavac') }
+               .configureEach { task ->
+
+            // javac cannot get through these sources; let it report one error
+            // and step aside instead of failing the build.
+            task.options.failOnError = false
+            task.options.compilerArgs += ['-Xmaxerrs', '1', '-nowarn']
+
+            task.doLast {
+                if (ecjJar == null || !new File(ecjJar).exists()) {
+                    throw new GradleException("ECJ_JAR is not set or does not exist: ${ecjJar}")
+                }
+
+                def dest = task.destinationDirectory.get().asFile
+                dest.mkdirs()
+
+                def sources = task.source.files.findAll { it.name.endsWith('.java') }
+                def sourceList = new File(task.temporaryDir, 'ecj-sources.txt')
+                sourceList.text = sources.collect { it.absolutePath }.join('\n')
+
+                def cp = []
+                cp.addAll(task.classpath.files)
+                def bootstrap = task.options.bootstrapClasspath
+                if (bootstrap != null) {
+                    cp.addAll(bootstrap.files)
+                }
+                def platform = new File("${System.getenv('ANDROID_HOME')}/platforms/android-33/android.jar")
+                if (platform.exists()) {
+                    cp.add(platform)
+                }
+                def classpath = cp.unique().collect { it.absolutePath }.join(File.pathSeparator)
+
+                def log = new File(project.rootDir, "ecj-${task.name}.log")
+                logger.lifecycle("ECJ: compiling ${sources.size()} sources -> ${dest}")
+                logger.lifecycle("ECJ: ${cp.size()} classpath entries, log -> ${log}")
+
+                def out = new FileOutputStream(log)
+                def result = project.exec {
+                    commandLine 'java', "-Xmx${ecjHeap}", '-jar', ecjJar,
+                        '-nowarn',
+                        '-proceedOnError',
+                        '-maxProblems', '1000000',
+                        '-source', '1.8',
+                        '-target', '1.8',
+                        '-encoding', 'UTF-8',
+                        '-cp', classpath,
+                        '-d', dest.absolutePath,
+                        '@' + sourceList.absolutePath
+                    ignoreExitValue = true
+                    standardOutput = out
+                    errorOutput = out
+                }
+                out.close()
+
+                def classes = project.fileTree(dest) { include '**/*.class' }.files.size()
+                logger.lifecycle("ECJ: exit=${result.exitValue}, produced ${classes} class files")
+                if (classes == 0) {
+                    throw new GradleException("ECJ produced no class files - see ${log}")
+                }
+            }
+        }
+    }
+}

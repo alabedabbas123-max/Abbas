@@ -1,6 +1,6 @@
 package org.objectweb.asm;
 
-import androidx.core.provider.FontsContractCompat;
+import android.support.v4.provider.FontsContractCompat;
 import com.almlkaide.kaypro.android.dx.cf.attrib.AttAnnotationDefault;
 import com.almlkaide.kaypro.android.dx.cf.attrib.AttCode;
 import com.almlkaide.kaypro.android.dx.cf.attrib.AttDeprecated;

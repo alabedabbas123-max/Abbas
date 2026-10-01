@@ -6,7 +6,7 @@ import android.util.SparseArray;
 import android.util.SparseBooleanArray;
 import android.util.SparseIntArray;
 import android.util.SparseLongArray;
-import androidx.collection.SimpleArrayMap;
+import android.support.v4.util.SimpleArrayMap;
 import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Collection;
@@ -64,7 +64,7 @@ public final class ObjectUtils {
         return sparseLongArray == null || sparseLongArray.size() == 0;
     }
 
-    public static boolean isEmpty(androidx.collection.LongSparseArray longSparseArray) {
+    public static boolean isEmpty(android.support.v4.util.LongSparseArray longSparseArray) {
         return longSparseArray == null || longSparseArray.size() == 0;
     }
 
@@ -107,7 +107,7 @@ public final class ObjectUtils {
         if (Build.VERSION.SDK_INT >= 18 && (obj instanceof SparseLongArray) && ((SparseLongArray) obj).size() == 0) {
             return true;
         }
-        if ((obj instanceof androidx.collection.LongSparseArray) && ((androidx.collection.LongSparseArray) obj).size() == 0) {
+        if ((obj instanceof android.support.v4.util.LongSparseArray) && ((android.support.v4.util.LongSparseArray) obj).size() == 0) {
             return true;
         }
         return Build.VERSION.SDK_INT >= 16 && (obj instanceof LongSparseArray) && ((LongSparseArray) obj).size() == 0;
@@ -141,7 +141,7 @@ public final class ObjectUtils {
         return !isEmpty(sparseLongArray);
     }
 
-    public static boolean isNotEmpty(androidx.collection.LongSparseArray longSparseArray) {
+    public static boolean isNotEmpty(android.support.v4.util.LongSparseArray longSparseArray) {
         return !isEmpty(longSparseArray);
     }
 

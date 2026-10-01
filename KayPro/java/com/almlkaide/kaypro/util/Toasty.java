@@ -15,7 +15,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.support.annotation.CheckResult;
-import androidx.core.view.ViewCompat;
+import android.support.v4.view.ViewCompat;
 import com.blankj.utilcode.util.AppUtils;
 import com.blankj.utilcode.util.ResourceUtils;
 import com.almlkaide.kaypro.aide.AideR;

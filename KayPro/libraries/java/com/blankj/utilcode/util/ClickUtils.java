@@ -20,7 +20,7 @@ import android.util.StateSet;
 import android.view.MotionEvent;
 import android.view.TouchDelegate;
 import android.view.View;
-import androidx.core.view.ViewCompat;
+import android.support.v4.view.ViewCompat;
 
 public class ClickUtils {
     private static final long DEBOUNCING_DEFAULT_VALUE = 1000;

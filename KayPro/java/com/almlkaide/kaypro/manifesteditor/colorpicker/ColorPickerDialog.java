@@ -5,7 +5,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.graphics.Color;
-import androidx.core.provider.FontsContractCompat;
+import android.support.v4.provider.FontsContractCompat;
 import com.almlkaide.kaypro.manifesteditor.colorpicker.widgets.ClassB;
 import com.aide.common.ma;
 

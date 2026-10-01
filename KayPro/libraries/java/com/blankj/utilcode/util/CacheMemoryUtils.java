@@ -1,6 +1,6 @@
 package com.blankj.utilcode.util;
 
-import androidx.collection.LruCache;
+import android.support.v4.util.LruCache;
 import com.blankj.utilcode.constant.CacheConstants;
 import java.util.HashMap;
 import java.util.Map;

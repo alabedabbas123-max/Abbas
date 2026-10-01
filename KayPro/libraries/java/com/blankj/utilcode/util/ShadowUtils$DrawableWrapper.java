@@ -7,7 +7,7 @@ import android.graphics.PorterDuff;
 import android.graphics.Rect;
 import android.graphics.Region;
 import android.graphics.drawable.Drawable;
-import androidx.core.graphics.drawable.DrawableCompat;
+import android.support.v4.graphics.drawable.DrawableCompat;
 
 class ShadowUtils$DrawableWrapper extends Drawable implements Drawable.Callback {
     private Drawable mDrawable;

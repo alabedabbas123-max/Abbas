@@ -48,13 +48,9 @@ dependencies {
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support:recyclerview-v7:26.1.0'
 
-    // AndroidX APIs referenced by newer project additions.
-    implementation 'androidx.annotation:annotation:1.5.0'
-    implementation 'androidx.collection:collection:1.2.0'
-    implementation 'androidx.core:core:1.9.0'
-    implementation 'androidx.fragment:fragment:1.5.5'
-    implementation 'androidx.lifecycle:lifecycle-runtime:2.5.1'
-    implementation 'androidx.versionedparcelable:versionedparcelable:1.1.1'
+    // Legacy Architecture Components (pre-AndroidX) used by com.blankj.utilcode.
+    implementation 'android.arch.lifecycle:runtime:1.1.1'
+    implementation 'android.arch.lifecycle:common:1.1.1'
 
     // Official Google Play API, replacing its embedded decompiled sources.
     implementation 'com.android.installreferrer:installreferrer:2.2'

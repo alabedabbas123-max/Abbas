@@ -1,7 +1,7 @@
 package com.blankj.utilcode.util;
 
 import android.graphics.Color;
-import androidx.core.content.ContextCompat;
+import android.support.v4.content.ContextCompat;
 import com.baidu.android.common.util.DeviceId;
 
 public final class ColorUtils {

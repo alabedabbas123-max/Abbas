@@ -15,7 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
-import androidx.core.provider.FontsContractCompat;
+import android.support.v4.provider.FontsContractCompat;
 import com.ClassA;
 import com.aide.ui.ThemedActionbarActivity;
 import com.baidu.mobstat.Config;

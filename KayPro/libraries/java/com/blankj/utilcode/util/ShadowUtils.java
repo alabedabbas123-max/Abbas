@@ -18,7 +18,7 @@ import android.graphics.drawable.Drawable;
 import android.graphics.drawable.StateListDrawable;
 import android.util.StateSet;
 import android.view.View;
-import androidx.core.view.ViewCompat;
+import android.support.v4.view.ViewCompat;
 
 public class ShadowUtils {
     private static final int SHADOW_TAG = -16;

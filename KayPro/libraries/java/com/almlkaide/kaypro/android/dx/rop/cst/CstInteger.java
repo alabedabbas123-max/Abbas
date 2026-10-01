@@ -1,6 +1,6 @@
 package com.almlkaide.kaypro.android.dx.rop.cst;
 
-import androidx.core.app.FrameMetricsAggregator;
+import android.support.v4.app.FrameMetricsAggregator;
 import com.almlkaide.kaypro.android.dx.rop.type.Type;
 import com.almlkaide.kaypro.android.dx.util.Hex;
 

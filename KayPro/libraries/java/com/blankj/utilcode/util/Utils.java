@@ -3,7 +3,7 @@ package com.blankj.utilcode.util;
 import android.app.Activity;
 import android.app.Application;
 import android.util.Log;
-import androidx.lifecycle.Lifecycle;
+import android.arch.lifecycle.Lifecycle;
 
 public final class Utils {
     private static Application sApp;

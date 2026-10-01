@@ -13,7 +13,7 @@ import android.content.res.XmlResourceParser;
 import android.net.Uri;
 import android.os.Build;
 import android.text.format.Formatter;
-import androidx.core.content.pm.PackageInfoCompat;
+import android.support.v4.content.pm.PackageInfoCompat;
 import com.blankj.utilcode.util.FileUtils;
 import com.blankj.utilcode.util.IntentUtils;
 import com.almlkaide.kaypro.aide.application.FileProvider;

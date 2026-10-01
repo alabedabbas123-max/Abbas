@@ -1,6 +1,6 @@
 package com.a.b.e.c;
 
-import androidx.core.app.FrameMetricsAggregator;
+import android.support.v4.app.FrameMetricsAggregator;
 import com.a.b.e.d.ClassC;
 import com.a.b.g.ClassK;
 

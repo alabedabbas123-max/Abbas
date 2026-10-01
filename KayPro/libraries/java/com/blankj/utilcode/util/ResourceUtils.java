@@ -1,7 +1,7 @@
 package com.blankj.utilcode.util;
 
 import android.graphics.drawable.Drawable;
-import androidx.core.content.ContextCompat;
+import android.support.v4.content.ContextCompat;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.Collections;

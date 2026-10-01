@@ -7,7 +7,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Window;
-import androidx.lifecycle.Lifecycle;
+import android.arch.lifecycle.Lifecycle;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.util.LinkedList;

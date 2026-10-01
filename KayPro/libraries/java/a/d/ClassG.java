@@ -2,7 +2,7 @@ package a.d;
 
 import a.b.c;
 import a.b.d.a.d;
-import androidx.core.provider.FontsContractCompat;
+import android.support.v4.provider.FontsContractCompat;
 import com.github.megatronking.svg.generator.utils.KeywordColors;
 import com.almlkaide.kaypro.android.dx.cf.code.ByteOps;
 import a.b.Interfacej;

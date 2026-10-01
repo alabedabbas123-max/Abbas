@@ -3,7 +3,7 @@ package com.almlkaide.kaypro.aide;
 import android.graphics.Typeface;
 import android.text.TextUtils;
 import android.widget.TextView;
-import androidx.annotation.Keep;
+import android.support.annotation.Keep;
 import com.blankj.utilcode.util.FileIOUtils;
 import com.almlkaide.kaypro.aide.application.AppTheme;
 import com.almlkaide.kaypro.aide.util.AIDEUtils;

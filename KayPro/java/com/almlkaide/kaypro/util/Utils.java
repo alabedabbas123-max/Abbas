@@ -22,7 +22,7 @@ import android.view.View;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
-import androidx.core.graphics.ColorUtils;
+import android.support.v4.graphics.ColorUtils;
 import com.aide.ui.MainActivity;
 import com.blankj.utilcode.util.ClipboardUtils;
 import com.blankj.utilcode.util.LogUtils;

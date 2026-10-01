@@ -10,7 +10,7 @@ import android.provider.Settings;
 import android.util.Log;
 import android.util.Pair;
 import android.view.MotionEvent;
-import androidx.core.content.ContextCompat;
+import android.support.v4.content.ContextCompat;
 import com.blankj.utilcode.constant.PermissionConstants;
 import com.sun.tools.javac.code.Flags;
 import java.util.ArrayList;

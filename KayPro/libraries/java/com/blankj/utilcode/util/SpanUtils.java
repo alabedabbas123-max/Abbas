@@ -40,7 +40,7 @@ import android.text.style.UpdateAppearance;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
-import androidx.core.content.ContextCompat;
+import android.support.v4.content.ContextCompat;
 import java.io.InputStream;
 import java.io.Serializable;
 import java.lang.annotation.Retention;

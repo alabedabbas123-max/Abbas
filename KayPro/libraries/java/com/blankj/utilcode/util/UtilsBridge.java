@@ -12,7 +12,7 @@ import android.os.Build;
 import android.os.Parcelable;
 import android.text.TextUtils;
 import android.view.View;
-import androidx.core.app.NotificationCompat;
+import android.support.v4.app.NotificationCompat;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.InputStream;

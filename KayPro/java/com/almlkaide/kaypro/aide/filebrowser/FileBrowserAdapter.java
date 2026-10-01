@@ -21,7 +21,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import androidx.core.view.ViewCompat;
+import android.support.v4.view.ViewCompat;
 import com.aide.ui.browsers.FileBrowser;
 import com.blankj.utilcode.util.AppUtils;
 import com.blankj.utilcode.util.CloseUtils;

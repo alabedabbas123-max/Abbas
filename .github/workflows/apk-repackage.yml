@@ -1,0 +1,126 @@
+name: Repackage APK as com.almlkaide.kaypro
+
+# The decompiled sources in KayPro/ cannot be recompiled -- 10 of the components
+# the manifest declares have no source file in the archive (see
+# docs/ENGINE_RECOVERY.md). Re-identifying the shipped APK is the route that
+# actually produces an installable build.
+#
+# To use it: put the original APK at  apk-input/app.apk  and push, or run the
+# workflow manually with a download URL. The renamed, signed APK comes back as a
+# run artifact and as an asset on the `apk-latest` release, so it can be
+# downloaded straight to a phone.
+
+on:
+  push:
+    paths:
+      - 'apk-input/*.apk'
+  workflow_dispatch:
+    inputs:
+      apk_url:
+        description: 'Direct download URL of the APK (optional if apk-input/ holds one)'
+        required: false
+        type: string
+      package_id:
+        description: 'New application id'
+        required: false
+        default: 'com.almlkaide.kaypro'
+        type: string
+      publish:
+        description: 'Publish the result as the apk-latest release'
+        required: false
+        default: true
+        type: boolean
+
+permissions:
+  contents: write
+
+env:
+  PKG: ${{ inputs.package_id || 'com.almlkaide.kaypro' }}
+
+jobs:
+  repackage:
+    name: Rename application id without recompiling
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Fetch APK
+        id: fetch
+        run: |
+          set -e
+          mkdir -p apk-input
+          if [ -n "${{ inputs.apk_url }}" ]; then
+            curl -fsSL --retry 3 "${{ inputs.apk_url }}" -o apk-input/app.apk
+          fi
+          APK=$(ls apk-input/*.apk 2>/dev/null | head -1 || true)
+          if [ -z "$APK" ]; then
+            echo "::error::No APK found. Commit one to apk-input/ or pass apk_url."
+            exit 1
+          fi
+          echo "apk=$APK" >> "$GITHUB_OUTPUT"
+          ls -l "$APK"
+
+      - name: Download apktool
+        run: |
+          set -e
+          VER=$(curl -fsSL https://api.github.com/repos/iBotPeaches/Apktool/releases/latest \
+                | sed -n 's/.*"tag_name": *"v\{0,1\}\([^"]*\)".*/\1/p' | head -1)
+          echo "apktool $VER"
+          curl -fsSL -o apktool.jar \
+            "https://github.com/iBotPeaches/Apktool/releases/download/v${VER}/apktool_${VER}.jar"
+          java -jar apktool.jar --version
+
+      - name: Repackage
+        env:
+          APKTOOL: ${{ github.workspace }}/apktool.jar
+        run: |
+          set -o pipefail
+          chmod +x tools/repackage_apk.sh
+          mkdir -p apk-output
+          tools/repackage_apk.sh "${{ steps.fetch.outputs.apk }}" "$PKG" \
+            "apk-output/KayPro-$PKG.apk" 2>&1 | tee repackage.log
+
+      - name: Verify the result
+        run: |
+          set -e
+          APK=$(ls apk-output/*.apk | head -1)
+          BT=$(ls -d "$ANDROID_HOME"/build-tools/* | sort -V | tail -1)
+          AAPT="$BT/aapt"; [ -x "$AAPT" ] || AAPT="$BT/aapt2"
+          "$AAPT" dump badging "$APK" | head -5 | tee badging.txt
+          grep -q "package: name='$PKG'" badging.txt
+          echo "application id verified: $PKG"
+          "$BT/apksigner" verify --verbose "$APK" | head -5
+
+      - name: Upload APK artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: KayPro-repackaged-apk
+          path: |
+            apk-output/*.apk
+            repackage.log
+          if-no-files-found: warn
+
+      # Published as a release asset rather than committed: APKs are tens of
+      # megabytes and GitHub rejects blobs over 100 MB.
+      - name: Publish as a downloadable release
+        if: success() && inputs.publish != false
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -e
+          gh release delete apk-latest --yes --cleanup-tag 2>/dev/null || true
+          gh release create apk-latest apk-output/*.apk \
+            --title "KayPro - $PKG" \
+            --target "${{ github.sha }}" \
+            --notes "Repackaged by \`tools/repackage_apk.sh\` from the uploaded APK.
+
+          - application id: \`$PKG\`
+          - signed with a debug key (uninstall any build signed with a different key first)
+          - built from commit ${{ github.sha }}"

@@ -10,8 +10,8 @@ name: Repackage APK as com.almlkaide.kaypro
 #   * or just a download link apk-input/SOURCE_URL.txt   (one URL, no APK upload)
 # An optional apk-input/PACKAGE_ID.txt overrides the target application id.
 #
-# The renamed, signed APK comes back as a run artifact and as an asset on the
-# `apk-latest` release, so it can be downloaded straight to a phone.
+# PRIVACY: the signed APK comes back as a workflow *artifact* only -- no release
+# and no tag is created, so nothing is attached to a public download page.
 
 on:
   push:
@@ -28,11 +28,6 @@ on:
         required: false
         default: 'com.almlkaide.kaypro'
         type: string
-      publish:
-        description: 'Publish the result as the apk-latest release'
-        required: false
-        default: true
-        type: boolean
 
 permissions:
   contents: write
@@ -121,25 +116,5 @@ jobs:
           path: |
             apk-output/*.apk
             repackage.log
+          retention-days: 14
           if-no-files-found: warn
-
-      # Published as a release asset rather than committed: APKs are tens of
-      # megabytes and GitHub rejects blobs over 100 MB.
-      - name: Publish as a downloadable release
-        if: >-
-          success() && steps.fetch.outputs.skip != 'true'
-          && inputs.publish != false
-          && !contains(steps.fetch.outputs.pkg, 'selftest')
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          set -e
-          gh release delete apk-latest --yes --cleanup-tag 2>/dev/null || true
-          gh release create apk-latest apk-output/*.apk \
-            --title "KayPro - ${{ steps.fetch.outputs.pkg }}" \
-            --target "${{ github.sha }}" \
-            --notes "Repackaged by \`tools/repackage_apk.sh\` from the uploaded APK.
-
-          - application id: \`${{ steps.fetch.outputs.pkg }}\`
-          - signed with a debug key (uninstall any build signed with a different key first)
-          - built from commit ${{ github.sha }}"

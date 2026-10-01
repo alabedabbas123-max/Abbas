@@ -95,12 +95,14 @@ jobs:
             grep -ohE '/KayPro/[^: ]+\.java' assemble-debug.log 2>/dev/null | sort | uniq -c | sort -rn | head -25 || true
             echo '```'
             echo
-            echo '## last 150 log lines'
+            echo '## failing tasks'
             echo '```'
-            tail -n 150 assemble-debug.log 2>/dev/null || echo "no log"
+            grep -ohE '^> Task .* FAILED|^FAILURE: .*' assemble-debug.log 2>/dev/null | head -20 || true
             echo '```'
           } > ci-reports/assemble-debug-report.md
-          cp assemble-debug.log ci-reports/assemble-debug.log 2>/dev/null || true
+          # The raw log echoes the offending source lines, so it is kept as a
+          # run artifact rather than committed into the repository.
+          rm -f ci-reports/assemble-debug.log
           ls -l KayPro/build/outputs/apk/debug/ 2>/dev/null >> ci-reports/assemble-debug-report.md || true
           cat ci-reports/assemble-debug-report.md | head -40
 
@@ -114,6 +116,15 @@ jobs:
           git commit -m "ci: assembleDebug report for ${{ github.sha }} [skip ci]"
           git pull --rebase origin "${{ github.ref_name }}"
           git push origin "HEAD:${{ github.ref_name }}"
+
+      - name: Upload the raw build log as a private artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: assemble-debug-log
+          path: assemble-debug.log
+          retention-days: 14
+          if-no-files-found: ignore
 
       - name: Upload APK
         if: always()

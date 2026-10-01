@@ -4,7 +4,8 @@ name: Publish repaired project archive
 # workflow only makes it convenient to pull down as a single file (for importing
 # into AIDE or Android Studio on a phone) without cloning 97 MB of history.
 #
-# Runs whenever KayPro/ changes and republishes the `source-latest` release.
+# PRIVACY: the archive is produced as a workflow *artifact* only. No release and
+# no tag is created, so nothing is attached to a public download page.
 
 on:
   push:
@@ -56,23 +57,13 @@ jobs:
           grep -o "applicationId '[^']*'" KayPro/build.gradle >> summary.txt || true
           cat summary.txt
 
-      - name: Publish
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          set -e
-          gh release delete source-latest --yes --cleanup-tag 2>/dev/null || true
-          gh release create source-latest dist/KayPro-repaired.zip dist/KayPro-repaired.zip.sha256 \
-            --title "KayPro - repaired sources" \
-            --target "${{ github.sha }}" \
-            --notes "$(cat <<EOF
-          The repaired project, zipped straight from \`KayPro/\` at commit ${{ github.sha }}.
-
-          $(cat summary.txt)
-
-          All 6,621 Java files parse as valid Java. This archive still **cannot be
-          compiled into an APK**: 10 of the components its manifest declares have no
-          source file anywhere in the original decompilation. See
-          \`docs/ENGINE_RECOVERY.md\`.
-          EOF
-          )"
+      - name: Upload as a private artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: KayPro-repaired-source
+          path: |
+            dist/KayPro-repaired.zip
+            dist/KayPro-repaired.zip.sha256
+            summary.txt
+          retention-days: 14
+          if-no-files-found: error

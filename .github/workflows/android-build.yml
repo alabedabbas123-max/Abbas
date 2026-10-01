@@ -30,7 +30,12 @@ jobs:
           grep -q "namespace 'com.almlkaide.kaypro'"     KayPro/build.gradle
           grep -q "applicationId 'com.almlkaide.kaypro'" KayPro/build.gradle
           grep -q 'package="com.almlkaide.kaypro"'       KayPro/AndroidManifest.xml
-          ! grep -rq 'com\.aide\.pro' KayPro/ || (echo "stale com.aide.pro reference found" && exit 1)
+          if grep -rq --exclude='*.md' 'com\.aide\.pro' KayPro/; then
+            echo "stale com.aide.pro reference found"; exit 1
+          fi
+          if grep -rq --exclude='*.md' -E '\balmlk\.(almlkid|manifesteditor|assetsmanager)' KayPro/; then
+            echo "stale almlk.* package reference found"; exit 1
+          fi
           echo "package id OK"
 
       - name: Process resources (independent of engine sources)

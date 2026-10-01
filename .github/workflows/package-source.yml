@@ -33,16 +33,28 @@ jobs:
 
       - name: Summarise what is inside
         run: |
-          # grep exits 1 when it finds nothing, which is the good outcome here.
-          JAVA=$(find KayPro -name '*.java' | wc -l)
-          LEFT=$(grep -rlE '(^[[:space:]]*L[0-9]+:[[:space:]]*$)|move-exception|monitor-enter' \
-                 --include='*.java' KayPro | wc -l || true)
-          APPID=$(grep -o "applicationId '[^']*'" KayPro/build.gradle || true)
-          {
-            echo "- java files: $JAVA"
-            echo "- files still holding a raw Dalvik construct: $LEFT"
-            echo "- $APPID"
-          } | tee summary.txt
+          set -e
+          pip install --quiet javalang
+          python3 - <<'EOF' | tee summary.txt
+          import os, javalang
+          total, bad = 0, []
+          for dirpath, _, names in os.walk('KayPro'):
+              for name in names:
+                  if not name.endswith('.java'):
+                      continue
+                  path = os.path.join(dirpath, name)
+                  total += 1
+                  try:
+                      javalang.parse.parse(open(path, encoding='utf-8', errors='replace').read())
+                  except Exception:
+                      bad.append(path)
+          print('- java files: %d' % total)
+          print('- files that do NOT parse as valid Java: %d' % len(bad))
+          for path in bad[:10]:
+              print('  - %s' % path)
+          EOF
+          grep -o "applicationId '[^']*'" KayPro/build.gradle >> summary.txt || true
+          cat summary.txt
 
       - name: Publish
         env:

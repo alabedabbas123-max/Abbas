@@ -27,9 +27,20 @@ final class J {
     }
 
     public java.lang.String toString() {
-        if (this.EQ != null) goto L6;
-        this.EQ = "appBundleId=" + this.j6 + ", executionId=" + this.DW + ", installationId=" + this.FH + ", limitAdTrackingEnabled=" + this.Hw + ", betaDeviceToken=" + this.v5 + ", buildId=" + this.Zo + ", osVersion=" + this.VH + ", deviceModel=" + this.gn + ", appVersionCode=" + this.u7 + ", appVersionName=" + this.tp;
-    L6:
-        return this.EQ;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (this.EQ != null) { $pc0 = 6; continue $sw0; }
+                    this.EQ = "appBundleId=" + this.j6 + ", executionId=" + this.DW + ", installationId=" + this.FH + ", limitAdTrackingEnabled=" + this.Hw + ", betaDeviceToken=" + this.v5 + ", buildId=" + this.Zo + ", osVersion=" + this.VH + ", deviceModel=" + this.gn + ", appVersionCode=" + this.u7 + ", appVersionName=" + this.tp;
+                    $pc0 = 6; continue $sw0;
+                }
+                case 6: {
+                    return this.EQ;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

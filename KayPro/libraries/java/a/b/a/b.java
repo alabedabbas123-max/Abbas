@@ -18,11 +18,26 @@ public class b implements a.b.o {
 
     public void a(a.b.c r3, a.b.b.a.f r4) {
         int r0 = 0;
-    L4:
-        if (r0 >= this.b) goto L6;
-        r3.a(this.c[r0], r4);
-        r0 = r0 + 1;
-        goto L4
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = 0;
+                    $pc0 = 4; continue $sw0;
+                }
+                case 4: {
+                    if (r0 >= this.b) { $pc0 = 6; continue $sw0; }
+                    r3.a(this.c[r0], r4);
+                    r0 = r0 + 1;
+                    { $pc0 = 4; continue $sw0; }
+                }
+                case 6: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

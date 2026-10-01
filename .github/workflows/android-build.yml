@@ -72,7 +72,7 @@ jobs:
         working-directory: KayPro
         run: |
           set -o pipefail
-          ./gradlew --no-daemon --stacktrace assembleDebug 2>&1 | tee ../assemble-debug.log
+          ./gradlew --no-daemon assembleDebug 2>&1 | tee ../assemble-debug.log
 
       - name: Build report
         if: always()
@@ -87,7 +87,12 @@ jobs:
             echo
             echo '## error summary'
             echo '```'
-            grep -E '^(/home/runner|.*\.java:[0-9]+:) ?error:|^[0-9]+ errors?$|^FAILURE:|^\* What went wrong:|^> Task .* FAILED' -n assemble-debug.log 2>/dev/null | head -60 || true
+            grep -ohE 'error: .*' assemble-debug.log 2>/dev/null | sed -E 's/[0-9]+/N/g' | sort | uniq -c | sort -rn | head -40 || true
+            echo '```'
+            echo
+            echo '## files with most errors'
+            echo '```'
+            grep -ohE '/KayPro/[^: ]+\.java' assemble-debug.log 2>/dev/null | sort | uniq -c | sort -rn | head -25 || true
             echo '```'
             echo
             echo '## last 150 log lines'

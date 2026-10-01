@@ -8,14 +8,28 @@ public class HD {
     }
 
     private void j6(abcd.GD r4) {
-        java.util.concurrent.CopyOnWriteArrayList<abcd.GD> r0 = this.j6.get(r4.DW);
-        if (r0 != null) goto L8;
-        r0 = new java.util.concurrent.CopyOnWriteArrayList();
-        java.util.concurrent.CopyOnWriteArrayList<abcd.GD> r1 = this.j6.putIfAbsent(r4.DW, r0);
-        if (r1 == null) goto L8;
-        r0 = r1;
-    L8:
-        r0.add(r4);
+        java.util.concurrent.CopyOnWriteArrayList<abcd.GD> r0 = null;
+        java.util.concurrent.CopyOnWriteArrayList<abcd.GD> r1 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = this.j6.get(r4.DW);
+                    if (r0 != null) { $pc0 = 8; continue $sw0; }
+                    r0 = new java.util.concurrent.CopyOnWriteArrayList();
+                    r1 = this.j6.putIfAbsent(r4.DW, r0);
+                    if (r1 == null) { $pc0 = 8; continue $sw0; }
+                    r0 = r1;
+                    $pc0 = 8; continue $sw0;
+                }
+                case 8: {
+                    r0.add(r4);
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public abcd.GD j6(abcd.DD r2) {
@@ -29,14 +43,31 @@ public class HD {
     }
 
     public void j6(abcd.KD r3) {
-        java.util.concurrent.CopyOnWriteArrayList<abcd.GD> r0 = this.j6.get(r3.j6());
-        if (r0 == null) goto L9;
-        java.util.Iterator<abcd.GD> r1 = r0.iterator();
-    L6:
-        if (r1.hasNext() == false) goto L11;
-        r3.j6(r1.next().FH);
-        goto L6
-    L11:
-        return;
+        java.util.concurrent.CopyOnWriteArrayList<abcd.GD> r0 = null;
+        java.util.Iterator<abcd.GD> r1 = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    r0 = this.j6.get(r3.j6());
+                    if (r0 == null) { $pc1 = 9; continue $sw1; }
+                    r1 = r0.iterator();
+                    $pc1 = 6; continue $sw1;
+                }
+                case 6: {
+                    if (r1.hasNext() == false) { $pc1 = 11; continue $sw1; }
+                    r3.j6(r1.next().FH);
+                    { $pc1 = 6; continue $sw1; }
+                }
+                case 11: {
+                    return;
+                }
+                case 9: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

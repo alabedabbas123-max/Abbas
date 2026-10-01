@@ -27,19 +27,37 @@ public class dK extends abcd.AbstractjK {
 
     private void j6(java.lang.String r4) {
         java.lang.String r0 = null;
-    L4:
-        if (this.VH.isEmpty() == true) goto L9;
-        if (r4.startsWith(java.lang.String.valueOf(this.VH.getFirst()) + "/") == true) goto L9;
-        r0 = this.VH.removeFirst();
-    L9:
-        if (r0 != null) goto L11;
-        return;
-    L11:
-        if (this.gn.isEmpty() == true) goto L16;
-        if (this.gn.getLast().startsWith(r0) == false) goto L16;
-        this.gn.removeLast();
-    L16:
-        this.gn.addLast(r0);
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = null;
+                    $pc0 = 4; continue $sw0;
+                }
+                case 4: {
+                    if (this.VH.isEmpty() == true) { $pc0 = 9; continue $sw0; }
+                    if (r4.startsWith(java.lang.String.valueOf(this.VH.getFirst()) + "/") == true) { $pc0 = 9; continue $sw0; }
+                    r0 = this.VH.removeFirst();
+                    $pc0 = 9; continue $sw0;
+                }
+                case 9: {
+                    if (r0 != null) { $pc0 = 11; continue $sw0; }
+                    return;
+                }
+                case 11: {
+                    if (this.gn.isEmpty() == true) { $pc0 = 16; continue $sw0; }
+                    if (this.gn.getLast().startsWith(r0) == false) { $pc0 = 16; continue $sw0; }
+                    this.gn.removeLast();
+                    $pc0 = 16; continue $sw0;
+                }
+                case 16: {
+                    this.gn.addLast(r0);
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public java.util.Set<java.lang.String> DW() {
@@ -58,67 +76,110 @@ public class dK extends abcd.AbstractjK {
 
     @Override
     public boolean j6(abcd.YJ r7) {
-        int r0 = r7.Zo();
-        int r1 = r7.FH(this.Hw);
-        java.lang.String r2 = r7.Hw();
+        int r0 = 0;
+        int r1 = 0;
+        java.lang.String r2 = null;
         int r4 = 0;
-        if (r7.VH() == true) goto L18;
-        if (abcd.AbstractrE.j6.j6(r1) == false) goto L7;
-        j6(r2);
-        this.VH.addFirst(r2);
-    L7:
         int r3 = 0;
-    L8:
-        if (r3 >= r0) goto L18;
-        int r5 = r7.FH(r3);
-        if (r3 == this.Hw) goto L16;
-        if (r5 == 0) goto L16;
-        if (abcd.AbstractrE.j6.j6(r5) == false) goto L16;
-        this.VH.clear();
-    L16:
-        r3 = r3 + 1;
-    L18:
-        if (r1 != 0) goto L20;
-        return true;
-    L20:
-        int r6 = r7.FH(this.FH);
-        abcd._J r8 = DW(r7);
-        if (r6 != 0) goto L42;
-        if (this.v5 == true) goto L25;
-    L40:
-        return true;
-    L25:
-        if (r8.U2() == false) goto L40;
-        this.Zo.add(r8.Zo());
+        int r5 = 0;
+        int r6 = 0;
+        abcd._J r8 = null;
         int r9 = 0;
-    L27:
-        if (r9 >= r0) goto L36;
-        if (r9 == this.FH) goto L39;
-        if (r9 == this.Hw) goto L39;
-        if (r7.FH(r9) != 0) goto L36;
-    L39:
-        r9 = r9 + 1;
-    L36:
-        if (r9 != r0) goto L74;
-        return false;
-    L74:
-        return true;
-    L42:
-        if (r7.u7() == false) goto L44;
-        return true;
-    L44:
-        if (r4 >= r0) goto L46;
-        if (r4 == this.FH) goto L57;
-        if (r4 == this.Hw) goto L57;
-        if (r7.FH(r4) != r6) goto L56;
-        if (r7.j6(r4, this.FH) == true) goto L57;
-    L56:
-        return true;
-    L57:
-        r4 = r4 + 1;
-        goto L44
-    L46:
-        return r8.j6(((abcd.RC) r7.j6(this.FH, abcd.RC.class)).J8(), true);
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    r0 = r7.Zo();
+                    r1 = r7.FH(this.Hw);
+                    r2 = r7.Hw();
+                    r4 = 0;
+                    if (r7.VH() == true) { $pc1 = 18; continue $sw1; }
+                    if (abcd.AbstractrE.j6.j6(r1) == false) { $pc1 = 7; continue $sw1; }
+                    j6(r2);
+                    this.VH.addFirst(r2);
+                    $pc1 = 7; continue $sw1;
+                }
+                case 7: {
+                    r3 = 0;
+                    $pc1 = 8; continue $sw1;
+                }
+                case 8: {
+                    if (r3 >= r0) { $pc1 = 18; continue $sw1; }
+                    r5 = r7.FH(r3);
+                    if (r3 == this.Hw) { $pc1 = 16; continue $sw1; }
+                    if (r5 == 0) { $pc1 = 16; continue $sw1; }
+                    if (abcd.AbstractrE.j6.j6(r5) == false) { $pc1 = 16; continue $sw1; }
+                    this.VH.clear();
+                    $pc1 = 16; continue $sw1;
+                }
+                case 16: {
+                    r3 = r3 + 1;
+                    $pc1 = 18; continue $sw1;
+                }
+                case 18: {
+                    if (r1 != 0) { $pc1 = 20; continue $sw1; }
+                    return true;
+                }
+                case 20: {
+                    r6 = r7.FH(this.FH);
+                    r8 = DW(r7);
+                    if (r6 != 0) { $pc1 = 42; continue $sw1; }
+                    if (this.v5 == true) { $pc1 = 25; continue $sw1; }
+                    $pc1 = 40; continue $sw1;
+                }
+                case 40: {
+                    return true;
+                }
+                case 25: {
+                    if (r8.U2() == false) { $pc1 = 40; continue $sw1; }
+                    this.Zo.add(r8.Zo());
+                    r9 = 0;
+                    $pc1 = 27; continue $sw1;
+                }
+                case 27: {
+                    if (r9 >= r0) { $pc1 = 36; continue $sw1; }
+                    if (r9 == this.FH) { $pc1 = 39; continue $sw1; }
+                    if (r9 == this.Hw) { $pc1 = 39; continue $sw1; }
+                    if (r7.FH(r9) != 0) { $pc1 = 36; continue $sw1; }
+                    $pc1 = 39; continue $sw1;
+                }
+                case 39: {
+                    r9 = r9 + 1;
+                    $pc1 = 36; continue $sw1;
+                }
+                case 36: {
+                    if (r9 != r0) { $pc1 = 74; continue $sw1; }
+                    return false;
+                }
+                case 74: {
+                    return true;
+                }
+                case 42: {
+                    if (r7.u7() == false) { $pc1 = 44; continue $sw1; }
+                    return true;
+                }
+                case 44: {
+                    if (r4 >= r0) { $pc1 = 46; continue $sw1; }
+                    if (r4 == this.FH) { $pc1 = 57; continue $sw1; }
+                    if (r4 == this.Hw) { $pc1 = 57; continue $sw1; }
+                    if (r7.FH(r4) != r6) { $pc1 = 56; continue $sw1; }
+                    if (r7.j6(r4, this.FH) == true) { $pc1 = 57; continue $sw1; }
+                    $pc1 = 56; continue $sw1;
+                }
+                case 56: {
+                    return true;
+                }
+                case 57: {
+                    r4 = r4 + 1;
+                    { $pc1 = 44; continue $sw1; }
+                }
+                case 46: {
+                    return r8.j6(((abcd.RC) r7.j6(this.FH, abcd.RC.class)).J8(), true);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

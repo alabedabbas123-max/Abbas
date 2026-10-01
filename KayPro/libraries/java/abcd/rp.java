@@ -20,47 +20,71 @@ public final class rp extends abcd.Abstractup {
 
     @Override
     public void j6(abcd.jp r11, abcd.Lt r12) {
-        int r0 = r11.u7().FH();
-        abcd.AbstractKp r1 = r11.VH();
-        abcd.AbstractKp r2 = r11.gn();
-        int r3 = r1.FH();
-        int r4 = (r2.FH() + r2.u7()) - r3;
-        java.lang.String r5 = r11.Hw().DW();
-        if (r12.Hw() == false) goto L5;
-        r12.j6(8, "magic: " + new abcd.Js(r5).lg());
-        r12.j6(4, "checksum");
-        r12.j6(20, "signature");
-        r12.j6(4, "file_size:       " + abcd.Yt.gn(r11.Zo()));
-        r12.j6(4, "header_size:     " + abcd.Yt.gn(112));
-        r12.j6(4, "endian_tag:      " + abcd.Yt.gn(305419896));
-        r12.j6(4, "link_size:       0");
-        r12.j6(4, "link_off:        0");
-        r12.j6(4, "map_off:         " + abcd.Yt.gn(r0));
-    L5:
+        int r0 = 0;
+        abcd.AbstractKp r1 = null;
+        abcd.AbstractKp r2 = null;
+        int r3 = 0;
+        int r4 = 0;
+        java.lang.String r5 = null;
         int r6 = 0;
-    L6:
-        if (r6 >= 8) goto L8;
-        r12.writeByte(r5.charAt(r6));
-        r6 = r6 + 1;
-        goto L6
-    L8:
-        r12.j6(24);
-        r12.writeInt(r11.Zo());
-        r12.writeInt(112);
-        r12.writeInt(305419896);
-        r12.j6(8);
-        r12.writeInt(r0);
-        r11.J8().Hw(r12);
-        r11.Ws().Hw(r12);
-        r11.EQ().Hw(r12);
-        r11.v5().Hw(r12);
-        r11.tp().Hw(r12);
-        r11.FH().Hw(r12);
-        if (r12.Hw() == false) goto L11;
-        r12.j6(4, "data_size:       " + abcd.Yt.gn(r4));
-        r12.j6(4, "data_off:        " + abcd.Yt.gn(r3));
-    L11:
-        r12.writeInt(r4);
-        r12.writeInt(r3);
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = r11.u7().FH();
+                    r1 = r11.VH();
+                    r2 = r11.gn();
+                    r3 = r1.FH();
+                    r4 = (r2.FH() + r2.u7()) - r3;
+                    r5 = r11.Hw().DW();
+                    if (r12.Hw() == false) { $pc0 = 5; continue $sw0; }
+                    r12.j6(8, "magic: " + new abcd.Js(r5).lg());
+                    r12.j6(4, "checksum");
+                    r12.j6(20, "signature");
+                    r12.j6(4, "file_size:       " + abcd.Yt.gn(r11.Zo()));
+                    r12.j6(4, "header_size:     " + abcd.Yt.gn(112));
+                    r12.j6(4, "endian_tag:      " + abcd.Yt.gn(305419896));
+                    r12.j6(4, "link_size:       0");
+                    r12.j6(4, "link_off:        0");
+                    r12.j6(4, "map_off:         " + abcd.Yt.gn(r0));
+                    $pc0 = 5; continue $sw0;
+                }
+                case 5: {
+                    r6 = 0;
+                    $pc0 = 6; continue $sw0;
+                }
+                case 6: {
+                    if (r6 >= 8) { $pc0 = 8; continue $sw0; }
+                    r12.writeByte(r5.charAt(r6));
+                    r6 = r6 + 1;
+                    { $pc0 = 6; continue $sw0; }
+                }
+                case 8: {
+                    r12.j6(24);
+                    r12.writeInt(r11.Zo());
+                    r12.writeInt(112);
+                    r12.writeInt(305419896);
+                    r12.j6(8);
+                    r12.writeInt(r0);
+                    r11.J8().Hw(r12);
+                    r11.Ws().Hw(r12);
+                    r11.EQ().Hw(r12);
+                    r11.v5().Hw(r12);
+                    r11.tp().Hw(r12);
+                    r11.FH().Hw(r12);
+                    if (r12.Hw() == false) { $pc0 = 11; continue $sw0; }
+                    r12.j6(4, "data_size:       " + abcd.Yt.gn(r4));
+                    r12.j6(4, "data_off:        " + abcd.Yt.gn(r3));
+                    $pc0 = 11; continue $sw0;
+                }
+                case 11: {
+                    r12.writeInt(r4);
+                    r12.writeInt(r3);
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

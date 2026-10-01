@@ -10,12 +10,24 @@ class Oa implements com.crashlytics.android.core.Ka {
     }
 
     public Oa(java.io.File r4, java.util.Map<java.lang.String, java.lang.String> r5) {
-        this.j6 = r4;
-        this.DW = new java.io.File[]{r4};
-        this.FH = new java.util.HashMap(r5);
-        if (this.j6.length() != 0) goto L6;
-        this.FH.putAll(com.crashlytics.android.core.La.j6);
-        return;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    this.j6 = r4;
+                    this.DW = new java.io.File[]{r4};
+                    this.FH = new java.util.HashMap(r5);
+                    if (this.j6.length() != 0) { $pc0 = 6; continue $sw0; }
+                    this.FH.putAll(com.crashlytics.android.core.La.j6);
+                    return;
+                }
+                case 6: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

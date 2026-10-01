@@ -12,11 +12,24 @@ public abstract class AbstractjI {
         }
 
         public void DW() {
-            char[] r0 = this.FH;
-            if (r0 == null) goto L6;
-            java.util.Arrays.fill(r0, 0);
-            this.FH = null;
-            return;
+            char[] r0 = null;
+            java.lang.Throwable $ex0 = null;
+            int $pc0 = -1;
+            $sw0: while (true) {
+                switch ($pc0) {
+                    case -1: {
+                        r0 = this.FH;
+                        if (r0 == null) { $pc0 = 6; continue $sw0; }
+                        java.util.Arrays.fill(r0, 0);
+                        this.FH = null;
+                        return;
+                    }
+                    case 6: {
+                        return;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         public char[] FH() {
@@ -24,11 +37,23 @@ public abstract class AbstractjI {
         }
 
         public void j6(char[] r4) {
-            DW();
-            if (r4 == null) goto L6;
-            this.FH = new char[r4.length];
-            java.lang.System.arraycopy(r4, 0, this.FH, 0, r4.length);
-            return;
+            java.lang.Throwable $ex1 = null;
+            int $pc1 = -1;
+            $sw1: while (true) {
+                switch ($pc1) {
+                    case -1: {
+                        DW();
+                        if (r4 == null) { $pc1 = 6; continue $sw1; }
+                        this.FH = new char[r4.length];
+                        java.lang.System.arraycopy(r4, 0, this.FH, 0, r4.length);
+                        return;
+                    }
+                    case 6: {
+                        return;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
     }
 

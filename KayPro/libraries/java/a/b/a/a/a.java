@@ -23,21 +23,50 @@ public class a implements a.b.o {
 
     public void a(a.b.c r3, a.b.a.a.b.g r4) {
         int r0 = 0;
-    L4:
-        if (r0 >= this.b) goto L6;
-        this.c[r0].a(r3, this, r4);
-        r0 = r0 + 1;
-        goto L4
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = 0;
+                    $pc0 = 4; continue $sw0;
+                }
+                case 4: {
+                    if (r0 >= this.b) { $pc0 = 6; continue $sw0; }
+                    this.c[r0].a(r3, this, r4);
+                    r0 = r0 + 1;
+                    { $pc0 = 4; continue $sw0; }
+                }
+                case 6: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public void a(a.b.g.s r3) {
-        if (this.d == null) goto L8;
-        a.b.c r0 = this.d[0];
-        if (r0 == null) goto L9;
-        r0.a(r3);
-        return;
-    L9:
-        return;
+        a.b.c r0 = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if (this.d == null) { $pc1 = 8; continue $sw1; }
+                    r0 = this.d[0];
+                    if (r0 == null) { $pc1 = 9; continue $sw1; }
+                    r0.a(r3);
+                    return;
+                }
+                case 9: {
+                    return;
+                }
+                case 8: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
@@ -46,18 +75,37 @@ public class a implements a.b.o {
     }
 
     public void b(a.b.g.s r3) {
-        if (this.d == null) goto L11;
         int r0 = 0;
-    L6:
-        if (r0 >= this.d.length) goto L15;
-        a.b.c r1 = this.d[r0];
-        if (r1 == null) goto L10;
-        r1.a(r3);
-    L10:
-        r0 = r0 + 1;
-        goto L6
-    L15:
-        return;
+        a.b.c r1 = null;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    if (this.d == null) { $pc2 = 11; continue $sw2; }
+                    r0 = 0;
+                    $pc2 = 6; continue $sw2;
+                }
+                case 6: {
+                    if (r0 >= this.d.length) { $pc2 = 15; continue $sw2; }
+                    r1 = this.d[r0];
+                    if (r1 == null) { $pc2 = 10; continue $sw2; }
+                    r1.a(r3);
+                    $pc2 = 10; continue $sw2;
+                }
+                case 10: {
+                    r0 = r0 + 1;
+                    { $pc2 = 6; continue $sw2; }
+                }
+                case 15: {
+                    return;
+                }
+                case 11: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

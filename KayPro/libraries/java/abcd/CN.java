@@ -5,13 +5,24 @@ public class CN extends abcd.AbstractyL {
     private abcd.wN j6;
 
     public CN(abcd.FL r4) {
-        if (r4.tp() != 2) goto L7;
-        java.util.Enumeration r5 = r4.u7();
-        this.j6 = abcd.wN.j6(r5.nextElement());
-        this.DW = abcd.cM.j6(r5.nextElement());
-        return;
-    L7:
-        throw new java.lang.IllegalArgumentException("Bad sequence size: " + r4.tp());
+        java.util.Enumeration r5 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (r4.tp() != 2) { $pc0 = 7; continue $sw0; }
+                    r5 = r4.u7();
+                    this.j6 = abcd.wN.j6(r5.nextElement());
+                    this.DW = abcd.cM.j6(r5.nextElement());
+                    return;
+                }
+                case 7: {
+                    throw new java.lang.IllegalArgumentException("Bad sequence size: " + r4.tp());
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public CN(abcd.wN r2, abcd.InterfaceqL r3) {
@@ -20,13 +31,24 @@ public class CN extends abcd.AbstractyL {
     }
 
     public static abcd.CN j6(java.lang.Object r1) {
-        if ((r1 instanceof abcd.CN) == true) goto L5;
-        if (r1 != null) goto L8;
-        return null;
-    L8:
-        return new abcd.CN(abcd.FL.j6(r1));
-    L5:
-        return (abcd.CN) r1;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if ((r1 instanceof abcd.CN) == true) { $pc1 = 5; continue $sw1; }
+                    if (r1 != null) { $pc1 = 8; continue $sw1; }
+                    return null;
+                }
+                case 8: {
+                    return new abcd.CN(abcd.FL.j6(r1));
+                }
+                case 5: {
+                    return (abcd.CN) r1;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

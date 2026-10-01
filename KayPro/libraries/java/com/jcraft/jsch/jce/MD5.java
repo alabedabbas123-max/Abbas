@@ -8,11 +8,29 @@ public class MD5 implements com.jcraft.jsch.HASH {
 
     @Override
     public void DW() {
-        this.j6 = java.security.MessageDigest.getInstance("MD5");     // Catch: java.lang.Exception -> L4
-        return;
-    L4:
-        e = move-exception;
-        java.lang.System.err.println(e);
+        java.lang.Throwable e = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    try {
+                        this.j6 = java.security.MessageDigest.getInstance("MD5");
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.lang.Exception) { $pc0 = 4; continue $sw0; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    return;
+                }
+                case 4: {
+                    e = $ex0;
+                    java.lang.System.err.println(e);
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

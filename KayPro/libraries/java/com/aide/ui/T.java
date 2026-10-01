@@ -25,22 +25,57 @@ class T implements java.lang.Runnable {
     @Override
     @abcd.Interfacesu(method = -502197465834385985L)
     public void run() {
-    L12:
-        th = move-exception;
-        if (DW == false) goto L16;
-        abcd.wu.j6(th, -116600052537112547L, this);
-    L16:
-        throw th;
-    L4:
-        if (j6 == false) goto L17;
-        abcd.wu.j6(-116600052537112547L, this);     // Catch: java.lang.Throwable -> L12
-    L17:
-        this.FH.run();     // Catch: java.lang.Throwable -> L9
-        com.aide.ui.U.j6(new com.aide.ui.S(this));     // Catch: java.lang.Throwable -> L12
-        return;
-    L9:
-        th = move-exception;
-        com.aide.ui.U.j6(new com.aide.ui.S(this));     // Catch: java.lang.Throwable -> L12
-        throw th;     // Catch: java.lang.Throwable -> L12
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 4;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 12: {
+                    th = $ex0;
+                    if (DW == false) { $pc0 = 16; continue $sw0; }
+                    abcd.wu.j6(th, -116600052537112547L, this);
+                    $pc0 = 16; continue $sw0;
+                }
+                case 16: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (j6 == false) { $pc0 = 17; continue $sw0; }
+                    try {
+                        abcd.wu.j6(-116600052537112547L, this);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 12; continue $sw0;
+                    }
+                    $pc0 = 17; continue $sw0;
+                }
+                case 17: {
+                    try {
+                        this.FH.run();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 9; continue $sw0;
+                    }
+                    try {
+                        com.aide.ui.U.j6(new com.aide.ui.S(this));
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 12; continue $sw0;
+                    }
+                    return;
+                }
+                case 9: {
+                    th = $ex0;
+                    try {
+                        com.aide.ui.U.j6(new com.aide.ui.S(this));
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 12; continue $sw0;
+                    }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

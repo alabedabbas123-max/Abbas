@@ -13,31 +13,60 @@ public class SO extends abcd.PO {
     }
 
     public boolean equals(java.lang.Object r3) {
-        if ((r3 instanceof abcd.SO) == true) goto L5;
-        return false;
-    L5:
-        abcd.SO r4 = (abcd.SO) r3;
-        abcd.TO r0 = this.DW;
-        if (r0 != null) goto L13;
-        if (r4.DW() != null) goto L11;
-        return true;
-    L11:
-        return false;
-    L13:
-        return r0.equals(r4.DW());
+        abcd.SO r4 = null;
+        abcd.TO r0 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if ((r3 instanceof abcd.SO) == true) { $pc0 = 5; continue $sw0; }
+                    return false;
+                }
+                case 5: {
+                    r4 = (abcd.SO) r3;
+                    r0 = this.DW;
+                    if (r0 != null) { $pc0 = 13; continue $sw0; }
+                    if (r4.DW() != null) { $pc0 = 11; continue $sw0; }
+                    return true;
+                }
+                case 11: {
+                    return false;
+                }
+                case 13: {
+                    return r0.equals(r4.DW());
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public int hashCode() {
-        if (j6() == false) goto L5;
         int r0 = 0;
-    L6:
-        abcd.TO r1 = this.DW;
-        if (r1 != null) goto L9;
-        return r0;
-    L9:
-        return r0 ^ r1.hashCode();
-    L5:
-        r0 = 1;
-        goto L6
+        abcd.TO r1 = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if (j6() == false) { $pc1 = 5; continue $sw1; }
+                    r0 = 0;
+                    $pc1 = 6; continue $sw1;
+                }
+                case 6: {
+                    r1 = this.DW;
+                    if (r1 != null) { $pc1 = 9; continue $sw1; }
+                    return r0;
+                }
+                case 9: {
+                    return r0 ^ r1.hashCode();
+                }
+                case 5: {
+                    r0 = 1;
+                    { $pc1 = 6; continue $sw1; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

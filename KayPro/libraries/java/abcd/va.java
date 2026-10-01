@@ -23,55 +23,127 @@ public class va {
     }
 
     public va() {
-    L8:
-        th = move-exception;
-        if (DW == false) goto L12;
-        abcd.wu.j6(th, 1605090818776752120L, null);
-    L12:
-        throw th;
-    L4:
-        if (j6 == false) goto L6;
-        abcd.wu.j6(1605090818776752120L, null);     // Catch: java.lang.Throwable -> L8
-    L6:
-        this.tp = new java.util.HashMap();     // Catch: java.lang.Throwable -> L8
-        this.EQ = new java.util.HashMap();     // Catch: java.lang.Throwable -> L8
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 4;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 8: {
+                    th = $ex0;
+                    if (DW == false) { $pc0 = 12; continue $sw0; }
+                    abcd.wu.j6(th, 1605090818776752120L, null);
+                    $pc0 = 12; continue $sw0;
+                }
+                case 12: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (j6 == false) { $pc0 = 6; continue $sw0; }
+                    try {
+                        abcd.wu.j6(1605090818776752120L, null);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 8; continue $sw0;
+                    }
+                    $pc0 = 6; continue $sw0;
+                }
+                case 6: {
+                    try {
+                        this.tp = new java.util.HashMap();
+                        this.EQ = new java.util.HashMap();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 8; continue $sw0;
+                    }
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public int DW(abcd.Interfacena r5) {
-    L12:
-        th = move-exception;
-        if (DW == false) goto L16;
-        abcd.wu.j6(th, -6722079086152351488L, this, r5);
-    L16:
-        throw th;
-    L4:
-        if (j6 == false) goto L7;
-        abcd.wu.j6(-6722079086152351488L, this, r5);     // Catch: java.lang.Throwable -> L12
-    L7:
-        if (this.tp.containsKey(r5.j6()) == false) goto L10;
-        return this.tp.get(r5.j6()).intValue();
-    L10:
-        return 4;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = 4;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case 12: {
+                    th = $ex1;
+                    if (DW == false) { $pc1 = 16; continue $sw1; }
+                    abcd.wu.j6(th, -6722079086152351488L, this, r5);
+                    $pc1 = 16; continue $sw1;
+                }
+                case 16: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (j6 == false) { $pc1 = 7; continue $sw1; }
+                    try {
+                        abcd.wu.j6(-6722079086152351488L, this, r5);
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        $pc1 = 12; continue $sw1;
+                    }
+                    $pc1 = 7; continue $sw1;
+                }
+                case 7: {
+                    if (this.tp.containsKey(r5.j6()) == false) { $pc1 = 10; continue $sw1; }
+                    return this.tp.get(r5.j6()).intValue();
+                }
+                case 10: {
+                    return 4;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public java.util.Set<? extends abcd.Interfaceha> j6(abcd.Interfacena r5) {
-    L13:
-        th = move-exception;
-        if (DW == false) goto L17;
-        abcd.wu.j6(th, 414314539544980107L, this, r5);
-    L17:
-        throw th;
-    L4:
-        if (j6 == false) goto L7;
-        abcd.wu.j6(414314539544980107L, this, r5);     // Catch: java.lang.Throwable -> L13
-    L7:
-        if (this.EQ.containsKey(r5.j6()) == true) goto L19;
-        java.util.Set<? extends abcd.Interfaceha> r2 = r5.Zo();     // Catch: java.lang.Throwable -> L13
-        if (r2 == null) goto L12;
-        return r2;
-    L12:
-        return java.util.Collections.EMPTY_SET;
-    L19:
-        return this.EQ.get(r5.j6());
+        java.util.Set<? extends abcd.Interfaceha> r2 = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = 4;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case 13: {
+                    th = $ex2;
+                    if (DW == false) { $pc2 = 17; continue $sw2; }
+                    abcd.wu.j6(th, 414314539544980107L, this, r5);
+                    $pc2 = 17; continue $sw2;
+                }
+                case 17: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (j6 == false) { $pc2 = 7; continue $sw2; }
+                    try {
+                        abcd.wu.j6(414314539544980107L, this, r5);
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        $pc2 = 13; continue $sw2;
+                    }
+                    $pc2 = 7; continue $sw2;
+                }
+                case 7: {
+                    if (this.EQ.containsKey(r5.j6()) == true) { $pc2 = 19; continue $sw2; }
+                    try {
+                        r2 = r5.Zo();
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        $pc2 = 13; continue $sw2;
+                    }
+                    if (r2 == null) { $pc2 = 12; continue $sw2; }
+                    return r2;
+                }
+                case 12: {
+                    return java.util.Collections.EMPTY_SET;
+                }
+                case 19: {
+                    return this.EQ.get(r5.j6());
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

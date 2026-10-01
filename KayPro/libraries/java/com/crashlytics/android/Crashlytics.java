@@ -19,10 +19,20 @@ public class Crashlytics extends io.fabric.sdk.android.Kit<java.lang.Void> imple
     }
 
     private static void checkInitialized() {
-        if (getInstance() == null) goto L6;
-        return;
-    L6:
-        throw new java.lang.IllegalStateException("Crashlytics must be initialized by calling Fabric.with(Context) prior to calling Crashlytics.getInstance()");
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (getInstance() == null) { $pc0 = 6; continue $sw0; }
+                    return;
+                }
+                case 6: {
+                    throw new java.lang.IllegalStateException("Crashlytics must be initialized by calling Fabric.with(Context) prior to calling Crashlytics.getInstance()");
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static com.crashlytics.android.Crashlytics getInstance() {
@@ -152,13 +162,29 @@ public class Crashlytics extends io.fabric.sdk.android.Kit<java.lang.Void> imple
 
     @java.lang.Deprecated
     public synchronized void setListener(com.crashlytics.android.core.Interfaceea r2) {
-        monitor-enter(this);
-        this.core.setListener(r2);     // Catch: java.lang.Throwable -> L6
-        monitor-exit(this);
-        return;
-    L6:
-        th = move-exception;
-        throw th;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    monitor-enter(this);
+                    try {
+                        this.core.setListener(r2);
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        $pc1 = 6; continue $sw1;
+                    }
+                    monitor-exit(this);
+                    return;
+                }
+                case 6: {
+                    th = $ex1;
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public boolean verifyPinning(java.net.URL r2) {

@@ -30,26 +30,69 @@ class ia implements com.aide.common.ab<java.lang.Integer> {
 
     @abcd.Interfacesu(method = 2227168565746557160L)
     public void j62(java.lang.Integer r7) {
-    L14:
-        th = move-exception;
-        if (DW == false) goto L18;
-        abcd.wu.j6(th, -1445056508723827032L, this, r7);
-    L18:
-        throw th;
-    L4:
-        if (j6 == false) goto L6;
-        abcd.wu.j6(-1445056508723827032L, this, r7);     // Catch: java.lang.Throwable -> L14
-    L6:
-        java.lang.String r2 = (java.lang.String) this.FH.get(r7.intValue());     // Catch: java.lang.Throwable -> L14
-        if (r2.equals("none") == false) goto L10;
-        this.Hw.j6(this.v5, null);     // Catch: java.lang.Throwable -> L14
-        return;
-    L10:
-        if (r2.equals("other...") == false) goto L12;
-        com.aide.uidesigner.ka.j6(this.Zo, this.Hw, this.v5, this.VH);     // Catch: java.lang.Throwable -> L14
-        return;
-    L12:
-        this.Hw.j6(this.v5, (java.lang.String) this.gn.get(r7.intValue()));     // Catch: java.lang.Throwable -> L14
+        java.lang.String r2 = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 4;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 14: {
+                    th = $ex0;
+                    if (DW == false) { $pc0 = 18; continue $sw0; }
+                    abcd.wu.j6(th, -1445056508723827032L, this, r7);
+                    $pc0 = 18; continue $sw0;
+                }
+                case 18: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (j6 == false) { $pc0 = 6; continue $sw0; }
+                    try {
+                        abcd.wu.j6(-1445056508723827032L, this, r7);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 14; continue $sw0;
+                    }
+                    $pc0 = 6; continue $sw0;
+                }
+                case 6: {
+                    try {
+                        r2 = (java.lang.String) this.FH.get(r7.intValue());
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 14; continue $sw0;
+                    }
+                    if (r2.equals("none") == false) { $pc0 = 10; continue $sw0; }
+                    try {
+                        this.Hw.j6(this.v5, null);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 14; continue $sw0;
+                    }
+                    return;
+                }
+                case 10: {
+                    if (r2.equals("other...") == false) { $pc0 = 12; continue $sw0; }
+                    try {
+                        com.aide.uidesigner.ka.j6(this.Zo, this.Hw, this.v5, this.VH);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 14; continue $sw0;
+                    }
+                    return;
+                }
+                case 12: {
+                    try {
+                        this.Hw.j6(this.v5, (java.lang.String) this.gn.get(r7.intValue()));
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 14; continue $sw0;
+                    }
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

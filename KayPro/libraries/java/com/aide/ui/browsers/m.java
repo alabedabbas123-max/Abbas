@@ -25,16 +25,41 @@ class m implements android.view.View.OnClickListener {
     @Override
     @abcd.Interfacesu(method = 412114772980334500L)
     public void onClick(android.view.View r6) {
-    L8:
-        th = move-exception;
-        if (DW == false) goto L12;
-        abcd.wu.j6(th, 3171283024174060605L, this, r6);
-    L12:
-        throw th;
-    L4:
-        if (j6 == false) goto L6;
-        abcd.wu.j6(3171283024174060605L, this, r6);     // Catch: java.lang.Throwable -> L8
-    L6:
-        com.aide.ui.browsers.LogCatBrowser.j6(this.Hw).j6(this.FH, false);     // Catch: java.lang.Throwable -> L8
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 4;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 8: {
+                    th = $ex0;
+                    if (DW == false) { $pc0 = 12; continue $sw0; }
+                    abcd.wu.j6(th, 3171283024174060605L, this, r6);
+                    $pc0 = 12; continue $sw0;
+                }
+                case 12: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (j6 == false) { $pc0 = 6; continue $sw0; }
+                    try {
+                        abcd.wu.j6(3171283024174060605L, this, r6);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 8; continue $sw0;
+                    }
+                    $pc0 = 6; continue $sw0;
+                }
+                case 6: {
+                    try {
+                        com.aide.ui.browsers.LogCatBrowser.j6(this.Hw).j6(this.FH, false);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 8; continue $sw0;
+                    }
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

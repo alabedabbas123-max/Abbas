@@ -19,29 +19,53 @@ public class Packet {
     }
 
     int j6(int r5, int r6, int r7) {
-        int r0 = (r5 + 5) + 9;
-        int r1 = (-r0) & (r6 - 1);
-        if (r1 >= r6) goto L5;
-        r1 = r1 + r6;
-    L5:
-        int r2 = ((r1 + r0) + r7) + 32;
-        com.jcraft.jsch.Buffer r8 = this.DW;
-        byte[] r9 = r8.DW;
-        int r3 = r9.length;
-        int r10 = r8.FH;
-        if (r3 >= ((((r2 + r10) - 5) - 9) - r5)) goto L8;
-        byte[] r11 = new byte[(((r10 + r2) - 5) - 9) - r5];
-        java.lang.System.arraycopy(r9, 0, r11, 0, r9.length);
-        this.DW.DW = r11;
-    L8:
-        com.jcraft.jsch.Buffer r12 = this.DW;
-        byte[] r13 = r12.DW;
-        java.lang.System.arraycopy(r13, r0, r13, r2, ((r12.FH - 5) - 9) - r5);
-        com.jcraft.jsch.Buffer r14 = this.DW;
-        r14.FH = 10;
-        r14.FH(r5);
-        this.DW.FH = r0;
-        return r2;
+        int r0 = 0;
+        int r1 = 0;
+        int r2 = 0;
+        com.jcraft.jsch.Buffer r8 = null;
+        byte[] r9 = null;
+        int r3 = 0;
+        int r10 = 0;
+        byte[] r11 = null;
+        com.jcraft.jsch.Buffer r12 = null;
+        byte[] r13 = null;
+        com.jcraft.jsch.Buffer r14 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = (r5 + 5) + 9;
+                    r1 = (-r0) & (r6 - 1);
+                    if (r1 >= r6) { $pc0 = 5; continue $sw0; }
+                    r1 = r1 + r6;
+                    $pc0 = 5; continue $sw0;
+                }
+                case 5: {
+                    r2 = ((r1 + r0) + r7) + 32;
+                    r8 = this.DW;
+                    r9 = r8.DW;
+                    r3 = r9.length;
+                    r10 = r8.FH;
+                    if (r3 >= ((((r2 + r10) - 5) - 9) - r5)) { $pc0 = 8; continue $sw0; }
+                    r11 = new byte[(((r10 + r2) - 5) - 9) - r5];
+                    java.lang.System.arraycopy(r9, 0, r11, 0, r9.length);
+                    this.DW.DW = r11;
+                    $pc0 = 8; continue $sw0;
+                }
+                case 8: {
+                    r12 = this.DW;
+                    r13 = r12.DW;
+                    java.lang.System.arraycopy(r13, r0, r13, r2, ((r12.FH - 5) - 9) - r5);
+                    r14 = this.DW;
+                    r14.FH = 10;
+                    r14.FH(r5);
+                    this.DW.FH = r0;
+                    return r2;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     com.jcraft.jsch.Buffer j6() {
@@ -61,27 +85,50 @@ public class Packet {
     }
 
     void j6(int r7) {
-        int r0 = this.DW.FH;
-        int r1 = (-r0) & (r7 - 1);
-        if (r1 >= r7) goto L5;
-        r1 = r1 + r7;
-    L5:
-        int r2 = (r0 + r1) - 4;
-        byte[] r3 = this.FH;
-        r3[0] = (byte) (r2 >>> 24);
-        r3[1] = (byte) (r2 >>> 16);
-        r3[2] = (byte) (r2 >>> 8);
-        r3[3] = (byte) r2;
-        java.lang.System.arraycopy(r3, 0, this.DW.DW, 0, 4);
-        this.DW.DW[4] = (byte) r1;
-        com.jcraft.jsch.Random r8 = j6;
-        monitor-enter(r8);
-        j6.j6(this.DW.DW, this.DW.FH, r1);     // Catch: java.lang.Throwable -> L11
-        monitor-exit(r8);     // Catch: java.lang.Throwable -> L11
-        this.DW.v5(r1);
-        return;
-    L11:
-        th = move-exception;
-        throw th;
+        int r0 = 0;
+        int r1 = 0;
+        int r2 = 0;
+        byte[] r3 = null;
+        com.jcraft.jsch.Random r8 = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    r0 = this.DW.FH;
+                    r1 = (-r0) & (r7 - 1);
+                    if (r1 >= r7) { $pc1 = 5; continue $sw1; }
+                    r1 = r1 + r7;
+                    $pc1 = 5; continue $sw1;
+                }
+                case 5: {
+                    r2 = (r0 + r1) - 4;
+                    r3 = this.FH;
+                    r3[0] = (byte) (r2 >>> 24);
+                    r3[1] = (byte) (r2 >>> 16);
+                    r3[2] = (byte) (r2 >>> 8);
+                    r3[3] = (byte) r2;
+                    java.lang.System.arraycopy(r3, 0, this.DW.DW, 0, 4);
+                    this.DW.DW[4] = (byte) r1;
+                    r8 = j6;
+                    monitor-enter(r8);
+                    try {
+                        j6.j6(this.DW.DW, this.DW.FH, r1);
+                        monitor-exit(r8);
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        $pc1 = 11; continue $sw1;
+                    }
+                    this.DW.v5(r1);
+                    return;
+                }
+                case 11: {
+                    th = $ex1;
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

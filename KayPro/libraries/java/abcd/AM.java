@@ -29,10 +29,20 @@ public class AM extends abcd.EL implements abcd.KL {
 
     @Override
     boolean j6(abcd.EL r2) {
-        if ((r2 instanceof abcd.AM) == true) goto L7;
-        return false;
-    L7:
-        return abcd.OP.j6(this.j6, ((abcd.AM) r2).j6);
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if ((r2 instanceof abcd.AM) == true) { $pc0 = 7; continue $sw0; }
+                    return false;
+                }
+                case 7: {
+                    return abcd.OP.j6(this.j6, ((abcd.AM) r2).j6);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public java.lang.String toString() {

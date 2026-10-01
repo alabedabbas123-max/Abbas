@@ -6,7 +6,7 @@ public class gC {
     private final abcd.gC.a FH;
     private final int Hw;
 
-    public static final enum a extends java.lang.Enum<abcd.gC.a> {
+    public static final class a extends com.almlkaide.kaypro.internal.EnumBase {
         public static final abcd.gC.a DW = null;
         public static final abcd.gC.a FH = null;
         private static final abcd.gC.a[] Hw = null;
@@ -24,7 +24,7 @@ public class gC {
         }
 
         public static abcd.gC.a valueOf(java.lang.String r1) {
-            return (abcd.gC.a) java.lang.Enum.valueOf(abcd.gC.a.class, r1);
+            return (abcd.gC.a) com.almlkaide.kaypro.internal.EnumBase.valueOf(abcd.gC.a.values(), r1);
         }
 
         public static abcd.gC.a[] values() {
@@ -51,21 +51,35 @@ public class gC {
     }
 
     private static abcd.gC.a j6(java.lang.String r5) {
-        if (r5 != null) goto L6;
-        return abcd.gC.a.j6;
-    L6:
-        if (abcd.NK.j6("copy", r5) == true) goto L21;
-        if (abcd.NK.j6("copies", r5) == true) goto L21;
-        java.lang.Boolean r0 = abcd.NK.FH(r5);
-        if (r0 == null) goto L19;
-        if (r0.booleanValue() == false) goto L17;
-        return abcd.gC.a.DW;
-    L17:
-        return abcd.gC.a.j6;
-    L19:
-        throw new java.lang.IllegalArgumentException(java.text.MessageFormat.format(org.eclipse.jgit.JGitText.j6().enumValueNotSupported2, new java.lang.Object[]{"diff", "renames", r5}));
-    L21:
-        return abcd.gC.a.FH;
+        java.lang.Boolean r0 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (r5 != null) { $pc0 = 6; continue $sw0; }
+                    return abcd.gC.a.j6;
+                }
+                case 6: {
+                    if (abcd.NK.j6("copy", r5) == true) { $pc0 = 21; continue $sw0; }
+                    if (abcd.NK.j6("copies", r5) == true) { $pc0 = 21; continue $sw0; }
+                    r0 = abcd.NK.FH(r5);
+                    if (r0 == null) { $pc0 = 19; continue $sw0; }
+                    if (r0.booleanValue() == false) { $pc0 = 17; continue $sw0; }
+                    return abcd.gC.a.DW;
+                }
+                case 17: {
+                    return abcd.gC.a.j6;
+                }
+                case 19: {
+                    throw new java.lang.IllegalArgumentException(java.text.MessageFormat.format(org.eclipse.jgit.JGitText.j6().enumValueNotSupported2, new java.lang.Object[]{"diff", "renames", r5}));
+                }
+                case 21: {
+                    return abcd.gC.a.FH;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public boolean DW() {
@@ -73,10 +87,20 @@ public class gC {
     }
 
     public boolean FH() {
-        if (this.FH == abcd.gC.a.j6) goto L6;
-        return true;
-    L6:
-        return false;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if (this.FH == abcd.gC.a.j6) { $pc1 = 6; continue $sw1; }
+                    return true;
+                }
+                case 6: {
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public int j6() {

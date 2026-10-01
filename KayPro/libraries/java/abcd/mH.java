@@ -16,20 +16,45 @@ class mH extends abcd.SE {
 
     @Override
     protected void j6(java.lang.String r5, byte[] r6) {
-        this.FH.j6(true);
-        this.FH.DW(true);
-        this.FH.j6(r6);     // Catch: java.io.IOException -> L13
-        this.FH.Zo();     // Catch: java.lang.InterruptedException -> L11
-        if (this.FH.j6() == false) goto L10;
-        abcd.nH.DW(this.DW).compareAndSet(this.Hw, new abcd.nH.g(this.v5, this.FH.DW()));
-        return;
-    L10:
-        throw new abcd.kD(java.text.MessageFormat.format(org.eclipse.jgit.JGitText.j6().unableToWrite, new java.lang.Object[]{r5}));
-    L11:
-        this.FH.v5();
-        throw new abcd.kD(java.text.MessageFormat.format(org.eclipse.jgit.JGitText.j6().interruptedWriting, new java.lang.Object[]{r5}));
-    L13:
-        e = move-exception;
-        throw new abcd.kD(java.text.MessageFormat.format(org.eclipse.jgit.JGitText.j6().unableToWrite, new java.lang.Object[]{r5}), e);
+        java.lang.Throwable e = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    this.FH.j6(true);
+                    this.FH.DW(true);
+                    try {
+                        this.FH.j6(r6);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.io.IOException) { $pc0 = 13; continue $sw0; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    try {
+                        this.FH.Zo();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.lang.InterruptedException) { $pc0 = 11; continue $sw0; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    if (this.FH.j6() == false) { $pc0 = 10; continue $sw0; }
+                    abcd.nH.DW(this.DW).compareAndSet(this.Hw, new abcd.nH.g(this.v5, this.FH.DW()));
+                    return;
+                }
+                case 10: {
+                    throw new abcd.kD(java.text.MessageFormat.format(org.eclipse.jgit.JGitText.j6().unableToWrite, new java.lang.Object[]{r5}));
+                }
+                case 11: {
+                    this.FH.v5();
+                    throw new abcd.kD(java.text.MessageFormat.format(org.eclipse.jgit.JGitText.j6().interruptedWriting, new java.lang.Object[]{r5}));
+                }
+                case 13: {
+                    e = $ex0;
+                    throw new abcd.kD(java.text.MessageFormat.format(org.eclipse.jgit.JGitText.j6().unableToWrite, new java.lang.Object[]{r5}), e);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

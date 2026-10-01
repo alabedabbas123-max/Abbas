@@ -18,25 +18,59 @@ abstract class HMAC implements com.jcraft.jsch.MAC {
 
     @Override
     public void j6(byte[] r4) {
-        int r0 = r4.length;
-        int r1 = this.DW;
-        if (r0 <= r1) goto L5;
-        byte[] r2 = new byte[r1];
-        java.lang.System.arraycopy(r4, 0, r2, 0, r1);
-        r4 = r2;
-    L5:
-        javax.crypto.spec.SecretKeySpec r3 = new javax.crypto.spec.SecretKeySpec(r4, this.FH);
-        this.Hw = javax.crypto.Mac.getInstance(this.FH);
-        this.Hw.init(r3);
+        int r0 = 0;
+        int r1 = 0;
+        byte[] r2 = null;
+        javax.crypto.spec.SecretKeySpec r3 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = r4.length;
+                    r1 = this.DW;
+                    if (r0 <= r1) { $pc0 = 5; continue $sw0; }
+                    r2 = new byte[r1];
+                    java.lang.System.arraycopy(r4, 0, r2, 0, r1);
+                    r4 = r2;
+                    $pc0 = 5; continue $sw0;
+                }
+                case 5: {
+                    r3 = new javax.crypto.spec.SecretKeySpec(r4, this.FH);
+                    this.Hw = javax.crypto.Mac.getInstance(this.FH);
+                    this.Hw.init(r3);
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
     public void j6(byte[] r2, int r3) {
-        this.Hw.doFinal(r2, r3);     // Catch: javax.crypto.ShortBufferException -> L4
-        return;
-    L4:
-        e = move-exception;
-        java.lang.System.err.println(e);
+        java.lang.Throwable e = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    try {
+                        this.Hw.doFinal(r2, r3);
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        if ($t instanceof javax.crypto.ShortBufferException) { $pc1 = 4; continue $sw1; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    return;
+                }
+                case 4: {
+                    e = $ex1;
+                    java.lang.System.err.println(e);
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

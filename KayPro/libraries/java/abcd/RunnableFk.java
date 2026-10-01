@@ -23,44 +23,139 @@ class RunnableFk implements java.lang.Runnable {
     @Override
     @abcd.Interfacesu(method = -2268433727670628820L)
     public void run() {
-    L27:
-        th = move-exception;
-        if (DW == false) goto L32;
-        abcd.wu.j6(th, -6601447001292854932L, this);
-    L32:
-        throw th;
-    L4:
-        if (j6 == false) goto L6;
-        abcd.wu.j6(-6601447001292854932L, this);     // Catch: java.lang.Throwable -> L27
-    L6:
         int r2 = 0;
-    L8:
-        if (r2 >= abcd.Gk.j6().Hw()) goto L10;
-        abcd.Gk.j6((java.lang.String) abcd.Gk.j6().j6(r2));     // Catch: java.lang.Throwable -> L27
-        r2 = r2 + 1;     // Catch: java.lang.Throwable -> L27
-        goto L8
-    L10:
-        abcd.Gk.j6().j6();     // Catch: java.lang.Throwable -> L27
-        abcd.Gk r3 = this.FH;     // Catch: java.io.IOException -> L35 java.lang.Throwable -> L27
-        r3.u7 = abcd.Gk.j6(this.FH, "logcat -v threadtime");     // Catch: java.io.IOException -> L35 java.lang.Throwable -> L27
-        java.io.BufferedReader r4 = new java.io.BufferedReader(new java.io.InputStreamReader(this.FH.u7.getInputStream()), 20);     // Catch: java.io.IOException -> L35 java.lang.Throwable -> L27
-    L12:
-        java.lang.String r5 = r4.readLine();     // Catch: java.io.IOException -> L35 java.lang.Throwable -> L27
-        if (r5 == null) goto L48;
-        java.lang.Object r6 = abcd.Gk.j6(this.FH);     // Catch: java.io.IOException -> L35 java.lang.Throwable -> L27
-        monitor-enter(r6);     // Catch: java.io.IOException -> L35 java.lang.Throwable -> L27
-    L39:
-        if (abcd.Gk.DW(this.FH) == false) goto L20;
-        abcd.Gk.j6(this.FH).wait(1000);     // Catch: java.lang.InterruptedException -> L34 java.lang.Throwable -> L23
-        goto L39
-    L20:
-        monitor-exit(r6);     // Catch: java.lang.Throwable -> L23
-        abcd.Gk.DW(this.FH, r5);     // Catch: java.io.IOException -> L35 java.lang.Throwable -> L27
-    L23:
-        th = move-exception;
-        throw th;     // Catch: java.io.IOException -> L35 java.lang.Throwable -> L27
-        goto L26
-    L48:
-        return;
+        abcd.Gk r3 = null;
+        java.io.BufferedReader r4 = null;
+        java.lang.String r5 = null;
+        java.lang.Object r6 = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 4;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 27: {
+                    th = $ex0;
+                    if (DW == false) { $pc0 = 32; continue $sw0; }
+                    abcd.wu.j6(th, -6601447001292854932L, this);
+                    $pc0 = 32; continue $sw0;
+                }
+                case 32: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (j6 == false) { $pc0 = 6; continue $sw0; }
+                    try {
+                        abcd.wu.j6(-6601447001292854932L, this);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 27; continue $sw0;
+                    }
+                    $pc0 = 6; continue $sw0;
+                }
+                case 6: {
+                    r2 = 0;
+                    $pc0 = 8; continue $sw0;
+                }
+                case 8: {
+                    if (r2 >= abcd.Gk.j6().Hw()) { $pc0 = 10; continue $sw0; }
+                    try {
+                        abcd.Gk.j6((java.lang.String) abcd.Gk.j6().j6(r2));
+                        r2 = r2 + 1;
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 27; continue $sw0;
+                    }
+                    { $pc0 = 8; continue $sw0; }
+                }
+                case 10: {
+                    try {
+                        abcd.Gk.j6().j6();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 27; continue $sw0;
+                    }
+                    try {
+                        r3 = this.FH;
+                        r3.u7 = abcd.Gk.j6(this.FH, "logcat -v threadtime");
+                        r4 = new java.io.BufferedReader(new java.io.InputStreamReader(this.FH.u7.getInputStream()), 20);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.io.IOException) { $pc0 = 35; continue $sw0; }
+                        $pc0 = 27; continue $sw0;
+                    }
+                    $pc0 = 12; continue $sw0;
+                }
+                case 12: {
+                    try {
+                        r5 = r4.readLine();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.io.IOException) { $pc0 = 35; continue $sw0; }
+                        $pc0 = 27; continue $sw0;
+                    }
+                    if (r5 == null) { $pc0 = 48; continue $sw0; }
+                    try {
+                        r6 = abcd.Gk.j6(this.FH);
+                        monitor-enter(r6);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.io.IOException) { $pc0 = 35; continue $sw0; }
+                        $pc0 = 27; continue $sw0;
+                    }
+                    $pc0 = 39; continue $sw0;
+                }
+                case 39: {
+                    if (abcd.Gk.DW(this.FH) == false) { $pc0 = 20; continue $sw0; }
+                    try {
+                        abcd.Gk.j6(this.FH).wait(1000);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.lang.InterruptedException) { $pc0 = 34; continue $sw0; }
+                        $pc0 = 23; continue $sw0;
+                    }
+                    { $pc0 = 39; continue $sw0; }
+                }
+                case 20: {
+                    try {
+                        monitor-exit(r6);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 23; continue $sw0;
+                    }
+                    try {
+                        abcd.Gk.DW(this.FH, r5);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.io.IOException) { $pc0 = 35; continue $sw0; }
+                        $pc0 = 27; continue $sw0;
+                    }
+                    $pc0 = 23; continue $sw0;
+                }
+                case 23: {
+                    th = $ex0;
+                    try {
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.io.IOException) { $pc0 = 35; continue $sw0; }
+                        $pc0 = 27; continue $sw0;
+                    }
+                    { $pc0 = 26; continue $sw0; }
+                }
+                case 48: {
+                    return;
+                }
+                case 26: {
+                    $pc0 = 34; continue $sw0;
+                }
+                case 34: {
+                    $pc0 = 35; continue $sw0;
+                }
+                case 35: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

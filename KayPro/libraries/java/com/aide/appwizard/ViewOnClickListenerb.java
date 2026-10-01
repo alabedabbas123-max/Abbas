@@ -23,24 +23,58 @@ class ViewOnClickListenerb implements android.view.View.OnClickListener {
     @Override
     @abcd.Interfacesu(method = 422404864575850176L)
     public void onClick(android.view.View r5) {
-    L12:
-        th = move-exception;
-        if (DW == false) goto L16;
-        abcd.wu.j6(th, -535812570207302256L, this, r5);
-    L16:
-        throw th;
-    L4:
-        if (j6 == false) goto L6;
-        abcd.wu.j6(-535812570207302256L, this, r5);     // Catch: java.lang.Throwable -> L12
-    L6:
-        com.aide.appwizard.AppWizardDesignActivity r2 = this.FH;     // Catch: java.lang.Throwable -> L12
-        if (this.FH.QX() == true) goto L9;
-        boolean r3 = true;
-    L10:
-        com.aide.appwizard.AppWizardDesignActivity.j6(r2, r3);     // Catch: java.lang.Throwable -> L12
-        return;
-    L9:
-        r3 = false;
-        goto L10
+        com.aide.appwizard.AppWizardDesignActivity r2 = null;
+        boolean r3 = false;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 4;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 12: {
+                    th = $ex0;
+                    if (DW == false) { $pc0 = 16; continue $sw0; }
+                    abcd.wu.j6(th, -535812570207302256L, this, r5);
+                    $pc0 = 16; continue $sw0;
+                }
+                case 16: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (j6 == false) { $pc0 = 6; continue $sw0; }
+                    try {
+                        abcd.wu.j6(-535812570207302256L, this, r5);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 12; continue $sw0;
+                    }
+                    $pc0 = 6; continue $sw0;
+                }
+                case 6: {
+                    try {
+                        r2 = this.FH;
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 12; continue $sw0;
+                    }
+                    if (this.FH.QX() == true) { $pc0 = 9; continue $sw0; }
+                    r3 = true;
+                    $pc0 = 10; continue $sw0;
+                }
+                case 10: {
+                    try {
+                        com.aide.appwizard.AppWizardDesignActivity.j6(r2, r3);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 12; continue $sw0;
+                    }
+                    return;
+                }
+                case 9: {
+                    r3 = false;
+                    { $pc0 = 10; continue $sw0; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

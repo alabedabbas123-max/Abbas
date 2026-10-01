@@ -13,13 +13,25 @@ class y implements io.fabric.sdk.android.services.common.z.c {
 
     @Override
     public void j6(java.io.InputStream r2, int r3) {
-        if (this.j6 == false) goto L5;
-        this.j6 = false;
-    L6:
-        this.DW.append(r3);
-        return;
-    L5:
-        this.DW.append(", ");
-        goto L6
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (this.j6 == false) { $pc0 = 5; continue $sw0; }
+                    this.j6 = false;
+                    $pc0 = 6; continue $sw0;
+                }
+                case 6: {
+                    this.DW.append(r3);
+                    return;
+                }
+                case 5: {
+                    this.DW.append(", ");
+                    { $pc0 = 6; continue $sw0; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

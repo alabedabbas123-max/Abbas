@@ -14,15 +14,28 @@ public class VO extends abcd.SO {
 
     @Override
     public boolean equals(java.lang.Object r4) {
-        if ((r4 instanceof abcd.VO) == true) goto L6;
-        return false;
-    L6:
-        if (((abcd.VO) r4).FH().equals(this.FH) == true) goto L8;
-    L11:
-        return false;
-    L8:
-        if (super.equals(r4) == false) goto L11;
-        return true;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if ((r4 instanceof abcd.VO) == true) { $pc0 = 6; continue $sw0; }
+                    return false;
+                }
+                case 6: {
+                    if (((abcd.VO) r4).FH().equals(this.FH) == true) { $pc0 = 8; continue $sw0; }
+                    $pc0 = 11; continue $sw0;
+                }
+                case 11: {
+                    return false;
+                }
+                case 8: {
+                    if (super.equals(r4) == false) { $pc0 = 11; continue $sw0; }
+                    return true;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

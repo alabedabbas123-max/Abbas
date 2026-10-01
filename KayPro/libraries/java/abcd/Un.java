@@ -14,32 +14,54 @@ public final class Un {
     }
 
     public Un(int r1, abcd.ho r2, abcd.InterfacePn r3) {
-        if (r2 == null) goto L10;
-        if (r3 == null) goto L8;
-        this.j6 = r1;
-        this.DW = r2;
-        this.FH = r3;
-        this.Hw = null;
-        this.v5 = null;
-        this.Zo = null;
-        this.VH = null;
-        return;
-    L8:
-        throw new java.lang.NullPointerException("unprocessedCatches == null");
-    L10:
-        throw new java.lang.NullPointerException("unprocessedInsns == null");
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (r2 == null) { $pc0 = 10; continue $sw0; }
+                    if (r3 == null) { $pc0 = 8; continue $sw0; }
+                    this.j6 = r1;
+                    this.DW = r2;
+                    this.FH = r3;
+                    this.Hw = null;
+                    this.v5 = null;
+                    this.Zo = null;
+                    this.VH = null;
+                    return;
+                }
+                case 8: {
+                    throw new java.lang.NullPointerException("unprocessedCatches == null");
+                }
+                case 10: {
+                    throw new java.lang.NullPointerException("unprocessedInsns == null");
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     private void tp() {
-        if (this.VH == null) goto L5;
-        return;
-    L5:
-        this.VH = this.DW.j6();
-        this.v5 = abcd.io.j6(this.VH, this.j6);
-        this.Zo = abcd.co.j6(this.VH);
-        this.Hw = this.FH.build();
-        this.DW = null;
-        this.FH = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if (this.VH == null) { $pc1 = 5; continue $sw1; }
+                    return;
+                }
+                case 5: {
+                    this.VH = this.DW.j6();
+                    this.v5 = abcd.io.j6(this.VH, this.j6);
+                    this.Zo = abcd.co.j6(this.VH);
+                    this.Hw = this.FH.build();
+                    this.DW = null;
+                    this.FH = null;
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public abcd.Rn DW() {
@@ -78,12 +100,24 @@ public final class Un {
     }
 
     public boolean u7() {
-        if (this.j6 != 1) goto L5;
-    L7:
-        return false;
-    L5:
-        if (this.DW.Hw() == false) goto L7;
-        return true;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    if (this.j6 != 1) { $pc2 = 5; continue $sw2; }
+                    $pc2 = 7; continue $sw2;
+                }
+                case 7: {
+                    return false;
+                }
+                case 5: {
+                    if (this.DW.Hw() == false) { $pc2 = 7; continue $sw2; }
+                    return true;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public abcd.co v5() {

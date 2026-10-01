@@ -7,7 +7,7 @@ public final class Fp extends abcd.AbstractKp {
     private int tp;
     private final abcd.Fp.a u7;
 
-    static final enum a extends java.lang.Enum<abcd.Fp.a> {
+    static final class a extends com.almlkaide.kaypro.internal.EnumBase {
         public static final abcd.Fp.a DW = null;
         public static final abcd.Fp.a FH = null;
         private static final abcd.Fp.a[] Hw = null;
@@ -25,7 +25,7 @@ public final class Fp extends abcd.AbstractKp {
         }
 
         public static abcd.Fp.a valueOf(java.lang.String r1) {
-            return (abcd.Fp.a) java.lang.Enum.valueOf(abcd.Fp.a.class, r1);
+            return (abcd.Fp.a) com.almlkaide.kaypro.internal.EnumBase.valueOf(abcd.Fp.a.values(), r1);
         }
 
         public static abcd.Fp.a[] values() {
@@ -46,48 +46,86 @@ public final class Fp extends abcd.AbstractKp {
     }
 
     public <T extends abcd.AbstractGp> T DW(T r2) {
-        gn();
-        T r0 = (T) this.gn.get(r2);
-        if (r0 == null) goto L5;
-        return r0;
-    L5:
-        j6(r2);
-        this.gn.put(r2, r2);
-        return r2;
+        T r0 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    gn();
+                    r0 = (T) this.gn.get(r2);
+                    if (r0 == null) { $pc0 = 5; continue $sw0; }
+                    return r0;
+                }
+                case 5: {
+                    j6(r2);
+                    this.gn.put(r2, r2);
+                    return r2;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
     protected void FH(abcd.Lt r11) {
-        boolean r0 = r11.Hw();
-        abcd.jp r1 = DW();
-        java.util.Iterator<abcd.AbstractGp> r2 = this.VH.iterator();
+        boolean r0 = false;
+        abcd.jp r1 = null;
+        java.util.Iterator<abcd.AbstractGp> r2 = null;
         int r5 = 0;
-        boolean r6 = true;
-    L4:
-        if (r2.hasNext() == false) goto L15;
-        abcd.AbstractGp r7 = r2.next();
-        if (r0 == false) goto L10;
-        if (r6 == false) goto L9;
-        r6 = false;
-        goto L10
-    L9:
-        r11.j6(0, "\n");
-    L10:
-        int r8 = r7.J8() - 1;
-        int r9 = r5 + r8;
-        int r10 = (r8 ^ (-1)) & r9;
-        if (r5 == r10) goto L13;
-        r11.j6(r10 - r5);
-        r5 = r10;
-    L13:
-        r7.j6(r1, r11);
-        r5 = r5 + r7.VH();
-        goto L4
-    L15:
-        if (r5 != this.tp) goto L18;
-        return;
-    L18:
-        throw new java.lang.RuntimeException("output size mismatch");
+        boolean r6 = false;
+        abcd.AbstractGp r7 = null;
+        int r8 = 0;
+        int r9 = 0;
+        int r10 = 0;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    r0 = r11.Hw();
+                    r1 = DW();
+                    r2 = this.VH.iterator();
+                    r5 = 0;
+                    r6 = true;
+                    $pc1 = 4; continue $sw1;
+                }
+                case 4: {
+                    if (r2.hasNext() == false) { $pc1 = 15; continue $sw1; }
+                    r7 = r2.next();
+                    if (r0 == false) { $pc1 = 10; continue $sw1; }
+                    if (r6 == false) { $pc1 = 9; continue $sw1; }
+                    r6 = false;
+                    { $pc1 = 10; continue $sw1; }
+                }
+                case 9: {
+                    r11.j6(0, "\n");
+                    $pc1 = 10; continue $sw1;
+                }
+                case 10: {
+                    r8 = r7.J8() - 1;
+                    r9 = r5 + r8;
+                    r10 = (r8 ^ (-1)) & r9;
+                    if (r5 == r10) { $pc1 = 13; continue $sw1; }
+                    r11.j6(r10 - r5);
+                    r5 = r10;
+                    $pc1 = 13; continue $sw1;
+                }
+                case 13: {
+                    r7.j6(r1, r11);
+                    r5 = r5 + r7.VH();
+                    { $pc1 = 4; continue $sw1; }
+                }
+                case 15: {
+                    if (r5 != this.tp) { $pc1 = 18; continue $sw1; }
+                    return;
+                }
+                case 18: {
+                    throw new java.lang.RuntimeException("output size mismatch");
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
@@ -97,17 +135,32 @@ public final class Fp extends abcd.AbstractKp {
 
     @Override
     protected void Zo() {
-        abcd.jp r0 = DW();
+        abcd.jp r0 = null;
         int r1 = 0;
-    L3:
-        int r2 = this.VH.size();
-        if (r1 < r2) goto L6;
-        return;
-    L6:
-        if (r1 >= r2) goto L3;
-        this.VH.get(r1).j6(r0);
-        r1 = r1 + 1;
-        goto L6
+        int r2 = 0;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    r0 = DW();
+                    r1 = 0;
+                    $pc2 = 3; continue $sw2;
+                }
+                case 3: {
+                    r2 = this.VH.size();
+                    if (r1 < r2) { $pc2 = 6; continue $sw2; }
+                    return;
+                }
+                case 6: {
+                    if (r1 >= r2) { $pc2 = 3; continue $sw2; }
+                    this.VH.get(r1).j6(r0);
+                    r1 = r1 + 1;
+                    { $pc2 = 6; continue $sw2; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
@@ -116,68 +169,153 @@ public final class Fp extends abcd.AbstractKp {
     }
 
     public void j6(abcd.AbstractGp r3) {
-        gn();
-        if (r3.J8() > j6()) goto L8;
-        this.VH.add(r3);
-        return;
-    L8:
-        throw new java.lang.IllegalArgumentException("incompatible item alignment");     // Catch: java.lang.NullPointerException -> L9
-    L10:
-        throw new java.lang.NullPointerException("item == null");
+        java.lang.Throwable $ex3 = null;
+        int $pc3 = -1;
+        $sw3: while (true) {
+            switch ($pc3) {
+                case -1: {
+                    gn();
+                    if (r3.J8() > j6()) { $pc3 = 8; continue $sw3; }
+                    this.VH.add(r3);
+                    return;
+                }
+                case 8: {
+                    try {
+                        throw new java.lang.IllegalArgumentException("incompatible item alignment");
+                    } catch (java.lang.Throwable $t) {
+                        $ex3 = $t;
+                        if ($t instanceof java.lang.NullPointerException) { $pc3 = 9; continue $sw3; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                }
+                case 10: {
+                    throw new java.lang.NullPointerException("item == null");
+                }
+                case 9: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public void j6(abcd.Lt r5, abcd.Enumwp r6, java.lang.String r7) {
-        VH();
-        java.util.TreeMap r0 = new java.util.TreeMap();
-        java.util.Iterator<abcd.AbstractGp> r1 = this.VH.iterator();
-    L4:
-        if (r1.hasNext() == false) goto L9;
-        abcd.AbstractGp r2 = r1.next();
-        if (r2.Hw() != r6) goto L4;
-        r0.put(r2.aM(), r2);
-        goto L4
-    L9:
-        if (r0.size() != 0) goto L11;
-        return;
-    L11:
-        r5.j6(0, r7);
-        java.util.Iterator r8 = r0.entrySet().iterator();
-    L13:
-        if (r8.hasNext() == false) goto L15;
-        java.util.Map.Entry r3 = (java.util.Map.Entry) r8.next();
-        r5.j6(0, ((abcd.AbstractGp) r3.getValue()).Ws() + ' ' + ((java.lang.String) r3.getKey()) + '\n');
-        goto L13
+        java.util.TreeMap r0 = null;
+        java.util.Iterator<abcd.AbstractGp> r1 = null;
+        abcd.AbstractGp r2 = null;
+        java.util.Iterator r8 = null;
+        java.util.Map.Entry r3 = null;
+        java.lang.Throwable $ex4 = null;
+        int $pc4 = -1;
+        $sw4: while (true) {
+            switch ($pc4) {
+                case -1: {
+                    VH();
+                    r0 = new java.util.TreeMap();
+                    r1 = this.VH.iterator();
+                    $pc4 = 4; continue $sw4;
+                }
+                case 4: {
+                    if (r1.hasNext() == false) { $pc4 = 9; continue $sw4; }
+                    r2 = r1.next();
+                    if (r2.Hw() != r6) { $pc4 = 4; continue $sw4; }
+                    r0.put(r2.aM(), r2);
+                    { $pc4 = 4; continue $sw4; }
+                }
+                case 9: {
+                    if (r0.size() != 0) { $pc4 = 11; continue $sw4; }
+                    return;
+                }
+                case 11: {
+                    r5.j6(0, r7);
+                    r8 = r0.entrySet().iterator();
+                    $pc4 = 13; continue $sw4;
+                }
+                case 13: {
+                    if (r8.hasNext() == false) { $pc4 = 15; continue $sw4; }
+                    r3 = (java.util.Map.Entry) r8.next();
+                    r5.j6(0, ((abcd.AbstractGp) r3.getValue()).Ws() + ' ' + ((java.lang.String) r3.getKey()) + '\n');
+                    { $pc4 = 13; continue $sw4; }
+                }
+                case 15: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public void tp() {
-        VH();
-        int r0 = abcd.Ep.j6[this.u7.ordinal()];
-        if (r0 != 1) goto L5;
-        java.util.Collections.sort(this.VH);
-    L9:
-        int r1 = this.VH.size();
+        int r0 = 0;
+        int r1 = 0;
         int r2 = 0;
         int r3 = 0;
-    L10:
-        if (r2 >= r1) goto L20;
-        abcd.AbstractGp r4 = this.VH.get(r2);
-        int r5 = r4.j6(this, r3);     // Catch: java.lang.RuntimeException -> L17
-        if (r5 < r3) goto L16;
-        r3 = r4.VH() + r5;     // Catch: java.lang.RuntimeException -> L17
-        r2 = r2 + 1;     // Catch: java.lang.RuntimeException -> L17
-        goto L10
-    L16:
-        throw new java.lang.RuntimeException("bogus place() result for " + r4);     // Catch: java.lang.RuntimeException -> L17
-    L17:
-        e = move-exception;
-        throw abcd.Vt.j6(e, "...while placing " + r4);
-    L20:
-        this.tp = r3;
-        return;
-    L5:
-        if (r0 != 2) goto L9;
-        java.util.Collections.sort(this.VH, Zo);
-        goto L9
+        abcd.AbstractGp r4 = null;
+        int r5 = 0;
+        java.lang.Throwable e = null;
+        java.lang.Throwable $ex5 = null;
+        int $pc5 = -1;
+        $sw5: while (true) {
+            switch ($pc5) {
+                case -1: {
+                    VH();
+                    r0 = abcd.Ep.j6[this.u7.ordinal()];
+                    if (r0 != 1) { $pc5 = 5; continue $sw5; }
+                    java.util.Collections.sort(this.VH);
+                    $pc5 = 9; continue $sw5;
+                }
+                case 9: {
+                    r1 = this.VH.size();
+                    r2 = 0;
+                    r3 = 0;
+                    $pc5 = 10; continue $sw5;
+                }
+                case 10: {
+                    if (r2 >= r1) { $pc5 = 20; continue $sw5; }
+                    r4 = this.VH.get(r2);
+                    try {
+                        r5 = r4.j6(this, r3);
+                    } catch (java.lang.Throwable $t) {
+                        $ex5 = $t;
+                        if ($t instanceof java.lang.RuntimeException) { $pc5 = 17; continue $sw5; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    if (r5 < r3) { $pc5 = 16; continue $sw5; }
+                    try {
+                        r3 = r4.VH() + r5;
+                        r2 = r2 + 1;
+                    } catch (java.lang.Throwable $t) {
+                        $ex5 = $t;
+                        if ($t instanceof java.lang.RuntimeException) { $pc5 = 17; continue $sw5; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    { $pc5 = 10; continue $sw5; }
+                }
+                case 16: {
+                    try {
+                        throw new java.lang.RuntimeException("bogus place() result for " + r4);
+                    } catch (java.lang.Throwable $t) {
+                        $ex5 = $t;
+                        if ($t instanceof java.lang.RuntimeException) { $pc5 = 17; continue $sw5; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                }
+                case 17: {
+                    e = $ex5;
+                    throw abcd.Vt.j6(e, "...while placing " + r4);
+                }
+                case 20: {
+                    this.tp = r3;
+                    return;
+                }
+                case 5: {
+                    if (r0 != 2) { $pc5 = 9; continue $sw5; }
+                    java.util.Collections.sort(this.VH, Zo);
+                    { $pc5 = 9; continue $sw5; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

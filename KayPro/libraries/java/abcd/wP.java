@@ -52,9 +52,19 @@ public class wP implements abcd.InterfaceyP {
 
     @Override
     public abcd.wN j6(abcd.wN r3) {
-        if (r3.v5().equals(abcd.InterfacelN.EQ) == false) goto L6;
-        return ((abcd.nN) r3.VH()).v5();
-    L6:
-        return new abcd.wN((abcd.zL) j6.get(r3.v5()), new abcd.mM());
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (r3.v5().equals(abcd.InterfacelN.EQ) == false) { $pc0 = 6; continue $sw0; }
+                    return ((abcd.nN) r3.VH()).v5();
+                }
+                case 6: {
+                    return new abcd.wN((abcd.zL) j6.get(r3.v5()), new abcd.mM());
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

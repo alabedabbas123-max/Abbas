@@ -14,12 +14,22 @@ final class VF extends abcd.XF {
 
     @Override
     abcd.dG j6() {
-    L2:
-        abcd.dG r0 = this.j6.j6();
-        if (r0 == null) goto L4;
-        if ((r0.EQ & 4) != 0) goto L2;
-        return r0;
-    L4:
-        return null;
+        abcd.dG r0 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 2;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 2: {
+                    r0 = this.j6.j6();
+                    if (r0 == null) { $pc0 = 4; continue $sw0; }
+                    if ((r0.EQ & 4) != 0) { $pc0 = 2; continue $sw0; }
+                    return r0;
+                }
+                case 4: {
+                    return null;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

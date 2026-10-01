@@ -18,36 +18,77 @@ public class D {
     }
 
     public synchronized void DW() {
-        monitor-enter(this);
-    L15:
-        th = move-exception;
-        throw th;
-    L4:
-        if (this.FH == false) goto L9;
-        monitor-exit(this);
-        return;
-    L9:
-        if (this.v5 == 0) goto L12;
-        monitor-exit(this);
-        return;
-    L12:
-        this.v5 = android.os.SystemClock.elapsedRealtime() - this.Hw;     // Catch: java.lang.Throwable -> L15
-        FH();     // Catch: java.lang.Throwable -> L15
-        monitor-exit(this);
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    monitor-enter(this);
+                    $pc0 = 15; continue $sw0;
+                }
+                case 15: {
+                    th = $ex0;
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (this.FH == false) { $pc0 = 9; continue $sw0; }
+                    monitor-exit(this);
+                    return;
+                }
+                case 9: {
+                    if (this.v5 == 0) { $pc0 = 12; continue $sw0; }
+                    monitor-exit(this);
+                    return;
+                }
+                case 12: {
+                    try {
+                        this.v5 = android.os.SystemClock.elapsedRealtime() - this.Hw;
+                        FH();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 15; continue $sw0;
+                    }
+                    monitor-exit(this);
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public synchronized void j6() {
-        monitor-enter(this);
-    L10:
-        th = move-exception;
-        throw th;
-    L4:
-        if (this.FH == false) goto L7;
-        monitor-exit(this);
-        return;
-    L7:
-        this.Hw = android.os.SystemClock.elapsedRealtime();     // Catch: java.lang.Throwable -> L10
-        this.v5 = 0;     // Catch: java.lang.Throwable -> L10
-        monitor-exit(this);
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    monitor-enter(this);
+                    $pc1 = 10; continue $sw1;
+                }
+                case 10: {
+                    th = $ex1;
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (this.FH == false) { $pc1 = 7; continue $sw1; }
+                    monitor-exit(this);
+                    return;
+                }
+                case 7: {
+                    try {
+                        this.Hw = android.os.SystemClock.elapsedRealtime();
+                        this.v5 = 0;
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        $pc1 = 10; continue $sw1;
+                    }
+                    monitor-exit(this);
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

@@ -13,31 +13,77 @@ public interface Interfacedx extends android.os.IInterface {
 
             @Override
             public android.os.Bundle Zo(android.os.Bundle r5) {
-                android.os.Parcel r0 = android.os.Parcel.obtain();
-                android.os.Parcel r1 = android.os.Parcel.obtain();
-                r0.writeInterfaceToken("com.google.android.finsky.externalreferrer.IGetInstallReferrerService");     // Catch: java.lang.Throwable -> L14
-                if (r5 == null) goto L6;
-                r0.writeInt(1);     // Catch: java.lang.Throwable -> L14
-                r5.writeToParcel(r0, 0);     // Catch: java.lang.Throwable -> L14
-            L7:
-                this.j6.transact(1, r0, r1, 0);     // Catch: java.lang.Throwable -> L14
-                r1.readException();     // Catch: java.lang.Throwable -> L14
-                if (r1.readInt() == 0) goto L11;
-                android.os.Bundle r6 = (android.os.Bundle) android.os.Bundle.CREATOR.createFromParcel(r1);     // Catch: java.lang.Throwable -> L14
-            L12:
-                r1.recycle();
-                r0.recycle();
-                return r6;
-            L11:
-                r6 = null;
-                goto L12
-            L6:
-                r0.writeInt(0);     // Catch: java.lang.Throwable -> L14
-            L14:
-                th = move-exception;
-                r1.recycle();
-                r0.recycle();
-                throw th;
+                android.os.Parcel r0 = null;
+                android.os.Parcel r1 = null;
+                android.os.Bundle r6 = null;
+                java.lang.Throwable th = null;
+                java.lang.Throwable $ex0 = null;
+                int $pc0 = -1;
+                $sw0: while (true) {
+                    switch ($pc0) {
+                        case -1: {
+                            r0 = android.os.Parcel.obtain();
+                            r1 = android.os.Parcel.obtain();
+                            try {
+                                r0.writeInterfaceToken("com.google.android.finsky.externalreferrer.IGetInstallReferrerService");
+                            } catch (java.lang.Throwable $t) {
+                                $ex0 = $t;
+                                $pc0 = 14; continue $sw0;
+                            }
+                            if (r5 == null) { $pc0 = 6; continue $sw0; }
+                            try {
+                                r0.writeInt(1);
+                                r5.writeToParcel(r0, 0);
+                            } catch (java.lang.Throwable $t) {
+                                $ex0 = $t;
+                                $pc0 = 14; continue $sw0;
+                            }
+                            $pc0 = 7; continue $sw0;
+                        }
+                        case 7: {
+                            try {
+                                this.j6.transact(1, r0, r1, 0);
+                                r1.readException();
+                            } catch (java.lang.Throwable $t) {
+                                $ex0 = $t;
+                                $pc0 = 14; continue $sw0;
+                            }
+                            if (r1.readInt() == 0) { $pc0 = 11; continue $sw0; }
+                            try {
+                                r6 = (android.os.Bundle) android.os.Bundle.CREATOR.createFromParcel(r1);
+                            } catch (java.lang.Throwable $t) {
+                                $ex0 = $t;
+                                $pc0 = 14; continue $sw0;
+                            }
+                            $pc0 = 12; continue $sw0;
+                        }
+                        case 12: {
+                            r1.recycle();
+                            r0.recycle();
+                            return r6;
+                        }
+                        case 11: {
+                            r6 = null;
+                            { $pc0 = 12; continue $sw0; }
+                        }
+                        case 6: {
+                            try {
+                                r0.writeInt(0);
+                            } catch (java.lang.Throwable $t) {
+                                $ex0 = $t;
+                                $pc0 = 14; continue $sw0;
+                            }
+                            $pc0 = 14; continue $sw0;
+                        }
+                        case 14: {
+                            th = $ex0;
+                            r1.recycle();
+                            r0.recycle();
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                        }
+                        default: throw new java.lang.IllegalStateException();
+                    }
+                }
             }
 
             @Override
@@ -47,15 +93,27 @@ public interface Interfacedx extends android.os.IInterface {
         }
 
         public static abcd.Interfacedx j6(android.os.IBinder r2) {
-            if (r2 != null) goto L5;
-            return null;
-        L5:
-            android.os.IInterface r0 = r2.queryLocalInterface("com.google.android.finsky.externalreferrer.IGetInstallReferrerService");
-            if (r0 == null) goto L12;
-            if ((r0 instanceof abcd.Interfacedx) == false) goto L12;
-            return (abcd.Interfacedx) r0;
-        L12:
-            return new abcd.Interfacedx.a.C0007a(r2);
+            android.os.IInterface r0 = null;
+            java.lang.Throwable $ex1 = null;
+            int $pc1 = -1;
+            $sw1: while (true) {
+                switch ($pc1) {
+                    case -1: {
+                        if (r2 != null) { $pc1 = 5; continue $sw1; }
+                        return null;
+                    }
+                    case 5: {
+                        r0 = r2.queryLocalInterface("com.google.android.finsky.externalreferrer.IGetInstallReferrerService");
+                        if (r0 == null) { $pc1 = 12; continue $sw1; }
+                        if ((r0 instanceof abcd.Interfacedx) == false) { $pc1 = 12; continue $sw1; }
+                        return (abcd.Interfacedx) r0;
+                    }
+                    case 12: {
+                        return new abcd.Interfacedx.a.C0007a(r2);
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
     }
 

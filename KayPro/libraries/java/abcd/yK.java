@@ -7,40 +7,78 @@ class yK extends abcd.vK {
     }
 
     static boolean u7() {
-        java.lang.String r0 = (java.lang.String) java.security.AccessController.doPrivileged(new abcd.wK());
-        if (r0 != null) goto L5;
-        return false;
-    L5:
-        java.io.File r1 = abcd.AbstractpK.DW(r0, new java.lang.String[]{"cygpath.exe"});
-        if (r1 == null) goto L9;
-        Hw = r1.getPath();
-    L9:
-        if (Hw == null) goto L11;
-        return true;
-    L11:
-        return false;
+        java.lang.String r0 = null;
+        java.io.File r1 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = (java.lang.String) java.security.AccessController.doPrivileged(new abcd.wK());
+                    if (r0 != null) { $pc0 = 5; continue $sw0; }
+                    return false;
+                }
+                case 5: {
+                    r1 = abcd.AbstractpK.DW(r0, new java.lang.String[]{"cygpath.exe"});
+                    if (r1 == null) { $pc0 = 9; continue $sw0; }
+                    Hw = r1.getPath();
+                    $pc0 = 9; continue $sw0;
+                }
+                case 9: {
+                    if (Hw == null) { $pc0 = 11; continue $sw0; }
+                    return true;
+                }
+                case 11: {
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
     protected java.io.File VH() {
-        java.lang.String r0 = (java.lang.String) java.security.AccessController.doPrivileged(new abcd.xK(this));
-        if (r0 == null) goto L10;
-        if (r0.length() == 0) goto L10;
-        return j6(new java.io.File("."), r0);
-    L10:
-        return super.VH();
+        java.lang.String r0 = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    r0 = (java.lang.String) java.security.AccessController.doPrivileged(new abcd.xK(this));
+                    if (r0 == null) { $pc1 = 10; continue $sw1; }
+                    if (r0.length() == 0) { $pc1 = 10; continue $sw1; }
+                    return j6(new java.io.File("."), r0);
+                }
+                case 10: {
+                    return super.VH();
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
     public java.io.File j6(java.io.File r4, java.lang.String r5) {
-        java.lang.String r0 = java.lang.System.getProperty("jgit.usecygpath");
-        if (r0 == null) goto L11;
-        if (r0.equals("true") == false) goto L11;
-        java.lang.String r1 = abcd.AbstractpK.j6(r4, new java.lang.String[]{Hw, "--windows", "--absolute", r5}, "UTF-8");
-        if (r1 == null) goto L11;
-        return new java.io.File(r1);
-    L11:
-        return super.j6(r4, r5);
+        java.lang.String r0 = null;
+        java.lang.String r1 = null;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    r0 = java.lang.System.getProperty("jgit.usecygpath");
+                    if (r0 == null) { $pc2 = 11; continue $sw2; }
+                    if (r0.equals("true") == false) { $pc2 = 11; continue $sw2; }
+                    r1 = abcd.AbstractpK.j6(r4, new java.lang.String[]{Hw, "--windows", "--absolute", r5}, "UTF-8");
+                    if (r1 == null) { $pc2 = 11; continue $sw2; }
+                    return new java.io.File(r1);
+                }
+                case 11: {
+                    return super.j6(r4, r5);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

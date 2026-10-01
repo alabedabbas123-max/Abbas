@@ -10,21 +10,36 @@ abstract class AbstractrK extends abcd.AbstractpK {
 
     @Override
     protected java.io.File DW() {
-        java.io.File r0 = abcd.AbstractpK.DW(abcd.QK.FH().DW("PATH"), new java.lang.String[]{"git"});
-        if (r0 == null) goto L7;
-        return r0.getParentFile().getParentFile();
-    L7:
-        if (gn() == false) goto L18;
-        java.lang.String r1 = abcd.AbstractpK.j6(Zo(), new java.lang.String[]{"bash", "--login", "-c", "which git"}, java.nio.charset.Charset.defaultCharset().name());
-        if (r1 == null) goto L18;
-        if (r1.length() == 0) goto L18;
-        java.io.File r2 = new java.io.File(r1).getParentFile();
-        if (r2 != null) goto L17;
-        return null;
-    L17:
-        return r2.getParentFile();
-    L18:
-        return null;
+        java.io.File r0 = null;
+        java.lang.String r1 = null;
+        java.io.File r2 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = abcd.AbstractpK.DW(abcd.QK.FH().DW("PATH"), new java.lang.String[]{"git"});
+                    if (r0 == null) { $pc0 = 7; continue $sw0; }
+                    return r0.getParentFile().getParentFile();
+                }
+                case 7: {
+                    if (gn() == false) { $pc0 = 18; continue $sw0; }
+                    r1 = abcd.AbstractpK.j6(Zo(), new java.lang.String[]{"bash", "--login", "-c", "which git"}, java.nio.charset.Charset.defaultCharset().name());
+                    if (r1 == null) { $pc0 = 18; continue $sw0; }
+                    if (r1.length() == 0) { $pc0 = 18; continue $sw0; }
+                    r2 = new java.io.File(r1).getParentFile();
+                    if (r2 != null) { $pc0 = 17; continue $sw0; }
+                    return null;
+                }
+                case 17: {
+                    return r2.getParentFile();
+                }
+                case 18: {
+                    return null;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

@@ -25,17 +25,45 @@ class RunnableIi implements java.lang.Runnable {
     @Override
     @abcd.Interfacesu(method = -2118055098731350821L)
     public void run() {
-    L8:
-        th = move-exception;
-        if (DW == false) goto L12;
-        abcd.wu.j6(th, -755807237633406861L, this);
-    L12:
-        throw th;
-    L4:
-        if (j6 == false) goto L14;
-        abcd.wu.j6(-755807237633406861L, this);     // Catch: java.lang.Throwable -> L8
-    L14:
-        this.FH.close();     // Catch: java.io.IOException -> L13 java.lang.Throwable -> L8
-        return;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 4;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 8: {
+                    th = $ex0;
+                    if (DW == false) { $pc0 = 12; continue $sw0; }
+                    abcd.wu.j6(th, -755807237633406861L, this);
+                    $pc0 = 12; continue $sw0;
+                }
+                case 12: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (j6 == false) { $pc0 = 14; continue $sw0; }
+                    try {
+                        abcd.wu.j6(-755807237633406861L, this);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 8; continue $sw0;
+                    }
+                    $pc0 = 14; continue $sw0;
+                }
+                case 14: {
+                    try {
+                        this.FH.close();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.io.IOException) { $pc0 = 13; continue $sw0; }
+                        $pc0 = 8; continue $sw0;
+                    }
+                    return;
+                }
+                case 13: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

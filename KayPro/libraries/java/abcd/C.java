@@ -35,16 +35,29 @@ public class C {
     }
 
     static {
-        int r0 = android.os.Build.VERSION.SDK_INT;
-        if (r0 < 16) goto L6;
-        j6 = new abcd.C.b();
-        return;
-    L6:
-        if (r0 < 15) goto L8;
-        j6 = new abcd.C.a();
-        return;
-    L8:
-        j6 = new abcd.C.c();
+        int r0 = 0;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = android.os.Build.VERSION.SDK_INT;
+                    if (r0 < 16) { $pc0 = 6; continue $sw0; }
+                    j6 = new abcd.C.b();
+                    return;
+                }
+                case 6: {
+                    if (r0 < 15) { $pc0 = 8; continue $sw0; }
+                    j6 = new abcd.C.a();
+                    return;
+                }
+                case 8: {
+                    j6 = new abcd.C.c();
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static void DW(android.view.accessibility.AccessibilityRecord r1, int r2) {

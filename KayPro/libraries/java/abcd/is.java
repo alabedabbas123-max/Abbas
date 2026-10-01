@@ -4,15 +4,26 @@ public final class is extends abcd.Tr {
     private final abcd.au v5;
 
     public is(abcd.es r1, abcd.hs r2, abcd.bs r3, abcd.cs r4, abcd.au r5) {
-        super(r1, r2, r3, r4);
-        if (r1.DW() != 5) goto L10;
-        if (r5 == null) goto L8;
-        this.v5 = r5;
-        return;
-    L8:
-        throw new java.lang.NullPointerException("cases == null");
-    L10:
-        throw new java.lang.IllegalArgumentException("bogus branchingness");
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    super(r1, r2, r3, r4);
+                    if (r1.DW() != 5) { $pc0 = 10; continue $sw0; }
+                    if (r5 == null) { $pc0 = 8; continue $sw0; }
+                    this.v5 = r5;
+                    return;
+                }
+                case 8: {
+                    throw new java.lang.NullPointerException("cases == null");
+                }
+                case 10: {
+                    throw new java.lang.IllegalArgumentException("bogus branchingness");
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

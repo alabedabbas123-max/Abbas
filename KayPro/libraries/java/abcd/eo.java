@@ -4,12 +4,22 @@ public final class eo extends abcd.Abstractro {
     private final abcd.bs v5;
 
     public eo(abcd.hs r1, abcd.bs r2) {
-        super(r1);
-        if (r2 == null) goto L7;
-        this.v5 = r2;
-        return;
-    L7:
-        throw new java.lang.NullPointerException("local == null");
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    super(r1);
+                    if (r2 == null) { $pc0 = 7; continue $sw0; }
+                    this.v5 = r2;
+                    return;
+                }
+                case 7: {
+                    throw new java.lang.NullPointerException("local == null");
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static java.lang.String j6(abcd.bs r2) {

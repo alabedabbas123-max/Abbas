@@ -23,9 +23,21 @@ public class ad extends a.an {
 
     @Override
     public void c() {
-        super.c();
-        if (this.f13a == null) goto L6;
-        this.f13a.close();
-        return;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    super.c();
+                    if (this.f13a == null) { $pc0 = 6; continue $sw0; }
+                    this.f13a.close();
+                    return;
+                }
+                case 6: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

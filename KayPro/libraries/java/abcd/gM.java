@@ -9,20 +9,43 @@ public class gM implements abcd.InterfaceqL, abcd.IM {
 
     @Override
     public abcd.EL DW() {
-        return j6();
-    L8:
-        e = move-exception;
-        throw new abcd.DL("unable to get DER object", e);
-    L5:
-        e = move-exception;
-        throw new abcd.DL("unable to get DER object", e);
+        java.lang.Throwable e = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    return j6();
+                }
+                case 8: {
+                    e = $ex0;
+                    throw new abcd.DL("unable to get DER object", e);
+                }
+                case 5: {
+                    e = $ex0;
+                    throw new abcd.DL("unable to get DER object", e);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
     public abcd.EL j6() {
-        return new abcd.fM(this.j6.DW());
-    L4:
-        e = move-exception;
-        throw new abcd.tL(e.getMessage(), e);
+        java.lang.Throwable e = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    return new abcd.fM(this.j6.DW());
+                }
+                case 4: {
+                    e = $ex1;
+                    throw new abcd.tL(e.getMessage(), e);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

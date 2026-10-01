@@ -20,10 +20,21 @@ public abstract class AbstractaI implements abcd.InterfaceiI {
     }
 
     protected java.io.Writer VH() {
-        if (this.FH != null) goto L6;
-        j6(new java.io.StringWriter());
-    L6:
-        return this.FH;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (this.FH != null) { $pc0 = 6; continue $sw0; }
+                    j6(new java.io.StringWriter());
+                    $pc0 = 6; continue $sw0;
+                }
+                case 6: {
+                    return this.FH;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
@@ -32,28 +43,59 @@ public abstract class AbstractaI implements abcd.InterfaceiI {
     }
 
     protected void gn() {
-        if (this.DW == true) goto L7;
-        this.DW = true;
-        return;
-    L7:
-        throw new abcd.yD(org.eclipse.jgit.JGitText.j6().onlyOneOperationCallPerConnectionIsSupported);
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if (this.DW == true) { $pc1 = 7; continue $sw1; }
+                    this.DW = true;
+                    return;
+                }
+                case 7: {
+                    throw new abcd.yD(org.eclipse.jgit.JGitText.j6().onlyOneOperationCallPerConnectionIsSupported);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
     public java.lang.String j6() {
-        java.io.Writer r0 = this.FH;
-        if (r0 != null) goto L7;
-        return "";
-    L7:
-        return r0.toString();
+        java.io.Writer r0 = null;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    r0 = this.FH;
+                    if (r0 != null) { $pc2 = 7; continue $sw2; }
+                    return "";
+                }
+                case 7: {
+                    return r0.toString();
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     protected void j6(java.io.Writer r2) {
-        if (this.FH != null) goto L7;
-        this.FH = r2;
-        return;
-    L7:
-        throw new java.lang.IllegalStateException(org.eclipse.jgit.JGitText.j6().writerAlreadyInitialized);
+        java.lang.Throwable $ex3 = null;
+        int $pc3 = -1;
+        $sw3: while (true) {
+            switch ($pc3) {
+                case -1: {
+                    if (this.FH != null) { $pc3 = 7; continue $sw3; }
+                    this.FH = r2;
+                    return;
+                }
+                case 7: {
+                    throw new java.lang.IllegalStateException(org.eclipse.jgit.JGitText.j6().writerAlreadyInitialized);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     protected void j6(java.util.Map<java.lang.String, abcd.ME> r1) {

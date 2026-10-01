@@ -9,15 +9,33 @@ class Cv implements java.lang.Runnable {
 
     @Override
     public void run() {
-        java.lang.Object r0 = abcd.Dv.j6(this.j6);
-        monitor-enter(r0);
-        long r1 = java.lang.System.currentTimeMillis();     // Catch: java.lang.Throwable -> L7
-        abcd.Dv.DW(this.j6);     // Catch: java.lang.Throwable -> L7
-        abcd.yw.j6("String resources", "Loading strings took " + (java.lang.System.currentTimeMillis() - r1));     // Catch: java.lang.Throwable -> L7
-        monitor-exit(r0);     // Catch: java.lang.Throwable -> L7
-        return;
-    L7:
-        th = move-exception;
-        throw th;
+        java.lang.Object r0 = null;
+        long r1 = 0L;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = abcd.Dv.j6(this.j6);
+                    monitor-enter(r0);
+                    try {
+                        r1 = java.lang.System.currentTimeMillis();
+                        abcd.Dv.DW(this.j6);
+                        abcd.yw.j6("String resources", "Loading strings took " + (java.lang.System.currentTimeMillis() - r1));
+                        monitor-exit(r0);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 7; continue $sw0;
+                    }
+                    return;
+                }
+                case 7: {
+                    th = $ex0;
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

@@ -28,30 +28,79 @@ class ha implements com.aide.common.ab<java.lang.Integer> {
 
     @abcd.Interfacesu(method = -5811126370284434680L)
     public void j62(java.lang.Integer r7) {
-    L17:
-        th = move-exception;
-        if (DW == false) goto L21;
-        abcd.wu.j6(th, 3339260184219208879L, this, r7);
-    L21:
-        throw th;
-    L4:
-        if (j6 == false) goto L6;
-        abcd.wu.j6(3339260184219208879L, this, r7);     // Catch: java.lang.Throwable -> L17
-    L6:
-        java.lang.String r2 = (java.lang.String) this.FH.get(r7.intValue());     // Catch: java.lang.Throwable -> L17
-        if (r2.equals("none") == false) goto L10;
-        this.Hw.j6(this.v5, null);     // Catch: java.lang.Throwable -> L17
-        return;
-    L10:
-        if (r2.equals("other...") == false) goto L13;
-        com.aide.uidesigner.ka.j6(this.Zo, this.Hw, this.v5, "@drawable/");     // Catch: java.lang.Throwable -> L17
-        return;
-    L13:
-        if (r2.equals("add...") == false) goto L15;
-        com.aide.uidesigner.ka.Hw(this.Zo, this.Hw, this.v5);     // Catch: java.lang.Throwable -> L17
-        return;
-    L15:
-        this.Hw.j6(this.v5, (java.lang.String) this.VH.get(r7.intValue()));     // Catch: java.lang.Throwable -> L17
+        java.lang.String r2 = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 4;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 17: {
+                    th = $ex0;
+                    if (DW == false) { $pc0 = 21; continue $sw0; }
+                    abcd.wu.j6(th, 3339260184219208879L, this, r7);
+                    $pc0 = 21; continue $sw0;
+                }
+                case 21: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (j6 == false) { $pc0 = 6; continue $sw0; }
+                    try {
+                        abcd.wu.j6(3339260184219208879L, this, r7);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 17; continue $sw0;
+                    }
+                    $pc0 = 6; continue $sw0;
+                }
+                case 6: {
+                    try {
+                        r2 = (java.lang.String) this.FH.get(r7.intValue());
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 17; continue $sw0;
+                    }
+                    if (r2.equals("none") == false) { $pc0 = 10; continue $sw0; }
+                    try {
+                        this.Hw.j6(this.v5, null);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 17; continue $sw0;
+                    }
+                    return;
+                }
+                case 10: {
+                    if (r2.equals("other...") == false) { $pc0 = 13; continue $sw0; }
+                    try {
+                        com.aide.uidesigner.ka.j6(this.Zo, this.Hw, this.v5, "@drawable/");
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 17; continue $sw0;
+                    }
+                    return;
+                }
+                case 13: {
+                    if (r2.equals("add...") == false) { $pc0 = 15; continue $sw0; }
+                    try {
+                        com.aide.uidesigner.ka.Hw(this.Zo, this.Hw, this.v5);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 17; continue $sw0;
+                    }
+                    return;
+                }
+                case 15: {
+                    try {
+                        this.Hw.j6(this.v5, (java.lang.String) this.VH.get(r7.intValue()));
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 17; continue $sw0;
+                    }
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

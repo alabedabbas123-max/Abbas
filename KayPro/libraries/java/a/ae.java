@@ -23,64 +23,109 @@ public class ae {
     }
 
     public boolean equals(java.lang.Object r4) {
-        if (r4 != null) goto L5;
-        return false;
-    L5:
-        if (getClass() != r4.getClass()) goto L33;
-        a.ae r5 = (a.ae) r4;
-        if (this.f14a == r5.f14a) goto L10;
-        return false;
-    L10:
-        if (this.b == r5.b) goto L12;
-        return false;
-    L12:
-        if (this.c != null) goto L25;
-        if (r5.c == null) goto L16;
-        return false;
-    L16:
-        if (this.d != null) goto L28;
-        if (r5.d == null) goto L20;
-        return false;
-    L20:
-        if (this.e != null) goto L31;
-        if (r5.e != null) goto L38;
-    L23:
-        return true;
-    L38:
-        return false;
-    L31:
-        if (this.e.equals(r5.e) == true) goto L23;
-        return false;
-    L28:
-        if (this.d.equals(r5.d) == true) goto L20;
-        return false;
-    L25:
-        if (this.c.equals(r5.c) == true) goto L16;
-        return false;
-    L33:
-        return false;
+        a.ae r5 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (r4 != null) { $pc0 = 5; continue $sw0; }
+                    return false;
+                }
+                case 5: {
+                    if (getClass() != r4.getClass()) { $pc0 = 33; continue $sw0; }
+                    r5 = (a.ae) r4;
+                    if (this.f14a == r5.f14a) { $pc0 = 10; continue $sw0; }
+                    return false;
+                }
+                case 10: {
+                    if (this.b == r5.b) { $pc0 = 12; continue $sw0; }
+                    return false;
+                }
+                case 12: {
+                    if (this.c != null) { $pc0 = 25; continue $sw0; }
+                    if (r5.c == null) { $pc0 = 16; continue $sw0; }
+                    return false;
+                }
+                case 16: {
+                    if (this.d != null) { $pc0 = 28; continue $sw0; }
+                    if (r5.d == null) { $pc0 = 20; continue $sw0; }
+                    return false;
+                }
+                case 20: {
+                    if (this.e != null) { $pc0 = 31; continue $sw0; }
+                    if (r5.e != null) { $pc0 = 38; continue $sw0; }
+                    $pc0 = 23; continue $sw0;
+                }
+                case 23: {
+                    return true;
+                }
+                case 38: {
+                    return false;
+                }
+                case 31: {
+                    if (this.e.equals(r5.e) == true) { $pc0 = 23; continue $sw0; }
+                    return false;
+                }
+                case 28: {
+                    if (this.d.equals(r5.d) == true) { $pc0 = 20; continue $sw0; }
+                    return false;
+                }
+                case 25: {
+                    if (this.c.equals(r5.c) == true) { $pc0 = 16; continue $sw0; }
+                    return false;
+                }
+                case 33: {
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public int hashCode() {
         int r1 = 0;
-        int r2 = this.b ^ this.f14a;
-        if (this.c != null) goto L12;
+        int r2 = 0;
         int r0 = 0;
-    L5:
-        int r3 = r2 ^ r0;
-        if (this.d != null) goto L13;
+        int r3 = 0;
         int r4 = 0;
-    L8:
-        int r5 = r4 ^ r3;
-        if (this.e == null) goto L11;
-        r1 = this.e.hashCode();
-    L11:
-        return r5 ^ r1;
-    L13:
-        r4 = this.d.hashCode();
-        goto L8
-    L12:
-        r0 = this.c.hashCode();
-        goto L5
+        int r5 = 0;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    r1 = 0;
+                    r2 = this.b ^ this.f14a;
+                    if (this.c != null) { $pc1 = 12; continue $sw1; }
+                    r0 = 0;
+                    $pc1 = 5; continue $sw1;
+                }
+                case 5: {
+                    r3 = r2 ^ r0;
+                    if (this.d != null) { $pc1 = 13; continue $sw1; }
+                    r4 = 0;
+                    $pc1 = 8; continue $sw1;
+                }
+                case 8: {
+                    r5 = r4 ^ r3;
+                    if (this.e == null) { $pc1 = 11; continue $sw1; }
+                    r1 = this.e.hashCode();
+                    $pc1 = 11; continue $sw1;
+                }
+                case 11: {
+                    return r5 ^ r1;
+                }
+                case 13: {
+                    r4 = this.d.hashCode();
+                    { $pc1 = 8; continue $sw1; }
+                }
+                case 12: {
+                    r0 = this.c.hashCode();
+                    { $pc1 = 5; continue $sw1; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

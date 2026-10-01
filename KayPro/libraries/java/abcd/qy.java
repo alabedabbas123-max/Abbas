@@ -22,25 +22,61 @@ final class qy<TResult> extends Yx<TResult> {
     }
 
     private final void tp() {
-        java.lang.Object r0 = this.j6;
-        monitor-enter(r0);
-    L11:
-        th = move-exception;
-        throw th;
-    L5:
-        if (this.FH == true) goto L8;
-        monitor-exit(r0);     // Catch: java.lang.Throwable -> L11
-        return;
-    L8:
-        monitor-exit(r0);     // Catch: java.lang.Throwable -> L11
-        this.DW.j6(this);
+        java.lang.Object r0 = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = this.j6;
+                    monitor-enter(r0);
+                    $pc0 = 11; continue $sw0;
+                }
+                case 11: {
+                    th = $ex0;
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 5: {
+                    if (this.FH == true) { $pc0 = 8; continue $sw0; }
+                    try {
+                        monitor-exit(r0);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 11; continue $sw0;
+                    }
+                    return;
+                }
+                case 8: {
+                    try {
+                        monitor-exit(r0);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 11; continue $sw0;
+                    }
+                    this.DW.j6(this);
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     private final void u7() {
-        if (this.Hw == true) goto L6;
-        return;
-    L6:
-        throw new java.util.concurrent.CancellationException("Task is already canceled.");
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if (this.Hw == true) { $pc1 = 6; continue $sw1; }
+                    return;
+                }
+                case 6: {
+                    throw new java.util.concurrent.CancellationException("Task is already canceled.");
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public final <TContinuationResult> Yx<TContinuationResult> DW(java.util.concurrent.Executor r4, Sx<TResult, Yx<TContinuationResult>> r5) {
@@ -51,56 +87,135 @@ final class qy<TResult> extends Yx<TResult> {
     }
 
     public final TResult DW() {
-        java.lang.Object r0 = this.j6;
-        monitor-enter(r0);
-        VH();     // Catch: java.lang.Throwable -> L11
-        u7();     // Catch: java.lang.Throwable -> L11
-        if (this.Zo != null) goto L10;
-        TResult r1 = this.v5;     // Catch: java.lang.Throwable -> L11
-        monitor-exit(r0);     // Catch: java.lang.Throwable -> L11
-        return r1;
-    L10:
-        throw new abcd.Xx(this.Zo);     // Catch: java.lang.Throwable -> L11
-    L11:
-        th = move-exception;
-        throw th;
+        java.lang.Object r0 = null;
+        TResult r1 = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    r0 = this.j6;
+                    monitor-enter(r0);
+                    try {
+                        VH();
+                        u7();
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        $pc2 = 11; continue $sw2;
+                    }
+                    if (this.Zo != null) { $pc2 = 10; continue $sw2; }
+                    try {
+                        r1 = this.v5;
+                        monitor-exit(r0);
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        $pc2 = 11; continue $sw2;
+                    }
+                    return r1;
+                }
+                case 10: {
+                    try {
+                        throw new abcd.Xx(this.Zo);
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        $pc2 = 11; continue $sw2;
+                    }
+                }
+                case 11: {
+                    th = $ex2;
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public final boolean DW(java.lang.Exception r3) {
-        com.google.android.gms.common.internal.r.j6(r3, "Exception must not be null");
-        java.lang.Object r0 = this.j6;
-        monitor-enter(r0);
-    L13:
-        th = move-exception;
-        throw th;
-    L5:
-        if (this.FH == true) goto L7;
-        this.FH = true;     // Catch: java.lang.Throwable -> L13
-        this.Zo = r3;     // Catch: java.lang.Throwable -> L13
-        monitor-exit(r0);     // Catch: java.lang.Throwable -> L13
-        this.DW.j6(this);
-        return true;
-    L7:
-        monitor-exit(r0);     // Catch: java.lang.Throwable -> L13
-        return false;
+        java.lang.Object r0 = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex3 = null;
+        int $pc3 = -1;
+        $sw3: while (true) {
+            switch ($pc3) {
+                case -1: {
+                    com.google.android.gms.common.internal.r.j6(r3, "Exception must not be null");
+                    r0 = this.j6;
+                    monitor-enter(r0);
+                    $pc3 = 13; continue $sw3;
+                }
+                case 13: {
+                    th = $ex3;
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 5: {
+                    if (this.FH == true) { $pc3 = 7; continue $sw3; }
+                    try {
+                        this.FH = true;
+                        this.Zo = r3;
+                        monitor-exit(r0);
+                    } catch (java.lang.Throwable $t) {
+                        $ex3 = $t;
+                        $pc3 = 13; continue $sw3;
+                    }
+                    this.DW.j6(this);
+                    return true;
+                }
+                case 7: {
+                    try {
+                        monitor-exit(r0);
+                    } catch (java.lang.Throwable $t) {
+                        $ex3 = $t;
+                        $pc3 = 13; continue $sw3;
+                    }
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public final boolean DW(TResult r3) {
-        java.lang.Object r0 = this.j6;
-        monitor-enter(r0);
-    L13:
-        th = move-exception;
-        throw th;
-    L5:
-        if (this.FH == true) goto L7;
-        this.FH = true;     // Catch: java.lang.Throwable -> L13
-        this.v5 = r3;     // Catch: java.lang.Throwable -> L13
-        monitor-exit(r0);     // Catch: java.lang.Throwable -> L13
-        this.DW.j6(this);
-        return true;
-    L7:
-        monitor-exit(r0);     // Catch: java.lang.Throwable -> L13
-        return false;
+        java.lang.Object r0 = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex4 = null;
+        int $pc4 = -1;
+        $sw4: while (true) {
+            switch ($pc4) {
+                case -1: {
+                    r0 = this.j6;
+                    monitor-enter(r0);
+                    $pc4 = 13; continue $sw4;
+                }
+                case 13: {
+                    th = $ex4;
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 5: {
+                    if (this.FH == true) { $pc4 = 7; continue $sw4; }
+                    try {
+                        this.FH = true;
+                        this.v5 = r3;
+                        monitor-exit(r0);
+                    } catch (java.lang.Throwable $t) {
+                        $ex4 = $t;
+                        $pc4 = 13; continue $sw4;
+                    }
+                    this.DW.j6(this);
+                    return true;
+                }
+                case 7: {
+                    try {
+                        monitor-exit(r0);
+                    } catch (java.lang.Throwable $t) {
+                        $ex4 = $t;
+                        $pc4 = 13; continue $sw4;
+                    }
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public final boolean FH() {
@@ -108,32 +223,75 @@ final class qy<TResult> extends Yx<TResult> {
     }
 
     public final boolean Hw() {
-        java.lang.Object r0 = this.j6;
-        monitor-enter(r0);
-        boolean r1 = this.FH;     // Catch: java.lang.Throwable -> L7
-        monitor-exit(r0);     // Catch: java.lang.Throwable -> L7
-        return r1;
-    L7:
-        th = move-exception;
-        throw th;
+        java.lang.Object r0 = null;
+        boolean r1 = false;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex5 = null;
+        int $pc5 = -1;
+        $sw5: while (true) {
+            switch ($pc5) {
+                case -1: {
+                    r0 = this.j6;
+                    monitor-enter(r0);
+                    try {
+                        r1 = this.FH;
+                        monitor-exit(r0);
+                    } catch (java.lang.Throwable $t) {
+                        $ex5 = $t;
+                        $pc5 = 7; continue $sw5;
+                    }
+                    return r1;
+                }
+                case 7: {
+                    th = $ex5;
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public final boolean Zo() {
-        java.lang.Object r0 = this.j6;
-        monitor-enter(r0);
-    L13:
-        th = move-exception;
-        throw th;
-    L5:
-        if (this.FH == true) goto L7;
-        this.FH = true;     // Catch: java.lang.Throwable -> L13
-        this.Hw = true;     // Catch: java.lang.Throwable -> L13
-        monitor-exit(r0);     // Catch: java.lang.Throwable -> L13
-        this.DW.j6(this);
-        return true;
-    L7:
-        monitor-exit(r0);     // Catch: java.lang.Throwable -> L13
-        return false;
+        java.lang.Object r0 = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex6 = null;
+        int $pc6 = -1;
+        $sw6: while (true) {
+            switch ($pc6) {
+                case -1: {
+                    r0 = this.j6;
+                    monitor-enter(r0);
+                    $pc6 = 13; continue $sw6;
+                }
+                case 13: {
+                    th = $ex6;
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 5: {
+                    if (this.FH == true) { $pc6 = 7; continue $sw6; }
+                    try {
+                        this.FH = true;
+                        this.Hw = true;
+                        monitor-exit(r0);
+                    } catch (java.lang.Throwable $t) {
+                        $ex6 = $t;
+                        $pc6 = 13; continue $sw6;
+                    }
+                    this.DW.j6(this);
+                    return true;
+                }
+                case 7: {
+                    try {
+                        monitor-exit(r0);
+                    } catch (java.lang.Throwable $t) {
+                        $ex6 = $t;
+                        $pc6 = 13; continue $sw6;
+                    }
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public final <TContinuationResult> Yx<TContinuationResult> j6(java.util.concurrent.Executor r4, Sx<TResult, TContinuationResult> r5) {
@@ -168,81 +326,193 @@ final class qy<TResult> extends Yx<TResult> {
     }
 
     public final java.lang.Exception j6() {
-        java.lang.Object r0 = this.j6;
-        monitor-enter(r0);
-        java.lang.Exception r1 = this.Zo;     // Catch: java.lang.Throwable -> L7
-        monitor-exit(r0);     // Catch: java.lang.Throwable -> L7
-        return r1;
-    L7:
-        th = move-exception;
-        throw th;
+        java.lang.Object r0 = null;
+        java.lang.Exception r1 = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex7 = null;
+        int $pc7 = -1;
+        $sw7: while (true) {
+            switch ($pc7) {
+                case -1: {
+                    r0 = this.j6;
+                    monitor-enter(r0);
+                    try {
+                        r1 = this.Zo;
+                        monitor-exit(r0);
+                    } catch (java.lang.Throwable $t) {
+                        $ex7 = $t;
+                        $pc7 = 7; continue $sw7;
+                    }
+                    return r1;
+                }
+                case 7: {
+                    th = $ex7;
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public final <X extends java.lang.Throwable> TResult j6(java.lang.Class<X> r3) {
-        java.lang.Object r0 = this.j6;
-        monitor-enter(r0);
-        VH();     // Catch: java.lang.Throwable -> L15
-        u7();     // Catch: java.lang.Throwable -> L15
-        if (r3.isInstance(this.Zo) == true) goto L14;
-        if (this.Zo != null) goto L12;
-        TResult r4 = this.v5;     // Catch: java.lang.Throwable -> L15
-        monitor-exit(r0);     // Catch: java.lang.Throwable -> L15
-        return r4;
-    L12:
-        throw new abcd.Xx(this.Zo);     // Catch: java.lang.Throwable -> L15
-    L14:
-        throw r3.cast(this.Zo);     // Catch: java.lang.Throwable -> L15
-    L15:
-        th = move-exception;
-        throw th;
+        java.lang.Object r0 = null;
+        TResult r4 = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex8 = null;
+        int $pc8 = -1;
+        $sw8: while (true) {
+            switch ($pc8) {
+                case -1: {
+                    r0 = this.j6;
+                    monitor-enter(r0);
+                    try {
+                        VH();
+                        u7();
+                    } catch (java.lang.Throwable $t) {
+                        $ex8 = $t;
+                        $pc8 = 15; continue $sw8;
+                    }
+                    if (r3.isInstance(this.Zo) == true) { $pc8 = 14; continue $sw8; }
+                    if (this.Zo != null) { $pc8 = 12; continue $sw8; }
+                    try {
+                        r4 = this.v5;
+                        monitor-exit(r0);
+                    } catch (java.lang.Throwable $t) {
+                        $ex8 = $t;
+                        $pc8 = 15; continue $sw8;
+                    }
+                    return r4;
+                }
+                case 12: {
+                    try {
+                        throw new abcd.Xx(this.Zo);
+                    } catch (java.lang.Throwable $t) {
+                        $ex8 = $t;
+                        $pc8 = 15; continue $sw8;
+                    }
+                }
+                case 14: {
+                    try {
+                        throw r3.cast(this.Zo);
+                    } catch (java.lang.Throwable $t) {
+                        $ex8 = $t;
+                        $pc8 = 15; continue $sw8;
+                    }
+                }
+                case 15: {
+                    th = $ex8;
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public final void j6(java.lang.Exception r3) {
-        com.google.android.gms.common.internal.r.j6(r3, "Exception must not be null");
-        java.lang.Object r0 = this.j6;
-        monitor-enter(r0);
-        gn();     // Catch: java.lang.Throwable -> L8
-        this.FH = true;     // Catch: java.lang.Throwable -> L8
-        this.Zo = r3;     // Catch: java.lang.Throwable -> L8
-        monitor-exit(r0);     // Catch: java.lang.Throwable -> L8
-        this.DW.j6(this);
-        return;
-    L8:
-        th = move-exception;
-        throw th;
+        java.lang.Object r0 = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex9 = null;
+        int $pc9 = -1;
+        $sw9: while (true) {
+            switch ($pc9) {
+                case -1: {
+                    com.google.android.gms.common.internal.r.j6(r3, "Exception must not be null");
+                    r0 = this.j6;
+                    monitor-enter(r0);
+                    try {
+                        gn();
+                        this.FH = true;
+                        this.Zo = r3;
+                        monitor-exit(r0);
+                    } catch (java.lang.Throwable $t) {
+                        $ex9 = $t;
+                        $pc9 = 8; continue $sw9;
+                    }
+                    this.DW.j6(this);
+                    return;
+                }
+                case 8: {
+                    th = $ex9;
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public final void j6(TResult r3) {
-        java.lang.Object r0 = this.j6;
-        monitor-enter(r0);
-        gn();     // Catch: java.lang.Throwable -> L8
-        this.FH = true;     // Catch: java.lang.Throwable -> L8
-        this.v5 = r3;     // Catch: java.lang.Throwable -> L8
-        monitor-exit(r0);     // Catch: java.lang.Throwable -> L8
-        this.DW.j6(this);
-        return;
-    L8:
-        th = move-exception;
-        throw th;
+        java.lang.Object r0 = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex10 = null;
+        int $pc10 = -1;
+        $sw10: while (true) {
+            switch ($pc10) {
+                case -1: {
+                    r0 = this.j6;
+                    monitor-enter(r0);
+                    try {
+                        gn();
+                        this.FH = true;
+                        this.v5 = r3;
+                        monitor-exit(r0);
+                    } catch (java.lang.Throwable $t) {
+                        $ex10 = $t;
+                        $pc10 = 8; continue $sw10;
+                    }
+                    this.DW.j6(this);
+                    return;
+                }
+                case 8: {
+                    th = $ex10;
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public final boolean v5() {
-        java.lang.Object r0 = this.j6;
-        monitor-enter(r0);
-    L14:
-        th = move-exception;
-        throw th;
-    L5:
-        if (this.FH == true) goto L7;
-    L11:
+        java.lang.Object r0 = null;
         boolean r1 = false;
-    L12:
-        monitor-exit(r0);     // Catch: java.lang.Throwable -> L14
-        return r1;
-    L7:
-        if (this.Hw == true) goto L11;
-        if (this.Zo != null) goto L11;
-        r1 = true;
-        goto L12
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex11 = null;
+        int $pc11 = -1;
+        $sw11: while (true) {
+            switch ($pc11) {
+                case -1: {
+                    r0 = this.j6;
+                    monitor-enter(r0);
+                    $pc11 = 14; continue $sw11;
+                }
+                case 14: {
+                    th = $ex11;
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 5: {
+                    if (this.FH == true) { $pc11 = 7; continue $sw11; }
+                    $pc11 = 11; continue $sw11;
+                }
+                case 11: {
+                    r1 = false;
+                    $pc11 = 12; continue $sw11;
+                }
+                case 12: {
+                    try {
+                        monitor-exit(r0);
+                    } catch (java.lang.Throwable $t) {
+                        $ex11 = $t;
+                        $pc11 = 14; continue $sw11;
+                    }
+                    return r1;
+                }
+                case 7: {
+                    if (this.Hw == true) { $pc11 = 11; continue $sw11; }
+                    if (this.Zo != null) { $pc11 = 11; continue $sw11; }
+                    r1 = true;
+                    { $pc11 = 12; continue $sw11; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

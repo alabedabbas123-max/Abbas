@@ -23,10 +23,21 @@ class qP implements abcd.InterfacehP {
 
     @Override
     public javax.crypto.spec.DHParameterSpec j6() {
-        javax.crypto.spec.DHParameterSpec r0 = (javax.crypto.spec.DHParameterSpec) this.Zo.get();
-        if (r0 == null) goto L6;
-        return r0;
-    L6:
-        return this.VH;
+        javax.crypto.spec.DHParameterSpec r0 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = (javax.crypto.spec.DHParameterSpec) this.Zo.get();
+                    if (r0 == null) { $pc0 = 6; continue $sw0; }
+                    return r0;
+                }
+                case 6: {
+                    return this.VH;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

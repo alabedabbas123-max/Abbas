@@ -10,13 +10,24 @@ public class qN extends abcd.AbstractyL {
     }
 
     public static abcd.qN j6(java.lang.Object r1) {
-        if ((r1 instanceof abcd.qN) == true) goto L5;
-        if (r1 == null) goto L10;
-        return new abcd.qN(abcd.FL.j6(r1));
-    L10:
-        throw new java.lang.IllegalArgumentException("null value in getInstance()");
-    L5:
-        return (abcd.qN) r1;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if ((r1 instanceof abcd.qN) == true) { $pc0 = 5; continue $sw0; }
+                    if (r1 == null) { $pc0 = 10; continue $sw0; }
+                    return new abcd.qN(abcd.FL.j6(r1));
+                }
+                case 10: {
+                    throw new java.lang.IllegalArgumentException("null value in getInstance()");
+                }
+                case 5: {
+                    return (abcd.qN) r1;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

@@ -33,26 +33,46 @@ public class KE implements java.io.Serializable {
     }
 
     private void j6(java.lang.StringBuilder r5) {
-        int r0 = this.Hw;
-        if (r0 >= 0) goto L5;
-        char r1 = '-';
-        r0 = -r0;
-    L6:
-        int r2 = r0 / 60;
-        int r3 = r0 % 60;
-        r5.append(r1);
-        if (r2 >= 10) goto L9;
-        r5.append('0');
-    L9:
-        r5.append(r2);
-        if (r3 >= 10) goto L12;
-        r5.append('0');
-    L12:
-        r5.append(r3);
-        return;
-    L5:
-        r1 = '+';
-        goto L6
+        int r0 = 0;
+        char r1 = 0;
+        int r2 = 0;
+        int r3 = 0;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = this.Hw;
+                    if (r0 >= 0) { $pc0 = 5; continue $sw0; }
+                    r1 = '-';
+                    r0 = -r0;
+                    $pc0 = 6; continue $sw0;
+                }
+                case 6: {
+                    r2 = r0 / 60;
+                    r3 = r0 % 60;
+                    r5.append(r1);
+                    if (r2 >= 10) { $pc0 = 9; continue $sw0; }
+                    r5.append('0');
+                    $pc0 = 9; continue $sw0;
+                }
+                case 9: {
+                    r5.append(r2);
+                    if (r3 >= 10) { $pc0 = 12; continue $sw0; }
+                    r5.append('0');
+                    $pc0 = 12; continue $sw0;
+                }
+                case 12: {
+                    r5.append(r3);
+                    return;
+                }
+                case 5: {
+                    r1 = '+';
+                    { $pc0 = 6; continue $sw0; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public java.lang.String DW() {
@@ -79,14 +99,25 @@ public class KE implements java.io.Serializable {
     }
 
     public boolean equals(java.lang.Object r9) {
-        if ((r9 instanceof abcd.KE) == false) goto L12;
-        abcd.KE r10 = (abcd.KE) r9;
-        if (DW().equals(r10.DW()) == false) goto L12;
-        if (j6().equals(r10.j6()) == false) goto L12;
-        if ((this.FH / 1000) != (r10.FH / 1000)) goto L12;
-        return true;
-    L12:
-        return false;
+        abcd.KE r10 = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if ((r9 instanceof abcd.KE) == false) { $pc1 = 12; continue $sw1; }
+                    r10 = (abcd.KE) r9;
+                    if (DW().equals(r10.DW()) == false) { $pc1 = 12; continue $sw1; }
+                    if (j6().equals(r10.j6()) == false) { $pc1 = 12; continue $sw1; }
+                    if ((this.FH / 1000) != (r10.FH / 1000)) { $pc1 = 12; continue $sw1; }
+                    return true;
+                }
+                case 12: {
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public int hashCode() {

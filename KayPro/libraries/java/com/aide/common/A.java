@@ -28,41 +28,86 @@ class A extends android.widget.EditText {
     @Override
     @abcd.Interfacesu(method = 901225170902436924L)
     public boolean onKeyDown(int r8, android.view.KeyEvent r9) {
-    L11:
-        th = move-exception;
-        if (DW == false) goto L15;
-        abcd.wu.j6(th, 980333327092953015L, this, new java.lang.Integer(r8), r9);
-    L15:
-        throw th;
-    L3:
-        if (j6 == false) goto L6;
-        abcd.wu.j6(980333327092953015L, this, new java.lang.Integer(r8), r9);     // Catch: java.lang.Throwable -> L11
-    L6:
-        if (r8 != 66) goto L9;
-        return true;
-    L9:
-        return super.onKeyDown(r8, r9);
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 3;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 11: {
+                    th = $ex0;
+                    if (DW == false) { $pc0 = 15; continue $sw0; }
+                    abcd.wu.j6(th, 980333327092953015L, this, new java.lang.Integer(r8), r9);
+                    $pc0 = 15; continue $sw0;
+                }
+                case 15: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 3: {
+                    if (j6 == false) { $pc0 = 6; continue $sw0; }
+                    try {
+                        abcd.wu.j6(980333327092953015L, this, new java.lang.Integer(r8), r9);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 11; continue $sw0;
+                    }
+                    $pc0 = 6; continue $sw0;
+                }
+                case 6: {
+                    if (r8 != 66) { $pc0 = 9; continue $sw0; }
+                    return true;
+                }
+                case 9: {
+                    return super.onKeyDown(r8, r9);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
     @abcd.Interfacesu(method = -318824384747203335L)
     public boolean onKeyUp(int r8, android.view.KeyEvent r9) {
-    L11:
-        th = move-exception;
-        if (DW == false) goto L15;
-        abcd.wu.j6(th, -429576779136611040L, this, new java.lang.Integer(r8), r9);
-    L15:
-        throw th;
-    L3:
-        if (j6 == false) goto L6;
-        abcd.wu.j6(-429576779136611040L, this, new java.lang.Integer(r8), r9);     // Catch: java.lang.Throwable -> L11
-    L6:
-        if (r8 != 66) goto L10;
-        ((android.view.inputmethod.InputMethodManager) this.FH.getSystemService("input_method")).hideSoftInputFromWindow(getWindowToken(), 0);     // Catch: java.lang.Throwable -> L11
-        this.Hw[0].dismiss();     // Catch: java.lang.Throwable -> L11
-        this.v5.gn.j6(getText().toString().trim());     // Catch: java.lang.Throwable -> L11
-        return true;
-    L10:
-        return super.onKeyUp(r8, r9);
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = 3;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case 11: {
+                    th = $ex1;
+                    if (DW == false) { $pc1 = 15; continue $sw1; }
+                    abcd.wu.j6(th, -429576779136611040L, this, new java.lang.Integer(r8), r9);
+                    $pc1 = 15; continue $sw1;
+                }
+                case 15: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 3: {
+                    if (j6 == false) { $pc1 = 6; continue $sw1; }
+                    try {
+                        abcd.wu.j6(-429576779136611040L, this, new java.lang.Integer(r8), r9);
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        $pc1 = 11; continue $sw1;
+                    }
+                    $pc1 = 6; continue $sw1;
+                }
+                case 6: {
+                    if (r8 != 66) { $pc1 = 10; continue $sw1; }
+                    try {
+                        ((android.view.inputmethod.InputMethodManager) this.FH.getSystemService("input_method")).hideSoftInputFromWindow(getWindowToken(), 0);
+                        this.Hw[0].dismiss();
+                        this.v5.gn.j6(getText().toString().trim());
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        $pc1 = 11; continue $sw1;
+                    }
+                    return true;
+                }
+                case 10: {
+                    return super.onKeyUp(r8, r9);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

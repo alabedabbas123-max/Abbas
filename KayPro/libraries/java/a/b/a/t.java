@@ -19,9 +19,21 @@ public class t implements a.b.o {
     }
 
     public void a(a.b.c r2, a.b.b.a.f r3) {
-        if (this.f78a == 0) goto L6;
-        r2.a(this.f78a, r3);
-        return;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (this.f78a == 0) { $pc0 = 6; continue $sw0; }
+                    r2.a(this.f78a, r3);
+                    return;
+                }
+                case 6: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

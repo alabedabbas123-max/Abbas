@@ -6,56 +6,83 @@ class Aa extends io.fabric.sdk.android.services.common.Abstracta implements com.
     }
 
     private abcd.Hz j6(abcd.Hz r7, com.crashlytics.android.core.Ka r8) {
-        r7.v5("report_id", r8.DW());
-        java.io.File[] r9 = r8.Hw();
-        int r0 = r9.length;
+        java.io.File[] r9 = null;
+        int r0 = 0;
         int r1 = 0;
-    L3:
-        if (r1 >= r0) goto L35;
-        java.io.File r2 = r9[r1];
-        if (r2.getName().equals("minidump") == false) goto L8;
-        r7.j6("minidump_file", r2.getName(), "application/octet-stream", r2);
-    L34:
-        r1 = r1 + 1;
-        goto L3
-    L8:
-        if (r2.getName().equals("metadata") == false) goto L11;
-        r7.j6("crash_meta_file", r2.getName(), "application/octet-stream", r2);
-        goto L34
-    L11:
-        if (r2.getName().equals("binaryImages") == false) goto L14;
-        r7.j6("binary_images_file", r2.getName(), "application/octet-stream", r2);
-        goto L34
-    L14:
-        if (r2.getName().equals("session") == false) goto L17;
-        r7.j6("session_meta_file", r2.getName(), "application/octet-stream", r2);
-        goto L34
-    L17:
-        if (r2.getName().equals("app") == false) goto L20;
-        r7.j6("app_meta_file", r2.getName(), "application/octet-stream", r2);
-        goto L34
-    L20:
-        if (r2.getName().equals("device") == false) goto L23;
-        r7.j6("device_meta_file", r2.getName(), "application/octet-stream", r2);
-        goto L34
-    L23:
-        if (r2.getName().equals("os") == false) goto L26;
-        r7.j6("os_meta_file", r2.getName(), "application/octet-stream", r2);
-        goto L34
-    L26:
-        if (r2.getName().equals("user") == false) goto L29;
-        r7.j6("user_meta_file", r2.getName(), "application/octet-stream", r2);
-        goto L34
-    L29:
-        if (r2.getName().equals("logs") == false) goto L32;
-        r7.j6("logs_file", r2.getName(), "application/octet-stream", r2);
-        goto L34
-    L32:
-        if (r2.getName().equals("keys") == false) goto L34;
-        r7.j6("keys_file", r2.getName(), "application/octet-stream", r2);
-        goto L34
-    L35:
-        return r7;
+        java.io.File r2 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r7.v5("report_id", r8.DW());
+                    r9 = r8.Hw();
+                    r0 = r9.length;
+                    r1 = 0;
+                    $pc0 = 3; continue $sw0;
+                }
+                case 3: {
+                    if (r1 >= r0) { $pc0 = 35; continue $sw0; }
+                    r2 = r9[r1];
+                    if (r2.getName().equals("minidump") == false) { $pc0 = 8; continue $sw0; }
+                    r7.j6("minidump_file", r2.getName(), "application/octet-stream", r2);
+                    $pc0 = 34; continue $sw0;
+                }
+                case 34: {
+                    r1 = r1 + 1;
+                    { $pc0 = 3; continue $sw0; }
+                }
+                case 8: {
+                    if (r2.getName().equals("metadata") == false) { $pc0 = 11; continue $sw0; }
+                    r7.j6("crash_meta_file", r2.getName(), "application/octet-stream", r2);
+                    { $pc0 = 34; continue $sw0; }
+                }
+                case 11: {
+                    if (r2.getName().equals("binaryImages") == false) { $pc0 = 14; continue $sw0; }
+                    r7.j6("binary_images_file", r2.getName(), "application/octet-stream", r2);
+                    { $pc0 = 34; continue $sw0; }
+                }
+                case 14: {
+                    if (r2.getName().equals("session") == false) { $pc0 = 17; continue $sw0; }
+                    r7.j6("session_meta_file", r2.getName(), "application/octet-stream", r2);
+                    { $pc0 = 34; continue $sw0; }
+                }
+                case 17: {
+                    if (r2.getName().equals("app") == false) { $pc0 = 20; continue $sw0; }
+                    r7.j6("app_meta_file", r2.getName(), "application/octet-stream", r2);
+                    { $pc0 = 34; continue $sw0; }
+                }
+                case 20: {
+                    if (r2.getName().equals("device") == false) { $pc0 = 23; continue $sw0; }
+                    r7.j6("device_meta_file", r2.getName(), "application/octet-stream", r2);
+                    { $pc0 = 34; continue $sw0; }
+                }
+                case 23: {
+                    if (r2.getName().equals("os") == false) { $pc0 = 26; continue $sw0; }
+                    r7.j6("os_meta_file", r2.getName(), "application/octet-stream", r2);
+                    { $pc0 = 34; continue $sw0; }
+                }
+                case 26: {
+                    if (r2.getName().equals("user") == false) { $pc0 = 29; continue $sw0; }
+                    r7.j6("user_meta_file", r2.getName(), "application/octet-stream", r2);
+                    { $pc0 = 34; continue $sw0; }
+                }
+                case 29: {
+                    if (r2.getName().equals("logs") == false) { $pc0 = 32; continue $sw0; }
+                    r7.j6("logs_file", r2.getName(), "application/octet-stream", r2);
+                    { $pc0 = 34; continue $sw0; }
+                }
+                case 32: {
+                    if (r2.getName().equals("keys") == false) { $pc0 = 34; continue $sw0; }
+                    r7.j6("keys_file", r2.getName(), "application/octet-stream", r2);
+                    { $pc0 = 34; continue $sw0; }
+                }
+                case 35: {
+                    return r7;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     private abcd.Hz j6(abcd.Hz r3, java.lang.String r4) {
@@ -68,15 +95,27 @@ class Aa extends io.fabric.sdk.android.services.common.Abstracta implements com.
 
     @Override
     public boolean j6(com.crashlytics.android.core.ja r5) {
-        abcd.Hz r0 = j6();
-        j6(r0, r5.j6);
-        j6(r0, r5.DW);
-        io.fabric.sdk.android.Fabric.getLogger().Hw("CrashlyticsCore", "Sending report to: " + DW());
-        int r6 = r0.VH();
-        io.fabric.sdk.android.Fabric.getLogger().Hw("CrashlyticsCore", "Result was: " + r6);
-        if (io.fabric.sdk.android.services.common.A.j6(r6) != 0) goto L5;
-        return true;
-    L5:
-        return false;
+        abcd.Hz r0 = null;
+        int r6 = 0;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    r0 = j6();
+                    j6(r0, r5.j6);
+                    j6(r0, r5.DW);
+                    io.fabric.sdk.android.Fabric.getLogger().Hw("CrashlyticsCore", "Sending report to: " + DW());
+                    r6 = r0.VH();
+                    io.fabric.sdk.android.Fabric.getLogger().Hw("CrashlyticsCore", "Result was: " + r6);
+                    if (io.fabric.sdk.android.services.common.A.j6(r6) != 0) { $pc1 = 5; continue $sw1; }
+                    return true;
+                }
+                case 5: {
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

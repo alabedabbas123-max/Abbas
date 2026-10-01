@@ -10,25 +10,48 @@ public final class Hs extends abcd.Abstractms {
     }
 
     public Hs(abcd.Js r1, abcd.Js r2) {
-        if (r1 == null) goto L10;
-        if (r2 == null) goto L8;
-        this.DW = r1;
-        this.FH = r2;
-        return;
-    L8:
-        throw new java.lang.NullPointerException("descriptor == null");
-    L10:
-        throw new java.lang.NullPointerException("name == null");
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (r1 == null) { $pc0 = 10; continue $sw0; }
+                    if (r2 == null) { $pc0 = 8; continue $sw0; }
+                    this.DW = r1;
+                    this.FH = r2;
+                    return;
+                }
+                case 8: {
+                    throw new java.lang.NullPointerException("descriptor == null");
+                }
+                case 10: {
+                    throw new java.lang.NullPointerException("name == null");
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
     protected int DW(abcd.Abstractms r3) {
-        abcd.Hs r4 = (abcd.Hs) r3;
-        int r0 = this.DW.j6(r4.DW);
-        if (r0 == 0) goto L6;
-        return r0;
-    L6:
-        return this.FH.j6(r4.FH);
+        abcd.Hs r4 = null;
+        int r0 = 0;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    r4 = (abcd.Hs) r3;
+                    r0 = this.DW.j6(r4.DW);
+                    if (r0 == 0) { $pc1 = 6; continue $sw1; }
+                    return r0;
+                }
+                case 6: {
+                    return this.FH.j6(r4.FH);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
@@ -59,17 +82,30 @@ public final class Hs extends abcd.Abstractms {
     }
 
     public boolean equals(java.lang.Object r4) {
-        if ((r4 instanceof abcd.Hs) == true) goto L5;
-        return false;
-    L5:
-        abcd.Hs r5 = (abcd.Hs) r4;
-        if (this.DW.equals(r5.DW) == true) goto L8;
-        return false;
-    L8:
-        if (this.FH.equals(r5.FH) == false) goto L12;
-        return true;
-    L12:
-        return false;
+        abcd.Hs r5 = null;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    if ((r4 instanceof abcd.Hs) == true) { $pc2 = 5; continue $sw2; }
+                    return false;
+                }
+                case 5: {
+                    r5 = (abcd.Hs) r4;
+                    if (this.DW.equals(r5.DW) == true) { $pc2 = 8; continue $sw2; }
+                    return false;
+                }
+                case 8: {
+                    if (this.FH.equals(r5.FH) == false) { $pc2 = 12; continue $sw2; }
+                    return true;
+                }
+                case 12: {
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public int hashCode() {

@@ -189,7 +189,7 @@ public final class FileIOUtils {
     /* JADX WARN: Type inference failed for: r10v5 */
     public static byte[] readFile2BytesByStream(File file, OnProgressUpdateListener onProgressUpdateListener) throws Throwable {
         ByteArrayOutputStream byteArrayOutputStream;
-        ?? IsFileExists = UtilsBridge.isFileExists(file);
+        java.lang.Object IsFileExists = UtilsBridge.isFileExists(file);
         if (IsFileExists == 0) {
             return null;
         }

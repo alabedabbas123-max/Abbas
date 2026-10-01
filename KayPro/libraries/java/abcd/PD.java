@@ -20,13 +20,24 @@ final class PD extends abcd.MD {
 
         @Override
         public final boolean j6(char r2) {
-            if (this.j6 <= r2) goto L5;
-            return false;
-        L5:
-            if (r2 > this.DW) goto L10;
-            return true;
-        L10:
-            return false;
+            java.lang.Throwable $ex0 = null;
+            int $pc0 = -1;
+            $sw0: while (true) {
+                switch ($pc0) {
+                    case -1: {
+                        if (this.j6 <= r2) { $pc0 = 5; continue $sw0; }
+                        return false;
+                    }
+                    case 5: {
+                        if (r2 > this.DW) { $pc0 = 10; continue $sw0; }
+                        return true;
+                    }
+                    case 10: {
+                        return false;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
     }
 
@@ -87,10 +98,20 @@ final class PD extends abcd.MD {
 
         @Override
         public final boolean j6(char r2) {
-            if (this.j6 != r2) goto L6;
-            return true;
-        L6:
-            return false;
+            java.lang.Throwable $ex1 = null;
+            int $pc1 = -1;
+            $sw1: while (true) {
+                switch ($pc1) {
+                    case -1: {
+                        if (this.j6 != r2) { $pc1 = 6; continue $sw1; }
+                        return true;
+                    }
+                    case 6: {
+                        return false;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
     }
 
@@ -108,10 +129,20 @@ final class PD extends abcd.MD {
 
         @Override
         public boolean j6(char r2) {
-            if (DW.indexOf(r2) == (-1)) goto L6;
-            return true;
-        L6:
-            return false;
+            java.lang.Throwable $ex2 = null;
+            int $pc2 = -1;
+            $sw2: while (true) {
+                switch ($pc2) {
+                    case -1: {
+                        if (DW.indexOf(r2) == (-1)) { $pc2 = 6; continue $sw2; }
+                        return true;
+                    }
+                    case 6: {
+                        return false;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
     }
 
@@ -153,102 +184,152 @@ final class PD extends abcd.MD {
 
     PD(java.lang.String r7, java.lang.String r8) {
         int r0 = 0;
-        super(false);
-        this.Hw = new java.util.ArrayList();
-        this.v5 = r7.startsWith("!");
-        if (this.v5 == false) goto L5;
-        r7 = r7.substring(1);
-    L5:
-        java.util.regex.Matcher r1 = FH.matcher(r7);
-    L7:
-        if (r1.find() == false) goto L9;
-        java.lang.String r9 = r1.group(0);
-        if (r9.length() != 3) goto L18;
-        if (r9.charAt(1) != '-') goto L18;
-        this.Hw.add(new abcd.PD.b(r9.charAt(0), r9.charAt(2)));
-    L56:
-        r7 = r1.replaceFirst("");
-        r1.reset(r7);
-    L18:
-        if (r9.equals("[:alnum:]") == false) goto L21;
-        this.Hw.add(abcd.PD.d.j6);
-        this.Hw.add(abcd.PD.c.j6);
-        goto L56
-    L21:
-        if (r9.equals("[:alpha:]") == false) goto L24;
-        this.Hw.add(abcd.PD.d.j6);
-        goto L56
-    L24:
-        if (r9.equals("[:blank:]") == false) goto L27;
-        this.Hw.add(new abcd.PD.f(' '));
-        this.Hw.add(new abcd.PD.f('\t'));
-        goto L56
-    L27:
-        if (r9.equals("[:cntrl:]") == false) goto L30;
-        this.Hw.add(new abcd.PD.b(0, 31));
-        this.Hw.add(new abcd.PD.f(127));
-        goto L56
-    L30:
-        if (r9.equals("[:digit:]") == false) goto L33;
-        this.Hw.add(abcd.PD.c.j6);
-        goto L56
-    L33:
-        if (r9.equals("[:graph:]") == false) goto L36;
-        this.Hw.add(new abcd.PD.b('!', '~'));
-        this.Hw.add(abcd.PD.d.j6);
-        this.Hw.add(abcd.PD.c.j6);
-        goto L56
-    L36:
-        if (r9.equals("[:lower:]") == false) goto L39;
-        this.Hw.add(abcd.PD.e.j6);
-        goto L56
-    L39:
-        if (r9.equals("[:print:]") == false) goto L42;
-        this.Hw.add(new abcd.PD.b(' ', '~'));
-        this.Hw.add(abcd.PD.d.j6);
-        this.Hw.add(abcd.PD.c.j6);
-        goto L56
-    L42:
-        if (r9.equals("[:punct:]") == false) goto L45;
-        this.Hw.add(abcd.PD.g.j6);
-        goto L56
-    L45:
-        if (r9.equals("[:space:]") == false) goto L48;
-        this.Hw.add(abcd.PD.i.j6);
-        goto L56
-    L48:
-        if (r9.equals("[:upper:]") == false) goto L51;
-        this.Hw.add(abcd.PD.h.j6);
-        goto L56
-    L51:
-        if (r9.equals("[:xdigit:]") == false) goto L54;
-        this.Hw.add(new abcd.PD.b('0', '9'));
-        this.Hw.add(new abcd.PD.b('a', 'f'));
-        this.Hw.add(new abcd.PD.b('A', 'F'));
-        goto L56
-    L54:
-        if (r9.equals("[:word:]") == false) goto L58;
-        this.Hw.add(new abcd.PD.f('_'));
-        this.Hw.add(abcd.PD.d.j6);
-        this.Hw.add(abcd.PD.c.j6);
-        goto L56
-    L58:
-        throw new abcd.bD(java.lang.String.format(java.text.MessageFormat.format(org.eclipse.jgit.JGitText.j6().characterClassIsNotSupported, new java.lang.Object[]{r9}), new java.lang.Object[0]), r8);
-    L9:
-        if (r0 >= r7.length()) goto L10;
-        this.Hw.add(new abcd.PD.f(r7.charAt(r0)));
-        r0 = r0 + 1;
-        goto L9
+        java.util.regex.Matcher r1 = null;
+        java.lang.String r9 = null;
+        java.lang.Throwable $ex3 = null;
+        int $pc3 = -1;
+        $sw3: while (true) {
+            switch ($pc3) {
+                case -1: {
+                    r0 = 0;
+                    super(false);
+                    this.Hw = new java.util.ArrayList();
+                    this.v5 = r7.startsWith("!");
+                    if (this.v5 == false) { $pc3 = 5; continue $sw3; }
+                    r7 = r7.substring(1);
+                    $pc3 = 5; continue $sw3;
+                }
+                case 5: {
+                    r1 = FH.matcher(r7);
+                    $pc3 = 7; continue $sw3;
+                }
+                case 7: {
+                    if (r1.find() == false) { $pc3 = 9; continue $sw3; }
+                    r9 = r1.group(0);
+                    if (r9.length() != 3) { $pc3 = 18; continue $sw3; }
+                    if (r9.charAt(1) != '-') { $pc3 = 18; continue $sw3; }
+                    this.Hw.add(new abcd.PD.b(r9.charAt(0), r9.charAt(2)));
+                    $pc3 = 56; continue $sw3;
+                }
+                case 56: {
+                    r7 = r1.replaceFirst("");
+                    r1.reset(r7);
+                    $pc3 = 18; continue $sw3;
+                }
+                case 18: {
+                    if (r9.equals("[:alnum:]") == false) { $pc3 = 21; continue $sw3; }
+                    this.Hw.add(abcd.PD.d.j6);
+                    this.Hw.add(abcd.PD.c.j6);
+                    { $pc3 = 56; continue $sw3; }
+                }
+                case 21: {
+                    if (r9.equals("[:alpha:]") == false) { $pc3 = 24; continue $sw3; }
+                    this.Hw.add(abcd.PD.d.j6);
+                    { $pc3 = 56; continue $sw3; }
+                }
+                case 24: {
+                    if (r9.equals("[:blank:]") == false) { $pc3 = 27; continue $sw3; }
+                    this.Hw.add(new abcd.PD.f(' '));
+                    this.Hw.add(new abcd.PD.f('\t'));
+                    { $pc3 = 56; continue $sw3; }
+                }
+                case 27: {
+                    if (r9.equals("[:cntrl:]") == false) { $pc3 = 30; continue $sw3; }
+                    this.Hw.add(new abcd.PD.b(0, 31));
+                    this.Hw.add(new abcd.PD.f(127));
+                    { $pc3 = 56; continue $sw3; }
+                }
+                case 30: {
+                    if (r9.equals("[:digit:]") == false) { $pc3 = 33; continue $sw3; }
+                    this.Hw.add(abcd.PD.c.j6);
+                    { $pc3 = 56; continue $sw3; }
+                }
+                case 33: {
+                    if (r9.equals("[:graph:]") == false) { $pc3 = 36; continue $sw3; }
+                    this.Hw.add(new abcd.PD.b('!', '~'));
+                    this.Hw.add(abcd.PD.d.j6);
+                    this.Hw.add(abcd.PD.c.j6);
+                    { $pc3 = 56; continue $sw3; }
+                }
+                case 36: {
+                    if (r9.equals("[:lower:]") == false) { $pc3 = 39; continue $sw3; }
+                    this.Hw.add(abcd.PD.e.j6);
+                    { $pc3 = 56; continue $sw3; }
+                }
+                case 39: {
+                    if (r9.equals("[:print:]") == false) { $pc3 = 42; continue $sw3; }
+                    this.Hw.add(new abcd.PD.b(' ', '~'));
+                    this.Hw.add(abcd.PD.d.j6);
+                    this.Hw.add(abcd.PD.c.j6);
+                    { $pc3 = 56; continue $sw3; }
+                }
+                case 42: {
+                    if (r9.equals("[:punct:]") == false) { $pc3 = 45; continue $sw3; }
+                    this.Hw.add(abcd.PD.g.j6);
+                    { $pc3 = 56; continue $sw3; }
+                }
+                case 45: {
+                    if (r9.equals("[:space:]") == false) { $pc3 = 48; continue $sw3; }
+                    this.Hw.add(abcd.PD.i.j6);
+                    { $pc3 = 56; continue $sw3; }
+                }
+                case 48: {
+                    if (r9.equals("[:upper:]") == false) { $pc3 = 51; continue $sw3; }
+                    this.Hw.add(abcd.PD.h.j6);
+                    { $pc3 = 56; continue $sw3; }
+                }
+                case 51: {
+                    if (r9.equals("[:xdigit:]") == false) { $pc3 = 54; continue $sw3; }
+                    this.Hw.add(new abcd.PD.b('0', '9'));
+                    this.Hw.add(new abcd.PD.b('a', 'f'));
+                    this.Hw.add(new abcd.PD.b('A', 'F'));
+                    { $pc3 = 56; continue $sw3; }
+                }
+                case 54: {
+                    if (r9.equals("[:word:]") == false) { $pc3 = 58; continue $sw3; }
+                    this.Hw.add(new abcd.PD.f('_'));
+                    this.Hw.add(abcd.PD.d.j6);
+                    this.Hw.add(abcd.PD.c.j6);
+                    { $pc3 = 56; continue $sw3; }
+                }
+                case 58: {
+                    throw new abcd.bD(java.lang.String.format(java.text.MessageFormat.format(org.eclipse.jgit.JGitText.j6().characterClassIsNotSupported, new java.lang.Object[]{r9}), new java.lang.Object[0]), r8);
+                }
+                case 9: {
+                    if (r0 >= r7.length()) { $pc3 = 10; continue $sw3; }
+                    this.Hw.add(new abcd.PD.f(r7.charAt(r0)));
+                    r0 = r0 + 1;
+                    { $pc3 = 9; continue $sw3; }
+                }
+                case 10: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
     protected final boolean DW(char r3) {
-        java.util.Iterator<abcd.PD.a> r0 = this.Hw.iterator();
-    L4:
-        if (r0.hasNext() == false) goto L6;
-        if (r0.next().j6(r3) == false) goto L4;
-        return !this.v5;
-    L6:
-        return this.v5;
+        java.util.Iterator<abcd.PD.a> r0 = null;
+        java.lang.Throwable $ex4 = null;
+        int $pc4 = -1;
+        $sw4: while (true) {
+            switch ($pc4) {
+                case -1: {
+                    r0 = this.Hw.iterator();
+                    $pc4 = 4; continue $sw4;
+                }
+                case 4: {
+                    if (r0.hasNext() == false) { $pc4 = 6; continue $sw4; }
+                    if (r0.next().j6(r3) == false) { $pc4 = 4; continue $sw4; }
+                    return !this.v5;
+                }
+                case 6: {
+                    return this.v5;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

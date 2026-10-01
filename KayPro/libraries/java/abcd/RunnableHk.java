@@ -23,22 +23,57 @@ class RunnableHk implements java.lang.Runnable {
     @Override
     @abcd.Interfacesu(method = 2387352738165188657L)
     public void run() {
-    L11:
-        th = move-exception;
-        if (DW == false) goto L15;
-        abcd.wu.j6(th, 5353851906303505080L, this);
-    L15:
-        throw th;
-    L4:
-        if (j6 == false) goto L18;
-        abcd.wu.j6(5353851906303505080L, this);     // Catch: java.lang.Throwable -> L11
-    L18:
-        abcd.Jk.j6(this.FH).clear();     // Catch: java.io.IOException -> L8 java.lang.Throwable -> L11
-        abcd.Vl.FH(abcd.Jk.j6());     // Catch: java.io.IOException -> L8 java.lang.Throwable -> L11
-    L20:
-        return;
-    L8:
-        e = move-exception;
-        e.printStackTrace();     // Catch: java.lang.Throwable -> L11
+        java.lang.Throwable e = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 4;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 11: {
+                    th = $ex0;
+                    if (DW == false) { $pc0 = 15; continue $sw0; }
+                    abcd.wu.j6(th, 5353851906303505080L, this);
+                    $pc0 = 15; continue $sw0;
+                }
+                case 15: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (j6 == false) { $pc0 = 18; continue $sw0; }
+                    try {
+                        abcd.wu.j6(5353851906303505080L, this);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 11; continue $sw0;
+                    }
+                    $pc0 = 18; continue $sw0;
+                }
+                case 18: {
+                    try {
+                        abcd.Jk.j6(this.FH).clear();
+                        abcd.Vl.FH(abcd.Jk.j6());
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.io.IOException) { $pc0 = 8; continue $sw0; }
+                        $pc0 = 11; continue $sw0;
+                    }
+                    $pc0 = 20; continue $sw0;
+                }
+                case 20: {
+                    return;
+                }
+                case 8: {
+                    e = $ex0;
+                    try {
+                        e.printStackTrace();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 11; continue $sw0;
+                    }
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

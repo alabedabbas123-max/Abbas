@@ -11,11 +11,22 @@ public final class ws extends abcd.Fs {
 
     @Override
     protected int DW(abcd.Abstractms r2) {
-        int r0 = super.DW(r2);
-        if (r0 == 0) goto L6;
-        return r0;
-    L6:
-        return we().VH().j6(((abcd.ws) r2).we().VH());
+        int r0 = 0;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = super.DW(r2);
+                    if (r0 == 0) { $pc0 = 6; continue $sw0; }
+                    return r0;
+                }
+                case 6: {
+                    return we().VH().j6(((abcd.ws) r2).we().VH());
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

@@ -17,10 +17,20 @@ public class j extends a.b.a.c.m {
 
     @Override
     public int a() {
-        if (this.e < 64) goto L5;
-        return 247;
-    L5:
-        return this.e + 64;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (this.e < 64) { $pc0 = 5; continue $sw0; }
+                    return 247;
+                }
+                case 5: {
+                    return this.e + 64;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
@@ -34,17 +44,30 @@ public class j extends a.b.a.c.m {
 
     @Override
     public boolean equals(java.lang.Object r4) {
-        if (super.equals(r4) == true) goto L5;
-        return false;
-    L5:
-        a.b.a.c.j r5 = (a.b.a.c.j) r4;
-        if (this.e == r5.e) goto L8;
-        return false;
-    L8:
-        if (this.f55a.equals(r5.f55a) == false) goto L11;
-        return true;
-    L11:
-        return false;
+        a.b.a.c.j r5 = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if (super.equals(r4) == true) { $pc1 = 5; continue $sw1; }
+                    return false;
+                }
+                case 5: {
+                    r5 = (a.b.a.c.j) r4;
+                    if (this.e == r5.e) { $pc1 = 8; continue $sw1; }
+                    return false;
+                }
+                case 8: {
+                    if (this.f55a.equals(r5.f55a) == false) { $pc1 = 11; continue $sw1; }
+                    return true;
+                }
+                case 11: {
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

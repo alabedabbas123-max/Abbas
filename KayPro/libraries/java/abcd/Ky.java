@@ -35,257 +35,398 @@ final class Ky {
 
     private int j6(int[] r23, int r24, int r25, int r26, int[] r27, int[] r28, int[] r29, int[] r30, int[] r31, int[] r32, int[] r33) {
         int r4 = 0;
-        int r6 = r25;
+        int r6 = 0;
         int r5 = 0;
-    L3:
-        int[] r7 = this.u7;
-        int r8 = r23[r24 + r5];
-        int r10 = 1;
-        r7[r8] = r7[r8] + 1;
-        r5 = r5 + 1;
-        int r9 = -1;
-        r6 = r6 - 1;
-        if (r6 != 0) goto L3;
-        if (r7[0] != r25) goto L9;
-        r29[0] = -1;
-        r30[0] = 0;
-        return 0;
-    L9:
-        int r11 = r30[0];
-        int r12 = 1;
-    L10:
-        int r13 = 15;
-        if (r12 > 15) goto L15;
-        if (this.u7[r12] != 0) goto L15;
-        r12 = r12 + 1;
-        r26 = r26;
-        r4 = 0;
-        r9 = -1;
-        r10 = 1;
-    L15:
-        if (r11 >= r12) goto L17;
-        int r14 = r12;
-    L18:
-        if (r13 == 0) goto L22;
-        if (this.u7[r13] != 0) goto L22;
-        r13 = r13 - 1;
-        r26 = r26;
-        r4 = 0;
-        r9 = -1;
-        r10 = 1;
-    L22:
-        if (r14 <= r13) goto L24;
-        int r15 = r13;
-    L25:
-        r30[r4] = r15;
-        int r16 = r10 << r12;
-        int r17 = r12;
-    L27:
-        if (r17 >= r13) goto L28;
-        int r18 = r16 - this.u7[r17];
-        if (r18 < 0) goto L104;
-        r17 = r17 + 1;
-        r16 = r18 << 1;
-        r26 = r26;
-        r4 = 0;
-        r9 = -1;
-        r10 = 1;
-        goto L27
-    L104:
-        return -3;
-    L28:
-        int[] r19 = this.u7;
-        int r110 = r16 - r19[r13];
-        if (r110 >= 0) goto L31;
-        return -3;
-    L31:
-        r19[r13] = r19[r13] + r110;
-        this.we[r10] = r4;
-        int r20 = r13;
-        int r111 = 2;
+        int[] r7 = null;
+        int r8 = 0;
+        int r10 = 0;
+        int r9 = 0;
+        int r11 = 0;
+        int r12 = 0;
+        int r13 = 0;
+        int r14 = 0;
+        int r15 = 0;
+        int r16 = 0;
+        int r17 = 0;
+        int r18 = 0;
+        int[] r19 = null;
+        int r110 = 0;
+        int r20 = 0;
+        int r111 = 0;
         int r112 = 0;
-        int r113 = 1;
-    L32:
-        r20 = r20 + r9;
-        if (r20 == 0) goto L34;
-        int[] r2 = this.we;
-        r112 = r112 + this.u7[r113];
-        r2[r111] = r112;
-        r111 = r111 + 1;
-        r113 = r113 + 1;
-        r26 = r26;
-        r4 = 0;
-        r9 = -1;
-        r10 = 1;
-        goto L32
-    L34:
+        int r113 = 0;
+        int[] r2 = null;
         int r21 = 0;
         int r114 = 0;
-    L35:
-        int r115 = r23[r24 + r21];
-        if (r115 == 0) goto L38;
-        int[] r22 = this.we;
-        int r116 = r22[r115];
-        r22[r115] = r116 + 1;
-        r33[r116] = r114;
-    L38:
-        r21 = r21 + 1;
-        r114 = r114 + 1;
-        if (r114 >= r25) goto L40;
-        r26 = r26;
-        goto L35
-    L40:
-        int[] r1 = this.we;
-        int r34 = r1[r13];
-        r1[r4] = r4;
-        this.EQ[r4] = r4;
-        int r117 = -r15;
-        int r118 = r12;
+        int r115 = 0;
+        int[] r22 = null;
+        int r116 = 0;
+        int[] r1 = null;
+        int r34 = 0;
+        int r117 = 0;
+        int r118 = 0;
         int r3 = 0;
         int r35 = 0;
         int r36 = 0;
         int r119 = 0;
-        int r120 = -1;
-    L41:
-        if (r118 > r13) goto L42;
-        int r121 = this.u7[r118];
-        int r210 = r119;
-        int r122 = r3;
-        int r37 = r35;
-        int r38 = r210;
-    L47:
-        int r123 = r121 - 1;
-        if (r121 == 0) goto L49;
-    L50:
-        int r124 = r117 + r15;
-        if (r118 <= r124) goto L52;
-        r120 = r120 + 1;
-        int r39 = r13 - r124;
-        if (r39 <= r15) goto L79;
-        r39 = r15;
-    L79:
-        int r40 = r118 - r124;
-        int r41 = 1 << r40;
-        int r125 = r123 + 1;
-        if (r41 <= r125) goto L91;
-        int r42 = r41 - r125;
-        if (r40 >= r39) goto L91;
-        int r126 = r118;
-    L84:
-        r40 = r40 + 1;
-        if (r40 >= r39) goto L91;
-        int r43 = r42 << 1;
-        int[] r127 = this.u7;
-        r126 = r126 + 1;
-        if (r43 <= r127[r126]) goto L91;
-        r42 = r43 - r127[r126];
-    L91:
-        int r44 = 1 << r40;
-        if ((r32[0] + r44) > 1440) goto L93;
-        int[] r45 = this.EQ;
-        int r128 = r32[0];
-        r45[r120] = r128;
-        r32[0] = r32[0] + r44;
-        if (r120 == 0) goto L98;
-        this.we[r120] = r122;
-        int[] r129 = this.tp;
-        r129[0] = (byte) r40;
-        r129[1] = (byte) r15;
-        int r46 = r122 >>> (r124 - r15);
-        int r47 = r120 - 1;
-        r129[2] = (r128 - r45[r47]) - r46;
-        java.lang.System.arraycopy(r129, 0, r31, (r45[r47] + r46) * 3, 3);
-    L99:
-        r38 = r44;
-        r36 = r128;
-        r117 = r124;
-        r10 = 1;
-        r26 = r26;
-        goto L50
-    L98:
-        r29[0] = r128;
-        goto L99
-    L93:
-        return -3;
-    L52:
-        int[] r130 = this.tp;
-        int r131 = r118 - r117;
-        r130[r10] = (byte) r131;
-        if (r37 < r34) goto L57;
-        r130[0] = 192;
-        int r48 = r37;
-    L55:
-        int r49 = 1;
-        int r132 = 1 << r131;
-        int r133 = r122 >>> r117;
-    L65:
-        if (r133 >= r38) goto L66;
-        java.lang.System.arraycopy(this.tp, 0, r31, (r36 + r133) * 3, 3);
-        r133 = r133 + r132;
-        r48 = r48;
-        r26 = r26;
-        r49 = 1;
-        goto L65
-    L66:
-        int r134 = r49 << (r118 - 1);
-    L68:
-        if ((r122 & r134) == 0) goto L69;
-        r122 = r122 ^ r134;
-        r134 = r134 >>> 1;
-        r49 = 1;
-        goto L68
-    L69:
-        int r135 = r122 ^ r134;
-    L71:
-        if ((((r49 << r117) - r49) & r135) == this.we[r120]) goto L72;
-        r120 = r120 - 1;
-        r117 = r117 - r15;
-        goto L71
-    L72:
-        r37 = r48;
-        r122 = r135;
-        r121 = r123;
-        r4 = 0;
-        r10 = 1;
-        goto L47
-    L57:
-        if (r33[r37] < r26) goto L59;
-        r130[0] = (byte) ((r28[r33[r37] - r26] + 16) + 64);
-        r48 = r37 + 1;
-        r130[2] = r27[r33[r37] - r26];
-        goto L55
-    L59:
-        if (r33[r37] >= 256) goto L61;
+        int r120 = 0;
+        int r121 = 0;
+        int r210 = 0;
+        int r122 = 0;
+        int r37 = 0;
+        int r38 = 0;
+        int r123 = 0;
+        int r124 = 0;
+        int r39 = 0;
+        int r40 = 0;
+        int r41 = 0;
+        int r125 = 0;
+        int r42 = 0;
+        int r126 = 0;
+        int r43 = 0;
+        int[] r127 = null;
+        int r44 = 0;
+        int[] r45 = null;
+        int r128 = 0;
+        int[] r129 = null;
+        int r46 = 0;
+        int r47 = 0;
+        int[] r130 = null;
+        int r131 = 0;
+        int r48 = 0;
+        int r49 = 0;
+        int r132 = 0;
+        int r133 = 0;
+        int r134 = 0;
+        int r135 = 0;
         int r50 = 0;
-    L62:
-        r130[0] = (byte) r50;
-        this.tp[2] = r33[r37];
-        r48 = r37 + 1;
-        goto L55
-    L61:
-        r50 = 96;
-        goto L62
-    L49:
-        r118 = r118 + 1;
-        int r211 = r38;
-        r35 = r37;
-        r3 = r122;
-        r119 = r211;
-        goto L41
-    L42:
-        if (r110 == 0) goto L131;
-        if (r13 == r10) goto L132;
-        return -5;
-    L132:
-        return r4;
-    L131:
-        return r4;
-    L24:
-        r15 = r14;
-        goto L25
-    L17:
-        r14 = r11;
-        goto L18
+        int r211 = 0;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r4 = 0;
+                    r6 = r25;
+                    r5 = 0;
+                    $pc0 = 3; continue $sw0;
+                }
+                case 3: {
+                    r7 = this.u7;
+                    r8 = r23[r24 + r5];
+                    r10 = 1;
+                    r7[r8] = r7[r8] + 1;
+                    r5 = r5 + 1;
+                    r9 = -1;
+                    r6 = r6 - 1;
+                    if (r6 != 0) { $pc0 = 3; continue $sw0; }
+                    if (r7[0] != r25) { $pc0 = 9; continue $sw0; }
+                    r29[0] = -1;
+                    r30[0] = 0;
+                    return 0;
+                }
+                case 9: {
+                    r11 = r30[0];
+                    r12 = 1;
+                    $pc0 = 10; continue $sw0;
+                }
+                case 10: {
+                    r13 = 15;
+                    if (r12 > 15) { $pc0 = 15; continue $sw0; }
+                    if (this.u7[r12] != 0) { $pc0 = 15; continue $sw0; }
+                    r12 = r12 + 1;
+                    r26 = r26;
+                    r4 = 0;
+                    r9 = -1;
+                    r10 = 1;
+                    $pc0 = 15; continue $sw0;
+                }
+                case 15: {
+                    if (r11 >= r12) { $pc0 = 17; continue $sw0; }
+                    r14 = r12;
+                    $pc0 = 18; continue $sw0;
+                }
+                case 18: {
+                    if (r13 == 0) { $pc0 = 22; continue $sw0; }
+                    if (this.u7[r13] != 0) { $pc0 = 22; continue $sw0; }
+                    r13 = r13 - 1;
+                    r26 = r26;
+                    r4 = 0;
+                    r9 = -1;
+                    r10 = 1;
+                    $pc0 = 22; continue $sw0;
+                }
+                case 22: {
+                    if (r14 <= r13) { $pc0 = 24; continue $sw0; }
+                    r15 = r13;
+                    $pc0 = 25; continue $sw0;
+                }
+                case 25: {
+                    r30[r4] = r15;
+                    r16 = r10 << r12;
+                    r17 = r12;
+                    $pc0 = 27; continue $sw0;
+                }
+                case 27: {
+                    if (r17 >= r13) { $pc0 = 28; continue $sw0; }
+                    r18 = r16 - this.u7[r17];
+                    if (r18 < 0) { $pc0 = 104; continue $sw0; }
+                    r17 = r17 + 1;
+                    r16 = r18 << 1;
+                    r26 = r26;
+                    r4 = 0;
+                    r9 = -1;
+                    r10 = 1;
+                    { $pc0 = 27; continue $sw0; }
+                }
+                case 104: {
+                    return -3;
+                }
+                case 28: {
+                    r19 = this.u7;
+                    r110 = r16 - r19[r13];
+                    if (r110 >= 0) { $pc0 = 31; continue $sw0; }
+                    return -3;
+                }
+                case 31: {
+                    r19[r13] = r19[r13] + r110;
+                    this.we[r10] = r4;
+                    r20 = r13;
+                    r111 = 2;
+                    r112 = 0;
+                    r113 = 1;
+                    $pc0 = 32; continue $sw0;
+                }
+                case 32: {
+                    r20 = r20 + r9;
+                    if (r20 == 0) { $pc0 = 34; continue $sw0; }
+                    r2 = this.we;
+                    r112 = r112 + this.u7[r113];
+                    r2[r111] = r112;
+                    r111 = r111 + 1;
+                    r113 = r113 + 1;
+                    r26 = r26;
+                    r4 = 0;
+                    r9 = -1;
+                    r10 = 1;
+                    { $pc0 = 32; continue $sw0; }
+                }
+                case 34: {
+                    r21 = 0;
+                    r114 = 0;
+                    $pc0 = 35; continue $sw0;
+                }
+                case 35: {
+                    r115 = r23[r24 + r21];
+                    if (r115 == 0) { $pc0 = 38; continue $sw0; }
+                    r22 = this.we;
+                    r116 = r22[r115];
+                    r22[r115] = r116 + 1;
+                    r33[r116] = r114;
+                    $pc0 = 38; continue $sw0;
+                }
+                case 38: {
+                    r21 = r21 + 1;
+                    r114 = r114 + 1;
+                    if (r114 >= r25) { $pc0 = 40; continue $sw0; }
+                    r26 = r26;
+                    { $pc0 = 35; continue $sw0; }
+                }
+                case 40: {
+                    r1 = this.we;
+                    r34 = r1[r13];
+                    r1[r4] = r4;
+                    this.EQ[r4] = r4;
+                    r117 = -r15;
+                    r118 = r12;
+                    r3 = 0;
+                    r35 = 0;
+                    r36 = 0;
+                    r119 = 0;
+                    r120 = -1;
+                    $pc0 = 41; continue $sw0;
+                }
+                case 41: {
+                    if (r118 > r13) { $pc0 = 42; continue $sw0; }
+                    r121 = this.u7[r118];
+                    r210 = r119;
+                    r122 = r3;
+                    r37 = r35;
+                    r38 = r210;
+                    $pc0 = 47; continue $sw0;
+                }
+                case 47: {
+                    r123 = r121 - 1;
+                    if (r121 == 0) { $pc0 = 49; continue $sw0; }
+                    $pc0 = 50; continue $sw0;
+                }
+                case 50: {
+                    r124 = r117 + r15;
+                    if (r118 <= r124) { $pc0 = 52; continue $sw0; }
+                    r120 = r120 + 1;
+                    r39 = r13 - r124;
+                    if (r39 <= r15) { $pc0 = 79; continue $sw0; }
+                    r39 = r15;
+                    $pc0 = 79; continue $sw0;
+                }
+                case 79: {
+                    r40 = r118 - r124;
+                    r41 = 1 << r40;
+                    r125 = r123 + 1;
+                    if (r41 <= r125) { $pc0 = 91; continue $sw0; }
+                    r42 = r41 - r125;
+                    if (r40 >= r39) { $pc0 = 91; continue $sw0; }
+                    r126 = r118;
+                    $pc0 = 84; continue $sw0;
+                }
+                case 84: {
+                    r40 = r40 + 1;
+                    if (r40 >= r39) { $pc0 = 91; continue $sw0; }
+                    r43 = r42 << 1;
+                    r127 = this.u7;
+                    r126 = r126 + 1;
+                    if (r43 <= r127[r126]) { $pc0 = 91; continue $sw0; }
+                    r42 = r43 - r127[r126];
+                    $pc0 = 91; continue $sw0;
+                }
+                case 91: {
+                    r44 = 1 << r40;
+                    if ((r32[0] + r44) > 1440) { $pc0 = 93; continue $sw0; }
+                    r45 = this.EQ;
+                    r128 = r32[0];
+                    r45[r120] = r128;
+                    r32[0] = r32[0] + r44;
+                    if (r120 == 0) { $pc0 = 98; continue $sw0; }
+                    this.we[r120] = r122;
+                    r129 = this.tp;
+                    r129[0] = (byte) r40;
+                    r129[1] = (byte) r15;
+                    r46 = r122 >>> (r124 - r15);
+                    r47 = r120 - 1;
+                    r129[2] = (r128 - r45[r47]) - r46;
+                    java.lang.System.arraycopy(r129, 0, r31, (r45[r47] + r46) * 3, 3);
+                    $pc0 = 99; continue $sw0;
+                }
+                case 99: {
+                    r38 = r44;
+                    r36 = r128;
+                    r117 = r124;
+                    r10 = 1;
+                    r26 = r26;
+                    { $pc0 = 50; continue $sw0; }
+                }
+                case 98: {
+                    r29[0] = r128;
+                    { $pc0 = 99; continue $sw0; }
+                }
+                case 93: {
+                    return -3;
+                }
+                case 52: {
+                    r130 = this.tp;
+                    r131 = r118 - r117;
+                    r130[r10] = (byte) r131;
+                    if (r37 < r34) { $pc0 = 57; continue $sw0; }
+                    r130[0] = 192;
+                    r48 = r37;
+                    $pc0 = 55; continue $sw0;
+                }
+                case 55: {
+                    r49 = 1;
+                    r132 = 1 << r131;
+                    r133 = r122 >>> r117;
+                    $pc0 = 65; continue $sw0;
+                }
+                case 65: {
+                    if (r133 >= r38) { $pc0 = 66; continue $sw0; }
+                    java.lang.System.arraycopy(this.tp, 0, r31, (r36 + r133) * 3, 3);
+                    r133 = r133 + r132;
+                    r48 = r48;
+                    r26 = r26;
+                    r49 = 1;
+                    { $pc0 = 65; continue $sw0; }
+                }
+                case 66: {
+                    r134 = r49 << (r118 - 1);
+                    $pc0 = 68; continue $sw0;
+                }
+                case 68: {
+                    if ((r122 & r134) == 0) { $pc0 = 69; continue $sw0; }
+                    r122 = r122 ^ r134;
+                    r134 = r134 >>> 1;
+                    r49 = 1;
+                    { $pc0 = 68; continue $sw0; }
+                }
+                case 69: {
+                    r135 = r122 ^ r134;
+                    $pc0 = 71; continue $sw0;
+                }
+                case 71: {
+                    if ((((r49 << r117) - r49) & r135) == this.we[r120]) { $pc0 = 72; continue $sw0; }
+                    r120 = r120 - 1;
+                    r117 = r117 - r15;
+                    { $pc0 = 71; continue $sw0; }
+                }
+                case 72: {
+                    r37 = r48;
+                    r122 = r135;
+                    r121 = r123;
+                    r4 = 0;
+                    r10 = 1;
+                    { $pc0 = 47; continue $sw0; }
+                }
+                case 57: {
+                    if (r33[r37] < r26) { $pc0 = 59; continue $sw0; }
+                    r130[0] = (byte) ((r28[r33[r37] - r26] + 16) + 64);
+                    r48 = r37 + 1;
+                    r130[2] = r27[r33[r37] - r26];
+                    { $pc0 = 55; continue $sw0; }
+                }
+                case 59: {
+                    if (r33[r37] >= 256) { $pc0 = 61; continue $sw0; }
+                    r50 = 0;
+                    $pc0 = 62; continue $sw0;
+                }
+                case 62: {
+                    r130[0] = (byte) r50;
+                    this.tp[2] = r33[r37];
+                    r48 = r37 + 1;
+                    { $pc0 = 55; continue $sw0; }
+                }
+                case 61: {
+                    r50 = 96;
+                    { $pc0 = 62; continue $sw0; }
+                }
+                case 49: {
+                    r118 = r118 + 1;
+                    r211 = r38;
+                    r35 = r37;
+                    r3 = r122;
+                    r119 = r211;
+                    { $pc0 = 41; continue $sw0; }
+                }
+                case 42: {
+                    if (r110 == 0) { $pc0 = 131; continue $sw0; }
+                    if (r13 == r10) { $pc0 = 132; continue $sw0; }
+                    return -5;
+                }
+                case 132: {
+                    return r4;
+                }
+                case 131: {
+                    return r4;
+                }
+                case 24: {
+                    r15 = r14;
+                    { $pc0 = 25; continue $sw0; }
+                }
+                case 17: {
+                    r14 = r11;
+                    { $pc0 = 18; continue $sw0; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     static int j6(int[] r1, int[] r2, int[][] r3, int[][] r4, abcd.Oy r5) {
@@ -297,97 +438,162 @@ final class Ky {
     }
 
     private void j6(int r7) {
-        if (this.VH != null) goto L6;
-        this.VH = new int[1];
-        this.gn = new int[r7];
-        this.u7 = new int[16];
-        this.tp = new int[3];
-        this.EQ = new int[15];
-        this.we = new int[16];
-    L6:
-        if (this.gn.length >= r7) goto L8;
-        this.gn = new int[r7];
-    L8:
         int r4 = 0;
-    L9:
-        if (r4 >= r7) goto L10;
-        this.gn[r4] = 0;
-        r4 = r4 + 1;
-        goto L9
-    L10:
         int r8 = 0;
-    L11:
-        if (r8 >= 16) goto L12;
-        this.u7[r8] = 0;
-        r8 = r8 + 1;
-        goto L11
-    L12:
         int r9 = 0;
-    L13:
-        if (r9 >= 3) goto L14;
-        this.tp[r9] = 0;
-        r9 = r9 + 1;
-        goto L13
-    L14:
-        java.lang.System.arraycopy(this.u7, 0, this.EQ, 0, 15);
-        java.lang.System.arraycopy(this.u7, 0, this.we, 0, 16);
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if (this.VH != null) { $pc1 = 6; continue $sw1; }
+                    this.VH = new int[1];
+                    this.gn = new int[r7];
+                    this.u7 = new int[16];
+                    this.tp = new int[3];
+                    this.EQ = new int[15];
+                    this.we = new int[16];
+                    $pc1 = 6; continue $sw1;
+                }
+                case 6: {
+                    if (this.gn.length >= r7) { $pc1 = 8; continue $sw1; }
+                    this.gn = new int[r7];
+                    $pc1 = 8; continue $sw1;
+                }
+                case 8: {
+                    r4 = 0;
+                    $pc1 = 9; continue $sw1;
+                }
+                case 9: {
+                    if (r4 >= r7) { $pc1 = 10; continue $sw1; }
+                    this.gn[r4] = 0;
+                    r4 = r4 + 1;
+                    { $pc1 = 9; continue $sw1; }
+                }
+                case 10: {
+                    r8 = 0;
+                    $pc1 = 11; continue $sw1;
+                }
+                case 11: {
+                    if (r8 >= 16) { $pc1 = 12; continue $sw1; }
+                    this.u7[r8] = 0;
+                    r8 = r8 + 1;
+                    { $pc1 = 11; continue $sw1; }
+                }
+                case 12: {
+                    r9 = 0;
+                    $pc1 = 13; continue $sw1;
+                }
+                case 13: {
+                    if (r9 >= 3) { $pc1 = 14; continue $sw1; }
+                    this.tp[r9] = 0;
+                    r9 = r9 + 1;
+                    { $pc1 = 13; continue $sw1; }
+                }
+                case 14: {
+                    java.lang.System.arraycopy(this.u7, 0, this.EQ, 0, 15);
+                    java.lang.System.arraycopy(this.u7, 0, this.we, 0, 16);
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     int j6(int r18, int r19, int[] r20, int[] r21, int[] r22, int[] r23, int[] r24, int[] r25, abcd.Oy r26) {
-        j6(288);
-        int[] r10 = this.VH;
-        r10[0] = 0;
-        int r0 = j6(r20, 0, r18, 257, FH, Hw, r23, r21, r25, r10, this.gn);
-        if (r0 != 0) goto L26;
-        if (r21[0] == 0) goto L26;
-        j6(288);
-        int r11 = j6(r20, r18, r19, 0, v5, Zo, r24, r22, r25, this.VH, this.gn);
-        if (r11 != 0) goto L16;
-        if (r22[0] == 0) goto L12;
-    L14:
-        return 0;
-    L12:
-        if (r18 <= 257) goto L14;
-    L16:
-        if (r11 != (-3)) goto L19;
-        r26.u7 = "oversubscribed distance tree";
-    L24:
-        return r11;
-    L19:
-        if (r11 != (-5)) goto L21;
-        r26.u7 = "incomplete distance tree";
-        return -3;
-    L21:
-        if (r11 == (-4)) goto L24;
-        r26.u7 = "empty distance tree with lengths";
-        return -3;
-    L26:
-        if (r0 != (-3)) goto L28;
-        r26.u7 = "oversubscribed literal/length tree";
-        return r0;
-    L28:
-        if (r0 == (-4)) goto L34;
-        r26.u7 = "incomplete literal/length tree";
-        return -3;
-    L34:
-        return r0;
+        int[] r10 = null;
+        int r0 = 0;
+        int r11 = 0;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    j6(288);
+                    r10 = this.VH;
+                    r10[0] = 0;
+                    r0 = j6(r20, 0, r18, 257, FH, Hw, r23, r21, r25, r10, this.gn);
+                    if (r0 != 0) { $pc2 = 26; continue $sw2; }
+                    if (r21[0] == 0) { $pc2 = 26; continue $sw2; }
+                    j6(288);
+                    r11 = j6(r20, r18, r19, 0, v5, Zo, r24, r22, r25, this.VH, this.gn);
+                    if (r11 != 0) { $pc2 = 16; continue $sw2; }
+                    if (r22[0] == 0) { $pc2 = 12; continue $sw2; }
+                    $pc2 = 14; continue $sw2;
+                }
+                case 14: {
+                    return 0;
+                }
+                case 12: {
+                    if (r18 <= 257) { $pc2 = 14; continue $sw2; }
+                    $pc2 = 16; continue $sw2;
+                }
+                case 16: {
+                    if (r11 != (-3)) { $pc2 = 19; continue $sw2; }
+                    r26.u7 = "oversubscribed distance tree";
+                    $pc2 = 24; continue $sw2;
+                }
+                case 24: {
+                    return r11;
+                }
+                case 19: {
+                    if (r11 != (-5)) { $pc2 = 21; continue $sw2; }
+                    r26.u7 = "incomplete distance tree";
+                    return -3;
+                }
+                case 21: {
+                    if (r11 == (-4)) { $pc2 = 24; continue $sw2; }
+                    r26.u7 = "empty distance tree with lengths";
+                    return -3;
+                }
+                case 26: {
+                    if (r0 != (-3)) { $pc2 = 28; continue $sw2; }
+                    r26.u7 = "oversubscribed literal/length tree";
+                    return r0;
+                }
+                case 28: {
+                    if (r0 == (-4)) { $pc2 = 34; continue $sw2; }
+                    r26.u7 = "incomplete literal/length tree";
+                    return -3;
+                }
+                case 34: {
+                    return r0;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     int j6(int[] r16, int[] r17, int[] r18, int[] r19, abcd.Oy r20) {
-        j6(19);
-        int[] r10 = this.VH;
-        r10[0] = 0;
-        int r0 = j6(r16, 0, 19, 19, null, null, r18, r17, r19, r10, this.gn);
-        if (r0 != (-3)) goto L6;
-        r20.u7 = "oversubscribed dynamic bit lengths tree";
-        return r0;
-    L6:
-        if (r0 != (-5)) goto L8;
-    L9:
-        r20.u7 = "incomplete dynamic bit lengths tree";
-        return -3;
-    L8:
-        if (r17[0] == 0) goto L9;
-        return r0;
+        int[] r10 = null;
+        int r0 = 0;
+        java.lang.Throwable $ex3 = null;
+        int $pc3 = -1;
+        $sw3: while (true) {
+            switch ($pc3) {
+                case -1: {
+                    j6(19);
+                    r10 = this.VH;
+                    r10[0] = 0;
+                    r0 = j6(r16, 0, 19, 19, null, null, r18, r17, r19, r10, this.gn);
+                    if (r0 != (-3)) { $pc3 = 6; continue $sw3; }
+                    r20.u7 = "oversubscribed dynamic bit lengths tree";
+                    return r0;
+                }
+                case 6: {
+                    if (r0 != (-5)) { $pc3 = 8; continue $sw3; }
+                    $pc3 = 9; continue $sw3;
+                }
+                case 9: {
+                    r20.u7 = "incomplete dynamic bit lengths tree";
+                    return -3;
+                }
+                case 8: {
+                    if (r17[0] == 0) { $pc3 = 9; continue $sw3; }
+                    return r0;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

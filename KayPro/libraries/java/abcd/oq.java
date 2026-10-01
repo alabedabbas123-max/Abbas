@@ -826,11 +826,31 @@ public final class oq {
     }
 
     public static abcd.oq.a j6(int r3) {
-        abcd.oq.a r0 = j6[r3 + 1];     // Catch: java.lang.ArrayIndexOutOfBoundsException -> L8
-        if (r0 == null) goto L7;
-        return r0;
-    L7:
-        throw new java.lang.IllegalArgumentException("bogus opcode: " + abcd.Yt.Zo(r3));
+        abcd.oq.a r0 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    try {
+                        r0 = j6[r3 + 1];
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.lang.ArrayIndexOutOfBoundsException) { $pc0 = 8; continue $sw0; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    if (r0 == null) { $pc0 = 7; continue $sw0; }
+                    return r0;
+                }
+                case 7: {
+                    throw new java.lang.IllegalArgumentException("bogus opcode: " + abcd.Yt.Zo(r3));
+                }
+                case 8: {
+                    throw new java.lang.IllegalStateException();
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     private static void j6(abcd.oq.a r2) {

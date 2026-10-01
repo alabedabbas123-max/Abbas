@@ -23,16 +23,35 @@ class a implements abcd.G {
     @Override
     @abcd.Interfacesu(method = -461269356162505048L)
     public boolean j6() {
-    L8:
-        th = move-exception;
-        if (DW == false) goto L12;
-        abcd.wu.j6(th, 1844470723134245824L, this);
-    L12:
-        throw th;
-    L4:
-        if (j6 == false) goto L6;
-        abcd.wu.j6(1844470723134245824L, this);     // Catch: java.lang.Throwable -> L8
-    L6:
-        return com.aide.ui.aa.DW(this.FH);
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 4;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 8: {
+                    th = $ex0;
+                    if (DW == false) { $pc0 = 12; continue $sw0; }
+                    abcd.wu.j6(th, 1844470723134245824L, this);
+                    $pc0 = 12; continue $sw0;
+                }
+                case 12: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (j6 == false) { $pc0 = 6; continue $sw0; }
+                    try {
+                        abcd.wu.j6(1844470723134245824L, this);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 8; continue $sw0;
+                    }
+                    $pc0 = 6; continue $sw0;
+                }
+                case 6: {
+                    return com.aide.ui.aa.DW(this.FH);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

@@ -47,10 +47,20 @@ public class cD extends java.lang.RuntimeException {
     }
 
     protected java.lang.String DW() {
-        if (j6() == null) goto L7;
-        return j6().we();
-    L7:
-        return org.eclipse.jgit.JGitText.j6().unknownObject;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (j6() == null) { $pc0 = 7; continue $sw0; }
+                    return j6().we();
+                }
+                case 7: {
+                    return org.eclipse.jgit.JGitText.j6().unknownObject;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
@@ -63,8 +73,20 @@ public class cD extends java.lang.RuntimeException {
     }
 
     public void j6(abcd.YD r2) {
-        if (this.j6 != null) goto L6;
-        this.j6 = r2.Hw();
-        return;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if (this.j6 != null) { $pc1 = 6; continue $sw1; }
+                    this.j6 = r2.Hw();
+                    return;
+                }
+                case 6: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

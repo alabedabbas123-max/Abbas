@@ -23,174 +23,404 @@ public interface g extends android.os.IInterface {
             @abcd.Interfaceru(field = 2295843943274912331L)
             private android.os.IBinder FH;
 
-            static {
-                abcd.wu.j6(com.aide.licensing.g.a.C0041a.class, 751097897065273040L, 751097897065273040L);
-            }
+
 
             @abcd.Interfacesu(method = -7548162181567425L)
             C0041a(android.os.IBinder r6) {
-            L8:
-                th = move-exception;
-                if (DW == false) goto L12;
-                abcd.wu.j6(th, 6294207598877460800L, null, r6);
-            L12:
-                throw th;
-            L4:
-                if (j6 == false) goto L6;
-                abcd.wu.j6(6294207598877460800L, null, r6);     // Catch: java.lang.Throwable -> L8
-            L6:
-                this.FH = r6;     // Catch: java.lang.Throwable -> L8
+                java.lang.Throwable th = null;
+                java.lang.Throwable $ex0 = null;
+                int $pc0 = 4;
+                $sw0: while (true) {
+                    switch ($pc0) {
+                        case 8: {
+                            th = $ex0;
+                            if (DW == false) { $pc0 = 12; continue $sw0; }
+                            abcd.wu.j6(th, 6294207598877460800L, null, r6);
+                            $pc0 = 12; continue $sw0;
+                        }
+                        case 12: {
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                        }
+                        case 4: {
+                            if (j6 == false) { $pc0 = 6; continue $sw0; }
+                            try {
+                                abcd.wu.j6(6294207598877460800L, null, r6);
+                            } catch (java.lang.Throwable $t) {
+                                $ex0 = $t;
+                                $pc0 = 8; continue $sw0;
+                            }
+                            $pc0 = 6; continue $sw0;
+                        }
+                        case 6: {
+                            try {
+                                this.FH = r6;
+                            } catch (java.lang.Throwable $t) {
+                                $ex0 = $t;
+                                $pc0 = 8; continue $sw0;
+                            }
+                            return;
+                        }
+                        default: throw new java.lang.IllegalStateException();
+                    }
+                }
             }
 
             @Override
             @abcd.Interfacesu(method = 240365471563008L)
             public void DW(java.lang.String r8, java.lang.String r9) {
-            L12:
-                th = move-exception;
-                if (DW == false) goto L16;
-                abcd.wu.j6(th, 2328196462604452517L, this, r8, r9);
-            L16:
-                throw th;
-            L3:
-                if (j6 == false) goto L5;
-                abcd.wu.j6(2328196462604452517L, this, r8, r9);     // Catch: java.lang.Throwable -> L12
-            L5:
-                android.os.Parcel r0 = android.os.Parcel.obtain();     // Catch: java.lang.Throwable -> L12
-                r0.writeInterfaceToken("com.aide.licensing.IAideLicenseResultListener");     // Catch: java.lang.Throwable -> L9
-                r0.writeString(r8);     // Catch: java.lang.Throwable -> L9
-                r0.writeString(r9);     // Catch: java.lang.Throwable -> L9
-                this.FH.transact(1, r0, null, 1);     // Catch: java.lang.Throwable -> L9
-                r0.recycle();     // Catch: java.lang.Throwable -> L12
-                return;
-            L9:
-                th = move-exception;
-                r0.recycle();     // Catch: java.lang.Throwable -> L12
-                throw th;     // Catch: java.lang.Throwable -> L12
+                android.os.Parcel r0 = null;
+                java.lang.Throwable th = null;
+                java.lang.Throwable $ex1 = null;
+                int $pc1 = 3;
+                $sw1: while (true) {
+                    switch ($pc1) {
+                        case 12: {
+                            th = $ex1;
+                            if (DW == false) { $pc1 = 16; continue $sw1; }
+                            abcd.wu.j6(th, 2328196462604452517L, this, r8, r9);
+                            $pc1 = 16; continue $sw1;
+                        }
+                        case 16: {
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                        }
+                        case 3: {
+                            if (j6 == false) { $pc1 = 5; continue $sw1; }
+                            try {
+                                abcd.wu.j6(2328196462604452517L, this, r8, r9);
+                            } catch (java.lang.Throwable $t) {
+                                $ex1 = $t;
+                                $pc1 = 12; continue $sw1;
+                            }
+                            $pc1 = 5; continue $sw1;
+                        }
+                        case 5: {
+                            try {
+                                r0 = android.os.Parcel.obtain();
+                            } catch (java.lang.Throwable $t) {
+                                $ex1 = $t;
+                                $pc1 = 12; continue $sw1;
+                            }
+                            try {
+                                r0.writeInterfaceToken("com.aide.licensing.IAideLicenseResultListener");
+                                r0.writeString(r8);
+                                r0.writeString(r9);
+                                this.FH.transact(1, r0, null, 1);
+                            } catch (java.lang.Throwable $t) {
+                                $ex1 = $t;
+                                $pc1 = 9; continue $sw1;
+                            }
+                            try {
+                                r0.recycle();
+                            } catch (java.lang.Throwable $t) {
+                                $ex1 = $t;
+                                $pc1 = 12; continue $sw1;
+                            }
+                            return;
+                        }
+                        case 9: {
+                            th = $ex1;
+                            try {
+                                r0.recycle();
+                                throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                            } catch (java.lang.Throwable $t) {
+                                $ex1 = $t;
+                                $pc1 = 12; continue $sw1;
+                            }
+                        }
+                        default: throw new java.lang.IllegalStateException();
+                    }
+                }
             }
 
             @Override
             @abcd.Interfacesu(method = -3796475522516180679L)
             public void XX() {
-            L13:
-                th = move-exception;
-                if (DW == false) goto L17;
-                abcd.wu.j6(th, -3336263415191374080L, this);
-            L17:
-                throw th;
-            L4:
-                if (j6 == false) goto L6;
-                abcd.wu.j6(-3336263415191374080L, this);     // Catch: java.lang.Throwable -> L13
-            L6:
-                android.os.Parcel r2 = android.os.Parcel.obtain();     // Catch: java.lang.Throwable -> L13
-                r2.writeInterfaceToken("com.aide.licensing.IAideLicenseResultListener");     // Catch: java.lang.Throwable -> L10
-                this.FH.transact(2, r2, null, 1);     // Catch: java.lang.Throwable -> L10
-                r2.recycle();     // Catch: java.lang.Throwable -> L13
-                return;
-            L10:
-                th = move-exception;
-                r2.recycle();     // Catch: java.lang.Throwable -> L13
-                throw th;     // Catch: java.lang.Throwable -> L13
+                android.os.Parcel r2 = null;
+                java.lang.Throwable th = null;
+                java.lang.Throwable $ex2 = null;
+                int $pc2 = 4;
+                $sw2: while (true) {
+                    switch ($pc2) {
+                        case 13: {
+                            th = $ex2;
+                            if (DW == false) { $pc2 = 17; continue $sw2; }
+                            abcd.wu.j6(th, -3336263415191374080L, this);
+                            $pc2 = 17; continue $sw2;
+                        }
+                        case 17: {
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                        }
+                        case 4: {
+                            if (j6 == false) { $pc2 = 6; continue $sw2; }
+                            try {
+                                abcd.wu.j6(-3336263415191374080L, this);
+                            } catch (java.lang.Throwable $t) {
+                                $ex2 = $t;
+                                $pc2 = 13; continue $sw2;
+                            }
+                            $pc2 = 6; continue $sw2;
+                        }
+                        case 6: {
+                            try {
+                                r2 = android.os.Parcel.obtain();
+                            } catch (java.lang.Throwable $t) {
+                                $ex2 = $t;
+                                $pc2 = 13; continue $sw2;
+                            }
+                            try {
+                                r2.writeInterfaceToken("com.aide.licensing.IAideLicenseResultListener");
+                                this.FH.transact(2, r2, null, 1);
+                            } catch (java.lang.Throwable $t) {
+                                $ex2 = $t;
+                                $pc2 = 10; continue $sw2;
+                            }
+                            try {
+                                r2.recycle();
+                            } catch (java.lang.Throwable $t) {
+                                $ex2 = $t;
+                                $pc2 = 13; continue $sw2;
+                            }
+                            return;
+                        }
+                        case 10: {
+                            th = $ex2;
+                            try {
+                                r2.recycle();
+                                throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                            } catch (java.lang.Throwable $t) {
+                                $ex2 = $t;
+                                $pc2 = 13; continue $sw2;
+                            }
+                        }
+                        default: throw new java.lang.IllegalStateException();
+                    }
+                }
             }
 
             @Override
             @abcd.Interfacesu(method = 2603411948178788985L)
             public android.os.IBinder asBinder() {
-            L8:
-                th = move-exception;
-                if (DW == false) goto L12;
-                abcd.wu.j6(th, -2718163765906975772L, this);
-            L12:
-                throw th;
-            L4:
-                if (j6 == false) goto L6;
-                abcd.wu.j6(-2718163765906975772L, this);     // Catch: java.lang.Throwable -> L8
-            L6:
-                return this.FH;
+                java.lang.Throwable th = null;
+                java.lang.Throwable $ex3 = null;
+                int $pc3 = 4;
+                $sw3: while (true) {
+                    switch ($pc3) {
+                        case 8: {
+                            th = $ex3;
+                            if (DW == false) { $pc3 = 12; continue $sw3; }
+                            abcd.wu.j6(th, -2718163765906975772L, this);
+                            $pc3 = 12; continue $sw3;
+                        }
+                        case 12: {
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                        }
+                        case 4: {
+                            if (j6 == false) { $pc3 = 6; continue $sw3; }
+                            try {
+                                abcd.wu.j6(-2718163765906975772L, this);
+                            } catch (java.lang.Throwable $t) {
+                                $ex3 = $t;
+                                $pc3 = 8; continue $sw3;
+                            }
+                            $pc3 = 6; continue $sw3;
+                        }
+                        case 6: {
+                            return this.FH;
+                        }
+                        default: throw new java.lang.IllegalStateException();
+                    }
+                }
             }
         }
 
-        static {
-            abcd.wu.j6(com.aide.licensing.g.a.class, -5985881983238788440L, -5985881983238788440L);
-        }
+
 
         public a() {
-        L8:
-            th = move-exception;
-            if (DW == false) goto L12;
-            abcd.wu.j6(th, -2176589666740543085L, null);
-        L12:
-            throw th;
-        L4:
-            if (j6 == false) goto L6;
-            abcd.wu.j6(-2176589666740543085L, null);     // Catch: java.lang.Throwable -> L8
-        L6:
-            attachInterface(this, "com.aide.licensing.IAideLicenseResultListener");     // Catch: java.lang.Throwable -> L8
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex4 = null;
+            int $pc4 = 4;
+            $sw4: while (true) {
+                switch ($pc4) {
+                    case 8: {
+                        th = $ex4;
+                        if (DW == false) { $pc4 = 12; continue $sw4; }
+                        abcd.wu.j6(th, -2176589666740543085L, null);
+                        $pc4 = 12; continue $sw4;
+                    }
+                    case 12: {
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    case 4: {
+                        if (j6 == false) { $pc4 = 6; continue $sw4; }
+                        try {
+                            abcd.wu.j6(-2176589666740543085L, null);
+                        } catch (java.lang.Throwable $t) {
+                            $ex4 = $t;
+                            $pc4 = 8; continue $sw4;
+                        }
+                        $pc4 = 6; continue $sw4;
+                    }
+                    case 6: {
+                        try {
+                            attachInterface(this, "com.aide.licensing.IAideLicenseResultListener");
+                        } catch (java.lang.Throwable $t) {
+                            $ex4 = $t;
+                            $pc4 = 8; continue $sw4;
+                        }
+                        return;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         public static com.aide.licensing.g j6(android.os.IBinder r5) {
-        L16:
-            th = move-exception;
-            if (DW == false) goto L20;
-            abcd.wu.j6(th, 821252303183318344L, null, r5);
-        L20:
-            throw th;
-        L4:
-            if (j6 == false) goto L6;
-            abcd.wu.j6(821252303183318344L, null, r5);     // Catch: java.lang.Throwable -> L16
-        L6:
-            if (r5 != null) goto L8;
-            return null;
-        L8:
-            android.os.IInterface r3 = r5.queryLocalInterface("com.aide.licensing.IAideLicenseResultListener");     // Catch: java.lang.Throwable -> L16
-            if (r3 == null) goto L15;
-            if ((r3 instanceof com.aide.licensing.g) == false) goto L15;
-            return (com.aide.licensing.g) r3;
-        L15:
-            return new com.aide.licensing.g.a.C0041a(r5);
+            android.os.IInterface r3 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex5 = null;
+            int $pc5 = 4;
+            $sw5: while (true) {
+                switch ($pc5) {
+                    case 16: {
+                        th = $ex5;
+                        if (DW == false) { $pc5 = 20; continue $sw5; }
+                        abcd.wu.j6(th, 821252303183318344L, null, r5);
+                        $pc5 = 20; continue $sw5;
+                    }
+                    case 20: {
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    case 4: {
+                        if (j6 == false) { $pc5 = 6; continue $sw5; }
+                        try {
+                            abcd.wu.j6(821252303183318344L, null, r5);
+                        } catch (java.lang.Throwable $t) {
+                            $ex5 = $t;
+                            $pc5 = 16; continue $sw5;
+                        }
+                        $pc5 = 6; continue $sw5;
+                    }
+                    case 6: {
+                        if (r5 != null) { $pc5 = 8; continue $sw5; }
+                        return null;
+                    }
+                    case 8: {
+                        try {
+                            r3 = r5.queryLocalInterface("com.aide.licensing.IAideLicenseResultListener");
+                        } catch (java.lang.Throwable $t) {
+                            $ex5 = $t;
+                            $pc5 = 16; continue $sw5;
+                        }
+                        if (r3 == null) { $pc5 = 15; continue $sw5; }
+                        if ((r3 instanceof com.aide.licensing.g) == false) { $pc5 = 15; continue $sw5; }
+                        return (com.aide.licensing.g) r3;
+                    }
+                    case 15: {
+                        return new com.aide.licensing.g.a.C0041a(r5);
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         @Override
         public android.os.IBinder asBinder() {
-        L7:
-            th = move-exception;
-            if (DW == false) goto L11;
-            abcd.wu.j6(th, 9885819474567175L, this);
-        L11:
-            throw th;
-        L4:
-            if (j6 == false) goto L6;
-            abcd.wu.j6(9885819474567175L, this);     // Catch: java.lang.Throwable -> L7
-        L6:
-            return this;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex6 = null;
+            int $pc6 = 4;
+            $sw6: while (true) {
+                switch ($pc6) {
+                    case 7: {
+                        th = $ex6;
+                        if (DW == false) { $pc6 = 11; continue $sw6; }
+                        abcd.wu.j6(th, 9885819474567175L, this);
+                        $pc6 = 11; continue $sw6;
+                    }
+                    case 11: {
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    case 4: {
+                        if (j6 == false) { $pc6 = 6; continue $sw6; }
+                        try {
+                            abcd.wu.j6(9885819474567175L, this);
+                        } catch (java.lang.Throwable $t) {
+                            $ex6 = $t;
+                            $pc6 = 7; continue $sw6;
+                        }
+                        $pc6 = 6; continue $sw6;
+                    }
+                    case 6: {
+                        return this;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         @Override
         public boolean onTransact(int r10, android.os.Parcel r11, android.os.Parcel r12, int r13) {
-        L19:
-            th = move-exception;
-            if (DW == false) goto L23;
-            abcd.wu.j6(th, -61049034201290112L, this, new java.lang.Integer(r10), r11, r12, new java.lang.Integer(r13));
-        L23:
-            throw th;
-        L3:
-            if (j6 == false) goto L6;
-            abcd.wu.j6(-61049034201290112L, this, new java.lang.Integer(r10), r11, r12, new java.lang.Integer(r13));     // Catch: java.lang.Throwable -> L19
-        L6:
-            if (r10 != 1) goto L8;
-            r11.enforceInterface("com.aide.licensing.IAideLicenseResultListener");     // Catch: java.lang.Throwable -> L19
-            DW(r11.readString(), r11.readString());     // Catch: java.lang.Throwable -> L19
-            return true;
-        L8:
-            if (r10 != 2) goto L10;
-            r11.enforceInterface("com.aide.licensing.IAideLicenseResultListener");     // Catch: java.lang.Throwable -> L19
-            XX();     // Catch: java.lang.Throwable -> L19
-            return true;
-        L10:
-            if (r10 != 1598968902) goto L12;
-            r12.writeString("com.aide.licensing.IAideLicenseResultListener");     // Catch: java.lang.Throwable -> L19
-            return true;
-        L12:
-            return super.onTransact(r10, r11, r12, r13);
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex7 = null;
+            int $pc7 = 3;
+            $sw7: while (true) {
+                switch ($pc7) {
+                    case 19: {
+                        th = $ex7;
+                        if (DW == false) { $pc7 = 23; continue $sw7; }
+                        abcd.wu.j6(th, -61049034201290112L, this, new java.lang.Integer(r10), r11, r12, new java.lang.Integer(r13));
+                        $pc7 = 23; continue $sw7;
+                    }
+                    case 23: {
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    case 3: {
+                        if (j6 == false) { $pc7 = 6; continue $sw7; }
+                        try {
+                            abcd.wu.j6(-61049034201290112L, this, new java.lang.Integer(r10), r11, r12, new java.lang.Integer(r13));
+                        } catch (java.lang.Throwable $t) {
+                            $ex7 = $t;
+                            $pc7 = 19; continue $sw7;
+                        }
+                        $pc7 = 6; continue $sw7;
+                    }
+                    case 6: {
+                        if (r10 != 1) { $pc7 = 8; continue $sw7; }
+                        try {
+                            r11.enforceInterface("com.aide.licensing.IAideLicenseResultListener");
+                            DW(r11.readString(), r11.readString());
+                        } catch (java.lang.Throwable $t) {
+                            $ex7 = $t;
+                            $pc7 = 19; continue $sw7;
+                        }
+                        return true;
+                    }
+                    case 8: {
+                        if (r10 != 2) { $pc7 = 10; continue $sw7; }
+                        try {
+                            r11.enforceInterface("com.aide.licensing.IAideLicenseResultListener");
+                            XX();
+                        } catch (java.lang.Throwable $t) {
+                            $ex7 = $t;
+                            $pc7 = 19; continue $sw7;
+                        }
+                        return true;
+                    }
+                    case 10: {
+                        if (r10 != 1598968902) { $pc7 = 12; continue $sw7; }
+                        try {
+                            r12.writeString("com.aide.licensing.IAideLicenseResultListener");
+                        } catch (java.lang.Throwable $t) {
+                            $ex7 = $t;
+                            $pc7 = 19; continue $sw7;
+                        }
+                        return true;
+                    }
+                    case 12: {
+                        return super.onTransact(r10, r11, r12, r13);
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
     }
 

@@ -61,12 +61,24 @@ class ua {
     }
 
     private java.lang.String j6(java.io.File r3) {
-        java.lang.String r4 = r3.getName();
-        int r0 = r4.lastIndexOf(".temp");
-        if (r0 != (-1)) goto L6;
-        return r4;
-    L6:
-        return r4.substring(20, r0);
+        java.lang.String r4 = null;
+        int r0 = 0;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r4 = r3.getName();
+                    r0 = r4.lastIndexOf(".temp");
+                    if (r0 != (-1)) { $pc0 = 6; continue $sw0; }
+                    return r4;
+                }
+                case 6: {
+                    return r4.substring(20, r0);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     com.crashlytics.android.core.ClassD DW() {
@@ -90,32 +102,65 @@ class ua {
     }
 
     final void j6(java.lang.String r4) {
-        this.Hw.j6();
-        this.Hw = j6;
-        if (r4 != null) goto L6;
-        return;
-    L6:
-        if (io.fabric.sdk.android.services.common.i.j6(this.DW, "com.crashlytics.CollectCustomLogs", true) == true) goto L9;
-        io.fabric.sdk.android.Fabric.getLogger().Hw("CrashlyticsCore", "Preferences requested no custom logs. Aborting log file creation.");
-        return;
-    L9:
-        j6(DW(r4), 65536);
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    this.Hw.j6();
+                    this.Hw = j6;
+                    if (r4 != null) { $pc1 = 6; continue $sw1; }
+                    return;
+                }
+                case 6: {
+                    if (io.fabric.sdk.android.services.common.i.j6(this.DW, "com.crashlytics.CollectCustomLogs", true) == true) { $pc1 = 9; continue $sw1; }
+                    io.fabric.sdk.android.Fabric.getLogger().Hw("CrashlyticsCore", "Preferences requested no custom logs. Aborting log file creation.");
+                    return;
+                }
+                case 9: {
+                    j6(DW(r4), 65536);
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     void j6(java.util.Set<java.lang.String> r6) {
-        java.io.File[] r0 = this.FH.j6().listFiles();
-        if (r0 == null) goto L10;
-        int r1 = r0.length;
+        java.io.File[] r0 = null;
+        int r1 = 0;
         int r2 = 0;
-    L5:
-        if (r2 >= r1) goto L14;
-        java.io.File r3 = r0[r2];
-        if (r6.contains(j6(r3)) == true) goto L9;
-        r3.delete();
-    L9:
-        r2 = r2 + 1;
-        goto L5
-    L14:
-        return;
+        java.io.File r3 = null;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    r0 = this.FH.j6().listFiles();
+                    if (r0 == null) { $pc2 = 10; continue $sw2; }
+                    r1 = r0.length;
+                    r2 = 0;
+                    $pc2 = 5; continue $sw2;
+                }
+                case 5: {
+                    if (r2 >= r1) { $pc2 = 14; continue $sw2; }
+                    r3 = r0[r2];
+                    if (r6.contains(j6(r3)) == true) { $pc2 = 9; continue $sw2; }
+                    r3.delete();
+                    $pc2 = 9; continue $sw2;
+                }
+                case 9: {
+                    r2 = r2 + 1;
+                    { $pc2 = 5; continue $sw2; }
+                }
+                case 14: {
+                    return;
+                }
+                case 10: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

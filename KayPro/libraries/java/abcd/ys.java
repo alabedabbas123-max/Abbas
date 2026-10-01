@@ -26,17 +26,33 @@ public final class ys extends abcd.Bs {
     }
 
     public static abcd.ys j6(int r3) {
-        abcd.ys[] r1 = DW;
-        int r0 = (Integer.MAX_VALUE & r3) % r1.length;
-        abcd.ys r2 = r1[r0];
-        if (r2 != null) goto L5;
-    L7:
-        abcd.ys r4 = new abcd.ys(r3);
-        DW[r0] = r4;
-        return r4;
-    L5:
-        if (r2.rN() != r3) goto L7;
-        return r2;
+        abcd.ys[] r1 = null;
+        int r0 = 0;
+        abcd.ys r2 = null;
+        abcd.ys r4 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r1 = DW;
+                    r0 = (Integer.MAX_VALUE & r3) % r1.length;
+                    r2 = r1[r0];
+                    if (r2 != null) { $pc0 = 5; continue $sw0; }
+                    $pc0 = 7; continue $sw0;
+                }
+                case 7: {
+                    r4 = new abcd.ys(r3);
+                    DW[r0] = r4;
+                    return r4;
+                }
+                case 5: {
+                    if (r2.rN() != r3) { $pc0 = 7; continue $sw0; }
+                    return r2;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

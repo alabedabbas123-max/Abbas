@@ -31,17 +31,42 @@ public class r extends a.b.b.b {
     }
 
     public void a(a.b.g.aq r3) {
-        if (this.c == null) goto L6;
-        this.c.a(this.b, r3);
-        return;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (this.c == null) { $pc0 = 6; continue $sw0; }
+                    this.c.a(this.b, r3);
+                    return;
+                }
+                case 6: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public void a(a.b.g.s r2) {
-        if (this.b != null) goto L5;
-        return;
-    L5:
-        if (this.c != null) goto L9;
-        this.b.a(r2);
-        return;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if (this.b != null) { $pc1 = 5; continue $sw1; }
+                    return;
+                }
+                case 5: {
+                    if (this.c != null) { $pc1 = 9; continue $sw1; }
+                    this.b.a(r2);
+                    return;
+                }
+                case 9: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

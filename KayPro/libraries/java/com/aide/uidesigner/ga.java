@@ -29,24 +29,61 @@ class ga implements com.aide.common.ab<java.lang.String> {
 
     @abcd.Interfacesu(method = -5358581029720838976L)
     public void j62(java.lang.String r6) {
-    L14:
-        th = move-exception;
-        if (DW == false) goto L18;
-        abcd.wu.j6(th, 7957711318513413560L, this, r6);
-    L18:
-        throw th;
-    L4:
-        if (j6 == false) goto L7;
-        abcd.wu.j6(7957711318513413560L, this, r6);     // Catch: java.lang.Throwable -> L14
-    L7:
-        if (r6.equals("Color...") == false) goto L10;
-        com.aide.uidesigner.ka.DW(this.FH, this.Hw, this.v5);     // Catch: java.lang.Throwable -> L14
-        return;
-    L10:
-        if (r6.equals("Drawable...") == false) goto L12;
-        com.aide.uidesigner.ka.FH(this.FH, this.Hw, this.v5);     // Catch: java.lang.Throwable -> L14
-        return;
-    L12:
-        this.Hw.j6(this.v5, null);     // Catch: java.lang.Throwable -> L14
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 4;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 14: {
+                    th = $ex0;
+                    if (DW == false) { $pc0 = 18; continue $sw0; }
+                    abcd.wu.j6(th, 7957711318513413560L, this, r6);
+                    $pc0 = 18; continue $sw0;
+                }
+                case 18: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (j6 == false) { $pc0 = 7; continue $sw0; }
+                    try {
+                        abcd.wu.j6(7957711318513413560L, this, r6);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 14; continue $sw0;
+                    }
+                    $pc0 = 7; continue $sw0;
+                }
+                case 7: {
+                    if (r6.equals("Color...") == false) { $pc0 = 10; continue $sw0; }
+                    try {
+                        com.aide.uidesigner.ka.DW(this.FH, this.Hw, this.v5);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 14; continue $sw0;
+                    }
+                    return;
+                }
+                case 10: {
+                    if (r6.equals("Drawable...") == false) { $pc0 = 12; continue $sw0; }
+                    try {
+                        com.aide.uidesigner.ka.FH(this.FH, this.Hw, this.v5);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 14; continue $sw0;
+                    }
+                    return;
+                }
+                case 12: {
+                    try {
+                        this.Hw.j6(this.v5, null);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 14; continue $sw0;
+                    }
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

@@ -18,11 +18,22 @@ class H extends com.aide.common.Abstractma {
     final java.lang.String we;
 
     static {
-        abcd.wu.j6(java.lang.Class.forName("com.aide.common.H"), 5024868934807443193L, 6162949721300973747L);
-        return;
-    L5:
-        e = move-exception;
-        throw new java.lang.NoClassDefFoundError(e.getMessage());
+        java.lang.Throwable e = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    abcd.wu.j6(java.lang.Class.forName("com.aide.common.H"), 5024868934807443193L, 6162949721300973747L);
+                    return;
+                }
+                case 5: {
+                    e = $ex0;
+                    throw new java.lang.NoClassDefFoundError(e.getMessage());
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     H(com.aide.common.ab r1, java.lang.String r2, java.lang.String r3, java.lang.Runnable r4, java.lang.String r5, java.lang.Runnable r6, java.lang.String r7, boolean r8) {

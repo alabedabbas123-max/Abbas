@@ -5,22 +5,37 @@ public class BB {
     private final abcd.sE j6;
 
     public BB(abcd.sE r2) {
-        this.j6 = r2;
-        if (r2.DW().isEmpty() == true) goto L5;
-    L17:
         boolean r3 = false;
-    L18:
-        this.DW = r3;
-        return;
-    L5:
-        if (r2.FH().isEmpty() == false) goto L17;
-        if (r2.VH().isEmpty() == false) goto L17;
-        if (r2.v5().isEmpty() == false) goto L17;
-        if (r2.Zo().isEmpty() == false) goto L17;
-        if (r2.gn().isEmpty() == false) goto L17;
-        if (r2.Hw().isEmpty() == false) goto L17;
-        r3 = true;
-        goto L18
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    this.j6 = r2;
+                    if (r2.DW().isEmpty() == true) { $pc0 = 5; continue $sw0; }
+                    $pc0 = 17; continue $sw0;
+                }
+                case 17: {
+                    r3 = false;
+                    $pc0 = 18; continue $sw0;
+                }
+                case 18: {
+                    this.DW = r3;
+                    return;
+                }
+                case 5: {
+                    if (r2.FH().isEmpty() == false) { $pc0 = 17; continue $sw0; }
+                    if (r2.VH().isEmpty() == false) { $pc0 = 17; continue $sw0; }
+                    if (r2.v5().isEmpty() == false) { $pc0 = 17; continue $sw0; }
+                    if (r2.Zo().isEmpty() == false) { $pc0 = 17; continue $sw0; }
+                    if (r2.gn().isEmpty() == false) { $pc0 = 17; continue $sw0; }
+                    if (r2.Hw().isEmpty() == false) { $pc0 = 17; continue $sw0; }
+                    r3 = true;
+                    { $pc0 = 18; continue $sw0; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public java.util.Set<java.lang.String> DW() {

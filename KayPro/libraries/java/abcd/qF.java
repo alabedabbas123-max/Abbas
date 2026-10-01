@@ -6,7 +6,7 @@ public class qF {
     private final abcd.qF.a Hw;
     private final int j6;
 
-    public static final enum a extends java.lang.Enum<abcd.qF.a> {
+    public static final class a extends com.almlkaide.kaypro.internal.EnumBase {
         public static final abcd.qF.a DW = null;
         public static final abcd.qF.a FH = null;
         private static final abcd.qF.a[] Hw = null;
@@ -24,7 +24,7 @@ public class qF {
         }
 
         public static abcd.qF.a valueOf(java.lang.String r1) {
-            return (abcd.qF.a) java.lang.Enum.valueOf(abcd.qF.a.class, r1);
+            return (abcd.qF.a) com.almlkaide.kaypro.internal.EnumBase.valueOf(abcd.qF.a.values(), r1);
         }
 
         public static abcd.qF.a[] values() {

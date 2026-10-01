@@ -1,11 +1,9 @@
 package abcd;
 
 public interface KI {
-    public static final abcd.KI j6 = null;
+    public static final abcd.KI j6 = new abcd.JI();
 
-    static {
-        j6 = new abcd.JI();
-    }
+
 
     void j6(abcd.IJ r1);
 

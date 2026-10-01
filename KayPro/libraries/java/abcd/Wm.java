@@ -4,11 +4,21 @@ public final class Wm implements abcd.Rs {
     private final int j6;
 
     public Wm(int r2) {
-        if (r2 < 0) goto L7;
-        this.j6 = r2;
-        return;
-    L7:
-        throw new java.lang.IllegalArgumentException("subroutineAddress < 0");
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (r2 < 0) { $pc0 = 7; continue $sw0; }
+                    this.j6 = r2;
+                    return;
+                }
+                case 7: {
+                    throw new java.lang.IllegalArgumentException("subroutineAddress < 0");
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
@@ -32,13 +42,24 @@ public final class Wm implements abcd.Rs {
     }
 
     public boolean equals(java.lang.Object r3) {
-        if ((r3 instanceof abcd.Wm) == true) goto L6;
-        return false;
-    L6:
-        if (this.j6 != ((abcd.Wm) r3).j6) goto L9;
-        return true;
-    L9:
-        return false;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if ((r3 instanceof abcd.Wm) == true) { $pc1 = 6; continue $sw1; }
+                    return false;
+                }
+                case 6: {
+                    if (this.j6 != ((abcd.Wm) r3).j6) { $pc1 = 9; continue $sw1; }
+                    return true;
+                }
+                case 9: {
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

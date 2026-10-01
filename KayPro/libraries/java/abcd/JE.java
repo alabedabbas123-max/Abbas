@@ -96,24 +96,47 @@ public abstract class JE extends java.io.InputStream {
 
         @Override
         public int read() {
-            int r0 = this.FH;
-            byte[] r1 = this.DW;
-            if (r0 != r1.length) goto L6;
-            return -1;
-        L6:
-            this.FH = r0 + 1;
-            return r1[r0] & 255;
+            int r0 = 0;
+            byte[] r1 = null;
+            java.lang.Throwable $ex0 = null;
+            int $pc0 = -1;
+            $sw0: while (true) {
+                switch ($pc0) {
+                    case -1: {
+                        r0 = this.FH;
+                        r1 = this.DW;
+                        if (r0 != r1.length) { $pc0 = 6; continue $sw0; }
+                        return -1;
+                    }
+                    case 6: {
+                        this.FH = r0 + 1;
+                        return r1[r0] & 255;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         @Override
         public int read(byte[] r3, int r4, int r5) {
-            if (this.FH != this.DW.length) goto L6;
-            return -1;
-        L6:
-            int r6 = java.lang.Math.min(available(), r5);
-            java.lang.System.arraycopy(this.DW, this.FH, r3, r4, r6);
-            this.FH += r6;
-            return r6;
+            int r6 = 0;
+            java.lang.Throwable $ex1 = null;
+            int $pc1 = -1;
+            $sw1: while (true) {
+                switch ($pc1) {
+                    case -1: {
+                        if (this.FH != this.DW.length) { $pc1 = 6; continue $sw1; }
+                        return -1;
+                    }
+                    case 6: {
+                        r6 = java.lang.Math.min(available(), r5);
+                        java.lang.System.arraycopy(this.DW, this.FH, r3, r4, r6);
+                        this.FH += r6;
+                        return r6;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         @Override

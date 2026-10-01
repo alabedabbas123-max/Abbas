@@ -33,24 +33,46 @@ public class WF extends abcd.AbstractjK {
 
     @Override
     public boolean j6() {
-        if (this.FH.j6() == false) goto L5;
-        return true;
-    L5:
-        if (abcd.AbstractjK.DW.j6() == true) goto L10;
-        return false;
-    L10:
-        return true;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (this.FH.j6() == false) { $pc0 = 5; continue $sw0; }
+                    return true;
+                }
+                case 5: {
+                    if (abcd.AbstractjK.DW.j6() == true) { $pc0 = 10; continue $sw0; }
+                    return false;
+                }
+                case 10: {
+                    return true;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
     public boolean j6(abcd.YJ r2) {
-        if (this.FH.j6(r2) == true) goto L5;
-        return false;
-    L5:
-        if (abcd.AbstractjK.DW.j6(r2) == false) goto L10;
-        return true;
-    L10:
-        return false;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if (this.FH.j6(r2) == true) { $pc1 = 5; continue $sw1; }
+                    return false;
+                }
+                case 5: {
+                    if (abcd.AbstractjK.DW.j6(r2) == false) { $pc1 = 10; continue $sw1; }
+                    return true;
+                }
+                case 10: {
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

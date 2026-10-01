@@ -23,37 +23,107 @@ class ViewOnClickListenerbi implements android.view.View.OnClickListener {
     @Override
     @abcd.Interfacesu(method = 396962515227020775L)
     public void onClick(android.view.View r9) {
-    L26:
-        th = move-exception;
-        if (DW == false) goto L31;
-        abcd.wu.j6(th, 6924461451797592976L, this, r9);
-    L31:
-        throw th;
-    L4:
-        if (j6 == false) goto L35;
-        abcd.wu.j6(6924461451797592976L, this, r9);     // Catch: java.lang.Throwable -> L26
-    L35:
-        abcd.HJ r3 = new abcd.HJ(abcd.di.FH(this.Hw.Hw, this.FH));     // Catch: java.net.URISyntaxException -> L33 java.lang.Throwable -> L26
-        java.util.Iterator<abcd.DJ> r4 = abcd.AbstractjJ.u7().iterator();     // Catch: java.net.URISyntaxException -> L33 java.lang.Throwable -> L26
-    L8:
-        if (r4.hasNext() == false) goto L19;
-        abcd.DJ r5 = r4.next();     // Catch: java.net.URISyntaxException -> L33 java.lang.Throwable -> L26
-        if (r5.DW().toUpperCase(java.util.Locale.US).contains("SSH") == false) goto L8;
-        if (r5.j6(r3) == false) goto L8;
-        if (r3.gn() == null) goto L17;
-        if (r3.gn().trim().length() != 0) goto L8;
-    L17:
-        abcd.HJ r0 = r3.v5("user");     // Catch: java.net.URISyntaxException -> L33 java.lang.Throwable -> L26
-        com.almlkaide.kaypro.util.Toasty.toast(this.Hw.FH, "You must specify a username in the URL in this form: " + r0.toString(), 1).show();     // Catch: java.net.URISyntaxException -> L33 java.lang.Throwable -> L26
-        return;
-    L19:
-        java.lang.String r6 = r3.toString().toLowerCase(java.util.Locale.US);     // Catch: java.net.URISyntaxException -> L33 java.lang.Throwable -> L26
-        if (r6.startsWith("https://github.com/") == false) goto L24;
-        if (r6.endsWith(".git") == true) goto L24;
-        abcd.di.Hw(this.Hw.Hw, this.FH).setText(r3.toString() + ".git");     // Catch: java.net.URISyntaxException -> L33 java.lang.Throwable -> L26
-    L24:
-        abcd.di.j6(this.Hw.Hw, this.FH);     // Catch: java.lang.Throwable -> L26
-        this.FH.dismiss();     // Catch: java.lang.Throwable -> L26
-        com.aide.ui.U.Ws().j6(abcd.di.j6(this.Hw.Hw), abcd.di.DW(this.Hw.Hw, this.FH), abcd.di.FH(this.Hw.Hw, this.FH));     // Catch: java.lang.Throwable -> L26
+        abcd.HJ r3 = null;
+        java.util.Iterator<abcd.DJ> r4 = null;
+        abcd.DJ r5 = null;
+        abcd.HJ r0 = null;
+        java.lang.String r6 = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 4;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 26: {
+                    th = $ex0;
+                    if (DW == false) { $pc0 = 31; continue $sw0; }
+                    abcd.wu.j6(th, 6924461451797592976L, this, r9);
+                    $pc0 = 31; continue $sw0;
+                }
+                case 31: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (j6 == false) { $pc0 = 35; continue $sw0; }
+                    try {
+                        abcd.wu.j6(6924461451797592976L, this, r9);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 26; continue $sw0;
+                    }
+                    $pc0 = 35; continue $sw0;
+                }
+                case 35: {
+                    try {
+                        r3 = new abcd.HJ(abcd.di.FH(this.Hw.Hw, this.FH));
+                        r4 = abcd.AbstractjJ.u7().iterator();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.net.URISyntaxException) { $pc0 = 33; continue $sw0; }
+                        $pc0 = 26; continue $sw0;
+                    }
+                    $pc0 = 8; continue $sw0;
+                }
+                case 8: {
+                    if (r4.hasNext() == false) { $pc0 = 19; continue $sw0; }
+                    try {
+                        r5 = r4.next();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.net.URISyntaxException) { $pc0 = 33; continue $sw0; }
+                        $pc0 = 26; continue $sw0;
+                    }
+                    if (r5.DW().toUpperCase(java.util.Locale.US).contains("SSH") == false) { $pc0 = 8; continue $sw0; }
+                    if (r5.j6(r3) == false) { $pc0 = 8; continue $sw0; }
+                    if (r3.gn() == null) { $pc0 = 17; continue $sw0; }
+                    if (r3.gn().trim().length() != 0) { $pc0 = 8; continue $sw0; }
+                    $pc0 = 17; continue $sw0;
+                }
+                case 17: {
+                    try {
+                        r0 = r3.v5("user");
+                        com.almlkaide.kaypro.util.Toasty.toast(this.Hw.FH, "You must specify a username in the URL in this form: " + r0.toString(), 1).show();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.net.URISyntaxException) { $pc0 = 33; continue $sw0; }
+                        $pc0 = 26; continue $sw0;
+                    }
+                    return;
+                }
+                case 19: {
+                    try {
+                        r6 = r3.toString().toLowerCase(java.util.Locale.US);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.net.URISyntaxException) { $pc0 = 33; continue $sw0; }
+                        $pc0 = 26; continue $sw0;
+                    }
+                    if (r6.startsWith("https://github.com/") == false) { $pc0 = 24; continue $sw0; }
+                    if (r6.endsWith(".git") == true) { $pc0 = 24; continue $sw0; }
+                    try {
+                        abcd.di.Hw(this.Hw.Hw, this.FH).setText(r3.toString() + ".git");
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.net.URISyntaxException) { $pc0 = 33; continue $sw0; }
+                        $pc0 = 26; continue $sw0;
+                    }
+                    $pc0 = 24; continue $sw0;
+                }
+                case 24: {
+                    try {
+                        abcd.di.j6(this.Hw.Hw, this.FH);
+                        this.FH.dismiss();
+                        com.aide.ui.U.Ws().j6(abcd.di.j6(this.Hw.Hw), abcd.di.DW(this.Hw.Hw, this.FH), abcd.di.FH(this.Hw.Hw, this.FH));
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 26; continue $sw0;
+                    }
+                    $pc0 = 33; continue $sw0;
+                }
+                case 33: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

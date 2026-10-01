@@ -22,33 +22,59 @@ public final class OH extends java.io.OutputStream {
     }
 
     private int DW(int r13, long r14) {
-        long r1 = r14 >>> 4;
-        byte[] r3 = this.VH;
-        if (r1 <= 0) goto L5;
-        int r8 = 128;
-    L6:
-        r3[0] = (byte) ((r14 & 15) | ((long) ((r13 << 4) | r8)));
-        int r15 = 1;
-    L8:
-        if (r1 <= 0) goto L9;
-        long r16 = r1 >>> 7;
-        byte[] r0 = this.VH;
-        int r4 = r15 + 1;
-        if (r16 <= 0) goto L13;
-        int r9 = 128;
-    L14:
-        r0[r15] = (byte) ((r1 & 127) | ((long) r9));
-        r1 = r16;
-        r15 = r4;
-        goto L8
-    L13:
-        r9 = 0;
-        goto L14
-    L9:
-        return r15;
-    L5:
-        r8 = 0;
-        goto L6
+        long r1 = 0L;
+        byte[] r3 = null;
+        int r8 = 0;
+        int r15 = 0;
+        long r16 = 0L;
+        byte[] r0 = null;
+        int r4 = 0;
+        int r9 = 0;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r1 = r14 >>> 4;
+                    r3 = this.VH;
+                    if (r1 <= 0) { $pc0 = 5; continue $sw0; }
+                    r8 = 128;
+                    $pc0 = 6; continue $sw0;
+                }
+                case 6: {
+                    r3[0] = (byte) ((r14 & 15) | ((long) ((r13 << 4) | r8)));
+                    r15 = 1;
+                    $pc0 = 8; continue $sw0;
+                }
+                case 8: {
+                    if (r1 <= 0) { $pc0 = 9; continue $sw0; }
+                    r16 = r1 >>> 7;
+                    r0 = this.VH;
+                    r4 = r15 + 1;
+                    if (r16 <= 0) { $pc0 = 13; continue $sw0; }
+                    r9 = 128;
+                    $pc0 = 14; continue $sw0;
+                }
+                case 14: {
+                    r0[r15] = (byte) ((r1 & 127) | ((long) r9));
+                    r1 = r16;
+                    r15 = r4;
+                    { $pc0 = 8; continue $sw0; }
+                }
+                case 13: {
+                    r9 = 0;
+                    { $pc0 = 14; continue $sw0; }
+                }
+                case 9: {
+                    return r15;
+                }
+                case 5: {
+                    r8 = 0;
+                    { $pc0 = 6; continue $sw0; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     int DW() {
@@ -56,10 +82,21 @@ public final class OH extends java.io.OutputStream {
     }
 
     public byte[] FH() {
-        if (this.gn != null) goto L6;
-        this.gn = new byte[16384];
-    L6:
-        return this.gn;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if (this.gn != null) { $pc1 = 6; continue $sw1; }
+                    this.gn = new byte[16384];
+                    $pc1 = 6; continue $sw1;
+                }
+                case 6: {
+                    return this.gn;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     byte[] Hw() {
@@ -91,36 +128,60 @@ public final class OH extends java.io.OutputStream {
     }
 
     public void j6(abcd.MH r10, long r11) {
-        if (r10.BT() == true) goto L5;
-        write(this.VH, 0, DW(r10.yS(), r11));
-        return;
-    L5:
-        if (this.FH.Zo() == false) goto L16;
-        abcd.MH r0 = r10.a8();
-        if (r0 == null) goto L16;
-        if (r0.nw() == false) goto L16;
-        long r3 = this.Zo;
-        write(this.VH, 0, DW(6, r11));
-        long r4 = r3 - r0.getOffset();
-        byte[] r12 = this.VH;
-        int r13 = r12.length - 1;
-        r12[r13] = (byte) (r4 & 127);
-    L11:
-        long r1 = r4 >> 7;
-        if (r1 <= 0) goto L13;
-        r13 = r13 - 1;
-        long r2 = r1 - 1;
-        this.VH[r13] = (byte) (128 | (r2 & 127));
-        r4 = r2;
-        goto L11
-    L13:
-        byte[] r14 = this.VH;
-        write(r14, r13, r14.length - r13);
-        return;
-    L16:
-        int r15 = DW(7, r11);
-        r10.lg().DW(this.VH, r15);
-        write(this.VH, 0, r15 + 20);
+        abcd.MH r0 = null;
+        long r3 = 0L;
+        long r4 = 0L;
+        byte[] r12 = null;
+        int r13 = 0;
+        long r1 = 0L;
+        long r2 = 0L;
+        byte[] r14 = null;
+        int r15 = 0;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    if (r10.BT() == true) { $pc2 = 5; continue $sw2; }
+                    write(this.VH, 0, DW(r10.yS(), r11));
+                    return;
+                }
+                case 5: {
+                    if (this.FH.Zo() == false) { $pc2 = 16; continue $sw2; }
+                    r0 = r10.a8();
+                    if (r0 == null) { $pc2 = 16; continue $sw2; }
+                    if (r0.nw() == false) { $pc2 = 16; continue $sw2; }
+                    r3 = this.Zo;
+                    write(this.VH, 0, DW(6, r11));
+                    r4 = r3 - r0.getOffset();
+                    r12 = this.VH;
+                    r13 = r12.length - 1;
+                    r12[r13] = (byte) (r4 & 127);
+                    $pc2 = 11; continue $sw2;
+                }
+                case 11: {
+                    r1 = r4 >> 7;
+                    if (r1 <= 0) { $pc2 = 13; continue $sw2; }
+                    r13 = r13 - 1;
+                    r2 = r1 - 1;
+                    this.VH[r13] = (byte) (128 | (r2 & 127));
+                    r4 = r2;
+                    { $pc2 = 11; continue $sw2; }
+                }
+                case 13: {
+                    r14 = this.VH;
+                    write(r14, r13, r14.length - r13);
+                    return;
+                }
+                case 16: {
+                    r15 = DW(7, r11);
+                    r10.lg().DW(this.VH, r15);
+                    write(this.VH, 0, r15 + 20);
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public long v5() {
@@ -137,22 +198,36 @@ public final class OH extends java.io.OutputStream {
 
     @Override
     public void write(byte[] r7, int r8, int r9) {
-    L2:
-        if (r9 <= 0) goto L3;
-        int r0 = java.lang.Math.min(r9, 131072);
-        this.Zo += (long) r0;
-        if (this.u7 > this.Zo) goto L11;
-        if (this.j6.isCancelled() == true) goto L10;
-        this.u7 = this.Zo + 131072;
-        goto L11
-    L10:
-        throw new java.io.IOException(org.eclipse.jgit.JGitText.j6().packingCancelledDuringObjectsWriting);
-    L11:
-        this.DW.write(r7, r8, r0);
-        this.Hw.update(r7, r8, r0);
-        this.v5.update(r7, r8, r0);
-        r8 = r8 + r0;
-        r9 = r9 - r0;
-        goto L2
+        int r0 = 0;
+        java.lang.Throwable $ex3 = null;
+        int $pc3 = 2;
+        $sw3: while (true) {
+            switch ($pc3) {
+                case 2: {
+                    if (r9 <= 0) { $pc3 = 3; continue $sw3; }
+                    r0 = java.lang.Math.min(r9, 131072);
+                    this.Zo += (long) r0;
+                    if (this.u7 > this.Zo) { $pc3 = 11; continue $sw3; }
+                    if (this.j6.isCancelled() == true) { $pc3 = 10; continue $sw3; }
+                    this.u7 = this.Zo + 131072;
+                    { $pc3 = 11; continue $sw3; }
+                }
+                case 10: {
+                    throw new java.io.IOException(org.eclipse.jgit.JGitText.j6().packingCancelledDuringObjectsWriting);
+                }
+                case 11: {
+                    this.DW.write(r7, r8, r0);
+                    this.Hw.update(r7, r8, r0);
+                    this.v5.update(r7, r8, r0);
+                    r8 = r8 + r0;
+                    r9 = r9 - r0;
+                    { $pc3 = 2; continue $sw3; }
+                }
+                case 3: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

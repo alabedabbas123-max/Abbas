@@ -24,23 +24,45 @@ public class ac implements a.b.g.s {
     }
 
     public void a(java.util.List r10) {
-        if (r10 == null) goto L13;
         int r0 = 0;
-    L5:
-        int r6 = r0;
-        if (r6 >= r10.size()) goto L18;
-        a.aa r1 = (a.aa) r10.get(r6);
-        this.d = r1.e;
-        if (this.d == null) goto L12;
-        a.ab r2 = new a.ab(true, true, true);
-        a.b.g.i r3 = new a.b.g.i();
-        this.f12a.a(r2.a(r1, r3, null, null, null));
-        if (r3.a() != 0) goto L12;
-        this.b.a(r2.a(r1, this, null, null, null));
-    L12:
-        r0 = r6 + 1;
-        goto L5
-    L18:
-        return;
+        int r6 = 0;
+        a.aa r1 = null;
+        a.ab r2 = null;
+        a.b.g.i r3 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (r10 == null) { $pc0 = 13; continue $sw0; }
+                    r0 = 0;
+                    $pc0 = 5; continue $sw0;
+                }
+                case 5: {
+                    r6 = r0;
+                    if (r6 >= r10.size()) { $pc0 = 18; continue $sw0; }
+                    r1 = (a.aa) r10.get(r6);
+                    this.d = r1.e;
+                    if (this.d == null) { $pc0 = 12; continue $sw0; }
+                    r2 = new a.ab(true, true, true);
+                    r3 = new a.b.g.i();
+                    this.f12a.a(r2.a(r1, r3, null, null, null));
+                    if (r3.a() != 0) { $pc0 = 12; continue $sw0; }
+                    this.b.a(r2.a(r1, this, null, null, null));
+                    $pc0 = 12; continue $sw0;
+                }
+                case 12: {
+                    r0 = r6 + 1;
+                    { $pc0 = 5; continue $sw0; }
+                }
+                case 18: {
+                    return;
+                }
+                case 13: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

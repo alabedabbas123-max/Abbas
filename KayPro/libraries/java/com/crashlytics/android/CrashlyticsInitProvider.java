@@ -10,26 +10,59 @@ public class CrashlyticsInitProvider extends android.content.ContentProvider {
     }
 
     private io.fabric.sdk.android.Kit[] j6(android.content.Context r7) {
-        android.os.Bundle r8 = r7.getPackageManager().getApplicationInfo(r7.getPackageName(), 128).metaData;     // Catch: android.content.pm.PackageManager.NameNotFoundException -> L8
-        if (r8 == null) goto L10;
-        if (r8.getBoolean("firebase_crashlytics_ndk_enabled", false) == false) goto L10;
-        boolean r9 = true;
-    L11:
-        com.crashlytics.android.Crashlytics r3 = new com.crashlytics.android.Crashlytics();
-        if (r9 == false) goto L18;
-        io.fabric.sdk.android.Fabric.getLogger().v5("Fabric", "Crashlytics is initializing NDK crash reporter.");     // Catch: java.lang.Throwable -> L15
-        return new io.fabric.sdk.android.Kit[]{r3, new com.crashlytics.android.ndk.CrashlyticsNdk()};
-    L15:
-        th = move-exception;
-        io.fabric.sdk.android.Fabric.getLogger().FH("Fabric", "Crashlytics failed to initialize NDK crash reporting. Attempting to intialize SDK...", th);
-    L18:
-        return new io.fabric.sdk.android.Kit[]{r3};
-    L10:
-        r9 = false;
-    L8:
-        e = move-exception;
-        io.fabric.sdk.android.Fabric.getLogger().j6("Fabric", "Unable to get PackageManager while determining if Crashlytics NDK should be initialized", e);
-        goto L10
+        android.os.Bundle r8 = null;
+        boolean r9 = false;
+        com.crashlytics.android.Crashlytics r3 = null;
+        java.lang.Throwable e = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    try {
+                        r8 = r7.getPackageManager().getApplicationInfo(r7.getPackageName(), 128).metaData;
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof android.content.pm.PackageManager.NameNotFoundException) { $pc0 = 8; continue $sw0; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    if (r8 == null) { $pc0 = 10; continue $sw0; }
+                    if (r8.getBoolean("firebase_crashlytics_ndk_enabled", false) == false) { $pc0 = 10; continue $sw0; }
+                    r9 = true;
+                    $pc0 = 11; continue $sw0;
+                }
+                case 11: {
+                    r3 = new com.crashlytics.android.Crashlytics();
+                    if (r9 == false) { $pc0 = 18; continue $sw0; }
+                    try {
+                        io.fabric.sdk.android.Fabric.getLogger().v5("Fabric", "Crashlytics is initializing NDK crash reporter.");
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 15; continue $sw0;
+                    }
+                    return new io.fabric.sdk.android.Kit[]{r3, new com.crashlytics.android.ndk.CrashlyticsNdk()};
+                }
+                case 15: {
+                    th = $ex0;
+                    io.fabric.sdk.android.Fabric.getLogger().FH("Fabric", "Crashlytics failed to initialize NDK crash reporting. Attempting to intialize SDK...", th);
+                    $pc0 = 18; continue $sw0;
+                }
+                case 18: {
+                    return new io.fabric.sdk.android.Kit[]{r3};
+                }
+                case 10: {
+                    r9 = false;
+                    $pc0 = 8; continue $sw0;
+                }
+                case 8: {
+                    e = $ex0;
+                    io.fabric.sdk.android.Fabric.getLogger().j6("Fabric", "Unable to get PackageManager while determining if Crashlytics NDK should be initialized", e);
+                    { $pc0 = 10; continue $sw0; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
@@ -48,25 +81,53 @@ public class CrashlyticsInitProvider extends android.content.ContentProvider {
     }
 
     boolean j6(android.content.Context r2, io.fabric.sdk.android.services.common.u r3, com.crashlytics.android.CrashlyticsInitProvider.a r4) {
-        if (r3.v5(r2) == false) goto L7;
-        return r4.j6(r2);
-    L7:
-        return r3.Hw(r2);
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if (r3.v5(r2) == false) { $pc1 = 7; continue $sw1; }
+                    return r4.j6(r2);
+                }
+                case 7: {
+                    return r3.Hw(r2);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
     public boolean onCreate() {
-        android.content.Context r0 = getContext();
-        if (j6(r0, new io.fabric.sdk.android.services.common.u(), new com.crashlytics.android.a()) == true) goto L11;
-        io.fabric.sdk.android.Fabric.getLogger().v5("CrashlyticsInitProvider", "CrashlyticsInitProvider skipping initialization");
-        return true;
-    L11:
-        io.fabric.sdk.android.Fabric.with(r0, j6(r0.getApplicationContext()));     // Catch: java.lang.IllegalStateException -> L6
-        io.fabric.sdk.android.Fabric.getLogger().v5("CrashlyticsInitProvider", "CrashlyticsInitProvider initialization successful");     // Catch: java.lang.IllegalStateException -> L6
-        return true;
-    L6:
-        io.fabric.sdk.android.Fabric.getLogger().v5("CrashlyticsInitProvider", "CrashlyticsInitProvider initialization unsuccessful");
-        return false;
+        android.content.Context r0 = null;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    r0 = getContext();
+                    if (j6(r0, new io.fabric.sdk.android.services.common.u(), new com.crashlytics.android.a()) == true) { $pc2 = 11; continue $sw2; }
+                    io.fabric.sdk.android.Fabric.getLogger().v5("CrashlyticsInitProvider", "CrashlyticsInitProvider skipping initialization");
+                    return true;
+                }
+                case 11: {
+                    try {
+                        io.fabric.sdk.android.Fabric.with(r0, j6(r0.getApplicationContext()));
+                        io.fabric.sdk.android.Fabric.getLogger().v5("CrashlyticsInitProvider", "CrashlyticsInitProvider initialization successful");
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        if ($t instanceof java.lang.IllegalStateException) { $pc2 = 6; continue $sw2; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    return true;
+                }
+                case 6: {
+                    io.fabric.sdk.android.Fabric.getLogger().v5("CrashlyticsInitProvider", "CrashlyticsInitProvider initialization unsuccessful");
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

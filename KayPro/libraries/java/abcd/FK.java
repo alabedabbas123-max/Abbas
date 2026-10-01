@@ -26,11 +26,22 @@ public final class FK {
     }
 
     public static int j6(int r2, int r3) {
-        int r0 = (r2 >>> 1) - (r3 >>> 1);
-        if (r0 == 0) goto L6;
-        return r0;
-    L6:
-        return (r2 & 1) - (r3 & 1);
+        int r0 = 0;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = (r2 >>> 1) - (r3 >>> 1);
+                    if (r0 == 0) { $pc0 = 6; continue $sw0; }
+                    return r0;
+                }
+                case 6: {
+                    return (r2 & 1) - (r3 & 1);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static int j6(byte[] r2, int r3) {

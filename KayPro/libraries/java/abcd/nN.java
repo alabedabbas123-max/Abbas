@@ -25,34 +25,57 @@ public class nN extends abcd.AbstractyL {
     }
 
     private nN(abcd.FL r6) {
-        this.v5 = j6;
-        this.Zo = DW;
-        this.VH = FH;
-        this.gn = Hw;
         int r0 = 0;
-    L4:
-        if (r0 == r6.tp()) goto L5;
-        abcd.LL r1 = (abcd.LL) r6.j6(r0);
-        int r2 = r1.tp();
-        if (r2 == 0) goto L18;
-        if (r2 != 1) goto L10;
-        this.Zo = abcd.wN.j6(r1, true);
-    L19:
-        r0 = r0 + 1;
-        goto L4
-    L10:
-        if (r2 != 2) goto L12;
-        this.VH = abcd.lM.j6(r1, true);
-        goto L19
-    L12:
-        if (r2 != 3) goto L15;
-        this.gn = abcd.lM.j6(r1, true);
-        goto L19
-    L15:
-        throw new java.lang.IllegalArgumentException("unknown tag");
-    L18:
-        this.v5 = abcd.wN.j6(r1, true);
-        goto L19
+        abcd.LL r1 = null;
+        int r2 = 0;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    this.v5 = j6;
+                    this.Zo = DW;
+                    this.VH = FH;
+                    this.gn = Hw;
+                    r0 = 0;
+                    $pc0 = 4; continue $sw0;
+                }
+                case 4: {
+                    if (r0 == r6.tp()) { $pc0 = 5; continue $sw0; }
+                    r1 = (abcd.LL) r6.j6(r0);
+                    r2 = r1.tp();
+                    if (r2 == 0) { $pc0 = 18; continue $sw0; }
+                    if (r2 != 1) { $pc0 = 10; continue $sw0; }
+                    this.Zo = abcd.wN.j6(r1, true);
+                    $pc0 = 19; continue $sw0;
+                }
+                case 19: {
+                    r0 = r0 + 1;
+                    { $pc0 = 4; continue $sw0; }
+                }
+                case 10: {
+                    if (r2 != 2) { $pc0 = 12; continue $sw0; }
+                    this.VH = abcd.lM.j6(r1, true);
+                    { $pc0 = 19; continue $sw0; }
+                }
+                case 12: {
+                    if (r2 != 3) { $pc0 = 15; continue $sw0; }
+                    this.gn = abcd.lM.j6(r1, true);
+                    { $pc0 = 19; continue $sw0; }
+                }
+                case 15: {
+                    throw new java.lang.IllegalArgumentException("unknown tag");
+                }
+                case 18: {
+                    this.v5 = abcd.wN.j6(r1, true);
+                    { $pc0 = 19; continue $sw0; }
+                }
+                case 5: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public nN(abcd.wN r1, abcd.wN r2, abcd.wL r3, abcd.wL r4) {
@@ -63,31 +86,60 @@ public class nN extends abcd.AbstractyL {
     }
 
     public static abcd.nN j6(java.lang.Object r1) {
-        if ((r1 instanceof abcd.nN) == true) goto L5;
-        if (r1 != null) goto L8;
-        return null;
-    L8:
-        return new abcd.nN(abcd.FL.j6(r1));
-    L5:
-        return (abcd.nN) r1;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if ((r1 instanceof abcd.nN) == true) { $pc1 = 5; continue $sw1; }
+                    if (r1 != null) { $pc1 = 8; continue $sw1; }
+                    return null;
+                }
+                case 8: {
+                    return new abcd.nN(abcd.FL.j6(r1));
+                }
+                case 5: {
+                    return (abcd.nN) r1;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
     public abcd.EL DW() {
-        abcd.rL r0 = new abcd.rL();
-        if (this.v5.equals(j6) == true) goto L6;
-        r0.j6(new abcd.yM(true, 0, this.v5));
-    L6:
-        if (this.Zo.equals(DW) == true) goto L9;
-        r0.j6(new abcd.yM(true, 1, this.Zo));
-    L9:
-        if (this.VH.equals(FH) == true) goto L12;
-        r0.j6(new abcd.yM(true, 2, this.VH));
-    L12:
-        if (this.gn.equals(Hw) == true) goto L15;
-        r0.j6(new abcd.yM(true, 3, this.gn));
-    L15:
-        return new abcd.tM(r0);
+        abcd.rL r0 = null;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    r0 = new abcd.rL();
+                    if (this.v5.equals(j6) == true) { $pc2 = 6; continue $sw2; }
+                    r0.j6(new abcd.yM(true, 0, this.v5));
+                    $pc2 = 6; continue $sw2;
+                }
+                case 6: {
+                    if (this.Zo.equals(DW) == true) { $pc2 = 9; continue $sw2; }
+                    r0.j6(new abcd.yM(true, 1, this.Zo));
+                    $pc2 = 9; continue $sw2;
+                }
+                case 9: {
+                    if (this.VH.equals(FH) == true) { $pc2 = 12; continue $sw2; }
+                    r0.j6(new abcd.yM(true, 2, this.VH));
+                    $pc2 = 12; continue $sw2;
+                }
+                case 12: {
+                    if (this.gn.equals(Hw) == true) { $pc2 = 15; continue $sw2; }
+                    r0.j6(new abcd.yM(true, 3, this.gn));
+                    $pc2 = 15; continue $sw2;
+                }
+                case 15: {
+                    return new abcd.tM(r0);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public abcd.wN v5() {

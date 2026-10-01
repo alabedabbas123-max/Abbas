@@ -25,12 +25,22 @@ class HE<T> implements _D<T> {
     }
 
     public boolean next() {
-        if (this.Hw.hasNext() == false) goto L6;
-        this.j6 = (abcd.yE) this.Hw.next();
-        this.DW = this.FH.DW(this.j6, -1);
-        return true;
-    L6:
-        return false;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (this.Hw.hasNext() == false) { $pc0 = 6; continue $sw0; }
+                    this.j6 = (abcd.yE) this.Hw.next();
+                    this.DW = this.FH.DW(this.j6, -1);
+                    return true;
+                }
+                case 6: {
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public long v5() {

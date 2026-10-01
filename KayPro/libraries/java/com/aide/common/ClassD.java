@@ -21,17 +21,41 @@ class ClassD implements android.widget.PopupMenu.OnMenuItemClickListener {
     @Override
     @abcd.Interfacesu(method = -2609122254969051881L)
     public boolean onMenuItemClick(android.view.MenuItem r6) {
-    L9:
-        th = move-exception;
-        if (DW == false) goto L13;
-        abcd.wu.j6(th, 2277578942065586692L, this, r6);
-    L13:
-        throw th;
-    L4:
-        if (j6 == false) goto L6;
-        abcd.wu.j6(2277578942065586692L, this, r6);     // Catch: java.lang.Throwable -> L9
-    L6:
-        this.FH.Hw.selectTab(this.FH.Hw.getTabAt(r6.getItemId()));     // Catch: java.lang.Throwable -> L9
-        return true;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 4;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 9: {
+                    th = $ex0;
+                    if (DW == false) { $pc0 = 13; continue $sw0; }
+                    abcd.wu.j6(th, 2277578942065586692L, this, r6);
+                    $pc0 = 13; continue $sw0;
+                }
+                case 13: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (j6 == false) { $pc0 = 6; continue $sw0; }
+                    try {
+                        abcd.wu.j6(2277578942065586692L, this, r6);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 9; continue $sw0;
+                    }
+                    $pc0 = 6; continue $sw0;
+                }
+                case 6: {
+                    try {
+                        this.FH.Hw.selectTab(this.FH.Hw.getTabAt(r6.getItemId()));
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 9; continue $sw0;
+                    }
+                    return true;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

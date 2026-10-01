@@ -20,17 +20,43 @@ final class hy<TResult> implements ny<TResult> {
     }
 
     public final void j6(Yx<TResult> r3) {
-        java.lang.Object r0 = this.DW;
-        monitor-enter(r0);
-    L11:
-        th = move-exception;
-        throw th;
-    L5:
-        if (this.FH != null) goto L8;
-        monitor-exit(r0);     // Catch: java.lang.Throwable -> L11
-        return;
-    L8:
-        monitor-exit(r0);     // Catch: java.lang.Throwable -> L11
-        this.j6.execute(new abcd.Runnableiy(this, r3));
+        java.lang.Object r0 = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = this.DW;
+                    monitor-enter(r0);
+                    $pc0 = 11; continue $sw0;
+                }
+                case 11: {
+                    th = $ex0;
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 5: {
+                    if (this.FH != null) { $pc0 = 8; continue $sw0; }
+                    try {
+                        monitor-exit(r0);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 11; continue $sw0;
+                    }
+                    return;
+                }
+                case 8: {
+                    try {
+                        monitor-exit(r0);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 11; continue $sw0;
+                    }
+                    this.j6.execute(new abcd.Runnableiy(this, r3));
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

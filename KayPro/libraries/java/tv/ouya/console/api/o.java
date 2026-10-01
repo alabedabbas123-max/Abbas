@@ -13,11 +13,29 @@ public abstract class o<T> implements java.lang.Runnable {
 
     @Override
     public void run() {
-        j6();     // Catch: android.os.RemoteException -> L4
-        return;
-    L4:
-        e = move-exception;
-        android.util.Log.e("OUYASDK", "Remote exception while " + this.DW, e);
-        this.j6.j6(3003, "", new android.os.Bundle());
+        java.lang.Throwable e = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    try {
+                        j6();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof android.os.RemoteException) { $pc0 = 4; continue $sw0; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    return;
+                }
+                case 4: {
+                    e = $ex0;
+                    android.util.Log.e("OUYASDK", "Remote exception while " + this.DW, e);
+                    this.j6.j6(3003, "", new android.os.Bundle());
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

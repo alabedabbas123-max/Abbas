@@ -1,6 +1,6 @@
 package abcd;
 
-public final enum Enumax extends java.lang.Enum<abcd.Enumax> {
+public final class Enumax extends com.almlkaide.kaypro.internal.EnumBase {
     public static final abcd.Enumax DW = null;
     public static final abcd.Enumax FH = null;
     public static final abcd.Enumax Hw = null;
@@ -22,7 +22,7 @@ public final enum Enumax extends java.lang.Enum<abcd.Enumax> {
     }
 
     public static abcd.Enumax valueOf(java.lang.String r1) {
-        return (abcd.Enumax) java.lang.Enum.valueOf(abcd.Enumax.class, r1);
+        return (abcd.Enumax) com.almlkaide.kaypro.internal.EnumBase.valueOf(abcd.Enumax.values(), r1);
     }
 
     public static abcd.Enumax[] values() {

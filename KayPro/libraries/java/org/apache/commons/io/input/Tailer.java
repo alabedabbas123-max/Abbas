@@ -249,15 +249,15 @@ public class Tailer implements Runnable {
      */
     @Override
     public void run() throws Throwable {
-        ?? r8;
-        ?? r2;
-        ?? r0;
-        ?? r1;
+        java.lang.Object r8;
+        java.lang.Object r2;
+        java.lang.Object r0;
+        java.lang.Object r1;
         Throwable th;
         Throwable th2;
-        ?? randomAccessFile;
+        java.lang.Object randomAccessFile;
         long jLastModified;
-        ?? randomAccessFile2 = 0;
+        java.lang.Object randomAccessFile2 = 0;
         long jLastModified2 = 0;
         long lines = 0;
         while (getRun() && randomAccessFile2 == 0) {
@@ -290,7 +290,7 @@ public class Tailer implements Runnable {
             }
         }
         long j = jLastModified2;
-        ?? r9 = randomAccessFile2;
+        java.lang.Object r9 = randomAccessFile2;
         while (getRun()) {
             try {
                 boolean zIsFileNewer = FileUtils.isFileNewer(this.file, j);

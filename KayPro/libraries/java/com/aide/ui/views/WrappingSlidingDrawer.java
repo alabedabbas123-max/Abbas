@@ -20,86 +20,237 @@ public class WrappingSlidingDrawer extends android.widget.SlidingDrawer {
     }
 
     public WrappingSlidingDrawer(android.content.Context r8, android.util.AttributeSet r9) {
-    L12:
-        th = move-exception;
-        if (DW == false) goto L16;
-        abcd.wu.j6(th, -1605006505721893120L, null, r8, r9);
-    L16:
-        throw th;
-    L4:
-        if (j6 == false) goto L6;
-        abcd.wu.j6(-1605006505721893120L, null, r8, r9);     // Catch: java.lang.Throwable -> L12
-    L6:
-        super(r8, r9);     // Catch: java.lang.Throwable -> L12
-        boolean r2 = true;
-        int r1 = r9.getAttributeIntValue("android", "orientation", 1);     // Catch: java.lang.Throwable -> L12
-        this.Hw = r9.getAttributeIntValue("android", "topOffset", 0);     // Catch: java.lang.Throwable -> L12
-        if (r1 == 1) goto L10;
-        r2 = false;
-    L10:
-        this.FH = r2;     // Catch: java.lang.Throwable -> L12
+        boolean r2 = false;
+        int r1 = 0;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 4;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 12: {
+                    th = $ex0;
+                    if (DW == false) { $pc0 = 16; continue $sw0; }
+                    abcd.wu.j6(th, -1605006505721893120L, null, r8, r9);
+                    $pc0 = 16; continue $sw0;
+                }
+                case 16: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (j6 == false) { $pc0 = 6; continue $sw0; }
+                    try {
+                        abcd.wu.j6(-1605006505721893120L, null, r8, r9);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 12; continue $sw0;
+                    }
+                    $pc0 = 6; continue $sw0;
+                }
+                case 6: {
+                    try {
+                        super(r8, r9);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 12; continue $sw0;
+                    }
+                    r2 = true;
+                    try {
+                        r1 = r9.getAttributeIntValue("android", "orientation", 1);
+                        this.Hw = r9.getAttributeIntValue("android", "topOffset", 0);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 12; continue $sw0;
+                    }
+                    if (r1 == 1) { $pc0 = 10; continue $sw0; }
+                    r2 = false;
+                    $pc0 = 10; continue $sw0;
+                }
+                case 10: {
+                    try {
+                        this.FH = r2;
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 12; continue $sw0;
+                    }
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public WrappingSlidingDrawer(android.content.Context r9, android.util.AttributeSet r10, int r11) {
-    L12:
-        th = move-exception;
-        if (DW == false) goto L16;
-        abcd.wu.j6(th, -507211066623366561L, null, r9, r10, new java.lang.Integer(r11));
-    L16:
-        throw th;
-    L4:
-        if (j6 == false) goto L6;
-        abcd.wu.j6(-507211066623366561L, null, r9, r10, new java.lang.Integer(r11));     // Catch: java.lang.Throwable -> L12
-    L6:
-        super(r9, r10, r11);     // Catch: java.lang.Throwable -> L12
-        boolean r2 = true;
-        int r1 = r10.getAttributeIntValue("android", "orientation", 1);     // Catch: java.lang.Throwable -> L12
-        this.Hw = r10.getAttributeIntValue("android", "topOffset", 0);     // Catch: java.lang.Throwable -> L12
-        if (r1 == 1) goto L10;
-        r2 = false;
-    L10:
-        this.FH = r2;     // Catch: java.lang.Throwable -> L12
+        boolean r2 = false;
+        int r1 = 0;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = 4;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case 12: {
+                    th = $ex1;
+                    if (DW == false) { $pc1 = 16; continue $sw1; }
+                    abcd.wu.j6(th, -507211066623366561L, null, r9, r10, new java.lang.Integer(r11));
+                    $pc1 = 16; continue $sw1;
+                }
+                case 16: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (j6 == false) { $pc1 = 6; continue $sw1; }
+                    try {
+                        abcd.wu.j6(-507211066623366561L, null, r9, r10, new java.lang.Integer(r11));
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        $pc1 = 12; continue $sw1;
+                    }
+                    $pc1 = 6; continue $sw1;
+                }
+                case 6: {
+                    try {
+                        super(r9, r10, r11);
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        $pc1 = 12; continue $sw1;
+                    }
+                    r2 = true;
+                    try {
+                        r1 = r10.getAttributeIntValue("android", "orientation", 1);
+                        this.Hw = r10.getAttributeIntValue("android", "topOffset", 0);
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        $pc1 = 12; continue $sw1;
+                    }
+                    if (r1 == 1) { $pc1 = 10; continue $sw1; }
+                    r2 = false;
+                    $pc1 = 10; continue $sw1;
+                }
+                case 10: {
+                    try {
+                        this.FH = r2;
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        $pc1 = 12; continue $sw1;
+                    }
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
     @abcd.Interfacesu(method = -137268825418187376L)
     protected void onMeasure(int r8, int r9) {
-    L20:
-        th = move-exception;
-        if (DW == false) goto L24;
-        abcd.wu.j6(th, -959454100828577320L, this, new java.lang.Integer(r8), new java.lang.Integer(r9));
-    L24:
-        throw th;
-    L3:
-        if (j6 == false) goto L5;
-        abcd.wu.j6(-959454100828577320L, this, new java.lang.Integer(r8), new java.lang.Integer(r9));     // Catch: java.lang.Throwable -> L20
-    L5:
-        int r0 = android.view.View.MeasureSpec.getMode(r8);     // Catch: java.lang.Throwable -> L20
-        int r1 = android.view.View.MeasureSpec.getSize(r8);     // Catch: java.lang.Throwable -> L20
-        int r2 = android.view.View.MeasureSpec.getMode(r9);     // Catch: java.lang.Throwable -> L20
-        int r3 = android.view.View.MeasureSpec.getSize(r9);     // Catch: java.lang.Throwable -> L20
-        if (r0 == 0) goto L19;
-        if (r2 == 0) goto L19;
-        android.view.View r4 = getHandle();     // Catch: java.lang.Throwable -> L20
-        android.view.View r5 = getContent();     // Catch: java.lang.Throwable -> L20
-        measureChild(r4, r8, r9);     // Catch: java.lang.Throwable -> L20
-        if (this.FH == false) goto L13;
-        r5.measure(r8, android.view.View.MeasureSpec.makeMeasureSpec((r3 - r4.getMeasuredHeight()) - this.Hw, r2));     // Catch: java.lang.Throwable -> L20
-        int r6 = (r4.getMeasuredHeight() + this.Hw) + r5.getMeasuredHeight();     // Catch: java.lang.Throwable -> L20
-        int r7 = r5.getMeasuredWidth();     // Catch: java.lang.Throwable -> L20
-        if (r4.getMeasuredWidth() <= r7) goto L16;
-        r7 = r4.getMeasuredWidth();     // Catch: java.lang.Throwable -> L20
-    L16:
-        setMeasuredDimension(r7, r6);     // Catch: java.lang.Throwable -> L20
-        return;
-    L13:
-        r5.measure(android.view.View.MeasureSpec.makeMeasureSpec((r1 - r4.getMeasuredWidth()) - this.Hw, r0), r9);     // Catch: java.lang.Throwable -> L20
-        int r10 = r4.getMeasuredWidth() + this.Hw;     // Catch: java.lang.Throwable -> L20
-        r7 = r5.getMeasuredWidth() + r10;     // Catch: java.lang.Throwable -> L20
-        r6 = r5.getMeasuredHeight();     // Catch: java.lang.Throwable -> L20
-        if (r4.getMeasuredHeight() <= r6) goto L16;
-        r6 = r4.getMeasuredHeight();     // Catch: java.lang.Throwable -> L20
-    L19:
-        throw new java.lang.RuntimeException("SlidingDrawer cannot have UNSPECIFIED dimensions");     // Catch: java.lang.Throwable -> L20
+        int r0 = 0;
+        int r1 = 0;
+        int r2 = 0;
+        int r3 = 0;
+        android.view.View r4 = null;
+        android.view.View r5 = null;
+        int r6 = 0;
+        int r7 = 0;
+        int r10 = 0;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = 3;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case 20: {
+                    th = $ex2;
+                    if (DW == false) { $pc2 = 24; continue $sw2; }
+                    abcd.wu.j6(th, -959454100828577320L, this, new java.lang.Integer(r8), new java.lang.Integer(r9));
+                    $pc2 = 24; continue $sw2;
+                }
+                case 24: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 3: {
+                    if (j6 == false) { $pc2 = 5; continue $sw2; }
+                    try {
+                        abcd.wu.j6(-959454100828577320L, this, new java.lang.Integer(r8), new java.lang.Integer(r9));
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        $pc2 = 20; continue $sw2;
+                    }
+                    $pc2 = 5; continue $sw2;
+                }
+                case 5: {
+                    try {
+                        r0 = android.view.View.MeasureSpec.getMode(r8);
+                        r1 = android.view.View.MeasureSpec.getSize(r8);
+                        r2 = android.view.View.MeasureSpec.getMode(r9);
+                        r3 = android.view.View.MeasureSpec.getSize(r9);
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        $pc2 = 20; continue $sw2;
+                    }
+                    if (r0 == 0) { $pc2 = 19; continue $sw2; }
+                    if (r2 == 0) { $pc2 = 19; continue $sw2; }
+                    try {
+                        r4 = getHandle();
+                        r5 = getContent();
+                        measureChild(r4, r8, r9);
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        $pc2 = 20; continue $sw2;
+                    }
+                    if (this.FH == false) { $pc2 = 13; continue $sw2; }
+                    try {
+                        r5.measure(r8, android.view.View.MeasureSpec.makeMeasureSpec((r3 - r4.getMeasuredHeight()) - this.Hw, r2));
+                        r6 = (r4.getMeasuredHeight() + this.Hw) + r5.getMeasuredHeight();
+                        r7 = r5.getMeasuredWidth();
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        $pc2 = 20; continue $sw2;
+                    }
+                    if (r4.getMeasuredWidth() <= r7) { $pc2 = 16; continue $sw2; }
+                    try {
+                        r7 = r4.getMeasuredWidth();
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        $pc2 = 20; continue $sw2;
+                    }
+                    $pc2 = 16; continue $sw2;
+                }
+                case 16: {
+                    try {
+                        setMeasuredDimension(r7, r6);
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        $pc2 = 20; continue $sw2;
+                    }
+                    return;
+                }
+                case 13: {
+                    try {
+                        r5.measure(android.view.View.MeasureSpec.makeMeasureSpec((r1 - r4.getMeasuredWidth()) - this.Hw, r0), r9);
+                        r10 = r4.getMeasuredWidth() + this.Hw;
+                        r7 = r5.getMeasuredWidth() + r10;
+                        r6 = r5.getMeasuredHeight();
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        $pc2 = 20; continue $sw2;
+                    }
+                    if (r4.getMeasuredHeight() <= r6) { $pc2 = 16; continue $sw2; }
+                    try {
+                        r6 = r4.getMeasuredHeight();
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        $pc2 = 20; continue $sw2;
+                    }
+                    $pc2 = 19; continue $sw2;
+                }
+                case 19: {
+                    try {
+                        throw new java.lang.RuntimeException("SlidingDrawer cannot have UNSPECIFIED dimensions");
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        $pc2 = 20; continue $sw2;
+                    }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

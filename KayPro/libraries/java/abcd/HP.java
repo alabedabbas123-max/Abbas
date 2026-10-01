@@ -2,42 +2,63 @@ package abcd;
 
 class HP {
     static abcd.InterfacesO j6(abcd.wN r2) {
-        if (r2.v5().equals(abcd.InterfacejN.u7) == false) goto L6;
-        return new abcd.FO();
-    L6:
-        if (r2.v5().equals(abcd.InterfacehN.v5) == false) goto L9;
-        return new abcd.GO();
-    L9:
-        if (r2.v5().equals(abcd.InterfacehN.DW) == false) goto L12;
-        return new abcd.HO();
-    L12:
-        if (r2.v5().equals(abcd.InterfacehN.FH) == false) goto L15;
-        return new abcd.IO();
-    L15:
-        if (r2.v5().equals(abcd.InterfacehN.Hw) == false) goto L18;
-        return new abcd.JO();
-    L18:
-        if (r2.v5().equals(abcd.InterfacelN.SI) == false) goto L21;
-        return new abcd.BO();
-    L21:
-        if (r2.v5().equals(abcd.InterfacelN.nw) == false) goto L24;
-        return new abcd.AO();
-    L24:
-        if (r2.v5().equals(abcd.InterfacelN.ei) == false) goto L27;
-        return new abcd.zO();
-    L27:
-        if (r2.v5().equals(abcd._M.j6) == false) goto L30;
-        return new abcd.wO();
-    L30:
-        if (r2.v5().equals(abcd.InterfaceoN.FH) == false) goto L33;
-        return new abcd.CO();
-    L33:
-        if (r2.v5().equals(abcd.InterfaceoN.DW) == false) goto L36;
-        return new abcd.DO();
-    L36:
-        if (r2.v5().equals(abcd.InterfaceoN.Hw) == false) goto L40;
-        return new abcd.EO();
-    L40:
-        throw new abcd.BP("cannot recognise digest");
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (r2.v5().equals(abcd.InterfacejN.u7) == false) { $pc0 = 6; continue $sw0; }
+                    return new abcd.FO();
+                }
+                case 6: {
+                    if (r2.v5().equals(abcd.InterfacehN.v5) == false) { $pc0 = 9; continue $sw0; }
+                    return new abcd.GO();
+                }
+                case 9: {
+                    if (r2.v5().equals(abcd.InterfacehN.DW) == false) { $pc0 = 12; continue $sw0; }
+                    return new abcd.HO();
+                }
+                case 12: {
+                    if (r2.v5().equals(abcd.InterfacehN.FH) == false) { $pc0 = 15; continue $sw0; }
+                    return new abcd.IO();
+                }
+                case 15: {
+                    if (r2.v5().equals(abcd.InterfacehN.Hw) == false) { $pc0 = 18; continue $sw0; }
+                    return new abcd.JO();
+                }
+                case 18: {
+                    if (r2.v5().equals(abcd.InterfacelN.SI) == false) { $pc0 = 21; continue $sw0; }
+                    return new abcd.BO();
+                }
+                case 21: {
+                    if (r2.v5().equals(abcd.InterfacelN.nw) == false) { $pc0 = 24; continue $sw0; }
+                    return new abcd.AO();
+                }
+                case 24: {
+                    if (r2.v5().equals(abcd.InterfacelN.ei) == false) { $pc0 = 27; continue $sw0; }
+                    return new abcd.zO();
+                }
+                case 27: {
+                    if (r2.v5().equals(abcd._M.j6) == false) { $pc0 = 30; continue $sw0; }
+                    return new abcd.wO();
+                }
+                case 30: {
+                    if (r2.v5().equals(abcd.InterfaceoN.FH) == false) { $pc0 = 33; continue $sw0; }
+                    return new abcd.CO();
+                }
+                case 33: {
+                    if (r2.v5().equals(abcd.InterfaceoN.DW) == false) { $pc0 = 36; continue $sw0; }
+                    return new abcd.DO();
+                }
+                case 36: {
+                    if (r2.v5().equals(abcd.InterfaceoN.Hw) == false) { $pc0 = 40; continue $sw0; }
+                    return new abcd.EO();
+                }
+                case 40: {
+                    throw new abcd.BP("cannot recognise digest");
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

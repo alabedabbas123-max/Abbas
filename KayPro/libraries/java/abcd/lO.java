@@ -17,17 +17,30 @@ public class lO {
     }
 
     private abcd.kO j6(abcd.InterfacevP r9, abcd.XM r10) {
-        if (this.DW == false) goto L7;
-        return new abcd.kO(r10, r9, this.j6, this.v5, true);
-    L7:
-        if (this.FH != null) goto L14;
-        if (this.Hw != null) goto L14;
-        return new abcd.kO(r10, r9, this.j6, this.v5);
-    L14:
-        if (this.FH != null) goto L17;
-        this.FH = new abcd.iO();
-    L17:
-        return new abcd.kO(r10, r9, this.j6, this.v5, this.FH, this.Hw);
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (this.DW == false) { $pc0 = 7; continue $sw0; }
+                    return new abcd.kO(r10, r9, this.j6, this.v5, true);
+                }
+                case 7: {
+                    if (this.FH != null) { $pc0 = 14; continue $sw0; }
+                    if (this.Hw != null) { $pc0 = 14; continue $sw0; }
+                    return new abcd.kO(r10, r9, this.j6, this.v5);
+                }
+                case 14: {
+                    if (this.FH != null) { $pc0 = 17; continue $sw0; }
+                    this.FH = new abcd.iO();
+                    $pc0 = 17; continue $sw0;
+                }
+                case 17: {
+                    return new abcd.kO(r10, r9, this.j6, this.v5, this.FH, this.Hw);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public abcd.lO DW(abcd.WN r1) {

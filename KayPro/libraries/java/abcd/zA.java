@@ -8,55 +8,153 @@ public class zA {
     }
 
     public static java.lang.String j6(byte[] r11) {
-        java.io.ByteArrayOutputStream r0 = new java.io.ByteArrayOutputStream();     // Catch: java.io.IOException -> L25
-        j6.j6(r11, 0, r11.length, r0);     // Catch: java.io.IOException -> L25
-        byte[] r1 = r0.toByteArray();     // Catch: java.io.IOException -> L25
-        java.lang.StringBuilder r2 = new java.lang.StringBuilder();     // Catch: java.io.IOException -> L25
+        java.io.ByteArrayOutputStream r0 = null;
+        byte[] r1 = null;
+        java.lang.StringBuilder r2 = null;
         int r3 = 0;
-    L4:
-        if (r3 >= r1.length) goto L23;
-        int r4 = r3 + 32;     // Catch: java.io.IOException -> L25
-        int r5 = java.lang.Math.min(r4, r1.length);     // Catch: java.io.IOException -> L25
-        java.lang.StringBuilder r6 = new java.lang.StringBuilder();     // Catch: java.io.IOException -> L25
-        java.lang.StringBuilder r7 = new java.lang.StringBuilder();     // Catch: java.io.IOException -> L25
-        r6.append(java.lang.String.format("%08x: ", new java.lang.Object[]{java.lang.Integer.valueOf(r3 / 2)}));     // Catch: java.io.IOException -> L25
-    L7:
-        if (r3 >= r5) goto L18;
-        r6.append(java.lang.Character.valueOf((char) r1[r3]));     // Catch: java.io.IOException -> L25
-        r6.append(java.lang.Character.valueOf((char) r1[r3 + 1]));     // Catch: java.io.IOException -> L25
-        int r9 = r3 + 2;     // Catch: java.io.IOException -> L25
-        if ((r9 % 4) != 0) goto L11;
-        r6.append(' ');     // Catch: java.io.IOException -> L25
-    L11:
-        byte r8 = r11[r3 / 2];     // Catch: java.io.IOException -> L25
-        if (r8 >= 32) goto L14;
-    L16:
-        r7.append('.');     // Catch: java.io.IOException -> L25
-    L17:
-        r3 = r9;
-        goto L7
-    L14:
-        if (r8 >= 127) goto L16;
-        r7.append(java.lang.Character.valueOf((char) r8));     // Catch: java.io.IOException -> L25
-        goto L17
-    L18:
-        r2.append(r6.toString());     // Catch: java.io.IOException -> L25
-        int r10 = r6.length();     // Catch: java.io.IOException -> L25
-    L20:
-        if (r10 >= 50) goto L22;
-        r2.append(' ');     // Catch: java.io.IOException -> L25
-        r10 = r10 + 1;     // Catch: java.io.IOException -> L25
-        goto L20
-    L22:
-        r2.append("  ");     // Catch: java.io.IOException -> L25
-        r2.append(r7);     // Catch: java.io.IOException -> L25
-        r2.append("\n");     // Catch: java.io.IOException -> L25
-        r3 = r4;
-        goto L4
-    L23:
-        return r2.toString();
-    L25:
-        e = move-exception;
-        throw new java.lang.IllegalStateException(e.getClass().getName() + ": " + e.getMessage());
+        int r4 = 0;
+        int r5 = 0;
+        java.lang.StringBuilder r6 = null;
+        java.lang.StringBuilder r7 = null;
+        int r9 = 0;
+        byte r8 = 0;
+        int r10 = 0;
+        java.lang.Throwable e = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    try {
+                        r0 = new java.io.ByteArrayOutputStream();
+                        j6.j6(r11, 0, r11.length, r0);
+                        r1 = r0.toByteArray();
+                        r2 = new java.lang.StringBuilder();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.io.IOException) { $pc0 = 25; continue $sw0; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    r3 = 0;
+                    $pc0 = 4; continue $sw0;
+                }
+                case 4: {
+                    if (r3 >= r1.length) { $pc0 = 23; continue $sw0; }
+                    try {
+                        r4 = r3 + 32;
+                        r5 = java.lang.Math.min(r4, r1.length);
+                        r6 = new java.lang.StringBuilder();
+                        r7 = new java.lang.StringBuilder();
+                        r6.append(java.lang.String.format("%08x: ", new java.lang.Object[]{java.lang.Integer.valueOf(r3 / 2)}));
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.io.IOException) { $pc0 = 25; continue $sw0; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    $pc0 = 7; continue $sw0;
+                }
+                case 7: {
+                    if (r3 >= r5) { $pc0 = 18; continue $sw0; }
+                    try {
+                        r6.append(java.lang.Character.valueOf((char) r1[r3]));
+                        r6.append(java.lang.Character.valueOf((char) r1[r3 + 1]));
+                        r9 = r3 + 2;
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.io.IOException) { $pc0 = 25; continue $sw0; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    if ((r9 % 4) != 0) { $pc0 = 11; continue $sw0; }
+                    try {
+                        r6.append(' ');
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.io.IOException) { $pc0 = 25; continue $sw0; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    $pc0 = 11; continue $sw0;
+                }
+                case 11: {
+                    try {
+                        r8 = r11[r3 / 2];
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.io.IOException) { $pc0 = 25; continue $sw0; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    if (r8 >= 32) { $pc0 = 14; continue $sw0; }
+                    $pc0 = 16; continue $sw0;
+                }
+                case 16: {
+                    try {
+                        r7.append('.');
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.io.IOException) { $pc0 = 25; continue $sw0; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    $pc0 = 17; continue $sw0;
+                }
+                case 17: {
+                    r3 = r9;
+                    { $pc0 = 7; continue $sw0; }
+                }
+                case 14: {
+                    if (r8 >= 127) { $pc0 = 16; continue $sw0; }
+                    try {
+                        r7.append(java.lang.Character.valueOf((char) r8));
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.io.IOException) { $pc0 = 25; continue $sw0; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    { $pc0 = 17; continue $sw0; }
+                }
+                case 18: {
+                    try {
+                        r2.append(r6.toString());
+                        r10 = r6.length();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.io.IOException) { $pc0 = 25; continue $sw0; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    $pc0 = 20; continue $sw0;
+                }
+                case 20: {
+                    if (r10 >= 50) { $pc0 = 22; continue $sw0; }
+                    try {
+                        r2.append(' ');
+                        r10 = r10 + 1;
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.io.IOException) { $pc0 = 25; continue $sw0; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    { $pc0 = 20; continue $sw0; }
+                }
+                case 22: {
+                    try {
+                        r2.append("  ");
+                        r2.append(r7);
+                        r2.append("\n");
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.io.IOException) { $pc0 = 25; continue $sw0; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    r3 = r4;
+                    { $pc0 = 4; continue $sw0; }
+                }
+                case 23: {
+                    return r2.toString();
+                }
+                case 25: {
+                    e = $ex0;
+                    throw new java.lang.IllegalStateException(e.getClass().getName() + ": " + e.getMessage());
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

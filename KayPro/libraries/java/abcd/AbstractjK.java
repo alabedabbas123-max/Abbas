@@ -53,21 +53,39 @@ public abstract class AbstractjK {
 
         @Override
         public boolean j6(abcd.YJ r7) {
-            int r0 = r7.Zo();
-            if (r0 != 1) goto L5;
-            return true;
-        L5:
-            int r3 = r7.FH(0);
-            int r4 = 1;
-        L6:
-            if (r4 >= r0) goto L7;
-            if (r7.FH(r4) != r3) goto L14;
-            if (r7.j6(r4, 0) == false) goto L14;
-            r4 = r4 + 1;
-        L14:
-            return true;
-        L7:
-            return false;
+            int r0 = 0;
+            int r3 = 0;
+            int r4 = 0;
+            java.lang.Throwable $ex0 = null;
+            int $pc0 = -1;
+            $sw0: while (true) {
+                switch ($pc0) {
+                    case -1: {
+                        r0 = r7.Zo();
+                        if (r0 != 1) { $pc0 = 5; continue $sw0; }
+                        return true;
+                    }
+                    case 5: {
+                        r3 = r7.FH(0);
+                        r4 = 1;
+                        $pc0 = 6; continue $sw0;
+                    }
+                    case 6: {
+                        if (r4 >= r0) { $pc0 = 7; continue $sw0; }
+                        if (r7.FH(r4) != r3) { $pc0 = 14; continue $sw0; }
+                        if (r7.j6(r4, 0) == false) { $pc0 = 14; continue $sw0; }
+                        r4 = r4 + 1;
+                        $pc0 = 14; continue $sw0;
+                    }
+                    case 14: {
+                        return true;
+                    }
+                    case 7: {
+                        return false;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         @Override
@@ -95,11 +113,24 @@ public abstract class AbstractjK {
     public abstract boolean j6(abcd.YJ r1);
 
     public java.lang.String toString() {
-        java.lang.String r0 = getClass().getName();
-        int r2 = r0.lastIndexOf(46);
-        if (r2 < 0) goto L6;
-        r0 = r0.substring(r2 + 1);
-    L6:
-        return r0.replace('$', '.');
+        java.lang.String r0 = null;
+        int r2 = 0;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    r0 = getClass().getName();
+                    r2 = r0.lastIndexOf(46);
+                    if (r2 < 0) { $pc1 = 6; continue $sw1; }
+                    r0 = r0.substring(r2 + 1);
+                    $pc1 = 6; continue $sw1;
+                }
+                case 6: {
+                    return r0.replace('$', '.');
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

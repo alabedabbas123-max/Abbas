@@ -25,49 +25,125 @@ class RunnableAh implements java.lang.Runnable {
     @Override
     @abcd.Interfacesu(method = 2020553949778599060L)
     public void run() {
-    L29:
-        th = move-exception;
-        if (DW == false) goto L33;
-        abcd.wu.j6(th, 6593264978836293168L, this);
-    L33:
-        throw th;
-    L4:
-        if (j6 == false) goto L7;
-        abcd.wu.j6(6593264978836293168L, this);     // Catch: java.lang.Throwable -> L29
-    L7:
-        if (this.v5.Zo.VH.gn == false) goto L15;
-        com.aide.ui.U.er().j6(this.FH);     // Catch: java.lang.Throwable -> L29
-        if (this.Hw == null) goto L12;
-        com.aide.ui.U.J8().j6(this.Hw);     // Catch: java.lang.Throwable -> L29
-    L12:
-        if (abcd.Ch.DW(this.v5.VH) == null) goto L35;
-        abcd.Ch.DW(this.v5.VH).j6(this.Hw);     // Catch: java.lang.Throwable -> L29
-        return;
-    L35:
-        return;
-    L15:
-        if (this.v5.Zo.v5 != null) goto L17;
-        java.lang.String r2 = this.Hw;     // Catch: java.lang.Throwable -> L29
-    L18:
-        if (r2 == null) goto L20;
-        com.aide.ui.U.J8().j6(r2);     // Catch: java.lang.Throwable -> L29
-    L20:
-        com.aide.ui.U.lg().FH(false);     // Catch: java.lang.Throwable -> L29
-        com.aide.ui.U.vy().rN(r2);     // Catch: java.lang.Throwable -> L29
-        com.aide.ui.U.vy().U2("created");     // Catch: java.lang.Throwable -> L29
-        com.aide.ui.U.er().j6(this.FH);     // Catch: java.lang.Throwable -> L29
-        if (com.aide.ui.U.Ws().Hw(this.Hw) == true) goto L26;
-        if (com.aide.ui.aa.gn() == false) goto L26;
-        com.aide.ui.U.Ws().j6(this.Hw, "Initial commit", java.util.Arrays.asList(new java.lang.String[]{"bin/", "gen/", "obj/", "libs/*/*.so", ""}), new abcd.Runnablezh(this));     // Catch: java.lang.Throwable -> L29
-        return;
-    L26:
-        if (abcd.Ch.DW(this.v5.VH) == null) goto L38;
-        abcd.Ch.DW(this.v5.VH).j6(this.Hw);     // Catch: java.lang.Throwable -> L29
-        return;
-    L38:
-        return;
-    L17:
-        r2 = this.Hw + "/" + this.v5.Zo.v5;     // Catch: java.lang.Throwable -> L29
-        goto L18
+        java.lang.String r2 = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 4;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 29: {
+                    th = $ex0;
+                    if (DW == false) { $pc0 = 33; continue $sw0; }
+                    abcd.wu.j6(th, 6593264978836293168L, this);
+                    $pc0 = 33; continue $sw0;
+                }
+                case 33: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (j6 == false) { $pc0 = 7; continue $sw0; }
+                    try {
+                        abcd.wu.j6(6593264978836293168L, this);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 29; continue $sw0;
+                    }
+                    $pc0 = 7; continue $sw0;
+                }
+                case 7: {
+                    if (this.v5.Zo.VH.gn == false) { $pc0 = 15; continue $sw0; }
+                    try {
+                        com.aide.ui.U.er().j6(this.FH);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 29; continue $sw0;
+                    }
+                    if (this.Hw == null) { $pc0 = 12; continue $sw0; }
+                    try {
+                        com.aide.ui.U.J8().j6(this.Hw);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 29; continue $sw0;
+                    }
+                    $pc0 = 12; continue $sw0;
+                }
+                case 12: {
+                    if (abcd.Ch.DW(this.v5.VH) == null) { $pc0 = 35; continue $sw0; }
+                    try {
+                        abcd.Ch.DW(this.v5.VH).j6(this.Hw);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 29; continue $sw0;
+                    }
+                    return;
+                }
+                case 35: {
+                    return;
+                }
+                case 15: {
+                    if (this.v5.Zo.v5 != null) { $pc0 = 17; continue $sw0; }
+                    try {
+                        r2 = this.Hw;
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 29; continue $sw0;
+                    }
+                    $pc0 = 18; continue $sw0;
+                }
+                case 18: {
+                    if (r2 == null) { $pc0 = 20; continue $sw0; }
+                    try {
+                        com.aide.ui.U.J8().j6(r2);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 29; continue $sw0;
+                    }
+                    $pc0 = 20; continue $sw0;
+                }
+                case 20: {
+                    try {
+                        com.aide.ui.U.lg().FH(false);
+                        com.aide.ui.U.vy().rN(r2);
+                        com.aide.ui.U.vy().U2("created");
+                        com.aide.ui.U.er().j6(this.FH);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 29; continue $sw0;
+                    }
+                    if (com.aide.ui.U.Ws().Hw(this.Hw) == true) { $pc0 = 26; continue $sw0; }
+                    if (com.aide.ui.aa.gn() == false) { $pc0 = 26; continue $sw0; }
+                    try {
+                        com.aide.ui.U.Ws().j6(this.Hw, "Initial commit", java.util.Arrays.asList(new java.lang.String[]{"bin/", "gen/", "obj/", "libs/*/*.so", ""}), new abcd.Runnablezh(this));
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 29; continue $sw0;
+                    }
+                    return;
+                }
+                case 26: {
+                    if (abcd.Ch.DW(this.v5.VH) == null) { $pc0 = 38; continue $sw0; }
+                    try {
+                        abcd.Ch.DW(this.v5.VH).j6(this.Hw);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 29; continue $sw0;
+                    }
+                    return;
+                }
+                case 38: {
+                    return;
+                }
+                case 17: {
+                    try {
+                        r2 = this.Hw + "/" + this.v5.Zo.v5;
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 29; continue $sw0;
+                    }
+                    { $pc0 = 18; continue $sw0; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

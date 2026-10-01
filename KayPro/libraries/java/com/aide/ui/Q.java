@@ -21,24 +21,58 @@ class Q implements java.lang.Runnable {
     @Override
     @abcd.Interfacesu(method = 745571020612975260L)
     public void run() {
-    L14:
-        th = move-exception;
-        if (DW == false) goto L18;
-        abcd.wu.j6(th, -6989045231720881980L, this);
-    L18:
-        throw th;
-    L4:
-        if (j6 == false) goto L7;
-        abcd.wu.j6(-6989045231720881980L, this);     // Catch: java.lang.Throwable -> L14
-    L7:
-        if (com.aide.ui.U.sh() == false) goto L20;
-        return;
-    L20:
-        this.FH.run();     // Catch: java.lang.Throwable -> L11
-    L22:
-        return;
-    L11:
-        th = move-exception;
-        com.aide.common.ClassH.DW(th);     // Catch: java.lang.Throwable -> L14
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 4;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 14: {
+                    th = $ex0;
+                    if (DW == false) { $pc0 = 18; continue $sw0; }
+                    abcd.wu.j6(th, -6989045231720881980L, this);
+                    $pc0 = 18; continue $sw0;
+                }
+                case 18: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (j6 == false) { $pc0 = 7; continue $sw0; }
+                    try {
+                        abcd.wu.j6(-6989045231720881980L, this);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 14; continue $sw0;
+                    }
+                    $pc0 = 7; continue $sw0;
+                }
+                case 7: {
+                    if (com.aide.ui.U.sh() == false) { $pc0 = 20; continue $sw0; }
+                    return;
+                }
+                case 20: {
+                    try {
+                        this.FH.run();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 11; continue $sw0;
+                    }
+                    $pc0 = 22; continue $sw0;
+                }
+                case 22: {
+                    return;
+                }
+                case 11: {
+                    th = $ex0;
+                    try {
+                        com.aide.common.ClassH.DW(th);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 14; continue $sw0;
+                    }
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

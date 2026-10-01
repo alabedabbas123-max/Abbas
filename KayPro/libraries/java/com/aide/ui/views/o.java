@@ -23,21 +23,49 @@ class o extends android.animation.AnimatorListenerAdapter {
     @Override
     @abcd.Interfacesu(method = -3546821365743434445L)
     public void onAnimationEnd(android.animation.Animator r5) {
-    L12:
-        th = move-exception;
-        if (DW == false) goto L16;
-        abcd.wu.j6(th, 1866879545032684000L, this, r5);
-    L16:
-        throw th;
-    L4:
-        if (j6 == false) goto L7;
-        abcd.wu.j6(1866879545032684000L, this, r5);     // Catch: java.lang.Throwable -> L12
-    L7:
-        if (this.Hw.isVisible() == true) goto L9;
-        return;
-    L9:
-        if (com.aide.ui.views.CodeEditTextScrollView.a.j6(this.Hw) == true) goto L20;
-        r5.start();     // Catch: java.lang.Throwable -> L12
-        return;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 4;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 12: {
+                    th = $ex0;
+                    if (DW == false) { $pc0 = 16; continue $sw0; }
+                    abcd.wu.j6(th, 1866879545032684000L, this, r5);
+                    $pc0 = 16; continue $sw0;
+                }
+                case 16: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (j6 == false) { $pc0 = 7; continue $sw0; }
+                    try {
+                        abcd.wu.j6(1866879545032684000L, this, r5);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 12; continue $sw0;
+                    }
+                    $pc0 = 7; continue $sw0;
+                }
+                case 7: {
+                    if (this.Hw.isVisible() == true) { $pc0 = 9; continue $sw0; }
+                    return;
+                }
+                case 9: {
+                    if (com.aide.ui.views.CodeEditTextScrollView.a.j6(this.Hw) == true) { $pc0 = 20; continue $sw0; }
+                    try {
+                        r5.start();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 12; continue $sw0;
+                    }
+                    return;
+                }
+                case 20: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

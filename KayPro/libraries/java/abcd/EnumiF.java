@@ -1,6 +1,6 @@
 package abcd;
 
-public abstract enum EnumiF extends java.lang.Enum<abcd.EnumiF> {
+public abstract class EnumiF extends com.almlkaide.kaypro.internal.EnumBase {
     public static final abcd.EnumiF DW = null;
     public static final abcd.EnumiF EQ = null;
     public static final abcd.EnumiF FH = null;
@@ -64,7 +64,7 @@ public abstract enum EnumiF extends java.lang.Enum<abcd.EnumiF> {
     }
 
     public static abcd.EnumiF valueOf(java.lang.String r1) {
-        return (abcd.EnumiF) java.lang.Enum.valueOf(abcd.EnumiF.class, r1);
+        return (abcd.EnumiF) com.almlkaide.kaypro.internal.EnumBase.valueOf(abcd.EnumiF.values(), r1);
     }
 
     public static abcd.EnumiF[] values() {

@@ -26,18 +26,37 @@ public class q implements a.b.o, java.lang.Comparable {
     }
 
     public void a(a.b.g.s r3) {
-        if (this.f == null) goto L11;
         int r0 = 0;
-    L6:
-        if (r0 >= this.f.length) goto L15;
-        a.b.c r1 = this.f[r0];
-        if (r1 == null) goto L10;
-        r1.a(r3);
-    L10:
-        r0 = r0 + 1;
-        goto L6
-    L15:
-        return;
+        a.b.c r1 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (this.f == null) { $pc0 = 11; continue $sw0; }
+                    r0 = 0;
+                    $pc0 = 6; continue $sw0;
+                }
+                case 6: {
+                    if (r0 >= this.f.length) { $pc0 = 15; continue $sw0; }
+                    r1 = this.f[r0];
+                    if (r1 == null) { $pc0 = 10; continue $sw0; }
+                    r1.a(r3);
+                    $pc0 = 10; continue $sw0;
+                }
+                case 10: {
+                    r0 = r0 + 1;
+                    { $pc0 = 6; continue $sw0; }
+                }
+                case 15: {
+                    return;
+                }
+                case 11: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
@@ -51,38 +70,58 @@ public class q implements a.b.o, java.lang.Comparable {
 
     @Override
     public int compareTo(java.lang.Object r5) {
-        a.b.a.q r6 = (a.b.a.q) r5;
-        if (this.f77a >= r6.f77a) goto L6;
-        return -1;
-    L6:
-        if (this.f77a <= r6.f77a) goto L9;
-        return 1;
-    L9:
-        if (this.b >= r6.b) goto L11;
-        return -1;
-    L11:
-        if (this.b <= r6.b) goto L14;
-        return 1;
-    L14:
-        if (this.e >= r6.e) goto L16;
-        return -1;
-    L16:
-        if (this.e <= r6.e) goto L19;
-        return 1;
-    L19:
-        if (this.d >= r6.d) goto L21;
-        return -1;
-    L21:
-        if (this.d <= r6.d) goto L24;
-        return 1;
-    L24:
-        if (this.c >= r6.c) goto L26;
-        return -1;
-    L26:
-        if (this.c > r6.c) goto L37;
-        return 0;
-    L37:
-        return 1;
+        a.b.a.q r6 = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    r6 = (a.b.a.q) r5;
+                    if (this.f77a >= r6.f77a) { $pc1 = 6; continue $sw1; }
+                    return -1;
+                }
+                case 6: {
+                    if (this.f77a <= r6.f77a) { $pc1 = 9; continue $sw1; }
+                    return 1;
+                }
+                case 9: {
+                    if (this.b >= r6.b) { $pc1 = 11; continue $sw1; }
+                    return -1;
+                }
+                case 11: {
+                    if (this.b <= r6.b) { $pc1 = 14; continue $sw1; }
+                    return 1;
+                }
+                case 14: {
+                    if (this.e >= r6.e) { $pc1 = 16; continue $sw1; }
+                    return -1;
+                }
+                case 16: {
+                    if (this.e <= r6.e) { $pc1 = 19; continue $sw1; }
+                    return 1;
+                }
+                case 19: {
+                    if (this.d >= r6.d) { $pc1 = 21; continue $sw1; }
+                    return -1;
+                }
+                case 21: {
+                    if (this.d <= r6.d) { $pc1 = 24; continue $sw1; }
+                    return 1;
+                }
+                case 24: {
+                    if (this.c >= r6.c) { $pc1 = 26; continue $sw1; }
+                    return -1;
+                }
+                case 26: {
+                    if (this.c > r6.c) { $pc1 = 37; continue $sw1; }
+                    return 0;
+                }
+                case 37: {
+                    return 1;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

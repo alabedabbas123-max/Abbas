@@ -13,10 +13,27 @@ class SH implements java.lang.Runnable {
 
     @Override
     public void run() {
-        this.DW.call();     // Catch: java.lang.Throwable -> L4
-        return;
-    L4:
-        th = move-exception;
-        this.FH.add(th);
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    try {
+                        this.DW.call();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 4; continue $sw0;
+                    }
+                    return;
+                }
+                case 4: {
+                    th = $ex0;
+                    this.FH.add(th);
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

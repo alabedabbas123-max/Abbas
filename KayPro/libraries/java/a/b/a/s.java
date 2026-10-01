@@ -20,10 +20,25 @@ public class s extends a.b.a.a {
 
     public void a(a.b.c r3, a.b.j r4, a.b.a.d.u r5) {
         int r0 = 0;
-    L4:
-        if (r0 >= this.c) goto L6;
-        r5.a(r3, r4, r0, this.d[r0]);
-        r0 = r0 + 1;
-        goto L4
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = 0;
+                    $pc0 = 4; continue $sw0;
+                }
+                case 4: {
+                    if (r0 >= this.c) { $pc0 = 6; continue $sw0; }
+                    r5.a(r3, r4, r0, this.d[r0]);
+                    r0 = r0 + 1;
+                    { $pc0 = 4; continue $sw0; }
+                }
+                case 6: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

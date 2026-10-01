@@ -19,10 +19,21 @@ public class LA {
     }
 
     private static abcd.InterfacetA Zo() {
-        if (j6 != null) goto L6;
-        j6 = abcd.uA.j6(abcd.LA.class.getName());
-    L6:
-        return j6;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (j6 != null) { $pc0 = 6; continue $sw0; }
+                    j6 = abcd.uA.j6(abcd.LA.class.getName());
+                    $pc0 = 6; continue $sw0;
+                }
+                case 6: {
+                    return j6;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static abcd.LA j6(java.lang.String r1) {
@@ -32,30 +43,77 @@ public class LA {
     }
 
     private void v5() {
-        this.FH.seek(FH(256));     // Catch: java.lang.Throwable -> L13
-        this.VH = abcd.HA.j6(this);     // Catch: java.lang.Throwable -> L13
-        boolean r0 = Zo().isDebugEnabled();     // Catch: java.lang.Throwable -> L13
+        boolean r0 = false;
         int r1 = 0;
-        if (r0 == false) goto L6;
-        Zo().FH(java.lang.String.format("EOCD found in %d iterations", new java.lang.Object[]{java.lang.Integer.valueOf(this.v5)}));     // Catch: java.lang.Throwable -> L13
-        Zo().FH(java.lang.String.format("Directory entries=%d, size=%d, offset=%d/0x%08x", new java.lang.Object[]{java.lang.Short.valueOf(this.VH.Zo), java.lang.Integer.valueOf(this.VH.VH), java.lang.Integer.valueOf(this.VH.gn), java.lang.Integer.valueOf(this.VH.gn)}));     // Catch: java.lang.Throwable -> L13
-        abcd.MA.j6(Zo());     // Catch: java.lang.Throwable -> L13
-    L6:
-        this.FH.seek(this.VH.gn);     // Catch: java.lang.Throwable -> L13
-    L7:
-        if (r1 >= this.VH.Zo) goto L21;
-        abcd.IA r2 = abcd.IA.j6(this);     // Catch: java.lang.Throwable -> L13
-        this.Zo.put(r2.EQ(), r2);     // Catch: java.lang.Throwable -> L13
-        if (r0 == false) goto L12;
-        abcd.MA.j6(Zo(), r2);     // Catch: java.lang.Throwable -> L13
-    L12:
-        r1 = r1 + 1;
-        goto L7
-    L21:
-        return;
-    L13:
-        th = move-exception;
-        th.printStackTrace();
+        abcd.IA r2 = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    try {
+                        this.FH.seek(FH(256));
+                        this.VH = abcd.HA.j6(this);
+                        r0 = Zo().isDebugEnabled();
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        $pc1 = 13; continue $sw1;
+                    }
+                    r1 = 0;
+                    if (r0 == false) { $pc1 = 6; continue $sw1; }
+                    try {
+                        Zo().FH(java.lang.String.format("EOCD found in %d iterations", new java.lang.Object[]{java.lang.Integer.valueOf(this.v5)}));
+                        Zo().FH(java.lang.String.format("Directory entries=%d, size=%d, offset=%d/0x%08x", new java.lang.Object[]{java.lang.Short.valueOf(this.VH.Zo), java.lang.Integer.valueOf(this.VH.VH), java.lang.Integer.valueOf(this.VH.gn), java.lang.Integer.valueOf(this.VH.gn)}));
+                        abcd.MA.j6(Zo());
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        $pc1 = 13; continue $sw1;
+                    }
+                    $pc1 = 6; continue $sw1;
+                }
+                case 6: {
+                    try {
+                        this.FH.seek(this.VH.gn);
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        $pc1 = 13; continue $sw1;
+                    }
+                    $pc1 = 7; continue $sw1;
+                }
+                case 7: {
+                    if (r1 >= this.VH.Zo) { $pc1 = 21; continue $sw1; }
+                    try {
+                        r2 = abcd.IA.j6(this);
+                        this.Zo.put(r2.EQ(), r2);
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        $pc1 = 13; continue $sw1;
+                    }
+                    if (r0 == false) { $pc1 = 12; continue $sw1; }
+                    try {
+                        abcd.MA.j6(Zo(), r2);
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        $pc1 = 13; continue $sw1;
+                    }
+                    $pc1 = 12; continue $sw1;
+                }
+                case 12: {
+                    r1 = r1 + 1;
+                    { $pc1 = 7; continue $sw1; }
+                }
+                case 21: {
+                    return;
+                }
+                case 13: {
+                    th = $ex1;
+                    th.printStackTrace();
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public long DW() {
@@ -63,67 +121,129 @@ public class LA {
     }
 
     public java.lang.String DW(int r4) {
-        byte[] r0 = new byte[r4];
+        byte[] r0 = null;
         int r1 = 0;
-    L3:
-        if (r1 >= r4) goto L6;
-        r0[r1] = this.FH.readByte();
-        r1 = r1 + 1;
-        goto L3
-    L6:
-        return new java.lang.String(r0);
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    r0 = new byte[r4];
+                    r1 = 0;
+                    $pc2 = 3; continue $sw2;
+                }
+                case 3: {
+                    if (r1 >= r4) { $pc2 = 6; continue $sw2; }
+                    r0[r1] = this.FH.readByte();
+                    r1 = r1 + 1;
+                    { $pc2 = 3; continue $sw2; }
+                }
+                case 6: {
+                    return new java.lang.String(r0);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public int FH() {
         int r0 = 0;
         int r1 = 0;
-    L4:
-        if (r0 >= 4) goto L6;
-        r1 = r1 | (this.FH.readUnsignedByte() << (r0 * 8));
-        r0 = r0 + 1;
-        goto L4
-    L6:
-        return r1;
+        java.lang.Throwable $ex3 = null;
+        int $pc3 = -1;
+        $sw3: while (true) {
+            switch ($pc3) {
+                case -1: {
+                    r0 = 0;
+                    r1 = 0;
+                    $pc3 = 4; continue $sw3;
+                }
+                case 4: {
+                    if (r0 >= 4) { $pc3 = 6; continue $sw3; }
+                    r1 = r1 | (this.FH.readUnsignedByte() << (r0 * 8));
+                    r0 = r0 + 1;
+                    { $pc3 = 4; continue $sw3; }
+                }
+                case 6: {
+                    return r1;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public long FH(int r8) {
-        long r0 = r8;
-        long r2 = this.Hw;
-        if (r0 > r2) goto L22;
-        if (r8 > 65536) goto L22;
-        int r1 = (int) java.lang.Math.min(r2, r0);
-        byte[] r3 = new byte[r1];
-        long r5 = r1;
-        this.FH.seek(this.Hw - r5);
-        this.FH.readFully(r3);
-        int r4 = r1 - 22;
-    L7:
-        if (r4 < 0) goto L20;
-        this.v5++;
-        if (r3[r4] != 80) goto L18;
-        if (r3[r4 + 1] != 75) goto L18;
-        if (r3[r4 + 2] != 5) goto L18;
-        if (r3[r4 + 3] != 6) goto L18;
-        return (this.Hw - r5) + ((long) r4);
-    L18:
-        r4 = r4 - 1;
-        goto L7
-    L20:
-        return FH(r8 * 2);
-    L22:
-        throw new java.lang.IllegalStateException("End of central directory not found in " + this.DW);
+        long r0 = 0L;
+        long r2 = 0L;
+        int r1 = 0;
+        byte[] r3 = null;
+        long r5 = 0L;
+        int r4 = 0;
+        java.lang.Throwable $ex4 = null;
+        int $pc4 = -1;
+        $sw4: while (true) {
+            switch ($pc4) {
+                case -1: {
+                    r0 = r8;
+                    r2 = this.Hw;
+                    if (r0 > r2) { $pc4 = 22; continue $sw4; }
+                    if (r8 > 65536) { $pc4 = 22; continue $sw4; }
+                    r1 = (int) java.lang.Math.min(r2, r0);
+                    r3 = new byte[r1];
+                    r5 = r1;
+                    this.FH.seek(this.Hw - r5);
+                    this.FH.readFully(r3);
+                    r4 = r1 - 22;
+                    $pc4 = 7; continue $sw4;
+                }
+                case 7: {
+                    if (r4 < 0) { $pc4 = 20; continue $sw4; }
+                    this.v5++;
+                    if (r3[r4] != 80) { $pc4 = 18; continue $sw4; }
+                    if (r3[r4 + 1] != 75) { $pc4 = 18; continue $sw4; }
+                    if (r3[r4 + 2] != 5) { $pc4 = 18; continue $sw4; }
+                    if (r3[r4 + 3] != 6) { $pc4 = 18; continue $sw4; }
+                    return (this.Hw - r5) + ((long) r4);
+                }
+                case 18: {
+                    r4 = r4 - 1;
+                    { $pc4 = 7; continue $sw4; }
+                }
+                case 20: {
+                    return FH(r8 * 2);
+                }
+                case 22: {
+                    throw new java.lang.IllegalStateException("End of central directory not found in " + this.DW);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public short Hw() {
         int r0 = 0;
         short r1 = 0;
-    L4:
-        if (r0 >= 2) goto L6;
-        r1 = (short) (r1 | (this.FH.readUnsignedByte() << (r0 * 8)));
-        r0 = r0 + 1;
-        goto L4
-    L6:
-        return r1;
+        java.lang.Throwable $ex5 = null;
+        int $pc5 = -1;
+        $sw5: while (true) {
+            switch ($pc5) {
+                case -1: {
+                    r0 = 0;
+                    r1 = 0;
+                    $pc5 = 4; continue $sw5;
+                }
+                case 4: {
+                    if (r0 >= 2) { $pc5 = 6; continue $sw5; }
+                    r1 = (short) (r1 | (this.FH.readUnsignedByte() << (r0 * 8)));
+                    r0 = r0 + 1;
+                    { $pc5 = 4; continue $sw5; }
+                }
+                case 6: {
+                    return r1;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public java.util.Map<java.lang.String, abcd.IA> j6() {
@@ -135,14 +255,28 @@ public class LA {
     }
 
     public byte[] j6(int r4) {
-        byte[] r0 = new byte[r4];
+        byte[] r0 = null;
         int r1 = 0;
-    L3:
-        if (r1 >= r4) goto L5;
-        r0[r1] = this.FH.readByte();
-        r1 = r1 + 1;
-        goto L3
-    L5:
-        return r0;
+        java.lang.Throwable $ex6 = null;
+        int $pc6 = -1;
+        $sw6: while (true) {
+            switch ($pc6) {
+                case -1: {
+                    r0 = new byte[r4];
+                    r1 = 0;
+                    $pc6 = 3; continue $sw6;
+                }
+                case 3: {
+                    if (r1 >= r4) { $pc6 = 5; continue $sw6; }
+                    r0[r1] = this.FH.readByte();
+                    r1 = r1 + 1;
+                    { $pc6 = 3; continue $sw6; }
+                }
+                case 5: {
+                    return r0;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

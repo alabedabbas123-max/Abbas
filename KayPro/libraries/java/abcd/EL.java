@@ -5,9 +5,19 @@ public abstract class EL extends abcd.AbstractyL {
     }
 
     public static abcd.EL j6(byte[] r1) {
-        return new abcd.C1419vL(r1).Hw();
-    L6:
-        throw new java.io.IOException("cannot recognise object in stream");
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    return new abcd.C1419vL(r1).Hw();
+                }
+                case 6: {
+                    throw new java.io.IOException("cannot recognise object in stream");
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
@@ -23,16 +33,28 @@ public abstract class EL extends abcd.AbstractyL {
 
     @Override
     public final boolean equals(java.lang.Object r3) {
-        if (this != r3) goto L6;
-        return true;
-    L6:
-        if ((r3 instanceof abcd.InterfaceqL) == true) goto L8;
-        return false;
-    L8:
-        if (j6(((abcd.InterfaceqL) r3).DW()) == false) goto L12;
-        return true;
-    L12:
-        return false;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if (this != r3) { $pc1 = 6; continue $sw1; }
+                    return true;
+                }
+                case 6: {
+                    if ((r3 instanceof abcd.InterfaceqL) == true) { $pc1 = 8; continue $sw1; }
+                    return false;
+                }
+                case 8: {
+                    if (j6(((abcd.InterfaceqL) r3).DW()) == false) { $pc1 = 12; continue $sw1; }
+                    return true;
+                }
+                case 12: {
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     abcd.EL gn() {

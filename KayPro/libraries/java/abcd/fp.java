@@ -14,10 +14,20 @@ class fp implements java.util.Comparator<abcd.io.a> {
 
     @Override
     public boolean equals(java.lang.Object r1) {
-        if (r1 != this) goto L4;
-        return true;
-    L4:
-        return false;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (r1 != this) { $pc0 = 4; continue $sw0; }
+                    return true;
+                }
+                case 4: {
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public int j6(abcd.io.a r1, abcd.io.a r2) {

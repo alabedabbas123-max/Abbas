@@ -20,14 +20,27 @@ public final class vo extends abcd.Abstractao {
 
     @Override
     public boolean VH(abcd.AbstractVn r4) {
-        abcd.cs r0 = r4.gn();
-        if ((r4 instanceof abcd.mo) == true) goto L5;
-    L9:
-        return false;
-    L5:
-        if (r0.size() != 1) goto L9;
-        if (abcd.Abstractao.Hw(r0.get(0).we()) == false) goto L9;
-        return true;
+        abcd.cs r0 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = r4.gn();
+                    if ((r4 instanceof abcd.mo) == true) { $pc0 = 5; continue $sw0; }
+                    $pc0 = 9; continue $sw0;
+                }
+                case 9: {
+                    return false;
+                }
+                case 5: {
+                    if (r0.size() != 1) { $pc0 = 9; continue $sw0; }
+                    if (abcd.Abstractao.Hw(r0.get(0).we()) == false) { $pc0 = 9; continue $sw0; }
+                    return true;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

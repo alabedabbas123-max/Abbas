@@ -32,10 +32,20 @@ public final class cx {
     }
 
     public final boolean equals(java.lang.Object r2) {
-        if ((r2 instanceof abcd.cx) == true) goto L7;
-        return false;
-    L7:
-        return this.VH.equals(((abcd.cx) r2).VH);
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if ((r2 instanceof abcd.cx) == true) { $pc0 = 7; continue $sw0; }
+                    return false;
+                }
+                case 7: {
+                    return this.VH.equals(((abcd.cx) r2).VH);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public final int hashCode() {

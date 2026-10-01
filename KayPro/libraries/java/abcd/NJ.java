@@ -56,40 +56,88 @@ abstract class NJ {
 
         @Override
         java.io.InputStream j6(java.io.InputStream r5) {
-            javax.crypto.Cipher r0 = javax.crypto.Cipher.getInstance(this.Hw);     // Catch: java.security.InvalidAlgorithmParameterException -> L4 java.security.InvalidKeyException -> L7 javax.crypto.NoSuchPaddingException -> L10 java.security.NoSuchAlgorithmException -> L13
-            r0.init(2, this.v5, this.Zo);     // Catch: java.security.InvalidAlgorithmParameterException -> L4 java.security.InvalidKeyException -> L7 javax.crypto.NoSuchPaddingException -> L10 java.security.NoSuchAlgorithmException -> L13
-            return new javax.crypto.CipherInputStream(r5, r0);
-        L4:
-            e = move-exception;
-            throw j6(e);
-        L7:
-            e = move-exception;
-            throw j6(e);
-        L13:
-            e = move-exception;
-            throw j6(e);
-        L10:
-            e = move-exception;
-            throw j6(e);
+            javax.crypto.Cipher r0 = null;
+            java.lang.Throwable e = null;
+            java.lang.Throwable $ex0 = null;
+            int $pc0 = -1;
+            $sw0: while (true) {
+                switch ($pc0) {
+                    case -1: {
+                        try {
+                            r0 = javax.crypto.Cipher.getInstance(this.Hw);
+                            r0.init(2, this.v5, this.Zo);
+                        } catch (java.lang.Throwable $t) {
+                            $ex0 = $t;
+                            if ($t instanceof java.security.InvalidAlgorithmParameterException) { $pc0 = 4; continue $sw0; }
+                            if ($t instanceof java.security.InvalidKeyException) { $pc0 = 7; continue $sw0; }
+                            if ($t instanceof javax.crypto.NoSuchPaddingException) { $pc0 = 10; continue $sw0; }
+                            if ($t instanceof java.security.NoSuchAlgorithmException) { $pc0 = 13; continue $sw0; }
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                        }
+                        return new javax.crypto.CipherInputStream(r5, r0);
+                    }
+                    case 4: {
+                        e = $ex0;
+                        throw j6(e);
+                    }
+                    case 7: {
+                        e = $ex0;
+                        throw j6(e);
+                    }
+                    case 13: {
+                        e = $ex0;
+                        throw j6(e);
+                    }
+                    case 10: {
+                        e = $ex0;
+                        throw j6(e);
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         @Override
         java.io.OutputStream j6(java.io.OutputStream r5) {
-            javax.crypto.Cipher r0 = javax.crypto.Cipher.getInstance(this.Hw);     // Catch: java.security.InvalidAlgorithmParameterException -> L4 java.security.InvalidKeyException -> L7 javax.crypto.NoSuchPaddingException -> L10 java.security.NoSuchAlgorithmException -> L13
-            r0.init(1, this.v5, this.Zo);     // Catch: java.security.InvalidAlgorithmParameterException -> L4 java.security.InvalidKeyException -> L7 javax.crypto.NoSuchPaddingException -> L10 java.security.NoSuchAlgorithmException -> L13
-            return new javax.crypto.CipherOutputStream(r5, r0);
-        L4:
-            e = move-exception;
-            throw j6(e);
-        L7:
-            e = move-exception;
-            throw j6(e);
-        L13:
-            e = move-exception;
-            throw j6(e);
-        L10:
-            e = move-exception;
-            throw j6(e);
+            javax.crypto.Cipher r0 = null;
+            java.lang.Throwable e = null;
+            java.lang.Throwable $ex1 = null;
+            int $pc1 = -1;
+            $sw1: while (true) {
+                switch ($pc1) {
+                    case -1: {
+                        try {
+                            r0 = javax.crypto.Cipher.getInstance(this.Hw);
+                            r0.init(1, this.v5, this.Zo);
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            if ($t instanceof java.security.InvalidAlgorithmParameterException) { $pc1 = 4; continue $sw1; }
+                            if ($t instanceof java.security.InvalidKeyException) { $pc1 = 7; continue $sw1; }
+                            if ($t instanceof javax.crypto.NoSuchPaddingException) { $pc1 = 10; continue $sw1; }
+                            if ($t instanceof java.security.NoSuchAlgorithmException) { $pc1 = 13; continue $sw1; }
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                        }
+                        return new javax.crypto.CipherOutputStream(r5, r0);
+                    }
+                    case 4: {
+                        e = $ex1;
+                        throw j6(e);
+                    }
+                    case 7: {
+                        e = $ex1;
+                        throw j6(e);
+                    }
+                    case 13: {
+                        e = $ex1;
+                        throw j6(e);
+                    }
+                    case 10: {
+                        e = $ex1;
+                        throw j6(e);
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         @Override
@@ -121,20 +169,37 @@ abstract class NJ {
     abstract void j6(java.net.HttpURLConnection r1, java.lang.String r2);
 
     protected void j6(java.net.HttpURLConnection r3, java.lang.String r4, java.lang.String r5, java.lang.String r6) {
-        java.lang.String r0 = r3.getHeaderField(java.lang.String.valueOf(r4) + "jets3t-crypto-ver");
-        if (r0 != null) goto L6;
-        r0 = "";
-    L6:
-        if (r5.equals(r0) == false) goto L16;
-        java.lang.String r7 = r3.getHeaderField(java.lang.String.valueOf(r4) + "jets3t-crypto-alg");
-        if (r7 != null) goto L11;
-        r7 = "";
-    L11:
-        if (r6.equals(r7) == false) goto L14;
-        return;
-    L14:
-        throw new java.io.IOException(java.lang.String.valueOf(org.eclipse.jgit.JGitText.j6().unsupportedEncryptionAlgorithm) + r7);
-    L16:
-        throw new java.io.IOException(java.text.MessageFormat.format(org.eclipse.jgit.JGitText.j6().unsupportedEncryptionVersion, new java.lang.Object[]{r0}));
+        java.lang.String r0 = null;
+        java.lang.String r7 = null;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    r0 = r3.getHeaderField(java.lang.String.valueOf(r4) + "jets3t-crypto-ver");
+                    if (r0 != null) { $pc2 = 6; continue $sw2; }
+                    r0 = "";
+                    $pc2 = 6; continue $sw2;
+                }
+                case 6: {
+                    if (r5.equals(r0) == false) { $pc2 = 16; continue $sw2; }
+                    r7 = r3.getHeaderField(java.lang.String.valueOf(r4) + "jets3t-crypto-alg");
+                    if (r7 != null) { $pc2 = 11; continue $sw2; }
+                    r7 = "";
+                    $pc2 = 11; continue $sw2;
+                }
+                case 11: {
+                    if (r6.equals(r7) == false) { $pc2 = 14; continue $sw2; }
+                    return;
+                }
+                case 14: {
+                    throw new java.io.IOException(java.lang.String.valueOf(org.eclipse.jgit.JGitText.j6().unsupportedEncryptionAlgorithm) + r7);
+                }
+                case 16: {
+                    throw new java.io.IOException(java.text.MessageFormat.format(org.eclipse.jgit.JGitText.j6().unsupportedEncryptionVersion, new java.lang.Object[]{r0}));
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

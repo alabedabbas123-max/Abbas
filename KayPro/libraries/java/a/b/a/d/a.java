@@ -33,19 +33,43 @@ public class a extends a.b.f.w implements a.b.a.d.i, a.b.g.aq, a.b.g.s {
 
     @Override
     public void a(a.b.k r2) {
-        r2.a(this.b);
-        if (this.f58a == false) goto L6;
-        r2.a(this);
-        r2.b(this);
-        r2.a(this);
-        return;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r2.a(this.b);
+                    if (this.f58a == false) { $pc0 = 6; continue $sw0; }
+                    r2.a(this);
+                    r2.b(this);
+                    r2.a(this);
+                    return;
+                }
+                case 6: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
     public void a(a.b.k r2, a.b.m r3) {
-        r3.a(r2, this.b);
-        if (this.f58a == false) goto L6;
-        r3.a(r2, this);
-        return;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    r3.a(r2, this.b);
+                    if (this.f58a == false) { $pc1 = 6; continue $sw1; }
+                    r3.a(r2, this);
+                    return;
+                }
+                case 6: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

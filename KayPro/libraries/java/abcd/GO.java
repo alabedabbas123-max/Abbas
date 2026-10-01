@@ -61,99 +61,181 @@ public class GO extends abcd.AbstractxO {
 
     @Override
     protected void DW(byte[] r4, int r5) {
-        int r0 = r4[r5] << 24;
-        int r6 = r5 + 1;
-        int r1 = r0 | ((r4[r6] & 255) << 16);
-        int r7 = r6 + 1;
-        int r2 = r1 | ((r4[r7] & 255) << 8);
-        int r8 = (r4[r7 + 1] & 255) | r2;
-        int[] r9 = this.J0;
-        int r3 = this.J8;
-        r9[r3] = r8;
-        int r10 = r3 + 1;
-        this.J8 = r10;
-        if (r10 != 16) goto L6;
-        Hw();
-        return;
+        int r0 = 0;
+        int r6 = 0;
+        int r1 = 0;
+        int r7 = 0;
+        int r2 = 0;
+        int r8 = 0;
+        int[] r9 = null;
+        int r3 = 0;
+        int r10 = 0;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = r4[r5] << 24;
+                    r6 = r5 + 1;
+                    r1 = r0 | ((r4[r6] & 255) << 16);
+                    r7 = r6 + 1;
+                    r2 = r1 | ((r4[r7] & 255) << 8);
+                    r8 = (r4[r7 + 1] & 255) | r2;
+                    r9 = this.J0;
+                    r3 = this.J8;
+                    r9[r3] = r8;
+                    r10 = r3 + 1;
+                    this.J8 = r10;
+                    if (r10 != 16) { $pc0 = 6; continue $sw0; }
+                    Hw();
+                    return;
+                }
+                case 6: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
     protected void Hw() {
-        int r1 = 16;
-    L4:
-        if (r1 > 63) goto L5;
-        int[] r2 = this.J0;
-        int r3 = Hw(r2[r1 - 2]);
-        int[] r4 = this.J0;
-        r2[r1] = ((r3 + r4[r1 - 7]) + FH(r4[r1 - 15])) + this.J0[r1 - 16];
-        r1 = r1 + 1;
-        goto L4
-    L5:
-        int r5 = this.v5;
-        int r6 = this.Zo;
-        int r7 = this.VH;
-        int r8 = this.gn;
-        int r9 = this.u7;
-        int r10 = this.tp;
-        int r11 = this.EQ;
-        int r12 = this.we;
-        int r13 = r6;
-        int r14 = r7;
+        int r1 = 0;
+        int[] r2 = null;
+        int r3 = 0;
+        int[] r4 = null;
+        int r5 = 0;
+        int r6 = 0;
+        int r7 = 0;
+        int r8 = 0;
+        int r9 = 0;
+        int r10 = 0;
+        int r11 = 0;
+        int r12 = 0;
+        int r13 = 0;
+        int r14 = 0;
         int r15 = 0;
-        int r16 = r5;
+        int r16 = 0;
         int r17 = 0;
-    L7:
-        if (r17 >= 8) goto L8;
-        int r18 = r12 + (((DW(r9) + j6(r9, r10, r11)) + Hw[r15]) + this.J0[r15]);
-        int r19 = r8 + r18;
-        int r20 = r18 + (j6(r16) + DW(r16, r13, r14));
-        int r21 = r15 + 1;
-        int r22 = r11 + (((DW(r19) + j6(r19, r9, r10)) + Hw[r21]) + this.J0[r21]);
-        int r110 = r14 + r22;
-        int r23 = r22 + (j6(r20) + DW(r20, r16, r13));
-        int r24 = r21 + 1;
-        int r25 = r10 + (((DW(r110) + j6(r110, r19, r9)) + Hw[r24]) + this.J0[r24]);
-        int r111 = r13 + r25;
-        int r26 = r25 + (j6(r23) + DW(r23, r20, r16));
-        int r27 = r24 + 1;
-        int r28 = r9 + (((DW(r111) + j6(r111, r110, r19)) + Hw[r27]) + this.J0[r27]);
-        int r29 = r16 + r28;
-        int r30 = r28 + (j6(r26) + DW(r26, r23, r20));
-        int r31 = r27 + 1;
-        int r32 = r19 + (((DW(r29) + j6(r29, r111, r110)) + Hw[r31]) + this.J0[r31]);
-        r12 = r20 + r32;
-        r8 = r32 + (j6(r30) + DW(r30, r26, r23));
-        int r33 = r31 + 1;
-        int r112 = r110 + (((DW(r12) + j6(r12, r29, r111)) + Hw[r33]) + this.J0[r33]);
-        r11 = r23 + r112;
-        r14 = r112 + (j6(r8) + DW(r8, r30, r26));
-        int r34 = r33 + 1;
-        int r113 = r111 + (((DW(r11) + j6(r11, r12, r29)) + Hw[r34]) + this.J0[r34]);
-        r10 = r26 + r113;
-        r13 = r113 + (j6(r14) + DW(r14, r8, r30));
-        int r35 = r34 + 1;
-        int r36 = r29 + (((DW(r10) + j6(r10, r11, r12)) + Hw[r35]) + this.J0[r35]);
-        r9 = r30 + r36;
-        r16 = r36 + (j6(r13) + DW(r13, r14, r8));
-        r15 = r35 + 1;
-        r17 = r17 + 1;
-        goto L7
-    L8:
-        this.v5 += r16;
-        this.Zo += r13;
-        this.VH += r14;
-        this.gn += r8;
-        this.u7 += r9;
-        this.tp += r10;
-        this.EQ += r11;
-        this.we += r12;
-        this.J8 = 0;
+        int r18 = 0;
+        int r19 = 0;
+        int r20 = 0;
+        int r21 = 0;
+        int r22 = 0;
+        int r110 = 0;
+        int r23 = 0;
+        int r24 = 0;
+        int r25 = 0;
+        int r111 = 0;
+        int r26 = 0;
+        int r27 = 0;
+        int r28 = 0;
+        int r29 = 0;
+        int r30 = 0;
+        int r31 = 0;
+        int r32 = 0;
+        int r33 = 0;
+        int r112 = 0;
+        int r34 = 0;
+        int r113 = 0;
+        int r35 = 0;
+        int r36 = 0;
         int r37 = 0;
-    L9:
-        if (r37 >= 16) goto L10;
-        this.J0[r37] = 0;
-        r37 = r37 + 1;
-        goto L9
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    r1 = 16;
+                    $pc1 = 4; continue $sw1;
+                }
+                case 4: {
+                    if (r1 > 63) { $pc1 = 5; continue $sw1; }
+                    r2 = this.J0;
+                    r3 = Hw(r2[r1 - 2]);
+                    r4 = this.J0;
+                    r2[r1] = ((r3 + r4[r1 - 7]) + FH(r4[r1 - 15])) + this.J0[r1 - 16];
+                    r1 = r1 + 1;
+                    { $pc1 = 4; continue $sw1; }
+                }
+                case 5: {
+                    r5 = this.v5;
+                    r6 = this.Zo;
+                    r7 = this.VH;
+                    r8 = this.gn;
+                    r9 = this.u7;
+                    r10 = this.tp;
+                    r11 = this.EQ;
+                    r12 = this.we;
+                    r13 = r6;
+                    r14 = r7;
+                    r15 = 0;
+                    r16 = r5;
+                    r17 = 0;
+                    $pc1 = 7; continue $sw1;
+                }
+                case 7: {
+                    if (r17 >= 8) { $pc1 = 8; continue $sw1; }
+                    r18 = r12 + (((DW(r9) + j6(r9, r10, r11)) + Hw[r15]) + this.J0[r15]);
+                    r19 = r8 + r18;
+                    r20 = r18 + (j6(r16) + DW(r16, r13, r14));
+                    r21 = r15 + 1;
+                    r22 = r11 + (((DW(r19) + j6(r19, r9, r10)) + Hw[r21]) + this.J0[r21]);
+                    r110 = r14 + r22;
+                    r23 = r22 + (j6(r20) + DW(r20, r16, r13));
+                    r24 = r21 + 1;
+                    r25 = r10 + (((DW(r110) + j6(r110, r19, r9)) + Hw[r24]) + this.J0[r24]);
+                    r111 = r13 + r25;
+                    r26 = r25 + (j6(r23) + DW(r23, r20, r16));
+                    r27 = r24 + 1;
+                    r28 = r9 + (((DW(r111) + j6(r111, r110, r19)) + Hw[r27]) + this.J0[r27]);
+                    r29 = r16 + r28;
+                    r30 = r28 + (j6(r26) + DW(r26, r23, r20));
+                    r31 = r27 + 1;
+                    r32 = r19 + (((DW(r29) + j6(r29, r111, r110)) + Hw[r31]) + this.J0[r31]);
+                    r12 = r20 + r32;
+                    r8 = r32 + (j6(r30) + DW(r30, r26, r23));
+                    r33 = r31 + 1;
+                    r112 = r110 + (((DW(r12) + j6(r12, r29, r111)) + Hw[r33]) + this.J0[r33]);
+                    r11 = r23 + r112;
+                    r14 = r112 + (j6(r8) + DW(r8, r30, r26));
+                    r34 = r33 + 1;
+                    r113 = r111 + (((DW(r11) + j6(r11, r12, r29)) + Hw[r34]) + this.J0[r34]);
+                    r10 = r26 + r113;
+                    r13 = r113 + (j6(r14) + DW(r14, r8, r30));
+                    r35 = r34 + 1;
+                    r36 = r29 + (((DW(r10) + j6(r10, r11, r12)) + Hw[r35]) + this.J0[r35]);
+                    r9 = r30 + r36;
+                    r16 = r36 + (j6(r13) + DW(r13, r14, r8));
+                    r15 = r35 + 1;
+                    r17 = r17 + 1;
+                    { $pc1 = 7; continue $sw1; }
+                }
+                case 8: {
+                    this.v5 += r16;
+                    this.Zo += r13;
+                    this.VH += r14;
+                    this.gn += r8;
+                    this.u7 += r9;
+                    this.tp += r10;
+                    this.EQ += r11;
+                    this.we += r12;
+                    this.J8 = 0;
+                    r37 = 0;
+                    $pc1 = 9; continue $sw1;
+                }
+                case 9: {
+                    if (r37 >= 16) { $pc1 = 10; continue $sw1; }
+                    this.J0[r37] = 0;
+                    r37 = r37 + 1;
+                    { $pc1 = 9; continue $sw1; }
+                }
+                case 10: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
@@ -177,32 +259,61 @@ public class GO extends abcd.AbstractxO {
 
     @Override
     protected void j6(long r5) {
-        if (this.J8 <= 14) goto L5;
-        Hw();
-    L5:
-        int[] r0 = this.J0;
-        r0[14] = (int) (r5 >>> 32);
-        r0[15] = (int) (r5 & (-1));
+        int[] r0 = null;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    if (this.J8 <= 14) { $pc2 = 5; continue $sw2; }
+                    Hw();
+                    $pc2 = 5; continue $sw2;
+                }
+                case 5: {
+                    r0 = this.J0;
+                    r0[14] = (int) (r5 >>> 32);
+                    r0[15] = (int) (r5 & (-1));
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
     public void reset() {
-        super.reset();
-        this.v5 = -1056596264;
-        this.Zo = 914150663;
-        this.VH = 812702999;
-        this.gn = -150054599;
-        this.u7 = -4191439;
-        this.tp = 1750603025;
-        this.EQ = 1694076839;
-        this.we = -1090891868;
-        this.J8 = 0;
         int r1 = 0;
-    L3:
-        int[] r2 = this.J0;
-        if (r1 == r2.length) goto L5;
-        r2[r1] = 0;
-        r1 = r1 + 1;
-        goto L3
+        int[] r2 = null;
+        java.lang.Throwable $ex3 = null;
+        int $pc3 = -1;
+        $sw3: while (true) {
+            switch ($pc3) {
+                case -1: {
+                    super.reset();
+                    this.v5 = -1056596264;
+                    this.Zo = 914150663;
+                    this.VH = 812702999;
+                    this.gn = -150054599;
+                    this.u7 = -4191439;
+                    this.tp = 1750603025;
+                    this.EQ = 1694076839;
+                    this.we = -1090891868;
+                    this.J8 = 0;
+                    r1 = 0;
+                    $pc3 = 3; continue $sw3;
+                }
+                case 3: {
+                    r2 = this.J0;
+                    if (r1 == r2.length) { $pc3 = 5; continue $sw3; }
+                    r2[r1] = 0;
+                    r1 = r1 + 1;
+                    { $pc3 = 3; continue $sw3; }
+                }
+                case 5: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

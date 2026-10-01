@@ -8,19 +8,32 @@ public class Yp {
     }
 
     public boolean equals(java.lang.Object r5) {
-        if (this != r5) goto L6;
-        return true;
-    L6:
-        if (r5 != null) goto L9;
-        return false;
-    L9:
-        if (abcd.Yp.class == r5.getClass()) goto L12;
-        return false;
-    L12:
-        if (java.util.Arrays.equals(this.j6, ((abcd.Yp) r5).j6) == true) goto L14;
-        return false;
-    L14:
-        return true;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (this != r5) { $pc0 = 6; continue $sw0; }
+                    return true;
+                }
+                case 6: {
+                    if (r5 != null) { $pc0 = 9; continue $sw0; }
+                    return false;
+                }
+                case 9: {
+                    if (abcd.Yp.class == r5.getClass()) { $pc0 = 12; continue $sw0; }
+                    return false;
+                }
+                case 12: {
+                    if (java.util.Arrays.equals(this.j6, ((abcd.Yp) r5).j6) == true) { $pc0 = 14; continue $sw0; }
+                    return false;
+                }
+                case 14: {
+                    return true;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public int hashCode() {
@@ -28,14 +41,30 @@ public class Yp {
     }
 
     public void j6(abcd.hr.a r4) {
-        r4.writeInt(this.j6.length);
         int r0 = 0;
-    L3:
-        int[] r1 = this.j6;
-        if (r0 >= r1.length) goto L6;
-        r4.writeInt(r1[r0]);
-        r0 = r0 + 1;
-        goto L3
+        int[] r1 = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    r4.writeInt(this.j6.length);
+                    r0 = 0;
+                    $pc1 = 3; continue $sw1;
+                }
+                case 3: {
+                    r1 = this.j6;
+                    if (r0 >= r1.length) { $pc1 = 6; continue $sw1; }
+                    r4.writeInt(r1[r0]);
+                    r0 = r0 + 1;
+                    { $pc1 = 3; continue $sw1; }
+                }
+                case 6: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public int[] j6() {

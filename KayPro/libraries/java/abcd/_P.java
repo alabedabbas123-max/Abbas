@@ -80,43 +80,90 @@ class _P {
     }
 
     static abcd.oM j6(java.lang.String r1) {
-        java.lang.String r2 = abcd.TP.FH(r1);
-        if (j6.containsKey(r2) == false) goto L7;
-        return (abcd.oM) j6.get(r2);
-    L7:
-        return new abcd.oM(r2);
+        java.lang.String r2 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r2 = abcd.TP.FH(r1);
+                    if (j6.containsKey(r2) == false) { $pc0 = 7; continue $sw0; }
+                    return (abcd.oM) j6.get(r2);
+                }
+                case 7: {
+                    return new abcd.oM(r2);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     static abcd.wN j6(abcd.oM r2, java.lang.String r3) {
-        if (FH.contains(r2) == true) goto L5;
-        java.lang.String r4 = abcd.TP.FH(r3);
-        if (DW.containsKey(r4) == false) goto L11;
-        return new abcd.wN(r2, (abcd.InterfaceqL) DW.get(r4));
-    L11:
-        return new abcd.wN(r2, new abcd.mM());
-    L5:
-        return new abcd.wN(r2);
+        java.lang.String r4 = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if (FH.contains(r2) == true) { $pc1 = 5; continue $sw1; }
+                    r4 = abcd.TP.FH(r3);
+                    if (DW.containsKey(r4) == false) { $pc1 = 11; continue $sw1; }
+                    return new abcd.wN(r2, (abcd.InterfaceqL) DW.get(r4));
+                }
+                case 11: {
+                    return new abcd.wN(r2, new abcd.mM());
+                }
+                case 5: {
+                    return new abcd.wN(r2);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     static java.security.Signature j6(java.lang.String r0, java.lang.String r1) {
-        if (r1 == null) goto L6;
-        return java.security.Signature.getInstance(r0, r1);
-    L6:
-        return java.security.Signature.getInstance(r0);
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    if (r1 == null) { $pc2 = 6; continue $sw2; }
+                    return java.security.Signature.getInstance(r0, r1);
+                }
+                case 6: {
+                    return java.security.Signature.getInstance(r0);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     static byte[] j6(abcd.oM r0, java.lang.String r1, java.lang.String r2, java.security.PrivateKey r3, java.security.SecureRandom r4, abcd.InterfaceqL r5) {
-        if (r0 == null) goto L10;
-        java.security.Signature r6 = j6(r1, r2);
-        if (r4 == null) goto L6;
-        r6.initSign(r3, r4);
-    L7:
-        r6.update(r5.DW().j6("DER"));
-        return r6.sign();
-    L6:
-        r6.initSign(r3);
-        goto L7
-    L10:
-        throw new java.lang.IllegalStateException("no signature algorithm specified");
+        java.security.Signature r6 = null;
+        java.lang.Throwable $ex3 = null;
+        int $pc3 = -1;
+        $sw3: while (true) {
+            switch ($pc3) {
+                case -1: {
+                    if (r0 == null) { $pc3 = 10; continue $sw3; }
+                    r6 = j6(r1, r2);
+                    if (r4 == null) { $pc3 = 6; continue $sw3; }
+                    r6.initSign(r3, r4);
+                    $pc3 = 7; continue $sw3;
+                }
+                case 7: {
+                    r6.update(r5.DW().j6("DER"));
+                    return r6.sign();
+                }
+                case 6: {
+                    r6.initSign(r3);
+                    { $pc3 = 7; continue $sw3; }
+                }
+                case 10: {
+                    throw new java.lang.IllegalStateException("no signature algorithm specified");
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

@@ -671,7 +671,7 @@ public class MemberEnter extends JCTree.Visitor implements Symbol.Completer {
         JCTree.JCExpression iface;
         Type i;
         Set<Type> interfaceSet2;
-        ?? r11 = sym;
+        java.lang.Object r11 = sym;
         if (!this.completionEnabled) {
             Assert.check((sym.flags() & 16777216) == 0 ? checkClash : false);
             r11.completer = this;

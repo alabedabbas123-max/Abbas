@@ -21,18 +21,35 @@ public class EI {
     }
 
     static void j6(byte[] r4, int r5) {
-        int r0 = 3;
-    L3:
-        if (r0 < 0) goto L7;
-        if (r5 == 0) goto L7;
-        r4[r0] = j6[r5 & 15];
-        r5 = r5 >>> 4;
-        r0 = r0 - 1;
-    L7:
-        if (r0 < 0) goto L8;
-        r4[r0] = 48;
-        r0 = r0 - 1;
-        goto L7
+        int r0 = 0;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = 3;
+                    $pc0 = 3; continue $sw0;
+                }
+                case 3: {
+                    if (r0 < 0) { $pc0 = 7; continue $sw0; }
+                    if (r5 == 0) { $pc0 = 7; continue $sw0; }
+                    r4[r0] = j6[r5 & 15];
+                    r5 = r5 >>> 4;
+                    r0 = r0 - 1;
+                    $pc0 = 7; continue $sw0;
+                }
+                case 7: {
+                    if (r0 < 0) { $pc0 = 8; continue $sw0; }
+                    r4[r0] = 48;
+                    r0 = r0 - 1;
+                    { $pc0 = 7; continue $sw0; }
+                }
+                case 8: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public void DW() {
@@ -40,11 +57,23 @@ public class EI {
     }
 
     public void j6() {
-        j6(0);
-        this.DW.write(this.FH, 0, 4);
-        if (this.Hw == false) goto L6;
-        DW();
-        return;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    j6(0);
+                    this.DW.write(this.FH, 0, 4);
+                    if (this.Hw == false) { $pc1 = 6; continue $sw1; }
+                    DW();
+                    return;
+                }
+                case 6: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public void j6(java.lang.String r1) {

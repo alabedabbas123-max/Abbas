@@ -1,6 +1,6 @@
 package abcd;
 
-public abstract enum Enumer extends java.lang.Enum<abcd.Enumer> {
+public abstract class Enumer extends com.almlkaide.kaypro.internal.EnumBase {
     public static final abcd.Enumer BT = null;
     public static final abcd.Enumer DW = null;
     public static final abcd.Enumer EQ = null;
@@ -174,7 +174,7 @@ public abstract enum Enumer extends java.lang.Enum<abcd.Enumer> {
     }
 
     public static abcd.Enumer valueOf(java.lang.String r1) {
-        return (abcd.Enumer) java.lang.Enum.valueOf(abcd.Enumer.class, r1);
+        return (abcd.Enumer) com.almlkaide.kaypro.internal.EnumBase.valueOf(abcd.Enumer.values(), r1);
     }
 
     public static abcd.Enumer[] values() {

@@ -17,18 +17,31 @@ final class RF extends abcd.XF {
 
     @Override
     abcd.dG j6() {
-    L3:
-        if (this.FH >= 6) goto L7;
-        abcd.dG r0 = this.j6.j6();
-        if (r0 == null) goto L7;
-        this.DW.j6(r0);
-        this.FH++;
-    L7:
-        abcd.dG r1 = this.DW.j6();
-        if (r1 != null) goto L11;
-        return null;
-    L11:
-        this.FH--;
-        return r1;
+        abcd.dG r0 = null;
+        abcd.dG r1 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 3;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 3: {
+                    if (this.FH >= 6) { $pc0 = 7; continue $sw0; }
+                    r0 = this.j6.j6();
+                    if (r0 == null) { $pc0 = 7; continue $sw0; }
+                    this.DW.j6(r0);
+                    this.FH++;
+                    $pc0 = 7; continue $sw0;
+                }
+                case 7: {
+                    r1 = this.DW.j6();
+                    if (r1 != null) { $pc0 = 11; continue $sw0; }
+                    return null;
+                }
+                case 11: {
+                    this.FH--;
+                    return r1;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

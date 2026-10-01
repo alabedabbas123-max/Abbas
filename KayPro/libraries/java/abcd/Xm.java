@@ -11,8 +11,20 @@ class Xm implements abcd.Nr.a {
 
     @Override
     public void j6(abcd.Nr r2) {
-        if (abcd.Zm.j6(this.DW, r2) == false) goto L6;
-        this.j6.DW(r2.DW());
-        return;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (abcd.Zm.j6(this.DW, r2) == false) { $pc0 = 6; continue $sw0; }
+                    this.j6.DW(r2.DW());
+                    return;
+                }
+                case 6: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

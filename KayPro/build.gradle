@@ -61,3 +61,9 @@ dependencies {
     implementation 'com.google.firebase:firebase-iid:17.1.2'
 
 }
+
+tasks.withType(JavaCompile).configureEach {
+    // The recovered engine is large; let javac report the full error set in one
+    // run instead of stopping at the default cap of 100.
+    options.compilerArgs += ['-Xmaxerrs', '100000', '-Xmaxwarns', '50', '-nowarn']
+}

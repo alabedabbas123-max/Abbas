@@ -14,70 +14,157 @@ public final class Om {
     }
 
     private Om(abcd.AbstractRm r1, abcd.Nm r2, abcd.au r3) {
-        if (r1 == null) goto L10;
-        if (r2 == null) goto L8;
-        r3.Ws();
-        this.j6 = r1;
-        this.DW = r2;
-        this.FH = r3;
-        return;
-    L8:
-        throw new java.lang.NullPointerException("stack == null");
-    L10:
-        throw new java.lang.NullPointerException("locals == null");
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (r1 == null) { $pc0 = 10; continue $sw0; }
+                    if (r2 == null) { $pc0 = 8; continue $sw0; }
+                    r3.Ws();
+                    this.j6 = r1;
+                    this.DW = r2;
+                    this.FH = r3;
+                    return;
+                }
+                case 8: {
+                    throw new java.lang.NullPointerException("stack == null");
+                }
+                case 10: {
+                    throw new java.lang.NullPointerException("locals == null");
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     private static abcd.AbstractRm j6(abcd.AbstractRm r1, abcd.au r2) {
-        if ((r1 instanceof abcd.Sm) == true) goto L5;
-        return r1;
-    L5:
-        abcd.Sm r3 = (abcd.Sm) r1;
-        if (r2.size() == 0) goto L8;
-        return r3;
-    L8:
-        return r3.rN();
+        abcd.Sm r3 = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if ((r1 instanceof abcd.Sm) == true) { $pc1 = 5; continue $sw1; }
+                    return r1;
+                }
+                case 5: {
+                    r3 = (abcd.Sm) r1;
+                    if (r2.size() == 0) { $pc1 = 8; continue $sw1; }
+                    return r3;
+                }
+                case 8: {
+                    return r3.rN();
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     private abcd.au j6(abcd.au r7) {
-        if (this.FH.equals(r7) == true) goto L5;
-        abcd.au r0 = new abcd.au();
-        int r1 = this.FH.size();
-        int r2 = r7.size();
+        abcd.au r0 = null;
+        int r1 = 0;
+        int r2 = 0;
         int r3 = 0;
-    L7:
-        if (r3 >= r1) goto L12;
-        if (r3 >= r2) goto L12;
-        if (this.FH.get(r3) != r7.get(r3)) goto L12;
-        r0.DW(r3);
-        r3 = r3 + 1;
-    L12:
-        r0.we();
-        return r0;
-    L5:
-        return this.FH;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    if (this.FH.equals(r7) == true) { $pc2 = 5; continue $sw2; }
+                    r0 = new abcd.au();
+                    r1 = this.FH.size();
+                    r2 = r7.size();
+                    r3 = 0;
+                    $pc2 = 7; continue $sw2;
+                }
+                case 7: {
+                    if (r3 >= r1) { $pc2 = 12; continue $sw2; }
+                    if (r3 >= r2) { $pc2 = 12; continue $sw2; }
+                    if (this.FH.get(r3) != r7.get(r3)) { $pc2 = 12; continue $sw2; }
+                    r0.DW(r3);
+                    r3 = r3 + 1;
+                    $pc2 = 12; continue $sw2;
+                }
+                case 12: {
+                    r0.we();
+                    return r0;
+                }
+                case 5: {
+                    return this.FH;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public abcd.Om DW(int r5, int r6) {
-        abcd.AbstractRm r1 = this.j6;
-        if ((r1 instanceof abcd.Sm) == false) goto L5;
-        abcd.AbstractRm r7 = ((abcd.Sm) r1).DW(r6);
-    L19:
-        abcd.au r2 = this.FH.lg();     // Catch: java.lang.NullPointerException -> L15 java.lang.IndexOutOfBoundsException -> L17
-        if (r2.rN() != r5) goto L14;
-        r2.we();     // Catch: java.lang.NullPointerException -> L15 java.lang.IndexOutOfBoundsException -> L17
-        if (r7 != null) goto L12;
-        return null;
-    L12:
-        return new abcd.Om(r7, this.DW, r2);
-    L14:
-        throw new java.lang.RuntimeException("returning from invalid subroutine");     // Catch: java.lang.NullPointerException -> L15 java.lang.IndexOutOfBoundsException -> L17
-    L18:
-        throw new java.lang.RuntimeException("returning from invalid subroutine");
-    L16:
-        throw new java.lang.NullPointerException("can't return from non-subroutine");
-    L5:
-        r7 = null;
-        goto L19
+        abcd.AbstractRm r1 = null;
+        abcd.AbstractRm r7 = null;
+        abcd.au r2 = null;
+        java.lang.Throwable $ex3 = null;
+        int $pc3 = -1;
+        $sw3: while (true) {
+            switch ($pc3) {
+                case -1: {
+                    r1 = this.j6;
+                    if ((r1 instanceof abcd.Sm) == false) { $pc3 = 5; continue $sw3; }
+                    r7 = ((abcd.Sm) r1).DW(r6);
+                    $pc3 = 19; continue $sw3;
+                }
+                case 19: {
+                    try {
+                        r2 = this.FH.lg();
+                    } catch (java.lang.Throwable $t) {
+                        $ex3 = $t;
+                        if ($t instanceof java.lang.NullPointerException) { $pc3 = 15; continue $sw3; }
+                        if ($t instanceof java.lang.IndexOutOfBoundsException) { $pc3 = 17; continue $sw3; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    if (r2.rN() != r5) { $pc3 = 14; continue $sw3; }
+                    try {
+                        r2.we();
+                    } catch (java.lang.Throwable $t) {
+                        $ex3 = $t;
+                        if ($t instanceof java.lang.NullPointerException) { $pc3 = 15; continue $sw3; }
+                        if ($t instanceof java.lang.IndexOutOfBoundsException) { $pc3 = 17; continue $sw3; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    if (r7 != null) { $pc3 = 12; continue $sw3; }
+                    return null;
+                }
+                case 12: {
+                    return new abcd.Om(r7, this.DW, r2);
+                }
+                case 14: {
+                    try {
+                        throw new java.lang.RuntimeException("returning from invalid subroutine");
+                    } catch (java.lang.Throwable $t) {
+                        $ex3 = $t;
+                        if ($t instanceof java.lang.NullPointerException) { $pc3 = 15; continue $sw3; }
+                        if ($t instanceof java.lang.IndexOutOfBoundsException) { $pc3 = 17; continue $sw3; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                }
+                case 18: {
+                    throw new java.lang.RuntimeException("returning from invalid subroutine");
+                }
+                case 16: {
+                    throw new java.lang.NullPointerException("can't return from non-subroutine");
+                }
+                case 5: {
+                    r7 = null;
+                    { $pc3 = 19; continue $sw3; }
+                }
+                case 15: {
+                    $pc3 = 17; continue $sw3;
+                }
+                case 17: {
+                    throw new java.lang.IllegalStateException();
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public abcd.AbstractRm DW() {
@@ -109,64 +196,122 @@ public final class Om {
     }
 
     public abcd.Om j6(abcd.Om r4) {
-        abcd.AbstractRm r0 = DW().j6(r4.DW());
-        abcd.Nm r1 = FH().j6(r4.FH());
-        abcd.au r5 = j6(r4.FH);
-        abcd.AbstractRm r2 = j6(r0, r5);
-        if (r2 != DW()) goto L10;
-        if (r1 != FH()) goto L10;
-        if (this.FH != r5) goto L10;
-        return this;
-    L10:
-        return new abcd.Om(r2, r1, r5);
+        abcd.AbstractRm r0 = null;
+        abcd.Nm r1 = null;
+        abcd.au r5 = null;
+        abcd.AbstractRm r2 = null;
+        java.lang.Throwable $ex4 = null;
+        int $pc4 = -1;
+        $sw4: while (true) {
+            switch ($pc4) {
+                case -1: {
+                    r0 = DW().j6(r4.DW());
+                    r1 = FH().j6(r4.FH());
+                    r5 = j6(r4.FH);
+                    r2 = j6(r0, r5);
+                    if (r2 != DW()) { $pc4 = 10; continue $sw4; }
+                    if (r1 != FH()) { $pc4 = 10; continue $sw4; }
+                    if (this.FH != r5) { $pc4 = 10; continue $sw4; }
+                    return this;
+                }
+                case 10: {
+                    return new abcd.Om(r2, r1, r5);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public abcd.Om j6(abcd.Om r8, int r9, int r10) {
-        abcd.Sm r11 = DW().j6(r8.DW(), r10);
-        abcd.Nm r0 = FH().j6(r8.FH());
-        abcd.au r12 = r8.FH.lg();
-        r12.DW(r9);
-        r12.we();
-        if (r11 != DW()) goto L10;
-        if (r0 != FH()) goto L10;
-        if (this.FH.equals(r12) == false) goto L10;
-        return this;
-    L10:
-        if (this.FH.equals(r12) == false) goto L13;
-        r12 = this.FH;
-    L24:
-        return new abcd.Om(r11, r0, r12);
-    L13:
-        if (this.FH.size() <= r12.size()) goto L15;
-        abcd.au r13 = r12;
-        r12 = this.FH;
-    L16:
-        int r1 = r12.size();
-        int r2 = r13.size();
-        int r3 = r2 - 1;
-    L17:
-        if (r3 < 0) goto L24;
-        if (r13.get(r3) != r12.get((r1 - r2) + r3)) goto L22;
-        r3 = r3 - 1;
-        goto L17
-    L22:
-        throw new java.lang.RuntimeException("Incompatible merged subroutines");
-    L15:
-        r13 = this.FH;
-        goto L16
+        abcd.Sm r11 = null;
+        abcd.Nm r0 = null;
+        abcd.au r12 = null;
+        abcd.au r13 = null;
+        int r1 = 0;
+        int r2 = 0;
+        int r3 = 0;
+        java.lang.Throwable $ex5 = null;
+        int $pc5 = -1;
+        $sw5: while (true) {
+            switch ($pc5) {
+                case -1: {
+                    r11 = DW().j6(r8.DW(), r10);
+                    r0 = FH().j6(r8.FH());
+                    r12 = r8.FH.lg();
+                    r12.DW(r9);
+                    r12.we();
+                    if (r11 != DW()) { $pc5 = 10; continue $sw5; }
+                    if (r0 != FH()) { $pc5 = 10; continue $sw5; }
+                    if (this.FH.equals(r12) == false) { $pc5 = 10; continue $sw5; }
+                    return this;
+                }
+                case 10: {
+                    if (this.FH.equals(r12) == false) { $pc5 = 13; continue $sw5; }
+                    r12 = this.FH;
+                    $pc5 = 24; continue $sw5;
+                }
+                case 24: {
+                    return new abcd.Om(r11, r0, r12);
+                }
+                case 13: {
+                    if (this.FH.size() <= r12.size()) { $pc5 = 15; continue $sw5; }
+                    r13 = r12;
+                    r12 = this.FH;
+                    $pc5 = 16; continue $sw5;
+                }
+                case 16: {
+                    r1 = r12.size();
+                    r2 = r13.size();
+                    r3 = r2 - 1;
+                    $pc5 = 17; continue $sw5;
+                }
+                case 17: {
+                    if (r3 < 0) { $pc5 = 24; continue $sw5; }
+                    if (r13.get(r3) != r12.get((r1 - r2) + r3)) { $pc5 = 22; continue $sw5; }
+                    r3 = r3 - 1;
+                    { $pc5 = 17; continue $sw5; }
+                }
+                case 22: {
+                    throw new java.lang.RuntimeException("Incompatible merged subroutines");
+                }
+                case 15: {
+                    r13 = this.FH;
+                    { $pc5 = 16; continue $sw5; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public void j6(abcd.Ps r6) {
-        int r0 = r6.size();
+        int r0 = 0;
         int r1 = 0;
         int r2 = 0;
-    L3:
-        if (r1 >= r0) goto L5;
-        abcd.Qs r3 = r6.get(r1);
-        this.j6.j6(r2, r3);
-        r2 = r2 + r3.Zo();
-        r1 = r1 + 1;
-        goto L3
+        abcd.Qs r3 = null;
+        java.lang.Throwable $ex6 = null;
+        int $pc6 = -1;
+        $sw6: while (true) {
+            switch ($pc6) {
+                case -1: {
+                    r0 = r6.size();
+                    r1 = 0;
+                    r2 = 0;
+                    $pc6 = 3; continue $sw6;
+                }
+                case 3: {
+                    if (r1 >= r0) { $pc6 = 5; continue $sw6; }
+                    r3 = r6.get(r1);
+                    this.j6.j6(r2, r3);
+                    r2 = r2 + r3.Zo();
+                    r1 = r1 + 1;
+                    { $pc6 = 3; continue $sw6; }
+                }
+                case 5: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public void j6(abcd.Qs r2) {

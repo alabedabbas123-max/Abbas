@@ -16,47 +16,94 @@ class ClassN {
     }
 
     public static int j6(int r2) {
-        int r0 = 4;
-    L4:
-        if (r0 >= 32) goto L9;
-        int r1 = (1 << r0) - 12;
-        if (r2 <= r1) goto L7;
-        r0 = r0 + 1;
-        goto L4
-    L7:
-        return r1;
-    L9:
-        return r2;
+        int r0 = 0;
+        int r1 = 0;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = 4;
+                    $pc0 = 4; continue $sw0;
+                }
+                case 4: {
+                    if (r0 >= 32) { $pc0 = 9; continue $sw0; }
+                    r1 = (1 << r0) - 12;
+                    if (r2 <= r1) { $pc0 = 7; continue $sw0; }
+                    r0 = r0 + 1;
+                    { $pc0 = 4; continue $sw0; }
+                }
+                case 7: {
+                    return r1;
+                }
+                case 9: {
+                    return r2;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     static int j6(int[] r3, int r4, int r5) {
-        int r6 = r4 - 1;
+        int r6 = 0;
         int r0 = 0;
-    L3:
-        if (r0 > r6) goto L11;
-        int r1 = (r0 + r6) >>> 1;
-        int r2 = r3[r1];
-        if (r2 < r5) goto L6;
-        if (r2 <= r5) goto L9;
-        r6 = r1 - 1;
-        goto L3
-    L9:
-        return r1;
-    L6:
-        r0 = r1 + 1;
-        goto L3
-    L11:
-        return r0 ^ (-1);
+        int r1 = 0;
+        int r2 = 0;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    r6 = r4 - 1;
+                    r0 = 0;
+                    $pc1 = 3; continue $sw1;
+                }
+                case 3: {
+                    if (r0 > r6) { $pc1 = 11; continue $sw1; }
+                    r1 = (r0 + r6) >>> 1;
+                    r2 = r3[r1];
+                    if (r2 < r5) { $pc1 = 6; continue $sw1; }
+                    if (r2 <= r5) { $pc1 = 9; continue $sw1; }
+                    r6 = r1 - 1;
+                    { $pc1 = 3; continue $sw1; }
+                }
+                case 9: {
+                    return r1;
+                }
+                case 6: {
+                    r0 = r1 + 1;
+                    { $pc1 = 3; continue $sw1; }
+                }
+                case 11: {
+                    return r0 ^ (-1);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static boolean j6(java.lang.Object r0, java.lang.Object r1) {
-        if (r0 == r1) goto L8;
-        if (r0 != null) goto L5;
-    L7:
-        return false;
-    L5:
-        if (r0.equals(r1) == false) goto L7;
-    L8:
-        return true;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    if (r0 == r1) { $pc2 = 8; continue $sw2; }
+                    if (r0 != null) { $pc2 = 5; continue $sw2; }
+                    $pc2 = 7; continue $sw2;
+                }
+                case 7: {
+                    return false;
+                }
+                case 5: {
+                    if (r0.equals(r1) == false) { $pc2 = 7; continue $sw2; }
+                    $pc2 = 8; continue $sw2;
+                }
+                case 8: {
+                    return true;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

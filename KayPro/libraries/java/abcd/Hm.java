@@ -8,37 +8,57 @@ public final class Hm implements abcd.Interfacecu {
     private final abcd.Jm v5;
 
     public Hm(int r4, int r5, int r6, abcd.au r7, abcd.Jm r8) {
-        if (r4 < 0) goto L26;
-        if (r5 < 0) goto L24;
-        if (r6 <= r5) goto L22;
-        if (r7 == null) goto L20;
-        int r0 = r7.size();
+        int r0 = 0;
         int r1 = 0;
-    L8:
-        if (r1 >= r0) goto L14;
-        if (r7.get(r1) < 0) goto L13;
-        r1 = r1 + 1;
-        goto L8
-    L13:
-        throw new java.lang.IllegalArgumentException("successors[" + r1 + "] == " + r7.get(r1));
-    L14:
-        if (r8 == null) goto L18;
-        this.j6 = r4;
-        this.DW = r5;
-        this.FH = r6;
-        this.Hw = r7;
-        this.v5 = r8;
-        return;
-    L18:
-        throw new java.lang.NullPointerException("catches == null");
-    L20:
-        throw new java.lang.NullPointerException("targets == null");
-    L22:
-        throw new java.lang.IllegalArgumentException("end <= start");
-    L24:
-        throw new java.lang.IllegalArgumentException("start < 0");
-    L26:
-        throw new java.lang.IllegalArgumentException("label < 0");
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (r4 < 0) { $pc0 = 26; continue $sw0; }
+                    if (r5 < 0) { $pc0 = 24; continue $sw0; }
+                    if (r6 <= r5) { $pc0 = 22; continue $sw0; }
+                    if (r7 == null) { $pc0 = 20; continue $sw0; }
+                    r0 = r7.size();
+                    r1 = 0;
+                    $pc0 = 8; continue $sw0;
+                }
+                case 8: {
+                    if (r1 >= r0) { $pc0 = 14; continue $sw0; }
+                    if (r7.get(r1) < 0) { $pc0 = 13; continue $sw0; }
+                    r1 = r1 + 1;
+                    { $pc0 = 8; continue $sw0; }
+                }
+                case 13: {
+                    throw new java.lang.IllegalArgumentException("successors[" + r1 + "] == " + r7.get(r1));
+                }
+                case 14: {
+                    if (r8 == null) { $pc0 = 18; continue $sw0; }
+                    this.j6 = r4;
+                    this.DW = r5;
+                    this.FH = r6;
+                    this.Hw = r7;
+                    this.v5 = r8;
+                    return;
+                }
+                case 18: {
+                    throw new java.lang.NullPointerException("catches == null");
+                }
+                case 20: {
+                    throw new java.lang.NullPointerException("targets == null");
+                }
+                case 22: {
+                    throw new java.lang.IllegalArgumentException("end <= start");
+                }
+                case 24: {
+                    throw new java.lang.IllegalArgumentException("start < 0");
+                }
+                case 26: {
+                    throw new java.lang.IllegalArgumentException("label < 0");
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

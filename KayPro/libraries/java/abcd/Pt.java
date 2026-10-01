@@ -42,26 +42,51 @@ public final class Pt {
 
         @Override
         public int read() {
-            if (this.j6 < abcd.Pt.j6(this.FH)) goto L6;
-            return -1;
-        L6:
-            int r0 = abcd.Pt.j6(this.FH, this.j6);
-            this.j6++;
-            return r0;
+            int r0 = 0;
+            java.lang.Throwable $ex0 = null;
+            int $pc0 = -1;
+            $sw0: while (true) {
+                switch ($pc0) {
+                    case -1: {
+                        if (this.j6 < abcd.Pt.j6(this.FH)) { $pc0 = 6; continue $sw0; }
+                        return -1;
+                    }
+                    case 6: {
+                        r0 = abcd.Pt.j6(this.FH, this.j6);
+                        this.j6++;
+                        return r0;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         @Override
         public int read(byte[] r4, int r5, int r6) {
-            if ((r5 + r6) <= r4.length) goto L5;
-            r6 = r4.length - r5;
-        L5:
-            int r0 = abcd.Pt.j6(this.FH) - this.j6;
-            if (r6 <= r0) goto L8;
-            r6 = r0;
-        L8:
-            java.lang.System.arraycopy(abcd.Pt.DW(this.FH), this.j6 + abcd.Pt.FH(this.FH), r4, r5, r6);
-            this.j6 += r6;
-            return r6;
+            int r0 = 0;
+            java.lang.Throwable $ex1 = null;
+            int $pc1 = -1;
+            $sw1: while (true) {
+                switch ($pc1) {
+                    case -1: {
+                        if ((r5 + r6) <= r4.length) { $pc1 = 5; continue $sw1; }
+                        r6 = r4.length - r5;
+                        $pc1 = 5; continue $sw1;
+                    }
+                    case 5: {
+                        r0 = abcd.Pt.j6(this.FH) - this.j6;
+                        if (r6 <= r0) { $pc1 = 8; continue $sw1; }
+                        r6 = r0;
+                        $pc1 = 8; continue $sw1;
+                    }
+                    case 8: {
+                        java.lang.System.arraycopy(abcd.Pt.DW(this.FH), this.j6 + abcd.Pt.FH(this.FH), r4, r5, r6);
+                        this.j6 += r6;
+                        return r6;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         @Override
@@ -75,31 +100,54 @@ public final class Pt {
     }
 
     public Pt(byte[] r2, int r3, int r4) {
-        if (r2 == null) goto L17;
-        if (r3 < 0) goto L15;
-        if (r4 < r3) goto L13;
-        if (r4 > r2.length) goto L11;
-        this.j6 = r2;
-        this.DW = r3;
-        this.FH = r4 - r3;
-        return;
-    L11:
-        throw new java.lang.IllegalArgumentException("end > bytes.length");
-    L13:
-        throw new java.lang.IllegalArgumentException("end < start");
-    L15:
-        throw new java.lang.IllegalArgumentException("start < 0");
-    L17:
-        throw new java.lang.NullPointerException("bytes == null");
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    if (r2 == null) { $pc2 = 17; continue $sw2; }
+                    if (r3 < 0) { $pc2 = 15; continue $sw2; }
+                    if (r4 < r3) { $pc2 = 13; continue $sw2; }
+                    if (r4 > r2.length) { $pc2 = 11; continue $sw2; }
+                    this.j6 = r2;
+                    this.DW = r3;
+                    this.FH = r4 - r3;
+                    return;
+                }
+                case 11: {
+                    throw new java.lang.IllegalArgumentException("end > bytes.length");
+                }
+                case 13: {
+                    throw new java.lang.IllegalArgumentException("end < start");
+                }
+                case 15: {
+                    throw new java.lang.IllegalArgumentException("start < 0");
+                }
+                case 17: {
+                    throw new java.lang.NullPointerException("bytes == null");
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     private void DW(int r4, int r5) {
-        if (r4 < 0) goto L8;
-        if (r5 < r4) goto L8;
-        if (r5 > this.FH) goto L8;
-        return;
-    L8:
-        throw new java.lang.IllegalArgumentException("bad range: " + r4 + ".." + r5 + "; actual size " + this.FH);
+        java.lang.Throwable $ex3 = null;
+        int $pc3 = -1;
+        $sw3: while (true) {
+            switch ($pc3) {
+                case -1: {
+                    if (r4 < 0) { $pc3 = 8; continue $sw3; }
+                    if (r5 < r4) { $pc3 = 8; continue $sw3; }
+                    if (r5 > this.FH) { $pc3 = 8; continue $sw3; }
+                    return;
+                }
+                case 8: {
+                    throw new java.lang.IllegalArgumentException("bad range: " + r4 + ".." + r5 + "; actual size " + this.FH);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     static byte[] DW(abcd.Pt r0) {
@@ -176,13 +224,25 @@ public final class Pt {
     }
 
     public void j6(byte[] r4, int r5) {
-        int r0 = r4.length - r5;
-        int r1 = this.FH;
-        if (r0 < r1) goto L7;
-        java.lang.System.arraycopy(this.j6, this.DW, r4, r5, r1);
-        return;
-    L7:
-        throw new java.lang.IndexOutOfBoundsException("(out.length - offset) < size()");
+        int r0 = 0;
+        int r1 = 0;
+        java.lang.Throwable $ex4 = null;
+        int $pc4 = -1;
+        $sw4: while (true) {
+            switch ($pc4) {
+                case -1: {
+                    r0 = r4.length - r5;
+                    r1 = this.FH;
+                    if (r0 < r1) { $pc4 = 7; continue $sw4; }
+                    java.lang.System.arraycopy(this.j6, this.DW, r4, r5, r1);
+                    return;
+                }
+                case 7: {
+                    throw new java.lang.IndexOutOfBoundsException("(out.length - offset) < size()");
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public int v5(int r2) {

@@ -10,13 +10,32 @@ class bJ extends abcd.AbstracteE {
     }
 
     private void j6(java.lang.StringBuilder r2) {
-        if (this.VH == false) goto L10;
-        this.Zo.write(abcd.hE.j6(r2.toString()));     // Catch: java.io.IOException -> L6
-        this.Zo.flush();     // Catch: java.io.IOException -> L6
-        return;
-    L6:
-        this.VH = false;
-        return;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (this.VH == false) { $pc0 = 10; continue $sw0; }
+                    try {
+                        this.Zo.write(abcd.hE.j6(r2.toString()));
+                        this.Zo.flush();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.io.IOException) { $pc0 = 6; continue $sw0; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    return;
+                }
+                case 6: {
+                    this.VH = false;
+                    return;
+                }
+                case 10: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     private void j6(java.lang.StringBuilder r1, java.lang.String r2, int r3) {
@@ -26,20 +45,34 @@ class bJ extends abcd.AbstracteE {
     }
 
     private void j6(java.lang.StringBuilder r2, java.lang.String r3, int r4, int r5, int r6) {
-        r2.append(r3);
-        r2.append(": ");
-        if (r6 >= 100) goto L6;
-        r2.append(' ');
-    L6:
-        if (r6 >= 10) goto L8;
-        r2.append(' ');
-    L8:
-        r2.append(r6);
-        r2.append("% (");
-        r2.append(r4);
-        r2.append("/");
-        r2.append(r5);
-        r2.append(")");
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    r2.append(r3);
+                    r2.append(": ");
+                    if (r6 >= 100) { $pc1 = 6; continue $sw1; }
+                    r2.append(' ');
+                    $pc1 = 6; continue $sw1;
+                }
+                case 6: {
+                    if (r6 >= 10) { $pc1 = 8; continue $sw1; }
+                    r2.append(' ');
+                    $pc1 = 8; continue $sw1;
+                }
+                case 8: {
+                    r2.append(r6);
+                    r2.append("% (");
+                    r2.append(r4);
+                    r2.append("/");
+                    r2.append(r5);
+                    r2.append(")");
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

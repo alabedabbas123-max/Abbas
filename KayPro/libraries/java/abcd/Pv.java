@@ -11,13 +11,26 @@ class Pv implements java.lang.Runnable {
 
     @Override
     public void run() {
-        if (abcd.Qv.a.j6(this.DW) == false) goto L9;
-        abcd.Qv.a.j6(this.DW, false);
-        if (abcd.Qv.a.j6(this.j6.getWindowView()) == false) goto L7;
-        abcd.Qv.e.DW(this.j6, abcd.Qv.a.DW(this.DW), abcd.Qv.a.FH(this.DW));
-        return;
-    L7:
-        abcd.Qv.e.j6(this.j6, abcd.Qv.a.DW(this.DW), abcd.Qv.a.FH(this.DW));
-        return;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (abcd.Qv.a.j6(this.DW) == false) { $pc0 = 9; continue $sw0; }
+                    abcd.Qv.a.j6(this.DW, false);
+                    if (abcd.Qv.a.j6(this.j6.getWindowView()) == false) { $pc0 = 7; continue $sw0; }
+                    abcd.Qv.e.DW(this.j6, abcd.Qv.a.DW(this.DW), abcd.Qv.a.FH(this.DW));
+                    return;
+                }
+                case 7: {
+                    abcd.Qv.e.j6(this.j6, abcd.Qv.a.DW(this.DW), abcd.Qv.a.FH(this.DW));
+                    return;
+                }
+                case 9: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

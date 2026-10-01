@@ -11,10 +11,21 @@ class Callableq<T> implements java.util.concurrent.Callable<T> {
 
     @Override
     public T call() {
-        return (T) this.j6.call();
-    L4:
-        e = move-exception;
-        io.fabric.sdk.android.Fabric.getLogger().FH("CrashlyticsCore", "Failed to execute task.", e);
-        return null;
+        java.lang.Throwable e = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    return (T) this.j6.call();
+                }
+                case 4: {
+                    e = $ex0;
+                    io.fabric.sdk.android.Fabric.getLogger().FH("CrashlyticsCore", "Failed to execute task.", e);
+                    return null;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

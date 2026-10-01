@@ -1,6 +1,6 @@
 package abcd;
 
-enum mB extends abcd.pB.a {
+class mB extends abcd.pB.a {
     mB(java.lang.String r2, int r3) {
         super(r2, r3, null);
     }

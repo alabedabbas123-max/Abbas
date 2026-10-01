@@ -17,13 +17,25 @@ public class aO {
     }
 
     private abcd.WM DW() {
-        return abcd.WM.j6(this.FH.v5());
-    L8:
-        e = move-exception;
-        throw new abcd.XN("Malformed content.", e);
-    L5:
-        e = move-exception;
-        throw new abcd.XN("Malformed content.", e);
+        java.lang.Throwable e = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    return abcd.WM.j6(this.FH.v5());
+                }
+                case 8: {
+                    e = $ex0;
+                    throw new abcd.XN("Malformed content.", e);
+                }
+                case 5: {
+                    e = $ex0;
+                    throw new abcd.XN("Malformed content.", e);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public abcd.UM j6() {

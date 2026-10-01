@@ -18,19 +18,44 @@ public class E {
     }
 
     public E() {
-    L8:
-        th = move-exception;
-        if (DW == false) goto L12;
-        abcd.wu.j6(th, -1324306762173092480L, null);
-    L12:
-        throw th;
-    L4:
-        if (j6 == false) goto L6;
-        abcd.wu.j6(-1324306762173092480L, null);     // Catch: java.lang.Throwable -> L8
-    L6:
-        this.FH = new java.util.ArrayList();     // Catch: java.lang.Throwable -> L8
-        this.Hw = new java.util.ArrayList();     // Catch: java.lang.Throwable -> L8
-        this.v5 = new java.util.ArrayList();     // Catch: java.lang.Throwable -> L8
-        this.Zo = new java.util.ArrayList();     // Catch: java.lang.Throwable -> L8
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 4;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 8: {
+                    th = $ex0;
+                    if (DW == false) { $pc0 = 12; continue $sw0; }
+                    abcd.wu.j6(th, -1324306762173092480L, null);
+                    $pc0 = 12; continue $sw0;
+                }
+                case 12: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (j6 == false) { $pc0 = 6; continue $sw0; }
+                    try {
+                        abcd.wu.j6(-1324306762173092480L, null);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 8; continue $sw0;
+                    }
+                    $pc0 = 6; continue $sw0;
+                }
+                case 6: {
+                    try {
+                        this.FH = new java.util.ArrayList();
+                        this.Hw = new java.util.ArrayList();
+                        this.v5 = new java.util.ArrayList();
+                        this.Zo = new java.util.ArrayList();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 8; continue $sw0;
+                    }
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

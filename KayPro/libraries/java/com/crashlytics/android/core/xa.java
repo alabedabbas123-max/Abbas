@@ -26,10 +26,20 @@ class xa {
     }
 
     private static java.lang.String j6(org.json.JSONObject r2, java.lang.String r3) {
-        if (r2.isNull(r3) == false) goto L5;
-        return null;
-    L5:
-        return r2.optString(r3, null);
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (r2.isNull(r3) == false) { $pc0 = 5; continue $sw0; }
+                    return null;
+                }
+                case 5: {
+                    return r2.optString(r3, null);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public java.io.File DW(java.lang.String r4) {
@@ -37,33 +47,73 @@ class xa {
     }
 
     public com.crashlytics.android.core.Ta FH(java.lang.String r6) {
-        java.io.File r7 = DW(r6);
-        if (r7.exists() == false) goto L5;
+        java.io.File r7 = null;
         java.io.FileInputStream r1 = null;
-        java.io.FileInputStream r2 = new java.io.FileInputStream(r7);     // Catch: java.lang.Throwable -> L15 java.lang.Exception -> L17
-        com.crashlytics.android.core.Ta r8 = Hw(io.fabric.sdk.android.services.common.i.DW(r2));     // Catch: java.lang.Throwable -> L11 java.lang.Exception -> L13
-        io.fabric.sdk.android.services.common.i.j6(r2, "Failed to close user metadata file.");
-        return r8;
-    L13:
-        e = e;
-        r1 = r2;
-    L18:
-        io.fabric.sdk.android.Fabric.getLogger().FH("CrashlyticsCore", "Error deserializing user metadata.", e);     // Catch: java.lang.Throwable -> L15
-        io.fabric.sdk.android.services.common.i.j6(r1, "Failed to close user metadata file.");
-        return com.crashlytics.android.core.Ta.j6;
-    L11:
-        th = th;
-        r1 = r2;
-    L21:
-        io.fabric.sdk.android.services.common.i.j6(r1, "Failed to close user metadata file.");
-        throw th;
-    L17:
-        e = e;
-    L15:
-        th = th;
-        goto L21
-    L5:
-        return com.crashlytics.android.core.Ta.j6;
+        java.io.FileInputStream r2 = null;
+        com.crashlytics.android.core.Ta r8 = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    r7 = DW(r6);
+                    if (r7.exists() == false) { $pc1 = 5; continue $sw1; }
+                    r1 = null;
+                    try {
+                        r2 = new java.io.FileInputStream(r7);
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        if ($t instanceof java.lang.Exception) { $pc1 = 17; continue $sw1; }
+                        $pc1 = 15; continue $sw1;
+                    }
+                    try {
+                        r8 = Hw(io.fabric.sdk.android.services.common.i.DW(r2));
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        if ($t instanceof java.lang.Exception) { $pc1 = 13; continue $sw1; }
+                        $pc1 = 11; continue $sw1;
+                    }
+                    io.fabric.sdk.android.services.common.i.j6(r2, "Failed to close user metadata file.");
+                    return r8;
+                }
+                case 13: {
+                    e = e;
+                    r1 = r2;
+                    $pc1 = 18; continue $sw1;
+                }
+                case 18: {
+                    try {
+                        io.fabric.sdk.android.Fabric.getLogger().FH("CrashlyticsCore", "Error deserializing user metadata.", e);
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        $pc1 = 15; continue $sw1;
+                    }
+                    io.fabric.sdk.android.services.common.i.j6(r1, "Failed to close user metadata file.");
+                    return com.crashlytics.android.core.Ta.j6;
+                }
+                case 11: {
+                    th = th;
+                    r1 = r2;
+                    $pc1 = 21; continue $sw1;
+                }
+                case 21: {
+                    io.fabric.sdk.android.services.common.i.j6(r1, "Failed to close user metadata file.");
+                    throw th;
+                }
+                case 17: {
+                    e = e;
+                    $pc1 = 15; continue $sw1;
+                }
+                case 15: {
+                    th = th;
+                    { $pc1 = 21; continue $sw1; }
+                }
+                case 5: {
+                    return com.crashlytics.android.core.Ta.j6;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public java.io.File j6(java.lang.String r4) {
@@ -71,60 +121,138 @@ class xa {
     }
 
     public void j6(java.lang.String r6, com.crashlytics.android.core.Ta r7) {
-        java.io.File r8 = DW(r6);
+        java.io.File r8 = null;
         java.io.BufferedWriter r1 = null;
-        java.lang.String r9 = j6(r7);     // Catch: java.lang.Throwable -> L10 java.lang.Exception -> L12
-        java.io.BufferedWriter r2 = new java.io.BufferedWriter(new java.io.OutputStreamWriter(new java.io.FileOutputStream(r8), j6));     // Catch: java.lang.Throwable -> L10 java.lang.Exception -> L12
-        r2.write(r9);     // Catch: java.lang.Throwable -> L6 java.lang.Exception -> L8
-        r2.flush();     // Catch: java.lang.Throwable -> L6 java.lang.Exception -> L8
-        io.fabric.sdk.android.services.common.i.j6(r2, "Failed to close user metadata file.");
-        return;
-    L8:
-        e = e;
-        r1 = r2;
-    L13:
-        io.fabric.sdk.android.Fabric.getLogger().FH("CrashlyticsCore", "Error serializing user metadata.", e);     // Catch: java.lang.Throwable -> L10
-        io.fabric.sdk.android.services.common.i.j6(r1, "Failed to close user metadata file.");
-        return;
-    L6:
-        th = th;
-        r1 = r2;
-    L16:
-        io.fabric.sdk.android.services.common.i.j6(r1, "Failed to close user metadata file.");
-        throw th;
-    L12:
-        e = e;
-    L10:
-        th = th;
-        goto L16
+        java.lang.String r9 = null;
+        java.io.BufferedWriter r2 = null;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    r8 = DW(r6);
+                    r1 = null;
+                    try {
+                        r9 = j6(r7);
+                        r2 = new java.io.BufferedWriter(new java.io.OutputStreamWriter(new java.io.FileOutputStream(r8), j6));
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        if ($t instanceof java.lang.Exception) { $pc2 = 12; continue $sw2; }
+                        $pc2 = 10; continue $sw2;
+                    }
+                    try {
+                        r2.write(r9);
+                        r2.flush();
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        if ($t instanceof java.lang.Exception) { $pc2 = 8; continue $sw2; }
+                        $pc2 = 6; continue $sw2;
+                    }
+                    io.fabric.sdk.android.services.common.i.j6(r2, "Failed to close user metadata file.");
+                    return;
+                }
+                case 8: {
+                    e = e;
+                    r1 = r2;
+                    $pc2 = 13; continue $sw2;
+                }
+                case 13: {
+                    try {
+                        io.fabric.sdk.android.Fabric.getLogger().FH("CrashlyticsCore", "Error serializing user metadata.", e);
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        $pc2 = 10; continue $sw2;
+                    }
+                    io.fabric.sdk.android.services.common.i.j6(r1, "Failed to close user metadata file.");
+                    return;
+                }
+                case 6: {
+                    th = th;
+                    r1 = r2;
+                    $pc2 = 16; continue $sw2;
+                }
+                case 16: {
+                    io.fabric.sdk.android.services.common.i.j6(r1, "Failed to close user metadata file.");
+                    throw th;
+                }
+                case 12: {
+                    e = e;
+                    $pc2 = 10; continue $sw2;
+                }
+                case 10: {
+                    th = th;
+                    { $pc2 = 16; continue $sw2; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public void j6(java.lang.String r6, java.util.Map<java.lang.String, java.lang.String> r7) {
-        java.io.File r8 = j6(r6);
+        java.io.File r8 = null;
         java.io.BufferedWriter r1 = null;
-        java.lang.String r9 = j6(r7);     // Catch: java.lang.Throwable -> L10 java.lang.Exception -> L12
-        java.io.BufferedWriter r2 = new java.io.BufferedWriter(new java.io.OutputStreamWriter(new java.io.FileOutputStream(r8), j6));     // Catch: java.lang.Throwable -> L10 java.lang.Exception -> L12
-        r2.write(r9);     // Catch: java.lang.Throwable -> L6 java.lang.Exception -> L8
-        r2.flush();     // Catch: java.lang.Throwable -> L6 java.lang.Exception -> L8
-        io.fabric.sdk.android.services.common.i.j6(r2, "Failed to close key/value metadata file.");
-        return;
-    L8:
-        e = e;
-        r1 = r2;
-    L13:
-        io.fabric.sdk.android.Fabric.getLogger().FH("CrashlyticsCore", "Error serializing key/value metadata.", e);     // Catch: java.lang.Throwable -> L10
-        io.fabric.sdk.android.services.common.i.j6(r1, "Failed to close key/value metadata file.");
-        return;
-    L6:
-        th = th;
-        r1 = r2;
-    L16:
-        io.fabric.sdk.android.services.common.i.j6(r1, "Failed to close key/value metadata file.");
-        throw th;
-    L12:
-        e = e;
-    L10:
-        th = th;
-        goto L16
+        java.lang.String r9 = null;
+        java.io.BufferedWriter r2 = null;
+        java.lang.Throwable $ex3 = null;
+        int $pc3 = -1;
+        $sw3: while (true) {
+            switch ($pc3) {
+                case -1: {
+                    r8 = j6(r6);
+                    r1 = null;
+                    try {
+                        r9 = j6(r7);
+                        r2 = new java.io.BufferedWriter(new java.io.OutputStreamWriter(new java.io.FileOutputStream(r8), j6));
+                    } catch (java.lang.Throwable $t) {
+                        $ex3 = $t;
+                        if ($t instanceof java.lang.Exception) { $pc3 = 12; continue $sw3; }
+                        $pc3 = 10; continue $sw3;
+                    }
+                    try {
+                        r2.write(r9);
+                        r2.flush();
+                    } catch (java.lang.Throwable $t) {
+                        $ex3 = $t;
+                        if ($t instanceof java.lang.Exception) { $pc3 = 8; continue $sw3; }
+                        $pc3 = 6; continue $sw3;
+                    }
+                    io.fabric.sdk.android.services.common.i.j6(r2, "Failed to close key/value metadata file.");
+                    return;
+                }
+                case 8: {
+                    e = e;
+                    r1 = r2;
+                    $pc3 = 13; continue $sw3;
+                }
+                case 13: {
+                    try {
+                        io.fabric.sdk.android.Fabric.getLogger().FH("CrashlyticsCore", "Error serializing key/value metadata.", e);
+                    } catch (java.lang.Throwable $t) {
+                        $ex3 = $t;
+                        $pc3 = 10; continue $sw3;
+                    }
+                    io.fabric.sdk.android.services.common.i.j6(r1, "Failed to close key/value metadata file.");
+                    return;
+                }
+                case 6: {
+                    th = th;
+                    r1 = r2;
+                    $pc3 = 16; continue $sw3;
+                }
+                case 16: {
+                    io.fabric.sdk.android.services.common.i.j6(r1, "Failed to close key/value metadata file.");
+                    throw th;
+                }
+                case 12: {
+                    e = e;
+                    $pc3 = 10; continue $sw3;
+                }
+                case 10: {
+                    th = th;
+                    { $pc3 = 16; continue $sw3; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

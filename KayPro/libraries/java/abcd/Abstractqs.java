@@ -12,22 +12,46 @@ public abstract class Abstractqs extends abcd.Fs {
 
     @Override
     protected final int DW(abcd.Abstractms r2) {
-        int r0 = super.DW(r2);
-        if (r0 == 0) goto L6;
-        return r0;
-    L6:
-        return this.FH.j6(((abcd.Abstractqs) r2).FH);
+        int r0 = 0;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = super.DW(r2);
+                    if (r0 == 0) { $pc0 = 6; continue $sw0; }
+                    return r0;
+                }
+                case 6: {
+                    return this.FH.j6(((abcd.Abstractqs) r2).FH);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public final abcd.Os DW(boolean r2) {
-        if (r2 == false) goto L6;
-        return this.FH;
-    L6:
-        if (this.Hw != null) goto L9;
-        abcd.Qs r3 = VH().VH();
-        this.Hw = this.FH.j6(r3);
-    L9:
-        return this.Hw;
+        abcd.Qs r3 = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if (r2 == false) { $pc1 = 6; continue $sw1; }
+                    return this.FH;
+                }
+                case 6: {
+                    if (this.Hw != null) { $pc1 = 9; continue $sw1; }
+                    r3 = VH().VH();
+                    this.Hw = this.FH.j6(r3);
+                    $pc1 = 9; continue $sw1;
+                }
+                case 9: {
+                    return this.Hw;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public final abcd.Os J8() {

@@ -24,21 +24,45 @@ public class h implements a.b.o {
     }
 
     public boolean a(int r2) {
-        if (r2 >= this.f73a) goto L5;
-    L8:
-        return false;
-    L5:
-        if (r2 >= this.b) goto L8;
-        return true;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (r2 >= this.f73a) { $pc0 = 5; continue $sw0; }
+                    $pc0 = 8; continue $sw0;
+                }
+                case 8: {
+                    return false;
+                }
+                case 5: {
+                    if (r2 >= this.b) { $pc0 = 8; continue $sw0; }
+                    return true;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public boolean a(int r2, int r3) {
-        if (this.f73a < r3) goto L5;
-    L8:
-        return false;
-    L5:
-        if (this.b <= r2) goto L8;
-        return true;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if (this.f73a < r3) { $pc1 = 5; continue $sw1; }
+                    $pc1 = 8; continue $sw1;
+                }
+                case 8: {
+                    return false;
+                }
+                case 5: {
+                    if (this.b <= r2) { $pc1 = 8; continue $sw1; }
+                    return true;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

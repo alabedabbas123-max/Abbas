@@ -116,31 +116,53 @@ public class xP {
     }
 
     private static abcd.wN DW(java.lang.String r4) {
-        java.lang.String r5 = abcd.TP.FH(r4);
-        abcd.zL r0 = (abcd.zL) j6.get(r5);
-        if (r0 == null) goto L20;
-        if (DW.contains(r0) == false) goto L8;
-        abcd.wN r6 = new abcd.wN(r0);
-    L12:
-        if (Hw.contains(r0) == false) goto L15;
-        new abcd.wN(abcd.InterfacelN.DW, new abcd.mM());
-    L15:
-        if (r6.v5().equals(abcd.InterfacelN.EQ) == false) goto L17;
-        ((abcd.nN) r6.VH()).v5();
-    L18:
-        return r6;
-    L17:
-        new abcd.wN((abcd.zL) v5.get(r0), new abcd.mM());
-        goto L18
-    L8:
-        if (FH.containsKey(r5) == false) goto L10;
-        r6 = new abcd.wN(r0, (abcd.InterfaceqL) FH.get(r5));
-        goto L12
-    L10:
-        r6 = new abcd.wN(r0, abcd.mM.j6);
-        goto L12
-    L20:
-        throw new java.lang.IllegalArgumentException("Unknown signature type requested: " + r5);
+        java.lang.String r5 = null;
+        abcd.zL r0 = null;
+        abcd.wN r6 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r5 = abcd.TP.FH(r4);
+                    r0 = (abcd.zL) j6.get(r5);
+                    if (r0 == null) { $pc0 = 20; continue $sw0; }
+                    if (DW.contains(r0) == false) { $pc0 = 8; continue $sw0; }
+                    r6 = new abcd.wN(r0);
+                    $pc0 = 12; continue $sw0;
+                }
+                case 12: {
+                    if (Hw.contains(r0) == false) { $pc0 = 15; continue $sw0; }
+                    new abcd.wN(abcd.InterfacelN.DW, new abcd.mM());
+                    $pc0 = 15; continue $sw0;
+                }
+                case 15: {
+                    if (r6.v5().equals(abcd.InterfacelN.EQ) == false) { $pc0 = 17; continue $sw0; }
+                    ((abcd.nN) r6.VH()).v5();
+                    $pc0 = 18; continue $sw0;
+                }
+                case 18: {
+                    return r6;
+                }
+                case 17: {
+                    new abcd.wN((abcd.zL) v5.get(r0), new abcd.mM());
+                    { $pc0 = 18; continue $sw0; }
+                }
+                case 8: {
+                    if (FH.containsKey(r5) == false) { $pc0 = 10; continue $sw0; }
+                    r6 = new abcd.wN(r0, (abcd.InterfaceqL) FH.get(r5));
+                    { $pc0 = 12; continue $sw0; }
+                }
+                case 10: {
+                    r6 = new abcd.wN(r0, abcd.mM.j6);
+                    { $pc0 = 12; continue $sw0; }
+                }
+                case 20: {
+                    throw new java.lang.IllegalArgumentException("Unknown signature type requested: " + r5);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     private static abcd.nN j6(abcd.wN r4, int r5) {

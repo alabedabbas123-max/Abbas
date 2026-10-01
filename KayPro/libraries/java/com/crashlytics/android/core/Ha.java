@@ -13,14 +13,31 @@ class Ha implements io.fabric.sdk.android.services.common.z.c {
 
     @Override
     public void j6(java.io.InputStream r4, int r5) {
-        r4.read(this.j6, this.DW[0], r5);     // Catch: java.lang.Throwable -> L5
-        int[] r0 = this.DW;     // Catch: java.lang.Throwable -> L5
-        r0[0] = r0[0] + r5;     // Catch: java.lang.Throwable -> L5
-        r4.close();
-        return;
-    L5:
-        th = move-exception;
-        r4.close();
-        throw th;
+        int[] r0 = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    try {
+                        r4.read(this.j6, this.DW[0], r5);
+                        r0 = this.DW;
+                        r0[0] = r0[0] + r5;
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 5; continue $sw0;
+                    }
+                    r4.close();
+                    return;
+                }
+                case 5: {
+                    th = $ex0;
+                    r4.close();
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

@@ -1,7 +1,7 @@
 package io.fabric.sdk.android;
 
 public interface h<T> {
-    public static final io.fabric.sdk.android.h j6 = null;
+    public static final io.fabric.sdk.android.h j6 = new io.fabric.sdk.android.h.a(null);
 
     public static class a implements io.fabric.sdk.android.h<java.lang.Object> {
         private a() {
@@ -20,9 +20,7 @@ public interface h<T> {
         }
     }
 
-    static {
-        j6 = new io.fabric.sdk.android.h.a(null);
-    }
+
 
     void j6(java.lang.Exception r1);
 

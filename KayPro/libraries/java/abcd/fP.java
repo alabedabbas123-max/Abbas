@@ -22,11 +22,22 @@ public class fP implements abcd.InterfacenP {
     }
 
     public void j6(abcd.zL r2, abcd.InterfaceqL r3) {
-        if (this.j6.containsKey(r2) == false) goto L5;
-        this.j6.put(r2, r3);
-        return;
-    L5:
-        this.j6.put(r2, r3);
-        this.DW.addElement(r2);
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (this.j6.containsKey(r2) == false) { $pc0 = 5; continue $sw0; }
+                    this.j6.put(r2, r3);
+                    return;
+                }
+                case 5: {
+                    this.j6.put(r2, r3);
+                    this.DW.addElement(r2);
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

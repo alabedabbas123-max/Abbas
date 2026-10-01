@@ -20,24 +20,47 @@ class Ea {
     }
 
     boolean j6() {
-        if (this.j6.get().contains("preferences_migration_complete") == true) goto L14;
-        abcd.Rz r0 = new abcd.Rz(this.DW);
-        if (this.j6.get().contains("always_send_reports_opt_in") == false) goto L7;
-    L9:
+        abcd.Rz r0 = null;
         boolean r4 = false;
-    L10:
-        if (r4 == false) goto L12;
-        boolean r1 = r0.get().getBoolean("always_send_reports_opt_in", false);
-        abcd.Qz r5 = this.j6;
-        r5.j6(r5.edit().putBoolean("always_send_reports_opt_in", r1));
-    L12:
-        abcd.Qz r2 = this.j6;
-        r2.j6(r2.edit().putBoolean("preferences_migration_complete", true));
-        goto L14
-    L7:
-        if (r0.get().contains("always_send_reports_opt_in") == false) goto L9;
-        r4 = true;
-    L14:
-        return this.j6.get().getBoolean("always_send_reports_opt_in", false);
+        boolean r1 = false;
+        abcd.Qz r5 = null;
+        abcd.Qz r2 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (this.j6.get().contains("preferences_migration_complete") == true) { $pc0 = 14; continue $sw0; }
+                    r0 = new abcd.Rz(this.DW);
+                    if (this.j6.get().contains("always_send_reports_opt_in") == false) { $pc0 = 7; continue $sw0; }
+                    $pc0 = 9; continue $sw0;
+                }
+                case 9: {
+                    r4 = false;
+                    $pc0 = 10; continue $sw0;
+                }
+                case 10: {
+                    if (r4 == false) { $pc0 = 12; continue $sw0; }
+                    r1 = r0.get().getBoolean("always_send_reports_opt_in", false);
+                    r5 = this.j6;
+                    r5.j6(r5.edit().putBoolean("always_send_reports_opt_in", r1));
+                    $pc0 = 12; continue $sw0;
+                }
+                case 12: {
+                    r2 = this.j6;
+                    r2.j6(r2.edit().putBoolean("preferences_migration_complete", true));
+                    { $pc0 = 14; continue $sw0; }
+                }
+                case 7: {
+                    if (r0.get().contains("always_send_reports_opt_in") == false) { $pc0 = 9; continue $sw0; }
+                    r4 = true;
+                    $pc0 = 14; continue $sw0;
+                }
+                case 14: {
+                    return this.j6.get().getBoolean("always_send_reports_opt_in", false);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

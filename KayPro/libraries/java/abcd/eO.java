@@ -83,25 +83,57 @@ class eO {
     }
 
     java.lang.String DW(java.lang.String r2) {
-        java.lang.String r0 = (java.lang.String) DW.get(r2);
-        if (r0 == null) goto L5;
-        return r0;
-    L5:
-        return r2;
+        java.lang.String r0 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = (java.lang.String) DW.get(r2);
+                    if (r0 == null) { $pc0 = 5; continue $sw0; }
+                    return r0;
+                }
+                case 5: {
+                    return r2;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     abcd.wN j6(abcd.wN r3) {
-        if (r3.VH() == null) goto L5;
-        return r3;
-    L5:
-        return new abcd.wN(r3.Zo(), abcd.mM.j6);
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if (r3.VH() == null) { $pc1 = 5; continue $sw1; }
+                    return r3;
+                }
+                case 5: {
+                    return new abcd.wN(r3.Zo(), abcd.mM.j6);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     java.lang.String j6(java.lang.String r2) {
-        java.lang.String r0 = (java.lang.String) FH.get(r2);
-        if (r0 == null) goto L5;
-        return r0;
-    L5:
-        return r2;
+        java.lang.String r0 = null;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    r0 = (java.lang.String) FH.get(r2);
+                    if (r0 == null) { $pc2 = 5; continue $sw2; }
+                    return r0;
+                }
+                case 5: {
+                    return r2;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

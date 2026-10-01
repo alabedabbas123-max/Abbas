@@ -98,20 +98,20 @@ public final class ShellUtils {
     /* JADX WARN: Type inference failed for: r6v9 */
     public static CommandResult execCmd(String[] strArr, boolean z, boolean z2) throws Throwable {
         Process processExec;
-        ?? bufferedReader;
+        java.lang.Object bufferedReader;
         StringBuilder sb;
-        ?? bufferedReader2;
+        java.lang.Object bufferedReader2;
         StringBuilder sb2;
         StringBuilder sb3;
         StringBuilder sb4;
         String string;
-        ?? r6;
+        java.lang.Object r6;
         int iWaitFor = -1;
         if (strArr == null || strArr.length == 0) {
             return new CommandResult(-1, "", "");
         }
         DataOutputStream dataOutputStream = null;
-        ?? r3 = 0;
+        java.lang.Object r3 = 0;
         dataOutputStream = null;
         try {
             processExec = Runtime.getRuntime().exec(z ? "su" : "sh");

@@ -10,18 +10,39 @@ class KM implements java.util.Enumeration {
     }
 
     private java.lang.Object j6() {
-        return this.j6.Hw();
-    L4:
-        e = move-exception;
-        throw new abcd.DL("malformed DER construction: " + e, e);
+        java.lang.Throwable e = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    return this.j6.Hw();
+                }
+                case 4: {
+                    e = $ex0;
+                    throw new abcd.DL("malformed DER construction: " + e, e);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
     public boolean hasMoreElements() {
-        if (this.DW == null) goto L6;
-        return true;
-    L6:
-        return false;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if (this.DW == null) { $pc1 = 6; continue $sw1; }
+                    return true;
+                }
+                case 6: {
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

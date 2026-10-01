@@ -427,39 +427,58 @@ public final class gs {
     }
 
     public static abcd.es DW(abcd.Rs r1) {
-        switch(r1.j3()) {
-            case 1: goto L22;
-            case 2: goto L20;
-            case 3: goto L18;
-            case 4: goto L16;
-            case 5: goto L14;
-            case 6: goto L12;
-            case 7: goto L10;
-            case 8: goto L8;
-            case 9: goto L6;
-            default: goto L4;
-        };
-    L4:
-        Mr(r1);
-        throw null;
-    L6:
-        return zf;
-    L8:
-        return u9;
-    L10:
-        return d8;
-    L12:
-        return wE;
-    L14:
-        return N0;
-    L16:
-        return eN;
-    L18:
-        return ba;
-    L20:
-        return b;
-    L22:
-        return fP;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    switch(r1.j3()) {
+                        case 1: { $pc0 = 22; continue $sw0; }
+                        case 2: { $pc0 = 20; continue $sw0; }
+                        case 3: { $pc0 = 18; continue $sw0; }
+                        case 4: { $pc0 = 16; continue $sw0; }
+                        case 5: { $pc0 = 14; continue $sw0; }
+                        case 6: { $pc0 = 12; continue $sw0; }
+                        case 7: { $pc0 = 10; continue $sw0; }
+                        case 8: { $pc0 = 8; continue $sw0; }
+                        case 9: { $pc0 = 6; continue $sw0; }
+                        default: { $pc0 = 4; continue $sw0; }
+                    };
+                }
+                case 4: {
+                    Mr(r1);
+                    throw null;
+                }
+                case 6: {
+                    return zf;
+                }
+                case 8: {
+                    return u9;
+                }
+                case 10: {
+                    return d8;
+                }
+                case 12: {
+                    return wE;
+                }
+                case 14: {
+                    return N0;
+                }
+                case 16: {
+                    return eN;
+                }
+                case 18: {
+                    return ba;
+                }
+                case 20: {
+                    return b;
+                }
+                case 22: {
+                    return fP;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static abcd.es DW(abcd.Ss r9) {
@@ -467,24 +486,39 @@ public final class gs {
     }
 
     public static abcd.es EQ(abcd.Rs r2) {
-        int r0 = r2.Mr();
-        if (r0 == 4) goto L23;
-        if (r0 == 5) goto L21;
-        if (r0 == 6) goto L19;
-        if (r0 == 7) goto L17;
-        if (r0 == 9) goto L13;
-        Mr(r2);
-        throw null;
-    L13:
-        return we;
-    L17:
-        return u7;
-    L19:
-        return gn;
-    L21:
-        return tp;
-    L23:
-        return EQ;
+        int r0 = 0;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    r0 = r2.Mr();
+                    if (r0 == 4) { $pc1 = 23; continue $sw1; }
+                    if (r0 == 5) { $pc1 = 21; continue $sw1; }
+                    if (r0 == 6) { $pc1 = 19; continue $sw1; }
+                    if (r0 == 7) { $pc1 = 17; continue $sw1; }
+                    if (r0 == 9) { $pc1 = 13; continue $sw1; }
+                    Mr(r2);
+                    throw null;
+                }
+                case 13: {
+                    return we;
+                }
+                case 17: {
+                    return u7;
+                }
+                case 19: {
+                    return gn;
+                }
+                case 21: {
+                    return tp;
+                }
+                case 23: {
+                    return EQ;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static abcd.es EQ(abcd.Ss r9) {
@@ -496,15 +530,27 @@ public final class gs {
     }
 
     public static abcd.es FH(abcd.Rs r2) {
-        int r0 = r2.j3();
-        if (r0 == 4) goto L11;
-        if (r0 == 5) goto L7;
-        Mr(r2);
-        throw null;
-    L7:
-        return BR;
-    L11:
-        return AE;
+        int r0 = 0;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    r0 = r2.j3();
+                    if (r0 == 4) { $pc2 = 11; continue $sw2; }
+                    if (r0 == 5) { $pc2 = 7; continue $sw2; }
+                    Mr(r2);
+                    throw null;
+                }
+                case 7: {
+                    return BR;
+                }
+                case 11: {
+                    return AE;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static abcd.es FH(abcd.Ss r9) {
@@ -516,18 +562,31 @@ public final class gs {
     }
 
     public static abcd.es Hw(abcd.Rs r2) {
-        int r0 = r2.j3();
-        if (r0 == 4) goto L15;
-        if (r0 == 5) goto L13;
-        if (r0 == 7) goto L9;
-        Mr(r2);
-        throw null;
-    L9:
-        return IS;
-    L13:
-        return gG;
-    L15:
-        return Nh;
+        int r0 = 0;
+        java.lang.Throwable $ex3 = null;
+        int $pc3 = -1;
+        $sw3: while (true) {
+            switch ($pc3) {
+                case -1: {
+                    r0 = r2.j3();
+                    if (r0 == 4) { $pc3 = 15; continue $sw3; }
+                    if (r0 == 5) { $pc3 = 13; continue $sw3; }
+                    if (r0 == 7) { $pc3 = 9; continue $sw3; }
+                    Mr(r2);
+                    throw null;
+                }
+                case 9: {
+                    return IS;
+                }
+                case 13: {
+                    return gG;
+                }
+                case 15: {
+                    return Nh;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static abcd.es Hw(abcd.Ss r4) {
@@ -543,21 +602,35 @@ public final class gs {
     }
 
     public static abcd.es J8(abcd.Rs r2) {
-        int r0 = r2.Mr();
-        if (r0 == 4) goto L19;
-        if (r0 == 5) goto L17;
-        if (r0 == 6) goto L15;
-        if (r0 == 7) goto L11;
-        Mr(r2);
-        throw null;
-    L11:
-        return XG;
-    L15:
-        return yO;
-    L17:
-        return jJ;
-    L19:
-        return wc;
+        int r0 = 0;
+        java.lang.Throwable $ex4 = null;
+        int $pc4 = -1;
+        $sw4: while (true) {
+            switch ($pc4) {
+                case -1: {
+                    r0 = r2.Mr();
+                    if (r0 == 4) { $pc4 = 19; continue $sw4; }
+                    if (r0 == 5) { $pc4 = 17; continue $sw4; }
+                    if (r0 == 6) { $pc4 = 15; continue $sw4; }
+                    if (r0 == 7) { $pc4 = 11; continue $sw4; }
+                    Mr(r2);
+                    throw null;
+                }
+                case 11: {
+                    return XG;
+                }
+                case 15: {
+                    return yO;
+                }
+                case 17: {
+                    return jJ;
+                }
+                case 19: {
+                    return wc;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static abcd.es J8(abcd.Ss r9) {
@@ -569,15 +642,27 @@ public final class gs {
     }
 
     public static abcd.es QX(abcd.Rs r2) {
-        int r0 = r2.Mr();
-        if (r0 == 6) goto L11;
-        if (r0 == 7) goto L7;
-        Mr(r2);
-        throw null;
-    L7:
-        return mb;
-    L11:
-        return WB;
+        int r0 = 0;
+        java.lang.Throwable $ex5 = null;
+        int $pc5 = -1;
+        $sw5: while (true) {
+            switch ($pc5) {
+                case -1: {
+                    r0 = r2.Mr();
+                    if (r0 == 6) { $pc5 = 11; continue $sw5; }
+                    if (r0 == 7) { $pc5 = 7; continue $sw5; }
+                    Mr(r2);
+                    throw null;
+                }
+                case 7: {
+                    return mb;
+                }
+                case 11: {
+                    return WB;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static abcd.es QX(abcd.Ss r9) {
@@ -585,39 +670,58 @@ public final class gs {
     }
 
     public static abcd.es VH(abcd.Rs r1) {
-        switch(r1.j3()) {
-            case 1: goto L22;
-            case 2: goto L20;
-            case 3: goto L18;
-            case 4: goto L16;
-            case 5: goto L14;
-            case 6: goto L12;
-            case 7: goto L10;
-            case 8: goto L8;
-            case 9: goto L6;
-            default: goto L4;
-        };
-    L4:
-        Mr(r1);
-        throw null;
-    L6:
-        return ir;
-    L8:
-        return gy;
-    L10:
-        return Vq;
-    L12:
-        return RW;
-    L14:
-        return cX;
-    L16:
-        return ya;
-    L18:
-        return h2;
-    L20:
-        return HE;
-    L22:
-        return uD;
+        java.lang.Throwable $ex6 = null;
+        int $pc6 = -1;
+        $sw6: while (true) {
+            switch ($pc6) {
+                case -1: {
+                    switch(r1.j3()) {
+                        case 1: { $pc6 = 22; continue $sw6; }
+                        case 2: { $pc6 = 20; continue $sw6; }
+                        case 3: { $pc6 = 18; continue $sw6; }
+                        case 4: { $pc6 = 16; continue $sw6; }
+                        case 5: { $pc6 = 14; continue $sw6; }
+                        case 6: { $pc6 = 12; continue $sw6; }
+                        case 7: { $pc6 = 10; continue $sw6; }
+                        case 8: { $pc6 = 8; continue $sw6; }
+                        case 9: { $pc6 = 6; continue $sw6; }
+                        default: { $pc6 = 4; continue $sw6; }
+                    };
+                }
+                case 4: {
+                    Mr(r1);
+                    throw null;
+                }
+                case 6: {
+                    return ir;
+                }
+                case 8: {
+                    return gy;
+                }
+                case 10: {
+                    return Vq;
+                }
+                case 12: {
+                    return RW;
+                }
+                case 14: {
+                    return cX;
+                }
+                case 16: {
+                    return ya;
+                }
+                case 18: {
+                    return h2;
+                }
+                case 20: {
+                    return HE;
+                }
+                case 22: {
+                    return uD;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static abcd.es VH(abcd.Ss r3) {
@@ -625,40 +729,60 @@ public final class gs {
     }
 
     public static abcd.es Ws(abcd.Rs r6) {
-        abcd.Qs r2 = r6.getType();
-        switch(r2.we().j3()) {
-            case 1: goto L22;
-            case 2: goto L20;
-            case 3: goto L18;
-            case 4: goto L16;
-            case 5: goto L14;
-            case 6: goto L12;
-            case 7: goto L10;
-            case 8: goto L8;
-            case 9: goto L6;
-            default: goto L4;
-        };
-    L4:
-        Mr(r2);
-        throw null;
-    L6:
-        return new abcd.es(41, r2, abcd.Ps.Hw, abcd.Rr.we, "new-array-object");
-    L8:
-        return oT;
-    L10:
-        return ti;
-    L12:
-        return nl;
-    L14:
-        return k1;
-    L16:
-        return iK;
-    L18:
-        return HT;
-    L20:
-        return sv;
-    L22:
-        return fh;
+        abcd.Qs r2 = null;
+        java.lang.Throwable $ex7 = null;
+        int $pc7 = -1;
+        $sw7: while (true) {
+            switch ($pc7) {
+                case -1: {
+                    r2 = r6.getType();
+                    switch(r2.we().j3()) {
+                        case 1: { $pc7 = 22; continue $sw7; }
+                        case 2: { $pc7 = 20; continue $sw7; }
+                        case 3: { $pc7 = 18; continue $sw7; }
+                        case 4: { $pc7 = 16; continue $sw7; }
+                        case 5: { $pc7 = 14; continue $sw7; }
+                        case 6: { $pc7 = 12; continue $sw7; }
+                        case 7: { $pc7 = 10; continue $sw7; }
+                        case 8: { $pc7 = 8; continue $sw7; }
+                        case 9: { $pc7 = 6; continue $sw7; }
+                        default: { $pc7 = 4; continue $sw7; }
+                    };
+                }
+                case 4: {
+                    Mr(r2);
+                    throw null;
+                }
+                case 6: {
+                    return new abcd.es(41, r2, abcd.Ps.Hw, abcd.Rr.we, "new-array-object");
+                }
+                case 8: {
+                    return oT;
+                }
+                case 10: {
+                    return ti;
+                }
+                case 12: {
+                    return nl;
+                }
+                case 14: {
+                    return k1;
+                }
+                case 16: {
+                    return iK;
+                }
+                case 18: {
+                    return HT;
+                }
+                case 20: {
+                    return sv;
+                }
+                case 22: {
+                    return fh;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static abcd.es Ws(abcd.Ss r9) {
@@ -666,39 +790,58 @@ public final class gs {
     }
 
     public static abcd.es XL(abcd.Rs r1) {
-        switch(r1.j3()) {
-            case 1: goto L22;
-            case 2: goto L20;
-            case 3: goto L18;
-            case 4: goto L16;
-            case 5: goto L14;
-            case 6: goto L12;
-            case 7: goto L10;
-            case 8: goto L8;
-            case 9: goto L6;
-            default: goto L4;
-        };
-    L4:
-        Mr(r1);
-        throw null;
-    L6:
-        return tR;
-    L8:
-        return dH;
-    L10:
-        return S4;
-    L12:
-        return F3;
-    L14:
-        return f135tv;
-    L16:
-        return gM;
-    L18:
-        return C;
-    L20:
-        return ME;
-    L22:
-        return ji;
+        java.lang.Throwable $ex8 = null;
+        int $pc8 = -1;
+        $sw8: while (true) {
+            switch ($pc8) {
+                case -1: {
+                    switch(r1.j3()) {
+                        case 1: { $pc8 = 22; continue $sw8; }
+                        case 2: { $pc8 = 20; continue $sw8; }
+                        case 3: { $pc8 = 18; continue $sw8; }
+                        case 4: { $pc8 = 16; continue $sw8; }
+                        case 5: { $pc8 = 14; continue $sw8; }
+                        case 6: { $pc8 = 12; continue $sw8; }
+                        case 7: { $pc8 = 10; continue $sw8; }
+                        case 8: { $pc8 = 8; continue $sw8; }
+                        case 9: { $pc8 = 6; continue $sw8; }
+                        default: { $pc8 = 4; continue $sw8; }
+                    };
+                }
+                case 4: {
+                    Mr(r1);
+                    throw null;
+                }
+                case 6: {
+                    return tR;
+                }
+                case 8: {
+                    return dH;
+                }
+                case 10: {
+                    return S4;
+                }
+                case 12: {
+                    return F3;
+                }
+                case 14: {
+                    return f135tv;
+                }
+                case 16: {
+                    return gM;
+                }
+                case 18: {
+                    return C;
+                }
+                case 20: {
+                    return ME;
+                }
+                case 22: {
+                    return ji;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static abcd.es XL(abcd.Ss r9) {
@@ -706,39 +849,58 @@ public final class gs {
     }
 
     public static abcd.es Zo(abcd.Rs r1) {
-        switch(r1.j3()) {
-            case 1: goto L22;
-            case 2: goto L20;
-            case 3: goto L18;
-            case 4: goto L16;
-            case 5: goto L14;
-            case 6: goto L12;
-            case 7: goto L10;
-            case 8: goto L8;
-            case 9: goto L6;
-            default: goto L4;
-        };
-    L4:
-        Mr(r1);
-        throw null;
-    L6:
-        return DY;
-    L8:
-        return k4;
-    L10:
-        return ep;
-    L12:
-        return uC;
-    L14:
-        return HO;
-    L16:
-        return qI;
-    L18:
-        return x6;
-    L20:
-        return pn;
-    L22:
-        return tj;
+        java.lang.Throwable $ex9 = null;
+        int $pc9 = -1;
+        $sw9: while (true) {
+            switch ($pc9) {
+                case -1: {
+                    switch(r1.j3()) {
+                        case 1: { $pc9 = 22; continue $sw9; }
+                        case 2: { $pc9 = 20; continue $sw9; }
+                        case 3: { $pc9 = 18; continue $sw9; }
+                        case 4: { $pc9 = 16; continue $sw9; }
+                        case 5: { $pc9 = 14; continue $sw9; }
+                        case 6: { $pc9 = 12; continue $sw9; }
+                        case 7: { $pc9 = 10; continue $sw9; }
+                        case 8: { $pc9 = 8; continue $sw9; }
+                        case 9: { $pc9 = 6; continue $sw9; }
+                        default: { $pc9 = 4; continue $sw9; }
+                    };
+                }
+                case 4: {
+                    Mr(r1);
+                    throw null;
+                }
+                case 6: {
+                    return DY;
+                }
+                case 8: {
+                    return k4;
+                }
+                case 10: {
+                    return ep;
+                }
+                case 12: {
+                    return uC;
+                }
+                case 14: {
+                    return HO;
+                }
+                case 16: {
+                    return qI;
+                }
+                case 18: {
+                    return x6;
+                }
+                case 20: {
+                    return pn;
+                }
+                case 22: {
+                    return tj;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static abcd.es Zo(abcd.Ss r3) {
@@ -746,39 +908,58 @@ public final class gs {
     }
 
     public static abcd.es aM(abcd.Rs r1) {
-        switch(r1.j3()) {
-            case 1: goto L22;
-            case 2: goto L20;
-            case 3: goto L18;
-            case 4: goto L16;
-            case 5: goto L14;
-            case 6: goto L12;
-            case 7: goto L10;
-            case 8: goto L8;
-            case 9: goto L6;
-            default: goto L4;
-        };
-    L4:
-        Mr(r1);
-        throw null;
-    L6:
-        return K3;
-    L8:
-        return fd;
-    L10:
-        return jn;
-    L12:
-        return BN;
-    L14:
-        return DP;
-    L16:
-        return ee;
-    L18:
-        return g0;
-    L20:
-        return Qs;
-    L22:
-        return OM;
+        java.lang.Throwable $ex10 = null;
+        int $pc10 = -1;
+        $sw10: while (true) {
+            switch ($pc10) {
+                case -1: {
+                    switch(r1.j3()) {
+                        case 1: { $pc10 = 22; continue $sw10; }
+                        case 2: { $pc10 = 20; continue $sw10; }
+                        case 3: { $pc10 = 18; continue $sw10; }
+                        case 4: { $pc10 = 16; continue $sw10; }
+                        case 5: { $pc10 = 14; continue $sw10; }
+                        case 6: { $pc10 = 12; continue $sw10; }
+                        case 7: { $pc10 = 10; continue $sw10; }
+                        case 8: { $pc10 = 8; continue $sw10; }
+                        case 9: { $pc10 = 6; continue $sw10; }
+                        default: { $pc10 = 4; continue $sw10; }
+                    };
+                }
+                case 4: {
+                    Mr(r1);
+                    throw null;
+                }
+                case 6: {
+                    return K3;
+                }
+                case 8: {
+                    return fd;
+                }
+                case 10: {
+                    return jn;
+                }
+                case 12: {
+                    return BN;
+                }
+                case 14: {
+                    return DP;
+                }
+                case 16: {
+                    return ee;
+                }
+                case 18: {
+                    return g0;
+                }
+                case 20: {
+                    return Qs;
+                }
+                case 22: {
+                    return OM;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     private static abcd.es aM(abcd.Ss r3) {
@@ -786,24 +967,39 @@ public final class gs {
     }
 
     public static abcd.es gn(abcd.Rs r2) {
-        int r0 = r2.Mr();
-        if (r0 == 4) goto L23;
-        if (r0 == 5) goto L21;
-        if (r0 == 6) goto L19;
-        if (r0 == 7) goto L17;
-        if (r0 == 9) goto L13;
-        Mr(r2);
-        throw null;
-    L13:
-        return zg;
-    L17:
-        return wC;
-    L19:
-        return Lx;
-    L21:
-        return hG;
-    L23:
-        return s0;
+        int r0 = 0;
+        java.lang.Throwable $ex11 = null;
+        int $pc11 = -1;
+        $sw11: while (true) {
+            switch ($pc11) {
+                case -1: {
+                    r0 = r2.Mr();
+                    if (r0 == 4) { $pc11 = 23; continue $sw11; }
+                    if (r0 == 5) { $pc11 = 21; continue $sw11; }
+                    if (r0 == 6) { $pc11 = 19; continue $sw11; }
+                    if (r0 == 7) { $pc11 = 17; continue $sw11; }
+                    if (r0 == 9) { $pc11 = 13; continue $sw11; }
+                    Mr(r2);
+                    throw null;
+                }
+                case 13: {
+                    return zg;
+                }
+                case 17: {
+                    return wC;
+                }
+                case 19: {
+                    return Lx;
+                }
+                case 21: {
+                    return hG;
+                }
+                case 23: {
+                    return s0;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static abcd.es gn(abcd.Ss r3) {
@@ -811,213 +1007,306 @@ public final class gs {
     }
 
     public static abcd.es j3(abcd.Rs r2) {
-        int r0 = r2.Mr();
-        if (r0 == 0) goto L27;
-        if (r0 == 9) goto L25;
-        if (r0 == 4) goto L23;
-        if (r0 == 5) goto L21;
-        if (r0 == 6) goto L19;
-        if (r0 == 7) goto L15;
-        Mr(r2);
-        throw null;
-    L15:
-        return sT;
-    L19:
-        return Lz;
-    L21:
-        return E4;
-    L23:
-        return xg;
-    L25:
-        return hp;
-    L27:
-        return Fd;
+        int r0 = 0;
+        java.lang.Throwable $ex12 = null;
+        int $pc12 = -1;
+        $sw12: while (true) {
+            switch ($pc12) {
+                case -1: {
+                    r0 = r2.Mr();
+                    if (r0 == 0) { $pc12 = 27; continue $sw12; }
+                    if (r0 == 9) { $pc12 = 25; continue $sw12; }
+                    if (r0 == 4) { $pc12 = 23; continue $sw12; }
+                    if (r0 == 5) { $pc12 = 21; continue $sw12; }
+                    if (r0 == 6) { $pc12 = 19; continue $sw12; }
+                    if (r0 == 7) { $pc12 = 15; continue $sw12; }
+                    Mr(r2);
+                    throw null;
+                }
+                case 15: {
+                    return sT;
+                }
+                case 19: {
+                    return Lz;
+                }
+                case 21: {
+                    return E4;
+                }
+                case 23: {
+                    return xg;
+                }
+                case 25: {
+                    return hp;
+                }
+                case 27: {
+                    return Fd;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static abcd.es j6(int r1, abcd.Rs r2, abcd.Ss r3, abcd.Abstractms r4) {
-        switch(r1) {
-            case 1: goto L121;
-            case 2: goto L119;
-            case 3: goto L117;
-            case 4: goto L115;
-            case 5: goto L113;
-            case 6: goto L111;
-            case 7: goto L109;
-            case 8: goto L107;
-            case 9: goto L105;
-            case 10: goto L103;
-            case 11: goto L101;
-            case 12: goto L99;
-            case 13: goto L97;
-            case 14: goto L95;
-            case 15: goto L93;
-            case 16: goto L91;
-            case 17: goto L89;
-            case 18: goto L87;
-            case 19: goto L85;
-            case 20: goto L83;
-            case 21: goto L81;
-            case 22: goto L79;
-            case 23: goto L77;
-            case 24: goto L75;
-            case 25: goto L73;
-            case 26: goto L71;
-            case 27: goto L69;
-            case 28: goto L67;
-            case 29: goto L65;
-            case 30: goto L63;
-            case 31: goto L61;
-            case 32: goto L59;
-            case 33: goto L53;
-            case 34: goto L51;
-            case 35: goto L49;
-            case 36: goto L47;
-            case 37: goto L45;
-            case 38: goto L38;
-            case 39: goto L32;
-            case 40: goto L31;
-            case 41: goto L29;
-            case 42: goto L5;
-            case 43: goto L27;
-            case 44: goto L25;
-            case 45: goto L23;
-            case 46: goto L21;
-            case 47: goto L19;
-            case 48: goto L17;
-            case 49: goto L15;
-            case 50: goto L12;
-            case 51: goto L10;
-            case 52: goto L8;
-            case 53: goto L6;
-            default: goto L5;
-        };
-    L6:
-        abcd.Gs r5 = (abcd.Gs) r4;
-        return DW(r5.J8().j6(r5.VH().VH()));
-    L8:
-        abcd.Gs r6 = (abcd.Gs) r4;
-        return j6(r6.J8().j6(r6.VH().VH()));
-    L10:
-        abcd.Gs r7 = (abcd.Gs) r4;
-        return Hw(r7.J8().j6(r7.VH().VH()));
-    L12:
-        abcd.Gs r8 = (abcd.Gs) r4;
-        return v5(r8.J8().j6(r8.VH().VH()));
-    L32:
-        abcd.Qs r9 = r3.getType(1);
-        if (r9 != abcd.Qs.EQ) goto L35;
-        abcd.Qs r10 = r3.getType(0);
-    L37:
-        return DW(r10);
-    L35:
-        r10 = r9.we();
-        goto L37
-    L38:
-        abcd.Qs r11 = r3.getType(0);
-        if (r11 != abcd.Qs.EQ) goto L41;
-        abcd.Qs r12 = r2.getType();
-    L43:
-        return j6(r12);
-    L41:
-        r12 = r11.we();
-        goto L43
-    L5:
-        throw new java.lang.RuntimeException("unknown opcode " + abcd._r.DW(r1));
-    L15:
-        return FH(((abcd.Gs) r4).J8());
-    L17:
-        return aM(r3.getType(0));
-    L19:
-        return XL(r3.getType(0));
-    L21:
-        return VH(r2);
-    L23:
-        return Zo(r2);
-    L25:
-        return qU;
-    L27:
-        return hx;
-    L29:
-        return Ws(r2.getType());
-    L31:
-        return Ak;
-    L45:
-        return Yi;
-    L47:
-        return dW;
-    L49:
-        return GK;
-    L51:
-        return PH;
-    L53:
-        if (r3.size() != 0) goto L57;
-        return Fd;
-    L57:
-        return j3(r3.getType(0));
-    L59:
-        return ct;
-    L61:
-        return TI;
-    L63:
-        return AR;
-    L65:
-        return j6(r2, r3.getType(0));
-    L67:
-        return FH(r3.getType(0));
-    L69:
-        return Hw(r3.getType(0));
-    L71:
-        return QX(r2);
-    L73:
-        return QX(r3);
-    L75:
-        return J8(r3);
-    L77:
-        return J0(r3);
-    L79:
-        return XL(r3);
-    L81:
-        return EQ(r3);
-    L83:
-        return DW(r3);
-    L85:
-        return J8(r2);
-    L87:
-        return we(r3);
-    L89:
-        return FH(r3);
-    L91:
-        return tp(r3);
-    L93:
-        return Ws(r3);
-    L95:
-        return j6(r3);
-    L97:
-        return cn;
-    L99:
-        return Zo(r3);
-    L101:
-        return VH(r3);
-    L103:
-        return v5(r3);
-    L105:
-        return gn(r3);
-    L107:
-        return u7(r3);
-    L109:
-        return Hw(r3);
-    L111:
-        return j3;
-    L113:
-        return v5(r2);
-    L115:
-        return tp(r2);
-    L117:
-        return EQ(r2);
-    L119:
-        return u7(r2);
-    L121:
-        return j6;
+        abcd.Gs r5 = null;
+        abcd.Gs r6 = null;
+        abcd.Gs r7 = null;
+        abcd.Gs r8 = null;
+        abcd.Qs r9 = null;
+        abcd.Qs r10 = null;
+        abcd.Qs r11 = null;
+        abcd.Qs r12 = null;
+        java.lang.Throwable $ex13 = null;
+        int $pc13 = -1;
+        $sw13: while (true) {
+            switch ($pc13) {
+                case -1: {
+                    switch(r1) {
+                        case 1: { $pc13 = 121; continue $sw13; }
+                        case 2: { $pc13 = 119; continue $sw13; }
+                        case 3: { $pc13 = 117; continue $sw13; }
+                        case 4: { $pc13 = 115; continue $sw13; }
+                        case 5: { $pc13 = 113; continue $sw13; }
+                        case 6: { $pc13 = 111; continue $sw13; }
+                        case 7: { $pc13 = 109; continue $sw13; }
+                        case 8: { $pc13 = 107; continue $sw13; }
+                        case 9: { $pc13 = 105; continue $sw13; }
+                        case 10: { $pc13 = 103; continue $sw13; }
+                        case 11: { $pc13 = 101; continue $sw13; }
+                        case 12: { $pc13 = 99; continue $sw13; }
+                        case 13: { $pc13 = 97; continue $sw13; }
+                        case 14: { $pc13 = 95; continue $sw13; }
+                        case 15: { $pc13 = 93; continue $sw13; }
+                        case 16: { $pc13 = 91; continue $sw13; }
+                        case 17: { $pc13 = 89; continue $sw13; }
+                        case 18: { $pc13 = 87; continue $sw13; }
+                        case 19: { $pc13 = 85; continue $sw13; }
+                        case 20: { $pc13 = 83; continue $sw13; }
+                        case 21: { $pc13 = 81; continue $sw13; }
+                        case 22: { $pc13 = 79; continue $sw13; }
+                        case 23: { $pc13 = 77; continue $sw13; }
+                        case 24: { $pc13 = 75; continue $sw13; }
+                        case 25: { $pc13 = 73; continue $sw13; }
+                        case 26: { $pc13 = 71; continue $sw13; }
+                        case 27: { $pc13 = 69; continue $sw13; }
+                        case 28: { $pc13 = 67; continue $sw13; }
+                        case 29: { $pc13 = 65; continue $sw13; }
+                        case 30: { $pc13 = 63; continue $sw13; }
+                        case 31: { $pc13 = 61; continue $sw13; }
+                        case 32: { $pc13 = 59; continue $sw13; }
+                        case 33: { $pc13 = 53; continue $sw13; }
+                        case 34: { $pc13 = 51; continue $sw13; }
+                        case 35: { $pc13 = 49; continue $sw13; }
+                        case 36: { $pc13 = 47; continue $sw13; }
+                        case 37: { $pc13 = 45; continue $sw13; }
+                        case 38: { $pc13 = 38; continue $sw13; }
+                        case 39: { $pc13 = 32; continue $sw13; }
+                        case 40: { $pc13 = 31; continue $sw13; }
+                        case 41: { $pc13 = 29; continue $sw13; }
+                        case 42: { $pc13 = 5; continue $sw13; }
+                        case 43: { $pc13 = 27; continue $sw13; }
+                        case 44: { $pc13 = 25; continue $sw13; }
+                        case 45: { $pc13 = 23; continue $sw13; }
+                        case 46: { $pc13 = 21; continue $sw13; }
+                        case 47: { $pc13 = 19; continue $sw13; }
+                        case 48: { $pc13 = 17; continue $sw13; }
+                        case 49: { $pc13 = 15; continue $sw13; }
+                        case 50: { $pc13 = 12; continue $sw13; }
+                        case 51: { $pc13 = 10; continue $sw13; }
+                        case 52: { $pc13 = 8; continue $sw13; }
+                        case 53: { $pc13 = 6; continue $sw13; }
+                        default: { $pc13 = 5; continue $sw13; }
+                    };
+                }
+                case 6: {
+                    r5 = (abcd.Gs) r4;
+                    return DW(r5.J8().j6(r5.VH().VH()));
+                }
+                case 8: {
+                    r6 = (abcd.Gs) r4;
+                    return j6(r6.J8().j6(r6.VH().VH()));
+                }
+                case 10: {
+                    r7 = (abcd.Gs) r4;
+                    return Hw(r7.J8().j6(r7.VH().VH()));
+                }
+                case 12: {
+                    r8 = (abcd.Gs) r4;
+                    return v5(r8.J8().j6(r8.VH().VH()));
+                }
+                case 32: {
+                    r9 = r3.getType(1);
+                    if (r9 != abcd.Qs.EQ) { $pc13 = 35; continue $sw13; }
+                    r10 = r3.getType(0);
+                    $pc13 = 37; continue $sw13;
+                }
+                case 37: {
+                    return DW(r10);
+                }
+                case 35: {
+                    r10 = r9.we();
+                    { $pc13 = 37; continue $sw13; }
+                }
+                case 38: {
+                    r11 = r3.getType(0);
+                    if (r11 != abcd.Qs.EQ) { $pc13 = 41; continue $sw13; }
+                    r12 = r2.getType();
+                    $pc13 = 43; continue $sw13;
+                }
+                case 43: {
+                    return j6(r12);
+                }
+                case 41: {
+                    r12 = r11.we();
+                    { $pc13 = 43; continue $sw13; }
+                }
+                case 5: {
+                    throw new java.lang.RuntimeException("unknown opcode " + abcd._r.DW(r1));
+                }
+                case 15: {
+                    return FH(((abcd.Gs) r4).J8());
+                }
+                case 17: {
+                    return aM(r3.getType(0));
+                }
+                case 19: {
+                    return XL(r3.getType(0));
+                }
+                case 21: {
+                    return VH(r2);
+                }
+                case 23: {
+                    return Zo(r2);
+                }
+                case 25: {
+                    return qU;
+                }
+                case 27: {
+                    return hx;
+                }
+                case 29: {
+                    return Ws(r2.getType());
+                }
+                case 31: {
+                    return Ak;
+                }
+                case 45: {
+                    return Yi;
+                }
+                case 47: {
+                    return dW;
+                }
+                case 49: {
+                    return GK;
+                }
+                case 51: {
+                    return PH;
+                }
+                case 53: {
+                    if (r3.size() != 0) { $pc13 = 57; continue $sw13; }
+                    return Fd;
+                }
+                case 57: {
+                    return j3(r3.getType(0));
+                }
+                case 59: {
+                    return ct;
+                }
+                case 61: {
+                    return TI;
+                }
+                case 63: {
+                    return AR;
+                }
+                case 65: {
+                    return j6(r2, r3.getType(0));
+                }
+                case 67: {
+                    return FH(r3.getType(0));
+                }
+                case 69: {
+                    return Hw(r3.getType(0));
+                }
+                case 71: {
+                    return QX(r2);
+                }
+                case 73: {
+                    return QX(r3);
+                }
+                case 75: {
+                    return J8(r3);
+                }
+                case 77: {
+                    return J0(r3);
+                }
+                case 79: {
+                    return XL(r3);
+                }
+                case 81: {
+                    return EQ(r3);
+                }
+                case 83: {
+                    return DW(r3);
+                }
+                case 85: {
+                    return J8(r2);
+                }
+                case 87: {
+                    return we(r3);
+                }
+                case 89: {
+                    return FH(r3);
+                }
+                case 91: {
+                    return tp(r3);
+                }
+                case 93: {
+                    return Ws(r3);
+                }
+                case 95: {
+                    return j6(r3);
+                }
+                case 97: {
+                    return cn;
+                }
+                case 99: {
+                    return Zo(r3);
+                }
+                case 101: {
+                    return VH(r3);
+                }
+                case 103: {
+                    return v5(r3);
+                }
+                case 105: {
+                    return gn(r3);
+                }
+                case 107: {
+                    return u7(r3);
+                }
+                case 109: {
+                    return Hw(r3);
+                }
+                case 111: {
+                    return j3;
+                }
+                case 113: {
+                    return v5(r2);
+                }
+                case 115: {
+                    return tp(r2);
+                }
+                case 117: {
+                    return EQ(r2);
+                }
+                case 119: {
+                    return u7(r2);
+                }
+                case 121: {
+                    return j6;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static abcd.es j6(abcd.Os r3) {
@@ -1025,107 +1314,168 @@ public final class gs {
     }
 
     public static abcd.es j6(abcd.Rs r1) {
-        switch(r1.j3()) {
-            case 1: goto L22;
-            case 2: goto L20;
-            case 3: goto L18;
-            case 4: goto L16;
-            case 5: goto L14;
-            case 6: goto L12;
-            case 7: goto L10;
-            case 8: goto L8;
-            case 9: goto L6;
-            default: goto L4;
-        };
-    L4:
-        Mr(r1);
-        throw null;
-    L6:
-        return Ej;
-    L8:
-        return om;
-    L10:
-        return Hl;
-    L12:
-        return GT;
-    L14:
-        return pl;
-    L16:
-        return oh;
-    L18:
-        return Od;
-    L20:
-        return cc;
-    L22:
-        return T6;
+        java.lang.Throwable $ex14 = null;
+        int $pc14 = -1;
+        $sw14: while (true) {
+            switch ($pc14) {
+                case -1: {
+                    switch(r1.j3()) {
+                        case 1: { $pc14 = 22; continue $sw14; }
+                        case 2: { $pc14 = 20; continue $sw14; }
+                        case 3: { $pc14 = 18; continue $sw14; }
+                        case 4: { $pc14 = 16; continue $sw14; }
+                        case 5: { $pc14 = 14; continue $sw14; }
+                        case 6: { $pc14 = 12; continue $sw14; }
+                        case 7: { $pc14 = 10; continue $sw14; }
+                        case 8: { $pc14 = 8; continue $sw14; }
+                        case 9: { $pc14 = 6; continue $sw14; }
+                        default: { $pc14 = 4; continue $sw14; }
+                    };
+                }
+                case 4: {
+                    Mr(r1);
+                    throw null;
+                }
+                case 6: {
+                    return Ej;
+                }
+                case 8: {
+                    return om;
+                }
+                case 10: {
+                    return Hl;
+                }
+                case 12: {
+                    return GT;
+                }
+                case 14: {
+                    return pl;
+                }
+                case 16: {
+                    return oh;
+                }
+                case 18: {
+                    return Od;
+                }
+                case 20: {
+                    return cc;
+                }
+                case 22: {
+                    return T6;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static abcd.es j6(abcd.Rs r2, int r3) {
-        abcd.Qs r0 = r2.getType().we();
-        if (r0.yS() == true) goto L12;
-        if (r3 < 0) goto L11;
-        abcd.Ps r4 = new abcd.Ps(r3);
+        abcd.Qs r0 = null;
+        abcd.Ps r4 = null;
         int r1 = 0;
-    L6:
-        if (r1 >= r3) goto L9;
-        r4.j6(r1, r0);
-        r1 = r1 + 1;
-        goto L6
-    L9:
-        return new abcd.es(42, r4, abcd.Rr.u7);
-    L11:
-        throw new java.lang.IllegalArgumentException("count < 0");
-    L12:
-        Mr(r2);
-        throw null;
+        java.lang.Throwable $ex15 = null;
+        int $pc15 = -1;
+        $sw15: while (true) {
+            switch ($pc15) {
+                case -1: {
+                    r0 = r2.getType().we();
+                    if (r0.yS() == true) { $pc15 = 12; continue $sw15; }
+                    if (r3 < 0) { $pc15 = 11; continue $sw15; }
+                    r4 = new abcd.Ps(r3);
+                    r1 = 0;
+                    $pc15 = 6; continue $sw15;
+                }
+                case 6: {
+                    if (r1 >= r3) { $pc15 = 9; continue $sw15; }
+                    r4.j6(r1, r0);
+                    r1 = r1 + 1;
+                    { $pc15 = 6; continue $sw15; }
+                }
+                case 9: {
+                    return new abcd.es(42, r4, abcd.Rr.u7);
+                }
+                case 11: {
+                    throw new java.lang.IllegalArgumentException("count < 0");
+                }
+                case 12: {
+                    Mr(r2);
+                    throw null;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static abcd.es j6(abcd.Rs r6, abcd.Rs r7) {
-        int r0 = r6.Mr();
-        int r1 = r7.Mr();
-        if (r1 == 4) goto L37;
-        if (r1 == 5) goto L27;
-        if (r1 == 6) goto L8;
-        if (r1 == 7) goto L11;
-    L42:
-        aM(abcd.Ps.j6(r6.getType(), r7.getType()));
-        throw null;
-    L11:
-        if (r0 == 4) goto L20;
-        if (r0 == 5) goto L18;
-        if (r0 != 6) goto L27;
-        return Za;
-    L18:
-        return qP;
-    L20:
-        return PT;
-    L8:
-        if (r0 == 4) goto L26;
-        if (r0 == 5) goto L24;
-        if (r0 != 7) goto L11;
-        return ce;
-    L24:
-        return oa;
-    L26:
-        return Of;
-    L27:
-        if (r0 == 4) goto L36;
-        if (r0 == 6) goto L34;
-        if (r0 != 7) goto L37;
-        return Jm;
-    L34:
-        return An;
-    L36:
-        return b1;
-    L37:
-        if (r0 == 5) goto L47;
-        if (r0 == 6) goto L45;
-        if (r0 != 7) goto L42;
-        return Bx;
-    L45:
-        return Pa;
-    L47:
-        return MP;
+        int r0 = 0;
+        int r1 = 0;
+        java.lang.Throwable $ex16 = null;
+        int $pc16 = -1;
+        $sw16: while (true) {
+            switch ($pc16) {
+                case -1: {
+                    r0 = r6.Mr();
+                    r1 = r7.Mr();
+                    if (r1 == 4) { $pc16 = 37; continue $sw16; }
+                    if (r1 == 5) { $pc16 = 27; continue $sw16; }
+                    if (r1 == 6) { $pc16 = 8; continue $sw16; }
+                    if (r1 == 7) { $pc16 = 11; continue $sw16; }
+                    $pc16 = 42; continue $sw16;
+                }
+                case 42: {
+                    aM(abcd.Ps.j6(r6.getType(), r7.getType()));
+                    throw null;
+                }
+                case 11: {
+                    if (r0 == 4) { $pc16 = 20; continue $sw16; }
+                    if (r0 == 5) { $pc16 = 18; continue $sw16; }
+                    if (r0 != 6) { $pc16 = 27; continue $sw16; }
+                    return Za;
+                }
+                case 18: {
+                    return qP;
+                }
+                case 20: {
+                    return PT;
+                }
+                case 8: {
+                    if (r0 == 4) { $pc16 = 26; continue $sw16; }
+                    if (r0 == 5) { $pc16 = 24; continue $sw16; }
+                    if (r0 != 7) { $pc16 = 11; continue $sw16; }
+                    return ce;
+                }
+                case 24: {
+                    return oa;
+                }
+                case 26: {
+                    return Of;
+                }
+                case 27: {
+                    if (r0 == 4) { $pc16 = 36; continue $sw16; }
+                    if (r0 == 6) { $pc16 = 34; continue $sw16; }
+                    if (r0 != 7) { $pc16 = 37; continue $sw16; }
+                    return Jm;
+                }
+                case 34: {
+                    return An;
+                }
+                case 36: {
+                    return b1;
+                }
+                case 37: {
+                    if (r0 == 5) { $pc16 = 47; continue $sw16; }
+                    if (r0 == 6) { $pc16 = 45; continue $sw16; }
+                    if (r0 != 7) { $pc16 = 42; continue $sw16; }
+                    return Bx;
+                }
+                case 45: {
+                    return Pa;
+                }
+                case 47: {
+                    return MP;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static abcd.es j6(abcd.Ss r9) {
@@ -1133,70 +1483,109 @@ public final class gs {
     }
 
     private static abcd.es j6(abcd.Ss r5, abcd.es r6, abcd.es r7, abcd.es r8, abcd.es r9) {
-        int r0 = r5.size();
-        if (r0 != 1) goto L5;
-        int r10 = r5.getType(0).Mr();
-        if (r10 == 6) goto L20;
-        if (r10 != 9) goto L18;
-        if (r7 == null) goto L18;
-        return r7;
-    L18:
-        aM(r5);
-        throw null;
-    L20:
-        return r6;
-    L5:
-        if (r0 != 2) goto L18;
-        int r11 = r5.getType(0).Mr();
-        if (r11 != r5.getType(1).Mr()) goto L18;
-        if (r11 == 6) goto L12;
-        if (r11 != 9) goto L18;
-        if (r9 == null) goto L18;
-        return r9;
-    L12:
-        return r8;
+        int r0 = 0;
+        int r10 = 0;
+        int r11 = 0;
+        java.lang.Throwable $ex17 = null;
+        int $pc17 = -1;
+        $sw17: while (true) {
+            switch ($pc17) {
+                case -1: {
+                    r0 = r5.size();
+                    if (r0 != 1) { $pc17 = 5; continue $sw17; }
+                    r10 = r5.getType(0).Mr();
+                    if (r10 == 6) { $pc17 = 20; continue $sw17; }
+                    if (r10 != 9) { $pc17 = 18; continue $sw17; }
+                    if (r7 == null) { $pc17 = 18; continue $sw17; }
+                    return r7;
+                }
+                case 18: {
+                    aM(r5);
+                    throw null;
+                }
+                case 20: {
+                    return r6;
+                }
+                case 5: {
+                    if (r0 != 2) { $pc17 = 18; continue $sw17; }
+                    r11 = r5.getType(0).Mr();
+                    if (r11 != r5.getType(1).Mr()) { $pc17 = 18; continue $sw17; }
+                    if (r11 == 6) { $pc17 = 12; continue $sw17; }
+                    if (r11 != 9) { $pc17 = 18; continue $sw17; }
+                    if (r9 == null) { $pc17 = 18; continue $sw17; }
+                    return r9;
+                }
+                case 12: {
+                    return r8;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     private static abcd.es j6(abcd.Ss r9, abcd.es r10, abcd.es r11, abcd.es r12, abcd.es r13, abcd.es r14, abcd.es r15, abcd.es r16, abcd.es r17) {
-        int r0 = r9.getType(0).Mr();
-        int r2 = r9.size();
-        if (r2 != 1) goto L5;
-        if (r0 == 4) goto L24;
-        if (r0 == 5) goto L23;
-        if (r0 == 6) goto L22;
-        if (r0 != 7) goto L11;
-        return r11;
-    L11:
+        int r0 = 0;
+        int r2 = 0;
         abcd.es r1 = null;
-    L25:
-        if (r1 == null) goto L27;
-        return r1;
-    L27:
-        aM(r9);
-        throw null;
-    L22:
-        return r10;
-    L23:
-        r1 = r12;
-        goto L25
-    L24:
-        r1 = r13;
-        goto L25
-    L5:
-        if (r2 != 2) goto L11;
-        if (r0 == 4) goto L15;
-        if (r0 == 5) goto L14;
-        if (r0 == 6) goto L13;
-        if (r0 != 7) goto L11;
-        return r15;
-    L13:
-        return r14;
-    L14:
-        r1 = r16;
-        goto L25
-    L15:
-        r1 = r17;
-        goto L25
+        java.lang.Throwable $ex18 = null;
+        int $pc18 = -1;
+        $sw18: while (true) {
+            switch ($pc18) {
+                case -1: {
+                    r0 = r9.getType(0).Mr();
+                    r2 = r9.size();
+                    if (r2 != 1) { $pc18 = 5; continue $sw18; }
+                    if (r0 == 4) { $pc18 = 24; continue $sw18; }
+                    if (r0 == 5) { $pc18 = 23; continue $sw18; }
+                    if (r0 == 6) { $pc18 = 22; continue $sw18; }
+                    if (r0 != 7) { $pc18 = 11; continue $sw18; }
+                    return r11;
+                }
+                case 11: {
+                    r1 = null;
+                    $pc18 = 25; continue $sw18;
+                }
+                case 25: {
+                    if (r1 == null) { $pc18 = 27; continue $sw18; }
+                    return r1;
+                }
+                case 27: {
+                    aM(r9);
+                    throw null;
+                }
+                case 22: {
+                    return r10;
+                }
+                case 23: {
+                    r1 = r12;
+                    { $pc18 = 25; continue $sw18; }
+                }
+                case 24: {
+                    r1 = r13;
+                    { $pc18 = 25; continue $sw18; }
+                }
+                case 5: {
+                    if (r2 != 2) { $pc18 = 11; continue $sw18; }
+                    if (r0 == 4) { $pc18 = 15; continue $sw18; }
+                    if (r0 == 5) { $pc18 = 14; continue $sw18; }
+                    if (r0 == 6) { $pc18 = 13; continue $sw18; }
+                    if (r0 != 7) { $pc18 = 11; continue $sw18; }
+                    return r15;
+                }
+                case 13: {
+                    return r14;
+                }
+                case 14: {
+                    r1 = r16;
+                    { $pc18 = 25; continue $sw18; }
+                }
+                case 15: {
+                    r1 = r17;
+                    { $pc18 = 25; continue $sw18; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static abcd.es tp(abcd.Rs r4) {
@@ -1208,31 +1597,47 @@ public final class gs {
     }
 
     public static abcd.es u7(abcd.Rs r1) {
-        switch(r1.Mr()) {
-            case 4: goto L16;
-            case 5: goto L14;
-            case 6: goto L12;
-            case 7: goto L10;
-            case 8: goto L4;
-            case 9: goto L8;
-            case 10: goto L6;
-            default: goto L4;
-        };
-    L4:
-        Mr(r1);
-        throw null;
-    L6:
-        return VH;
-    L8:
-        return Zo;
-    L10:
-        return FH;
-    L12:
-        return DW;
-    L14:
-        return Hw;
-    L16:
-        return v5;
+        java.lang.Throwable $ex19 = null;
+        int $pc19 = -1;
+        $sw19: while (true) {
+            switch ($pc19) {
+                case -1: {
+                    switch(r1.Mr()) {
+                        case 4: { $pc19 = 16; continue $sw19; }
+                        case 5: { $pc19 = 14; continue $sw19; }
+                        case 6: { $pc19 = 12; continue $sw19; }
+                        case 7: { $pc19 = 10; continue $sw19; }
+                        case 8: { $pc19 = 4; continue $sw19; }
+                        case 9: { $pc19 = 8; continue $sw19; }
+                        case 10: { $pc19 = 6; continue $sw19; }
+                        default: { $pc19 = 4; continue $sw19; }
+                    };
+                }
+                case 4: {
+                    Mr(r1);
+                    throw null;
+                }
+                case 6: {
+                    return VH;
+                }
+                case 8: {
+                    return Zo;
+                }
+                case 10: {
+                    return FH;
+                }
+                case 12: {
+                    return DW;
+                }
+                case 14: {
+                    return Hw;
+                }
+                case 16: {
+                    return v5;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static abcd.es u7(abcd.Ss r4) {
@@ -1244,27 +1649,43 @@ public final class gs {
     }
 
     public static abcd.es v5(abcd.Rs r2) {
-        if (r2.getType() == abcd.Qs.EQ) goto L5;
-        int r0 = r2.Mr();
-        if (r0 == 4) goto L27;
-        if (r0 == 5) goto L25;
-        if (r0 == 6) goto L23;
-        if (r0 == 7) goto L21;
-        if (r0 == 9) goto L17;
-        Mr(r2);
-        throw null;
-    L17:
-        return XL;
-    L21:
-        return J8;
-    L23:
-        return J0;
-    L25:
-        return Ws;
-    L27:
-        return QX;
-    L5:
-        return aM;
+        int r0 = 0;
+        java.lang.Throwable $ex20 = null;
+        int $pc20 = -1;
+        $sw20: while (true) {
+            switch ($pc20) {
+                case -1: {
+                    if (r2.getType() == abcd.Qs.EQ) { $pc20 = 5; continue $sw20; }
+                    r0 = r2.Mr();
+                    if (r0 == 4) { $pc20 = 27; continue $sw20; }
+                    if (r0 == 5) { $pc20 = 25; continue $sw20; }
+                    if (r0 == 6) { $pc20 = 23; continue $sw20; }
+                    if (r0 == 7) { $pc20 = 21; continue $sw20; }
+                    if (r0 == 9) { $pc20 = 17; continue $sw20; }
+                    Mr(r2);
+                    throw null;
+                }
+                case 17: {
+                    return XL;
+                }
+                case 21: {
+                    return J8;
+                }
+                case 23: {
+                    return J0;
+                }
+                case 25: {
+                    return Ws;
+                }
+                case 27: {
+                    return QX;
+                }
+                case 5: {
+                    return aM;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static abcd.es v5(abcd.Ss r3) {

@@ -75,9 +75,20 @@ public abstract class EE {
     }
 
     protected byte[] j6() {
-        if (this.DW != null) goto L6;
-        this.DW = new byte[8192];
-    L6:
-        return this.DW;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (this.DW != null) { $pc0 = 6; continue $sw0; }
+                    this.DW = new byte[8192];
+                    $pc0 = 6; continue $sw0;
+                }
+                case 6: {
+                    return this.DW;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

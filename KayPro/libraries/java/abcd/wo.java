@@ -21,30 +21,50 @@ public final class wo extends abcd.Abstractao {
 
     @Override
     public boolean VH(abcd.AbstractVn r6) {
-        if ((r6 instanceof abcd.mo) == true) goto L5;
-        return false;
-    L5:
-        abcd.cs r7 = r6.gn();
-        int r0 = r7.size();
-        if (r0 != 2) goto L8;
-        abcd.bs r1 = r7.get(0);
-        abcd.bs r2 = r7.get(1);
-    L15:
-        if (abcd.Abstractao.v5(r1.we()) == true) goto L17;
-        return false;
-    L17:
-        if (abcd.Abstractao.v5(r2.we()) == false) goto L21;
-        return true;
-    L21:
-        return false;
-    L8:
-        if (r0 == 3) goto L10;
-        return false;
-    L10:
-        r1 = r7.get(1);
-        r2 = r7.get(2);
-        if (r1.we() == r7.get(0).we()) goto L15;
-        return false;
+        abcd.cs r7 = null;
+        int r0 = 0;
+        abcd.bs r1 = null;
+        abcd.bs r2 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if ((r6 instanceof abcd.mo) == true) { $pc0 = 5; continue $sw0; }
+                    return false;
+                }
+                case 5: {
+                    r7 = r6.gn();
+                    r0 = r7.size();
+                    if (r0 != 2) { $pc0 = 8; continue $sw0; }
+                    r1 = r7.get(0);
+                    r2 = r7.get(1);
+                    $pc0 = 15; continue $sw0;
+                }
+                case 15: {
+                    if (abcd.Abstractao.v5(r1.we()) == true) { $pc0 = 17; continue $sw0; }
+                    return false;
+                }
+                case 17: {
+                    if (abcd.Abstractao.v5(r2.we()) == false) { $pc0 = 21; continue $sw0; }
+                    return true;
+                }
+                case 21: {
+                    return false;
+                }
+                case 8: {
+                    if (r0 == 3) { $pc0 = 10; continue $sw0; }
+                    return false;
+                }
+                case 10: {
+                    r1 = r7.get(1);
+                    r2 = r7.get(2);
+                    if (r1.we() == r7.get(0).we()) { $pc0 = 15; continue $sw0; }
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

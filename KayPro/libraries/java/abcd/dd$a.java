@@ -1148,15 +1148,15 @@ public class dd$a {
         /* JADX WARN: Type inference failed for: r8v8 */
         @su(method = 194914889951009517L)
         public void m3502j6(int i, int i2, int i3, Ya ya) throws Throwable {
-            ?? r8;
+            java.lang.Object r8;
             Ya ya2;
             Integer numM3496gn;
-            ?? r3;
+            java.lang.Object r3;
             int i4;
             int i5;
-            ?? r4;
-            ?? r15 = i2;
-            ?? r14 = i3;
+            java.lang.Object r4;
+            java.lang.Object r15 = i2;
+            java.lang.Object r14 = i3;
             try {
                 if (f1459j6) {
                     Integer num = new Integer(i);
@@ -1215,7 +1215,7 @@ public class dd$a {
                 if (dd.j6(this.f1484vy.f1434Hw)) {
                     Ia ia = null;
                     int i8 = 0;
-                    ?? r6 = z4;
+                    java.lang.Object r6 = z4;
                     while (i8 < this.f1470Ws.Hw()) {
                         ua uaVarJ7 = this.f1470Ws.j6(i8);
                         Da daVH2 = this.f1484vy.f1440VH.VH();
@@ -6693,7 +6693,7 @@ public class dd$a {
     /* JADX WARN: Type inference failed for: r15v3 */
     @su(method = -6343320044400670080L)
     private boolean m3435j6(int i, int i2, Ya ya, boolean z, boolean z2, Ya ya2, boolean z3, boolean z4) throws Throwable {
-        ?? r15;
+        java.lang.Object r15;
         Ya yaJ6;
         if (f1430j6) {
             wu.j6(-3001761336573711675L, this, new Object[]{new Integer(i), new Integer(i2), ya, new Boolean(z), new Boolean(z2), ya2, new Boolean(z3), new Boolean(z4)});

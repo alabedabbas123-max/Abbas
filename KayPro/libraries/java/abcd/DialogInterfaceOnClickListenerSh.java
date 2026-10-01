@@ -25,19 +25,45 @@ class DialogInterfaceOnClickListenerSh implements android.content.DialogInterfac
     @Override
     @abcd.Interfacesu(method = -245041285058999904L)
     public void onClick(android.content.DialogInterface r8, int r9) {
-    L7:
-        th = move-exception;
-        if (DW == false) goto L11;
-        abcd.wu.j6(th, -5273463928502553904L, this, r8, new java.lang.Integer(r9));
-    L11:
-        throw th;
-    L3:
-        if (j6 == false) goto L5;
-        abcd.wu.j6(-5273463928502553904L, this, r8, new java.lang.Integer(r9));     // Catch: java.lang.Throwable -> L7
-    L5:
-        android.app.AlertDialog r0 = (android.app.AlertDialog) r8;     // Catch: java.lang.Throwable -> L7
-        abcd.Yh.j6(this.Hw, r0);     // Catch: java.lang.Throwable -> L7
-        r0.dismiss();     // Catch: java.lang.Throwable -> L7
-        abcd.Yh.j6(this.Hw, this.FH, abcd.Yh.DW(this.Hw, r0), abcd.Yh.FH(this.Hw, r0));     // Catch: java.lang.Throwable -> L7
+        android.app.AlertDialog r0 = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 3;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 7: {
+                    th = $ex0;
+                    if (DW == false) { $pc0 = 11; continue $sw0; }
+                    abcd.wu.j6(th, -5273463928502553904L, this, r8, new java.lang.Integer(r9));
+                    $pc0 = 11; continue $sw0;
+                }
+                case 11: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 3: {
+                    if (j6 == false) { $pc0 = 5; continue $sw0; }
+                    try {
+                        abcd.wu.j6(-5273463928502553904L, this, r8, new java.lang.Integer(r9));
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 7; continue $sw0;
+                    }
+                    $pc0 = 5; continue $sw0;
+                }
+                case 5: {
+                    try {
+                        r0 = (android.app.AlertDialog) r8;
+                        abcd.Yh.j6(this.Hw, r0);
+                        r0.dismiss();
+                        abcd.Yh.j6(this.Hw, this.FH, abcd.Yh.DW(this.Hw, r0), abcd.Yh.FH(this.Hw, r0));
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 7; continue $sw0;
+                    }
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

@@ -38,47 +38,81 @@ public class Receipt implements android.os.Parcelable {
     }
 
     public boolean equals(java.lang.Object r8) {
-        if (this != r8) goto L6;
-        return true;
-    L6:
-        if ((r8 instanceof tv.ouya.console.api.Receipt) == true) goto L8;
-        return false;
-    L8:
-        tv.ouya.console.api.Receipt r9 = (tv.ouya.console.api.Receipt) r8;
-        if (this.DW.equals(r9.DW) == true) goto L12;
-        return false;
-    L12:
-        if (this.FH == r9.FH) goto L15;
-        return false;
-    L15:
-        if (this.Hw.equals(r9.Hw) == true) goto L18;
-        return false;
-    L18:
-        if (this.v5.equals(r9.v5) == true) goto L21;
-        return false;
-    L21:
-        if (this.Zo.equals(r9.Zo) == true) goto L24;
-        return false;
-    L24:
-        if (this.VH == r9.VH) goto L26;
-        return false;
-    L26:
-        java.lang.String r1 = this.gn;
-        if (r1 != null) goto L29;
-    L31:
-        return true;
-    L29:
-        if (r1.equals(r9.gn) == true) goto L31;
-        return false;
+        tv.ouya.console.api.Receipt r9 = null;
+        java.lang.String r1 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (this != r8) { $pc0 = 6; continue $sw0; }
+                    return true;
+                }
+                case 6: {
+                    if ((r8 instanceof tv.ouya.console.api.Receipt) == true) { $pc0 = 8; continue $sw0; }
+                    return false;
+                }
+                case 8: {
+                    r9 = (tv.ouya.console.api.Receipt) r8;
+                    if (this.DW.equals(r9.DW) == true) { $pc0 = 12; continue $sw0; }
+                    return false;
+                }
+                case 12: {
+                    if (this.FH == r9.FH) { $pc0 = 15; continue $sw0; }
+                    return false;
+                }
+                case 15: {
+                    if (this.Hw.equals(r9.Hw) == true) { $pc0 = 18; continue $sw0; }
+                    return false;
+                }
+                case 18: {
+                    if (this.v5.equals(r9.v5) == true) { $pc0 = 21; continue $sw0; }
+                    return false;
+                }
+                case 21: {
+                    if (this.Zo.equals(r9.Zo) == true) { $pc0 = 24; continue $sw0; }
+                    return false;
+                }
+                case 24: {
+                    if (this.VH == r9.VH) { $pc0 = 26; continue $sw0; }
+                    return false;
+                }
+                case 26: {
+                    r1 = this.gn;
+                    if (r1 != null) { $pc0 = 29; continue $sw0; }
+                    $pc0 = 31; continue $sw0;
+                }
+                case 31: {
+                    return true;
+                }
+                case 29: {
+                    if (r1.equals(r9.gn) == true) { $pc0 = 31; continue $sw0; }
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public int hashCode() {
-        int r0 = (((((((((this.DW.hashCode() * 31) + this.FH) * 31) + this.Hw.hashCode()) * 31) + this.v5.hashCode()) * 31) + this.Zo.hashCode()) * 31) + java.lang.Double.valueOf(this.VH).hashCode();
-        java.lang.String r1 = this.gn;
-        if (r1 != null) goto L5;
-        return r0;
-    L5:
-        return (r0 * 31) + r1.hashCode();
+        int r0 = 0;
+        java.lang.String r1 = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    r0 = (((((((((this.DW.hashCode() * 31) + this.FH) * 31) + this.Hw.hashCode()) * 31) + this.v5.hashCode()) * 31) + this.Zo.hashCode()) * 31) + java.lang.Double.valueOf(this.VH).hashCode();
+                    r1 = this.gn;
+                    if (r1 != null) { $pc1 = 5; continue $sw1; }
+                    return r0;
+                }
+                case 5: {
+                    return (r0 * 31) + r1.hashCode();
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public java.lang.String j6() {

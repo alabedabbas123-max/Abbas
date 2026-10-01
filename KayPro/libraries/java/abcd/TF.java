@@ -33,24 +33,52 @@ public interface TF {
         }
 
         public void VH(abcd.AbstractiG r2) {
-            if ((r2 instanceof abcd.dG) == false) goto L5;
-            r2.j6(this.er);
-        L5:
-            super.Hw(r2);
+            java.lang.Throwable $ex0 = null;
+            int $pc0 = -1;
+            $sw0: while (true) {
+                switch ($pc0) {
+                    case -1: {
+                        if ((r2 instanceof abcd.dG) == false) { $pc0 = 5; continue $sw0; }
+                        r2.j6(this.er);
+                        $pc0 = 5; continue $sw0;
+                    }
+                    case 5: {
+                        super.Hw(r2);
+                        return;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         public void Zo(abcd.AbstractiG r3) {
-            abcd.AbstractiG r0 = r3;
-        L4:
-            if ((r0 instanceof abcd.lG) == false) goto L6;
-            r0 = ((abcd.lG) r0).j3();
-            DW(r0);
-            goto L4
-        L6:
-            if ((r0 instanceof abcd.TF.a) == false) goto L8;
-            ((abcd.TF.a) r0).aM = 0;
-        L8:
-            super.Hw(r3);
+            abcd.AbstractiG r0 = null;
+            java.lang.Throwable $ex1 = null;
+            int $pc1 = -1;
+            $sw1: while (true) {
+                switch ($pc1) {
+                    case -1: {
+                        r0 = r3;
+                        $pc1 = 4; continue $sw1;
+                    }
+                    case 4: {
+                        if ((r0 instanceof abcd.lG) == false) { $pc1 = 6; continue $sw1; }
+                        r0 = ((abcd.lG) r0).j3();
+                        DW(r0);
+                        { $pc1 = 4; continue $sw1; }
+                    }
+                    case 6: {
+                        if ((r0 instanceof abcd.TF.a) == false) { $pc1 = 8; continue $sw1; }
+                        ((abcd.TF.a) r0).aM = 0;
+                        $pc1 = 8; continue $sw1;
+                    }
+                    case 8: {
+                        super.Hw(r3);
+                        return;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         @Override
@@ -87,10 +115,22 @@ public interface TF {
         }
 
         public void Hw(abcd.dG r3) {
-            if ((r3 instanceof abcd.TF.a) == false) goto L5;
-            ((abcd.TF.a) r3).aM = 0;
-        L5:
-            super.DW(r3);
+            java.lang.Throwable $ex2 = null;
+            int $pc2 = -1;
+            $sw2: while (true) {
+                switch ($pc2) {
+                    case -1: {
+                        if ((r3 instanceof abcd.TF.a) == false) { $pc2 = 5; continue $sw2; }
+                        ((abcd.TF.a) r3).aM = 0;
+                        $pc2 = 5; continue $sw2;
+                    }
+                    case 5: {
+                        super.DW(r3);
+                        return;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         @Override

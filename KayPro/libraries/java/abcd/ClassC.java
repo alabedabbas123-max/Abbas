@@ -47,19 +47,34 @@ public class ClassC<K, V> implements java.lang.Iterable<java.util.Map.Entry<K, V
 
         @Override
         public boolean hasNext() {
-            if (this.DW == true) goto L5;
-            c.c<K, V> r0 = this.j6;
-            if (r0 != null) goto L12;
-        L14:
-            return false;
-        L12:
-            if (r0.j6 == null) goto L14;
-            return true;
-        L5:
-            if (abcd.ClassC.j6(this.FH) != null) goto L16;
-            return false;
-        L16:
-            return true;
+            c.c<K, V> r0 = null;
+            java.lang.Throwable $ex0 = null;
+            int $pc0 = -1;
+            $sw0: while (true) {
+                switch ($pc0) {
+                    case -1: {
+                        if (this.DW == true) { $pc0 = 5; continue $sw0; }
+                        r0 = this.j6;
+                        if (r0 != null) { $pc0 = 12; continue $sw0; }
+                        $pc0 = 14; continue $sw0;
+                    }
+                    case 14: {
+                        return false;
+                    }
+                    case 12: {
+                        if (r0.j6 == null) { $pc0 = 14; continue $sw0; }
+                        return true;
+                    }
+                    case 5: {
+                        if (abcd.ClassC.j6(this.FH) != null) { $pc0 = 16; continue $sw0; }
+                        return false;
+                    }
+                    case 16: {
+                        return true;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         @Override
@@ -69,21 +84,38 @@ public class ClassC<K, V> implements java.lang.Iterable<java.util.Map.Entry<K, V
 
         @Override
         public java.util.Map.Entry<K, V> next() {
-            if (this.DW == false) goto L5;
-            this.DW = false;
-            this.j6 = abcd.ClassC.j6(this.FH);
-        L11:
-            return this.j6;
-        L5:
-            c.c<K, V> r0 = this.j6;
-            if (r0 == null) goto L8;
-            c.c<K, V> r1 = r0.j6;
-        L9:
-            this.j6 = r1;
-            goto L11
-        L8:
-            r1 = null;
-            goto L9
+            c.c<K, V> r0 = null;
+            c.c<K, V> r1 = null;
+            java.lang.Throwable $ex1 = null;
+            int $pc1 = -1;
+            $sw1: while (true) {
+                switch ($pc1) {
+                    case -1: {
+                        if (this.DW == false) { $pc1 = 5; continue $sw1; }
+                        this.DW = false;
+                        this.j6 = abcd.ClassC.j6(this.FH);
+                        $pc1 = 11; continue $sw1;
+                    }
+                    case 11: {
+                        return this.j6;
+                    }
+                    case 5: {
+                        r0 = this.j6;
+                        if (r0 == null) { $pc1 = 8; continue $sw1; }
+                        r1 = r0.j6;
+                        $pc1 = 9; continue $sw1;
+                    }
+                    case 9: {
+                        this.j6 = r1;
+                        { $pc1 = 11; continue $sw1; }
+                    }
+                    case 8: {
+                        r1 = null;
+                        { $pc1 = 9; continue $sw1; }
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
     }
 
@@ -97,23 +129,46 @@ public class ClassC<K, V> implements java.lang.Iterable<java.util.Map.Entry<K, V
         }
 
         private c.c<K, V> j6() {
-            c.c<K, V> r0 = this.DW;
-            c.c<K, V> r1 = this.j6;
-            if (r0 == r1) goto L8;
-            if (r1 != null) goto L7;
-            return null;
-        L7:
-            return j6(r0);
-        L8:
-            return null;
+            c.c<K, V> r0 = null;
+            c.c<K, V> r1 = null;
+            java.lang.Throwable $ex2 = null;
+            int $pc2 = -1;
+            $sw2: while (true) {
+                switch ($pc2) {
+                    case -1: {
+                        r0 = this.DW;
+                        r1 = this.j6;
+                        if (r0 == r1) { $pc2 = 8; continue $sw2; }
+                        if (r1 != null) { $pc2 = 7; continue $sw2; }
+                        return null;
+                    }
+                    case 7: {
+                        return j6(r0);
+                    }
+                    case 8: {
+                        return null;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         @Override
         public boolean hasNext() {
-            if (this.DW == null) goto L5;
-            return true;
-        L5:
-            return false;
+            java.lang.Throwable $ex3 = null;
+            int $pc3 = -1;
+            $sw3: while (true) {
+                switch ($pc3) {
+                    case -1: {
+                        if (this.DW == null) { $pc3 = 5; continue $sw3; }
+                        return true;
+                    }
+                    case 5: {
+                        return false;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         abstract c.c<K, V> j6(c.c<K, V> r1);
@@ -160,37 +215,64 @@ public class ClassC<K, V> implements java.lang.Iterable<java.util.Map.Entry<K, V
     }
 
     public boolean equals(java.lang.Object r6) {
-        if (r6 != this) goto L6;
-        return true;
-    L6:
-        if ((r6 instanceof abcd.ClassC) == true) goto L8;
-        return false;
-    L8:
-        abcd.ClassC r7 = (abcd.ClassC) r6;
-        if (size() == r7.size()) goto L11;
-        return false;
-    L11:
-        java.util.Iterator<java.util.Map.Entry<K, V>> r1 = iterator();
-        java.util.Iterator<java.util.Map.Entry<K, V>> r8 = r7.iterator();
-    L13:
-        if (r1.hasNext() == false) goto L24;
-        if (r8.hasNext() == false) goto L24;
-        java.util.Map.Entry<K, V> r3 = r1.next();
-        java.util.Map.Entry<K, V> r4 = r8.next();
-        if (r3 != null) goto L19;
-        if (r4 == null) goto L19;
-    L22:
-        return false;
-    L19:
-        if (r3 == null) goto L13;
-        if (r3.equals(r4) == true) goto L13;
-    L24:
-        if (r1.hasNext() == false) goto L26;
-    L28:
-        return false;
-    L26:
-        if (r8.hasNext() == true) goto L28;
-        return true;
+        abcd.ClassC r7 = null;
+        java.util.Iterator<java.util.Map.Entry<K, V>> r1 = null;
+        java.util.Iterator<java.util.Map.Entry<K, V>> r8 = null;
+        java.util.Map.Entry<K, V> r3 = null;
+        java.util.Map.Entry<K, V> r4 = null;
+        java.lang.Throwable $ex4 = null;
+        int $pc4 = -1;
+        $sw4: while (true) {
+            switch ($pc4) {
+                case -1: {
+                    if (r6 != this) { $pc4 = 6; continue $sw4; }
+                    return true;
+                }
+                case 6: {
+                    if ((r6 instanceof abcd.ClassC) == true) { $pc4 = 8; continue $sw4; }
+                    return false;
+                }
+                case 8: {
+                    r7 = (abcd.ClassC) r6;
+                    if (size() == r7.size()) { $pc4 = 11; continue $sw4; }
+                    return false;
+                }
+                case 11: {
+                    r1 = iterator();
+                    r8 = r7.iterator();
+                    $pc4 = 13; continue $sw4;
+                }
+                case 13: {
+                    if (r1.hasNext() == false) { $pc4 = 24; continue $sw4; }
+                    if (r8.hasNext() == false) { $pc4 = 24; continue $sw4; }
+                    r3 = r1.next();
+                    r4 = r8.next();
+                    if (r3 != null) { $pc4 = 19; continue $sw4; }
+                    if (r4 == null) { $pc4 = 19; continue $sw4; }
+                    $pc4 = 22; continue $sw4;
+                }
+                case 22: {
+                    return false;
+                }
+                case 19: {
+                    if (r3 == null) { $pc4 = 13; continue $sw4; }
+                    if (r3.equals(r4) == true) { $pc4 = 13; continue $sw4; }
+                    $pc4 = 24; continue $sw4;
+                }
+                case 24: {
+                    if (r1.hasNext() == false) { $pc4 = 26; continue $sw4; }
+                    $pc4 = 28; continue $sw4;
+                }
+                case 28: {
+                    return false;
+                }
+                case 26: {
+                    if (r8.hasNext() == true) { $pc4 = 28; continue $sw4; }
+                    return true;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
@@ -209,17 +291,31 @@ public class ClassC<K, V> implements java.lang.Iterable<java.util.Map.Entry<K, V
     }
 
     public java.lang.String toString() {
-        java.lang.StringBuilder r0 = new java.lang.StringBuilder();
-        r0.append("[");
-        java.util.Iterator<java.util.Map.Entry<K, V>> r1 = iterator();
-    L4:
-        if (r1.hasNext() == false) goto L8;
-        r0.append(r1.next().toString());
-        if (r1.hasNext() == false) goto L4;
-        r0.append(", ");
-        goto L4
-    L8:
-        r0.append("]");
-        return r0.toString();
+        java.lang.StringBuilder r0 = null;
+        java.util.Iterator<java.util.Map.Entry<K, V>> r1 = null;
+        java.lang.Throwable $ex5 = null;
+        int $pc5 = -1;
+        $sw5: while (true) {
+            switch ($pc5) {
+                case -1: {
+                    r0 = new java.lang.StringBuilder();
+                    r0.append("[");
+                    r1 = iterator();
+                    $pc5 = 4; continue $sw5;
+                }
+                case 4: {
+                    if (r1.hasNext() == false) { $pc5 = 8; continue $sw5; }
+                    r0.append(r1.next().toString());
+                    if (r1.hasNext() == false) { $pc5 = 4; continue $sw5; }
+                    r0.append(", ");
+                    { $pc5 = 4; continue $sw5; }
+                }
+                case 8: {
+                    r0.append("]");
+                    return r0.toString();
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

@@ -27,16 +27,33 @@ public class DA {
     }
 
     public void j6(int r5, java.lang.String r6) {
-        this.DW++;
-        int r0 = (this.DW * 100) / this.j6;
-        java.util.Iterator<abcd.EA> r1 = this.Hw.iterator();
-    L4:
-        if (r1.hasNext() == false) goto L6;
-        abcd.EA r2 = r1.next();
-        this.FH.j6(r6);
-        this.FH.j6(r0);
-        this.FH.DW(r5);
-        r2.j6(this.FH);
-        goto L4
+        int r0 = 0;
+        java.util.Iterator<abcd.EA> r1 = null;
+        abcd.EA r2 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    this.DW++;
+                    r0 = (this.DW * 100) / this.j6;
+                    r1 = this.Hw.iterator();
+                    $pc0 = 4; continue $sw0;
+                }
+                case 4: {
+                    if (r1.hasNext() == false) { $pc0 = 6; continue $sw0; }
+                    r2 = r1.next();
+                    this.FH.j6(r6);
+                    this.FH.j6(r0);
+                    this.FH.DW(r5);
+                    r2.j6(this.FH);
+                    { $pc0 = 4; continue $sw0; }
+                }
+                case 6: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

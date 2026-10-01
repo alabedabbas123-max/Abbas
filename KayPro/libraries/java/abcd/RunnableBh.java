@@ -31,17 +31,43 @@ class RunnableBh implements java.lang.Runnable {
     @Override
     @abcd.Interfacesu(method = -2494128121454285757L)
     public void run() {
-    L8:
-        th = move-exception;
-        if (DW == false) goto L12;
-        abcd.wu.j6(th, 6588941484516348711L, this);
-    L12:
-        throw th;
-    L4:
-        if (j6 == false) goto L6;
-        abcd.wu.j6(6588941484516348711L, this);     // Catch: java.lang.Throwable -> L8
-    L6:
-        java.lang.String r2 = com.aide.ui.U.gW().j6(this.FH, this.Hw);     // Catch: java.lang.Throwable -> L8
-        com.aide.ui.U.j6(new abcd.RunnableAh(this, com.aide.ui.U.gW().j6(this.FH, this.Hw, this.v5, "", this.Zo), r2));     // Catch: java.lang.Throwable -> L8
+        java.lang.String r2 = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 4;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 8: {
+                    th = $ex0;
+                    if (DW == false) { $pc0 = 12; continue $sw0; }
+                    abcd.wu.j6(th, 6588941484516348711L, this);
+                    $pc0 = 12; continue $sw0;
+                }
+                case 12: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (j6 == false) { $pc0 = 6; continue $sw0; }
+                    try {
+                        abcd.wu.j6(6588941484516348711L, this);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 8; continue $sw0;
+                    }
+                    $pc0 = 6; continue $sw0;
+                }
+                case 6: {
+                    try {
+                        r2 = com.aide.ui.U.gW().j6(this.FH, this.Hw);
+                        com.aide.ui.U.j6(new abcd.RunnableAh(this, com.aide.ui.U.gW().j6(this.FH, this.Hw, this.v5, "", this.Zo), r2));
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 8; continue $sw0;
+                    }
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

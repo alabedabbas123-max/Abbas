@@ -13,14 +13,39 @@ class Runnablei implements java.lang.Runnable {
 
     @Override
     public void run() {
-        this.FH.gn.j6(this.j6);     // Catch: java.lang.Exception -> L6
-        if (this.DW == false) goto L11;
-        this.FH.gn.j6();     // Catch: java.lang.Exception -> L6
-        return;
-    L11:
-        return;
-    L6:
-        e = move-exception;
-        io.fabric.sdk.android.Fabric.getLogger().FH("Answers", "Failed to process event", e);
+        java.lang.Throwable e = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    try {
+                        this.FH.gn.j6(this.j6);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.lang.Exception) { $pc0 = 6; continue $sw0; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    if (this.DW == false) { $pc0 = 11; continue $sw0; }
+                    try {
+                        this.FH.gn.j6();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.lang.Exception) { $pc0 = 6; continue $sw0; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    return;
+                }
+                case 11: {
+                    return;
+                }
+                case 6: {
+                    e = $ex0;
+                    io.fabric.sdk.android.Fabric.getLogger().FH("Answers", "Failed to process event", e);
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

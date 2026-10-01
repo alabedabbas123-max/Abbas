@@ -67,35 +67,99 @@ public class xJ extends abcd.AbstractsI implements abcd.SJ, abcd.BI {
 
         @Override
         java.util.Collection<abcd.RJ> DW() {
-            return VH("info/http-alternates");
-        L4:
-            return VH("info/alternates");
-        L6:
-            return null;
+            java.lang.Throwable $ex0 = null;
+            int $pc0 = -1;
+            $sw0: while (true) {
+                switch ($pc0) {
+                    case -1: {
+                        return VH("info/http-alternates");
+                    }
+                    case 4: {
+                        return VH("info/alternates");
+                    }
+                    case 6: {
+                        return null;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         @Override
         java.util.Collection<java.lang.String> FH() {
-            java.util.ArrayList r0 = new java.util.ArrayList();
-            java.io.BufferedReader r1 = Zo("info/packs");     // Catch: java.io.FileNotFoundException -> L21
-        L23:
-            java.lang.String r2 = r1.readLine();     // Catch: java.lang.Throwable -> L18
-            if (r2 == null) goto L16;
-            if (r2.length() == 0) goto L16;
-            if (r2.startsWith("P pack-") == false) goto L15;
-            if (r2.endsWith(".pack") == false) goto L15;
-            r0.add(r2.substring(2));     // Catch: java.lang.Throwable -> L18
-        L15:
-            throw u7(r2);     // Catch: java.lang.Throwable -> L18
-        L16:
-            r1.close();     // Catch: java.io.FileNotFoundException -> L21
-            return r0;
-        L18:
-            th = move-exception;
-            r1.close();     // Catch: java.io.FileNotFoundException -> L21
-            throw th;     // Catch: java.io.FileNotFoundException -> L21
-        L21:
-            return r0;
+            java.util.ArrayList r0 = null;
+            java.io.BufferedReader r1 = null;
+            java.lang.String r2 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex1 = null;
+            int $pc1 = -1;
+            $sw1: while (true) {
+                switch ($pc1) {
+                    case -1: {
+                        r0 = new java.util.ArrayList();
+                        try {
+                            r1 = Zo("info/packs");
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            if ($t instanceof java.io.FileNotFoundException) { $pc1 = 21; continue $sw1; }
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                        }
+                        $pc1 = 23; continue $sw1;
+                    }
+                    case 23: {
+                        try {
+                            r2 = r1.readLine();
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            $pc1 = 18; continue $sw1;
+                        }
+                        if (r2 == null) { $pc1 = 16; continue $sw1; }
+                        if (r2.length() == 0) { $pc1 = 16; continue $sw1; }
+                        if (r2.startsWith("P pack-") == false) { $pc1 = 15; continue $sw1; }
+                        if (r2.endsWith(".pack") == false) { $pc1 = 15; continue $sw1; }
+                        try {
+                            r0.add(r2.substring(2));
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            $pc1 = 18; continue $sw1;
+                        }
+                        $pc1 = 15; continue $sw1;
+                    }
+                    case 15: {
+                        try {
+                            throw u7(r2);
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            $pc1 = 18; continue $sw1;
+                        }
+                    }
+                    case 16: {
+                        try {
+                            r1.close();
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            if ($t instanceof java.io.FileNotFoundException) { $pc1 = 21; continue $sw1; }
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                        }
+                        return r0;
+                    }
+                    case 18: {
+                        th = $ex1;
+                        try {
+                            r1.close();
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            if ($t instanceof java.io.FileNotFoundException) { $pc1 = 21; continue $sw1; }
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                        }
+                    }
+                    case 21: {
+                        return r0;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         @Override
@@ -105,45 +169,82 @@ public class xJ extends abcd.AbstractsI implements abcd.SJ, abcd.BI {
 
         @Override
         abcd.RJ.a Hw(java.lang.String r5) {
-            java.net.URL r1 = new java.net.URL(this.j6, r5);
-            java.net.HttpURLConnection r6 = this.DW.j6(r1);
-            int r0 = abcd.AK.j6(r6);
-            if (r0 == 200) goto L11;
-            if (r0 == 404) goto L9;
-            throw new java.io.IOException(java.lang.String.valueOf(r1.toString()) + ": " + abcd.AK.j6(r6) + " " + r6.getResponseMessage());
-        L9:
-            throw new java.io.FileNotFoundException(r1.toString());
-        L11:
-            return new abcd.RJ.a(this.DW.j6(r6), r6.getContentLength());
+            java.net.URL r1 = null;
+            java.net.HttpURLConnection r6 = null;
+            int r0 = 0;
+            java.lang.Throwable $ex2 = null;
+            int $pc2 = -1;
+            $sw2: while (true) {
+                switch ($pc2) {
+                    case -1: {
+                        r1 = new java.net.URL(this.j6, r5);
+                        r6 = this.DW.j6(r1);
+                        r0 = abcd.AK.j6(r6);
+                        if (r0 == 200) { $pc2 = 11; continue $sw2; }
+                        if (r0 == 404) { $pc2 = 9; continue $sw2; }
+                        throw new java.io.IOException(java.lang.String.valueOf(r1.toString()) + ": " + abcd.AK.j6(r6) + " " + r6.getResponseMessage());
+                    }
+                    case 9: {
+                        throw new java.io.FileNotFoundException(r1.toString());
+                    }
+                    case 11: {
+                        return new abcd.RJ.a(this.DW.j6(r6), r6.getContentLength());
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         java.util.Map<java.lang.String, abcd.ME> j6(java.io.BufferedReader r7) {
-            java.util.TreeMap r0 = new java.util.TreeMap();
-        L3:
-            java.lang.String r1 = r7.readLine();
-            if (r1 == null) goto L5;
-            int r2 = r1.indexOf(9);
-            if (r2 < 0) goto L25;
-            java.lang.String r3 = r1.substring(r2 + 1);
-            abcd.yE r4 = abcd.yE.j6(r1.substring(0, r2));
-            if (r3.endsWith("^{}") == true) goto L10;
-            if (((abcd.ME) r0.put(r3, new abcd.BE.a(abcd.ME.a.v5, r3, r4))) == null) goto L3;
-            throw gn(r3);
-        L10:
-            java.lang.String r5 = r3.substring(0, r3.length() - 3);
-            abcd.ME r6 = (abcd.ME) r0.get(r5);
-            if (r6 == null) goto L18;
-            if (r6.FH() != null) goto L16;
-            r0.put(r5, new abcd.BE.b(abcd.ME.a.v5, r5, r6.DW(), r4));
-            goto L3
-        L16:
-            throw gn(java.lang.String.valueOf(r5) + "^{}");
-        L18:
-            throw tp(r5);
-        L25:
-            throw u7(r1);
-        L5:
-            return r0;
+            java.util.TreeMap r0 = null;
+            java.lang.String r1 = null;
+            int r2 = 0;
+            java.lang.String r3 = null;
+            abcd.yE r4 = null;
+            java.lang.String r5 = null;
+            abcd.ME r6 = null;
+            java.lang.Throwable $ex3 = null;
+            int $pc3 = -1;
+            $sw3: while (true) {
+                switch ($pc3) {
+                    case -1: {
+                        r0 = new java.util.TreeMap();
+                        $pc3 = 3; continue $sw3;
+                    }
+                    case 3: {
+                        r1 = r7.readLine();
+                        if (r1 == null) { $pc3 = 5; continue $sw3; }
+                        r2 = r1.indexOf(9);
+                        if (r2 < 0) { $pc3 = 25; continue $sw3; }
+                        r3 = r1.substring(r2 + 1);
+                        r4 = abcd.yE.j6(r1.substring(0, r2));
+                        if (r3.endsWith("^{}") == true) { $pc3 = 10; continue $sw3; }
+                        if (((abcd.ME) r0.put(r3, new abcd.BE.a(abcd.ME.a.v5, r3, r4))) == null) { $pc3 = 3; continue $sw3; }
+                        throw gn(r3);
+                    }
+                    case 10: {
+                        r5 = r3.substring(0, r3.length() - 3);
+                        r6 = (abcd.ME) r0.get(r5);
+                        if (r6 == null) { $pc3 = 18; continue $sw3; }
+                        if (r6.FH() != null) { $pc3 = 16; continue $sw3; }
+                        r0.put(r5, new abcd.BE.b(abcd.ME.a.v5, r5, r6.DW(), r4));
+                        { $pc3 = 3; continue $sw3; }
+                    }
+                    case 16: {
+                        throw gn(java.lang.String.valueOf(r5) + "^{}");
+                    }
+                    case 18: {
+                        throw tp(r5);
+                    }
+                    case 25: {
+                        throw u7(r1);
+                    }
+                    case 5: {
+                        return r0;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         @Override
@@ -232,49 +333,94 @@ public class xJ extends abcd.AbstractsI implements abcd.SJ, abcd.BI {
         }
 
         void j6() {
-            this.Zo.close();
-            if (this.VH == null) goto L5;
-        L23:
-            this.Zo.v5();
-            int r0 = abcd.AK.j6(this.VH);
-            if (r0 != 200) goto L32;
-            java.lang.String r1 = this.VH.getContentType();
-            if (this.FH.equals(r1) == false) goto L29;
-            this.v5.j6(this.gn.j6(this.VH));
-            this.v5.j6(this.Hw);
-            this.VH = null;
-            return;
-        L29:
-            this.VH.getInputStream().close();
-            throw this.gn.j6(this.FH, r1);
-        L32:
-            throw new abcd.yD(this.gn.Zo, java.lang.String.valueOf(r0) + " " + this.VH.getResponseMessage());
-        L5:
-            if (this.Zo.DW() == 0) goto L22;
-            abcd.RK r2 = new abcd.RK.c(abcd.xJ.j6(this.gn).j6);
-            java.util.zip.GZIPOutputStream r3 = new java.util.zip.GZIPOutputStream(r2);     // Catch: java.io.IOException -> L11
-            this.Zo.j6(r3, null);     // Catch: java.io.IOException -> L11
-            r3.close();     // Catch: java.io.IOException -> L11
-            if (this.Zo.DW() >= r2.DW()) goto L12;
-            r2 = this.Zo;     // Catch: java.io.IOException -> L11
-        L12:
-            DW();
-            if (r2 == this.Zo) goto L15;
-            this.VH.setRequestProperty("Content-Encoding", "gzip");
-        L15:
-            this.VH.setFixedLengthStreamingMode((int) r2.DW());
-            java.io.OutputStream r4 = this.VH.getOutputStream();
-            r2.j6(r4, null);     // Catch: java.lang.Throwable -> L18
-            r4.close();
-        L18:
-            th = move-exception;
-            r4.close();
-            throw th;
-        L11:
-            r2 = this.Zo;
-            goto L12
-        L22:
-            throw new abcd.yD(this.gn.Zo, org.eclipse.jgit.JGitText.j6().startingReadStageWithoutWrittenRequestDataPendingIsNotSupported);
+            int r0 = 0;
+            java.lang.String r1 = null;
+            abcd.RK r2 = null;
+            java.util.zip.GZIPOutputStream r3 = null;
+            java.io.OutputStream r4 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex4 = null;
+            int $pc4 = -1;
+            $sw4: while (true) {
+                switch ($pc4) {
+                    case -1: {
+                        this.Zo.close();
+                        if (this.VH == null) { $pc4 = 5; continue $sw4; }
+                        $pc4 = 23; continue $sw4;
+                    }
+                    case 23: {
+                        this.Zo.v5();
+                        r0 = abcd.AK.j6(this.VH);
+                        if (r0 != 200) { $pc4 = 32; continue $sw4; }
+                        r1 = this.VH.getContentType();
+                        if (this.FH.equals(r1) == false) { $pc4 = 29; continue $sw4; }
+                        this.v5.j6(this.gn.j6(this.VH));
+                        this.v5.j6(this.Hw);
+                        this.VH = null;
+                        return;
+                    }
+                    case 29: {
+                        this.VH.getInputStream().close();
+                        throw this.gn.j6(this.FH, r1);
+                    }
+                    case 32: {
+                        throw new abcd.yD(this.gn.Zo, java.lang.String.valueOf(r0) + " " + this.VH.getResponseMessage());
+                    }
+                    case 5: {
+                        if (this.Zo.DW() == 0) { $pc4 = 22; continue $sw4; }
+                        r2 = new abcd.RK.c(abcd.xJ.j6(this.gn).j6);
+                        try {
+                            r3 = new java.util.zip.GZIPOutputStream(r2);
+                            this.Zo.j6(r3, null);
+                            r3.close();
+                        } catch (java.lang.Throwable $t) {
+                            $ex4 = $t;
+                            if ($t instanceof java.io.IOException) { $pc4 = 11; continue $sw4; }
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                        }
+                        if (this.Zo.DW() >= r2.DW()) { $pc4 = 12; continue $sw4; }
+                        try {
+                            r2 = this.Zo;
+                        } catch (java.lang.Throwable $t) {
+                            $ex4 = $t;
+                            if ($t instanceof java.io.IOException) { $pc4 = 11; continue $sw4; }
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                        }
+                        $pc4 = 12; continue $sw4;
+                    }
+                    case 12: {
+                        DW();
+                        if (r2 == this.Zo) { $pc4 = 15; continue $sw4; }
+                        this.VH.setRequestProperty("Content-Encoding", "gzip");
+                        $pc4 = 15; continue $sw4;
+                    }
+                    case 15: {
+                        this.VH.setFixedLengthStreamingMode((int) r2.DW());
+                        r4 = this.VH.getOutputStream();
+                        try {
+                            r2.j6(r4, null);
+                        } catch (java.lang.Throwable $t) {
+                            $ex4 = $t;
+                            $pc4 = 18; continue $sw4;
+                        }
+                        r4.close();
+                        $pc4 = 18; continue $sw4;
+                    }
+                    case 18: {
+                        th = $ex4;
+                        r4.close();
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    case 11: {
+                        r2 = this.Zo;
+                        { $pc4 = 12; continue $sw4; }
+                    }
+                    case 22: {
+                        throw new abcd.yD(this.gn.Zo, org.eclipse.jgit.JGitText.j6().startingReadStageWithoutWrittenRequestDataPendingIsNotSupported);
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
     }
 
@@ -326,21 +472,53 @@ public class xJ extends abcd.AbstractsI implements abcd.SJ, abcd.BI {
     }
 
     xJ(abcd.UE r5, abcd.HJ r6) {
-        super(r5, r6);
-        this.BT = true;
-        this.vy = abcd.AbstractrI.j6;
-        java.lang.String r2 = r6.toString();     // Catch: java.net.MalformedURLException -> L9
-        if (r2.endsWith("/") == true) goto L6;
-        r2 = java.lang.String.valueOf(r2) + "/";     // Catch: java.net.MalformedURLException -> L9
-    L6:
-        this.rN = new java.net.URL(r2);     // Catch: java.net.MalformedURLException -> L9
-        this.er = new java.net.URL(this.rN, "objects/");     // Catch: java.net.MalformedURLException -> L9
-        this.yS = (abcd.xJ.b) r5.Zo().j6(lg);
-        this.gW = java.net.ProxySelector.getDefault();
-        return;
-    L9:
-        e = move-exception;
-        throw new abcd.jD(java.text.MessageFormat.format(org.eclipse.jgit.JGitText.j6().invalidURL, new java.lang.Object[]{r6}), e);
+        java.lang.String r2 = null;
+        java.lang.Throwable e = null;
+        java.lang.Throwable $ex5 = null;
+        int $pc5 = -1;
+        $sw5: while (true) {
+            switch ($pc5) {
+                case -1: {
+                    super(r5, r6);
+                    this.BT = true;
+                    this.vy = abcd.AbstractrI.j6;
+                    try {
+                        r2 = r6.toString();
+                    } catch (java.lang.Throwable $t) {
+                        $ex5 = $t;
+                        if ($t instanceof java.net.MalformedURLException) { $pc5 = 9; continue $sw5; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    if (r2.endsWith("/") == true) { $pc5 = 6; continue $sw5; }
+                    try {
+                        r2 = java.lang.String.valueOf(r2) + "/";
+                    } catch (java.lang.Throwable $t) {
+                        $ex5 = $t;
+                        if ($t instanceof java.net.MalformedURLException) { $pc5 = 9; continue $sw5; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    $pc5 = 6; continue $sw5;
+                }
+                case 6: {
+                    try {
+                        this.rN = new java.net.URL(r2);
+                        this.er = new java.net.URL(this.rN, "objects/");
+                    } catch (java.lang.Throwable $t) {
+                        $ex5 = $t;
+                        if ($t instanceof java.net.MalformedURLException) { $pc5 = 9; continue $sw5; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    this.yS = (abcd.xJ.b) r5.Zo().j6(lg);
+                    this.gW = java.net.ProxySelector.getDefault();
+                    return;
+                }
+                case 9: {
+                    e = $ex5;
+                    throw new abcd.jD(java.text.MessageFormat.format(org.eclipse.jgit.JGitText.j6().invalidURL, new java.lang.Object[]{r6}), e);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     private java.io.BufferedReader DW(java.io.InputStream r4) {
@@ -352,130 +530,372 @@ public class xJ extends abcd.AbstractsI implements abcd.SJ, abcd.BI {
     }
 
     private java.net.HttpURLConnection FH(java.lang.String r9) {
-        java.lang.StringBuilder r2 = new java.lang.StringBuilder();     // Catch: java.net.MalformedURLException -> L52
-        r2.append(this.rN);     // Catch: java.net.MalformedURLException -> L52
-        if (r2.charAt(r2.length() - 1) == '/') goto L6;
-        r2.append('/');     // Catch: java.net.MalformedURLException -> L52
-    L6:
-        r2.append("info/refs");     // Catch: java.net.MalformedURLException -> L52
-        if (this.BT == true) goto L9;
-    L13:
-        java.net.URL r3 = new java.net.URL(r2.toString());     // Catch: java.net.MalformedURLException -> L52
-        int r4 = 1;
-    L58:
-        java.net.HttpURLConnection r5 = j6(r3);     // Catch: java.io.IOException -> L45 abcd.yD -> L48 abcd.jD -> L50
-        if (this.BT == false) goto L19;
-        java.lang.StringBuilder r7 = new java.lang.StringBuilder(java.lang.String.valueOf("application/x-" + r9 + "-advertisement"));     // Catch: java.io.IOException -> L45 abcd.yD -> L48 abcd.jD -> L50
-        r7.append(", */*");     // Catch: java.io.IOException -> L45 abcd.yD -> L48 abcd.jD -> L50
-        r5.setRequestProperty("Accept", r7.toString());     // Catch: java.io.IOException -> L45 abcd.yD -> L48 abcd.jD -> L50
-    L20:
-        int r6 = abcd.AK.j6(r5);     // Catch: java.io.IOException -> L45 abcd.yD -> L48 abcd.jD -> L50
-        if (r6 == 200) goto L44;
-        if (r6 != 401) goto L25;
-        this.vy = abcd.AbstractrI.DW(r5);     // Catch: java.io.IOException -> L45 abcd.yD -> L48 abcd.jD -> L50
-        if (this.vy == abcd.AbstractrI.j6) goto L43;
-        if (1 < r4) goto L41;
-        if (this.vy.j6(this.Zo, FH()) == false) goto L41;
-        r4 = r4 + 1;     // Catch: java.io.IOException -> L45 abcd.yD -> L48 abcd.jD -> L50
-    L41:
-        throw new abcd.yD(this.Zo, org.eclipse.jgit.JGitText.j6().notAuthorized);     // Catch: java.io.IOException -> L45 abcd.yD -> L48 abcd.jD -> L50
-    L43:
-        throw new abcd.yD(this.Zo, java.text.MessageFormat.format(org.eclipse.jgit.JGitText.j6().authenticationNotSupported, new java.lang.Object[]{this.Zo}));     // Catch: java.io.IOException -> L45 abcd.yD -> L48 abcd.jD -> L50
-    L25:
-        if (r6 == 403) goto L33;
-        if (r6 == 404) goto L31;
-        throw new abcd.yD(this.Zo, java.lang.String.valueOf(r6) + " " + r5.getResponseMessage());     // Catch: java.io.IOException -> L45 abcd.yD -> L48 abcd.jD -> L50
-    L31:
-        throw new abcd.hD(this.Zo, java.text.MessageFormat.format(org.eclipse.jgit.JGitText.j6().uriNotFound, new java.lang.Object[]{r3}));     // Catch: java.io.IOException -> L45 abcd.yD -> L48 abcd.jD -> L50
-    L33:
-        throw new abcd.yD(this.Zo, java.text.MessageFormat.format(org.eclipse.jgit.JGitText.j6().serviceNotPermitted, new java.lang.Object[]{r9}));     // Catch: java.io.IOException -> L45 abcd.yD -> L48 abcd.jD -> L50
-    L44:
-        return r5;
-    L19:
-        r5.setRequestProperty("Accept", "*/*");     // Catch: java.io.IOException -> L45 abcd.yD -> L48 abcd.jD -> L50
-    L50:
-        e = move-exception;
-        throw e;
-    L48:
-        e = move-exception;
-        throw e;
-    L45:
-        e = move-exception;
-        throw new abcd.yD(this.Zo, java.text.MessageFormat.format(org.eclipse.jgit.JGitText.j6().cannotOpenService, new java.lang.Object[]{r9}), e);
-    L9:
-        if (r2.indexOf("?") >= 0) goto L11;
-        char r8 = '?';
-    L12:
-        r2.append(r8);     // Catch: java.net.MalformedURLException -> L52
-        r2.append("service=");     // Catch: java.net.MalformedURLException -> L52
-        r2.append(r9);     // Catch: java.net.MalformedURLException -> L52
-        goto L13
-    L11:
-        r8 = '&';
-    L52:
-        e = move-exception;
-        throw new abcd.jD(java.text.MessageFormat.format(org.eclipse.jgit.JGitText.j6().invalidURL, new java.lang.Object[]{this.Zo}), e);
+        java.lang.StringBuilder r2 = null;
+        java.net.URL r3 = null;
+        int r4 = 0;
+        java.net.HttpURLConnection r5 = null;
+        java.lang.StringBuilder r7 = null;
+        int r6 = 0;
+        char r8 = 0;
+        java.lang.Throwable e = null;
+        java.lang.Throwable $ex6 = null;
+        int $pc6 = -1;
+        $sw6: while (true) {
+            switch ($pc6) {
+                case -1: {
+                    try {
+                        r2 = new java.lang.StringBuilder();
+                        r2.append(this.rN);
+                    } catch (java.lang.Throwable $t) {
+                        $ex6 = $t;
+                        if ($t instanceof java.net.MalformedURLException) { $pc6 = 52; continue $sw6; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    if (r2.charAt(r2.length() - 1) == '/') { $pc6 = 6; continue $sw6; }
+                    try {
+                        r2.append('/');
+                    } catch (java.lang.Throwable $t) {
+                        $ex6 = $t;
+                        if ($t instanceof java.net.MalformedURLException) { $pc6 = 52; continue $sw6; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    $pc6 = 6; continue $sw6;
+                }
+                case 6: {
+                    try {
+                        r2.append("info/refs");
+                    } catch (java.lang.Throwable $t) {
+                        $ex6 = $t;
+                        if ($t instanceof java.net.MalformedURLException) { $pc6 = 52; continue $sw6; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    if (this.BT == true) { $pc6 = 9; continue $sw6; }
+                    $pc6 = 13; continue $sw6;
+                }
+                case 13: {
+                    try {
+                        r3 = new java.net.URL(r2.toString());
+                    } catch (java.lang.Throwable $t) {
+                        $ex6 = $t;
+                        if ($t instanceof java.net.MalformedURLException) { $pc6 = 52; continue $sw6; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    r4 = 1;
+                    $pc6 = 58; continue $sw6;
+                }
+                case 58: {
+                    try {
+                        r5 = j6(r3);
+                    } catch (java.lang.Throwable $t) {
+                        $ex6 = $t;
+                        if ($t instanceof java.io.IOException) { $pc6 = 45; continue $sw6; }
+                        if ($t instanceof abcd.yD) { $pc6 = 48; continue $sw6; }
+                        if ($t instanceof abcd.jD) { $pc6 = 50; continue $sw6; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    if (this.BT == false) { $pc6 = 19; continue $sw6; }
+                    try {
+                        r7 = new java.lang.StringBuilder(java.lang.String.valueOf("application/x-" + r9 + "-advertisement"));
+                        r7.append(", */*");
+                        r5.setRequestProperty("Accept", r7.toString());
+                    } catch (java.lang.Throwable $t) {
+                        $ex6 = $t;
+                        if ($t instanceof java.io.IOException) { $pc6 = 45; continue $sw6; }
+                        if ($t instanceof abcd.yD) { $pc6 = 48; continue $sw6; }
+                        if ($t instanceof abcd.jD) { $pc6 = 50; continue $sw6; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    $pc6 = 20; continue $sw6;
+                }
+                case 20: {
+                    try {
+                        r6 = abcd.AK.j6(r5);
+                    } catch (java.lang.Throwable $t) {
+                        $ex6 = $t;
+                        if ($t instanceof java.io.IOException) { $pc6 = 45; continue $sw6; }
+                        if ($t instanceof abcd.yD) { $pc6 = 48; continue $sw6; }
+                        if ($t instanceof abcd.jD) { $pc6 = 50; continue $sw6; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    if (r6 == 200) { $pc6 = 44; continue $sw6; }
+                    if (r6 != 401) { $pc6 = 25; continue $sw6; }
+                    try {
+                        this.vy = abcd.AbstractrI.DW(r5);
+                    } catch (java.lang.Throwable $t) {
+                        $ex6 = $t;
+                        if ($t instanceof java.io.IOException) { $pc6 = 45; continue $sw6; }
+                        if ($t instanceof abcd.yD) { $pc6 = 48; continue $sw6; }
+                        if ($t instanceof abcd.jD) { $pc6 = 50; continue $sw6; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    if (this.vy == abcd.AbstractrI.j6) { $pc6 = 43; continue $sw6; }
+                    if (1 < r4) { $pc6 = 41; continue $sw6; }
+                    if (this.vy.j6(this.Zo, FH()) == false) { $pc6 = 41; continue $sw6; }
+                    try {
+                        r4 = r4 + 1;
+                    } catch (java.lang.Throwable $t) {
+                        $ex6 = $t;
+                        if ($t instanceof java.io.IOException) { $pc6 = 45; continue $sw6; }
+                        if ($t instanceof abcd.yD) { $pc6 = 48; continue $sw6; }
+                        if ($t instanceof abcd.jD) { $pc6 = 50; continue $sw6; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    $pc6 = 41; continue $sw6;
+                }
+                case 41: {
+                    try {
+                        throw new abcd.yD(this.Zo, org.eclipse.jgit.JGitText.j6().notAuthorized);
+                    } catch (java.lang.Throwable $t) {
+                        $ex6 = $t;
+                        if ($t instanceof java.io.IOException) { $pc6 = 45; continue $sw6; }
+                        if ($t instanceof abcd.yD) { $pc6 = 48; continue $sw6; }
+                        if ($t instanceof abcd.jD) { $pc6 = 50; continue $sw6; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                }
+                case 43: {
+                    try {
+                        throw new abcd.yD(this.Zo, java.text.MessageFormat.format(org.eclipse.jgit.JGitText.j6().authenticationNotSupported, new java.lang.Object[]{this.Zo}));
+                    } catch (java.lang.Throwable $t) {
+                        $ex6 = $t;
+                        if ($t instanceof java.io.IOException) { $pc6 = 45; continue $sw6; }
+                        if ($t instanceof abcd.yD) { $pc6 = 48; continue $sw6; }
+                        if ($t instanceof abcd.jD) { $pc6 = 50; continue $sw6; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                }
+                case 25: {
+                    if (r6 == 403) { $pc6 = 33; continue $sw6; }
+                    if (r6 == 404) { $pc6 = 31; continue $sw6; }
+                    try {
+                        throw new abcd.yD(this.Zo, java.lang.String.valueOf(r6) + " " + r5.getResponseMessage());
+                    } catch (java.lang.Throwable $t) {
+                        $ex6 = $t;
+                        if ($t instanceof java.io.IOException) { $pc6 = 45; continue $sw6; }
+                        if ($t instanceof abcd.yD) { $pc6 = 48; continue $sw6; }
+                        if ($t instanceof abcd.jD) { $pc6 = 50; continue $sw6; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                }
+                case 31: {
+                    try {
+                        throw new abcd.hD(this.Zo, java.text.MessageFormat.format(org.eclipse.jgit.JGitText.j6().uriNotFound, new java.lang.Object[]{r3}));
+                    } catch (java.lang.Throwable $t) {
+                        $ex6 = $t;
+                        if ($t instanceof java.io.IOException) { $pc6 = 45; continue $sw6; }
+                        if ($t instanceof abcd.yD) { $pc6 = 48; continue $sw6; }
+                        if ($t instanceof abcd.jD) { $pc6 = 50; continue $sw6; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                }
+                case 33: {
+                    try {
+                        throw new abcd.yD(this.Zo, java.text.MessageFormat.format(org.eclipse.jgit.JGitText.j6().serviceNotPermitted, new java.lang.Object[]{r9}));
+                    } catch (java.lang.Throwable $t) {
+                        $ex6 = $t;
+                        if ($t instanceof java.io.IOException) { $pc6 = 45; continue $sw6; }
+                        if ($t instanceof abcd.yD) { $pc6 = 48; continue $sw6; }
+                        if ($t instanceof abcd.jD) { $pc6 = 50; continue $sw6; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                }
+                case 44: {
+                    return r5;
+                }
+                case 19: {
+                    try {
+                        r5.setRequestProperty("Accept", "*/*");
+                    } catch (java.lang.Throwable $t) {
+                        $ex6 = $t;
+                        if ($t instanceof java.io.IOException) { $pc6 = 45; continue $sw6; }
+                        if ($t instanceof abcd.yD) { $pc6 = 48; continue $sw6; }
+                        if ($t instanceof abcd.jD) { $pc6 = 50; continue $sw6; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    $pc6 = 50; continue $sw6;
+                }
+                case 50: {
+                    e = $ex6;
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(e);
+                }
+                case 48: {
+                    e = $ex6;
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(e);
+                }
+                case 45: {
+                    e = $ex6;
+                    throw new abcd.yD(this.Zo, java.text.MessageFormat.format(org.eclipse.jgit.JGitText.j6().cannotOpenService, new java.lang.Object[]{r9}), e);
+                }
+                case 9: {
+                    if (r2.indexOf("?") >= 0) { $pc6 = 11; continue $sw6; }
+                    r8 = '?';
+                    $pc6 = 12; continue $sw6;
+                }
+                case 12: {
+                    try {
+                        r2.append(r8);
+                        r2.append("service=");
+                        r2.append(r9);
+                    } catch (java.lang.Throwable $t) {
+                        $ex6 = $t;
+                        if ($t instanceof java.net.MalformedURLException) { $pc6 = 52; continue $sw6; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    { $pc6 = 13; continue $sw6; }
+                }
+                case 11: {
+                    r8 = '&';
+                    $pc6 = 52; continue $sw6;
+                }
+                case 52: {
+                    e = $ex6;
+                    throw new abcd.jD(java.text.MessageFormat.format(org.eclipse.jgit.JGitText.j6().invalidURL, new java.lang.Object[]{this.Zo}), e);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     private static java.lang.String aM() {
-        java.lang.Package r0 = abcd.xJ.class.getPackage();
-        if (r0 != null) goto L5;
-    L7:
-        java.lang.String r1 = "unknown";
-    L9:
-        return "JGit/" + r1;
-    L5:
-        if (r0.getImplementationVersion() == null) goto L7;
-        r1 = r0.getImplementationVersion();
-        goto L9
+        java.lang.Package r0 = null;
+        java.lang.String r1 = null;
+        java.lang.Throwable $ex7 = null;
+        int $pc7 = -1;
+        $sw7: while (true) {
+            switch ($pc7) {
+                case -1: {
+                    r0 = abcd.xJ.class.getPackage();
+                    if (r0 != null) { $pc7 = 5; continue $sw7; }
+                    $pc7 = 7; continue $sw7;
+                }
+                case 7: {
+                    r1 = "unknown";
+                    $pc7 = 9; continue $sw7;
+                }
+                case 9: {
+                    return "JGit/" + r1;
+                }
+                case 5: {
+                    if (r0.getImplementationVersion() == null) { $pc7 = 7; continue $sw7; }
+                    r1 = r0.getImplementationVersion();
+                    { $pc7 = 9; continue $sw7; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     private abcd.InterfacenI j6(java.io.InputStream r8) {
-        abcd.xJ.c r0 = new abcd.xJ.c(this, this.er);
-        java.io.BufferedReader r9 = DW(r8);
-        java.util.Map<java.lang.String, abcd.ME> r1 = r0.j6(r9);     // Catch: java.lang.Throwable -> L32
-        r9.close();
-        if (r1.containsKey("HEAD") == true) goto L30;
-        java.net.HttpURLConnection r2 = j6(new java.net.URL(this.rN, "HEAD"));
-        int r3 = abcd.AK.j6(r2);
-        if (r3 != 200) goto L9;
-        java.io.BufferedReader r4 = DW(j6(r2));
-        java.lang.String r5 = r4.readLine();     // Catch: java.lang.Throwable -> L27
-        if (r5 != null) goto L17;
-    L22:
-        if (r5 != null) goto L24;
-    L26:
-        r4.close();
-        goto L30
-    L24:
-        if (abcd.yE.DW(r5) == false) goto L26;
-        abcd.BE.c r6 = new abcd.BE.c(abcd.ME.a.v5, "HEAD", abcd.yE.j6(r5));     // Catch: java.lang.Throwable -> L27
-        r1.put(r6.getName(), r6);     // Catch: java.lang.Throwable -> L27
-        goto L26
-    L17:
-        if (r5.startsWith("ref: ") == false) goto L22;
-        java.lang.String r7 = r5.substring(5);     // Catch: java.lang.Throwable -> L27
-        abcd.ME r10 = r1.get(r7);     // Catch: java.lang.Throwable -> L27
-        if (r10 != null) goto L21;
-        r10 = new abcd.BE.c(abcd.ME.a.j6, r7, null);     // Catch: java.lang.Throwable -> L27
-    L21:
-        abcd.kF r11 = new abcd.kF("HEAD", r10);     // Catch: java.lang.Throwable -> L27
-        r1.put(r11.getName(), r11);     // Catch: java.lang.Throwable -> L27
-    L27:
-        th = move-exception;
-        r4.close();
-        throw th;
-    L9:
-        if (r3 == 404) goto L30;
-        throw new abcd.yD(this.Zo, java.text.MessageFormat.format(org.eclipse.jgit.JGitText.j6().cannotReadHEAD, new java.lang.Object[]{java.lang.Integer.valueOf(r3), r2.getResponseMessage()}));
-    L30:
-        abcd.OJ r12 = new abcd.OJ(this, r0);
-        r12.j6(r1);
-        return r12;
-    L32:
-        th = move-exception;
-        r9.close();
-        throw th;
+        abcd.xJ.c r0 = null;
+        java.io.BufferedReader r9 = null;
+        java.util.Map<java.lang.String, abcd.ME> r1 = null;
+        java.net.HttpURLConnection r2 = null;
+        int r3 = 0;
+        java.io.BufferedReader r4 = null;
+        java.lang.String r5 = null;
+        abcd.BE.c r6 = null;
+        java.lang.String r7 = null;
+        abcd.ME r10 = null;
+        abcd.kF r11 = null;
+        abcd.OJ r12 = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex8 = null;
+        int $pc8 = -1;
+        $sw8: while (true) {
+            switch ($pc8) {
+                case -1: {
+                    r0 = new abcd.xJ.c(this, this.er);
+                    r9 = DW(r8);
+                    try {
+                        r1 = r0.j6(r9);
+                    } catch (java.lang.Throwable $t) {
+                        $ex8 = $t;
+                        $pc8 = 32; continue $sw8;
+                    }
+                    r9.close();
+                    if (r1.containsKey("HEAD") == true) { $pc8 = 30; continue $sw8; }
+                    r2 = j6(new java.net.URL(this.rN, "HEAD"));
+                    r3 = abcd.AK.j6(r2);
+                    if (r3 != 200) { $pc8 = 9; continue $sw8; }
+                    r4 = DW(j6(r2));
+                    try {
+                        r5 = r4.readLine();
+                    } catch (java.lang.Throwable $t) {
+                        $ex8 = $t;
+                        $pc8 = 27; continue $sw8;
+                    }
+                    if (r5 != null) { $pc8 = 17; continue $sw8; }
+                    $pc8 = 22; continue $sw8;
+                }
+                case 22: {
+                    if (r5 != null) { $pc8 = 24; continue $sw8; }
+                    $pc8 = 26; continue $sw8;
+                }
+                case 26: {
+                    r4.close();
+                    { $pc8 = 30; continue $sw8; }
+                }
+                case 24: {
+                    if (abcd.yE.DW(r5) == false) { $pc8 = 26; continue $sw8; }
+                    try {
+                        r6 = new abcd.BE.c(abcd.ME.a.v5, "HEAD", abcd.yE.j6(r5));
+                        r1.put(r6.getName(), r6);
+                    } catch (java.lang.Throwable $t) {
+                        $ex8 = $t;
+                        $pc8 = 27; continue $sw8;
+                    }
+                    { $pc8 = 26; continue $sw8; }
+                }
+                case 17: {
+                    if (r5.startsWith("ref: ") == false) { $pc8 = 22; continue $sw8; }
+                    try {
+                        r7 = r5.substring(5);
+                        r10 = r1.get(r7);
+                    } catch (java.lang.Throwable $t) {
+                        $ex8 = $t;
+                        $pc8 = 27; continue $sw8;
+                    }
+                    if (r10 != null) { $pc8 = 21; continue $sw8; }
+                    try {
+                        r10 = new abcd.BE.c(abcd.ME.a.j6, r7, null);
+                    } catch (java.lang.Throwable $t) {
+                        $ex8 = $t;
+                        $pc8 = 27; continue $sw8;
+                    }
+                    $pc8 = 21; continue $sw8;
+                }
+                case 21: {
+                    try {
+                        r11 = new abcd.kF("HEAD", r10);
+                        r1.put(r11.getName(), r11);
+                    } catch (java.lang.Throwable $t) {
+                        $ex8 = $t;
+                        $pc8 = 27; continue $sw8;
+                    }
+                    $pc8 = 27; continue $sw8;
+                }
+                case 27: {
+                    th = $ex8;
+                    r4.close();
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 9: {
+                    if (r3 == 404) { $pc8 = 30; continue $sw8; }
+                    throw new abcd.yD(this.Zo, java.text.MessageFormat.format(org.eclipse.jgit.JGitText.j6().cannotReadHEAD, new java.lang.Object[]{java.lang.Integer.valueOf(r3), r2.getResponseMessage()}));
+                }
+                case 30: {
+                    r12 = new abcd.OJ(this, r0);
+                    r12.j6(r1);
+                    return r12;
+                }
+                case 32: {
+                    th = $ex8;
+                    r9.close();
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     static abcd.xJ.b j6(abcd.xJ r0) {
@@ -483,34 +903,72 @@ public class xJ extends abcd.AbstractsI implements abcd.SJ, abcd.BI {
     }
 
     private void j6(java.io.InputStream r9, java.lang.String r10) {
-        byte[] r0 = new byte[5];
-        abcd.BK.j6(r9, r0, 0, r0.length);
-        if (r0[4] != 35) goto L12;
-        abcd.DI r1 = new abcd.DI(new abcd.cL(new java.io.InputStream[]{new java.io.ByteArrayInputStream(r0), r9}));
-        java.lang.String r11 = "# service=" + r10;
-        java.lang.String r12 = r1.DW();
-        if (r11.equals(r12) == false) goto L10;
-    L7:
-        if (r1.DW() != abcd.DI.j6) goto L7;
-        return;
-    L10:
-        throw new abcd.yD(this.Zo, java.text.MessageFormat.format(org.eclipse.jgit.JGitText.j6().expectedGot, new java.lang.Object[]{r11, r12}));
-    L12:
-        throw new abcd.yD(this.Zo, java.text.MessageFormat.format(org.eclipse.jgit.JGitText.j6().expectedPktLineWithService, new java.lang.Object[]{abcd.IK.j6(r0)}));
+        byte[] r0 = null;
+        abcd.DI r1 = null;
+        java.lang.String r11 = null;
+        java.lang.String r12 = null;
+        java.lang.Throwable $ex9 = null;
+        int $pc9 = -1;
+        $sw9: while (true) {
+            switch ($pc9) {
+                case -1: {
+                    r0 = new byte[5];
+                    abcd.BK.j6(r9, r0, 0, r0.length);
+                    if (r0[4] != 35) { $pc9 = 12; continue $sw9; }
+                    r1 = new abcd.DI(new abcd.cL(new java.io.InputStream[]{new java.io.ByteArrayInputStream(r0), r9}));
+                    r11 = "# service=" + r10;
+                    r12 = r1.DW();
+                    if (r11.equals(r12) == false) { $pc9 = 10; continue $sw9; }
+                    $pc9 = 7; continue $sw9;
+                }
+                case 7: {
+                    if (r1.DW() != abcd.DI.j6) { $pc9 = 7; continue $sw9; }
+                    return;
+                }
+                case 10: {
+                    throw new abcd.yD(this.Zo, java.text.MessageFormat.format(org.eclipse.jgit.JGitText.j6().expectedGot, new java.lang.Object[]{r11, r12}));
+                }
+                case 12: {
+                    throw new abcd.yD(this.Zo, java.text.MessageFormat.format(org.eclipse.jgit.JGitText.j6().expectedPktLineWithService, new java.lang.Object[]{abcd.IK.j6(r0)}));
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     private void j6(java.net.URLConnection r5) {
-        javax.net.ssl.TrustManager[] r0 = {new abcd.xJ.a(null)};
-        javax.net.ssl.SSLContext r1 = javax.net.ssl.SSLContext.getInstance("SSL");     // Catch: java.security.NoSuchAlgorithmException -> L5 java.security.KeyManagementException -> L8
-        r1.init(null, r0, null);     // Catch: java.security.NoSuchAlgorithmException -> L5 java.security.KeyManagementException -> L8
-        ((javax.net.ssl.HttpsURLConnection) r5).setSSLSocketFactory(r1.getSocketFactory());     // Catch: java.security.NoSuchAlgorithmException -> L5 java.security.KeyManagementException -> L8
-        return;
-    L8:
-        e = move-exception;
-        throw new java.io.IOException(e.getMessage());
-    L5:
-        e = move-exception;
-        throw new java.io.IOException(e.getMessage());
+        javax.net.ssl.TrustManager[] r0 = null;
+        javax.net.ssl.SSLContext r1 = null;
+        java.lang.Throwable e = null;
+        java.lang.Throwable $ex10 = null;
+        int $pc10 = -1;
+        $sw10: while (true) {
+            switch ($pc10) {
+                case -1: {
+                    r0 = new javax.net.ssl.TrustManager[]{new abcd.xJ.a(null)};
+                    try {
+                        r1 = javax.net.ssl.SSLContext.getInstance("SSL");
+                        r1.init(null, r0, null);
+                        ((javax.net.ssl.HttpsURLConnection) r5).setSSLSocketFactory(r1.getSocketFactory());
+                    } catch (java.lang.Throwable $t) {
+                        $ex10 = $t;
+                        if ($t instanceof java.security.NoSuchAlgorithmException) { $pc10 = 5; continue $sw10; }
+                        if ($t instanceof java.security.KeyManagementException) { $pc10 = 8; continue $sw10; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    return;
+                }
+                case 8: {
+                    e = $ex10;
+                    throw new java.io.IOException(e.getMessage());
+                }
+                case 5: {
+                    e = $ex10;
+                    throw new java.io.IOException(e.getMessage());
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     private boolean j6(java.net.HttpURLConnection r3, java.lang.String r4) {
@@ -523,61 +981,186 @@ public class xJ extends abcd.AbstractsI implements abcd.SJ, abcd.BI {
 
     @Override
     public abcd.InterfacenI QX() {
-        java.net.HttpURLConnection r1 = FH("git-upload-pack");     // Catch: java.io.IOException -> L15 abcd.yD -> L17 abcd.jD -> L19
-        java.io.InputStream r2 = j6(r1);     // Catch: java.io.IOException -> L15 abcd.yD -> L17 abcd.jD -> L19
-    L12:
-        th = move-exception;
-        r2.close();     // Catch: java.io.IOException -> L15 abcd.yD -> L17 abcd.jD -> L19
-        throw th;     // Catch: java.io.IOException -> L15 abcd.yD -> L17 abcd.jD -> L19
-    L5:
-        if (j6(r1, "git-upload-pack") == false) goto L9;
-        j6(r2, "git-upload-pack");     // Catch: java.lang.Throwable -> L12
-        abcd.xJ.e r0 = new abcd.xJ.e(this, r2);     // Catch: java.lang.Throwable -> L12
-        r2.close();     // Catch: java.io.IOException -> L15 abcd.yD -> L17 abcd.jD -> L19
-        return r0;
-    L9:
-        abcd.InterfacenI r3 = j6(r2);     // Catch: java.lang.Throwable -> L12
-        r2.close();     // Catch: java.io.IOException -> L15 abcd.yD -> L17 abcd.jD -> L19
-        return r3;
-    L19:
-        e = move-exception;
-        throw e;
-    L17:
-        e = move-exception;
-        throw e;
-    L15:
-        e = move-exception;
-        throw new abcd.yD(this.Zo, org.eclipse.jgit.JGitText.j6().errorReadingInfoRefs, e);
+        java.net.HttpURLConnection r1 = null;
+        java.io.InputStream r2 = null;
+        abcd.xJ.e r0 = null;
+        abcd.InterfacenI r3 = null;
+        java.lang.Throwable e = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex11 = null;
+        int $pc11 = -1;
+        $sw11: while (true) {
+            switch ($pc11) {
+                case -1: {
+                    try {
+                        r1 = FH("git-upload-pack");
+                        r2 = j6(r1);
+                    } catch (java.lang.Throwable $t) {
+                        $ex11 = $t;
+                        if ($t instanceof java.io.IOException) { $pc11 = 15; continue $sw11; }
+                        if ($t instanceof abcd.yD) { $pc11 = 17; continue $sw11; }
+                        if ($t instanceof abcd.jD) { $pc11 = 19; continue $sw11; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    $pc11 = 12; continue $sw11;
+                }
+                case 12: {
+                    th = $ex11;
+                    try {
+                        r2.close();
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    } catch (java.lang.Throwable $t) {
+                        $ex11 = $t;
+                        if ($t instanceof java.io.IOException) { $pc11 = 15; continue $sw11; }
+                        if ($t instanceof abcd.yD) { $pc11 = 17; continue $sw11; }
+                        if ($t instanceof abcd.jD) { $pc11 = 19; continue $sw11; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                }
+                case 5: {
+                    if (j6(r1, "git-upload-pack") == false) { $pc11 = 9; continue $sw11; }
+                    try {
+                        j6(r2, "git-upload-pack");
+                        r0 = new abcd.xJ.e(this, r2);
+                    } catch (java.lang.Throwable $t) {
+                        $ex11 = $t;
+                        $pc11 = 12; continue $sw11;
+                    }
+                    try {
+                        r2.close();
+                    } catch (java.lang.Throwable $t) {
+                        $ex11 = $t;
+                        if ($t instanceof java.io.IOException) { $pc11 = 15; continue $sw11; }
+                        if ($t instanceof abcd.yD) { $pc11 = 17; continue $sw11; }
+                        if ($t instanceof abcd.jD) { $pc11 = 19; continue $sw11; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    return r0;
+                }
+                case 9: {
+                    try {
+                        r3 = j6(r2);
+                    } catch (java.lang.Throwable $t) {
+                        $ex11 = $t;
+                        $pc11 = 12; continue $sw11;
+                    }
+                    try {
+                        r2.close();
+                    } catch (java.lang.Throwable $t) {
+                        $ex11 = $t;
+                        if ($t instanceof java.io.IOException) { $pc11 = 15; continue $sw11; }
+                        if ($t instanceof abcd.yD) { $pc11 = 17; continue $sw11; }
+                        if ($t instanceof abcd.jD) { $pc11 = 19; continue $sw11; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    return r3;
+                }
+                case 19: {
+                    e = $ex11;
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(e);
+                }
+                case 17: {
+                    e = $ex11;
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(e);
+                }
+                case 15: {
+                    e = $ex11;
+                    throw new abcd.yD(this.Zo, org.eclipse.jgit.JGitText.j6().errorReadingInfoRefs, e);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
     public abcd.LI XL() {
-        java.net.HttpURLConnection r1 = FH("git-receive-pack");     // Catch: java.io.IOException -> L18 abcd.yD -> L20 abcd.jD -> L22
-        java.io.InputStream r2 = j6(r1);     // Catch: java.io.IOException -> L18 abcd.yD -> L20 abcd.jD -> L22
-    L15:
-        th = move-exception;
-        r2.close();     // Catch: java.io.IOException -> L18 abcd.yD -> L20 abcd.jD -> L22
-        throw th;     // Catch: java.io.IOException -> L18 abcd.yD -> L20 abcd.jD -> L22
-    L5:
-        if (j6(r1, "git-receive-pack") == false) goto L10;
-        j6(r2, "git-receive-pack");     // Catch: java.lang.Throwable -> L15
-        abcd.xJ.f r0 = new abcd.xJ.f(this, r2);     // Catch: java.lang.Throwable -> L15
-        r2.close();     // Catch: java.io.IOException -> L18 abcd.yD -> L20 abcd.jD -> L22
-        return r0;
-    L10:
-        if (this.BT == true) goto L14;
-        throw new abcd.jD(org.eclipse.jgit.JGitText.j6().smartHTTPPushDisabled);     // Catch: java.lang.Throwable -> L15
-    L14:
-        throw new abcd.jD(org.eclipse.jgit.JGitText.j6().remoteDoesNotSupportSmartHTTPPush);     // Catch: java.lang.Throwable -> L15
-    L22:
-        e = move-exception;
-        throw e;
-    L20:
-        e = move-exception;
-        throw e;
-    L18:
-        e = move-exception;
-        throw new abcd.yD(this.Zo, org.eclipse.jgit.JGitText.j6().errorReadingInfoRefs, e);
+        java.net.HttpURLConnection r1 = null;
+        java.io.InputStream r2 = null;
+        abcd.xJ.f r0 = null;
+        java.lang.Throwable e = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex12 = null;
+        int $pc12 = -1;
+        $sw12: while (true) {
+            switch ($pc12) {
+                case -1: {
+                    try {
+                        r1 = FH("git-receive-pack");
+                        r2 = j6(r1);
+                    } catch (java.lang.Throwable $t) {
+                        $ex12 = $t;
+                        if ($t instanceof java.io.IOException) { $pc12 = 18; continue $sw12; }
+                        if ($t instanceof abcd.yD) { $pc12 = 20; continue $sw12; }
+                        if ($t instanceof abcd.jD) { $pc12 = 22; continue $sw12; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    $pc12 = 15; continue $sw12;
+                }
+                case 15: {
+                    th = $ex12;
+                    try {
+                        r2.close();
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    } catch (java.lang.Throwable $t) {
+                        $ex12 = $t;
+                        if ($t instanceof java.io.IOException) { $pc12 = 18; continue $sw12; }
+                        if ($t instanceof abcd.yD) { $pc12 = 20; continue $sw12; }
+                        if ($t instanceof abcd.jD) { $pc12 = 22; continue $sw12; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                }
+                case 5: {
+                    if (j6(r1, "git-receive-pack") == false) { $pc12 = 10; continue $sw12; }
+                    try {
+                        j6(r2, "git-receive-pack");
+                        r0 = new abcd.xJ.f(this, r2);
+                    } catch (java.lang.Throwable $t) {
+                        $ex12 = $t;
+                        $pc12 = 15; continue $sw12;
+                    }
+                    try {
+                        r2.close();
+                    } catch (java.lang.Throwable $t) {
+                        $ex12 = $t;
+                        if ($t instanceof java.io.IOException) { $pc12 = 18; continue $sw12; }
+                        if ($t instanceof abcd.yD) { $pc12 = 20; continue $sw12; }
+                        if ($t instanceof abcd.jD) { $pc12 = 22; continue $sw12; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    return r0;
+                }
+                case 10: {
+                    if (this.BT == true) { $pc12 = 14; continue $sw12; }
+                    try {
+                        throw new abcd.jD(org.eclipse.jgit.JGitText.j6().smartHTTPPushDisabled);
+                    } catch (java.lang.Throwable $t) {
+                        $ex12 = $t;
+                        $pc12 = 15; continue $sw12;
+                    }
+                }
+                case 14: {
+                    try {
+                        throw new abcd.jD(org.eclipse.jgit.JGitText.j6().remoteDoesNotSupportSmartHTTPPush);
+                    } catch (java.lang.Throwable $t) {
+                        $ex12 = $t;
+                        $pc12 = 15; continue $sw12;
+                    }
+                }
+                case 22: {
+                    e = $ex12;
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(e);
+                }
+                case 20: {
+                    e = $ex12;
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(e);
+                }
+                case 18: {
+                    e = $ex12;
+                    throw new abcd.yD(this.Zo, org.eclipse.jgit.JGitText.j6().errorReadingInfoRefs, e);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     java.io.IOException j6(java.lang.String r4, java.lang.String r5) {
@@ -585,30 +1168,54 @@ public class xJ extends abcd.AbstractsI implements abcd.SJ, abcd.BI {
     }
 
     final java.io.InputStream j6(java.net.HttpURLConnection r3) {
-        java.io.InputStream r0 = r3.getInputStream();
-        if ("gzip".equals(r3.getHeaderField("Content-Encoding")) == false) goto L6;
-        return new java.util.zip.GZIPInputStream(r0);
-    L6:
-        return r0;
+        java.io.InputStream r0 = null;
+        java.lang.Throwable $ex13 = null;
+        int $pc13 = -1;
+        $sw13: while (true) {
+            switch ($pc13) {
+                case -1: {
+                    r0 = r3.getInputStream();
+                    if ("gzip".equals(r3.getHeaderField("Content-Encoding")) == false) { $pc13 = 6; continue $sw13; }
+                    return new java.util.zip.GZIPInputStream(r0);
+                }
+                case 6: {
+                    return r0;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     final java.net.HttpURLConnection j6(java.lang.String r3, java.net.URL r4) {
-        java.net.HttpURLConnection r0 = (java.net.HttpURLConnection) r4.openConnection(abcd.AK.j6(this.gW, r4));
-        if (this.yS.DW == false) goto L5;
-    L7:
-        r0.setRequestMethod(r3);
-        r0.setUseCaches(false);
-        r0.setRequestProperty("Accept-Encoding", "gzip");
-        r0.setRequestProperty("Pragma", "no-cache");
-        r0.setRequestProperty("User-Agent", Mr);
-        r0.setConnectTimeout(gn() * 1000);
-        r0.setReadTimeout(gn() * 1000);
-        this.vy.j6(r0);
-        return r0;
-    L5:
-        if ("https".equals(r4.getProtocol()) == false) goto L7;
-        j6(r0);
-        goto L7
+        java.net.HttpURLConnection r0 = null;
+        java.lang.Throwable $ex14 = null;
+        int $pc14 = -1;
+        $sw14: while (true) {
+            switch ($pc14) {
+                case -1: {
+                    r0 = (java.net.HttpURLConnection) r4.openConnection(abcd.AK.j6(this.gW, r4));
+                    if (this.yS.DW == false) { $pc14 = 5; continue $sw14; }
+                    $pc14 = 7; continue $sw14;
+                }
+                case 7: {
+                    r0.setRequestMethod(r3);
+                    r0.setUseCaches(false);
+                    r0.setRequestProperty("Accept-Encoding", "gzip");
+                    r0.setRequestProperty("Pragma", "no-cache");
+                    r0.setRequestProperty("User-Agent", Mr);
+                    r0.setConnectTimeout(gn() * 1000);
+                    r0.setReadTimeout(gn() * 1000);
+                    this.vy.j6(r0);
+                    return r0;
+                }
+                case 5: {
+                    if ("https".equals(r4.getProtocol()) == false) { $pc14 = 7; continue $sw14; }
+                    j6(r0);
+                    { $pc14 = 7; continue $sw14; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     final java.net.HttpURLConnection j6(java.net.URL r2) {

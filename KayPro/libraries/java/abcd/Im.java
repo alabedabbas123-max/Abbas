@@ -14,10 +14,21 @@ public final class Im extends abcd.du {
     }
 
     public abcd.Hm v5(int r4) {
-        int r0 = Hw(r4);
-        if (r0 < 0) goto L7;
-        return get(r0);
-    L7:
-        throw new java.lang.IllegalArgumentException("no such label: " + abcd.Yt.v5(r4));
+        int r0 = 0;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = Hw(r4);
+                    if (r0 < 0) { $pc0 = 7; continue $sw0; }
+                    return get(r0);
+                }
+                case 7: {
+                    throw new java.lang.IllegalArgumentException("no such label: " + abcd.Yt.v5(r4));
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

@@ -33,13 +33,24 @@ public class i extends a.b.a.c.r {
 
     @Override
     public boolean equals(java.lang.Object r4) {
-        if (super.equals(r4) == true) goto L6;
-        return false;
-    L6:
-        if (this.f54a != ((a.b.a.c.i) r4).f54a) goto L8;
-        return true;
-    L8:
-        return false;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (super.equals(r4) == true) { $pc0 = 6; continue $sw0; }
+                    return false;
+                }
+                case 6: {
+                    if (this.f54a != ((a.b.a.c.i) r4).f54a) { $pc0 = 8; continue $sw0; }
+                    return true;
+                }
+                case 8: {
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

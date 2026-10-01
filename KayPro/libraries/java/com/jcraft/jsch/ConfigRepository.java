@@ -1,8 +1,8 @@
 package com.jcraft.jsch;
 
 public interface ConfigRepository {
-    public static final com.jcraft.jsch.ConfigRepository DW = null;
-    public static final com.jcraft.jsch.ConfigRepository.Config j6 = null;
+    public static final com.jcraft.jsch.ConfigRepository DW = new com.jcraft.jsch.ConfigRepository.AnonymousClass2();
+    public static final com.jcraft.jsch.ConfigRepository.Config j6 = new com.jcraft.jsch.ConfigRepository.AnonymousClass1();
 
     public interface Config {
         java.lang.String DW();
@@ -16,10 +16,7 @@ public interface ConfigRepository {
         java.lang.String[] j6(java.lang.String r1);
     }
 
-    static {
-        j6 = new com.jcraft.jsch.ConfigRepository.AnonymousClass1();
-        DW = new com.jcraft.jsch.ConfigRepository.AnonymousClass2();
-    }
+
 
     com.jcraft.jsch.ConfigRepository.Config j6(java.lang.String r1);
 }

@@ -16,11 +16,22 @@ public abstract class AbstractzI {
     }
 
     public java.lang.String DW() {
-        java.lang.StringBuilder r0 = this.Hw;
-        if (r0 != null) goto L7;
-        return "";
-    L7:
-        return r0.toString();
+        java.lang.StringBuilder r0 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = this.Hw;
+                    if (r0 != null) { $pc0 = 7; continue $sw0; }
+                    return "";
+                }
+                case 7: {
+                    return r0.toString();
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public java.util.Collection<abcd.ME> j6() {
@@ -37,18 +48,34 @@ public abstract class AbstractzI {
     }
 
     void j6(java.lang.String r2) {
-        if (r2 != null) goto L4;
-        return;
-    L4:
-        if (r2.length() > 0) goto L6;
-        return;
-    L6:
-        if (this.Hw != null) goto L8;
-        this.Hw = new java.lang.StringBuilder();
-    L8:
-        this.Hw.append(r2);
-        if (r2.endsWith("\n") == true) goto L14;
-        this.Hw.append('\n');
-        return;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if (r2 != null) { $pc1 = 4; continue $sw1; }
+                    return;
+                }
+                case 4: {
+                    if (r2.length() > 0) { $pc1 = 6; continue $sw1; }
+                    return;
+                }
+                case 6: {
+                    if (this.Hw != null) { $pc1 = 8; continue $sw1; }
+                    this.Hw = new java.lang.StringBuilder();
+                    $pc1 = 8; continue $sw1;
+                }
+                case 8: {
+                    this.Hw.append(r2);
+                    if (r2.endsWith("\n") == true) { $pc1 = 14; continue $sw1; }
+                    this.Hw.append('\n');
+                    return;
+                }
+                case 14: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

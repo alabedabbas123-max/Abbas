@@ -19,46 +19,83 @@ class tH {
         }
 
         boolean DW(abcd.YD r5) {
-            int r2 = FH(r5);
+            int r2 = 0;
             int r0 = 0;
-        L4:
-            if (r0 >= 8) goto L8;
-            abcd.yE r3 = this.j6.get(r2);
-            if (r3 == null) goto L8;
-            if (abcd.YD.j6(r3, r5) == true) goto L11;
-            r2 = r2 + 1;
-            if (r2 != this.j6.length()) goto L16;
-            r2 = 0;
-        L16:
-            r0 = r0 + 1;
-            goto L4
-        L11:
-            return true;
-        L8:
-            return false;
+            abcd.yE r3 = null;
+            java.lang.Throwable $ex0 = null;
+            int $pc0 = -1;
+            $sw0: while (true) {
+                switch ($pc0) {
+                    case -1: {
+                        r2 = FH(r5);
+                        r0 = 0;
+                        $pc0 = 4; continue $sw0;
+                    }
+                    case 4: {
+                        if (r0 >= 8) { $pc0 = 8; continue $sw0; }
+                        r3 = this.j6.get(r2);
+                        if (r3 == null) { $pc0 = 8; continue $sw0; }
+                        if (abcd.YD.j6(r3, r5) == true) { $pc0 = 11; continue $sw0; }
+                        r2 = r2 + 1;
+                        if (r2 != this.j6.length()) { $pc0 = 16; continue $sw0; }
+                        r2 = 0;
+                        $pc0 = 16; continue $sw0;
+                    }
+                    case 16: {
+                        r0 = r0 + 1;
+                        { $pc0 = 4; continue $sw0; }
+                    }
+                    case 11: {
+                        return true;
+                    }
+                    case 8: {
+                        return false;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         boolean j6(abcd.YD r8) {
-            int r2 = FH(r8);
+            int r2 = 0;
             int r0 = 0;
-        L4:
-            if (r0 >= 8) goto L5;
-            abcd.yE r3 = this.j6.get(r2);
-            if (r3 == null) goto L9;
-            if (abcd.YD.j6(r3, r8) == true) goto L13;
-            r2 = r2 + 1;
-            if (r2 != this.j6.length()) goto L17;
-            r2 = 0;
-        L17:
-            r0 = r0 + 1;
-            goto L4
-        L13:
-            return true;
-        L9:
-            if (this.j6.compareAndSet(r2, null, r8.Hw()) == false) goto L4;
-            return true;
-        L5:
-            return false;
+            abcd.yE r3 = null;
+            java.lang.Throwable $ex1 = null;
+            int $pc1 = -1;
+            $sw1: while (true) {
+                switch ($pc1) {
+                    case -1: {
+                        r2 = FH(r8);
+                        r0 = 0;
+                        $pc1 = 4; continue $sw1;
+                    }
+                    case 4: {
+                        if (r0 >= 8) { $pc1 = 5; continue $sw1; }
+                        r3 = this.j6.get(r2);
+                        if (r3 == null) { $pc1 = 9; continue $sw1; }
+                        if (abcd.YD.j6(r3, r8) == true) { $pc1 = 13; continue $sw1; }
+                        r2 = r2 + 1;
+                        if (r2 != this.j6.length()) { $pc1 = 17; continue $sw1; }
+                        r2 = 0;
+                        $pc1 = 17; continue $sw1;
+                    }
+                    case 17: {
+                        r0 = r0 + 1;
+                        { $pc1 = 4; continue $sw1; }
+                    }
+                    case 13: {
+                        return true;
+                    }
+                    case 9: {
+                        if (this.j6.compareAndSet(r2, null, r8.Hw()) == false) { $pc1 = 4; continue $sw1; }
+                        return true;
+                    }
+                    case 5: {
+                        return false;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
     }
 
@@ -71,9 +108,21 @@ class tH {
     }
 
     void FH(abcd.YD r1) {
-        if (DW(r1) == false) goto L6;
-        j6();
-        return;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    if (DW(r1) == false) { $pc2 = 6; continue $sw2; }
+                    j6();
+                    return;
+                }
+                case 6: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     void j6() {
@@ -81,11 +130,25 @@ class tH {
     }
 
     void j6(abcd.YD r4) {
-        abcd.tH.a r0 = this.j6;
-        if (r0.j6(r4) == true) goto L6;
-        abcd.tH.a r1 = new abcd.tH.a(java.lang.Math.min(r0.FH + 1, 11));
-        r1.j6(r4);
-        this.j6 = r1;
-        return;
+        abcd.tH.a r0 = null;
+        abcd.tH.a r1 = null;
+        java.lang.Throwable $ex3 = null;
+        int $pc3 = -1;
+        $sw3: while (true) {
+            switch ($pc3) {
+                case -1: {
+                    r0 = this.j6;
+                    if (r0.j6(r4) == true) { $pc3 = 6; continue $sw3; }
+                    r1 = new abcd.tH.a(java.lang.Math.min(r0.FH + 1, 11));
+                    r1.j6(r4);
+                    this.j6 = r1;
+                    return;
+                }
+                case 6: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

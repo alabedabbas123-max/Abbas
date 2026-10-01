@@ -23,18 +23,45 @@ class La implements android.content.DialogInterface.OnCancelListener {
     @Override
     @abcd.Interfacesu(method = -1344767388138720175L)
     public void onCancel(android.content.DialogInterface r5) {
-    L10:
-        th = move-exception;
-        if (DW == false) goto L14;
-        abcd.wu.j6(th, -5555600766420419235L, this, r5);
-    L14:
-        throw th;
-    L4:
-        if (j6 == false) goto L7;
-        abcd.wu.j6(-5555600766420419235L, this, r5);     // Catch: java.lang.Throwable -> L10
-    L7:
-        if (com.aide.common.Wa.j6(this.FH) == null) goto L17;
-        com.aide.common.Wa.j6(this.FH).run();     // Catch: java.lang.Throwable -> L10
-        return;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 4;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 10: {
+                    th = $ex0;
+                    if (DW == false) { $pc0 = 14; continue $sw0; }
+                    abcd.wu.j6(th, -5555600766420419235L, this, r5);
+                    $pc0 = 14; continue $sw0;
+                }
+                case 14: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (j6 == false) { $pc0 = 7; continue $sw0; }
+                    try {
+                        abcd.wu.j6(-5555600766420419235L, this, r5);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 10; continue $sw0;
+                    }
+                    $pc0 = 7; continue $sw0;
+                }
+                case 7: {
+                    if (com.aide.common.Wa.j6(this.FH) == null) { $pc0 = 17; continue $sw0; }
+                    try {
+                        com.aide.common.Wa.j6(this.FH).run();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 10; continue $sw0;
+                    }
+                    return;
+                }
+                case 17: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

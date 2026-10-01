@@ -14,23 +14,49 @@ public class nC<S extends abcd.CC> {
     }
 
     private lC<S> j6(S r5) {
-        int r0 = r5.j6();
-        int[] r1 = new int[r0];
+        int r0 = 0;
+        int[] r1 = null;
         int r2 = 0;
-    L3:
-        if (r2 >= r0) goto L5;
-        r1[r2] = this.j6.j6(r5, r2);
-        r2 = r2 + 1;
-        goto L3
-    L5:
-        return new abcd.lC(r5, r1);
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = r5.j6();
+                    r1 = new int[r0];
+                    r2 = 0;
+                    $pc0 = 3; continue $sw0;
+                }
+                case 3: {
+                    if (r2 >= r0) { $pc0 = 5; continue $sw0; }
+                    r1[r2] = this.j6.j6(r5, r2);
+                    r2 = r2 + 1;
+                    { $pc0 = 3; continue $sw0; }
+                }
+                case 5: {
+                    return new abcd.lC(r5, r1);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public lC<S> DW() {
-        if (this.v5 != null) goto L6;
-        this.v5 = j6(this.FH);
-    L6:
-        return this.v5;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if (this.v5 != null) { $pc1 = 6; continue $sw1; }
+                    this.v5 = j6(this.FH);
+                    $pc1 = 6; continue $sw1;
+                }
+                case 6: {
+                    return this.v5;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public mC<S> FH() {
@@ -38,9 +64,20 @@ public class nC<S extends abcd.CC> {
     }
 
     public lC<S> j6() {
-        if (this.Hw != null) goto L6;
-        this.Hw = j6(this.DW);
-    L6:
-        return this.Hw;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    if (this.Hw != null) { $pc2 = 6; continue $sw2; }
+                    this.Hw = j6(this.DW);
+                    $pc2 = 6; continue $sw2;
+                }
+                case 6: {
+                    return this.Hw;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

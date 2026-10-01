@@ -11,30 +11,125 @@ class ClassH {
     static final int[] j6 = null;
 
     static {
-        abcd.wu.j6(com.aide.ui.ClassH.class, 1778539205842150985L, -7057942054974859104L);     // Catch: java.lang.Throwable -> L14
-        if (DW == false) goto L6;
-        abcd.wu.j6(1303739358679615063L, null);     // Catch: java.lang.Throwable -> L14
-    L6:
-        j6 = new int[com.aide.engine.SourceEntity.a.values().length];     // Catch: java.lang.Throwable -> L14
-        j6[com.aide.engine.SourceEntity.a.j6.ordinal()] = 1;     // Catch: java.lang.NoSuchFieldError -> L19 java.lang.Throwable -> L14
-    L27:
-        j6[com.aide.engine.SourceEntity.a.DW.ordinal()] = 2;     // Catch: java.lang.NoSuchFieldError -> L20 java.lang.Throwable -> L14
-    L29:
-        j6[com.aide.engine.SourceEntity.a.gn.ordinal()] = 3;     // Catch: java.lang.NoSuchFieldError -> L21 java.lang.Throwable -> L14
-    L35:
-        j6[com.aide.engine.SourceEntity.a.v5.ordinal()] = 4;     // Catch: java.lang.NoSuchFieldError -> L22 java.lang.Throwable -> L14
-    L25:
-        j6[com.aide.engine.SourceEntity.a.J0.ordinal()] = 5;     // Catch: java.lang.NoSuchFieldError -> L23 java.lang.Throwable -> L14
-    L31:
-        j6[com.aide.engine.SourceEntity.a.VH.ordinal()] = 6;     // Catch: java.lang.NoSuchFieldError -> L24 java.lang.Throwable -> L14
-        return;
-    L38:
-        return;
-    L14:
-        th = move-exception;
-        if (FH == false) goto L18;
-        abcd.wu.j6(th, 1303739358679615063L, null);
-    L18:
-        throw th;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    try {
+                        abcd.wu.j6(com.aide.ui.ClassH.class, 1778539205842150985L, -7057942054974859104L);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 14; continue $sw0;
+                    }
+                    if (DW == false) { $pc0 = 6; continue $sw0; }
+                    try {
+                        abcd.wu.j6(1303739358679615063L, null);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 14; continue $sw0;
+                    }
+                    $pc0 = 6; continue $sw0;
+                }
+                case 6: {
+                    try {
+                        j6 = new int[com.aide.engine.SourceEntity.a.values().length];
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 14; continue $sw0;
+                    }
+                    try {
+                        j6[com.aide.engine.SourceEntity.a.j6.ordinal()] = 1;
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.lang.NoSuchFieldError) { $pc0 = 19; continue $sw0; }
+                        $pc0 = 14; continue $sw0;
+                    }
+                    $pc0 = 27; continue $sw0;
+                }
+                case 27: {
+                    try {
+                        j6[com.aide.engine.SourceEntity.a.DW.ordinal()] = 2;
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.lang.NoSuchFieldError) { $pc0 = 20; continue $sw0; }
+                        $pc0 = 14; continue $sw0;
+                    }
+                    $pc0 = 29; continue $sw0;
+                }
+                case 29: {
+                    try {
+                        j6[com.aide.engine.SourceEntity.a.gn.ordinal()] = 3;
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.lang.NoSuchFieldError) { $pc0 = 21; continue $sw0; }
+                        $pc0 = 14; continue $sw0;
+                    }
+                    $pc0 = 35; continue $sw0;
+                }
+                case 35: {
+                    try {
+                        j6[com.aide.engine.SourceEntity.a.v5.ordinal()] = 4;
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.lang.NoSuchFieldError) { $pc0 = 22; continue $sw0; }
+                        $pc0 = 14; continue $sw0;
+                    }
+                    $pc0 = 25; continue $sw0;
+                }
+                case 25: {
+                    try {
+                        j6[com.aide.engine.SourceEntity.a.J0.ordinal()] = 5;
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.lang.NoSuchFieldError) { $pc0 = 23; continue $sw0; }
+                        $pc0 = 14; continue $sw0;
+                    }
+                    $pc0 = 31; continue $sw0;
+                }
+                case 31: {
+                    try {
+                        j6[com.aide.engine.SourceEntity.a.VH.ordinal()] = 6;
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.lang.NoSuchFieldError) { $pc0 = 24; continue $sw0; }
+                        $pc0 = 14; continue $sw0;
+                    }
+                    return;
+                }
+                case 38: {
+                    return;
+                }
+                case 14: {
+                    th = $ex0;
+                    if (FH == false) { $pc0 = 18; continue $sw0; }
+                    abcd.wu.j6(th, 1303739358679615063L, null);
+                    $pc0 = 18; continue $sw0;
+                }
+                case 18: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 19: {
+                    $pc0 = 20; continue $sw0;
+                }
+                case 20: {
+                    $pc0 = 21; continue $sw0;
+                }
+                case 21: {
+                    $pc0 = 22; continue $sw0;
+                }
+                case 22: {
+                    $pc0 = 23; continue $sw0;
+                }
+                case 23: {
+                    $pc0 = 24; continue $sw0;
+                }
+                case 24: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

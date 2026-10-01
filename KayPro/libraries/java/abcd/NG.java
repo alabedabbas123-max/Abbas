@@ -16,31 +16,60 @@ class NG extends abcd.GH {
 
     @Override
     protected java.io.InputStream FH() {
-        abcd.FE r0 = this.J8;
-        if ((r0 instanceof abcd.OG) == false) goto L5;
-        java.io.InputStream r1 = abcd.OG.j6((abcd.OG) r0, this.Ws);
-    L7:
-        if (this.we == (-1)) goto L9;
-    L14:
-        return r1;
-    L9:
-        if ((r1 instanceof abcd.GH) == false) goto L12;
-        this.we = ((abcd.GH) r1).DW();
-        goto L14
-    L12:
-        if ((r1 instanceof abcd.JE) == false) goto L14;
-        this.we = ((abcd.JE) r1).j6();
-        goto L14
-    L5:
-        r1 = r0.v5();
-        goto L7
+        abcd.FE r0 = null;
+        java.io.InputStream r1 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = this.J8;
+                    if ((r0 instanceof abcd.OG) == false) { $pc0 = 5; continue $sw0; }
+                    r1 = abcd.OG.j6((abcd.OG) r0, this.Ws);
+                    $pc0 = 7; continue $sw0;
+                }
+                case 7: {
+                    if (this.we == (-1)) { $pc0 = 9; continue $sw0; }
+                    $pc0 = 14; continue $sw0;
+                }
+                case 14: {
+                    return r1;
+                }
+                case 9: {
+                    if ((r1 instanceof abcd.GH) == false) { $pc0 = 12; continue $sw0; }
+                    this.we = ((abcd.GH) r1).DW();
+                    { $pc0 = 14; continue $sw0; }
+                }
+                case 12: {
+                    if ((r1 instanceof abcd.JE) == false) { $pc0 = 14; continue $sw0; }
+                    this.we = ((abcd.JE) r1).j6();
+                    { $pc0 = 14; continue $sw0; }
+                }
+                case 5: {
+                    r1 = r0.v5();
+                    { $pc0 = 7; continue $sw0; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
     protected long j6() {
-        if (this.we != (-1)) goto L6;
-        this.we = this.J8.DW();
-    L6:
-        return this.we;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if (this.we != (-1)) { $pc1 = 6; continue $sw1; }
+                    this.we = this.J8.DW();
+                    $pc1 = 6; continue $sw1;
+                }
+                case 6: {
+                    return this.we;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

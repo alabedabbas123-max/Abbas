@@ -29,18 +29,37 @@ final class BG extends abcd.CG {
 
     @Override
     void j6(abcd.OH r4, long r5, int r7, java.security.MessageDigest r8) {
-        java.nio.ByteBuffer r0 = this.Hw.slice();
-        r0.position((int) (r5 - this.DW));
-    L3:
-        if (r7 <= 0) goto L4;
-        byte[] r6 = r4.FH();
-        int r9 = java.lang.Math.min(r7, r6.length);
-        r0.get(r6, 0, r9);
-        r4.write(r6, 0, r9);
-        if (r8 == null) goto L8;
-        r8.update(r6, 0, r9);
-    L8:
-        r7 = r7 - r9;
-        goto L3
+        java.nio.ByteBuffer r0 = null;
+        byte[] r6 = null;
+        int r9 = 0;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = this.Hw.slice();
+                    r0.position((int) (r5 - this.DW));
+                    $pc0 = 3; continue $sw0;
+                }
+                case 3: {
+                    if (r7 <= 0) { $pc0 = 4; continue $sw0; }
+                    r6 = r4.FH();
+                    r9 = java.lang.Math.min(r7, r6.length);
+                    r0.get(r6, 0, r9);
+                    r4.write(r6, 0, r9);
+                    if (r8 == null) { $pc0 = 8; continue $sw0; }
+                    r8.update(r6, 0, r9);
+                    $pc0 = 8; continue $sw0;
+                }
+                case 8: {
+                    r7 = r7 - r9;
+                    { $pc0 = 3; continue $sw0; }
+                }
+                case 4: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

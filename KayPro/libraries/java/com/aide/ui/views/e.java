@@ -21,25 +21,60 @@ class e implements java.lang.Runnable {
     @Override
     @abcd.Interfacesu(method = 234803935760915021L)
     public void run() {
-    L11:
-        th = move-exception;
-        if (DW == false) goto L15;
-        abcd.wu.j6(th, -1268670401927613468L, this);
-    L15:
-        throw th;
-    L4:
-        if (j6 == false) goto L6;
-        abcd.wu.j6(-1268670401927613468L, this);     // Catch: java.lang.Throwable -> L11
-    L6:
-        com.aide.ui.views.CodeEditText.c.j6(this.FH, true);     // Catch: java.lang.Throwable -> L11
-        int r9 = com.aide.ui.views.CodeEditText.c.j6(this.FH, com.aide.ui.views.CodeEditText.c.DW(this.FH), com.aide.ui.views.CodeEditText.c.FH(this.FH));     // Catch: java.lang.Throwable -> L11
-        int r2 = com.aide.ui.views.CodeEditText.c.DW(this.FH, com.aide.ui.views.CodeEditText.c.DW(this.FH), com.aide.ui.views.CodeEditText.c.FH(this.FH));     // Catch: java.lang.Throwable -> L11
-        if (r9 <= 0) goto L18;
-        if (r2 <= 0) goto L19;
-        this.FH.performHapticFeedback(0, 1);     // Catch: java.lang.Throwable -> L11
-        com.aide.ui.views.CodeEditText.j6(this.FH.PH, r9, com.aide.ui.views.CodeEditText.c.j6(this.FH, r9, r2), r9, com.aide.ui.views.CodeEditText.c.DW(this.FH, r9, r2), com.aide.ui.views.CodeEditText.v5(this.FH.PH));     // Catch: java.lang.Throwable -> L11
-        return;
-    L19:
-        return;
+        int r9 = 0;
+        int r2 = 0;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 4;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 11: {
+                    th = $ex0;
+                    if (DW == false) { $pc0 = 15; continue $sw0; }
+                    abcd.wu.j6(th, -1268670401927613468L, this);
+                    $pc0 = 15; continue $sw0;
+                }
+                case 15: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (j6 == false) { $pc0 = 6; continue $sw0; }
+                    try {
+                        abcd.wu.j6(-1268670401927613468L, this);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 11; continue $sw0;
+                    }
+                    $pc0 = 6; continue $sw0;
+                }
+                case 6: {
+                    try {
+                        com.aide.ui.views.CodeEditText.c.j6(this.FH, true);
+                        r9 = com.aide.ui.views.CodeEditText.c.j6(this.FH, com.aide.ui.views.CodeEditText.c.DW(this.FH), com.aide.ui.views.CodeEditText.c.FH(this.FH));
+                        r2 = com.aide.ui.views.CodeEditText.c.DW(this.FH, com.aide.ui.views.CodeEditText.c.DW(this.FH), com.aide.ui.views.CodeEditText.c.FH(this.FH));
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 11; continue $sw0;
+                    }
+                    if (r9 <= 0) { $pc0 = 18; continue $sw0; }
+                    if (r2 <= 0) { $pc0 = 19; continue $sw0; }
+                    try {
+                        this.FH.performHapticFeedback(0, 1);
+                        com.aide.ui.views.CodeEditText.j6(this.FH.PH, r9, com.aide.ui.views.CodeEditText.c.j6(this.FH, r9, r2), r9, com.aide.ui.views.CodeEditText.c.DW(this.FH, r9, r2), com.aide.ui.views.CodeEditText.v5(this.FH.PH));
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 11; continue $sw0;
+                    }
+                    return;
+                }
+                case 19: {
+                    return;
+                }
+                case 18: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

@@ -9,9 +9,20 @@ class LP implements abcd.AP {
 
     @Override
     public abcd.InterfacezP j6(abcd.wN r4) {
-        return new abcd.KP(this, r4, new abcd.MP.a(this.j6, abcd.MP.j6(this.j6).j6(r4)));
-    L5:
-        e = move-exception;
-        throw new abcd.BP("exception on setup: " + e, e);
+        java.lang.Throwable e = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    return new abcd.KP(this, r4, new abcd.MP.a(this.j6, abcd.MP.j6(this.j6).j6(r4)));
+                }
+                case 5: {
+                    e = $ex0;
+                    throw new abcd.BP("exception on setup: " + e, e);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

@@ -10,10 +10,20 @@ public abstract class AbstractwG extends abcd.AbstractyG {
 
         @Override
         public boolean j6(abcd.qG r1, abcd.dG r2) {
-            if (r2.U2() < this.v5) goto L7;
-            return true;
-        L7:
-            throw abcd.sD.j6;
+            java.lang.Throwable $ex0 = null;
+            int $pc0 = -1;
+            $sw0: while (true) {
+                switch ($pc0) {
+                    case -1: {
+                        if (r2.U2() < this.v5) { $pc0 = 7; continue $sw0; }
+                        return true;
+                    }
+                    case 7: {
+                        throw abcd.sD.j6;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         @Override

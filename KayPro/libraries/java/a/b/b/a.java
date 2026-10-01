@@ -29,8 +29,20 @@ public class a extends a.b.b.b {
     }
 
     public void a(a.b.g.s r2) {
-        if (this.b == null) goto L6;
-        this.b.a(r2);
-        return;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (this.b == null) { $pc0 = 6; continue $sw0; }
+                    this.b.a(r2);
+                    return;
+                }
+                case 6: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

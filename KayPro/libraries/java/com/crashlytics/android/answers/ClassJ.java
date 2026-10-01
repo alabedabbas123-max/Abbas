@@ -26,11 +26,29 @@ class ClassJ implements abcd.Interfacewz {
     }
 
     private void DW(java.lang.Runnable r4) {
-        this.VH.submit(r4).get();     // Catch: java.lang.Exception -> L4
-        return;
-    L4:
-        e = move-exception;
-        io.fabric.sdk.android.Fabric.getLogger().FH("Answers", "Failed to run events task", e);
+        java.lang.Throwable e = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    try {
+                        this.VH.submit(r4).get();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.lang.Exception) { $pc0 = 4; continue $sw0; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    return;
+                }
+                case 4: {
+                    e = $ex0;
+                    io.fabric.sdk.android.Fabric.getLogger().FH("Answers", "Failed to run events task", e);
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     static io.fabric.sdk.android.Kit FH(com.crashlytics.android.answers.ClassJ r0) {
@@ -50,11 +68,29 @@ class ClassJ implements abcd.Interfacewz {
     }
 
     private void j6(java.lang.Runnable r4) {
-        this.VH.submit(r4);     // Catch: java.lang.Exception -> L4
-        return;
-    L4:
-        e = move-exception;
-        io.fabric.sdk.android.Fabric.getLogger().FH("Answers", "Failed to submit events task", e);
+        java.lang.Throwable e = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    try {
+                        this.VH.submit(r4);
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        if ($t instanceof java.lang.Exception) { $pc1 = 4; continue $sw1; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    return;
+                }
+                case 4: {
+                    e = $ex1;
+                    io.fabric.sdk.android.Fabric.getLogger().FH("Answers", "Failed to submit events task", e);
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     static abcd.Jz v5(com.crashlytics.android.answers.ClassJ r0) {
@@ -90,12 +126,24 @@ class ClassJ implements abcd.Interfacewz {
     }
 
     void j6(com.crashlytics.android.answers.I.a r2, boolean r3, boolean r4) {
-        com.crashlytics.android.answers.Runnablei r0 = new com.crashlytics.android.answers.Runnablei(this, r2, r4);
-        if (r3 == false) goto L5;
-        DW(r0);
-        return;
-    L5:
-        j6(r0);
+        com.crashlytics.android.answers.Runnablei r0 = null;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    r0 = new com.crashlytics.android.answers.Runnablei(this, r2, r4);
+                    if (r3 == false) { $pc2 = 5; continue $sw2; }
+                    DW(r0);
+                    return;
+                }
+                case 5: {
+                    j6(r0);
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

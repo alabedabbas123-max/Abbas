@@ -10,69 +10,139 @@ public final class mt extends abcd.Abstractvt implements java.lang.Cloneable {
 
     @Override
     public final void DW(abcd.Abstractqt r4) {
-        abcd.cs r0 = this.FH.gn();
-        abcd.cs r5 = r4.j6(r0);
-        if (r5 == r0) goto L6;
-        this.FH = this.FH.j6(u7(), r5);
-        DW().v5().j6(this, r0);
-        return;
+        abcd.cs r0 = null;
+        abcd.cs r5 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = this.FH.gn();
+                    r5 = r4.j6(r0);
+                    if (r5 == r0) { $pc0 = 6; continue $sw0; }
+                    this.FH = this.FH.j6(u7(), r5);
+                    DW().v5().j6(this, r0);
+                    return;
+                }
+                case 6: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
     public boolean EQ() {
-        abcd.es r0 = v5();
-        if (r0.DW() == 1) goto L6;
-        return true;
-    L6:
-        if (abcd.C1102nt.DW() == true) goto L8;
-    L10:
+        abcd.es r0 = null;
         boolean r1 = false;
-    L11:
-        int r2 = r0.Hw();
-        if (r2 != 2) goto L14;
-    L18:
-        return r1;
-    L14:
-        if (r2 == 5) goto L18;
-        if (r2 == 55) goto L18;
-        return true;
-    L8:
-        if (FH() == null) goto L10;
-        r1 = true;
-        goto L11
+        int r2 = 0;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    r0 = v5();
+                    if (r0.DW() == 1) { $pc1 = 6; continue $sw1; }
+                    return true;
+                }
+                case 6: {
+                    if (abcd.C1102nt.DW() == true) { $pc1 = 8; continue $sw1; }
+                    $pc1 = 10; continue $sw1;
+                }
+                case 10: {
+                    r1 = false;
+                    $pc1 = 11; continue $sw1;
+                }
+                case 11: {
+                    r2 = r0.Hw();
+                    if (r2 != 2) { $pc1 = 14; continue $sw1; }
+                    $pc1 = 18; continue $sw1;
+                }
+                case 18: {
+                    return r1;
+                }
+                case 14: {
+                    if (r2 == 5) { $pc1 = 18; continue $sw1; }
+                    if (r2 == 55) { $pc1 = 18; continue $sw1; }
+                    return true;
+                }
+                case 8: {
+                    if (FH() == null) { $pc1 = 10; continue $sw1; }
+                    r1 = true;
+                    { $pc1 = 11; continue $sw1; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
     public abcd.bs FH() {
-        if (this.FH.v5().Hw() != 54) goto L5;
-        abcd.bs r0 = this.FH.gn().get(0);
-    L7:
-        if (r0 != null) goto L10;
-        return null;
-    L10:
-        if (r0.Zo() != null) goto L12;
-        return null;
-    L12:
-        return r0;
-    L5:
-        r0 = u7();
-        goto L7
+        abcd.bs r0 = null;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    if (this.FH.v5().Hw() != 54) { $pc2 = 5; continue $sw2; }
+                    r0 = this.FH.gn().get(0);
+                    $pc2 = 7; continue $sw2;
+                }
+                case 7: {
+                    if (r0 != null) { $pc2 = 10; continue $sw2; }
+                    return null;
+                }
+                case 10: {
+                    if (r0.Zo() != null) { $pc2 = 12; continue $sw2; }
+                    return null;
+                }
+                case 12: {
+                    return r0;
+                }
+                case 5: {
+                    r0 = u7();
+                    { $pc2 = 7; continue $sw2; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
     public boolean J0() {
-        if (this.FH.v5().Hw() != 4) goto L5;
-        return true;
-    L5:
-        return false;
+        java.lang.Throwable $ex3 = null;
+        int $pc3 = -1;
+        $sw3: while (true) {
+            switch ($pc3) {
+                case -1: {
+                    if (this.FH.v5().Hw() != 4) { $pc3 = 5; continue $sw3; }
+                    return true;
+                }
+                case 5: {
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
     public boolean QX() {
-        if (this.FH.v5().Hw() != 2) goto L5;
-        return true;
-    L5:
-        return false;
+        java.lang.Throwable $ex4 = null;
+        int $pc4 = -1;
+        $sw4: while (true) {
+            switch ($pc4) {
+                case -1: {
+                    if (this.FH.v5().Hw() != 2) { $pc4 = 5; continue $sw4; }
+                    return true;
+                }
+                case 5: {
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
@@ -106,45 +176,90 @@ public final class mt extends abcd.Abstractvt implements java.lang.Cloneable {
     }
 
     public final void j6(int r6, abcd.bs r7) {
-        abcd.cs r0 = this.FH.gn();
-        int r1 = r0.size();
-        abcd.cs r2 = new abcd.cs(r1);
+        abcd.cs r0 = null;
+        int r1 = 0;
+        abcd.cs r2 = null;
         int r3 = 0;
-    L3:
-        if (r3 >= r1) goto L8;
-        if (r3 != r6) goto L6;
-        abcd.bs r4 = r7;
-    L7:
-        r2.j6(r3, r4);
-        r3 = r3 + 1;
-        goto L3
-    L6:
-        r4 = r0.get(r3);
-        goto L7
-    L8:
-        r2.we();
-        abcd.bs r8 = r0.get(r6);
-        if (r8.we() == r7.we()) goto L11;
-        DW().v5().j6(this, r8, r7);
-    L11:
-        this.FH = this.FH.j6(u7(), r2);
+        abcd.bs r4 = null;
+        abcd.bs r8 = null;
+        java.lang.Throwable $ex5 = null;
+        int $pc5 = -1;
+        $sw5: while (true) {
+            switch ($pc5) {
+                case -1: {
+                    r0 = this.FH.gn();
+                    r1 = r0.size();
+                    r2 = new abcd.cs(r1);
+                    r3 = 0;
+                    $pc5 = 3; continue $sw5;
+                }
+                case 3: {
+                    if (r3 >= r1) { $pc5 = 8; continue $sw5; }
+                    if (r3 != r6) { $pc5 = 6; continue $sw5; }
+                    r4 = r7;
+                    $pc5 = 7; continue $sw5;
+                }
+                case 7: {
+                    r2.j6(r3, r4);
+                    r3 = r3 + 1;
+                    { $pc5 = 3; continue $sw5; }
+                }
+                case 6: {
+                    r4 = r0.get(r3);
+                    { $pc5 = 7; continue $sw5; }
+                }
+                case 8: {
+                    r2.we();
+                    r8 = r0.get(r6);
+                    if (r8.we() == r7.we()) { $pc5 = 11; continue $sw5; }
+                    DW().v5().j6(this, r8, r7);
+                    $pc5 = 11; continue $sw5;
+                }
+                case 11: {
+                    this.FH = this.FH.j6(u7(), r2);
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public final void j6(abcd.cs r3) {
-        if (this.FH.gn().size() != r3.size()) goto L7;
-        this.FH = this.FH.j6(u7(), r3);
-        return;
-    L7:
-        throw new java.lang.RuntimeException("Sources counts don't match");
+        java.lang.Throwable $ex6 = null;
+        int $pc6 = -1;
+        $sw6: while (true) {
+            switch ($pc6) {
+                case -1: {
+                    if (this.FH.gn().size() != r3.size()) { $pc6 = 7; continue $sw6; }
+                    this.FH = this.FH.j6(u7(), r3);
+                    return;
+                }
+                case 7: {
+                    throw new java.lang.RuntimeException("Sources counts don't match");
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
     public void j6(abcd.Abstractvt.a r2) {
-        if (QX() == false) goto L5;
-        r2.j6(this);
-        return;
-    L5:
-        r2.DW(this);
+        java.lang.Throwable $ex7 = null;
+        int $pc7 = -1;
+        $sw7: while (true) {
+            switch ($pc7) {
+                case -1: {
+                    if (QX() == false) { $pc7 = 5; continue $sw7; }
+                    r2.j6(this);
+                    return;
+                }
+                case 5: {
+                    r2.DW(this);
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

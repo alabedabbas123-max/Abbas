@@ -53,11 +53,22 @@ public class kz extends java.util.concurrent.ThreadPoolExecutor {
     @Override
     @android.annotation.TargetApi(9)
     public void execute(java.lang.Runnable r2) {
-        if (abcd.jz.DW(r2) == false) goto L5;
-        super.execute(r2);
-        return;
-    L5:
-        super.execute(newTaskFor(r2, null));
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (abcd.jz.DW(r2) == false) { $pc0 = 5; continue $sw0; }
+                    super.execute(r2);
+                    return;
+                }
+                case 5: {
+                    super.execute(newTaskFor(r2, null));
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

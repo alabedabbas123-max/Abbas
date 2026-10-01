@@ -25,24 +25,40 @@ public class Tag implements android.os.Parcelable {
     }
 
     public boolean equals(java.lang.Object r5) {
-        if (this != r5) goto L6;
-        return true;
-    L6:
-        if ((r5 instanceof tv.ouya.console.api.store.Tag) == true) goto L8;
-        return false;
-    L8:
-        tv.ouya.console.api.store.Tag r6 = (tv.ouya.console.api.store.Tag) r5;
-        if (this.j6.equals(r6.j6) == true) goto L11;
-        return false;
-    L11:
-        java.lang.Boolean r1 = this.DW;
-        if (r1 == r1) goto L15;
-        return false;
-    L15:
-        if (this.FH.equals(r6.FH) == true) goto L17;
-        return false;
-    L17:
-        return true;
+        tv.ouya.console.api.store.Tag r6 = null;
+        java.lang.Boolean r1 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (this != r5) { $pc0 = 6; continue $sw0; }
+                    return true;
+                }
+                case 6: {
+                    if ((r5 instanceof tv.ouya.console.api.store.Tag) == true) { $pc0 = 8; continue $sw0; }
+                    return false;
+                }
+                case 8: {
+                    r6 = (tv.ouya.console.api.store.Tag) r5;
+                    if (this.j6.equals(r6.j6) == true) { $pc0 = 11; continue $sw0; }
+                    return false;
+                }
+                case 11: {
+                    r1 = this.DW;
+                    if (r1 == r1) { $pc0 = 15; continue $sw0; }
+                    return false;
+                }
+                case 15: {
+                    if (this.FH.equals(r6.FH) == true) { $pc0 = 17; continue $sw0; }
+                    return false;
+                }
+                case 17: {
+                    return true;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public int hashCode() {

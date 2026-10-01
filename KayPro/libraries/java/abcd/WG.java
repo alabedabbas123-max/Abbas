@@ -26,39 +26,85 @@ public class WG {
     }
 
     private boolean VH() {
-        if (this.u7.Hw() == false) goto L5;
         int r1 = 0;
-    L8:
-        if (r1 >= 10) goto L9;
-        if (this.DW.delete() == true) goto L12;
-        java.lang.Thread.sleep(100);     // Catch: java.lang.InterruptedException -> L17
-        r1 = r1 + 1;
-    L17:
-        return false;
-    L12:
-        return true;
-    L9:
-        return false;
-    L5:
-        return this.DW.delete();
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (this.u7.Hw() == false) { $pc0 = 5; continue $sw0; }
+                    r1 = 0;
+                    $pc0 = 8; continue $sw0;
+                }
+                case 8: {
+                    if (r1 >= 10) { $pc0 = 9; continue $sw0; }
+                    if (this.DW.delete() == true) { $pc0 = 12; continue $sw0; }
+                    try {
+                        java.lang.Thread.sleep(100);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.lang.InterruptedException) { $pc0 = 17; continue $sw0; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    r1 = r1 + 1;
+                    $pc0 = 17; continue $sw0;
+                }
+                case 17: {
+                    return false;
+                }
+                case 12: {
+                    return true;
+                }
+                case 9: {
+                    return false;
+                }
+                case 5: {
+                    return this.DW.delete();
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     private boolean gn() {
-        if (this.u7.Hw() == false) goto L5;
         int r1 = 0;
-    L8:
-        if (r1 >= 10) goto L9;
-        if (this.FH.renameTo(this.DW) == true) goto L12;
-        java.lang.Thread.sleep(100);     // Catch: java.lang.InterruptedException -> L17
-        r1 = r1 + 1;
-    L17:
-        return false;
-    L12:
-        return true;
-    L9:
-        return false;
-    L5:
-        return this.FH.renameTo(this.DW);
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if (this.u7.Hw() == false) { $pc1 = 5; continue $sw1; }
+                    r1 = 0;
+                    $pc1 = 8; continue $sw1;
+                }
+                case 8: {
+                    if (r1 >= 10) { $pc1 = 9; continue $sw1; }
+                    if (this.FH.renameTo(this.DW) == true) { $pc1 = 12; continue $sw1; }
+                    try {
+                        java.lang.Thread.sleep(100);
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        if ($t instanceof java.lang.InterruptedException) { $pc1 = 17; continue $sw1; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    r1 = r1 + 1;
+                    $pc1 = 17; continue $sw1;
+                }
+                case 17: {
+                    return false;
+                }
+                case 12: {
+                    return true;
+                }
+                case 9: {
+                    return false;
+                }
+                case 5: {
+                    return this.FH.renameTo(this.DW);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     static java.io.File j6(java.io.File r3) {
@@ -74,17 +120,39 @@ public class WG {
     }
 
     private void tp() {
-        if (this.Zo == false) goto L6;
-        this.gn = abcd.LG.DW(this.FH);
-        return;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    if (this.Zo == false) { $pc2 = 6; continue $sw2; }
+                    this.gn = abcd.LG.DW(this.FH);
+                    return;
+                }
+                case 6: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     private void u7() {
-        if (this.v5 == null) goto L5;
-        return;
-    L5:
-        v5();
-        throw new java.lang.IllegalStateException(java.text.MessageFormat.format(org.eclipse.jgit.JGitText.j6().lockOnNotHeld, new java.lang.Object[]{this.DW}));
+        java.lang.Throwable $ex3 = null;
+        int $pc3 = -1;
+        $sw3: while (true) {
+            switch ($pc3) {
+                case -1: {
+                    if (this.v5 == null) { $pc3 = 5; continue $sw3; }
+                    return;
+                }
+                case 5: {
+                    v5();
+                    throw new java.lang.IllegalStateException(java.text.MessageFormat.format(org.eclipse.jgit.JGitText.j6().lockOnNotHeld, new java.lang.Object[]{this.DW}));
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public abcd.LG DW() {
@@ -96,14 +164,27 @@ public class WG {
     }
 
     public java.io.OutputStream FH() {
-        u7();
-        if (this.VH == false) goto L5;
-        java.io.OutputStream r0 = java.nio.channels.Channels.newOutputStream(this.v5.getChannel());
-    L7:
-        return new abcd.VG(this, r0);
-    L5:
-        r0 = this.v5;
-        goto L7
+        java.io.OutputStream r0 = null;
+        java.lang.Throwable $ex4 = null;
+        int $pc4 = -1;
+        $sw4: while (true) {
+            switch ($pc4) {
+                case -1: {
+                    u7();
+                    if (this.VH == false) { $pc4 = 5; continue $sw4; }
+                    r0 = java.nio.channels.Channels.newOutputStream(this.v5.getChannel());
+                    $pc4 = 7; continue $sw4;
+                }
+                case 7: {
+                    return new abcd.VG(this, r0);
+                }
+                case 5: {
+                    r0 = this.v5;
+                    { $pc4 = 7; continue $sw4; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public void FH(boolean r1) {
@@ -111,27 +192,62 @@ public class WG {
     }
 
     public boolean Hw() {
-        abcd.zK.DW(this.FH.getParentFile(), true);
-        if (this.FH.createNewFile() == false) goto L11;
-        this.Hw = true;
-        this.v5 = new java.io.FileOutputStream(this.FH);     // Catch: java.io.IOException -> L7
-    L7:
-        e = move-exception;
-        v5();
-        throw e;
-    L11:
-        return this.Hw;
+        java.lang.Throwable e = null;
+        java.lang.Throwable $ex5 = null;
+        int $pc5 = -1;
+        $sw5: while (true) {
+            switch ($pc5) {
+                case -1: {
+                    abcd.zK.DW(this.FH.getParentFile(), true);
+                    if (this.FH.createNewFile() == false) { $pc5 = 11; continue $sw5; }
+                    this.Hw = true;
+                    try {
+                        this.v5 = new java.io.FileOutputStream(this.FH);
+                    } catch (java.lang.Throwable $t) {
+                        $ex5 = $t;
+                        if ($t instanceof java.io.IOException) { $pc5 = 7; continue $sw5; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    $pc5 = 7; continue $sw5;
+                }
+                case 7: {
+                    e = $ex5;
+                    v5();
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(e);
+                }
+                case 11: {
+                    return this.Hw;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public void Zo() {
-        abcd.LG r0 = abcd.LG.DW(this.DW);
-        abcd.LG r1 = abcd.LG.DW(this.FH);
-    L4:
-        if (r0.j6(r1) == false) goto L5;
-        java.lang.Thread.sleep(25);
-        this.FH.setLastModified(java.lang.System.currentTimeMillis());
-        r1 = abcd.LG.DW(this.FH);
-        goto L4
+        abcd.LG r0 = null;
+        abcd.LG r1 = null;
+        java.lang.Throwable $ex6 = null;
+        int $pc6 = -1;
+        $sw6: while (true) {
+            switch ($pc6) {
+                case -1: {
+                    r0 = abcd.LG.DW(this.DW);
+                    r1 = abcd.LG.DW(this.FH);
+                    $pc6 = 4; continue $sw6;
+                }
+                case 4: {
+                    if (r0.j6(r1) == false) { $pc6 = 5; continue $sw6; }
+                    java.lang.Thread.sleep(25);
+                    this.FH.setLastModified(java.lang.System.currentTimeMillis());
+                    r1 = abcd.LG.DW(this.FH);
+                    { $pc6 = 4; continue $sw6; }
+                }
+                case 5: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public void j6(abcd.yE r3) {
@@ -146,55 +262,132 @@ public class WG {
     }
 
     public void j6(byte[] r3) {
-        u7();
-    L19:
-        e = move-exception;
-        v5();
-        throw e;
-    L13:
-        e = move-exception;
-        v5();
-        throw e;
-    L16:
-        e = move-exception;
-        v5();
-        throw e;
-    L4:
-        if (this.VH == false) goto L10;
-        java.nio.channels.FileChannel r0 = this.v5.getChannel();     // Catch: java.lang.Error -> L13 java.lang.RuntimeException -> L16 java.io.IOException -> L19
-        java.nio.ByteBuffer r4 = java.nio.ByteBuffer.wrap(r3);     // Catch: java.lang.Error -> L13 java.lang.RuntimeException -> L16 java.io.IOException -> L19
-    L7:
-        if (r4.remaining() <= 0) goto L8;
-        r0.write(r4);     // Catch: java.lang.Error -> L13 java.lang.RuntimeException -> L16 java.io.IOException -> L19
-        goto L7
-    L8:
-        r0.force(true);     // Catch: java.lang.Error -> L13 java.lang.RuntimeException -> L16 java.io.IOException -> L19
-    L11:
-        this.v5.close();     // Catch: java.lang.Error -> L13 java.lang.RuntimeException -> L16 java.io.IOException -> L19
-        this.v5 = null;     // Catch: java.lang.Error -> L13 java.lang.RuntimeException -> L16 java.io.IOException -> L19
-        return;
-    L10:
-        this.v5.write(r3);     // Catch: java.lang.Error -> L13 java.lang.RuntimeException -> L16 java.io.IOException -> L19
-        goto L11
+        java.nio.channels.FileChannel r0 = null;
+        java.nio.ByteBuffer r4 = null;
+        java.lang.Throwable e = null;
+        java.lang.Throwable $ex7 = null;
+        int $pc7 = -1;
+        $sw7: while (true) {
+            switch ($pc7) {
+                case -1: {
+                    u7();
+                    $pc7 = 19; continue $sw7;
+                }
+                case 19: {
+                    e = $ex7;
+                    v5();
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(e);
+                }
+                case 13: {
+                    e = $ex7;
+                    v5();
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(e);
+                }
+                case 16: {
+                    e = $ex7;
+                    v5();
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(e);
+                }
+                case 4: {
+                    if (this.VH == false) { $pc7 = 10; continue $sw7; }
+                    try {
+                        r0 = this.v5.getChannel();
+                        r4 = java.nio.ByteBuffer.wrap(r3);
+                    } catch (java.lang.Throwable $t) {
+                        $ex7 = $t;
+                        if ($t instanceof java.lang.Error) { $pc7 = 13; continue $sw7; }
+                        if ($t instanceof java.lang.RuntimeException) { $pc7 = 16; continue $sw7; }
+                        if ($t instanceof java.io.IOException) { $pc7 = 19; continue $sw7; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    $pc7 = 7; continue $sw7;
+                }
+                case 7: {
+                    if (r4.remaining() <= 0) { $pc7 = 8; continue $sw7; }
+                    try {
+                        r0.write(r4);
+                    } catch (java.lang.Throwable $t) {
+                        $ex7 = $t;
+                        if ($t instanceof java.lang.Error) { $pc7 = 13; continue $sw7; }
+                        if ($t instanceof java.lang.RuntimeException) { $pc7 = 16; continue $sw7; }
+                        if ($t instanceof java.io.IOException) { $pc7 = 19; continue $sw7; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    { $pc7 = 7; continue $sw7; }
+                }
+                case 8: {
+                    try {
+                        r0.force(true);
+                    } catch (java.lang.Throwable $t) {
+                        $ex7 = $t;
+                        if ($t instanceof java.lang.Error) { $pc7 = 13; continue $sw7; }
+                        if ($t instanceof java.lang.RuntimeException) { $pc7 = 16; continue $sw7; }
+                        if ($t instanceof java.io.IOException) { $pc7 = 19; continue $sw7; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    $pc7 = 11; continue $sw7;
+                }
+                case 11: {
+                    try {
+                        this.v5.close();
+                        this.v5 = null;
+                    } catch (java.lang.Throwable $t) {
+                        $ex7 = $t;
+                        if ($t instanceof java.lang.Error) { $pc7 = 13; continue $sw7; }
+                        if ($t instanceof java.lang.RuntimeException) { $pc7 = 16; continue $sw7; }
+                        if ($t instanceof java.io.IOException) { $pc7 = 19; continue $sw7; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    return;
+                }
+                case 10: {
+                    try {
+                        this.v5.write(r3);
+                    } catch (java.lang.Throwable $t) {
+                        $ex7 = $t;
+                        if ($t instanceof java.lang.Error) { $pc7 = 13; continue $sw7; }
+                        if ($t instanceof java.lang.RuntimeException) { $pc7 = 16; continue $sw7; }
+                        if ($t instanceof java.io.IOException) { $pc7 = 19; continue $sw7; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    { $pc7 = 11; continue $sw7; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public boolean j6() {
-        if (this.v5 != null) goto L16;
-        tp();
-        if (this.FH.renameTo(this.DW) == false) goto L8;
-        return true;
-    L8:
-        if (this.DW.exists() == false) goto L12;
-        if (VH() == true) goto L12;
-    L14:
-        v5();
-        return false;
-    L12:
-        if (gn() == false) goto L14;
-        return true;
-    L16:
-        v5();
-        throw new java.lang.IllegalStateException(java.text.MessageFormat.format(org.eclipse.jgit.JGitText.j6().lockOnNotClosed, new java.lang.Object[]{this.DW}));
+        java.lang.Throwable $ex8 = null;
+        int $pc8 = -1;
+        $sw8: while (true) {
+            switch ($pc8) {
+                case -1: {
+                    if (this.v5 != null) { $pc8 = 16; continue $sw8; }
+                    tp();
+                    if (this.FH.renameTo(this.DW) == false) { $pc8 = 8; continue $sw8; }
+                    return true;
+                }
+                case 8: {
+                    if (this.DW.exists() == false) { $pc8 = 12; continue $sw8; }
+                    if (VH() == true) { $pc8 = 12; continue $sw8; }
+                    $pc8 = 14; continue $sw8;
+                }
+                case 14: {
+                    v5();
+                    return false;
+                }
+                case 12: {
+                    if (gn() == false) { $pc8 = 14; continue $sw8; }
+                    return true;
+                }
+                case 16: {
+                    v5();
+                    throw new java.lang.IllegalStateException(java.text.MessageFormat.format(org.eclipse.jgit.JGitText.j6().lockOnNotClosed, new java.lang.Object[]{this.DW}));
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public java.lang.String toString() {
@@ -202,17 +395,53 @@ public class WG {
     }
 
     public void v5() {
-        java.io.FileOutputStream r0 = this.v5;
-        if (r0 == null) goto L7;
-        r0.close();     // Catch: java.io.IOException -> L12
-    L5:
-        this.v5 = null;
-    L7:
-        if (this.Hw == false) goto L17;
-        this.Hw = false;
-        abcd.zK.j6(this.FH, 2);     // Catch: java.io.IOException -> L11
-        return;
-    L18:
-        return;
+        java.io.FileOutputStream r0 = null;
+        java.lang.Throwable $ex9 = null;
+        int $pc9 = -1;
+        $sw9: while (true) {
+            switch ($pc9) {
+                case -1: {
+                    r0 = this.v5;
+                    if (r0 == null) { $pc9 = 7; continue $sw9; }
+                    try {
+                        r0.close();
+                    } catch (java.lang.Throwable $t) {
+                        $ex9 = $t;
+                        if ($t instanceof java.io.IOException) { $pc9 = 12; continue $sw9; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    $pc9 = 5; continue $sw9;
+                }
+                case 5: {
+                    this.v5 = null;
+                    $pc9 = 7; continue $sw9;
+                }
+                case 7: {
+                    if (this.Hw == false) { $pc9 = 17; continue $sw9; }
+                    this.Hw = false;
+                    try {
+                        abcd.zK.j6(this.FH, 2);
+                    } catch (java.lang.Throwable $t) {
+                        $ex9 = $t;
+                        if ($t instanceof java.io.IOException) { $pc9 = 11; continue $sw9; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    return;
+                }
+                case 18: {
+                    return;
+                }
+                case 11: {
+                    $pc9 = 12; continue $sw9;
+                }
+                case 12: {
+                    $pc9 = 17; continue $sw9;
+                }
+                case 17: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

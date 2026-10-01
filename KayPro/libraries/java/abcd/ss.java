@@ -16,11 +16,22 @@ public final class ss extends abcd.Bs {
     }
 
     public static abcd.ss j6(int r3) {
-        byte r0 = (byte) r3;
-        if (r0 != r3) goto L7;
-        return j6(r0);
-    L7:
-        throw new java.lang.IllegalArgumentException("bogus byte value: " + r3);
+        byte r0 = 0;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = (byte) r3;
+                    if (r0 != r3) { $pc0 = 7; continue $sw0; }
+                    return j6(r0);
+                }
+                case 7: {
+                    throw new java.lang.IllegalArgumentException("bogus byte value: " + r3);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

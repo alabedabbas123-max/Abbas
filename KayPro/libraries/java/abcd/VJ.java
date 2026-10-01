@@ -34,10 +34,23 @@ public class VJ extends abcd.TJ {
 
     @Override
     public void J0() {
-        abcd.TJ r0 = this.DW;
-        if (r0 == null) goto L6;
-        r0.J0();
-        return;
+        abcd.TJ r0 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = this.DW;
+                    if (r0 == null) { $pc0 = 6; continue $sw0; }
+                    r0.J0();
+                    return;
+                }
+                case 6: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

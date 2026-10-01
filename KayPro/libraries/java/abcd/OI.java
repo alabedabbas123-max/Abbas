@@ -9,7 +9,7 @@ public class OI {
     private final abcd.yE j6;
     private abcd.ME v5;
 
-    public static final enum a extends java.lang.Enum<abcd.OI.a> {
+    public static final class a extends com.almlkaide.kaypro.internal.EnumBase {
         public static final abcd.OI.a DW = null;
         public static final abcd.OI.a FH = null;
         public static final abcd.OI.a Hw = null;
@@ -39,7 +39,7 @@ public class OI {
         }
 
         public static abcd.OI.a valueOf(java.lang.String r1) {
-            return (abcd.OI.a) java.lang.Enum.valueOf(abcd.OI.a.class, r1);
+            return (abcd.OI.a) com.almlkaide.kaypro.internal.EnumBase.valueOf(abcd.OI.a.values(), r1);
         }
 
         public static abcd.OI.a[] values() {
@@ -51,7 +51,7 @@ public class OI {
         }
     }
 
-    public static final enum b extends java.lang.Enum<abcd.OI.b> {
+    public static final class b extends com.almlkaide.kaypro.internal.EnumBase {
         public static final abcd.OI.b DW = null;
         public static final abcd.OI.b FH = null;
         public static final abcd.OI.b Hw = null;
@@ -71,7 +71,7 @@ public class OI {
         }
 
         public static abcd.OI.b valueOf(java.lang.String r1) {
-            return (abcd.OI.b) java.lang.Enum.valueOf(abcd.OI.b.class, r1);
+            return (abcd.OI.b) com.almlkaide.kaypro.internal.EnumBase.valueOf(abcd.OI.b.values(), r1);
         }
 
         public static abcd.OI.b[] values() {
@@ -84,17 +84,31 @@ public class OI {
     }
 
     public OI(abcd.yE r1, abcd.yE r2, java.lang.String r3) {
-        this.j6 = r1;
-        this.DW = r2;
-        this.FH = r3;
-        this.Hw = abcd.OI.b.DW;
-        if (abcd.yE.Ws().DW(r1) == false) goto L6;
-        this.Hw = abcd.OI.b.j6;
-    L6:
-        if (abcd.yE.Ws().DW(r2) == false) goto L8;
-        this.Hw = abcd.OI.b.Hw;
-    L8:
-        this.Zo = abcd.OI.a.j6;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    this.j6 = r1;
+                    this.DW = r2;
+                    this.FH = r3;
+                    this.Hw = abcd.OI.b.DW;
+                    if (abcd.yE.Ws().DW(r1) == false) { $pc0 = 6; continue $sw0; }
+                    this.Hw = abcd.OI.b.j6;
+                    $pc0 = 6; continue $sw0;
+                }
+                case 6: {
+                    if (abcd.yE.Ws().DW(r2) == false) { $pc0 = 8; continue $sw0; }
+                    this.Hw = abcd.OI.b.Hw;
+                    $pc0 = 8; continue $sw0;
+                }
+                case 8: {
+                    this.Zo = abcd.OI.a.j6;
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public abcd.yE DW() {

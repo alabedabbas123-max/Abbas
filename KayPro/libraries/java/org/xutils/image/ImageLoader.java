@@ -163,16 +163,16 @@ final class ImageLoader implements Callback.PrepareCallback<File, Drawable>, Cal
         boolean z;
         MemCacheKey memCacheKey;
         boolean zEquals;
-        ?? r2;
+        java.lang.Object r2;
         Drawable drawable;
-        ?? r3;
+        java.lang.Object r3;
         boolean zOnCache;
         boolean z2;
         Bitmap bitmap;
-        ?? r4;
+        java.lang.Object r4;
         boolean zIsRecycled;
         boolean z3;
-        ?? r5 = 0;
+        java.lang.Object r5 = 0;
         if (imageView == null) {
             postArgsException(null, imageOptions, "view is null", commonCallback);
             return null;

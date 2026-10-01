@@ -25,31 +25,71 @@ class zJ extends abcd.AbstractjJ implements abcd.BI {
 
         @Override
         public void close() {
-            super.close();
-            java.lang.Process r0 = this.ro;
-            if (r0 != null) goto L21;
-        L10:
-            java.lang.Thread r1 = this.cn;
-            if (r1 == null) goto L25;
-            r1.join();     // Catch: java.lang.Throwable -> L14 java.lang.InterruptedException -> L19
-        L14:
-            th = move-exception;
-            this.cn = null;
-            throw th;
-        L17:
-            this.cn = null;
-            return;
-        L25:
-            return;
-        L21:
-            r0.waitFor();     // Catch: java.lang.Throwable -> L6 java.lang.InterruptedException -> L20
-        L6:
-            th = move-exception;
-            this.ro = null;
-            throw th;
-        L9:
-            this.ro = null;
-            goto L10
+            java.lang.Process r0 = null;
+            java.lang.Thread r1 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex0 = null;
+            int $pc0 = -1;
+            $sw0: while (true) {
+                switch ($pc0) {
+                    case -1: {
+                        super.close();
+                        r0 = this.ro;
+                        if (r0 != null) { $pc0 = 21; continue $sw0; }
+                        $pc0 = 10; continue $sw0;
+                    }
+                    case 10: {
+                        r1 = this.cn;
+                        if (r1 == null) { $pc0 = 25; continue $sw0; }
+                        try {
+                            r1.join();
+                        } catch (java.lang.Throwable $t) {
+                            $ex0 = $t;
+                            if ($t instanceof java.lang.InterruptedException) { $pc0 = 19; continue $sw0; }
+                            $pc0 = 14; continue $sw0;
+                        }
+                        $pc0 = 14; continue $sw0;
+                    }
+                    case 14: {
+                        th = $ex0;
+                        this.cn = null;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    case 17: {
+                        this.cn = null;
+                        return;
+                    }
+                    case 25: {
+                        return;
+                    }
+                    case 21: {
+                        try {
+                            r0.waitFor();
+                        } catch (java.lang.Throwable $t) {
+                            $ex0 = $t;
+                            if ($t instanceof java.lang.InterruptedException) { $pc0 = 20; continue $sw0; }
+                            $pc0 = 6; continue $sw0;
+                        }
+                        $pc0 = 6; continue $sw0;
+                    }
+                    case 6: {
+                        th = $ex0;
+                        this.ro = null;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    case 9: {
+                        this.ro = null;
+                        { $pc0 = 10; continue $sw0; }
+                    }
+                    case 19: {
+                        $pc0 = 20; continue $sw0;
+                    }
+                    case 20: {
+                        return;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
     }
 
@@ -74,31 +114,71 @@ class zJ extends abcd.AbstractjJ implements abcd.BI {
 
         @Override
         public void close() {
-            super.close();
-            java.lang.Process r0 = this.yS;
-            if (r0 != null) goto L21;
-        L10:
-            java.lang.Thread r1 = this.gW;
-            if (r1 == null) goto L25;
-            r1.join();     // Catch: java.lang.Throwable -> L14 java.lang.InterruptedException -> L19
-        L14:
-            th = move-exception;
-            this.gW = null;
-            throw th;
-        L17:
-            this.gW = null;
-            return;
-        L25:
-            return;
-        L21:
-            r0.waitFor();     // Catch: java.lang.Throwable -> L6 java.lang.InterruptedException -> L20
-        L6:
-            th = move-exception;
-            this.yS = null;
-            throw th;
-        L9:
-            this.yS = null;
-            goto L10
+            java.lang.Process r0 = null;
+            java.lang.Thread r1 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex1 = null;
+            int $pc1 = -1;
+            $sw1: while (true) {
+                switch ($pc1) {
+                    case -1: {
+                        super.close();
+                        r0 = this.yS;
+                        if (r0 != null) { $pc1 = 21; continue $sw1; }
+                        $pc1 = 10; continue $sw1;
+                    }
+                    case 10: {
+                        r1 = this.gW;
+                        if (r1 == null) { $pc1 = 25; continue $sw1; }
+                        try {
+                            r1.join();
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            if ($t instanceof java.lang.InterruptedException) { $pc1 = 19; continue $sw1; }
+                            $pc1 = 14; continue $sw1;
+                        }
+                        $pc1 = 14; continue $sw1;
+                    }
+                    case 14: {
+                        th = $ex1;
+                        this.gW = null;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    case 17: {
+                        this.gW = null;
+                        return;
+                    }
+                    case 25: {
+                        return;
+                    }
+                    case 21: {
+                        try {
+                            r0.waitFor();
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            if ($t instanceof java.lang.InterruptedException) { $pc1 = 20; continue $sw1; }
+                            $pc1 = 6; continue $sw1;
+                        }
+                        $pc1 = 6; continue $sw1;
+                    }
+                    case 6: {
+                        th = $ex1;
+                        this.yS = null;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    case 9: {
+                        this.yS = null;
+                        { $pc1 = 10; continue $sw1; }
+                    }
+                    case 19: {
+                        $pc1 = 20; continue $sw1;
+                    }
+                    case 20: {
+                        return;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
     }
 
@@ -107,24 +187,56 @@ class zJ extends abcd.AbstractjJ implements abcd.BI {
         private java.lang.Thread ro;
 
         c(abcd.zJ r9) {
-            this.cn = r9;
-            super(r9);
-            abcd.IG r5 = new abcd.IG(abcd.zJ.j6(r9));     // Catch: java.io.IOException -> L10
-            java.io.PipedInputStream r10 = new java.io.PipedInputStream();     // Catch: java.io.IOException -> L7
-            java.io.PipedOutputStream r4 = new java.io.PipedOutputStream(r10);     // Catch: java.io.IOException -> L7
-            abcd.AJ r3 = new abcd.AJ(this);     // Catch: java.io.IOException -> L7
-            java.io.OutputStream r6 = new java.io.PipedOutputStream(r3);     // Catch: java.io.IOException -> L7
-            this.ro = new abcd.BJ(this, "JGit-Upload-Pack", r3, r4, r5);
-            this.ro.start();
-            j6(r10, r6);
-            EQ();
-            return;
-        L7:
-            e = move-exception;
-            r5.j6();
-            throw new abcd.yD(this.v5, org.eclipse.jgit.JGitText.j6().cannotConnectPipes, e);
-        L11:
-            throw new abcd.yD(this.v5, org.eclipse.jgit.JGitText.j6().notAGitDirectory);
+            abcd.IG r5 = null;
+            java.io.PipedInputStream r10 = null;
+            java.io.PipedOutputStream r4 = null;
+            abcd.AJ r3 = null;
+            java.io.OutputStream r6 = null;
+            java.lang.Throwable e = null;
+            java.lang.Throwable $ex2 = null;
+            int $pc2 = -1;
+            $sw2: while (true) {
+                switch ($pc2) {
+                    case -1: {
+                        this.cn = r9;
+                        super(r9);
+                        try {
+                            r5 = new abcd.IG(abcd.zJ.j6(r9));
+                        } catch (java.lang.Throwable $t) {
+                            $ex2 = $t;
+                            if ($t instanceof java.io.IOException) { $pc2 = 10; continue $sw2; }
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                        }
+                        try {
+                            r10 = new java.io.PipedInputStream();
+                            r4 = new java.io.PipedOutputStream(r10);
+                            r3 = new abcd.AJ(this);
+                            r6 = new java.io.PipedOutputStream(r3);
+                        } catch (java.lang.Throwable $t) {
+                            $ex2 = $t;
+                            if ($t instanceof java.io.IOException) { $pc2 = 7; continue $sw2; }
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                        }
+                        this.ro = new abcd.BJ(this, "JGit-Upload-Pack", r3, r4, r5);
+                        this.ro.start();
+                        j6(r10, r6);
+                        EQ();
+                        return;
+                    }
+                    case 7: {
+                        e = $ex2;
+                        r5.j6();
+                        throw new abcd.yD(this.v5, org.eclipse.jgit.JGitText.j6().cannotConnectPipes, e);
+                    }
+                    case 11: {
+                        throw new abcd.yD(this.v5, org.eclipse.jgit.JGitText.j6().notAGitDirectory);
+                    }
+                    case 10: {
+                        return;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         static abcd.zJ j6(abcd.zJ.c r0) {
@@ -133,18 +245,43 @@ class zJ extends abcd.AbstractjJ implements abcd.BI {
 
         @Override
         public void close() {
-            super.close();
-            java.lang.Thread r0 = this.ro;
-            if (r0 != null) goto L13;
-            return;
-        L13:
-            r0.join();     // Catch: java.lang.Throwable -> L7 java.lang.InterruptedException -> L12
-        L7:
-            th = move-exception;
-            this.ro = null;
-            throw th;
-        L10:
-            this.ro = null;
+            java.lang.Thread r0 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex3 = null;
+            int $pc3 = -1;
+            $sw3: while (true) {
+                switch ($pc3) {
+                    case -1: {
+                        super.close();
+                        r0 = this.ro;
+                        if (r0 != null) { $pc3 = 13; continue $sw3; }
+                        return;
+                    }
+                    case 13: {
+                        try {
+                            r0.join();
+                        } catch (java.lang.Throwable $t) {
+                            $ex3 = $t;
+                            if ($t instanceof java.lang.InterruptedException) { $pc3 = 12; continue $sw3; }
+                            $pc3 = 7; continue $sw3;
+                        }
+                        $pc3 = 7; continue $sw3;
+                    }
+                    case 7: {
+                        th = $ex3;
+                        this.ro = null;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    case 10: {
+                        this.ro = null;
+                        $pc3 = 12; continue $sw3;
+                    }
+                    case 12: {
+                        return;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
     }
 
@@ -153,24 +290,56 @@ class zJ extends abcd.AbstractjJ implements abcd.BI {
         private java.lang.Thread yS;
 
         d(abcd.zJ r9) {
-            this.gW = r9;
-            super(r9);
-            abcd.IG r5 = new abcd.IG(abcd.zJ.j6(r9));     // Catch: java.io.IOException -> L10
-            java.io.PipedInputStream r10 = new java.io.PipedInputStream();     // Catch: java.io.IOException -> L7
-            java.io.PipedOutputStream r4 = new java.io.PipedOutputStream(r10);     // Catch: java.io.IOException -> L7
-            java.io.PipedInputStream r3 = new java.io.PipedInputStream();     // Catch: java.io.IOException -> L7
-            java.io.OutputStream r6 = new java.io.PipedOutputStream(r3);     // Catch: java.io.IOException -> L7
-            this.yS = new abcd.CJ(this, "JGit-Receive-Pack", r3, r4, r5);
-            this.yS.start();
-            j6(r10, r6);
-            EQ();
-            return;
-        L7:
-            e = move-exception;
-            r5.j6();
-            throw new abcd.yD(this.v5, org.eclipse.jgit.JGitText.j6().cannotConnectPipes, e);
-        L11:
-            throw new abcd.yD(this.v5, org.eclipse.jgit.JGitText.j6().notAGitDirectory);
+            abcd.IG r5 = null;
+            java.io.PipedInputStream r10 = null;
+            java.io.PipedOutputStream r4 = null;
+            java.io.PipedInputStream r3 = null;
+            java.io.OutputStream r6 = null;
+            java.lang.Throwable e = null;
+            java.lang.Throwable $ex4 = null;
+            int $pc4 = -1;
+            $sw4: while (true) {
+                switch ($pc4) {
+                    case -1: {
+                        this.gW = r9;
+                        super(r9);
+                        try {
+                            r5 = new abcd.IG(abcd.zJ.j6(r9));
+                        } catch (java.lang.Throwable $t) {
+                            $ex4 = $t;
+                            if ($t instanceof java.io.IOException) { $pc4 = 10; continue $sw4; }
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                        }
+                        try {
+                            r10 = new java.io.PipedInputStream();
+                            r4 = new java.io.PipedOutputStream(r10);
+                            r3 = new java.io.PipedInputStream();
+                            r6 = new java.io.PipedOutputStream(r3);
+                        } catch (java.lang.Throwable $t) {
+                            $ex4 = $t;
+                            if ($t instanceof java.io.IOException) { $pc4 = 7; continue $sw4; }
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                        }
+                        this.yS = new abcd.CJ(this, "JGit-Receive-Pack", r3, r4, r5);
+                        this.yS.start();
+                        j6(r10, r6);
+                        EQ();
+                        return;
+                    }
+                    case 7: {
+                        e = $ex4;
+                        r5.j6();
+                        throw new abcd.yD(this.v5, org.eclipse.jgit.JGitText.j6().cannotConnectPipes, e);
+                    }
+                    case 11: {
+                        throw new abcd.yD(this.v5, org.eclipse.jgit.JGitText.j6().notAGitDirectory);
+                    }
+                    case 10: {
+                        return;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         static abcd.zJ j6(abcd.zJ.d r0) {
@@ -179,18 +348,43 @@ class zJ extends abcd.AbstractjJ implements abcd.BI {
 
         @Override
         public void close() {
-            super.close();
-            java.lang.Thread r0 = this.yS;
-            if (r0 != null) goto L13;
-            return;
-        L13:
-            r0.join();     // Catch: java.lang.Throwable -> L7 java.lang.InterruptedException -> L12
-        L7:
-            th = move-exception;
-            this.yS = null;
-            throw th;
-        L10:
-            this.yS = null;
+            java.lang.Thread r0 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex5 = null;
+            int $pc5 = -1;
+            $sw5: while (true) {
+                switch ($pc5) {
+                    case -1: {
+                        super.close();
+                        r0 = this.yS;
+                        if (r0 != null) { $pc5 = 13; continue $sw5; }
+                        return;
+                    }
+                    case 13: {
+                        try {
+                            r0.join();
+                        } catch (java.lang.Throwable $t) {
+                            $ex5 = $t;
+                            if ($t instanceof java.lang.InterruptedException) { $pc5 = 12; continue $sw5; }
+                            $pc5 = 7; continue $sw5;
+                        }
+                        $pc5 = 7; continue $sw5;
+                    }
+                    case 7: {
+                        th = $ex5;
+                        this.yS = null;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    case 10: {
+                        this.yS = null;
+                        $pc5 = 12; continue $sw5;
+                    }
+                    case 12: {
+                        return;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
     }
 
@@ -216,41 +410,82 @@ class zJ extends abcd.AbstractjJ implements abcd.BI {
     }
 
     protected java.lang.Process FH(java.lang.String r4) {
-        java.lang.ProcessBuilder r5 = this.v5.gn().j6(r4, new java.lang.String[]{"."});     // Catch: java.io.IOException -> L5
-        r5.directory(this.U2);     // Catch: java.io.IOException -> L5
-        java.util.Map<java.lang.String, java.lang.String> r0 = r5.environment();     // Catch: java.io.IOException -> L5
-        r0.remove("GIT_ALTERNATE_OBJECT_DIRECTORIES");     // Catch: java.io.IOException -> L5
-        r0.remove("GIT_CONFIG");     // Catch: java.io.IOException -> L5
-        r0.remove("GIT_CONFIG_PARAMETERS");     // Catch: java.io.IOException -> L5
-        r0.remove("GIT_DIR");     // Catch: java.io.IOException -> L5
-        r0.remove("GIT_WORK_TREE");     // Catch: java.io.IOException -> L5
-        r0.remove("GIT_GRAFT_FILE");     // Catch: java.io.IOException -> L5
-        r0.remove("GIT_INDEX_FILE");     // Catch: java.io.IOException -> L5
-        r0.remove("GIT_NO_REPLACE_OBJECTS");     // Catch: java.io.IOException -> L5
-        return r5.start();
-    L5:
-        e = move-exception;
-        throw new abcd.yD(this.Zo, e.getMessage(), e);
+        java.lang.ProcessBuilder r5 = null;
+        java.util.Map<java.lang.String, java.lang.String> r0 = null;
+        java.lang.Throwable e = null;
+        java.lang.Throwable $ex6 = null;
+        int $pc6 = -1;
+        $sw6: while (true) {
+            switch ($pc6) {
+                case -1: {
+                    try {
+                        r5 = this.v5.gn().j6(r4, new java.lang.String[]{"."});
+                        r5.directory(this.U2);
+                        r0 = r5.environment();
+                        r0.remove("GIT_ALTERNATE_OBJECT_DIRECTORIES");
+                        r0.remove("GIT_CONFIG");
+                        r0.remove("GIT_CONFIG_PARAMETERS");
+                        r0.remove("GIT_DIR");
+                        r0.remove("GIT_WORK_TREE");
+                        r0.remove("GIT_GRAFT_FILE");
+                        r0.remove("GIT_INDEX_FILE");
+                        r0.remove("GIT_NO_REPLACE_OBJECTS");
+                    } catch (java.lang.Throwable $t) {
+                        $ex6 = $t;
+                        if ($t instanceof java.io.IOException) { $pc6 = 5; continue $sw6; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    return r5.start();
+                }
+                case 5: {
+                    e = $ex6;
+                    throw new abcd.yD(this.Zo, e.getMessage(), e);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
     public abcd.InterfacenI QX() {
-        java.lang.String r0 = v5();
-        if ("git-upload-pack".equals(r0) == true) goto L10;
-        if ("git upload-pack".equals(r0) == true) goto L10;
-        return new abcd.zJ.a(this);
-    L10:
-        return new abcd.zJ.c(this);
+        java.lang.String r0 = null;
+        java.lang.Throwable $ex7 = null;
+        int $pc7 = -1;
+        $sw7: while (true) {
+            switch ($pc7) {
+                case -1: {
+                    r0 = v5();
+                    if ("git-upload-pack".equals(r0) == true) { $pc7 = 10; continue $sw7; }
+                    if ("git upload-pack".equals(r0) == true) { $pc7 = 10; continue $sw7; }
+                    return new abcd.zJ.a(this);
+                }
+                case 10: {
+                    return new abcd.zJ.c(this);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
     public abcd.LI XL() {
-        java.lang.String r0 = Hw();
-        if ("git-receive-pack".equals(r0) == true) goto L10;
-        if ("git receive-pack".equals(r0) == true) goto L10;
-        return new abcd.zJ.b(this);
-    L10:
-        return new abcd.zJ.d(this);
+        java.lang.String r0 = null;
+        java.lang.Throwable $ex8 = null;
+        int $pc8 = -1;
+        $sw8: while (true) {
+            switch ($pc8) {
+                case -1: {
+                    r0 = Hw();
+                    if ("git-receive-pack".equals(r0) == true) { $pc8 = 10; continue $sw8; }
+                    if ("git receive-pack".equals(r0) == true) { $pc8 = 10; continue $sw8; }
+                    return new abcd.zJ.b(this);
+                }
+                case 10: {
+                    return new abcd.zJ.d(this);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     abcd.SI j6(abcd.UE r2) {

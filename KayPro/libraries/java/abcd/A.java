@@ -276,40 +276,59 @@ public class A {
     }
 
     static {
-        int r0 = android.os.Build.VERSION.SDK_INT;
-        if (r0 < 24) goto L6;
-        j6 = new abcd.A.i();
-        return;
-    L6:
-        if (r0 < 23) goto L9;
-        j6 = new abcd.A.h();
-        return;
-    L9:
-        if (r0 < 22) goto L12;
-        j6 = new abcd.A.g();
-        return;
-    L12:
-        if (r0 < 21) goto L15;
-        j6 = new abcd.A.f();
-        return;
-    L15:
-        if (r0 < 19) goto L18;
-        j6 = new abcd.A.e();
-        return;
-    L18:
-        if (r0 < 18) goto L21;
-        j6 = new abcd.A.d();
-        return;
-    L21:
-        if (r0 < 17) goto L24;
-        j6 = new abcd.A.c();
-        return;
-    L24:
-        if (r0 < 16) goto L26;
-        j6 = new abcd.A.b();
-        return;
-    L26:
-        j6 = new abcd.A.j();
+        int r0 = 0;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = android.os.Build.VERSION.SDK_INT;
+                    if (r0 < 24) { $pc0 = 6; continue $sw0; }
+                    j6 = new abcd.A.i();
+                    return;
+                }
+                case 6: {
+                    if (r0 < 23) { $pc0 = 9; continue $sw0; }
+                    j6 = new abcd.A.h();
+                    return;
+                }
+                case 9: {
+                    if (r0 < 22) { $pc0 = 12; continue $sw0; }
+                    j6 = new abcd.A.g();
+                    return;
+                }
+                case 12: {
+                    if (r0 < 21) { $pc0 = 15; continue $sw0; }
+                    j6 = new abcd.A.f();
+                    return;
+                }
+                case 15: {
+                    if (r0 < 19) { $pc0 = 18; continue $sw0; }
+                    j6 = new abcd.A.e();
+                    return;
+                }
+                case 18: {
+                    if (r0 < 18) { $pc0 = 21; continue $sw0; }
+                    j6 = new abcd.A.d();
+                    return;
+                }
+                case 21: {
+                    if (r0 < 17) { $pc0 = 24; continue $sw0; }
+                    j6 = new abcd.A.c();
+                    return;
+                }
+                case 24: {
+                    if (r0 < 16) { $pc0 = 26; continue $sw0; }
+                    j6 = new abcd.A.b();
+                    return;
+                }
+                case 26: {
+                    j6 = new abcd.A.j();
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     private A(android.view.accessibility.AccessibilityNodeInfo r2) {
@@ -318,65 +337,93 @@ public class A {
     }
 
     private static java.lang.String FH(int r1) {
-        if (r1 != 1) goto L5;
-        return "ACTION_FOCUS";
-    L5:
-        if (r1 == 2) goto L41;
-        switch(r1) {
-            case 4: goto L39;
-            case 8: goto L37;
-            case 16: goto L35;
-            case 32: goto L33;
-            case 64: goto L31;
-            case 128: goto L29;
-            case 256: goto L27;
-            case 512: goto L25;
-            case 1024: goto L23;
-            case 2048: goto L21;
-            case 4096: goto L19;
-            case 8192: goto L17;
-            case 16384: goto L15;
-            case 32768: goto L13;
-            case 65536: goto L11;
-            case 131072: goto L9;
-            default: goto L7;
-        };
-    L7:
-        return "ACTION_UNKNOWN";
-    L9:
-        return "ACTION_SET_SELECTION";
-    L11:
-        return "ACTION_CUT";
-    L13:
-        return "ACTION_PASTE";
-    L15:
-        return "ACTION_COPY";
-    L17:
-        return "ACTION_SCROLL_BACKWARD";
-    L19:
-        return "ACTION_SCROLL_FORWARD";
-    L21:
-        return "ACTION_PREVIOUS_HTML_ELEMENT";
-    L23:
-        return "ACTION_NEXT_HTML_ELEMENT";
-    L25:
-        return "ACTION_PREVIOUS_AT_MOVEMENT_GRANULARITY";
-    L27:
-        return "ACTION_NEXT_AT_MOVEMENT_GRANULARITY";
-    L29:
-        return "ACTION_CLEAR_ACCESSIBILITY_FOCUS";
-    L31:
-        return "ACTION_ACCESSIBILITY_FOCUS";
-    L33:
-        return "ACTION_LONG_CLICK";
-    L35:
-        return "ACTION_CLICK";
-    L37:
-        return "ACTION_CLEAR_SELECTION";
-    L39:
-        return "ACTION_SELECT";
-    L41:
-        return "ACTION_CLEAR_FOCUS";
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if (r1 != 1) { $pc1 = 5; continue $sw1; }
+                    return "ACTION_FOCUS";
+                }
+                case 5: {
+                    if (r1 == 2) { $pc1 = 41; continue $sw1; }
+                    switch(r1) {
+                        case 4: { $pc1 = 39; continue $sw1; }
+                        case 8: { $pc1 = 37; continue $sw1; }
+                        case 16: { $pc1 = 35; continue $sw1; }
+                        case 32: { $pc1 = 33; continue $sw1; }
+                        case 64: { $pc1 = 31; continue $sw1; }
+                        case 128: { $pc1 = 29; continue $sw1; }
+                        case 256: { $pc1 = 27; continue $sw1; }
+                        case 512: { $pc1 = 25; continue $sw1; }
+                        case 1024: { $pc1 = 23; continue $sw1; }
+                        case 2048: { $pc1 = 21; continue $sw1; }
+                        case 4096: { $pc1 = 19; continue $sw1; }
+                        case 8192: { $pc1 = 17; continue $sw1; }
+                        case 16384: { $pc1 = 15; continue $sw1; }
+                        case 32768: { $pc1 = 13; continue $sw1; }
+                        case 65536: { $pc1 = 11; continue $sw1; }
+                        case 131072: { $pc1 = 9; continue $sw1; }
+                        default: { $pc1 = 7; continue $sw1; }
+                    };
+                }
+                case 7: {
+                    return "ACTION_UNKNOWN";
+                }
+                case 9: {
+                    return "ACTION_SET_SELECTION";
+                }
+                case 11: {
+                    return "ACTION_CUT";
+                }
+                case 13: {
+                    return "ACTION_PASTE";
+                }
+                case 15: {
+                    return "ACTION_COPY";
+                }
+                case 17: {
+                    return "ACTION_SCROLL_BACKWARD";
+                }
+                case 19: {
+                    return "ACTION_SCROLL_FORWARD";
+                }
+                case 21: {
+                    return "ACTION_PREVIOUS_HTML_ELEMENT";
+                }
+                case 23: {
+                    return "ACTION_NEXT_HTML_ELEMENT";
+                }
+                case 25: {
+                    return "ACTION_PREVIOUS_AT_MOVEMENT_GRANULARITY";
+                }
+                case 27: {
+                    return "ACTION_NEXT_AT_MOVEMENT_GRANULARITY";
+                }
+                case 29: {
+                    return "ACTION_CLEAR_ACCESSIBILITY_FOCUS";
+                }
+                case 31: {
+                    return "ACTION_ACCESSIBILITY_FOCUS";
+                }
+                case 33: {
+                    return "ACTION_LONG_CLICK";
+                }
+                case 35: {
+                    return "ACTION_CLICK";
+                }
+                case 37: {
+                    return "ACTION_CLEAR_SELECTION";
+                }
+                case 39: {
+                    return "ACTION_SELECT";
+                }
+                case 41: {
+                    return "ACTION_CLEAR_FOCUS";
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static abcd.A j6(abcd.A r0) {
@@ -496,25 +543,41 @@ public class A {
     }
 
     public boolean equals(java.lang.Object r5) {
-        if (this != r5) goto L6;
-        return true;
-    L6:
-        if (r5 != null) goto L9;
-        return false;
-    L9:
-        if (abcd.A.class == r5.getClass()) goto L11;
-        return false;
-    L11:
-        abcd.A r6 = (abcd.A) r5;
-        android.view.accessibility.AccessibilityNodeInfo r2 = this.DW;
-        if (r2 != null) goto L17;
-        if (r6.DW == null) goto L19;
-        return false;
-    L19:
-        return true;
-    L17:
-        if (r2.equals(r6.DW) == true) goto L19;
-        return false;
+        abcd.A r6 = null;
+        android.view.accessibility.AccessibilityNodeInfo r2 = null;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    if (this != r5) { $pc2 = 6; continue $sw2; }
+                    return true;
+                }
+                case 6: {
+                    if (r5 != null) { $pc2 = 9; continue $sw2; }
+                    return false;
+                }
+                case 9: {
+                    if (abcd.A.class == r5.getClass()) { $pc2 = 11; continue $sw2; }
+                    return false;
+                }
+                case 11: {
+                    r6 = (abcd.A) r5;
+                    r2 = this.DW;
+                    if (r2 != null) { $pc2 = 17; continue $sw2; }
+                    if (r6.DW == null) { $pc2 = 19; continue $sw2; }
+                    return false;
+                }
+                case 19: {
+                    return true;
+                }
+                case 17: {
+                    if (r2.equals(r6.DW) == true) { $pc2 = 19; continue $sw2; }
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public void gn(boolean r2) {
@@ -526,11 +589,22 @@ public class A {
     }
 
     public int hashCode() {
-        android.view.accessibility.AccessibilityNodeInfo r0 = this.DW;
-        if (r0 != null) goto L6;
-        return 0;
-    L6:
-        return r0.hashCode();
+        android.view.accessibility.AccessibilityNodeInfo r0 = null;
+        java.lang.Throwable $ex3 = null;
+        int $pc3 = -1;
+        $sw3: while (true) {
+            switch ($pc3) {
+                case -1: {
+                    r0 = this.DW;
+                    if (r0 != null) { $pc3 = 6; continue $sw3; }
+                    return 0;
+                }
+                case 6: {
+                    return r0.hashCode();
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public boolean j3() {
@@ -566,55 +640,71 @@ public class A {
     }
 
     public java.lang.String toString() {
-        java.lang.StringBuilder r0 = new java.lang.StringBuilder();
-        r0.append(super.toString());
-        android.graphics.Rect r1 = new android.graphics.Rect();
-        j6(r1);
-        r0.append("; boundsInParent: " + r1);
-        DW(r1);
-        r0.append("; boundsInScreen: " + r1);
-        r0.append("; packageName: ");
-        r0.append(v5());
-        r0.append("; className: ");
-        r0.append(DW());
-        r0.append("; text: ");
-        r0.append(Zo());
-        r0.append("; contentDescription: ");
-        r0.append(FH());
-        r0.append("; viewId: ");
-        r0.append(VH());
-        r0.append("; checkable: ");
-        r0.append(u7());
-        r0.append("; checked: ");
-        r0.append(tp());
-        r0.append("; focusable: ");
-        r0.append(J0());
-        r0.append("; focused: ");
-        r0.append(J8());
-        r0.append("; selected: ");
-        r0.append(aM());
-        r0.append("; clickable: ");
-        r0.append(EQ());
-        r0.append("; longClickable: ");
-        r0.append(Ws());
-        r0.append("; enabled: ");
-        r0.append(we());
-        r0.append("; password: ");
-        r0.append(QX());
-        r0.append("; scrollable: " + XL());
-        r0.append("; [");
-        int r2 = j6();
-    L3:
-        if (r2 == 0) goto L7;
-        int r3 = 1 << java.lang.Integer.numberOfTrailingZeros(r2);
-        r2 = r2 & (r3 ^ (-1));
-        r0.append(FH(r3));
-        if (r2 == 0) goto L3;
-        r0.append(", ");
-        goto L3
-    L7:
-        r0.append("]");
-        return r0.toString();
+        java.lang.StringBuilder r0 = null;
+        android.graphics.Rect r1 = null;
+        int r2 = 0;
+        int r3 = 0;
+        java.lang.Throwable $ex4 = null;
+        int $pc4 = -1;
+        $sw4: while (true) {
+            switch ($pc4) {
+                case -1: {
+                    r0 = new java.lang.StringBuilder();
+                    r0.append(super.toString());
+                    r1 = new android.graphics.Rect();
+                    j6(r1);
+                    r0.append("; boundsInParent: " + r1);
+                    DW(r1);
+                    r0.append("; boundsInScreen: " + r1);
+                    r0.append("; packageName: ");
+                    r0.append(v5());
+                    r0.append("; className: ");
+                    r0.append(DW());
+                    r0.append("; text: ");
+                    r0.append(Zo());
+                    r0.append("; contentDescription: ");
+                    r0.append(FH());
+                    r0.append("; viewId: ");
+                    r0.append(VH());
+                    r0.append("; checkable: ");
+                    r0.append(u7());
+                    r0.append("; checked: ");
+                    r0.append(tp());
+                    r0.append("; focusable: ");
+                    r0.append(J0());
+                    r0.append("; focused: ");
+                    r0.append(J8());
+                    r0.append("; selected: ");
+                    r0.append(aM());
+                    r0.append("; clickable: ");
+                    r0.append(EQ());
+                    r0.append("; longClickable: ");
+                    r0.append(Ws());
+                    r0.append("; enabled: ");
+                    r0.append(we());
+                    r0.append("; password: ");
+                    r0.append(QX());
+                    r0.append("; scrollable: " + XL());
+                    r0.append("; [");
+                    r2 = j6();
+                    $pc4 = 3; continue $sw4;
+                }
+                case 3: {
+                    if (r2 == 0) { $pc4 = 7; continue $sw4; }
+                    r3 = 1 << java.lang.Integer.numberOfTrailingZeros(r2);
+                    r2 = r2 & (r3 ^ (-1));
+                    r0.append(FH(r3));
+                    if (r2 == 0) { $pc4 = 3; continue $sw4; }
+                    r0.append(", ");
+                    { $pc4 = 3; continue $sw4; }
+                }
+                case 7: {
+                    r0.append("]");
+                    return r0.toString();
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public boolean tp() {

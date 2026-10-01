@@ -66,7 +66,7 @@ class Runnablezk implements java.lang.Runnable {
             */
         /*
             this = this;
-            r0 = 1653122031737615703(0x16f111bab017b557, double:3.5679390361912204E-198)
+            r0 = 1653122031737615703
             boolean r2 = abcd.Runnablezk.j6     // Catch: java.lang.Throwable -> L60
             if (r2 == 0) goto Lc
             abcd.wu.j6(r0, r6)     // Catch: java.lang.Throwable -> L60
@@ -76,7 +76,7 @@ class Runnablezk implements java.lang.Runnable {
             monitor-enter(r2)     // Catch: java.lang.Throwable -> L60
             abcd.yk$h r3 = r6.FH     // Catch: java.lang.Throwable -> L20 java.lang.InterruptedException -> L22
             java.lang.Object r3 = abcd.yk.h.j6(r3)     // Catch: java.lang.Throwable -> L20 java.lang.InterruptedException -> L22
-            r4 = 600000(0x927c0, double:2.964394E-318)
+            r4 = 600000
             r3.wait(r4)     // Catch: java.lang.Throwable -> L20 java.lang.InterruptedException -> L22
             goto L22
         L20:

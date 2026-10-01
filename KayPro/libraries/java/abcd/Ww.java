@@ -29,50 +29,93 @@ public abstract class Ww implements abcd.Zw {
 
         @Override
         public boolean keepAlive(org.apache.http.HttpResponse r6, org.apache.http.protocol.HttpContext r7) {
-            if (r6 == null) goto L41;
-            if (r7 == null) goto L39;
-            org.apache.http.ProtocolVersion r8 = r6.getStatusLine().getProtocolVersion();
-            org.apache.http.Header r0 = r6.getFirstHeader("Transfer-Encoding");
-            if (r0 != null) goto L7;
-            org.apache.http.Header[] r1 = r6.getHeaders("Content-Length");
-            if (r1 != null) goto L12;
-        L37:
-            return false;
-        L12:
-            if (r1.length != 1) goto L37;
-            if (java.lang.Integer.parseInt(r1[0].getValue()) >= 0) goto L18;
-            return false;
-        L18:
-            org.apache.http.HeaderIterator r2 = r6.headerIterator("Connection");
-            if (r2.hasNext() == true) goto L22;
-            r2 = r6.headerIterator("Proxy-Connection");
-        L22:
-            if (r2.hasNext() == false) goto L36;
-            org.apache.http.TokenIterator r9 = createTokenIterator(r2);     // Catch: org.apache.http.ParseException -> L34
+            org.apache.http.ProtocolVersion r8 = null;
+            org.apache.http.Header r0 = null;
+            org.apache.http.Header[] r1 = null;
+            org.apache.http.HeaderIterator r2 = null;
+            org.apache.http.TokenIterator r9 = null;
             boolean r3 = false;
-        L25:
-            if (r9.hasNext() == false) goto L32;
-            java.lang.String r4 = r9.nextToken();     // Catch: org.apache.http.ParseException -> L34
-            if ("Close".equalsIgnoreCase(r4) == true) goto L28;
-            if ("Keep-Alive".equalsIgnoreCase(r4) == false) goto L25;
-            r3 = true;
-            goto L25
-        L28:
-            return false;
-        L32:
-            if (r3 == false) goto L36;
-            return true;
-        L34:
-            return false;
-        L36:
-            return !r8.lessEquals(org.apache.http.HttpVersion.HTTP_1_0);
-        L7:
-            if ("chunked".equalsIgnoreCase(r0.getValue()) == true) goto L18;
-            return false;
-        L39:
-            throw new java.lang.IllegalArgumentException("HTTP context may not be null.");
-        L41:
-            throw new java.lang.IllegalArgumentException("HTTP response may not be null.");
+            java.lang.String r4 = null;
+            java.lang.Throwable $ex0 = null;
+            int $pc0 = -1;
+            $sw0: while (true) {
+                switch ($pc0) {
+                    case -1: {
+                        if (r6 == null) { $pc0 = 41; continue $sw0; }
+                        if (r7 == null) { $pc0 = 39; continue $sw0; }
+                        r8 = r6.getStatusLine().getProtocolVersion();
+                        r0 = r6.getFirstHeader("Transfer-Encoding");
+                        if (r0 != null) { $pc0 = 7; continue $sw0; }
+                        r1 = r6.getHeaders("Content-Length");
+                        if (r1 != null) { $pc0 = 12; continue $sw0; }
+                        $pc0 = 37; continue $sw0;
+                    }
+                    case 37: {
+                        return false;
+                    }
+                    case 12: {
+                        if (r1.length != 1) { $pc0 = 37; continue $sw0; }
+                        if (java.lang.Integer.parseInt(r1[0].getValue()) >= 0) { $pc0 = 18; continue $sw0; }
+                        return false;
+                    }
+                    case 18: {
+                        r2 = r6.headerIterator("Connection");
+                        if (r2.hasNext() == true) { $pc0 = 22; continue $sw0; }
+                        r2 = r6.headerIterator("Proxy-Connection");
+                        $pc0 = 22; continue $sw0;
+                    }
+                    case 22: {
+                        if (r2.hasNext() == false) { $pc0 = 36; continue $sw0; }
+                        try {
+                            r9 = createTokenIterator(r2);
+                        } catch (java.lang.Throwable $t) {
+                            $ex0 = $t;
+                            if ($t instanceof org.apache.http.ParseException) { $pc0 = 34; continue $sw0; }
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                        }
+                        r3 = false;
+                        $pc0 = 25; continue $sw0;
+                    }
+                    case 25: {
+                        if (r9.hasNext() == false) { $pc0 = 32; continue $sw0; }
+                        try {
+                            r4 = r9.nextToken();
+                        } catch (java.lang.Throwable $t) {
+                            $ex0 = $t;
+                            if ($t instanceof org.apache.http.ParseException) { $pc0 = 34; continue $sw0; }
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                        }
+                        if ("Close".equalsIgnoreCase(r4) == true) { $pc0 = 28; continue $sw0; }
+                        if ("Keep-Alive".equalsIgnoreCase(r4) == false) { $pc0 = 25; continue $sw0; }
+                        r3 = true;
+                        { $pc0 = 25; continue $sw0; }
+                    }
+                    case 28: {
+                        return false;
+                    }
+                    case 32: {
+                        if (r3 == false) { $pc0 = 36; continue $sw0; }
+                        return true;
+                    }
+                    case 34: {
+                        return false;
+                    }
+                    case 36: {
+                        return !r8.lessEquals(org.apache.http.HttpVersion.HTTP_1_0);
+                    }
+                    case 7: {
+                        if ("chunked".equalsIgnoreCase(r0.getValue()) == true) { $pc0 = 18; continue $sw0; }
+                        return false;
+                    }
+                    case 39: {
+                        throw new java.lang.IllegalArgumentException("HTTP context may not be null.");
+                    }
+                    case 41: {
+                        throw new java.lang.IllegalArgumentException("HTTP response may not be null.");
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
     }
 
@@ -86,19 +129,45 @@ public abstract class Ww implements abcd.Zw {
 
         @Override
         public long getKeepAliveDuration(org.apache.http.HttpResponse r7, org.apache.http.protocol.HttpContext r8) {
-            org.apache.http.message.BasicHeaderElementIterator r9 = new org.apache.http.message.BasicHeaderElementIterator(r7.headerIterator("Keep-Alive"));
-            long r0 = 20000;
-        L4:
-            if (r9.hasNext() == false) goto L11;
-            org.apache.http.HeaderElement r10 = r9.nextElement();
-            java.lang.String r2 = r10.getName();
-            java.lang.String r11 = r10.getValue();
-            if (r11 == null) goto L4;
-            if (r2.equalsIgnoreCase("timeout") == false) goto L4;
-            r0 = java.lang.Math.min(r0, java.lang.Long.parseLong(r11) * 1000);     // Catch: java.lang.NumberFormatException -> L12
-            goto L4
-        L11:
-            return r0;
+            org.apache.http.message.BasicHeaderElementIterator r9 = null;
+            long r0 = 0L;
+            org.apache.http.HeaderElement r10 = null;
+            java.lang.String r2 = null;
+            java.lang.String r11 = null;
+            java.lang.Throwable $ex1 = null;
+            int $pc1 = -1;
+            $sw1: while (true) {
+                switch ($pc1) {
+                    case -1: {
+                        r9 = new org.apache.http.message.BasicHeaderElementIterator(r7.headerIterator("Keep-Alive"));
+                        r0 = 20000;
+                        $pc1 = 4; continue $sw1;
+                    }
+                    case 4: {
+                        if (r9.hasNext() == false) { $pc1 = 11; continue $sw1; }
+                        r10 = r9.nextElement();
+                        r2 = r10.getName();
+                        r11 = r10.getValue();
+                        if (r11 == null) { $pc1 = 4; continue $sw1; }
+                        if (r2.equalsIgnoreCase("timeout") == false) { $pc1 = 4; continue $sw1; }
+                        try {
+                            r0 = java.lang.Math.min(r0, java.lang.Long.parseLong(r11) * 1000);
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            if ($t instanceof java.lang.NumberFormatException) { $pc1 = 12; continue $sw1; }
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                        }
+                        { $pc1 = 4; continue $sw1; }
+                    }
+                    case 11: {
+                        return r0;
+                    }
+                    case 12: {
+                        throw new java.lang.IllegalStateException();
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
     }
 
@@ -131,43 +200,119 @@ public abstract class Ww implements abcd.Zw {
         }
 
         public static synchronized void j6(abcd.Ww.a r2, int r3, int r4) {
-            monitor-enter(abcd.Ww.e.class);
-        L9:
-            th = move-exception;
-            throw th;
-        L5:
-            if (j6 != null) goto L7;
-            j6 = new abcd.Ww.e(r2, r3, r4);     // Catch: java.lang.Throwable -> L9
-            j6.start();     // Catch: java.lang.Throwable -> L9
-        L7:
-            monitor-exit(abcd.Ww.e.class);
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex2 = null;
+            int $pc2 = -1;
+            $sw2: while (true) {
+                switch ($pc2) {
+                    case -1: {
+                        monitor-enter(abcd.Ww.e.class);
+                        $pc2 = 9; continue $sw2;
+                    }
+                    case 9: {
+                        th = $ex2;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    case 5: {
+                        if (j6 != null) { $pc2 = 7; continue $sw2; }
+                        try {
+                            j6 = new abcd.Ww.e(r2, r3, r4);
+                            j6.start();
+                        } catch (java.lang.Throwable $t) {
+                            $ex2 = $t;
+                            $pc2 = 9; continue $sw2;
+                        }
+                        $pc2 = 7; continue $sw2;
+                    }
+                    case 7: {
+                        monitor-exit(abcd.Ww.e.class);
+                        return;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         @Override
         public void run() {
-        L23:
-            monitor-enter(this);     // Catch: java.lang.InterruptedException -> L21
-            wait(this.Hw);     // Catch: java.lang.Throwable -> L18
-            monitor-exit(this);     // Catch: java.lang.Throwable -> L18
-            this.DW.closeExpiredConnections();     // Catch: java.lang.InterruptedException -> L21
-            this.DW.closeIdleConnections(this.FH, java.util.concurrent.TimeUnit.SECONDS);     // Catch: java.lang.InterruptedException -> L21
-            monitor-enter(abcd.Ww.e.class);     // Catch: java.lang.InterruptedException -> L21
-        L15:
-            th = move-exception;
-            throw th;     // Catch: java.lang.InterruptedException -> L21
-        L9:
-            if (this.DW.getConnectionsInPool() == 0) goto L10;
-            monitor-exit(abcd.Ww.e.class);     // Catch: java.lang.Throwable -> L15
-            goto L23
-        L10:
-            j6 = null;     // Catch: java.lang.Throwable -> L15
-            monitor-exit(abcd.Ww.e.class);     // Catch: java.lang.Throwable -> L15
-            return;
-        L18:
-            th = move-exception;
-            throw th;     // Catch: java.lang.InterruptedException -> L21
-        L21:
-            j6 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex3 = null;
+            int $pc3 = 9;
+            $sw3: while (true) {
+                switch ($pc3) {
+                    case 23: {
+                        try {
+                            monitor-enter(this);
+                        } catch (java.lang.Throwable $t) {
+                            $ex3 = $t;
+                            if ($t instanceof java.lang.InterruptedException) { $pc3 = 21; continue $sw3; }
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                        }
+                        try {
+                            wait(this.Hw);
+                            monitor-exit(this);
+                        } catch (java.lang.Throwable $t) {
+                            $ex3 = $t;
+                            $pc3 = 18; continue $sw3;
+                        }
+                        try {
+                            this.DW.closeExpiredConnections();
+                            this.DW.closeIdleConnections(this.FH, java.util.concurrent.TimeUnit.SECONDS);
+                            monitor-enter(abcd.Ww.e.class);
+                        } catch (java.lang.Throwable $t) {
+                            $ex3 = $t;
+                            if ($t instanceof java.lang.InterruptedException) { $pc3 = 21; continue $sw3; }
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                        }
+                        $pc3 = 15; continue $sw3;
+                    }
+                    case 15: {
+                        th = $ex3;
+                        try {
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                        } catch (java.lang.Throwable $t) {
+                            $ex3 = $t;
+                            if ($t instanceof java.lang.InterruptedException) { $pc3 = 21; continue $sw3; }
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                        }
+                    }
+                    case 9: {
+                        if (this.DW.getConnectionsInPool() == 0) { $pc3 = 10; continue $sw3; }
+                        try {
+                            monitor-exit(abcd.Ww.e.class);
+                        } catch (java.lang.Throwable $t) {
+                            $ex3 = $t;
+                            $pc3 = 15; continue $sw3;
+                        }
+                        { $pc3 = 23; continue $sw3; }
+                    }
+                    case 10: {
+                        try {
+                            j6 = null;
+                            monitor-exit(abcd.Ww.e.class);
+                        } catch (java.lang.Throwable $t) {
+                            $ex3 = $t;
+                            $pc3 = 15; continue $sw3;
+                        }
+                        return;
+                    }
+                    case 18: {
+                        th = $ex3;
+                        try {
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                        } catch (java.lang.Throwable $t) {
+                            $ex3 = $t;
+                            if ($t instanceof java.lang.InterruptedException) { $pc3 = 21; continue $sw3; }
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                        }
+                    }
+                    case 21: {
+                        j6 = null;
+                        return;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
     }
 
@@ -176,60 +321,109 @@ public abstract class Ww implements abcd.Zw {
     }
 
     public Ww(abcd.Yw r2, abcd.Zw.a r3, abcd.Xw r4) {
-        this.FH = null;
-        this.Hw = null;
-        this.v5 = null;
-        if (r2 == null) goto L10;
-        if (r3 == null) goto L8;
-        this.DW = r2;
-        this.j6 = r3;
-        this.FH = r4;
-        return;
-    L8:
-        throw new java.lang.IllegalArgumentException("'type' must be non-null");
-    L10:
-        throw new java.lang.IllegalArgumentException("'appKeyPair' must be non-null");
+        java.lang.Throwable $ex4 = null;
+        int $pc4 = -1;
+        $sw4: while (true) {
+            switch ($pc4) {
+                case -1: {
+                    this.FH = null;
+                    this.Hw = null;
+                    this.v5 = null;
+                    if (r2 == null) { $pc4 = 10; continue $sw4; }
+                    if (r3 == null) { $pc4 = 8; continue $sw4; }
+                    this.DW = r2;
+                    this.j6 = r3;
+                    this.FH = r4;
+                    return;
+                }
+                case 8: {
+                    throw new java.lang.IllegalArgumentException("'type' must be non-null");
+                }
+                case 10: {
+                    throw new java.lang.IllegalArgumentException("'appKeyPair' must be non-null");
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     private static java.lang.String DW(java.lang.String r2) {
-        return java.net.URLEncoder.encode(r2, "UTF-8");
-    L4:
-        e = move-exception;
-        java.lang.AssertionError r0 = new java.lang.AssertionError("UTF-8 isn't available");
-        r0.initCause(e);
-        throw r0;
+        java.lang.AssertionError r0 = null;
+        java.lang.Throwable e = null;
+        java.lang.Throwable $ex5 = null;
+        int $pc5 = -1;
+        $sw5: while (true) {
+            switch ($pc5) {
+                case -1: {
+                    return java.net.URLEncoder.encode(r2, "UTF-8");
+                }
+                case 4: {
+                    e = $ex5;
+                    r0 = new java.lang.AssertionError("UTF-8 isn't available");
+                    r0.initCause(e);
+                    throw r0;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     private static java.lang.String j6(abcd.Yw r4, abcd.Xw r5) {
-        java.lang.StringBuilder r0 = new java.lang.StringBuilder();
-        r0.append("OAuth oauth_version=\"1.0\"");
-        r0.append(", oauth_signature_method=\"PLAINTEXT\"");
-        r0.append(", oauth_consumer_key=\"");
-        r0.append(DW(r4.j6));
-        r0.append("\"");
-        if (r5 == null) goto L5;
-        r0.append(", oauth_token=\"");
-        r0.append(DW(r5.j6));
-        r0.append("\"");
-        java.lang.String r6 = DW(r4.DW) + "&" + DW(r5.DW);
-    L6:
-        r0.append(", oauth_signature=\"");
-        r0.append(r6);
-        r0.append("\"");
-        return r0.toString();
-    L5:
-        r6 = DW(r4.DW) + "&";
-        goto L6
+        java.lang.StringBuilder r0 = null;
+        java.lang.String r6 = null;
+        java.lang.Throwable $ex6 = null;
+        int $pc6 = -1;
+        $sw6: while (true) {
+            switch ($pc6) {
+                case -1: {
+                    r0 = new java.lang.StringBuilder();
+                    r0.append("OAuth oauth_version=\"1.0\"");
+                    r0.append(", oauth_signature_method=\"PLAINTEXT\"");
+                    r0.append(", oauth_consumer_key=\"");
+                    r0.append(DW(r4.j6));
+                    r0.append("\"");
+                    if (r5 == null) { $pc6 = 5; continue $sw6; }
+                    r0.append(", oauth_token=\"");
+                    r0.append(DW(r5.j6));
+                    r0.append("\"");
+                    r6 = DW(r4.DW) + "&" + DW(r5.DW);
+                    $pc6 = 6; continue $sw6;
+                }
+                case 6: {
+                    r0.append(", oauth_signature=\"");
+                    r0.append(r6);
+                    r0.append("\"");
+                    return r0.toString();
+                }
+                case 5: {
+                    r6 = DW(r4.DW) + "&";
+                    { $pc6 = 6; continue $sw6; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
     public boolean DW() {
-        if (this.FH == null) goto L5;
-    L8:
-        return true;
-    L5:
-        if (this.Hw != null) goto L8;
-        return false;
+        java.lang.Throwable $ex7 = null;
+        int $pc7 = -1;
+        $sw7: while (true) {
+            switch ($pc7) {
+                case -1: {
+                    if (this.FH == null) { $pc7 = 5; continue $sw7; }
+                    $pc7 = 8; continue $sw7;
+                }
+                case 8: {
+                    return true;
+                }
+                case 5: {
+                    if (this.Hw != null) { $pc7 = 8; continue $sw7; }
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
@@ -268,33 +462,66 @@ public abstract class Ww implements abcd.Zw {
     }
 
     public void j6(abcd.Xw r2) {
-        if (r2 == null) goto L6;
-        this.FH = r2;
-        this.Hw = null;
-        return;
-    L6:
-        throw new java.lang.IllegalArgumentException("'oauth1AccessToken' must be non-null");
+        java.lang.Throwable $ex8 = null;
+        int $pc8 = -1;
+        $sw8: while (true) {
+            switch ($pc8) {
+                case -1: {
+                    if (r2 == null) { $pc8 = 6; continue $sw8; }
+                    this.FH = r2;
+                    this.Hw = null;
+                    return;
+                }
+                case 6: {
+                    throw new java.lang.IllegalArgumentException("'oauth1AccessToken' must be non-null");
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public void j6(java.lang.String r2) {
-        if (r2 == null) goto L6;
-        this.Hw = r2;
-        this.FH = null;
-        return;
-    L6:
-        throw new java.lang.IllegalArgumentException("'oauth2AccessToken' must be non-null");
+        java.lang.Throwable $ex9 = null;
+        int $pc9 = -1;
+        $sw9: while (true) {
+            switch ($pc9) {
+                case -1: {
+                    if (r2 == null) { $pc9 = 6; continue $sw9; }
+                    this.Hw = r2;
+                    this.FH = null;
+                    return;
+                }
+                case 6: {
+                    throw new java.lang.IllegalArgumentException("'oauth2AccessToken' must be non-null");
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
     public void j6(org.apache.http.HttpRequest r3) {
-        if (this.Hw == null) goto L5;
-        java.lang.String r0 = "Bearer " + this.Hw;
-    L6:
-        r3.addHeader("Authorization", r0);
-        return;
-    L5:
-        r0 = j6(this.DW, this.FH);
-        goto L6
+        java.lang.String r0 = null;
+        java.lang.Throwable $ex10 = null;
+        int $pc10 = -1;
+        $sw10: while (true) {
+            switch ($pc10) {
+                case -1: {
+                    if (this.Hw == null) { $pc10 = 5; continue $sw10; }
+                    r0 = "Bearer " + this.Hw;
+                    $pc10 = 6; continue $sw10;
+                }
+                case 6: {
+                    r3.addHeader("Authorization", r0);
+                    return;
+                }
+                case 5: {
+                    r0 = j6(this.DW, this.FH);
+                    { $pc10 = 6; continue $sw10; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
@@ -311,51 +538,135 @@ public abstract class Ww implements abcd.Zw {
 
     @Override
     public synchronized org.apache.http.client.HttpClient v5() {
-        monitor-enter(this);
-    L29:
-        th = move-exception;
-        throw th;
-    L4:
-        if (this.v5 != null) goto L26;
-        org.apache.http.params.BasicHttpParams r0 = new org.apache.http.params.BasicHttpParams();     // Catch: java.lang.Throwable -> L29
-        org.apache.http.conn.params.ConnManagerParams.setMaxConnectionsPerRoute(r0, new abcd.Sw(this));     // Catch: java.lang.Throwable -> L29
-        org.apache.http.conn.params.ConnManagerParams.setMaxTotalConnections(r0, 20);     // Catch: java.lang.Throwable -> L29
-        abcd.Iw r1 = new abcd.Iw();     // Catch: java.io.IOException -> L8 java.security.cert.CertificateException -> L11 java.security.KeyStoreException -> L14 java.security.NoSuchAlgorithmException -> L17 java.security.UnrecoverableKeyException -> L20 java.security.KeyManagementException -> L23 java.lang.Throwable -> L29
-        org.apache.http.conn.scheme.SchemeRegistry r2 = new org.apache.http.conn.scheme.SchemeRegistry();     // Catch: java.lang.Throwable -> L29
-        r2.register(new org.apache.http.conn.scheme.Scheme("http", org.apache.http.conn.scheme.PlainSocketFactory.getSocketFactory(), 80));     // Catch: java.lang.Throwable -> L29
-        r2.register(new org.apache.http.conn.scheme.Scheme("https", r1, 443));     // Catch: java.lang.Throwable -> L29
-        abcd.Ww.a r3 = new abcd.Ww.a(r0, r2);     // Catch: java.lang.Throwable -> L29
-        org.apache.http.params.BasicHttpParams r4 = new org.apache.http.params.BasicHttpParams();     // Catch: java.lang.Throwable -> L29
-        org.apache.http.params.HttpConnectionParams.setConnectionTimeout(r4, 30000);     // Catch: java.lang.Throwable -> L29
-        org.apache.http.params.HttpConnectionParams.setSoTimeout(r4, 30000);     // Catch: java.lang.Throwable -> L29
-        org.apache.http.params.HttpConnectionParams.setSocketBufferSize(r4, 8192);     // Catch: java.lang.Throwable -> L29
-        org.apache.http.params.HttpProtocolParams.setUserAgent(r4, "OfficialDropboxJavaSDK/" + abcd.Dw.j6);     // Catch: java.lang.Throwable -> L29
-        abcd.Tw r5 = new abcd.Tw(this, r3, r4);     // Catch: java.lang.Throwable -> L29
-        r5.addRequestInterceptor(new abcd.Uw(this));     // Catch: java.lang.Throwable -> L29
-        r5.addResponseInterceptor(new abcd.Vw(this));     // Catch: java.lang.Throwable -> L29
-        this.v5 = r5;     // Catch: java.lang.Throwable -> L29
-        goto L26
-    L11:
-        e = move-exception;
-        throw new java.lang.RuntimeException(e);     // Catch: java.lang.Throwable -> L29
-    L17:
-        e = move-exception;
-        throw new java.lang.RuntimeException(e);     // Catch: java.lang.Throwable -> L29
-    L20:
-        e = move-exception;
-        throw new java.lang.RuntimeException(e);     // Catch: java.lang.Throwable -> L29
-    L8:
-        e = move-exception;
-        throw new java.lang.RuntimeException(e);     // Catch: java.lang.Throwable -> L29
-    L23:
-        e = move-exception;
-        throw new java.lang.RuntimeException(e);     // Catch: java.lang.Throwable -> L29
-    L14:
-        e = move-exception;
-        throw new java.lang.RuntimeException(e);     // Catch: java.lang.Throwable -> L29
-    L26:
-        org.apache.http.client.HttpClient r6 = this.v5;     // Catch: java.lang.Throwable -> L29
-        monitor-exit(this);
-        return r6;
+        org.apache.http.params.BasicHttpParams r0 = null;
+        abcd.Iw r1 = null;
+        org.apache.http.conn.scheme.SchemeRegistry r2 = null;
+        abcd.Ww.a r3 = null;
+        org.apache.http.params.BasicHttpParams r4 = null;
+        abcd.Tw r5 = null;
+        org.apache.http.client.HttpClient r6 = null;
+        java.lang.Throwable e = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex11 = null;
+        int $pc11 = -1;
+        $sw11: while (true) {
+            switch ($pc11) {
+                case -1: {
+                    monitor-enter(this);
+                    $pc11 = 29; continue $sw11;
+                }
+                case 29: {
+                    th = $ex11;
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (this.v5 != null) { $pc11 = 26; continue $sw11; }
+                    try {
+                        r0 = new org.apache.http.params.BasicHttpParams();
+                        org.apache.http.conn.params.ConnManagerParams.setMaxConnectionsPerRoute(r0, new abcd.Sw(this));
+                        org.apache.http.conn.params.ConnManagerParams.setMaxTotalConnections(r0, 20);
+                    } catch (java.lang.Throwable $t) {
+                        $ex11 = $t;
+                        $pc11 = 29; continue $sw11;
+                    }
+                    try {
+                        r1 = new abcd.Iw();
+                    } catch (java.lang.Throwable $t) {
+                        $ex11 = $t;
+                        if ($t instanceof java.io.IOException) { $pc11 = 8; continue $sw11; }
+                        if ($t instanceof java.security.cert.CertificateException) { $pc11 = 11; continue $sw11; }
+                        if ($t instanceof java.security.KeyStoreException) { $pc11 = 14; continue $sw11; }
+                        if ($t instanceof java.security.NoSuchAlgorithmException) { $pc11 = 17; continue $sw11; }
+                        if ($t instanceof java.security.UnrecoverableKeyException) { $pc11 = 20; continue $sw11; }
+                        if ($t instanceof java.security.KeyManagementException) { $pc11 = 23; continue $sw11; }
+                        $pc11 = 29; continue $sw11;
+                    }
+                    try {
+                        r2 = new org.apache.http.conn.scheme.SchemeRegistry();
+                        r2.register(new org.apache.http.conn.scheme.Scheme("http", org.apache.http.conn.scheme.PlainSocketFactory.getSocketFactory(), 80));
+                        r2.register(new org.apache.http.conn.scheme.Scheme("https", r1, 443));
+                        r3 = new abcd.Ww.a(r0, r2);
+                        r4 = new org.apache.http.params.BasicHttpParams();
+                        org.apache.http.params.HttpConnectionParams.setConnectionTimeout(r4, 30000);
+                        org.apache.http.params.HttpConnectionParams.setSoTimeout(r4, 30000);
+                        org.apache.http.params.HttpConnectionParams.setSocketBufferSize(r4, 8192);
+                        org.apache.http.params.HttpProtocolParams.setUserAgent(r4, "OfficialDropboxJavaSDK/" + abcd.Dw.j6);
+                        r5 = new abcd.Tw(this, r3, r4);
+                        r5.addRequestInterceptor(new abcd.Uw(this));
+                        r5.addResponseInterceptor(new abcd.Vw(this));
+                        this.v5 = r5;
+                    } catch (java.lang.Throwable $t) {
+                        $ex11 = $t;
+                        $pc11 = 29; continue $sw11;
+                    }
+                    { $pc11 = 26; continue $sw11; }
+                }
+                case 11: {
+                    e = $ex11;
+                    try {
+                        throw new java.lang.RuntimeException(e);
+                    } catch (java.lang.Throwable $t) {
+                        $ex11 = $t;
+                        $pc11 = 29; continue $sw11;
+                    }
+                }
+                case 17: {
+                    e = $ex11;
+                    try {
+                        throw new java.lang.RuntimeException(e);
+                    } catch (java.lang.Throwable $t) {
+                        $ex11 = $t;
+                        $pc11 = 29; continue $sw11;
+                    }
+                }
+                case 20: {
+                    e = $ex11;
+                    try {
+                        throw new java.lang.RuntimeException(e);
+                    } catch (java.lang.Throwable $t) {
+                        $ex11 = $t;
+                        $pc11 = 29; continue $sw11;
+                    }
+                }
+                case 8: {
+                    e = $ex11;
+                    try {
+                        throw new java.lang.RuntimeException(e);
+                    } catch (java.lang.Throwable $t) {
+                        $ex11 = $t;
+                        $pc11 = 29; continue $sw11;
+                    }
+                }
+                case 23: {
+                    e = $ex11;
+                    try {
+                        throw new java.lang.RuntimeException(e);
+                    } catch (java.lang.Throwable $t) {
+                        $ex11 = $t;
+                        $pc11 = 29; continue $sw11;
+                    }
+                }
+                case 14: {
+                    e = $ex11;
+                    try {
+                        throw new java.lang.RuntimeException(e);
+                    } catch (java.lang.Throwable $t) {
+                        $ex11 = $t;
+                        $pc11 = 29; continue $sw11;
+                    }
+                }
+                case 26: {
+                    try {
+                        r6 = this.v5;
+                    } catch (java.lang.Throwable $t) {
+                        $ex11 = $t;
+                        $pc11 = 29; continue $sw11;
+                    }
+                    monitor-exit(this);
+                    return r6;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

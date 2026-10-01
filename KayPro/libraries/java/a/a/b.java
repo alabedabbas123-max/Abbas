@@ -26,21 +26,43 @@ public class b extends a.b.f.w implements a.b.a.d.i, a.b.g.s {
     }
 
     private boolean a(a.b.c r6, a.b.c r7, a.b.j r8) {
-        a.b.b.a.d r0 = new a.b.b.a.d();
-        r6.a(new a.b.g.d(new a.b.a.d.a(new a.b.d.a.a(new a.a.d(r7, r8, r0)))));
-        if (r0.a() <= 0) goto L6;
-        return true;
-    L6:
-        return false;
+        a.b.b.a.d r0 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = new a.b.b.a.d();
+                    r6.a(new a.b.g.d(new a.b.a.d.a(new a.b.d.a.a(new a.a.d(r7, r8, r0)))));
+                    if (r0.a() <= 0) { $pc0 = 6; continue $sw0; }
+                    return true;
+                }
+                case 6: {
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     private boolean a(a.b.c r8, java.lang.String r9, java.lang.String r10) {
-        a.b.g.al r6 = new a.b.g.al();
-        r8.a(true, true, false, false, new a.b.g.ay(r9, r10, r6));
-        if (r6.a() <= 0) goto L6;
-        return true;
-    L6:
-        return false;
+        a.b.g.al r6 = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    r6 = new a.b.g.al();
+                    r8.a(true, true, false, false, new a.b.g.ay(r9, r10, r6));
+                    if (r6.a() <= 0) { $pc1 = 6; continue $sw1; }
+                    return true;
+                }
+                case 6: {
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
@@ -49,26 +71,47 @@ public class b extends a.b.f.w implements a.b.a.d.i, a.b.g.s {
 
     @Override
     public void a(a.b.c r7, a.b.j r8, a.b.a.d r9) {
-        this.d = true;
-        a.b.k r10 = (a.b.k) r7;
-        a.b.j r11 = (a.b.n) r8;
-        java.util.Iterator r1 = this.c.iterator();
-    L4:
-        if (r1.hasNext() == false) goto L11;
-        a.b.k r0 = (a.b.k) ((a.b.c) r1.next());
-        if (a(r0, r11.a(r10), r11.b(r10)) == true) goto L9;
-        r11.a(r10, new a.b.c.bf(r0));
-        r0.a(this.f2a);
-    L9:
-        if (a(r0, r10, r11) == false) goto L4;
-        a(r0, r10, r11);
-        r0.a(this.f2a);
-        goto L4
-    L11:
-        r11.a(r10, new a.b.g.av(new a.b.g.aq[]{new a.b.c.bj("Code"), new a.b.g.ai(1024)}));
-        if (this.b == null) goto L20;
-        r11.a(r10, this.b);
-        return;
+        a.b.k r10 = null;
+        a.b.j r11 = null;
+        java.util.Iterator r1 = null;
+        a.b.k r0 = null;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    this.d = true;
+                    r10 = (a.b.k) r7;
+                    r11 = (a.b.n) r8;
+                    r1 = this.c.iterator();
+                    $pc2 = 4; continue $sw2;
+                }
+                case 4: {
+                    if (r1.hasNext() == false) { $pc2 = 11; continue $sw2; }
+                    r0 = (a.b.k) ((a.b.c) r1.next());
+                    if (a(r0, r11.a(r10), r11.b(r10)) == true) { $pc2 = 9; continue $sw2; }
+                    r11.a(r10, new a.b.c.bf(r0));
+                    r0.a(this.f2a);
+                    $pc2 = 9; continue $sw2;
+                }
+                case 9: {
+                    if (a(r0, r10, r11) == false) { $pc2 = 4; continue $sw2; }
+                    a(r0, r10, r11);
+                    r0.a(this.f2a);
+                    { $pc2 = 4; continue $sw2; }
+                }
+                case 11: {
+                    r11.a(r10, new a.b.g.av(new a.b.g.aq[]{new a.b.c.bj("Code"), new a.b.g.ai(1024)}));
+                    if (this.b == null) { $pc2 = 20; continue $sw2; }
+                    r11.a(r10, this.b);
+                    return;
+                }
+                case 20: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
@@ -77,12 +120,24 @@ public class b extends a.b.f.w implements a.b.a.d.i, a.b.g.s {
 
     @Override
     public void a(a.b.k r7) {
-        this.d = false;
-        this.c.clear();
-        r7.a(false, false, false, true, new a.b.g.bh(new a.b.g.h(this.c)));
-        r7.a(new a.b.g.d(new a.b.g.ag(0, 8, new a.b.a.d.a(this))));
-        if (this.d == false) goto L6;
-        r7.a(new a.b.c.ag());
-        return;
+        java.lang.Throwable $ex3 = null;
+        int $pc3 = -1;
+        $sw3: while (true) {
+            switch ($pc3) {
+                case -1: {
+                    this.d = false;
+                    this.c.clear();
+                    r7.a(false, false, false, true, new a.b.g.bh(new a.b.g.h(this.c)));
+                    r7.a(new a.b.g.d(new a.b.g.ag(0, 8, new a.b.a.d.a(this))));
+                    if (this.d == false) { $pc3 = 6; continue $sw3; }
+                    r7.a(new a.b.c.ag());
+                    return;
+                }
+                case 6: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

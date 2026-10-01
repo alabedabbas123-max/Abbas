@@ -20,28 +20,46 @@ public final class Ao extends abcd.Abstractao {
 
     @Override
     public boolean VH(abcd.AbstractVn r5) {
-        abcd.cs r0 = r5.gn();
-        if ((r5 instanceof abcd.Tn) == true) goto L5;
-        return false;
-    L5:
-        if (r0.size() == 1) goto L7;
-        return false;
-    L7:
-        if (abcd.Abstractao.Hw(r0.get(0).we()) == false) goto L22;
-        abcd.Abstractms r6 = ((abcd.Tn) r5).we();
-        if ((r6 instanceof abcd.Ds) == true) goto L12;
-        return false;
-    L12:
-        abcd.Ds r7 = (abcd.Ds) r6;
-        if (r7.J8() == true) goto L15;
-        return false;
-    L15:
-        if (abcd.Abstractao.FH(r7.Ws()) == false) goto L21;
-        return true;
-    L21:
-        return false;
-    L22:
-        return false;
+        abcd.cs r0 = null;
+        abcd.Abstractms r6 = null;
+        abcd.Ds r7 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = r5.gn();
+                    if ((r5 instanceof abcd.Tn) == true) { $pc0 = 5; continue $sw0; }
+                    return false;
+                }
+                case 5: {
+                    if (r0.size() == 1) { $pc0 = 7; continue $sw0; }
+                    return false;
+                }
+                case 7: {
+                    if (abcd.Abstractao.Hw(r0.get(0).we()) == false) { $pc0 = 22; continue $sw0; }
+                    r6 = ((abcd.Tn) r5).we();
+                    if ((r6 instanceof abcd.Ds) == true) { $pc0 = 12; continue $sw0; }
+                    return false;
+                }
+                case 12: {
+                    r7 = (abcd.Ds) r6;
+                    if (r7.J8() == true) { $pc0 = 15; continue $sw0; }
+                    return false;
+                }
+                case 15: {
+                    if (abcd.Abstractao.FH(r7.Ws()) == false) { $pc0 = 21; continue $sw0; }
+                    return true;
+                }
+                case 21: {
+                    return false;
+                }
+                case 22: {
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

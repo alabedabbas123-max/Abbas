@@ -18,13 +18,24 @@ class LK extends java.util.AbstractSet<java.util.Map.Entry<java.lang.String, abc
 
     @Override
     public boolean isEmpty() {
-        if (abcd.MK.Zo(this.j6) == false) goto L10;
-        if (abcd.MK.j6(this.j6) != 0) goto L7;
-        return true;
-    L7:
-        return false;
-    L10:
-        return !iterator().hasNext();
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (abcd.MK.Zo(this.j6) == false) { $pc0 = 10; continue $sw0; }
+                    if (abcd.MK.j6(this.j6) != 0) { $pc0 = 7; continue $sw0; }
+                    return true;
+                }
+                case 7: {
+                    return false;
+                }
+                case 10: {
+                    return !iterator().hasNext();
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
@@ -34,18 +45,34 @@ class LK extends java.util.AbstractSet<java.util.Map.Entry<java.lang.String, abc
 
     @Override
     public int size() {
-        if (abcd.MK.Zo(this.j6) == true) goto L10;
-        abcd.MK.j6(this.j6, 0);
-        java.util.Iterator<java.util.Map.Entry<java.lang.String, abcd.ME>> r0 = this.j6.entrySet().iterator();
-    L6:
-        if (r0.hasNext() == false) goto L7;
-        abcd.MK r1 = this.j6;
-        abcd.MK.j6(r1, abcd.MK.j6(r1) + 1);
-        r0.next();
-        goto L6
-    L7:
-        abcd.MK.j6(this.j6, true);
-    L10:
-        return abcd.MK.j6(this.j6);
+        java.util.Iterator<java.util.Map.Entry<java.lang.String, abcd.ME>> r0 = null;
+        abcd.MK r1 = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if (abcd.MK.Zo(this.j6) == true) { $pc1 = 10; continue $sw1; }
+                    abcd.MK.j6(this.j6, 0);
+                    r0 = this.j6.entrySet().iterator();
+                    $pc1 = 6; continue $sw1;
+                }
+                case 6: {
+                    if (r0.hasNext() == false) { $pc1 = 7; continue $sw1; }
+                    r1 = this.j6;
+                    abcd.MK.j6(r1, abcd.MK.j6(r1) + 1);
+                    r0.next();
+                    { $pc1 = 6; continue $sw1; }
+                }
+                case 7: {
+                    abcd.MK.j6(this.j6, true);
+                    $pc1 = 10; continue $sw1;
+                }
+                case 10: {
+                    return abcd.MK.j6(this.j6);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

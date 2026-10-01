@@ -9,13 +9,31 @@ public class QO extends abcd.XO {
 
     public static void j6(byte[] r5) {
         int r0 = 0;
-    L4:
-        if (r0 >= r5.length) goto L5;
-        byte r1 = r5[r0];
-        int r2 = r1 & 254;
-        int r3 = (((((r1 >> 1) ^ (r1 >> 2)) ^ (r1 >> 3)) ^ (r1 >> 4)) ^ (r1 >> 5)) ^ (r1 >> 6);
-        r5[r0] = (byte) (((((r1 >> 7) ^ r3) ^ 1) & 1) | r2);
-        r0 = r0 + 1;
-        goto L4
+        byte r1 = 0;
+        int r2 = 0;
+        int r3 = 0;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = 0;
+                    $pc0 = 4; continue $sw0;
+                }
+                case 4: {
+                    if (r0 >= r5.length) { $pc0 = 5; continue $sw0; }
+                    r1 = r5[r0];
+                    r2 = r1 & 254;
+                    r3 = (((((r1 >> 1) ^ (r1 >> 2)) ^ (r1 >> 3)) ^ (r1 >> 4)) ^ (r1 >> 5)) ^ (r1 >> 6);
+                    r5[r0] = (byte) (((((r1 >> 7) ^ r3) ^ 1) & 1) | r2);
+                    r0 = r0 + 1;
+                    { $pc0 = 4; continue $sw0; }
+                }
+                case 5: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

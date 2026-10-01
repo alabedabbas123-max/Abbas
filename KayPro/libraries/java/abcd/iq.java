@@ -36,41 +36,75 @@ public final class iq {
         }
 
         private abcd.bq BT() {
-            int r1 = yS();
-            int r2 = yS();
-            int r3 = yS();
-            int r0 = yS();
-            int r4 = XL();
-            short[] r5 = Zo(XL());
-            abcd.bq.b[] r6 = new abcd.bq.b[r0];
+            int r1 = 0;
+            int r2 = 0;
+            int r3 = 0;
+            int r0 = 0;
+            int r4 = 0;
+            short[] r5 = null;
+            abcd.bq.b[] r6 = null;
             int r7 = 0;
-            abcd.bq.a[] r8 = new abcd.bq.a[0];
-            if (r0 > 0) goto L5;
-            abcd.bq.a[] r9 = r8;
-        L16:
-            return new abcd.bq(r1, r2, r3, r4, r5, r6, r9);
-        L5:
-            if ((r5.length % 2) != 1) goto L7;
-            Mr();
-        L7:
+            abcd.bq.a[] r8 = null;
+            abcd.bq.a[] r9 = null;
             int r10 = 0;
-        L8:
-            if (r10 >= r0) goto L10;
-            r6[r10] = new abcd.bq.b(XL(), yS(), yS());
-            r10 = r10 + 1;
-            goto L8
-        L10:
-            int r11 = gn();
-            int r12 = rN();
-            abcd.bq.a[] r13 = new abcd.bq.a[r12];
-        L11:
-            if (r7 >= r12) goto L13;
-            r13[r7] = gn(r11);
-            r7 = r7 + 1;
-            goto L11
-        L13:
-            r9 = r13;
-            goto L16
+            int r11 = 0;
+            int r12 = 0;
+            abcd.bq.a[] r13 = null;
+            java.lang.Throwable $ex0 = null;
+            int $pc0 = -1;
+            $sw0: while (true) {
+                switch ($pc0) {
+                    case -1: {
+                        r1 = yS();
+                        r2 = yS();
+                        r3 = yS();
+                        r0 = yS();
+                        r4 = XL();
+                        r5 = Zo(XL());
+                        r6 = new abcd.bq.b[r0];
+                        r7 = 0;
+                        r8 = new abcd.bq.a[0];
+                        if (r0 > 0) { $pc0 = 5; continue $sw0; }
+                        r9 = r8;
+                        $pc0 = 16; continue $sw0;
+                    }
+                    case 16: {
+                        return new abcd.bq(r1, r2, r3, r4, r5, r6, r9);
+                    }
+                    case 5: {
+                        if ((r5.length % 2) != 1) { $pc0 = 7; continue $sw0; }
+                        Mr();
+                        $pc0 = 7; continue $sw0;
+                    }
+                    case 7: {
+                        r10 = 0;
+                        $pc0 = 8; continue $sw0;
+                    }
+                    case 8: {
+                        if (r10 >= r0) { $pc0 = 10; continue $sw0; }
+                        r6[r10] = new abcd.bq.b(XL(), yS(), yS());
+                        r10 = r10 + 1;
+                        { $pc0 = 8; continue $sw0; }
+                    }
+                    case 10: {
+                        r11 = gn();
+                        r12 = rN();
+                        r13 = new abcd.bq.a[r12];
+                        $pc0 = 11; continue $sw0;
+                    }
+                    case 11: {
+                        if (r7 >= r12) { $pc0 = 13; continue $sw0; }
+                        r13[r7] = gn(r11);
+                        r7 = r7 + 1;
+                        { $pc0 = 11; continue $sw0; }
+                    }
+                    case 13: {
+                        r9 = r13;
+                        { $pc0 = 16; continue $sw0; }
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         static abcd.bq DW(abcd.iq.a r0) {
@@ -78,10 +112,20 @@ public final class iq {
         }
 
         private void VH(int r3) {
-            if ((this.DW + r3) > this.FH) goto L6;
-            return;
-        L6:
-            throw new abcd.Ut("Section limit " + this.FH + " exceeded by " + this.j6);
+            java.lang.Throwable $ex1 = null;
+            int $pc1 = -1;
+            $sw1: while (true) {
+                switch ($pc1) {
+                    case -1: {
+                        if ((this.DW + r3) > this.FH) { $pc1 = 6; continue $sw1; }
+                        return;
+                    }
+                    case 6: {
+                        throw new abcd.Ut("Section limit " + this.FH + " exceeded by " + this.j6);
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         private abcd._p gW() {
@@ -93,26 +137,48 @@ public final class iq {
         }
 
         private abcd.bq.a gn(int r7) {
-            int r0 = gn() - r7;
-            int r8 = U2();
-            int r1 = java.lang.Math.abs(r8);
-            int[] r2 = new int[r1];
-            int[] r3 = new int[r1];
+            int r0 = 0;
+            int r8 = 0;
+            int r1 = 0;
+            int[] r2 = null;
+            int[] r3 = null;
             int r4 = 0;
-        L3:
-            if (r4 >= r1) goto L5;
-            r2[r4] = rN();
-            r3[r4] = rN();
-            r4 = r4 + 1;
-            goto L3
-        L5:
-            if (r8 > 0) goto L7;
-            int r9 = rN();
-        L9:
-            return new abcd.bq.a(r0, r2, r3, r9);
-        L7:
-            r9 = -1;
-            goto L9
+            int r9 = 0;
+            java.lang.Throwable $ex2 = null;
+            int $pc2 = -1;
+            $sw2: while (true) {
+                switch ($pc2) {
+                    case -1: {
+                        r0 = gn() - r7;
+                        r8 = U2();
+                        r1 = java.lang.Math.abs(r8);
+                        r2 = new int[r1];
+                        r3 = new int[r1];
+                        r4 = 0;
+                        $pc2 = 3; continue $sw2;
+                    }
+                    case 3: {
+                        if (r4 >= r1) { $pc2 = 5; continue $sw2; }
+                        r2[r4] = rN();
+                        r3[r4] = rN();
+                        r4 = r4 + 1;
+                        { $pc2 = 3; continue $sw2; }
+                    }
+                    case 5: {
+                        if (r8 > 0) { $pc2 = 7; continue $sw2; }
+                        r9 = rN();
+                        $pc2 = 9; continue $sw2;
+                    }
+                    case 9: {
+                        return new abcd.bq.a(r0, r2, r3, r9);
+                    }
+                    case 7: {
+                        r9 = -1;
+                        { $pc2 = 9; continue $sw2; }
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         static abcd._p j6(abcd.iq.a r0) {
@@ -120,44 +186,89 @@ public final class iq {
         }
 
         private abcd._p.b[] tp(int r7) {
-            abcd._p.b[] r0 = new abcd._p.b[r7];
+            abcd._p.b[] r0 = null;
             int r1 = 0;
             int r2 = 0;
-        L3:
-            if (r1 >= r7) goto L5;
-            r2 = r2 + rN();
-            r0[r1] = new abcd._p.b(r2, rN(), rN());
-            r1 = r1 + 1;
-            goto L3
-        L5:
-            return r0;
+            java.lang.Throwable $ex3 = null;
+            int $pc3 = -1;
+            $sw3: while (true) {
+                switch ($pc3) {
+                    case -1: {
+                        r0 = new abcd._p.b[r7];
+                        r1 = 0;
+                        r2 = 0;
+                        $pc3 = 3; continue $sw3;
+                    }
+                    case 3: {
+                        if (r1 >= r7) { $pc3 = 5; continue $sw3; }
+                        r2 = r2 + rN();
+                        r0[r1] = new abcd._p.b(r2, rN(), rN());
+                        r1 = r1 + 1;
+                        { $pc3 = 3; continue $sw3; }
+                    }
+                    case 5: {
+                        return r0;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         private abcd._p.a[] u7(int r6) {
-            abcd._p.a[] r0 = new abcd._p.a[r6];
+            abcd._p.a[] r0 = null;
             int r1 = 0;
             int r2 = 0;
-        L3:
-            if (r1 >= r6) goto L5;
-            r2 = r2 + rN();
-            r0[r1] = new abcd._p.a(r2, rN());
-            r1 = r1 + 1;
-            goto L3
-        L5:
-            return r0;
+            java.lang.Throwable $ex4 = null;
+            int $pc4 = -1;
+            $sw4: while (true) {
+                switch ($pc4) {
+                    case -1: {
+                        r0 = new abcd._p.a[r6];
+                        r1 = 0;
+                        r2 = 0;
+                        $pc4 = 3; continue $sw4;
+                    }
+                    case 3: {
+                        if (r1 >= r6) { $pc4 = 5; continue $sw4; }
+                        r2 = r2 + rN();
+                        r0[r1] = new abcd._p.a(r2, rN());
+                        r1 = r1 + 1;
+                        { $pc4 = 3; continue $sw4; }
+                    }
+                    case 5: {
+                        return r0;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         public abcd.Xp EQ() {
-            int r0 = XL();
-            int[] r1 = new int[r0];
+            int r0 = 0;
+            int[] r1 = null;
             int r2 = 0;
-        L3:
-            if (r2 >= r0) goto L6;
-            r1[r2] = XL();
-            r2 = r2 + 1;
-            goto L3
-        L6:
-            return new abcd.Xp(r1);
+            java.lang.Throwable $ex5 = null;
+            int $pc5 = -1;
+            $sw5: while (true) {
+                switch ($pc5) {
+                    case -1: {
+                        r0 = XL();
+                        r1 = new int[r0];
+                        r2 = 0;
+                        $pc5 = 3; continue $sw5;
+                    }
+                    case 3: {
+                        if (r2 >= r0) { $pc5 = 6; continue $sw5; }
+                        r1[r2] = XL();
+                        r2 = r2 + 1;
+                        { $pc5 = 3; continue $sw5; }
+                    }
+                    case 6: {
+                        return new abcd.Xp(r1);
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         public abcd.aq J0() {
@@ -221,45 +332,109 @@ public final class iq {
         }
 
         public void Zo() {
-            int r0 = this.DW;
-            this.DW = abcd.iq.j6(r0);
-        L4:
-            if (r0 >= this.DW) goto L6;
-            abcd.iq.Hw(this.v5)[r0] = 0;
-            r0 = r0 + 1;
-            goto L4
+            int r0 = 0;
+            java.lang.Throwable $ex6 = null;
+            int $pc6 = -1;
+            $sw6: while (true) {
+                switch ($pc6) {
+                    case -1: {
+                        r0 = this.DW;
+                        this.DW = abcd.iq.j6(r0);
+                        $pc6 = 4; continue $sw6;
+                    }
+                    case 4: {
+                        if (r0 >= this.DW) { $pc6 = 6; continue $sw6; }
+                        abcd.iq.Hw(this.v5)[r0] = 0;
+                        r0 = r0 + 1;
+                        { $pc6 = 4; continue $sw6; }
+                    }
+                    case 6: {
+                        return;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         public short[] Zo(int r4) {
-            short[] r0 = new short[r4];
+            short[] r0 = null;
             int r1 = 0;
-        L3:
-            if (r1 >= r4) goto L5;
-            r0[r1] = Mr();
-            r1 = r1 + 1;
-            goto L3
-        L5:
-            return r0;
+            java.lang.Throwable $ex7 = null;
+            int $pc7 = -1;
+            $sw7: while (true) {
+                switch ($pc7) {
+                    case -1: {
+                        r0 = new short[r4];
+                        r1 = 0;
+                        $pc7 = 3; continue $sw7;
+                    }
+                    case 3: {
+                        if (r1 >= r4) { $pc7 = 5; continue $sw7; }
+                        r0[r1] = Mr();
+                        r1 = r1 + 1;
+                        { $pc7 = 3; continue $sw7; }
+                    }
+                    case 5: {
+                        return r0;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         public java.lang.String a8() {
-            int r0 = XL();
-            int r1 = this.DW;
-            this.DW = r0;
-            int r2 = rN();     // Catch: java.lang.Throwable -> L9 java.io.UTFDataFormatException -> L11
-            java.lang.String r3 = abcd.ju.j6(this, new char[r2]);     // Catch: java.lang.Throwable -> L9 java.io.UTFDataFormatException -> L11
-            if (r3.length() != r2) goto L8;
-            this.DW = r1;
-            return r3;
-        L8:
-            throw new abcd.Ut("Declared length " + r2 + " doesn't match decoded length of " + r3.length());     // Catch: java.lang.Throwable -> L9 java.io.UTFDataFormatException -> L11
-        L11:
-            e = move-exception;
-            throw new abcd.Ut(e);     // Catch: java.lang.Throwable -> L9
-        L9:
-            th = move-exception;
-            this.DW = r1;
-            throw th;
+            int r0 = 0;
+            int r1 = 0;
+            int r2 = 0;
+            java.lang.String r3 = null;
+            java.lang.Throwable e = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex8 = null;
+            int $pc8 = -1;
+            $sw8: while (true) {
+                switch ($pc8) {
+                    case -1: {
+                        r0 = XL();
+                        r1 = this.DW;
+                        this.DW = r0;
+                        try {
+                            r2 = rN();
+                            r3 = abcd.ju.j6(this, new char[r2]);
+                        } catch (java.lang.Throwable $t) {
+                            $ex8 = $t;
+                            if ($t instanceof java.io.UTFDataFormatException) { $pc8 = 11; continue $sw8; }
+                            $pc8 = 9; continue $sw8;
+                        }
+                        if (r3.length() != r2) { $pc8 = 8; continue $sw8; }
+                        this.DW = r1;
+                        return r3;
+                    }
+                    case 8: {
+                        try {
+                            throw new abcd.Ut("Declared length " + r2 + " doesn't match decoded length of " + r3.length());
+                        } catch (java.lang.Throwable $t) {
+                            $ex8 = $t;
+                            if ($t instanceof java.io.UTFDataFormatException) { $pc8 = 11; continue $sw8; }
+                            $pc8 = 9; continue $sw8;
+                        }
+                    }
+                    case 11: {
+                        e = $ex8;
+                        try {
+                            throw new abcd.Ut(e);
+                        } catch (java.lang.Throwable $t) {
+                            $ex8 = $t;
+                            $pc8 = 9; continue $sw8;
+                        }
+                    }
+                    case 9: {
+                        th = $ex8;
+                        this.DW = r1;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         public abcd.nq aM() {
@@ -285,17 +460,32 @@ public final class iq {
         }
 
         public abcd.fr lg() {
-            int r0 = XL();
-            short[] r1 = new short[r0];
+            int r0 = 0;
+            short[] r1 = null;
             int r2 = 0;
-        L3:
-            if (r2 >= r0) goto L5;
-            r1[r2] = Mr();
-            r2 = r2 + 1;
-            goto L3
-        L5:
-            Zo();
-            return new abcd.fr(this.v5, r1);
+            java.lang.Throwable $ex9 = null;
+            int $pc9 = -1;
+            $sw9: while (true) {
+                switch ($pc9) {
+                    case -1: {
+                        r0 = XL();
+                        r1 = new short[r0];
+                        r2 = 0;
+                        $pc9 = 3; continue $sw9;
+                    }
+                    case 3: {
+                        if (r2 >= r0) { $pc9 = 5; continue $sw9; }
+                        r1[r2] = Mr();
+                        r2 = r2 + 1;
+                        { $pc9 = 3; continue $sw9; }
+                    }
+                    case 5: {
+                        Zo();
+                        return new abcd.fr(this.v5, r1);
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         public int rN() {
@@ -311,92 +501,163 @@ public final class iq {
         }
 
         public abcd.Wp tp() {
-            int r1 = XL();
-            int r0 = XL();
-            int r2 = XL();
-            int r3 = XL();
-            if (r0 != 0) goto L5;
-            int[] r4 = abcd.Zp.j6;
-        L6:
-            if (r0 != 0) goto L8;
-            int[] r5 = abcd.Zp.j6;
-        L9:
+            int r1 = 0;
+            int r0 = 0;
+            int r2 = 0;
+            int r3 = 0;
+            int[] r4 = null;
+            int[] r5 = null;
             int r6 = 0;
             int r7 = 0;
-        L10:
-            if (r7 >= r0) goto L12;
-            r4[r7] = XL();
-            r5[r7] = XL();
-            r7 = r7 + 1;
-            goto L10
-        L12:
-            if (r2 != 0) goto L14;
-            int[] r8 = abcd.Zp.j6;
-        L15:
-            int[] r9 = r8;
-            if (r2 != 0) goto L18;
-            int[] r10 = abcd.Zp.j6;
-        L19:
-            int[] r11 = r10;
+            int[] r8 = null;
+            int[] r9 = null;
+            int[] r10 = null;
+            int[] r11 = null;
             int r12 = 0;
-        L20:
-            if (r12 >= r2) goto L22;
-            r9[r12] = XL();
-            r11[r12] = XL();
-            r12 = r12 + 1;
-            goto L20
-        L22:
-            if (r3 != 0) goto L24;
-            int[] r13 = abcd.Zp.j6;
-        L25:
-            int[] r14 = r13;
-            if (r3 != 0) goto L28;
-            int[] r15 = abcd.Zp.j6;
-        L29:
-            int[] r16 = r15;
-        L30:
-            if (r6 >= r3) goto L33;
-            r14[r6] = XL();
-            r16[r6] = XL();
-            r6 = r6 + 1;
-            goto L30
-        L33:
-            return new abcd.Wp(r1, r4, r5, r9, r11, r14, r16);
-        L28:
-            r15 = new int[r3];
-            goto L29
-        L24:
-            r13 = new int[r3];
-            goto L25
-        L18:
-            r10 = new int[r2];
-            goto L19
-        L14:
-            r8 = new int[r2];
-            goto L15
-        L8:
-            r5 = new int[r0];
-            goto L9
-        L5:
-            r4 = new int[r0];
-            goto L6
+            int[] r13 = null;
+            int[] r14 = null;
+            int[] r15 = null;
+            int[] r16 = null;
+            java.lang.Throwable $ex10 = null;
+            int $pc10 = -1;
+            $sw10: while (true) {
+                switch ($pc10) {
+                    case -1: {
+                        r1 = XL();
+                        r0 = XL();
+                        r2 = XL();
+                        r3 = XL();
+                        if (r0 != 0) { $pc10 = 5; continue $sw10; }
+                        r4 = abcd.Zp.j6;
+                        $pc10 = 6; continue $sw10;
+                    }
+                    case 6: {
+                        if (r0 != 0) { $pc10 = 8; continue $sw10; }
+                        r5 = abcd.Zp.j6;
+                        $pc10 = 9; continue $sw10;
+                    }
+                    case 9: {
+                        r6 = 0;
+                        r7 = 0;
+                        $pc10 = 10; continue $sw10;
+                    }
+                    case 10: {
+                        if (r7 >= r0) { $pc10 = 12; continue $sw10; }
+                        r4[r7] = XL();
+                        r5[r7] = XL();
+                        r7 = r7 + 1;
+                        { $pc10 = 10; continue $sw10; }
+                    }
+                    case 12: {
+                        if (r2 != 0) { $pc10 = 14; continue $sw10; }
+                        r8 = abcd.Zp.j6;
+                        $pc10 = 15; continue $sw10;
+                    }
+                    case 15: {
+                        r9 = r8;
+                        if (r2 != 0) { $pc10 = 18; continue $sw10; }
+                        r10 = abcd.Zp.j6;
+                        $pc10 = 19; continue $sw10;
+                    }
+                    case 19: {
+                        r11 = r10;
+                        r12 = 0;
+                        $pc10 = 20; continue $sw10;
+                    }
+                    case 20: {
+                        if (r12 >= r2) { $pc10 = 22; continue $sw10; }
+                        r9[r12] = XL();
+                        r11[r12] = XL();
+                        r12 = r12 + 1;
+                        { $pc10 = 20; continue $sw10; }
+                    }
+                    case 22: {
+                        if (r3 != 0) { $pc10 = 24; continue $sw10; }
+                        r13 = abcd.Zp.j6;
+                        $pc10 = 25; continue $sw10;
+                    }
+                    case 25: {
+                        r14 = r13;
+                        if (r3 != 0) { $pc10 = 28; continue $sw10; }
+                        r15 = abcd.Zp.j6;
+                        $pc10 = 29; continue $sw10;
+                    }
+                    case 29: {
+                        r16 = r15;
+                        $pc10 = 30; continue $sw10;
+                    }
+                    case 30: {
+                        if (r6 >= r3) { $pc10 = 33; continue $sw10; }
+                        r14[r6] = XL();
+                        r16[r6] = XL();
+                        r6 = r6 + 1;
+                        { $pc10 = 30; continue $sw10; }
+                    }
+                    case 33: {
+                        return new abcd.Wp(r1, r4, r5, r9, r11, r14, r16);
+                    }
+                    case 28: {
+                        r15 = new int[r3];
+                        { $pc10 = 29; continue $sw10; }
+                    }
+                    case 24: {
+                        r13 = new int[r3];
+                        { $pc10 = 25; continue $sw10; }
+                    }
+                    case 18: {
+                        r10 = new int[r2];
+                        { $pc10 = 19; continue $sw10; }
+                    }
+                    case 14: {
+                        r8 = new int[r2];
+                        { $pc10 = 15; continue $sw10; }
+                    }
+                    case 8: {
+                        r5 = new int[r0];
+                        { $pc10 = 9; continue $sw10; }
+                    }
+                    case 5: {
+                        r4 = new int[r0];
+                        { $pc10 = 6; continue $sw10; }
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         public abcd.Vp u7() {
-            byte r2 = readByte();
-            int r3 = rN();
-            int r0 = rN();
-            int[] r4 = new int[r0];
-            abcd.jq[] r5 = new abcd.jq[r0];
+            byte r2 = 0;
+            int r3 = 0;
+            int r0 = 0;
+            int[] r4 = null;
+            abcd.jq[] r5 = null;
             int r1 = 0;
-        L3:
-            if (r1 >= r0) goto L6;
-            r4[r1] = rN();
-            r5[r1] = Ws();
-            r1 = r1 + 1;
-            goto L3
-        L6:
-            return new abcd.Vp(this.v5, r2, r3, r4, r5);
+            java.lang.Throwable $ex11 = null;
+            int $pc11 = -1;
+            $sw11: while (true) {
+                switch ($pc11) {
+                    case -1: {
+                        r2 = readByte();
+                        r3 = rN();
+                        r0 = rN();
+                        r4 = new int[r0];
+                        r5 = new abcd.jq[r0];
+                        r1 = 0;
+                        $pc11 = 3; continue $sw11;
+                    }
+                    case 3: {
+                        if (r1 >= r0) { $pc11 = 6; continue $sw11; }
+                        r4[r1] = rN();
+                        r5[r1] = Ws();
+                        r1 = r1 + 1;
+                        { $pc11 = 3; continue $sw11; }
+                    }
+                    case 6: {
+                        return new abcd.Vp(this.v5, r2, r3, r4, r5);
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         public byte[] v5(int r4) {
@@ -408,16 +669,31 @@ public final class iq {
         }
 
         public abcd.Yp we() {
-            int r0 = XL();
-            int[] r1 = new int[r0];
+            int r0 = 0;
+            int[] r1 = null;
             int r2 = 0;
-        L3:
-            if (r2 >= r0) goto L6;
-            r1[r2] = XL();
-            r2 = r2 + 1;
-            goto L3
-        L6:
-            return new abcd.Yp(r1);
+            java.lang.Throwable $ex12 = null;
+            int $pc12 = -1;
+            $sw12: while (true) {
+                switch ($pc12) {
+                    case -1: {
+                        r0 = XL();
+                        r1 = new int[r0];
+                        r2 = 0;
+                        $pc12 = 3; continue $sw12;
+                    }
+                    case 3: {
+                        if (r2 >= r0) { $pc12 = 6; continue $sw12; }
+                        r1[r2] = XL();
+                        r2 = r2 + 1;
+                        { $pc12 = 3; continue $sw12; }
+                    }
+                    case 6: {
+                        return new abcd.Yp(r1);
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         @Override
@@ -439,29 +715,43 @@ public final class iq {
     }
 
     public iq(java.io.File r4) {
-        this.FH = new abcd.Gn();
-        this.Hw = 0;
-        this.v5 = new abcd.cq(this);
-        this.Zo = new abcd.dq(this);
-        this.VH = new abcd.eq(this);
-        this.gn = new abcd.fq(this);
-        this.u7 = new abcd.gq(this);
-        this.tp = new abcd.hq(this);
-        if (abcd.Wt.j6(r4.getName()) == false) goto L10;
-        java.util.zip.ZipFile r0 = new java.util.zip.ZipFile(r4);
-        java.util.zip.ZipEntry r1 = r0.getEntry("classes.dex");
-        if (r1 == null) goto L8;
-        j6(r0.getInputStream(r1), (int) r1.getSize());
-        r0.close();
-        return;
-    L8:
-        throw new abcd.Ut("Expected classes.dex in " + r4);
-    L10:
-        if (r4.getName().endsWith(".dex") == false) goto L14;
-        j6(new java.io.FileInputStream(r4), (int) r4.length());
-        return;
-    L14:
-        throw new abcd.Ut("unknown output extension: " + r4);
+        java.util.zip.ZipFile r0 = null;
+        java.util.zip.ZipEntry r1 = null;
+        java.lang.Throwable $ex13 = null;
+        int $pc13 = -1;
+        $sw13: while (true) {
+            switch ($pc13) {
+                case -1: {
+                    this.FH = new abcd.Gn();
+                    this.Hw = 0;
+                    this.v5 = new abcd.cq(this);
+                    this.Zo = new abcd.dq(this);
+                    this.VH = new abcd.eq(this);
+                    this.gn = new abcd.fq(this);
+                    this.u7 = new abcd.gq(this);
+                    this.tp = new abcd.hq(this);
+                    if (abcd.Wt.j6(r4.getName()) == false) { $pc13 = 10; continue $sw13; }
+                    r0 = new java.util.zip.ZipFile(r4);
+                    r1 = r0.getEntry("classes.dex");
+                    if (r1 == null) { $pc13 = 8; continue $sw13; }
+                    j6(r0.getInputStream(r1), (int) r1.getSize());
+                    r0.close();
+                    return;
+                }
+                case 8: {
+                    throw new abcd.Ut("Expected classes.dex in " + r4);
+                }
+                case 10: {
+                    if (r4.getName().endsWith(".dex") == false) { $pc13 = 14; continue $sw13; }
+                    j6(new java.io.FileInputStream(r4), (int) r4.length());
+                    return;
+                }
+                case 14: {
+                    throw new abcd.Ut("unknown output extension: " + r4);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public iq(java.io.InputStream r2, int r3) {
@@ -481,27 +771,52 @@ public final class iq {
     }
 
     private static void DW(int r3, int r4) {
-        if (r3 < 0) goto L6;
-        if (r3 >= r4) goto L6;
-        return;
-    L6:
-        throw new java.lang.IndexOutOfBoundsException("index:" + r3 + ", length=" + r4);
+        java.lang.Throwable $ex14 = null;
+        int $pc14 = -1;
+        $sw14: while (true) {
+            switch ($pc14) {
+                case -1: {
+                    if (r3 < 0) { $pc14 = 6; continue $sw14; }
+                    if (r3 >= r4) { $pc14 = 6; continue $sw14; }
+                    return;
+                }
+                case 6: {
+                    throw new java.lang.IndexOutOfBoundsException("index:" + r3 + ", length=" + r4);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     private static byte[] DW(byte[] r2, int r3, int r4) {
-        if (r3 > r4) goto L11;
-        int r0 = r2.length;
-        if (r3 < 0) goto L9;
-        if (r3 > r0) goto L9;
-        int r5 = r4 - r3;
-        int r1 = java.lang.Math.min(r5, r0 - r3);
-        byte[] r6 = new byte[r5];
-        java.lang.System.arraycopy(r2, r3, r6, 0, r1);
-        return r6;
-    L9:
-        throw new java.lang.ArrayIndexOutOfBoundsException();
-    L11:
-        throw new java.lang.IllegalArgumentException();
+        int r0 = 0;
+        int r5 = 0;
+        int r1 = 0;
+        byte[] r6 = null;
+        java.lang.Throwable $ex15 = null;
+        int $pc15 = -1;
+        $sw15: while (true) {
+            switch ($pc15) {
+                case -1: {
+                    if (r3 > r4) { $pc15 = 11; continue $sw15; }
+                    r0 = r2.length;
+                    if (r3 < 0) { $pc15 = 9; continue $sw15; }
+                    if (r3 > r0) { $pc15 = 9; continue $sw15; }
+                    r5 = r4 - r3;
+                    r1 = java.lang.Math.min(r5, r0 - r3);
+                    r6 = new byte[r5];
+                    java.lang.System.arraycopy(r2, r3, r6, 0, r1);
+                    return r6;
+                }
+                case 9: {
+                    throw new java.lang.ArrayIndexOutOfBoundsException();
+                }
+                case 11: {
+                    throw new java.lang.IllegalArgumentException();
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     static java.util.List FH(abcd.iq r0) {
@@ -529,23 +844,40 @@ public final class iq {
     }
 
     private void j6(java.io.InputStream r5, int r6) {
-        if (r6 != (-1)) goto L9;
-        java.io.ByteArrayOutputStream r7 = new java.io.ByteArrayOutputStream();
-    L5:
-        int r1 = r5.read(j6);
-        if (r1 == (-1)) goto L8;
-        r7.write(j6, 0, r1);
-        goto L5
-    L8:
-        this.DW = r7.toByteArray();
-    L10:
-        this.Hw = this.DW.length;
-        this.FH.j6(this);
-        return;
-    L9:
-        this.DW = new byte[r6];
-        new java.io.DataInputStream(r5).readFully(this.DW);
-        goto L10
+        java.io.ByteArrayOutputStream r7 = null;
+        int r1 = 0;
+        java.lang.Throwable $ex16 = null;
+        int $pc16 = -1;
+        $sw16: while (true) {
+            switch ($pc16) {
+                case -1: {
+                    if (r6 != (-1)) { $pc16 = 9; continue $sw16; }
+                    r7 = new java.io.ByteArrayOutputStream();
+                    $pc16 = 5; continue $sw16;
+                }
+                case 5: {
+                    r1 = r5.read(j6);
+                    if (r1 == (-1)) { $pc16 = 8; continue $sw16; }
+                    r7.write(j6, 0, r1);
+                    { $pc16 = 5; continue $sw16; }
+                }
+                case 8: {
+                    this.DW = r7.toByteArray();
+                    $pc16 = 10; continue $sw16;
+                }
+                case 10: {
+                    this.Hw = this.DW.length;
+                    this.FH.j6(this);
+                    return;
+                }
+                case 9: {
+                    this.DW = new byte[r6];
+                    new java.io.DataInputStream(r5).readFully(this.DW);
+                    { $pc16 = 10; continue $sw16; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     static byte[] j6(byte[] r0, int r1, int r2) {
@@ -553,11 +885,21 @@ public final class iq {
     }
 
     public abcd.iq.a DW(int r4) {
-        if (r4 < 0) goto L8;
-        if (r4 > this.Hw) goto L8;
-        return new abcd.iq.a(this, r4, null);
-    L8:
-        throw new java.lang.IllegalArgumentException("position=" + r4 + " length=" + this.Hw);
+        java.lang.Throwable $ex17 = null;
+        int $pc17 = -1;
+        $sw17: while (true) {
+            switch ($pc17) {
+                case -1: {
+                    if (r4 < 0) { $pc17 = 8; continue $sw17; }
+                    if (r4 > this.Hw) { $pc17 = 8; continue $sw17; }
+                    return new abcd.iq.a(this, r4, null);
+                }
+                case 8: {
+                    throw new java.lang.IllegalArgumentException("position=" + r4 + " length=" + this.Hw);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public java.util.List<abcd.qq> DW() {
@@ -565,10 +907,20 @@ public final class iq {
     }
 
     public abcd.fr FH(int r1) {
-        if (r1 != 0) goto L6;
-        return abcd.fr.j6;
-    L6:
-        return DW(r1).lg();
+        java.lang.Throwable $ex18 = null;
+        int $pc18 = -1;
+        $sw18: while (true) {
+            switch ($pc18) {
+                case -1: {
+                    if (r1 != 0) { $pc18 = 6; continue $sw18; }
+                    return abcd.fr.j6;
+                }
+                case 6: {
+                    return DW(r1).lg();
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public java.util.List<java.lang.String> FH() {
@@ -584,18 +936,40 @@ public final class iq {
     }
 
     public abcd._p j6(abcd.aq r2) {
-        int r3 = r2.FH();
-        if (r3 == 0) goto L7;
-        return abcd.iq.a.j6(DW(r3));
-    L7:
-        throw new java.lang.IllegalArgumentException("offset == 0");
+        int r3 = 0;
+        java.lang.Throwable $ex19 = null;
+        int $pc19 = -1;
+        $sw19: while (true) {
+            switch ($pc19) {
+                case -1: {
+                    r3 = r2.FH();
+                    if (r3 == 0) { $pc19 = 7; continue $sw19; }
+                    return abcd.iq.a.j6(DW(r3));
+                }
+                case 7: {
+                    throw new java.lang.IllegalArgumentException("offset == 0");
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public abcd.bq j6(abcd._p.b r2) {
-        int r3 = r2.DW();
-        if (r3 == 0) goto L7;
-        return abcd.iq.a.DW(DW(r3));
-    L7:
-        throw new java.lang.IllegalArgumentException("offset == 0");
+        int r3 = 0;
+        java.lang.Throwable $ex20 = null;
+        int $pc20 = -1;
+        $sw20: while (true) {
+            switch ($pc20) {
+                case -1: {
+                    r3 = r2.DW();
+                    if (r3 == 0) { $pc20 = 7; continue $sw20; }
+                    return abcd.iq.a.DW(DW(r3));
+                }
+                case 7: {
+                    throw new java.lang.IllegalArgumentException("offset == 0");
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

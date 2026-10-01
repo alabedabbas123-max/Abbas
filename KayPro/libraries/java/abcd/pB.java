@@ -10,7 +10,7 @@ public class pB {
     private abcd.yE[] j6;
     private abcd.pB.a v5;
 
-    public static abstract enum a extends java.lang.Enum<abcd.pB.a> {
+    public static abstract class a extends com.almlkaide.kaypro.internal.EnumBase {
         public static final abcd.pB.a DW = null;
         public static final abcd.pB.a FH = null;
         public static final abcd.pB.a Hw = null;
@@ -38,7 +38,7 @@ public class pB {
         }
 
         public static abcd.pB.a valueOf(java.lang.String r1) {
-            return (abcd.pB.a) java.lang.Enum.valueOf(abcd.pB.a.class, r1);
+            return (abcd.pB.a) com.almlkaide.kaypro.internal.EnumBase.valueOf(abcd.pB.a.values(), r1);
         }
 
         public static abcd.pB.a[] values() {
@@ -57,22 +57,38 @@ public class pB {
     }
 
     public pB(abcd.yE r1, abcd.yE r2, abcd.yE[] r3, abcd.pB.a r4, abcd.AbstractvF r5, java.util.Map<java.lang.String, uF<?>> r6, java.util.Map<java.lang.String, abcd.C1498xF.a> r7, java.lang.String r8) {
-        this.FH = r1;
-        this.j6 = r3;
-        this.DW = r2;
-        this.v5 = r4;
-        this.VH = r5;
-        this.Zo = r8;
-        this.gn = r7;
-        if (r6 == null) goto L9;
-        java.util.Iterator<java.util.Map.Entry<java.lang.String, uF<?>>> r9 = r6.entrySet().iterator();
-    L6:
-        if (r9.hasNext() == false) goto L11;
-        java.util.Map.Entry<java.lang.String, uF<?>> r10 = r9.next();
-        j6(r10.getKey(), r10.getValue());
-        goto L6
-    L11:
-        return;
+        java.util.Map.Entry<java.lang.String, uF<?>> r10 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    this.FH = r1;
+                    this.j6 = r3;
+                    this.DW = r2;
+                    this.v5 = r4;
+                    this.VH = r5;
+                    this.Zo = r8;
+                    this.gn = r7;
+                    if (r6 == null) { $pc0 = 9; continue $sw0; }
+                    java.util.Iterator<java.util.Map.Entry<java.lang.String, uF<?>>> r9 = r6.entrySet().iterator();
+                    $pc0 = 6; continue $sw0;
+                }
+                case 6: {
+                    if (r9.hasNext() == false) { $pc0 = 11; continue $sw0; }
+                    r10 = r9.next();
+                    j6(r10.getKey(), r10.getValue());
+                    { $pc0 = 6; continue $sw0; }
+                }
+                case 11: {
+                    return;
+                }
+                case 9: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public abcd.pB.a j6() {
@@ -80,79 +96,139 @@ public class pB {
     }
 
     public void j6(java.lang.String r10, uF<?> r11) {
-        if (r11.DW() == true) goto L6;
-        return;
-    L6:
-        if (this.Hw != null) goto L8;
-        this.Hw = new java.util.HashMap();
-    L8:
-        java.util.Iterator<abcd.qF> r0 = r11.iterator();
+        java.util.Iterator<abcd.qF> r0 = null;
         int r2 = 0;
-    L10:
-        if (r0.hasNext() == false) goto L11;
-        if (r0.next().DW().equals(abcd.qF.a.DW) == false) goto L10;
-        r2 = r2 + 1;
-        goto L10
-    L11:
-        int[][] r3 = (int[][]) java.lang.reflect.Array.newInstance(int.class, new int[]{r2, this.j6.length + 1});
-        java.util.Iterator<abcd.qF> r4 = r11.iterator();
-        int r12 = -1;
-    L13:
-        if (r4.hasNext() == false) goto L14;
-        abcd.qF r1 = r4.next();
-        if (r1.DW().equals(abcd.qF.a.DW) == false) goto L21;
-        if (r12 <= (-1)) goto L20;
-        r3[r12][this.j6.length] = 0;
-    L20:
-        r12 = r12 + 1;
-        int r5 = r1.FH();
-        r3[r12][r1.Hw()] = r1.j6();
-    L23:
-        if (r1.DW().equals(abcd.qF.a.FH) == false) goto L13;
-        if (r1.FH() <= r5) goto L27;
-        r1.FH();
-    L27:
-        r3[r12][r1.Hw()] = r1.j6();
-        goto L13
-    L21:
-        r5 = 0;
-        goto L23
-    L14:
-        this.Hw.put(r10, r3);
+        int[][] r3 = null;
+        java.util.Iterator<abcd.qF> r4 = null;
+        int r12 = 0;
+        abcd.qF r1 = null;
+        int r5 = 0;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if (r11.DW() == true) { $pc1 = 6; continue $sw1; }
+                    return;
+                }
+                case 6: {
+                    if (this.Hw != null) { $pc1 = 8; continue $sw1; }
+                    this.Hw = new java.util.HashMap();
+                    $pc1 = 8; continue $sw1;
+                }
+                case 8: {
+                    r0 = r11.iterator();
+                    r2 = 0;
+                    $pc1 = 10; continue $sw1;
+                }
+                case 10: {
+                    if (r0.hasNext() == false) { $pc1 = 11; continue $sw1; }
+                    if (r0.next().DW().equals(abcd.qF.a.DW) == false) { $pc1 = 10; continue $sw1; }
+                    r2 = r2 + 1;
+                    { $pc1 = 10; continue $sw1; }
+                }
+                case 11: {
+                    r3 = (int[][]) java.lang.reflect.Array.newInstance(int.class, new int[]{r2, this.j6.length + 1});
+                    r4 = r11.iterator();
+                    r12 = -1;
+                    $pc1 = 13; continue $sw1;
+                }
+                case 13: {
+                    if (r4.hasNext() == false) { $pc1 = 14; continue $sw1; }
+                    r1 = r4.next();
+                    if (r1.DW().equals(abcd.qF.a.DW) == false) { $pc1 = 21; continue $sw1; }
+                    if (r12 <= (-1)) { $pc1 = 20; continue $sw1; }
+                    r3[r12][this.j6.length] = 0;
+                    $pc1 = 20; continue $sw1;
+                }
+                case 20: {
+                    r12 = r12 + 1;
+                    r5 = r1.FH();
+                    r3[r12][r1.Hw()] = r1.j6();
+                    $pc1 = 23; continue $sw1;
+                }
+                case 23: {
+                    if (r1.DW().equals(abcd.qF.a.FH) == false) { $pc1 = 13; continue $sw1; }
+                    if (r1.FH() <= r5) { $pc1 = 27; continue $sw1; }
+                    r1.FH();
+                    $pc1 = 27; continue $sw1;
+                }
+                case 27: {
+                    r3[r12][r1.Hw()] = r1.j6();
+                    { $pc1 = 13; continue $sw1; }
+                }
+                case 21: {
+                    r5 = 0;
+                    { $pc1 = 23; continue $sw1; }
+                }
+                case 14: {
+                    this.Hw.put(r10, r3);
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public java.lang.String toString() {
-        java.lang.StringBuilder r0 = new java.lang.StringBuilder();
-        abcd.yE[] r1 = this.j6;
-        int r2 = r1.length;
+        java.lang.StringBuilder r0 = null;
+        abcd.yE[] r1 = null;
+        int r2 = 0;
         int r5 = 0;
-        boolean r6 = true;
-    L4:
-        if (r5 >= r2) goto L5;
-        abcd.yE r8 = r1[r5];
-        if (r6 == true) goto L14;
-        r0.append(", ");
-    L15:
-        r0.append(abcd.yE.j6(r8));
-        r5 = r5 + 1;
-        goto L4
-    L14:
-        r6 = false;
-        goto L15
-    L5:
-        java.lang.String r3 = org.eclipse.jgit.JGitText.j6().mergeUsingStrategyResultedInDescription;
-        java.lang.Object[] r4 = new java.lang.Object[5];
-        r4[0] = r0;
-        r4[1] = abcd.yE.j6(this.DW);
-        r4[2] = this.VH.j6();
-        r4[3] = this.v5;
-        if (this.Zo != null) goto L8;
-        java.lang.String r7 = "";
-    L9:
-        r4[4] = r7;
-        return java.text.MessageFormat.format(r3, r4);
-    L8:
-        r7 = ", " + this.Zo;
-        goto L9
+        boolean r6 = false;
+        abcd.yE r8 = null;
+        java.lang.String r3 = null;
+        java.lang.Object[] r4 = null;
+        java.lang.String r7 = null;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    r0 = new java.lang.StringBuilder();
+                    r1 = this.j6;
+                    r2 = r1.length;
+                    r5 = 0;
+                    r6 = true;
+                    $pc2 = 4; continue $sw2;
+                }
+                case 4: {
+                    if (r5 >= r2) { $pc2 = 5; continue $sw2; }
+                    r8 = r1[r5];
+                    if (r6 == true) { $pc2 = 14; continue $sw2; }
+                    r0.append(", ");
+                    $pc2 = 15; continue $sw2;
+                }
+                case 15: {
+                    r0.append(abcd.yE.j6(r8));
+                    r5 = r5 + 1;
+                    { $pc2 = 4; continue $sw2; }
+                }
+                case 14: {
+                    r6 = false;
+                    { $pc2 = 15; continue $sw2; }
+                }
+                case 5: {
+                    r3 = org.eclipse.jgit.JGitText.j6().mergeUsingStrategyResultedInDescription;
+                    r4 = new java.lang.Object[5];
+                    r4[0] = r0;
+                    r4[1] = abcd.yE.j6(this.DW);
+                    r4[2] = this.VH.j6();
+                    r4[3] = this.v5;
+                    if (this.Zo != null) { $pc2 = 8; continue $sw2; }
+                    r7 = "";
+                    $pc2 = 9; continue $sw2;
+                }
+                case 9: {
+                    r4[4] = r7;
+                    return java.text.MessageFormat.format(r3, r4);
+                }
+                case 8: {
+                    r7 = ", " + this.Zo;
+                    { $pc2 = 9; continue $sw2; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

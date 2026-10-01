@@ -10,10 +10,23 @@ public class gu implements abcd.Interfacebu {
 
     @Override
     public void add(int r3) {
-        int r0 = this.j6.FH(r3);
-        if (r0 >= 0) goto L6;
-        this.j6.j6(-(r0 + 1), r3);
-        return;
+        int r0 = 0;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = this.j6.FH(r3);
+                    if (r0 >= 0) { $pc0 = 6; continue $sw0; }
+                    this.j6.j6(-(r0 + 1), r3);
+                    return;
+                }
+                case 6: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
@@ -29,59 +42,107 @@ public class gu implements abcd.Interfacebu {
     @Override
     public void j6(abcd.Interfacebu r7) {
         int r1 = 0;
-        if ((r7 instanceof abcd.gu) == false) goto L21;
-        abcd.gu r8 = (abcd.gu) r7;
-        int r0 = this.j6.size();
-        int r2 = r8.j6.size();
+        abcd.gu r8 = null;
+        int r0 = 0;
+        int r2 = 0;
         int r3 = 0;
-    L5:
-        if (r1 >= r2) goto L17;
-        if (r3 >= r0) goto L17;
-    L7:
-        if (r1 >= r2) goto L11;
-        if (r8.j6.get(r1) >= this.j6.get(r3)) goto L11;
-        int r5 = r1 + 1;
-        add(r8.j6.get(r1));
-        r1 = r5;
-    L11:
-        if (r1 == r2) goto L17;
-    L13:
-        if (r3 >= r0) goto L5;
-        if (r8.j6.get(r1) < this.j6.get(r3)) goto L5;
-        r3 = r3 + 1;
-    L17:
-        if (r1 >= r2) goto L19;
-        add(r8.j6.get(r1));
-        r1 = r1 + 1;
-        goto L17
-    L19:
-        this.j6.er();
-        return;
-    L21:
-        if ((r7 instanceof abcd.Nt) == false) goto L26;
-        abcd.Nt r9 = (abcd.Nt) r7;
-    L23:
-        if (r1 < 0) goto L25;
-        this.j6.DW(r1);
-        r1 = abcd.Ot.DW(r9.j6, r1 + 1);
-        goto L23
-    L25:
-        this.j6.er();
-        return;
-    L26:
-        abcd._t r10 = r7.iterator();
-    L28:
-        if (r10.hasNext() == false) goto L44;
-        add(r10.next());
-        goto L28
+        int r5 = 0;
+        abcd.Nt r9 = null;
+        abcd._t r10 = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    r1 = 0;
+                    if ((r7 instanceof abcd.gu) == false) { $pc1 = 21; continue $sw1; }
+                    r8 = (abcd.gu) r7;
+                    r0 = this.j6.size();
+                    r2 = r8.j6.size();
+                    r3 = 0;
+                    $pc1 = 5; continue $sw1;
+                }
+                case 5: {
+                    if (r1 >= r2) { $pc1 = 17; continue $sw1; }
+                    if (r3 >= r0) { $pc1 = 17; continue $sw1; }
+                    $pc1 = 7; continue $sw1;
+                }
+                case 7: {
+                    if (r1 >= r2) { $pc1 = 11; continue $sw1; }
+                    if (r8.j6.get(r1) >= this.j6.get(r3)) { $pc1 = 11; continue $sw1; }
+                    r5 = r1 + 1;
+                    add(r8.j6.get(r1));
+                    r1 = r5;
+                    $pc1 = 11; continue $sw1;
+                }
+                case 11: {
+                    if (r1 == r2) { $pc1 = 17; continue $sw1; }
+                    $pc1 = 13; continue $sw1;
+                }
+                case 13: {
+                    if (r3 >= r0) { $pc1 = 5; continue $sw1; }
+                    if (r8.j6.get(r1) < this.j6.get(r3)) { $pc1 = 5; continue $sw1; }
+                    r3 = r3 + 1;
+                    $pc1 = 17; continue $sw1;
+                }
+                case 17: {
+                    if (r1 >= r2) { $pc1 = 19; continue $sw1; }
+                    add(r8.j6.get(r1));
+                    r1 = r1 + 1;
+                    { $pc1 = 17; continue $sw1; }
+                }
+                case 19: {
+                    this.j6.er();
+                    return;
+                }
+                case 21: {
+                    if ((r7 instanceof abcd.Nt) == false) { $pc1 = 26; continue $sw1; }
+                    r9 = (abcd.Nt) r7;
+                    $pc1 = 23; continue $sw1;
+                }
+                case 23: {
+                    if (r1 < 0) { $pc1 = 25; continue $sw1; }
+                    this.j6.DW(r1);
+                    r1 = abcd.Ot.DW(r9.j6, r1 + 1);
+                    { $pc1 = 23; continue $sw1; }
+                }
+                case 25: {
+                    this.j6.er();
+                    return;
+                }
+                case 26: {
+                    r10 = r7.iterator();
+                    $pc1 = 28; continue $sw1;
+                }
+                case 28: {
+                    if (r10.hasNext() == false) { $pc1 = 44; continue $sw1; }
+                    add(r10.next());
+                    { $pc1 = 28; continue $sw1; }
+                }
+                case 44: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
     public boolean j6(int r2) {
-        if (this.j6.v5(r2) < 0) goto L5;
-        return true;
-    L5:
-        return false;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    if (this.j6.v5(r2) < 0) { $pc2 = 5; continue $sw2; }
+                    return true;
+                }
+                case 5: {
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public java.lang.String toString() {

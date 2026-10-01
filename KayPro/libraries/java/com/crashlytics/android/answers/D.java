@@ -12,11 +12,22 @@ class D extends uz<com.crashlytics.android.answers.I> {
     }
 
     protected int Zo() {
-        abcd.Tz r0 = this.gn;
-        if (r0 != null) goto L6;
-        return super.Zo();
-    L6:
-        return r0.v5;
+        abcd.Tz r0 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = this.gn;
+                    if (r0 != null) { $pc0 = 6; continue $sw0; }
+                    return super.Zo();
+                }
+                case 6: {
+                    return r0.v5;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     void j6(abcd.Tz r1) {
@@ -24,10 +35,21 @@ class D extends uz<com.crashlytics.android.answers.I> {
     }
 
     protected int v5() {
-        abcd.Tz r0 = this.gn;
-        if (r0 != null) goto L6;
-        return super.v5();
-    L6:
-        return r0.FH;
+        abcd.Tz r0 = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    r0 = this.gn;
+                    if (r0 != null) { $pc1 = 6; continue $sw1; }
+                    return super.v5();
+                }
+                case 6: {
+                    return r0.FH;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

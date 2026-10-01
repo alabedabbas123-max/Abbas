@@ -27,19 +27,46 @@ class P implements com.aide.common.ab<java.lang.String> {
 
     @abcd.Interfacesu(method = -8245536693385977396L)
     public void j62(java.lang.String r5) {
-    L11:
-        th = move-exception;
-        if (DW == false) goto L15;
-        abcd.wu.j6(th, -4310754117006148479L, this, r5);
-    L15:
-        throw th;
-    L4:
-        if (j6 == false) goto L7;
-        abcd.wu.j6(-4310754117006148479L, this, r5);     // Catch: java.lang.Throwable -> L11
-    L7:
-        if (r5.length() != 0) goto L9;
-        r5 = null;
-    L9:
-        this.FH.j6(this.Hw, r5);     // Catch: java.lang.Throwable -> L11
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 4;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 11: {
+                    th = $ex0;
+                    if (DW == false) { $pc0 = 15; continue $sw0; }
+                    abcd.wu.j6(th, -4310754117006148479L, this, r5);
+                    $pc0 = 15; continue $sw0;
+                }
+                case 15: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (j6 == false) { $pc0 = 7; continue $sw0; }
+                    try {
+                        abcd.wu.j6(-4310754117006148479L, this, r5);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 11; continue $sw0;
+                    }
+                    $pc0 = 7; continue $sw0;
+                }
+                case 7: {
+                    if (r5.length() != 0) { $pc0 = 9; continue $sw0; }
+                    r5 = null;
+                    $pc0 = 9; continue $sw0;
+                }
+                case 9: {
+                    try {
+                        this.FH.j6(this.Hw, r5);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 11; continue $sw0;
+                    }
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

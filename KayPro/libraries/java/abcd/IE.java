@@ -21,10 +21,26 @@ public abstract class IE {
     public abstract void FH();
 
     public boolean FH(abcd.YD r1, int r2) {
-        Hw(r1, r2);     // Catch: abcd.fD -> L5
-        return true;
-    L5:
-        return false;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    try {
+                        Hw(r1, r2);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof abcd.fD) { $pc0 = 5; continue $sw0; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    return true;
+                }
+                case 5: {
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public abstract abcd.FE Hw(abcd.YD r1, int r2);
@@ -37,32 +53,55 @@ public abstract class IE {
     }
 
     public abcd.WD j6(abcd.YD r8, int r9) {
-        if (r9 == 40) goto L5;
-        abcd.WD r1 = r8.j6(r9);
-        java.util.Collection<abcd.yE> r2 = j6(r1);
-    L8:
-        if (1 >= r2.size()) goto L21;
-        if (r9 >= 40) goto L21;
-        r9 = r9 + 1;
-        r1 = r8.j6(r9);
-        java.util.ArrayList r5 = new java.util.ArrayList(8);
-        java.util.Iterator<abcd.yE> r3 = r2.iterator();
-    L13:
-        if (r3.hasNext() == false) goto L15;
-        abcd.yE r4 = r3.next();
-        if (r1.DW(r4) != 0) goto L13;
-        r5.add(r4);
-        goto L13
-    L15:
-        if (1 < r5.size()) goto L16;
-        r2 = j6(r1);
-        goto L8
-    L16:
-        r2 = r5;
-    L21:
-        return r1;
-    L5:
-        return abcd.WD.j6(r8);
+        abcd.WD r1 = null;
+        java.util.Collection<abcd.yE> r2 = null;
+        java.util.ArrayList r5 = null;
+        java.util.Iterator<abcd.yE> r3 = null;
+        abcd.yE r4 = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if (r9 == 40) { $pc1 = 5; continue $sw1; }
+                    r1 = r8.j6(r9);
+                    r2 = j6(r1);
+                    $pc1 = 8; continue $sw1;
+                }
+                case 8: {
+                    if (1 >= r2.size()) { $pc1 = 21; continue $sw1; }
+                    if (r9 >= 40) { $pc1 = 21; continue $sw1; }
+                    r9 = r9 + 1;
+                    r1 = r8.j6(r9);
+                    r5 = new java.util.ArrayList(8);
+                    r3 = r2.iterator();
+                    $pc1 = 13; continue $sw1;
+                }
+                case 13: {
+                    if (r3.hasNext() == false) { $pc1 = 15; continue $sw1; }
+                    r4 = r3.next();
+                    if (r1.DW(r4) != 0) { $pc1 = 13; continue $sw1; }
+                    r5.add(r4);
+                    { $pc1 = 13; continue $sw1; }
+                }
+                case 15: {
+                    if (1 < r5.size()) { $pc1 = 16; continue $sw1; }
+                    r2 = j6(r1);
+                    { $pc1 = 8; continue $sw1; }
+                }
+                case 16: {
+                    r2 = r5;
+                    $pc1 = 21; continue $sw1;
+                }
+                case 21: {
+                    return r1;
+                }
+                case 5: {
+                    return abcd.WD.j6(r8);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public <T extends abcd.yE> _D<T> j6(java.lang.Iterable<T> r1, boolean r2) {

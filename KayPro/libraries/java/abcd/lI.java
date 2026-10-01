@@ -26,24 +26,48 @@ public class lI implements com.jcraft.jsch.UserInfo, com.jcraft.jsch.UIKeyboardI
 
     @Override
     public boolean FH(java.lang.String r6) {
-        abcd.AbstractjI.d r7 = v5(r6);
-        if (this.DW.j6(this.j6, new abcd.AbstractjI[]{r7}) == false) goto L6;
-        this.Hw = r7.DW();
-        return true;
-    L6:
-        this.Hw = null;
-        return false;
+        abcd.AbstractjI.d r7 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r7 = v5(r6);
+                    if (this.DW.j6(this.j6, new abcd.AbstractjI[]{r7}) == false) { $pc0 = 6; continue $sw0; }
+                    this.Hw = r7.DW();
+                    return true;
+                }
+                case 6: {
+                    this.Hw = null;
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
     public boolean Hw(java.lang.String r6) {
-        abcd.AbstractjI.f r0 = new abcd.AbstractjI.f(r6);
-        if (this.DW.j6(this.j6, new abcd.AbstractjI[]{r0}) == true) goto L5;
-    L7:
-        return false;
-    L5:
-        if (r0.DW() == false) goto L7;
-        return true;
+        abcd.AbstractjI.f r0 = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    r0 = new abcd.AbstractjI.f(r6);
+                    if (this.DW.j6(this.j6, new abcd.AbstractjI[]{r0}) == true) { $pc1 = 5; continue $sw1; }
+                    $pc1 = 7; continue $sw1;
+                }
+                case 7: {
+                    return false;
+                }
+                case 5: {
+                    if (r0.DW() == false) { $pc1 = 7; continue $sw1; }
+                    return true;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
@@ -58,44 +82,79 @@ public class lI implements com.jcraft.jsch.UserInfo, com.jcraft.jsch.UIKeyboardI
 
     @Override
     public boolean j6(java.lang.String r6) {
-        abcd.AbstractjI.c r0 = new abcd.AbstractjI.c(r6);
-        if (this.DW.j6(this.j6, new abcd.AbstractjI[]{r0}) == false) goto L6;
-        this.FH = new java.lang.String(r0.FH());
-        return true;
-    L6:
-        this.FH = null;
-        return false;
+        abcd.AbstractjI.c r0 = null;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    r0 = new abcd.AbstractjI.c(r6);
+                    if (this.DW.j6(this.j6, new abcd.AbstractjI[]{r0}) == false) { $pc2 = 6; continue $sw2; }
+                    this.FH = new java.lang.String(r0.FH());
+                    return true;
+                }
+                case 6: {
+                    this.FH = null;
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
     public java.lang.String[] j6(java.lang.String r5, java.lang.String r6, java.lang.String r7, java.lang.String[] r8, boolean[] r9) {
-        abcd.AbstractjI.d[] r10 = new abcd.AbstractjI.d[r8.length];
+        abcd.AbstractjI.d[] r10 = null;
         int r11 = 0;
         int r0 = 0;
-    L4:
-        if (r0 >= r8.length) goto L5;
-        r10[r0] = new abcd.AbstractjI.d(r8[r0], !r9[r0]);
-        r0 = r0 + 1;
-        goto L4
-    L5:
-        java.util.ArrayList r12 = new java.util.ArrayList();
-        if (r7 != null) goto L8;
-    L10:
-        r12.addAll(java.util.Arrays.asList(r10));
-        if (this.DW.j6(this.j6, r12) == true) goto L14;
-        return null;
-    L14:
-        java.lang.String[] r1 = new java.lang.String[r10.length];
-    L16:
-        if (r11 >= r10.length) goto L17;
-        r1[r11] = r10[r11].DW();
-        r11 = r11 + 1;
-        goto L16
-    L17:
-        return r1;
-    L8:
-        if (r7.length() <= 0) goto L10;
-        r12.add(new abcd.AbstractjI.b(r7));
-        goto L10
+        java.util.ArrayList r12 = null;
+        java.lang.String[] r1 = null;
+        java.lang.Throwable $ex3 = null;
+        int $pc3 = -1;
+        $sw3: while (true) {
+            switch ($pc3) {
+                case -1: {
+                    r10 = new abcd.AbstractjI.d[r8.length];
+                    r11 = 0;
+                    r0 = 0;
+                    $pc3 = 4; continue $sw3;
+                }
+                case 4: {
+                    if (r0 >= r8.length) { $pc3 = 5; continue $sw3; }
+                    r10[r0] = new abcd.AbstractjI.d(r8[r0], !r9[r0]);
+                    r0 = r0 + 1;
+                    { $pc3 = 4; continue $sw3; }
+                }
+                case 5: {
+                    r12 = new java.util.ArrayList();
+                    if (r7 != null) { $pc3 = 8; continue $sw3; }
+                    $pc3 = 10; continue $sw3;
+                }
+                case 10: {
+                    r12.addAll(java.util.Arrays.asList(r10));
+                    if (this.DW.j6(this.j6, r12) == true) { $pc3 = 14; continue $sw3; }
+                    return null;
+                }
+                case 14: {
+                    r1 = new java.lang.String[r10.length];
+                    $pc3 = 16; continue $sw3;
+                }
+                case 16: {
+                    if (r11 >= r10.length) { $pc3 = 17; continue $sw3; }
+                    r1[r11] = r10[r11].DW();
+                    r11 = r11 + 1;
+                    { $pc3 = 16; continue $sw3; }
+                }
+                case 17: {
+                    return r1;
+                }
+                case 8: {
+                    if (r7.length() <= 0) { $pc3 = 10; continue $sw3; }
+                    r12.add(new abcd.AbstractjI.b(r7));
+                    { $pc3 = 10; continue $sw3; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

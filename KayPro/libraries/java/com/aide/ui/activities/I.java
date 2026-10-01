@@ -23,26 +23,58 @@ class I implements java.lang.Runnable {
     @Override
     @abcd.Interfacesu(method = -716300338700315784L)
     public void run() {
-    L15:
-        th = move-exception;
-        if (DW == false) goto L19;
-        abcd.wu.j6(th, -1450362515632573248L, this);
-    L19:
-        throw th;
-    L4:
-        if (j6 == false) goto L7;
-        abcd.wu.j6(-1450362515632573248L, this);     // Catch: java.lang.Throwable -> L15
-    L7:
-        if (com.aide.ui.activities.ShopExpertPopupActivity.FH(this.Hw.FH) == false) goto L10;
-        return;
-    L10:
-        if (com.aide.ui.activities.ShopExpertPopupActivity.j6(this.Hw.FH) == false) goto L13;
-        this.Hw.FH.setResult(-1);     // Catch: java.lang.Throwable -> L15
-        this.Hw.FH.finish();     // Catch: java.lang.Throwable -> L15
-        return;
-    L13:
-        abcd.F.j6("ExpertShopErrorShown: " + this.FH);     // Catch: java.lang.Throwable -> L15
-        this.Hw.FH.Hw.setCanceledOnTouchOutside(true);     // Catch: java.lang.Throwable -> L15
-        com.aide.ui.activities.ShopExpertPopupActivity.j6(this.Hw.FH, this.FH);     // Catch: java.lang.Throwable -> L15
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 4;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 15: {
+                    th = $ex0;
+                    if (DW == false) { $pc0 = 19; continue $sw0; }
+                    abcd.wu.j6(th, -1450362515632573248L, this);
+                    $pc0 = 19; continue $sw0;
+                }
+                case 19: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (j6 == false) { $pc0 = 7; continue $sw0; }
+                    try {
+                        abcd.wu.j6(-1450362515632573248L, this);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 15; continue $sw0;
+                    }
+                    $pc0 = 7; continue $sw0;
+                }
+                case 7: {
+                    if (com.aide.ui.activities.ShopExpertPopupActivity.FH(this.Hw.FH) == false) { $pc0 = 10; continue $sw0; }
+                    return;
+                }
+                case 10: {
+                    if (com.aide.ui.activities.ShopExpertPopupActivity.j6(this.Hw.FH) == false) { $pc0 = 13; continue $sw0; }
+                    try {
+                        this.Hw.FH.setResult(-1);
+                        this.Hw.FH.finish();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 15; continue $sw0;
+                    }
+                    return;
+                }
+                case 13: {
+                    try {
+                        abcd.F.j6("ExpertShopErrorShown: " + this.FH);
+                        this.Hw.FH.Hw.setCanceledOnTouchOutside(true);
+                        com.aide.ui.activities.ShopExpertPopupActivity.j6(this.Hw.FH, this.FH);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 15; continue $sw0;
+                    }
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

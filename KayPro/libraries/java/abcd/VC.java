@@ -10,17 +10,33 @@ public class VC extends java.io.IOException {
     }
 
     private static java.lang.String j6(java.lang.String[] r5) {
-        java.lang.StringBuilder r0 = new java.lang.StringBuilder();
-        int r1 = r5.length;
+        java.lang.StringBuilder r0 = null;
+        int r1 = 0;
         int r2 = 0;
-    L3:
-        if (r2 >= r1) goto L5;
-        java.lang.String r3 = r5[r2];
-        r0.append("\n");
-        r0.append(r3);
-        r2 = r2 + 1;
-        goto L3
-    L5:
-        return r0.toString();
+        java.lang.String r3 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = new java.lang.StringBuilder();
+                    r1 = r5.length;
+                    r2 = 0;
+                    $pc0 = 3; continue $sw0;
+                }
+                case 3: {
+                    if (r2 >= r1) { $pc0 = 5; continue $sw0; }
+                    r3 = r5[r2];
+                    r0.append("\n");
+                    r0.append(r3);
+                    r2 = r2 + 1;
+                    { $pc0 = 3; continue $sw0; }
+                }
+                case 5: {
+                    return r0.toString();
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

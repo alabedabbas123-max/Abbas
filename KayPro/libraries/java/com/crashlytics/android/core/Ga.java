@@ -8,14 +8,33 @@ final class Ga {
     }
 
     public static com.crashlytics.android.core.Fa j6(java.lang.String r11) {
-        java.util.regex.Matcher r0 = j6.matcher(r11);
-        if (r0.matches() == true) goto L10;
-        return null;
-    L10:
-        long r5 = java.lang.Long.valueOf(r0.group(1), 16).longValue();     // Catch: java.lang.Exception -> L8
-        return new com.crashlytics.android.core.Fa(r5, java.lang.Long.valueOf(r0.group(2), 16).longValue() - r5, r0.group(3), r0.group(4));
-    L8:
-        io.fabric.sdk.android.Fabric.getLogger().Hw("CrashlyticsCore", "Could not parse map entry: " + r11);
-        return null;
+        java.util.regex.Matcher r0 = null;
+        long r5 = 0L;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = j6.matcher(r11);
+                    if (r0.matches() == true) { $pc0 = 10; continue $sw0; }
+                    return null;
+                }
+                case 10: {
+                    try {
+                        r5 = java.lang.Long.valueOf(r0.group(1), 16).longValue();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.lang.Exception) { $pc0 = 8; continue $sw0; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    return new com.crashlytics.android.core.Fa(r5, java.lang.Long.valueOf(r0.group(2), 16).longValue() - r5, r0.group(3), r0.group(4));
+                }
+                case 8: {
+                    io.fabric.sdk.android.Fabric.getLogger().Hw("CrashlyticsCore", "Could not parse map entry: " + r11);
+                    return null;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

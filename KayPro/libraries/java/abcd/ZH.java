@@ -19,13 +19,29 @@ class ZH extends abcd.RK.d {
 
     @Override
     public void close() {
-        super.close();
-        abcd._H.j6(this.Zo, this.VH, this.gn, this.u7.digest(), this, this.tp, this.EQ);     // Catch: java.lang.Throwable -> L6
-        j6();
-        return;
-    L6:
-        th = move-exception;
-        j6();
-        throw th;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    super.close();
+                    try {
+                        abcd._H.j6(this.Zo, this.VH, this.gn, this.u7.digest(), this, this.tp, this.EQ);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 6; continue $sw0;
+                    }
+                    j6();
+                    return;
+                }
+                case 6: {
+                    th = $ex0;
+                    j6();
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

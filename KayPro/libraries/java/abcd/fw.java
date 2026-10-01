@@ -90,9 +90,21 @@ public class fw implements abcd.Zv {
 
     @Override
     public void j6(abcd._v r2) {
-        if (this.gn.get() == true) goto L6;
-        this.DW.add(r2);
-        return;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (this.gn.get() == true) { $pc0 = 6; continue $sw0; }
+                    this.DW.add(r2);
+                    return;
+                }
+                case 6: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
@@ -104,27 +116,74 @@ public class fw implements abcd.Zv {
 
     @Override
     public boolean j6(long r9) {
-        this.v5.lock();     // Catch: java.lang.Throwable -> L14 java.lang.InterruptedException -> L16
-        this.DW.add(j6);     // Catch: java.lang.Throwable -> L14 java.lang.InterruptedException -> L16
-        if (r9 <= 0) goto L7;
-        long r4 = java.lang.System.currentTimeMillis();     // Catch: java.lang.Throwable -> L14 java.lang.InterruptedException -> L16
-        abcd.yw.j6("Flush", "Waiting for all events written to disk.");     // Catch: java.lang.Throwable -> L14 java.lang.InterruptedException -> L16
-        if (this.Zo.await(r9, java.util.concurrent.TimeUnit.MILLISECONDS) == false) goto L7;
-        long r10 = r9 - (java.lang.System.currentTimeMillis() - r4);     // Catch: java.lang.Throwable -> L14 java.lang.InterruptedException -> L16
-        if (r10 <= 0) goto L7;
-        abcd.yw.j6("Flush", "Waiting for all files reported.");     // Catch: java.lang.Throwable -> L14 java.lang.InterruptedException -> L16
-        boolean r11 = this.VH.await(r10, java.util.concurrent.TimeUnit.MILLISECONDS);     // Catch: java.lang.Throwable -> L14 java.lang.InterruptedException -> L16
-        this.v5.unlock();
-        return r11;
-    L7:
-        this.v5.unlock();
-        return false;
-    L16:
-        e = move-exception;
-        abcd.yw.j6("Flush", "Unexpected InterruptedException", e);     // Catch: java.lang.Throwable -> L14
-    L14:
-        th = move-exception;
-        this.v5.unlock();
-        throw th;
+        long r4 = 0L;
+        long r10 = 0L;
+        boolean r11 = false;
+        java.lang.Throwable e = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    try {
+                        this.v5.lock();
+                        this.DW.add(j6);
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        if ($t instanceof java.lang.InterruptedException) { $pc1 = 16; continue $sw1; }
+                        $pc1 = 14; continue $sw1;
+                    }
+                    if (r9 <= 0) { $pc1 = 7; continue $sw1; }
+                    try {
+                        r4 = java.lang.System.currentTimeMillis();
+                        abcd.yw.j6("Flush", "Waiting for all events written to disk.");
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        if ($t instanceof java.lang.InterruptedException) { $pc1 = 16; continue $sw1; }
+                        $pc1 = 14; continue $sw1;
+                    }
+                    if (this.Zo.await(r9, java.util.concurrent.TimeUnit.MILLISECONDS) == false) { $pc1 = 7; continue $sw1; }
+                    try {
+                        r10 = r9 - (java.lang.System.currentTimeMillis() - r4);
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        if ($t instanceof java.lang.InterruptedException) { $pc1 = 16; continue $sw1; }
+                        $pc1 = 14; continue $sw1;
+                    }
+                    if (r10 <= 0) { $pc1 = 7; continue $sw1; }
+                    try {
+                        abcd.yw.j6("Flush", "Waiting for all files reported.");
+                        r11 = this.VH.await(r10, java.util.concurrent.TimeUnit.MILLISECONDS);
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        if ($t instanceof java.lang.InterruptedException) { $pc1 = 16; continue $sw1; }
+                        $pc1 = 14; continue $sw1;
+                    }
+                    this.v5.unlock();
+                    return r11;
+                }
+                case 7: {
+                    this.v5.unlock();
+                    return false;
+                }
+                case 16: {
+                    e = $ex1;
+                    try {
+                        abcd.yw.j6("Flush", "Unexpected InterruptedException", e);
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        $pc1 = 14; continue $sw1;
+                    }
+                    $pc1 = 14; continue $sw1;
+                }
+                case 14: {
+                    th = $ex1;
+                    this.v5.unlock();
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

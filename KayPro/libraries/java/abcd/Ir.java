@@ -1,6 +1,6 @@
 package abcd;
 
-public final enum Ir extends java.lang.Enum<abcd.Ir> implements abcd.Interfacelu {
+public final class Ir extends com.almlkaide.kaypro.internal.EnumBase implements abcd.Interfacelu {
     public static final abcd.Ir DW = null;
     public static final abcd.Ir FH = null;
     public static final abcd.Ir Hw = null;
@@ -22,7 +22,7 @@ public final enum Ir extends java.lang.Enum<abcd.Ir> implements abcd.Interfacelu
     }
 
     public static abcd.Ir valueOf(java.lang.String r1) {
-        return (abcd.Ir) java.lang.Enum.valueOf(abcd.Ir.class, r1);
+        return (abcd.Ir) com.almlkaide.kaypro.internal.EnumBase.valueOf(abcd.Ir.values(), r1);
     }
 
     public static abcd.Ir[] values() {

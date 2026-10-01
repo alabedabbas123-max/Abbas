@@ -23,39 +23,98 @@ class O extends com.aide.common.Abstractma {
     @Override
     @abcd.Interfacesu(method = -3012497828281985069L)
     protected android.app.Dialog j6(android.app.Activity r12) {
-    L15:
-        th = move-exception;
-        if (VH == false) goto L19;
-        abcd.wu.j6(th, -513168812878931375L, this, r12);
-    L19:
-        throw th;
-    L4:
-        if (Zo == false) goto L6;
-        abcd.wu.j6(-513168812878931375L, this, r12);     // Catch: java.lang.Throwable -> L15
-    L6:
-        android.app.AlertDialog.Builder r2 = new android.app.AlertDialog.Builder(r12);     // Catch: java.lang.Throwable -> L15
-        android.view.LayoutInflater r3 = android.view.LayoutInflater.from(r12);     // Catch: java.lang.Throwable -> L15
-        this.gn.FH = r3.inflate(com.almlkaide.kaypro.R.layout.shop_learning_popup, null);     // Catch: java.lang.Throwable -> L15
-        r2.setView(this.gn.FH).setOnCancelListener(new com.aide.ui.activities.K(this));     // Catch: java.lang.Throwable -> L15
-        if (com.aide.ui.activities.ShopLearningPopupActivity.j6(this.gn) == false) goto L9;
-        android.view.View r4 = this.gn.FH.findViewById(com.almlkaide.kaypro.R.id.shopLearningFreeButton);     // Catch: java.lang.Throwable -> L15
-        r4.setVisibility(0);     // Catch: java.lang.Throwable -> L15
-        r4.setOnClickListener(new com.aide.ui.activities.L(this));     // Catch: java.lang.Throwable -> L15
-    L9:
-        this.gn.FH.findViewById(com.almlkaide.kaypro.R.id.shopLearningMonthlyButton).setOnClickListener(new com.aide.ui.activities.M(this));     // Catch: java.lang.Throwable -> L15
-        this.gn.FH.findViewById(com.almlkaide.kaypro.R.id.shopLearningYearlyButton).setOnClickListener(new com.aide.ui.activities.N(this));     // Catch: java.lang.Throwable -> L15
-        android.widget.TextView r5 = (android.widget.TextView) this.gn.FH.findViewById(com.almlkaide.kaypro.R.id.shopLearningPopupTitle);     // Catch: java.lang.Throwable -> L15
-        android.widget.ImageView r6 = (android.widget.ImageView) this.gn.FH.findViewById(com.almlkaide.kaypro.R.id.shopLearningSpecialYearly);     // Catch: java.lang.Throwable -> L15
-        if (com.aide.ui.Ha.gn() == false) goto L12;
-        r5.setText(this.gn.getString(com.almlkaide.kaypro.R.string.shop_learning_title_promo_upgrade, new java.lang.Object[]{"20%"}));     // Catch: java.lang.Throwable -> L15
-        r6.setVisibility(0);     // Catch: java.lang.Throwable -> L15
-    L13:
-        this.gn.Hw = r2.create();     // Catch: java.lang.Throwable -> L15
-        this.gn.Hw.setCancelable(true);     // Catch: java.lang.Throwable -> L15
-        this.gn.Hw.setCanceledOnTouchOutside(false);     // Catch: java.lang.Throwable -> L15
-        return this.gn.Hw;
-    L12:
-        r5.setText(this.gn.getString(com.almlkaide.kaypro.R.string.shop_learning_title));     // Catch: java.lang.Throwable -> L15
-        goto L13
+        android.app.AlertDialog.Builder r2 = null;
+        android.view.LayoutInflater r3 = null;
+        android.view.View r4 = null;
+        android.widget.TextView r5 = null;
+        android.widget.ImageView r6 = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 4;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 15: {
+                    th = $ex0;
+                    if (VH == false) { $pc0 = 19; continue $sw0; }
+                    abcd.wu.j6(th, -513168812878931375L, this, r12);
+                    $pc0 = 19; continue $sw0;
+                }
+                case 19: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (Zo == false) { $pc0 = 6; continue $sw0; }
+                    try {
+                        abcd.wu.j6(-513168812878931375L, this, r12);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 15; continue $sw0;
+                    }
+                    $pc0 = 6; continue $sw0;
+                }
+                case 6: {
+                    try {
+                        r2 = new android.app.AlertDialog.Builder(r12);
+                        r3 = android.view.LayoutInflater.from(r12);
+                        this.gn.FH = r3.inflate(com.almlkaide.kaypro.R.layout.shop_learning_popup, null);
+                        r2.setView(this.gn.FH).setOnCancelListener(new com.aide.ui.activities.K(this));
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 15; continue $sw0;
+                    }
+                    if (com.aide.ui.activities.ShopLearningPopupActivity.j6(this.gn) == false) { $pc0 = 9; continue $sw0; }
+                    try {
+                        r4 = this.gn.FH.findViewById(com.almlkaide.kaypro.R.id.shopLearningFreeButton);
+                        r4.setVisibility(0);
+                        r4.setOnClickListener(new com.aide.ui.activities.L(this));
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 15; continue $sw0;
+                    }
+                    $pc0 = 9; continue $sw0;
+                }
+                case 9: {
+                    try {
+                        this.gn.FH.findViewById(com.almlkaide.kaypro.R.id.shopLearningMonthlyButton).setOnClickListener(new com.aide.ui.activities.M(this));
+                        this.gn.FH.findViewById(com.almlkaide.kaypro.R.id.shopLearningYearlyButton).setOnClickListener(new com.aide.ui.activities.N(this));
+                        r5 = (android.widget.TextView) this.gn.FH.findViewById(com.almlkaide.kaypro.R.id.shopLearningPopupTitle);
+                        r6 = (android.widget.ImageView) this.gn.FH.findViewById(com.almlkaide.kaypro.R.id.shopLearningSpecialYearly);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 15; continue $sw0;
+                    }
+                    if (com.aide.ui.Ha.gn() == false) { $pc0 = 12; continue $sw0; }
+                    try {
+                        r5.setText(this.gn.getString(com.almlkaide.kaypro.R.string.shop_learning_title_promo_upgrade, new java.lang.Object[]{"20%"}));
+                        r6.setVisibility(0);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 15; continue $sw0;
+                    }
+                    $pc0 = 13; continue $sw0;
+                }
+                case 13: {
+                    try {
+                        this.gn.Hw = r2.create();
+                        this.gn.Hw.setCancelable(true);
+                        this.gn.Hw.setCanceledOnTouchOutside(false);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 15; continue $sw0;
+                    }
+                    return this.gn.Hw;
+                }
+                case 12: {
+                    try {
+                        r5.setText(this.gn.getString(com.almlkaide.kaypro.R.string.shop_learning_title));
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 15; continue $sw0;
+                    }
+                    { $pc0 = 13; continue $sw0; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

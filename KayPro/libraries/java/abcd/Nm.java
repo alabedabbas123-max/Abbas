@@ -6,17 +6,30 @@ public final class Nm extends abcd.hu {
     private int Hw;
 
     public Nm(int r3) {
-        if (r3 == 0) goto L5;
-        boolean r1 = true;
-    L6:
-        super(r1);
-        this.DW = new abcd.Rs[r3];
-        this.FH = new boolean[r3];
-        this.Hw = 0;
-        return;
-    L5:
-        r1 = false;
-        goto L6
+        boolean r1 = false;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (r3 == 0) { $pc0 = 5; continue $sw0; }
+                    r1 = true;
+                    $pc0 = 6; continue $sw0;
+                }
+                case 6: {
+                    super(r1);
+                    this.DW = new abcd.Rs[r3];
+                    this.FH = new boolean[r3];
+                    this.Hw = 0;
+                    return;
+                }
+                case 5: {
+                    r1 = false;
+                    { $pc0 = 6; continue $sw0; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     private static abcd.Rs DW(java.lang.String r3) {
@@ -24,50 +37,104 @@ public final class Nm extends abcd.hu {
     }
 
     private static java.lang.String DW(abcd.Rs r0) {
-        if (r0 != null) goto L6;
-        return "<invalid>";
-    L6:
-        return r0.toString();
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if (r0 != null) { $pc1 = 6; continue $sw1; }
+                    return "<invalid>";
+                }
+                case 6: {
+                    return r0.toString();
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public abcd.Rs DW(int r3) {
-        if (r3 < 0) goto L10;
-        int r0 = this.Hw;
-        if (r3 < r0) goto L6;
-        DW("underflow");
-        throw null;
-    L6:
-        return this.DW[(r0 - r3) - 1];
-    L10:
-        throw new java.lang.IllegalArgumentException("n < 0");
+        int r0 = 0;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    if (r3 < 0) { $pc2 = 10; continue $sw2; }
+                    r0 = this.Hw;
+                    if (r3 < r0) { $pc2 = 6; continue $sw2; }
+                    DW("underflow");
+                    throw null;
+                }
+                case 6: {
+                    return this.DW[(r0 - r3) - 1];
+                }
+                case 10: {
+                    throw new java.lang.IllegalArgumentException("n < 0");
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public void DW(abcd.Qs r5) {
-        if (this.Hw != 0) goto L5;
-        return;
-    L5:
-        J8();
-        abcd.Qs r0 = r5.Ws();
+        abcd.Qs r0 = null;
         int r1 = 0;
-    L7:
-        if (r1 >= this.Hw) goto L12;
-        abcd.Rs[] r2 = this.DW;
-        if (r2[r1] != r5) goto L11;
-        r2[r1] = r0;
-    L11:
-        r1 = r1 + 1;
-        goto L7
+        abcd.Rs[] r2 = null;
+        java.lang.Throwable $ex3 = null;
+        int $pc3 = -1;
+        $sw3: while (true) {
+            switch ($pc3) {
+                case -1: {
+                    if (this.Hw != 0) { $pc3 = 5; continue $sw3; }
+                    return;
+                }
+                case 5: {
+                    J8();
+                    r0 = r5.Ws();
+                    r1 = 0;
+                    $pc3 = 7; continue $sw3;
+                }
+                case 7: {
+                    if (r1 >= this.Hw) { $pc3 = 12; continue $sw3; }
+                    r2 = this.DW;
+                    if (r2[r1] != r5) { $pc3 = 11; continue $sw3; }
+                    r2[r1] = r0;
+                    $pc3 = 11; continue $sw3;
+                }
+                case 11: {
+                    r1 = r1 + 1;
+                    { $pc3 = 7; continue $sw3; }
+                }
+                case 12: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public boolean FH(int r3) {
-        if (r3 < 0) goto L10;
-        int r0 = this.Hw;
-        if (r3 >= r0) goto L8;
-        return this.FH[(r0 - r3) - 1];
-    L8:
-        throw new abcd.an("stack: underflow");
-    L10:
-        throw new java.lang.IllegalArgumentException("n < 0");
+        int r0 = 0;
+        java.lang.Throwable $ex4 = null;
+        int $pc4 = -1;
+        $sw4: while (true) {
+            switch ($pc4) {
+                case -1: {
+                    if (r3 < 0) { $pc4 = 10; continue $sw4; }
+                    r0 = this.Hw;
+                    if (r3 >= r0) { $pc4 = 8; continue $sw4; }
+                    return this.FH[(r0 - r3) - 1];
+                }
+                case 8: {
+                    throw new abcd.an("stack: underflow");
+                }
+                case 10: {
+                    throw new java.lang.IllegalArgumentException("n < 0");
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public abcd.Qs Hw(int r1) {
@@ -86,84 +153,183 @@ public final class Nm extends abcd.hu {
     }
 
     public abcd.Nm j6(abcd.Nm r3) {
-        return abcd.Um.j6(this, r3);
-    L4:
-        e = move-exception;
-        e.j6("underlay stack:");
-        j6(e);
-        e.j6("overlay stack:");
-        r3.j6(e);
-        throw e;
+        java.lang.Throwable e = null;
+        java.lang.Throwable $ex5 = null;
+        int $pc5 = -1;
+        $sw5: while (true) {
+            switch ($pc5) {
+                case -1: {
+                    return abcd.Um.j6(this, r3);
+                }
+                case 4: {
+                    e = $ex5;
+                    e.j6("underlay stack:");
+                    j6(e);
+                    e.j6("overlay stack:");
+                    r3.j6(e);
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(e);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public void j6(int r4, abcd.Rs r5) {
-        J8();
-        abcd.Rs r6 = r5.U2();     // Catch: java.lang.NullPointerException -> L12
-        int r0 = (this.Hw - r4) - 1;
-        abcd.Rs r7 = this.DW[r0];
-        if (r7 != null) goto L7;
-    L10:
-        DW("incompatible substitution: " + DW(r7) + " -> " + DW(r6));
-        throw null;
-    L7:
-        if (r7.getType().Zo() != r6.getType().Zo()) goto L10;
-        this.DW[r0] = r6;
-        return;
-    L13:
-        throw new java.lang.NullPointerException("type == null");
+        abcd.Rs r6 = null;
+        int r0 = 0;
+        abcd.Rs r7 = null;
+        java.lang.Throwable $ex6 = null;
+        int $pc6 = -1;
+        $sw6: while (true) {
+            switch ($pc6) {
+                case -1: {
+                    J8();
+                    try {
+                        r6 = r5.U2();
+                    } catch (java.lang.Throwable $t) {
+                        $ex6 = $t;
+                        if ($t instanceof java.lang.NullPointerException) { $pc6 = 12; continue $sw6; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    r0 = (this.Hw - r4) - 1;
+                    r7 = this.DW[r0];
+                    if (r7 != null) { $pc6 = 7; continue $sw6; }
+                    $pc6 = 10; continue $sw6;
+                }
+                case 10: {
+                    DW("incompatible substitution: " + DW(r7) + " -> " + DW(r6));
+                    throw null;
+                }
+                case 7: {
+                    if (r7.getType().Zo() != r6.getType().Zo()) { $pc6 = 10; continue $sw6; }
+                    this.DW[r0] = r6;
+                    return;
+                }
+                case 13: {
+                    throw new java.lang.NullPointerException("type == null");
+                }
+                case 12: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public void j6(abcd.Rs r7) {
-        J8();
-        abcd.Rs r8 = r7.U2();     // Catch: java.lang.NullPointerException -> L13
-        int r0 = r8.getType().Zo();     // Catch: java.lang.NullPointerException -> L13
-        int r1 = this.Hw;
-        int r2 = r1 + r0;
-        abcd.Rs[] r3 = this.DW;
-        if (r2 <= r3.length) goto L7;
-        DW("overflow");
-        throw null;
-    L7:
-        if (r0 != 2) goto L9;
-        r3[r1] = null;
-        this.Hw = r1 + 1;
-    L9:
-        abcd.Rs[] r4 = this.DW;
-        int r5 = this.Hw;
-        r4[r5] = r8;
-        this.Hw = r5 + 1;
-        return;
-    L14:
-        throw new java.lang.NullPointerException("type == null");
+        abcd.Rs r8 = null;
+        int r0 = 0;
+        int r1 = 0;
+        int r2 = 0;
+        abcd.Rs[] r3 = null;
+        abcd.Rs[] r4 = null;
+        int r5 = 0;
+        java.lang.Throwable $ex7 = null;
+        int $pc7 = -1;
+        $sw7: while (true) {
+            switch ($pc7) {
+                case -1: {
+                    J8();
+                    try {
+                        r8 = r7.U2();
+                        r0 = r8.getType().Zo();
+                    } catch (java.lang.Throwable $t) {
+                        $ex7 = $t;
+                        if ($t instanceof java.lang.NullPointerException) { $pc7 = 13; continue $sw7; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    r1 = this.Hw;
+                    r2 = r1 + r0;
+                    r3 = this.DW;
+                    if (r2 <= r3.length) { $pc7 = 7; continue $sw7; }
+                    DW("overflow");
+                    throw null;
+                }
+                case 7: {
+                    if (r0 != 2) { $pc7 = 9; continue $sw7; }
+                    r3[r1] = null;
+                    this.Hw = r1 + 1;
+                    $pc7 = 9; continue $sw7;
+                }
+                case 9: {
+                    r4 = this.DW;
+                    r5 = this.Hw;
+                    r4[r5] = r8;
+                    this.Hw = r5 + 1;
+                    return;
+                }
+                case 14: {
+                    throw new java.lang.NullPointerException("type == null");
+                }
+                case 13: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public void j6(abcd.Vt r6) {
-        int r0 = this.Hw - 1;
+        int r0 = 0;
         int r1 = 0;
-    L3:
-        if (r1 > r0) goto L8;
-        if (r1 != r0) goto L6;
-        java.lang.String r2 = "top0";
-    L7:
-        r6.j6("stack[" + r2 + "]: " + DW(this.DW[r1]));
-        r1 = r1 + 1;
-        goto L3
-    L6:
-        r2 = abcd.Yt.v5(r0 - r1);
-        goto L7
+        java.lang.String r2 = null;
+        java.lang.Throwable $ex8 = null;
+        int $pc8 = -1;
+        $sw8: while (true) {
+            switch ($pc8) {
+                case -1: {
+                    r0 = this.Hw - 1;
+                    r1 = 0;
+                    $pc8 = 3; continue $sw8;
+                }
+                case 3: {
+                    if (r1 > r0) { $pc8 = 8; continue $sw8; }
+                    if (r1 != r0) { $pc8 = 6; continue $sw8; }
+                    r2 = "top0";
+                    $pc8 = 7; continue $sw8;
+                }
+                case 7: {
+                    r6.j6("stack[" + r2 + "]: " + DW(this.DW[r1]));
+                    r1 = r1 + 1;
+                    { $pc8 = 3; continue $sw8; }
+                }
+                case 6: {
+                    r2 = abcd.Yt.v5(r0 - r1);
+                    { $pc8 = 7; continue $sw8; }
+                }
+                case 8: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public void lg() {
-        J8();
         int r1 = 0;
-    L4:
-        if (r1 >= this.Hw) goto L6;
-        this.DW[r1] = null;
-        this.FH[r1] = false;
-        r1 = r1 + 1;
-        goto L4
-    L6:
-        this.Hw = 0;
+        java.lang.Throwable $ex9 = null;
+        int $pc9 = -1;
+        $sw9: while (true) {
+            switch ($pc9) {
+                case -1: {
+                    J8();
+                    r1 = 0;
+                    $pc9 = 4; continue $sw9;
+                }
+                case 4: {
+                    if (r1 >= this.Hw) { $pc9 = 6; continue $sw9; }
+                    this.DW[r1] = null;
+                    this.FH[r1] = false;
+                    r1 = r1 + 1;
+                    { $pc9 = 4; continue $sw9; }
+                }
+                case 6: {
+                    this.Hw = 0;
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public abcd.Nm rN() {

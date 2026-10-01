@@ -20,21 +20,47 @@ class Sa implements java.lang.Runnable {
 
     @abcd.Interfacesu(method = -4158398700277072211L)
     private java.lang.String DW() {
-    L11:
-        th = move-exception;
-        if (DW == false) goto L15;
-        abcd.wu.j6(th, -1612750355503795260L, this);
-    L15:
-        throw th;
-    L4:
-        if (j6 == false) goto L16;
-        abcd.wu.j6(-1612750355503795260L, this);     // Catch: java.lang.Throwable -> L11
-    L16:
-        return this.FH.getPackageManager().getPackageInfo(this.FH.getPackageName(), 0).versionName;
-    L8:
-        e = move-exception;
-        com.aide.common.ClassH.DW(e);     // Catch: java.lang.Throwable -> L11
-        return "(version unknown)";
+        java.lang.Throwable e = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 11;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 11: {
+                    th = $ex0;
+                    if (DW == false) { $pc0 = 15; continue $sw0; }
+                    abcd.wu.j6(th, -1612750355503795260L, this);
+                    $pc0 = 15; continue $sw0;
+                }
+                case 15: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (j6 == false) { $pc0 = 16; continue $sw0; }
+                    try {
+                        abcd.wu.j6(-1612750355503795260L, this);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 11; continue $sw0;
+                    }
+                    $pc0 = 16; continue $sw0;
+                }
+                case 16: {
+                    return this.FH.getPackageManager().getPackageInfo(this.FH.getPackageName(), 0).versionName;
+                }
+                case 8: {
+                    e = $ex0;
+                    try {
+                        com.aide.common.ClassH.DW(e);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 11; continue $sw0;
+                    }
+                    return "(version unknown)";
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -42,40 +68,102 @@ class Sa implements java.lang.Runnable {
     /* JADX WARN: Type inference failed for: r0v3, types: [java.lang.String] */
     @abcd.Interfacesu(method = 3825986702556139180L)
     private java.lang.String j6() {
-        long r0 = 3509514631334873775(0x30b44cf686c04aaf, double:4.488184838765648E-74);
-    L14:
-        th = move-exception;
-        if (DW == false) goto L18;
-        abcd.wu.j6(th, r0, this);
-    L18:
-        throw th;
-    L4:
-        if (j6 == false) goto L6;
-        abcd.wu.j6(3509514631334873775L, this);     // Catch: java.lang.Throwable -> L14
-    L6:
-        java.lang.String r2 = android.os.Build.MODEL;     // Catch: java.lang.Throwable -> L14
-        if (r2 != null) goto L9;
-    L12:
-        return "";
-    L9:
-        if (r2.length() > 40) goto L12;
-        r0 = "on my " + r2;     // Catch: java.lang.Throwable -> L14
-        return r0;
+        long r0 = 0L;
+        java.lang.String r2 = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    r0 = 3509514631334873775;
+                    $pc1 = 14; continue $sw1;
+                }
+                case 14: {
+                    th = $ex1;
+                    if (DW == false) { $pc1 = 18; continue $sw1; }
+                    abcd.wu.j6(th, r0, this);
+                    $pc1 = 18; continue $sw1;
+                }
+                case 18: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (j6 == false) { $pc1 = 6; continue $sw1; }
+                    try {
+                        abcd.wu.j6(3509514631334873775L, this);
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        $pc1 = 14; continue $sw1;
+                    }
+                    $pc1 = 6; continue $sw1;
+                }
+                case 6: {
+                    try {
+                        r2 = android.os.Build.MODEL;
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        $pc1 = 14; continue $sw1;
+                    }
+                    if (r2 != null) { $pc1 = 9; continue $sw1; }
+                    $pc1 = 12; continue $sw1;
+                }
+                case 12: {
+                    return "";
+                }
+                case 9: {
+                    if (r2.length() > 40) { $pc1 = 12; continue $sw1; }
+                    try {
+                        r0 = "on my " + r2;
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        $pc1 = 14; continue $sw1;
+                    }
+                    return r0;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
     @abcd.Interfacesu(method = -1794388573208594625L)
     public void run() {
-    L8:
-        th = move-exception;
-        if (DW == false) goto L12;
-        abcd.wu.j6(th, -3970204642281089625L, this);
-    L12:
-        throw th;
-    L4:
-        if (j6 == false) goto L6;
-        abcd.wu.j6(-3970204642281089625L, this);     // Catch: java.lang.Throwable -> L8
-    L6:
-        com.aide.common.Ha.j6(this.FH, "support@appfour.com", "AIDE Feedback", "With AIDE " + DW() + " " + j6() + " (SDK " + android.os.Build.VERSION.SDK_INT + ")...\n\n[Write text here]");     // Catch: java.lang.Throwable -> L8
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = 4;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case 8: {
+                    th = $ex2;
+                    if (DW == false) { $pc2 = 12; continue $sw2; }
+                    abcd.wu.j6(th, -3970204642281089625L, this);
+                    $pc2 = 12; continue $sw2;
+                }
+                case 12: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (j6 == false) { $pc2 = 6; continue $sw2; }
+                    try {
+                        abcd.wu.j6(-3970204642281089625L, this);
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        $pc2 = 8; continue $sw2;
+                    }
+                    $pc2 = 6; continue $sw2;
+                }
+                case 6: {
+                    try {
+                        com.aide.common.Ha.j6(this.FH, "support@appfour.com", "AIDE Feedback", "With AIDE " + DW() + " " + j6() + " (SDK " + android.os.Build.VERSION.SDK_INT + ")...\n\n[Write text here]");
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        $pc2 = 8; continue $sw2;
+                    }
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

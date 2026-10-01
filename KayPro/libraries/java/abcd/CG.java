@@ -30,15 +30,27 @@ abstract class CG {
     abstract void j6(abcd.OH r1, long r2, int r4, java.security.MessageDigest r5);
 
     final boolean j6(abcd.aH r3, long r4) {
-        if (this.j6 == r3) goto L5;
-        return false;
-    L5:
-        if (this.DW <= r4) goto L7;
-        return false;
-    L7:
-        if (r4 >= this.FH) goto L13;
-        return true;
-    L13:
-        return false;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (this.j6 == r3) { $pc0 = 5; continue $sw0; }
+                    return false;
+                }
+                case 5: {
+                    if (this.DW <= r4) { $pc0 = 7; continue $sw0; }
+                    return false;
+                }
+                case 7: {
+                    if (r4 >= this.FH) { $pc0 = 13; continue $sw0; }
+                    return true;
+                }
+                case 13: {
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

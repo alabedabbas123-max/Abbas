@@ -45,15 +45,30 @@ public abstract class Xy<Params, Progress, Result> {
          */
         @Override
         public void handleMessage(android.os.Message r3) {
-            abcd.Xy.a r0 = (abcd.Xy.a) r3.obj;
-            int r4 = r3.what;
-            if (r4 != 1) goto L5;
-            abcd.Xy.FH(r0.j6, r0.DW[0]);
-            return;
-        L5:
-            if (r4 != 2) goto L11;
-            r0.j6.DW(r0.DW);
-            return;
+            abcd.Xy.a r0 = null;
+            int r4 = 0;
+            java.lang.Throwable $ex0 = null;
+            int $pc0 = -1;
+            $sw0: while (true) {
+                switch ($pc0) {
+                    case -1: {
+                        r0 = (abcd.Xy.a) r3.obj;
+                        r4 = r3.what;
+                        if (r4 != 1) { $pc0 = 5; continue $sw0; }
+                        abcd.Xy.FH(r0.j6, r0.DW[0]);
+                        return;
+                    }
+                    case 5: {
+                        if (r4 != 2) { $pc0 = 11; continue $sw0; }
+                        r0.j6.DW(r0.DW);
+                        return;
+                    }
+                    case 11: {
+                        throw new java.lang.IllegalStateException();
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
     }
 
@@ -71,34 +86,81 @@ public abstract class Xy<Params, Progress, Result> {
 
         @Override
         public synchronized void execute(java.lang.Runnable r3) {
-            monitor-enter(this);
-            this.j6.offer(new abcd.Yy(this, r3));     // Catch: java.lang.Throwable -> L8
-            if (this.DW != null) goto L6;
-            j6();     // Catch: java.lang.Throwable -> L8
-        L6:
-            monitor-exit(this);
-            return;
-        L8:
-            th = move-exception;
-            throw th;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex1 = null;
+            int $pc1 = -1;
+            $sw1: while (true) {
+                switch ($pc1) {
+                    case -1: {
+                        monitor-enter(this);
+                        try {
+                            this.j6.offer(new abcd.Yy(this, r3));
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            $pc1 = 8; continue $sw1;
+                        }
+                        if (this.DW != null) { $pc1 = 6; continue $sw1; }
+                        try {
+                            j6();
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            $pc1 = 8; continue $sw1;
+                        }
+                        $pc1 = 6; continue $sw1;
+                    }
+                    case 6: {
+                        monitor-exit(this);
+                        return;
+                    }
+                    case 8: {
+                        th = $ex1;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         protected synchronized void j6() {
-            monitor-enter(this);
-            java.lang.Runnable r0 = this.j6.poll();     // Catch: java.lang.Throwable -> L8
-            this.DW = r0;     // Catch: java.lang.Throwable -> L8
-            if (r0 == null) goto L6;
-            abcd.Xy.Zo.execute(this.DW);     // Catch: java.lang.Throwable -> L8
-        L6:
-            monitor-exit(this);
-            return;
-        L8:
-            th = move-exception;
-            throw th;
+            java.lang.Runnable r0 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex2 = null;
+            int $pc2 = -1;
+            $sw2: while (true) {
+                switch ($pc2) {
+                    case -1: {
+                        monitor-enter(this);
+                        try {
+                            r0 = this.j6.poll();
+                            this.DW = r0;
+                        } catch (java.lang.Throwable $t) {
+                            $ex2 = $t;
+                            $pc2 = 8; continue $sw2;
+                        }
+                        if (r0 == null) { $pc2 = 6; continue $sw2; }
+                        try {
+                            abcd.Xy.Zo.execute(this.DW);
+                        } catch (java.lang.Throwable $t) {
+                            $ex2 = $t;
+                            $pc2 = 8; continue $sw2;
+                        }
+                        $pc2 = 6; continue $sw2;
+                    }
+                    case 6: {
+                        monitor-exit(this);
+                        return;
+                    }
+                    case 8: {
+                        th = $ex2;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
     }
 
-    public static final enum d extends java.lang.Enum<abcd.Xy.d> {
+    public static final class d extends com.almlkaide.kaypro.internal.EnumBase {
         public static final abcd.Xy.d DW = null;
         public static final abcd.Xy.d FH = null;
         private static final abcd.Xy.d[] Hw = null;
@@ -116,7 +178,7 @@ public abstract class Xy<Params, Progress, Result> {
         }
 
         public static abcd.Xy.d valueOf(java.lang.String r1) {
-            return (abcd.Xy.d) java.lang.Enum.valueOf(abcd.Xy.d.class, r1);
+            return (abcd.Xy.d) com.almlkaide.kaypro.internal.EnumBase.valueOf(abcd.Xy.d.values(), r1);
         }
 
         public static abcd.Xy.d[] values() {
@@ -165,20 +227,44 @@ public abstract class Xy<Params, Progress, Result> {
     }
 
     private void Hw(Result r2) {
-        if (Zo() == false) goto L5;
-        DW(r2);
-    L6:
-        this.we = abcd.Xy.d.FH;
-        return;
-    L5:
-        FH(r2);
-        goto L6
+        java.lang.Throwable $ex3 = null;
+        int $pc3 = -1;
+        $sw3: while (true) {
+            switch ($pc3) {
+                case -1: {
+                    if (Zo() == false) { $pc3 = 5; continue $sw3; }
+                    DW(r2);
+                    $pc3 = 6; continue $sw3;
+                }
+                case 6: {
+                    this.we = abcd.Xy.d.FH;
+                    return;
+                }
+                case 5: {
+                    FH(r2);
+                    { $pc3 = 6; continue $sw3; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     private void Zo(Result r2) {
-        if (this.J8.get() == true) goto L6;
-        v5(r2);
-        return;
+        java.lang.Throwable $ex4 = null;
+        int $pc4 = -1;
+        $sw4: while (true) {
+            switch ($pc4) {
+                case -1: {
+                    if (this.J8.get() == true) { $pc4 = 6; continue $sw4; }
+                    v5(r2);
+                    return;
+                }
+                case 6: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     static java.lang.Object j6(abcd.Xy r0, java.lang.Object r1) {
@@ -219,19 +305,31 @@ public abstract class Xy<Params, Progress, Result> {
     }
 
     public final Xy<Params, Progress, Result> j6(java.util.concurrent.Executor r3, Params... r4) {
-        if (this.we == abcd.Xy.d.j6) goto L13;
-        int r0 = abcd.Wy.j6[this.we.ordinal()];
-        if (r0 == 1) goto L12;
-        if (r0 != 2) goto L13;
-        throw new java.lang.IllegalStateException("Cannot execute task: the task has already been executed (a task can be executed only once)");
-    L12:
-        throw new java.lang.IllegalStateException("Cannot execute task: the task is already running.");
-    L13:
-        this.we = abcd.Xy.d.DW;
-        VH();
-        this.tp.j6 = r4;
-        r3.execute(this.EQ);
-        return this;
+        int r0 = 0;
+        java.lang.Throwable $ex5 = null;
+        int $pc5 = -1;
+        $sw5: while (true) {
+            switch ($pc5) {
+                case -1: {
+                    if (this.we == abcd.Xy.d.j6) { $pc5 = 13; continue $sw5; }
+                    r0 = abcd.Wy.j6[this.we.ordinal()];
+                    if (r0 == 1) { $pc5 = 12; continue $sw5; }
+                    if (r0 != 2) { $pc5 = 13; continue $sw5; }
+                    throw new java.lang.IllegalStateException("Cannot execute task: the task has already been executed (a task can be executed only once)");
+                }
+                case 12: {
+                    throw new java.lang.IllegalStateException("Cannot execute task: the task is already running.");
+                }
+                case 13: {
+                    this.we = abcd.Xy.d.DW;
+                    VH();
+                    this.tp.j6 = r4;
+                    r3.execute(this.EQ);
+                    return this;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     protected abstract Result j6(Params... r1);

@@ -10,15 +10,30 @@ public final class go {
     }
 
     private void DW() {
-        int r0 = this.DW.size();
+        int r0 = 0;
         int r1 = 0;
-    L3:
-        if (r1 >= r0) goto L5;
-        this.j6.j6(this.DW.get(r1));
-        r1 = r1 + 1;
-        goto L3
-    L5:
-        this.DW = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = this.DW.size();
+                    r1 = 0;
+                    $pc0 = 3; continue $sw0;
+                }
+                case 3: {
+                    if (r1 >= r0) { $pc0 = 5; continue $sw0; }
+                    this.j6.j6(this.DW.get(r1));
+                    r1 = r1 + 1;
+                    { $pc0 = 3; continue $sw0; }
+                }
+                case 5: {
+                    this.DW = null;
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public void DW(abcd.AbstractVn r2) {
@@ -26,11 +41,21 @@ public final class go {
     }
 
     public abcd.ho j6() {
-        if (this.DW == null) goto L7;
-        DW();
-        return this.j6;
-    L7:
-        throw new java.lang.UnsupportedOperationException("already processed");
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if (this.DW == null) { $pc1 = 7; continue $sw1; }
+                    DW();
+                    return this.j6;
+                }
+                case 7: {
+                    throw new java.lang.UnsupportedOperationException("already processed");
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public void j6(int r2, abcd.Sn r3) {

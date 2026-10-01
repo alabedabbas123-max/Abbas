@@ -33,24 +33,62 @@ class S extends com.aide.common.Abstractma {
     @Override
     @abcd.Interfacesu(method = 2456860913533244495L)
     public android.app.Dialog j6(android.app.Activity r8) {
-    L11:
-        th = move-exception;
-        if (VH == false) goto L15;
-        abcd.wu.j6(th, -2248646446936728765L, this, r8);
-    L15:
-        throw th;
-    L4:
-        if (Zo == false) goto L6;
-        abcd.wu.j6(-2248646446936728765L, this, r8);     // Catch: java.lang.Throwable -> L11
-    L6:
-        android.app.AlertDialog.Builder r2 = new android.app.AlertDialog.Builder(r8);     // Catch: java.lang.Throwable -> L11
-        r2.setMessage(this.gn).setCancelable(true).setPositiveButton(this.u7, new com.aide.common.P(this)).setNegativeButton(this.EQ, new com.aide.common.O(this));     // Catch: java.lang.Throwable -> L11
-        r2.setOnCancelListener(new com.aide.common.Q(this));     // Catch: java.lang.Throwable -> L11
-        if (this.J8 == null) goto L9;
-        r2.setTitle(this.J8);     // Catch: java.lang.Throwable -> L11
-    L9:
-        android.app.AlertDialog r3 = r2.create();     // Catch: java.lang.Throwable -> L11
-        r3.setCanceledOnTouchOutside(true);     // Catch: java.lang.Throwable -> L11
-        return r3;
+        android.app.AlertDialog.Builder r2 = null;
+        android.app.AlertDialog r3 = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 4;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 11: {
+                    th = $ex0;
+                    if (VH == false) { $pc0 = 15; continue $sw0; }
+                    abcd.wu.j6(th, -2248646446936728765L, this, r8);
+                    $pc0 = 15; continue $sw0;
+                }
+                case 15: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (Zo == false) { $pc0 = 6; continue $sw0; }
+                    try {
+                        abcd.wu.j6(-2248646446936728765L, this, r8);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 11; continue $sw0;
+                    }
+                    $pc0 = 6; continue $sw0;
+                }
+                case 6: {
+                    try {
+                        r2 = new android.app.AlertDialog.Builder(r8);
+                        r2.setMessage(this.gn).setCancelable(true).setPositiveButton(this.u7, new com.aide.common.P(this)).setNegativeButton(this.EQ, new com.aide.common.O(this));
+                        r2.setOnCancelListener(new com.aide.common.Q(this));
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 11; continue $sw0;
+                    }
+                    if (this.J8 == null) { $pc0 = 9; continue $sw0; }
+                    try {
+                        r2.setTitle(this.J8);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 11; continue $sw0;
+                    }
+                    $pc0 = 9; continue $sw0;
+                }
+                case 9: {
+                    try {
+                        r3 = r2.create();
+                        r3.setCanceledOnTouchOutside(true);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 11; continue $sw0;
+                    }
+                    return r3;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

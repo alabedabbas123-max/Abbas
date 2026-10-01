@@ -21,16 +21,28 @@ public abstract class m implements a.b.o {
     }
 
     public boolean equals(java.lang.Object r4) {
-        if (r4 != null) goto L5;
-        return false;
-    L5:
-        if (getClass() == r4.getClass()) goto L8;
-        return false;
-    L8:
-        if (this.e != ((a.b.a.c.m) r4).e) goto L11;
-        return true;
-    L11:
-        return false;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (r4 != null) { $pc0 = 5; continue $sw0; }
+                    return false;
+                }
+                case 5: {
+                    if (getClass() == r4.getClass()) { $pc0 = 8; continue $sw0; }
+                    return false;
+                }
+                case 8: {
+                    if (this.e != ((a.b.a.c.m) r4).e) { $pc0 = 11; continue $sw0; }
+                    return true;
+                }
+                case 11: {
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

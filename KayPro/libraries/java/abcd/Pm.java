@@ -8,15 +8,26 @@ public final class Pm extends abcd.Xt {
         private final int j6;
 
         public a(int r1, int r2) {
-            if (r1 < 0) goto L10;
-            if (r2 < 0) goto L8;
-            this.j6 = r1;
-            this.DW = r2;
-            return;
-        L8:
-            throw new java.lang.IllegalArgumentException("lineNumber < 0");
-        L10:
-            throw new java.lang.IllegalArgumentException("startPc < 0");
+            java.lang.Throwable $ex0 = null;
+            int $pc0 = -1;
+            $sw0: while (true) {
+                switch ($pc0) {
+                    case -1: {
+                        if (r1 < 0) { $pc0 = 10; continue $sw0; }
+                        if (r2 < 0) { $pc0 = 8; continue $sw0; }
+                        this.j6 = r1;
+                        this.DW = r2;
+                        return;
+                    }
+                    case 8: {
+                        throw new java.lang.IllegalArgumentException("lineNumber < 0");
+                    }
+                    case 10: {
+                        throw new java.lang.IllegalArgumentException("startPc < 0");
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         public int DW() {
@@ -37,45 +48,86 @@ public final class Pm extends abcd.Xt {
     }
 
     public static abcd.Pm j6(abcd.Pm r6, abcd.Pm r7) {
-        if (r6 != FH) goto L5;
-        return r7;
-    L5:
-        int r0 = r6.size();
-        int r1 = r7.size();
-        abcd.Pm r2 = new abcd.Pm(r0 + r1);
+        int r0 = 0;
+        int r1 = 0;
+        abcd.Pm r2 = null;
         int r3 = 0;
         int r4 = 0;
-    L6:
-        if (r4 >= r0) goto L8;
-        r2.j6(r4, r6.get(r4));
-        r4 = r4 + 1;
-    L8:
-        if (r3 >= r1) goto L10;
-        r2.j6(r0 + r3, r7.get(r3));
-        r3 = r3 + 1;
-        goto L8
-    L10:
-        return r2;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if (r6 != FH) { $pc1 = 5; continue $sw1; }
+                    return r7;
+                }
+                case 5: {
+                    r0 = r6.size();
+                    r1 = r7.size();
+                    r2 = new abcd.Pm(r0 + r1);
+                    r3 = 0;
+                    r4 = 0;
+                    $pc1 = 6; continue $sw1;
+                }
+                case 6: {
+                    if (r4 >= r0) { $pc1 = 8; continue $sw1; }
+                    r2.j6(r4, r6.get(r4));
+                    r4 = r4 + 1;
+                    $pc1 = 8; continue $sw1;
+                }
+                case 8: {
+                    if (r3 >= r1) { $pc1 = 10; continue $sw1; }
+                    r2.j6(r0 + r3, r7.get(r3));
+                    r3 = r3 + 1;
+                    { $pc1 = 8; continue $sw1; }
+                }
+                case 10: {
+                    return r2;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public int Hw(int r7) {
-        int r0 = size();
-        int r1 = -1;
+        int r0 = 0;
+        int r1 = 0;
         int r2 = 0;
-        int r3 = -1;
-    L3:
-        if (r2 >= r0) goto L12;
-        abcd.Pm.a r4 = get(r2);
-        int r5 = r4.DW();
-        if (r5 > r7) goto L11;
-        if (r5 <= r1) goto L11;
-        r3 = r4.j6();
-        if (r5 == r7) goto L12;
-        r1 = r5;
-    L11:
-        r2 = r2 + 1;
-    L12:
-        return r3;
+        int r3 = 0;
+        abcd.Pm.a r4 = null;
+        int r5 = 0;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    r0 = size();
+                    r1 = -1;
+                    r2 = 0;
+                    r3 = -1;
+                    $pc2 = 3; continue $sw2;
+                }
+                case 3: {
+                    if (r2 >= r0) { $pc2 = 12; continue $sw2; }
+                    r4 = get(r2);
+                    r5 = r4.DW();
+                    if (r5 > r7) { $pc2 = 11; continue $sw2; }
+                    if (r5 <= r1) { $pc2 = 11; continue $sw2; }
+                    r3 = r4.j6();
+                    if (r5 == r7) { $pc2 = 12; continue $sw2; }
+                    r1 = r5;
+                    $pc2 = 11; continue $sw2;
+                }
+                case 11: {
+                    r2 = r2 + 1;
+                    $pc2 = 12; continue $sw2;
+                }
+                case 12: {
+                    return r3;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public abcd.Pm.a get(int r1) {
@@ -87,10 +139,20 @@ public final class Pm extends abcd.Xt {
     }
 
     public void j6(int r1, abcd.Pm.a r2) {
-        if (r2 == null) goto L6;
-        j6(r1, r2);
-        return;
-    L6:
-        throw new java.lang.NullPointerException("item == null");
+        java.lang.Throwable $ex3 = null;
+        int $pc3 = -1;
+        $sw3: while (true) {
+            switch ($pc3) {
+                case -1: {
+                    if (r2 == null) { $pc3 = 6; continue $sw3; }
+                    j6(r1, r2);
+                    return;
+                }
+                case 6: {
+                    throw new java.lang.NullPointerException("item == null");
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

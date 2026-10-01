@@ -13,18 +13,38 @@ class ko extends abcd.Tr.a {
 
     @Override
     public void j6(abcd.Yr r6) {
-        if (r6.v5().Hw() != 3) goto L12;
-        int r0 = ((abcd.ys) r6.tp()).rN();
-        boolean[] r1 = this.j6;
-        if (r1[0] == true) goto L7;
-    L9:
+        int r0 = 0;
+        boolean[] r1 = null;
         boolean r7 = false;
-    L10:
-        r1[0] = r7;
-        return;
-    L7:
-        if (((this.DW - this.FH) + r0) != r6.VH().we()) goto L9;
-        r7 = true;
-        goto L10
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (r6.v5().Hw() != 3) { $pc0 = 12; continue $sw0; }
+                    r0 = ((abcd.ys) r6.tp()).rN();
+                    r1 = this.j6;
+                    if (r1[0] == true) { $pc0 = 7; continue $sw0; }
+                    $pc0 = 9; continue $sw0;
+                }
+                case 9: {
+                    r7 = false;
+                    $pc0 = 10; continue $sw0;
+                }
+                case 10: {
+                    r1[0] = r7;
+                    return;
+                }
+                case 7: {
+                    if (((this.DW - this.FH) + r0) != r6.VH().we()) { $pc0 = 9; continue $sw0; }
+                    r7 = true;
+                    { $pc0 = 10; continue $sw0; }
+                }
+                case 12: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

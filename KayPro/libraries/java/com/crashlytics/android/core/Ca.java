@@ -39,18 +39,35 @@ class Ca implements com.crashlytics.android.core.Ka {
 
     @Override
     public void remove() {
-        java.io.File[] r0 = Hw();
-        int r1 = r0.length;
+        java.io.File[] r0 = null;
+        int r1 = 0;
         int r2 = 0;
-    L4:
-        if (r2 >= r1) goto L6;
-        java.io.File r4 = r0[r2];
-        io.fabric.sdk.android.Fabric.getLogger().Hw("CrashlyticsCore", "Removing native report file at " + r4.getPath());
-        r4.delete();
-        r2 = r2 + 1;
-        goto L4
-    L6:
-        io.fabric.sdk.android.Fabric.getLogger().Hw("CrashlyticsCore", "Removing native report directory at " + this.j6);
-        this.j6.delete();
+        java.io.File r4 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = Hw();
+                    r1 = r0.length;
+                    r2 = 0;
+                    $pc0 = 4; continue $sw0;
+                }
+                case 4: {
+                    if (r2 >= r1) { $pc0 = 6; continue $sw0; }
+                    r4 = r0[r2];
+                    io.fabric.sdk.android.Fabric.getLogger().Hw("CrashlyticsCore", "Removing native report file at " + r4.getPath());
+                    r4.delete();
+                    r2 = r2 + 1;
+                    { $pc0 = 4; continue $sw0; }
+                }
+                case 6: {
+                    io.fabric.sdk.android.Fabric.getLogger().Hw("CrashlyticsCore", "Removing native report directory at " + this.j6);
+                    this.j6.delete();
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

@@ -66,16 +66,29 @@ public final class aq {
     }
 
     public java.lang.String toString() {
-        if (this.j6 == null) goto L5;
-        java.lang.StringBuilder r0 = new java.lang.StringBuilder();
-        r0.append(this.j6.Hw().get(this.FH));
-        if (this.v5 == (-1)) goto L10;
-        r0.append(" extends ");
-        r0.append(this.j6.Hw().get(this.v5));
-    L10:
-        return r0.toString();
-    L5:
-        return this.FH + " " + this.v5;
+        java.lang.StringBuilder r0 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (this.j6 == null) { $pc0 = 5; continue $sw0; }
+                    r0 = new java.lang.StringBuilder();
+                    r0.append(this.j6.Hw().get(this.FH));
+                    if (this.v5 == (-1)) { $pc0 = 10; continue $sw0; }
+                    r0.append(" extends ");
+                    r0.append(this.j6.Hw().get(this.v5));
+                    $pc0 = 10; continue $sw0;
+                }
+                case 10: {
+                    return r0.toString();
+                }
+                case 5: {
+                    return this.FH + " " + this.v5;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public int u7() {

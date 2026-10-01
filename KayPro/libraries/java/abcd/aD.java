@@ -6,8 +6,18 @@ public class aD extends java.lang.IllegalArgumentException {
     }
 
     private static java.lang.String j6(byte[] r4, int r5, int r6) {
-        return ": " + new java.lang.String(r4, r5, r6, "US-ASCII");
-    L5:
-        return "";
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    return ": " + new java.lang.String(r4, r5, r6, "US-ASCII");
+                }
+                case 5: {
+                    return "";
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

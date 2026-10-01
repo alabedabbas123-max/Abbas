@@ -4,11 +4,21 @@ public class cB {
     private final abcd.UE j6;
 
     public cB(abcd.UE r1) {
-        if (r1 == null) goto L7;
-        this.j6 = r1;
-        return;
-    L7:
-        throw new java.lang.NullPointerException();
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (r1 == null) { $pc0 = 7; continue $sw0; }
+                    this.j6 = r1;
+                    return;
+                }
+                case 7: {
+                    throw new java.lang.NullPointerException();
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static abcd.XA VH() {

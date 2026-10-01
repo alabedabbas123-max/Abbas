@@ -19,15 +19,29 @@ public final class Mp extends abcd.AbstractGp {
 
     @Override
     public void DW(abcd.jp r5, abcd.Lt r6) {
-        abcd.Pt r7 = this.v5.VH();
-        int r0 = this.v5.J8();
-        if (r6.Hw() == false) goto L5;
-        r6.j6(abcd.eu.j6(r0), "utf16_size: " + abcd.Yt.gn(r0));
-        r6.j6(r7.FH() + 1, this.v5.lg());
-    L5:
-        r6.DW(r0);
-        r6.j6(r7);
-        r6.writeByte(0);
+        abcd.Pt r7 = null;
+        int r0 = 0;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r7 = this.v5.VH();
+                    r0 = this.v5.J8();
+                    if (r6.Hw() == false) { $pc0 = 5; continue $sw0; }
+                    r6.j6(abcd.eu.j6(r0), "utf16_size: " + abcd.Yt.gn(r0));
+                    r6.j6(r7.FH() + 1, this.v5.lg());
+                    $pc0 = 5; continue $sw0;
+                }
+                case 5: {
+                    r6.DW(r0);
+                    r6.j6(r7);
+                    r6.writeByte(0);
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

@@ -21,19 +21,45 @@ class Runnablee implements java.lang.Runnable {
     @Override
     @abcd.Interfacesu(method = -1992263547788468235L)
     public void run() {
-    L8:
-        th = move-exception;
-        if (DW == false) goto L12;
-        abcd.wu.j6(th, 5326613179874860365L, this);
-    L12:
-        throw th;
-    L4:
-        if (j6 == false) goto L6;
-        abcd.wu.j6(5326613179874860365L, this);     // Catch: java.lang.Throwable -> L8
-    L6:
-        android.view.animation.AlphaAnimation r2 = new android.view.animation.AlphaAnimation(1.0f, 0.0f);     // Catch: java.lang.Throwable -> L8
-        r2.setAnimationListener(new com.aide.ui.activities.AnimationAnimationListenerd(this));     // Catch: java.lang.Throwable -> L8
-        r2.setDuration(500);     // Catch: java.lang.Throwable -> L8
-        this.FH.FH.startAnimation(r2);     // Catch: java.lang.Throwable -> L8
+        android.view.animation.AlphaAnimation r2 = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 4;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 8: {
+                    th = $ex0;
+                    if (DW == false) { $pc0 = 12; continue $sw0; }
+                    abcd.wu.j6(th, 5326613179874860365L, this);
+                    $pc0 = 12; continue $sw0;
+                }
+                case 12: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (j6 == false) { $pc0 = 6; continue $sw0; }
+                    try {
+                        abcd.wu.j6(5326613179874860365L, this);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 8; continue $sw0;
+                    }
+                    $pc0 = 6; continue $sw0;
+                }
+                case 6: {
+                    try {
+                        r2 = new android.view.animation.AlphaAnimation(1.0f, 0.0f);
+                        r2.setAnimationListener(new com.aide.ui.activities.AnimationAnimationListenerd(this));
+                        r2.setDuration(500);
+                        this.FH.FH.startAnimation(r2);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 8; continue $sw0;
+                    }
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

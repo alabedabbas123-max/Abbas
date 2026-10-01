@@ -27,17 +27,41 @@ public abstract class AbstractvF {
     }
 
     public static synchronized void j6(java.lang.String r4, abcd.AbstractvF r5) {
-        monitor-enter(abcd.AbstractvF.class);
-    L11:
-        th = move-exception;
-        throw th;
-    L5:
-        if (v5.containsKey(r4) == true) goto L10;
-        v5.put(r4, r5);     // Catch: java.lang.Throwable -> L11
-        monitor-exit(abcd.AbstractvF.class);
-        return;
-    L10:
-        throw new java.lang.IllegalArgumentException(java.text.MessageFormat.format(org.eclipse.jgit.JGitText.j6().mergeStrategyAlreadyExistsAsDefault, new java.lang.Object[]{r4}));     // Catch: java.lang.Throwable -> L11
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    monitor-enter(abcd.AbstractvF.class);
+                    $pc0 = 11; continue $sw0;
+                }
+                case 11: {
+                    th = $ex0;
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 5: {
+                    if (v5.containsKey(r4) == true) { $pc0 = 10; continue $sw0; }
+                    try {
+                        v5.put(r4, r5);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 11; continue $sw0;
+                    }
+                    monitor-exit(abcd.AbstractvF.class);
+                    return;
+                }
+                case 10: {
+                    try {
+                        throw new java.lang.IllegalArgumentException(java.text.MessageFormat.format(org.eclipse.jgit.JGitText.j6().mergeStrategyAlreadyExistsAsDefault, new java.lang.Object[]{r4}));
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 11; continue $sw0;
+                    }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public abstract abcd.AbstractwF j6(abcd.UE r1);

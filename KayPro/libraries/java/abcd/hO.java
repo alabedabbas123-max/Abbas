@@ -27,9 +27,19 @@ public class hO implements abcd._N {
 
     @Override
     public abcd.wN j6(abcd.wN r3) {
-        if (j6.contains(r3.v5()) == true) goto L5;
-        return r3;
-    L5:
-        return new abcd.wN(abcd.InterfacelN.DW, abcd.mM.j6);
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (j6.contains(r3.v5()) == true) { $pc0 = 5; continue $sw0; }
+                    return r3;
+                }
+                case 5: {
+                    return new abcd.wN(abcd.InterfacelN.DW, abcd.mM.j6);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

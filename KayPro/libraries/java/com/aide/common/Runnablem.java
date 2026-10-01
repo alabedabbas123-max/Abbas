@@ -23,19 +23,46 @@ class Runnablem implements java.lang.Runnable {
     @Override
     @abcd.Interfacesu(method = 1761068182524048525L)
     public void run() {
-    L10:
-        th = move-exception;
-        if (DW == false) goto L14;
-        abcd.wu.j6(th, 1222688143799863455L, this);
-    L14:
-        throw th;
-    L4:
-        if (j6 == false) goto L7;
-        abcd.wu.j6(1222688143799863455L, this);     // Catch: java.lang.Throwable -> L10
-    L7:
-        if (com.aide.common.ClassN.j6(this.FH) == false) goto L17;
-        com.aide.common.ClassN.j6(this.FH, false);     // Catch: java.lang.Throwable -> L10
-        com.aide.common.ClassN.DW(this.FH);     // Catch: java.lang.Throwable -> L10
-        return;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 4;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 10: {
+                    th = $ex0;
+                    if (DW == false) { $pc0 = 14; continue $sw0; }
+                    abcd.wu.j6(th, 1222688143799863455L, this);
+                    $pc0 = 14; continue $sw0;
+                }
+                case 14: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (j6 == false) { $pc0 = 7; continue $sw0; }
+                    try {
+                        abcd.wu.j6(1222688143799863455L, this);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 10; continue $sw0;
+                    }
+                    $pc0 = 7; continue $sw0;
+                }
+                case 7: {
+                    if (com.aide.common.ClassN.j6(this.FH) == false) { $pc0 = 17; continue $sw0; }
+                    try {
+                        com.aide.common.ClassN.j6(this.FH, false);
+                        com.aide.common.ClassN.DW(this.FH);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 10; continue $sw0;
+                    }
+                    return;
+                }
+                case 17: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

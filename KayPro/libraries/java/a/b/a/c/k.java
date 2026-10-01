@@ -10,10 +10,20 @@ public class k extends a.b.a.c.m {
 
     @Override
     public int a() {
-        if (this.e < 64) goto L5;
-        return 251;
-    L5:
-        return this.e + 0;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (this.e < 64) { $pc0 = 5; continue $sw0; }
+                    return 251;
+                }
+                case 5: {
+                    return this.e + 0;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

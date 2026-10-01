@@ -23,19 +23,51 @@ class RunnableLj implements java.lang.Runnable {
     @Override
     @abcd.Interfacesu(method = 194803595361618025L)
     public void run() {
-    L10:
-        th = move-exception;
-        if (DW == false) goto L14;
-        abcd.wu.j6(th, 3576049162732019421L, this);
-    L14:
-        throw th;
-    L4:
-        if (j6 == false) goto L6;
-        abcd.wu.j6(3576049162732019421L, this);     // Catch: java.lang.Throwable -> L10
-    L6:
-        abcd.Kj.j6(this.Hw.VH);     // Catch: java.lang.Throwable -> L10
-        if (this.FH == false) goto L17;
-        abcd.Kj.b.j6(this.Hw).run();     // Catch: java.lang.Throwable -> L10
-        return;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 4;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 10: {
+                    th = $ex0;
+                    if (DW == false) { $pc0 = 14; continue $sw0; }
+                    abcd.wu.j6(th, 3576049162732019421L, this);
+                    $pc0 = 14; continue $sw0;
+                }
+                case 14: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (j6 == false) { $pc0 = 6; continue $sw0; }
+                    try {
+                        abcd.wu.j6(3576049162732019421L, this);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 10; continue $sw0;
+                    }
+                    $pc0 = 6; continue $sw0;
+                }
+                case 6: {
+                    try {
+                        abcd.Kj.j6(this.Hw.VH);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 10; continue $sw0;
+                    }
+                    if (this.FH == false) { $pc0 = 17; continue $sw0; }
+                    try {
+                        abcd.Kj.b.j6(this.Hw).run();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 10; continue $sw0;
+                    }
+                    return;
+                }
+                case 17: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

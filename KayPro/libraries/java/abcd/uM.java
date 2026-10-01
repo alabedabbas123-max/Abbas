@@ -9,10 +9,21 @@ public class uM implements abcd.GL {
 
     @Override
     public abcd.EL DW() {
-        return j6();
-    L4:
-        e = move-exception;
-        throw new java.lang.IllegalStateException(e.getMessage());
+        java.lang.Throwable e = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    return j6();
+                }
+                case 4: {
+                    e = $ex0;
+                    throw new java.lang.IllegalStateException(e.getMessage());
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

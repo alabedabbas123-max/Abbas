@@ -16,7 +16,7 @@ public class v {
     private final boolean v5;
     io.fabric.sdk.android.services.common.ClassB we;
 
-    public static final enum a extends java.lang.Enum<io.fabric.sdk.android.services.common.v.a> {
+    public static final class a extends com.almlkaide.kaypro.internal.EnumBase {
         public static final io.fabric.sdk.android.services.common.v.a DW = null;
         public static final io.fabric.sdk.android.services.common.v.a FH = null;
         public static final io.fabric.sdk.android.services.common.v.a Hw = null;
@@ -44,7 +44,7 @@ public class v {
         }
 
         public static io.fabric.sdk.android.services.common.v.a valueOf(java.lang.String r1) {
-            return (io.fabric.sdk.android.services.common.v.a) java.lang.Enum.valueOf(io.fabric.sdk.android.services.common.v.a.class, r1);
+            return (io.fabric.sdk.android.services.common.v.a) com.almlkaide.kaypro.internal.EnumBase.valueOf(io.fabric.sdk.android.services.common.v.a.values(), r1);
         }
 
         public static io.fabric.sdk.android.services.common.v.a[] values() {
@@ -58,49 +58,88 @@ public class v {
     }
 
     public v(android.content.Context r3, java.lang.String r4, java.lang.String r5, java.util.Collection<io.fabric.sdk.android.Kit> r6) {
-        this.FH = new java.util.concurrent.locks.ReentrantLock();
-        if (r3 == null) goto L18;
-        if (r4 == null) goto L16;
-        if (r6 == null) goto L14;
-        this.VH = r3;
-        this.gn = r4;
-        this.u7 = r5;
-        this.tp = r6;
-        this.Hw = new io.fabric.sdk.android.services.common.x();
-        this.EQ = new io.fabric.sdk.android.services.common.AdvertisingInfoProvider(r3);
-        this.J8 = new io.fabric.sdk.android.services.common.u();
-        this.v5 = io.fabric.sdk.android.services.common.i.j6(r3, "com.crashlytics.CollectDeviceIdentifiers", true);
-        if (this.v5 == true) goto L9;
-        io.fabric.sdk.android.Fabric.getLogger().Hw("Fabric", "Device ID collection disabled for " + r3.getPackageName());
-    L9:
-        this.Zo = io.fabric.sdk.android.services.common.i.j6(r3, "com.crashlytics.CollectUserIdentifiers", true);
-        if (this.Zo == true) goto L19;
-        io.fabric.sdk.android.Fabric.getLogger().Hw("Fabric", "User information collection disabled for " + r3.getPackageName());
-        return;
-    L19:
-        return;
-    L14:
-        throw new java.lang.IllegalArgumentException("kits must not be null");
-    L16:
-        throw new java.lang.IllegalArgumentException("appIdentifier must not be null");
-    L18:
-        throw new java.lang.IllegalArgumentException("appContext must not be null");
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    this.FH = new java.util.concurrent.locks.ReentrantLock();
+                    if (r3 == null) { $pc0 = 18; continue $sw0; }
+                    if (r4 == null) { $pc0 = 16; continue $sw0; }
+                    if (r6 == null) { $pc0 = 14; continue $sw0; }
+                    this.VH = r3;
+                    this.gn = r4;
+                    this.u7 = r5;
+                    this.tp = r6;
+                    this.Hw = new io.fabric.sdk.android.services.common.x();
+                    this.EQ = new io.fabric.sdk.android.services.common.AdvertisingInfoProvider(r3);
+                    this.J8 = new io.fabric.sdk.android.services.common.u();
+                    this.v5 = io.fabric.sdk.android.services.common.i.j6(r3, "com.crashlytics.CollectDeviceIdentifiers", true);
+                    if (this.v5 == true) { $pc0 = 9; continue $sw0; }
+                    io.fabric.sdk.android.Fabric.getLogger().Hw("Fabric", "Device ID collection disabled for " + r3.getPackageName());
+                    $pc0 = 9; continue $sw0;
+                }
+                case 9: {
+                    this.Zo = io.fabric.sdk.android.services.common.i.j6(r3, "com.crashlytics.CollectUserIdentifiers", true);
+                    if (this.Zo == true) { $pc0 = 19; continue $sw0; }
+                    io.fabric.sdk.android.Fabric.getLogger().Hw("Fabric", "User information collection disabled for " + r3.getPackageName());
+                    return;
+                }
+                case 19: {
+                    return;
+                }
+                case 14: {
+                    throw new java.lang.IllegalArgumentException("kits must not be null");
+                }
+                case 16: {
+                    throw new java.lang.IllegalArgumentException("appIdentifier must not be null");
+                }
+                case 18: {
+                    throw new java.lang.IllegalArgumentException("appContext must not be null");
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @android.annotation.SuppressLint({"CommitPrefEdits"})
     private java.lang.String DW(android.content.SharedPreferences r3) {
-        this.FH.lock();
-        java.lang.String r1 = r3.getString("crashlytics.installation.id", null);     // Catch: java.lang.Throwable -> L8
-        if (r1 != null) goto L6;
-        r1 = j6(java.util.UUID.randomUUID().toString());     // Catch: java.lang.Throwable -> L8
-        r3.edit().putString("crashlytics.installation.id", r1).commit();     // Catch: java.lang.Throwable -> L8
-    L6:
-        this.FH.unlock();
-        return r1;
-    L8:
-        th = move-exception;
-        this.FH.unlock();
-        throw th;
+        java.lang.String r1 = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    this.FH.lock();
+                    try {
+                        r1 = r3.getString("crashlytics.installation.id", null);
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        $pc1 = 8; continue $sw1;
+                    }
+                    if (r1 != null) { $pc1 = 6; continue $sw1; }
+                    try {
+                        r1 = j6(java.util.UUID.randomUUID().toString());
+                        r3.edit().putString("crashlytics.installation.id", r1).commit();
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        $pc1 = 8; continue $sw1;
+                    }
+                    $pc1 = 6; continue $sw1;
+                }
+                case 6: {
+                    this.FH.unlock();
+                    return r1;
+                }
+                case 8: {
+                    th = $ex1;
+                    this.FH.unlock();
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     private java.lang.String DW(java.lang.String r3) {
@@ -108,77 +147,192 @@ public class v {
     }
 
     private java.lang.Boolean J0() {
-        io.fabric.sdk.android.services.common.ClassB r0 = DW();
-        if (r0 != null) goto L5;
-        return null;
-    L5:
-        return java.lang.Boolean.valueOf(r0.DW);
+        io.fabric.sdk.android.services.common.ClassB r0 = null;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    r0 = DW();
+                    if (r0 != null) { $pc2 = 5; continue $sw2; }
+                    return null;
+                }
+                case 5: {
+                    return java.lang.Boolean.valueOf(r0.DW);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     private java.lang.String j6(java.lang.String r2) {
-        if (r2 != null) goto L5;
-        return null;
-    L5:
-        return j6.matcher(r2).replaceAll("").toLowerCase(java.util.Locale.US);
+        java.lang.Throwable $ex3 = null;
+        int $pc3 = -1;
+        $sw3: while (true) {
+            switch ($pc3) {
+                case -1: {
+                    if (r2 != null) { $pc3 = 5; continue $sw3; }
+                    return null;
+                }
+                case 5: {
+                    return j6.matcher(r2).replaceAll("").toLowerCase(java.util.Locale.US);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     private void j6(android.content.SharedPreferences r2) {
-        io.fabric.sdk.android.services.common.ClassB r0 = DW();
-        if (r0 == null) goto L6;
-        j6(r2, r0.j6);
-        return;
+        io.fabric.sdk.android.services.common.ClassB r0 = null;
+        java.lang.Throwable $ex4 = null;
+        int $pc4 = -1;
+        $sw4: while (true) {
+            switch ($pc4) {
+                case -1: {
+                    r0 = DW();
+                    if (r0 == null) { $pc4 = 6; continue $sw4; }
+                    j6(r2, r0.j6);
+                    return;
+                }
+                case 6: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @android.annotation.SuppressLint({"CommitPrefEdits"})
     private void j6(android.content.SharedPreferences r4, java.lang.String r5) {
-        this.FH.lock();
-    L16:
-        th = move-exception;
-        this.FH.unlock();
-        throw th;
-    L4:
-        if (android.text.TextUtils.isEmpty(r5) == false) goto L8;
-        this.FH.unlock();
-        return;
-    L8:
-        java.lang.String r1 = r4.getString("crashlytics.advertising.id", null);     // Catch: java.lang.Throwable -> L16
-        if (android.text.TextUtils.isEmpty(r1) == false) goto L12;
-        r4.edit().putString("crashlytics.advertising.id", r5).commit();     // Catch: java.lang.Throwable -> L16
-    L14:
-        this.FH.unlock();
-        return;
-    L12:
-        if (r1.equals(r5) == true) goto L14;
-        r4.edit().remove("crashlytics.installation.id").putString("crashlytics.advertising.id", r5).commit();     // Catch: java.lang.Throwable -> L16
-        goto L14
+        java.lang.String r1 = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex5 = null;
+        int $pc5 = -1;
+        $sw5: while (true) {
+            switch ($pc5) {
+                case -1: {
+                    this.FH.lock();
+                    $pc5 = 16; continue $sw5;
+                }
+                case 16: {
+                    th = $ex5;
+                    this.FH.unlock();
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (android.text.TextUtils.isEmpty(r5) == false) { $pc5 = 8; continue $sw5; }
+                    this.FH.unlock();
+                    return;
+                }
+                case 8: {
+                    try {
+                        r1 = r4.getString("crashlytics.advertising.id", null);
+                    } catch (java.lang.Throwable $t) {
+                        $ex5 = $t;
+                        $pc5 = 16; continue $sw5;
+                    }
+                    if (android.text.TextUtils.isEmpty(r1) == false) { $pc5 = 12; continue $sw5; }
+                    try {
+                        r4.edit().putString("crashlytics.advertising.id", r5).commit();
+                    } catch (java.lang.Throwable $t) {
+                        $ex5 = $t;
+                        $pc5 = 16; continue $sw5;
+                    }
+                    $pc5 = 14; continue $sw5;
+                }
+                case 14: {
+                    this.FH.unlock();
+                    return;
+                }
+                case 12: {
+                    if (r1.equals(r5) == true) { $pc5 = 14; continue $sw5; }
+                    try {
+                        r4.edit().remove("crashlytics.installation.id").putString("crashlytics.advertising.id", r5).commit();
+                    } catch (java.lang.Throwable $t) {
+                        $ex5 = $t;
+                        $pc5 = 16; continue $sw5;
+                    }
+                    { $pc5 = 14; continue $sw5; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     private void j6(java.util.Map<io.fabric.sdk.android.services.common.v.a, java.lang.String> r1, io.fabric.sdk.android.services.common.v.a r2, java.lang.String r3) {
-        if (r3 == null) goto L5;
-        r1.put(r2, r3);
-        return;
+        java.lang.Throwable $ex6 = null;
+        int $pc6 = -1;
+        $sw6: while (true) {
+            switch ($pc6) {
+                case -1: {
+                    if (r3 == null) { $pc6 = 5; continue $sw6; }
+                    r1.put(r2, r3);
+                    return;
+                }
+                case 5: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     synchronized io.fabric.sdk.android.services.common.ClassB DW() {
-        monitor-enter(this);
-    L9:
-        th = move-exception;
-        throw th;
-    L4:
-        if (this.J0 == true) goto L6;
-        this.we = this.EQ.j6();     // Catch: java.lang.Throwable -> L9
-        this.J0 = true;     // Catch: java.lang.Throwable -> L9
-    L6:
-        io.fabric.sdk.android.services.common.ClassB r0 = this.we;     // Catch: java.lang.Throwable -> L9
-        monitor-exit(this);
-        return r0;
+        io.fabric.sdk.android.services.common.ClassB r0 = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex7 = null;
+        int $pc7 = -1;
+        $sw7: while (true) {
+            switch ($pc7) {
+                case -1: {
+                    monitor-enter(this);
+                    $pc7 = 9; continue $sw7;
+                }
+                case 9: {
+                    th = $ex7;
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (this.J0 == true) { $pc7 = 6; continue $sw7; }
+                    try {
+                        this.we = this.EQ.j6();
+                        this.J0 = true;
+                    } catch (java.lang.Throwable $t) {
+                        $ex7 = $t;
+                        $pc7 = 9; continue $sw7;
+                    }
+                    $pc7 = 6; continue $sw7;
+                }
+                case 6: {
+                    try {
+                        r0 = this.we;
+                    } catch (java.lang.Throwable $t) {
+                        $ex7 = $t;
+                        $pc7 = 9; continue $sw7;
+                    }
+                    monitor-exit(this);
+                    return r0;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public java.lang.Boolean EQ() {
-        if (we() == true) goto L7;
-        return null;
-    L7:
-        return J0();
+        java.lang.Throwable $ex8 = null;
+        int $pc8 = -1;
+        $sw8: while (true) {
+            switch ($pc8) {
+                case -1: {
+                    if (we() == true) { $pc8 = 7; continue $sw8; }
+                    return null;
+                }
+                case 7: {
+                    return J0();
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public java.lang.String FH() {
@@ -186,17 +340,31 @@ public class v {
     }
 
     public java.lang.String Hw() {
-        java.lang.String r0 = this.u7;
-        if (r0 != null) goto L9;
-        android.content.SharedPreferences r1 = io.fabric.sdk.android.services.common.i.u7(this.VH);
-        j6(r1);
-        java.lang.String r2 = r1.getString("crashlytics.installation.id", null);
-        if (r2 != null) goto L8;
-        return DW(r1);
-    L8:
-        return r2;
-    L9:
-        return r0;
+        java.lang.String r0 = null;
+        android.content.SharedPreferences r1 = null;
+        java.lang.String r2 = null;
+        java.lang.Throwable $ex9 = null;
+        int $pc9 = -1;
+        $sw9: while (true) {
+            switch ($pc9) {
+                case -1: {
+                    r0 = this.u7;
+                    if (r0 != null) { $pc9 = 9; continue $sw9; }
+                    r1 = io.fabric.sdk.android.services.common.i.u7(this.VH);
+                    j6(r1);
+                    r2 = r1.getString("crashlytics.installation.id", null);
+                    if (r2 != null) { $pc9 = 8; continue $sw9; }
+                    return DW(r1);
+                }
+                case 8: {
+                    return r2;
+                }
+                case 9: {
+                    return r0;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public java.lang.String VH() {
@@ -224,28 +392,59 @@ public class v {
     }
 
     public java.util.Map<io.fabric.sdk.android.services.common.v.a, java.lang.String> v5() {
-        java.util.HashMap r0 = new java.util.HashMap();
-        java.util.Iterator<io.fabric.sdk.android.Kit> r1 = this.tp.iterator();
-    L4:
-        if (r1.hasNext() == false) goto L12;
-        java.lang.Object r2 = (io.fabric.sdk.android.Kit) r1.next();
-        if ((r2 instanceof io.fabric.sdk.android.services.common.n) == false) goto L4;
-        java.util.Iterator<java.util.Map.Entry<io.fabric.sdk.android.services.common.v.a, java.lang.String>> r3 = ((io.fabric.sdk.android.services.common.n) r2).Hw().entrySet().iterator();
-    L9:
-        if (r3.hasNext() == false) goto L4;
-        java.util.Map.Entry<io.fabric.sdk.android.services.common.v.a, java.lang.String> r4 = r3.next();
-        j6(r0, r4.getKey(), r4.getValue());
-        goto L9
-    L12:
-        return java.util.Collections.unmodifiableMap(r0);
+        java.util.HashMap r0 = null;
+        java.util.Iterator<io.fabric.sdk.android.Kit> r1 = null;
+        java.lang.Object r2 = null;
+        java.util.Iterator<java.util.Map.Entry<io.fabric.sdk.android.services.common.v.a, java.lang.String>> r3 = null;
+        java.util.Map.Entry<io.fabric.sdk.android.services.common.v.a, java.lang.String> r4 = null;
+        java.lang.Throwable $ex10 = null;
+        int $pc10 = -1;
+        $sw10: while (true) {
+            switch ($pc10) {
+                case -1: {
+                    r0 = new java.util.HashMap();
+                    r1 = this.tp.iterator();
+                    $pc10 = 4; continue $sw10;
+                }
+                case 4: {
+                    if (r1.hasNext() == false) { $pc10 = 12; continue $sw10; }
+                    r2 = (io.fabric.sdk.android.Kit) r1.next();
+                    if ((r2 instanceof io.fabric.sdk.android.services.common.n) == false) { $pc10 = 4; continue $sw10; }
+                    r3 = ((io.fabric.sdk.android.services.common.n) r2).Hw().entrySet().iterator();
+                    $pc10 = 9; continue $sw10;
+                }
+                case 9: {
+                    if (r3.hasNext() == false) { $pc10 = 4; continue $sw10; }
+                    r4 = r3.next();
+                    j6(r0, r4.getKey(), r4.getValue());
+                    { $pc10 = 9; continue $sw10; }
+                }
+                case 12: {
+                    return java.util.Collections.unmodifiableMap(r0);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     protected boolean we() {
-        if (this.v5 == true) goto L5;
-    L7:
-        return false;
-    L5:
-        if (this.J8.v5(this.VH) == true) goto L7;
-        return true;
+        java.lang.Throwable $ex11 = null;
+        int $pc11 = -1;
+        $sw11: while (true) {
+            switch ($pc11) {
+                case -1: {
+                    if (this.v5 == true) { $pc11 = 5; continue $sw11; }
+                    $pc11 = 7; continue $sw11;
+                }
+                case 7: {
+                    return false;
+                }
+                case 5: {
+                    if (this.J8.v5(this.VH) == true) { $pc11 = 7; continue $sw11; }
+                    return true;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

@@ -8,7 +8,7 @@ public class RA {
     private final java.util.List<java.lang.String> Zo;
     private final java.util.List<java.lang.String> v5;
 
-    public static final enum a extends java.lang.Enum<abcd.RA.a> {
+    public static final class a extends com.almlkaide.kaypro.internal.EnumBase {
         public static final abcd.RA.a DW = null;
         public static final abcd.RA.a FH = null;
         public static final abcd.RA.a Hw = null;
@@ -30,7 +30,7 @@ public class RA {
         }
 
         public static abcd.RA.a valueOf(java.lang.String r1) {
-            return (abcd.RA.a) java.lang.Enum.valueOf(abcd.RA.a.class, r1);
+            return (abcd.RA.a) com.almlkaide.kaypro.internal.EnumBase.valueOf(abcd.RA.a.values(), r1);
         }
 
         public static abcd.RA.a[] values() {
@@ -49,19 +49,32 @@ public class RA {
     }
 
     RA(abcd.RA.a r3, java.util.List<java.lang.String> r4) {
-        this.Hw = r3;
-        if (r3 != abcd.RA.a.FH) goto L5;
-        this.v5 = r4;
-    L7:
-        if (r3 != abcd.RA.a.Hw) goto L9;
-        this.Zo = r4;
-        return;
-    L9:
-        this.Zo = new java.util.ArrayList(0);
-        return;
-    L5:
-        this.v5 = new java.util.ArrayList(0);
-        goto L7
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    this.Hw = r3;
+                    if (r3 != abcd.RA.a.FH) { $pc0 = 5; continue $sw0; }
+                    this.v5 = r4;
+                    $pc0 = 7; continue $sw0;
+                }
+                case 7: {
+                    if (r3 != abcd.RA.a.Hw) { $pc0 = 9; continue $sw0; }
+                    this.Zo = r4;
+                    return;
+                }
+                case 9: {
+                    this.Zo = new java.util.ArrayList(0);
+                    return;
+                }
+                case 5: {
+                    this.v5 = new java.util.ArrayList(0);
+                    { $pc0 = 7; continue $sw0; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public abcd.RA.a j6() {

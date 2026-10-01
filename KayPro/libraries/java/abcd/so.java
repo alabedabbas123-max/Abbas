@@ -12,17 +12,30 @@ public final class so extends abcd.Abstractao {
 
     @Override
     public boolean VH(abcd.AbstractVn r2) {
-        if ((r2 instanceof abcd.po) == true) goto L5;
-        return false;
-    L5:
-        if (r2.gn().size() != 0) goto L15;
-        abcd.po r3 = (abcd.po) r2;
-        if (r3.Ws() == true) goto L14;
-        return true;
-    L14:
-        return j6(r3);
-    L15:
-        return false;
+        abcd.po r3 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if ((r2 instanceof abcd.po) == true) { $pc0 = 5; continue $sw0; }
+                    return false;
+                }
+                case 5: {
+                    if (r2.gn().size() != 0) { $pc0 = 15; continue $sw0; }
+                    r3 = (abcd.po) r2;
+                    if (r3.Ws() == true) { $pc0 = 14; continue $sw0; }
+                    return true;
+                }
+                case 14: {
+                    return j6(r3);
+                }
+                case 15: {
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
@@ -47,12 +60,25 @@ public final class so extends abcd.Abstractao {
 
     @Override
     public boolean j6(abcd.po r1) {
-        int r2 = r1.J8();
-        if (r2 != 0) goto L5;
-    L7:
-        return false;
-    L5:
-        if (abcd.Abstractao.j6(r2) == false) goto L7;
-        return true;
+        int r2 = 0;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    r2 = r1.J8();
+                    if (r2 != 0) { $pc1 = 5; continue $sw1; }
+                    $pc1 = 7; continue $sw1;
+                }
+                case 7: {
+                    return false;
+                }
+                case 5: {
+                    if (abcd.Abstractao.j6(r2) == false) { $pc1 = 7; continue $sw1; }
+                    return true;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

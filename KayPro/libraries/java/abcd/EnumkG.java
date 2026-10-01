@@ -1,6 +1,6 @@
 package abcd;
 
-public final enum EnumkG extends java.lang.Enum<abcd.EnumkG> {
+public final class EnumkG extends com.almlkaide.kaypro.internal.EnumBase {
     public static final abcd.EnumkG DW = null;
     public static final abcd.EnumkG FH = null;
     public static final abcd.EnumkG Hw = null;
@@ -22,7 +22,7 @@ public final enum EnumkG extends java.lang.Enum<abcd.EnumkG> {
     }
 
     public static abcd.EnumkG valueOf(java.lang.String r1) {
-        return (abcd.EnumkG) java.lang.Enum.valueOf(abcd.EnumkG.class, r1);
+        return (abcd.EnumkG) com.almlkaide.kaypro.internal.EnumBase.valueOf(abcd.EnumkG.values(), r1);
     }
 
     public static abcd.EnumkG[] values() {

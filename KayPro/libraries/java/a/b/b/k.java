@@ -29,16 +29,34 @@ public class k extends a.b.b.b {
     }
 
     public void a(a.b.g.s r3) {
-        if (this.c == null) goto L11;
         int r0 = 0;
-    L6:
-        if (r0 >= this.c.length) goto L15;
-        if (this.c[r0] == null) goto L10;
-        this.c[r0].a(r3);
-    L10:
-        r0 = r0 + 1;
-        goto L6
-    L15:
-        return;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (this.c == null) { $pc0 = 11; continue $sw0; }
+                    r0 = 0;
+                    $pc0 = 6; continue $sw0;
+                }
+                case 6: {
+                    if (r0 >= this.c.length) { $pc0 = 15; continue $sw0; }
+                    if (this.c[r0] == null) { $pc0 = 10; continue $sw0; }
+                    this.c[r0].a(r3);
+                    $pc0 = 10; continue $sw0;
+                }
+                case 10: {
+                    r0 = r0 + 1;
+                    { $pc0 = 6; continue $sw0; }
+                }
+                case 15: {
+                    return;
+                }
+                case 11: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

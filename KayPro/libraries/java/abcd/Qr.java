@@ -19,16 +19,31 @@ public final class Qr implements abcd.Interfacels {
     }
 
     private int j6(abcd.cs r5) {
-        int r0 = r5.size();
+        int r0 = 0;
         int r1 = 0;
         int r2 = 0;
-    L3:
-        if (r1 >= r0) goto L5;
-        r2 = r2 + r5.get(r1).Hw();
-        r1 = r1 + 1;
-        goto L3
-    L5:
-        return r2;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = r5.size();
+                    r1 = 0;
+                    r2 = 0;
+                    $pc0 = 3; continue $sw0;
+                }
+                case 3: {
+                    if (r1 >= r0) { $pc0 = 5; continue $sw0; }
+                    r2 = r2 + r5.get(r1).Hw();
+                    r1 = r1 + 1;
+                    { $pc0 = 3; continue $sw0; }
+                }
+                case 5: {
+                    return r2;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
@@ -38,51 +53,82 @@ public final class Qr implements abcd.Interfacels {
 
     @Override
     public boolean j6(abcd.es r4, abcd.bs r5, abcd.bs r6) {
-        if (r5.getType() == abcd.Qs.VH) goto L6;
-        return false;
-    L6:
-        if ((r6.J8() instanceof abcd.ys) == false) goto L8;
-        abcd.ys r7 = (abcd.ys) r6.J8();
-        switch(r4.Hw()) {
-            case 14: goto L22;
-            case 15: goto L20;
-            case 16: goto L22;
-            case 17: goto L22;
-            case 18: goto L22;
-            case 19: goto L16;
-            case 20: goto L22;
-            case 21: goto L22;
-            case 22: goto L22;
-            case 23: goto L18;
-            case 24: goto L18;
-            case 25: goto L18;
-            default: goto L16;
-        };
-    L16:
-        return false;
-    L18:
-        return r7.we();
-    L20:
-        return abcd.ys.j6(-r7.rN()).VH();
-    L22:
-        return r7.VH();
-    L8:
-        if ((r5.J8() instanceof abcd.ys) == true) goto L10;
-    L13:
-        return false;
-    L10:
-        if (r4.Hw() != 15) goto L13;
-        return ((abcd.ys) r5.J8()).VH();
+        abcd.ys r7 = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if (r5.getType() == abcd.Qs.VH) { $pc1 = 6; continue $sw1; }
+                    return false;
+                }
+                case 6: {
+                    if ((r6.J8() instanceof abcd.ys) == false) { $pc1 = 8; continue $sw1; }
+                    r7 = (abcd.ys) r6.J8();
+                    switch(r4.Hw()) {
+                        case 14: { $pc1 = 22; continue $sw1; }
+                        case 15: { $pc1 = 20; continue $sw1; }
+                        case 16: { $pc1 = 22; continue $sw1; }
+                        case 17: { $pc1 = 22; continue $sw1; }
+                        case 18: { $pc1 = 22; continue $sw1; }
+                        case 19: { $pc1 = 16; continue $sw1; }
+                        case 20: { $pc1 = 22; continue $sw1; }
+                        case 21: { $pc1 = 22; continue $sw1; }
+                        case 22: { $pc1 = 22; continue $sw1; }
+                        case 23: { $pc1 = 18; continue $sw1; }
+                        case 24: { $pc1 = 18; continue $sw1; }
+                        case 25: { $pc1 = 18; continue $sw1; }
+                        default: { $pc1 = 16; continue $sw1; }
+                    };
+                }
+                case 16: {
+                    return false;
+                }
+                case 18: {
+                    return r7.we();
+                }
+                case 20: {
+                    return abcd.ys.j6(-r7.rN()).VH();
+                }
+                case 22: {
+                    return r7.VH();
+                }
+                case 8: {
+                    if ((r5.J8() instanceof abcd.ys) == true) { $pc1 = 10; continue $sw1; }
+                    $pc1 = 13; continue $sw1;
+                }
+                case 13: {
+                    return false;
+                }
+                case 10: {
+                    if (r4.Hw() != 15) { $pc1 = 13; continue $sw1; }
+                    return ((abcd.ys) r5.J8()).VH();
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
     public boolean j6(abcd.es r2, abcd.cs r3) {
-        if (this.FH == false) goto L5;
-    L9:
-        return false;
-    L5:
-        if (r2.VH() == false) goto L9;
-        if (j6(r3) < 6) goto L9;
-        return true;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    if (this.FH == false) { $pc2 = 5; continue $sw2; }
+                    $pc2 = 9; continue $sw2;
+                }
+                case 9: {
+                    return false;
+                }
+                case 5: {
+                    if (r2.VH() == false) { $pc2 = 9; continue $sw2; }
+                    if (j6(r3) < 6) { $pc2 = 9; continue $sw2; }
+                    return true;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

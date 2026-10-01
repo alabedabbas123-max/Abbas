@@ -8,14 +8,31 @@ class xt implements abcd.Abstractvt.a {
     }
 
     private void j6(abcd.Abstractvt r6) {
-        abcd.cs r0 = r6.tp();
-        int r1 = r0.size();
+        abcd.cs r0 = null;
+        int r1 = 0;
         int r2 = 0;
-    L3:
-        if (r2 >= r1) goto L5;
-        abcd.yt.DW(this.j6)[r0.get(r2).we()].add(r6);
-        r2 = r2 + 1;
-        goto L3
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = r6.tp();
+                    r1 = r0.size();
+                    r2 = 0;
+                    $pc0 = 3; continue $sw0;
+                }
+                case 3: {
+                    if (r2 >= r1) { $pc0 = 5; continue $sw0; }
+                    abcd.yt.DW(this.j6)[r0.get(r2).we()].add(r6);
+                    r2 = r2 + 1;
+                    { $pc0 = 3; continue $sw0; }
+                }
+                case 5: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

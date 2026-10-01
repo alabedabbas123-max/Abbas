@@ -20,13 +20,26 @@ public final class GC<S extends abcd.CC> extends abcd.CC {
     }
 
     public static <S extends abcd.CC> abcd.kC j6(abcd.kC r2, GC<S> r3, GC<S> r4) {
-        java.util.Iterator<abcd.jC> r0 = r2.iterator();
-    L4:
-        if (r0.hasNext() == false) goto L5;
-        j6(r0.next(), r3, r4);
-        goto L4
-    L5:
-        return r2;
+        java.util.Iterator<abcd.jC> r0 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = r2.iterator();
+                    $pc0 = 4; continue $sw0;
+                }
+                case 4: {
+                    if (r0.hasNext() == false) { $pc0 = 5; continue $sw0; }
+                    j6(r0.next(), r3, r4);
+                    { $pc0 = 4; continue $sw0; }
+                }
+                case 5: {
+                    return r2;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static <S extends abcd.CC> void j6(abcd.jC r1, GC<S> r2, GC<S> r3) {

@@ -10,11 +10,21 @@ public class rw {
     }
 
     public static boolean DW() {
-        if (j6("last_run_version", -1) == com.appfour.backbone.api.Api.getLastUpdateTime()) goto L6;
-        DW("last_run_version", com.appfour.backbone.api.Api.getLastUpdateTime());
-        return true;
-    L6:
-        return false;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (j6("last_run_version", -1) == com.appfour.backbone.api.Api.getLastUpdateTime()) { $pc0 = 6; continue $sw0; }
+                    DW("last_run_version", com.appfour.backbone.api.Api.getLastUpdateTime());
+                    return true;
+                }
+                case 6: {
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static boolean DW(abcd.lw r2) {
@@ -50,11 +60,23 @@ public class rw {
     }
 
     public static boolean j6() {
-        boolean r1 = j6("is_first_run", true);
-        if (r1 == false) goto L5;
-        DW("is_first_run", false);
-    L5:
-        return r1;
+        boolean r1 = false;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    r1 = j6("is_first_run", true);
+                    if (r1 == false) { $pc1 = 5; continue $sw1; }
+                    DW("is_first_run", false);
+                    $pc1 = 5; continue $sw1;
+                }
+                case 5: {
+                    return r1;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     private static boolean j6(java.lang.String r1, boolean r2) {

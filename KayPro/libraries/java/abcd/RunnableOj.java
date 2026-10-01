@@ -21,19 +21,46 @@ class RunnableOj implements java.lang.Runnable {
     @Override
     @abcd.Interfacesu(method = 2518656817458446949L)
     public void run() {
-    L10:
-        th = move-exception;
-        if (DW == false) goto L14;
-        abcd.wu.j6(th, -2974048390518603420L, this);
-    L14:
-        throw th;
-    L4:
-        if (j6 == false) goto L7;
-        abcd.wu.j6(-2974048390518603420L, this);     // Catch: java.lang.Throwable -> L10
-    L7:
-        if (abcd.Kj.DW(this.FH.Hw) != this.FH) goto L17;
-        abcd.Kj.j6(this.FH.Hw);     // Catch: java.lang.Throwable -> L10
-        abcd.Kj.j6(this.FH.Hw, null);     // Catch: java.lang.Throwable -> L10
-        return;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 4;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 10: {
+                    th = $ex0;
+                    if (DW == false) { $pc0 = 14; continue $sw0; }
+                    abcd.wu.j6(th, -2974048390518603420L, this);
+                    $pc0 = 14; continue $sw0;
+                }
+                case 14: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (j6 == false) { $pc0 = 7; continue $sw0; }
+                    try {
+                        abcd.wu.j6(-2974048390518603420L, this);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 10; continue $sw0;
+                    }
+                    $pc0 = 7; continue $sw0;
+                }
+                case 7: {
+                    if (abcd.Kj.DW(this.FH.Hw) != this.FH) { $pc0 = 17; continue $sw0; }
+                    try {
+                        abcd.Kj.j6(this.FH.Hw);
+                        abcd.Kj.j6(this.FH.Hw, null);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 10; continue $sw0;
+                    }
+                    return;
+                }
+                case 17: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

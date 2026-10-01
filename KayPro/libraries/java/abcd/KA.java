@@ -8,15 +8,26 @@ public class KA extends java.io.OutputStream {
     java.io.OutputStream v5;
 
     public KA(int r4, java.io.OutputStream r5) {
-        this.j6 = 0;
-        this.DW = new java.util.zip.CRC32();
-        this.FH = 0;
-        this.Hw = r5;
-        if (r4 == 0) goto L5;
-        this.v5 = new java.util.zip.DeflaterOutputStream(r5, new java.util.zip.Deflater(9, true));
-        return;
-    L5:
-        this.v5 = r5;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    this.j6 = 0;
+                    this.DW = new java.util.zip.CRC32();
+                    this.FH = 0;
+                    this.Hw = r5;
+                    if (r4 == 0) { $pc0 = 5; continue $sw0; }
+                    this.v5 = new java.util.zip.DeflaterOutputStream(r5, new java.util.zip.Deflater(9, true));
+                    return;
+                }
+                case 5: {
+                    this.v5 = r5;
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public int DW() {

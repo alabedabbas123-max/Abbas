@@ -60,81 +60,116 @@ public final class AppDetails implements android.os.Parcelable {
     }
 
     public boolean equals(java.lang.Object r8) {
-        if (this != r8) goto L6;
-        return true;
-    L6:
-        if ((r8 instanceof tv.ouya.console.api.store.AppDetails) == true) goto L8;
-        return false;
-    L8:
-        tv.ouya.console.api.store.AppDetails r9 = (tv.ouya.console.api.store.AppDetails) r8;
-        if (this.DW.equals(r9.DW) == true) goto L12;
-        return false;
-    L12:
-        if (this.FH.equals(r9.FH) == true) goto L15;
-        return false;
-    L15:
-        if (this.j6.equals(r9.j6) == true) goto L18;
-        return false;
-    L18:
-        if (this.Hw.equals(r9.Hw) == true) goto L21;
-        return false;
-    L21:
-        if (this.v5.equals(r9.v5) == true) goto L24;
-        return false;
-    L24:
-        if (this.Zo.equals(r9.Zo) == true) goto L27;
-        return false;
-    L27:
-        if (this.VH.equals(r9.VH) == true) goto L30;
-        return false;
-    L30:
-        if (this.u7.equals(r9.u7) == true) goto L33;
-        return false;
-    L33:
-        if (this.tp.equals(r9.tp) == true) goto L36;
-        return false;
-    L36:
-        if (this.EQ.equals(r9.EQ) == true) goto L39;
-        return false;
-    L39:
-        if (this.we.equals(r9.we) == true) goto L42;
-        return false;
-    L42:
-        if (this.J0 == r9.J0) goto L45;
-        return false;
-    L45:
-        if (this.J8.equals(r9.J8) == true) goto L48;
-        return false;
-    L48:
-        if (this.Ws == r9.Ws) goto L51;
-        return false;
-    L51:
-        if (this.QX == r9.QX) goto L53;
-        return false;
-    L53:
-        java.lang.String r1 = this.XL;
-        if (r1 != null) goto L59;
-        if (r9.XL == null) goto L61;
-        return false;
-    L61:
-        tv.ouya.console.api.Product r2 = this.aM;
-        if (r2 != null) goto L67;
-        if (r9.aM == null) goto L70;
-        return false;
-    L70:
-        if (this.j3 == r9.j3) goto L73;
-        return false;
-    L73:
-        if (this.Mr == r9.Mr) goto L75;
-        return false;
-    L75:
-        return true;
-    L67:
-        if (r2.equals(r9.aM) == true) goto L70;
-        return false;
-    L59:
-        if (r1.equals(r9.XL) == true) goto L61;
-        return false;
+        tv.ouya.console.api.store.AppDetails r9 = null;
+        java.lang.String r1 = null;
+        tv.ouya.console.api.Product r2 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (this != r8) { $pc0 = 6; continue $sw0; }
+                    return true;
+                }
+                case 6: {
+                    if ((r8 instanceof tv.ouya.console.api.store.AppDetails) == true) { $pc0 = 8; continue $sw0; }
+                    return false;
+                }
+                case 8: {
+                    r9 = (tv.ouya.console.api.store.AppDetails) r8;
+                    if (this.DW.equals(r9.DW) == true) { $pc0 = 12; continue $sw0; }
+                    return false;
+                }
+                case 12: {
+                    if (this.FH.equals(r9.FH) == true) { $pc0 = 15; continue $sw0; }
+                    return false;
+                }
+                case 15: {
+                    if (this.j6.equals(r9.j6) == true) { $pc0 = 18; continue $sw0; }
+                    return false;
+                }
+                case 18: {
+                    if (this.Hw.equals(r9.Hw) == true) { $pc0 = 21; continue $sw0; }
+                    return false;
+                }
+                case 21: {
+                    if (this.v5.equals(r9.v5) == true) { $pc0 = 24; continue $sw0; }
+                    return false;
+                }
+                case 24: {
+                    if (this.Zo.equals(r9.Zo) == true) { $pc0 = 27; continue $sw0; }
+                    return false;
+                }
+                case 27: {
+                    if (this.VH.equals(r9.VH) == true) { $pc0 = 30; continue $sw0; }
+                    return false;
+                }
+                case 30: {
+                    if (this.u7.equals(r9.u7) == true) { $pc0 = 33; continue $sw0; }
+                    return false;
+                }
+                case 33: {
+                    if (this.tp.equals(r9.tp) == true) { $pc0 = 36; continue $sw0; }
+                    return false;
+                }
+                case 36: {
+                    if (this.EQ.equals(r9.EQ) == true) { $pc0 = 39; continue $sw0; }
+                    return false;
+                }
+                case 39: {
+                    if (this.we.equals(r9.we) == true) { $pc0 = 42; continue $sw0; }
+                    return false;
+                }
+                case 42: {
+                    if (this.J0 == r9.J0) { $pc0 = 45; continue $sw0; }
+                    return false;
+                }
+                case 45: {
+                    if (this.J8.equals(r9.J8) == true) { $pc0 = 48; continue $sw0; }
+                    return false;
+                }
+                case 48: {
+                    if (this.Ws == r9.Ws) { $pc0 = 51; continue $sw0; }
+                    return false;
+                }
+                case 51: {
+                    if (this.QX == r9.QX) { $pc0 = 53; continue $sw0; }
+                    return false;
+                }
+                case 53: {
+                    r1 = this.XL;
+                    if (r1 != null) { $pc0 = 59; continue $sw0; }
+                    if (r9.XL == null) { $pc0 = 61; continue $sw0; }
+                    return false;
+                }
+                case 61: {
+                    r2 = this.aM;
+                    if (r2 != null) { $pc0 = 67; continue $sw0; }
+                    if (r9.aM == null) { $pc0 = 70; continue $sw0; }
+                    return false;
+                }
+                case 70: {
+                    if (this.j3 == r9.j3) { $pc0 = 73; continue $sw0; }
+                    return false;
+                }
+                case 73: {
+                    if (this.Mr == r9.Mr) { $pc0 = 75; continue $sw0; }
+                    return false;
+                }
+                case 75: {
+                    return true;
+                }
+                case 67: {
+                    if (r2.equals(r9.aM) == true) { $pc0 = 70; continue $sw0; }
+                    return false;
+                }
+                case 59: {
+                    if (r1.equals(r9.XL) == true) { $pc0 = 61; continue $sw0; }
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public int hashCode() {
@@ -143,36 +178,52 @@ public final class AppDetails implements android.os.Parcelable {
 
     @Override
     public void writeToParcel(android.os.Parcel r3, int r4) {
-        r3.writeString(this.j6);
-        r3.writeString(this.DW);
-        r3.writeString(this.FH);
-        r3.writeString(this.Hw);
-        r3.writeLong(this.v5.longValue());
-        r3.writeString(this.Zo);
-        r3.writeString(this.VH);
-        r3.writeStringList(this.gn);
-        r3.writeLong(this.u7.longValue());
-        r3.writeString(this.tp);
-        r3.writeString(this.EQ);
-        r3.writeString(this.we);
-        r3.writeByte(this.J0 ? 1 : 0);
-        r3.writeString(this.J8);
-        r3.writeByte(this.Ws ? 1 : 0);
-        r3.writeByte(this.QX ? 1 : 0);
-        r3.writeString(this.XL);
-        if (this.aM == null) goto L5;
-        int r0 = 1;
-    L6:
-        r3.writeInt(r0);
-        tv.ouya.console.api.Product r1 = this.aM;
-        if (r1 == null) goto L9;
-        r1.writeToParcel(r3, r4);
-    L9:
-        r3.writeDouble(this.j3);
-        r3.writeInt(this.Mr);
-        return;
-    L5:
-        r0 = 0;
-        goto L6
+        int r0 = 0;
+        tv.ouya.console.api.Product r1 = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    r3.writeString(this.j6);
+                    r3.writeString(this.DW);
+                    r3.writeString(this.FH);
+                    r3.writeString(this.Hw);
+                    r3.writeLong(this.v5.longValue());
+                    r3.writeString(this.Zo);
+                    r3.writeString(this.VH);
+                    r3.writeStringList(this.gn);
+                    r3.writeLong(this.u7.longValue());
+                    r3.writeString(this.tp);
+                    r3.writeString(this.EQ);
+                    r3.writeString(this.we);
+                    r3.writeByte(this.J0 ? 1 : 0);
+                    r3.writeString(this.J8);
+                    r3.writeByte(this.Ws ? 1 : 0);
+                    r3.writeByte(this.QX ? 1 : 0);
+                    r3.writeString(this.XL);
+                    if (this.aM == null) { $pc1 = 5; continue $sw1; }
+                    r0 = 1;
+                    $pc1 = 6; continue $sw1;
+                }
+                case 6: {
+                    r3.writeInt(r0);
+                    r1 = this.aM;
+                    if (r1 == null) { $pc1 = 9; continue $sw1; }
+                    r1.writeToParcel(r3, r4);
+                    $pc1 = 9; continue $sw1;
+                }
+                case 9: {
+                    r3.writeDouble(this.j3);
+                    r3.writeInt(this.Mr);
+                    return;
+                }
+                case 5: {
+                    r0 = 0;
+                    { $pc1 = 6; continue $sw1; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

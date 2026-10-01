@@ -11,12 +11,28 @@ class Yy implements java.lang.Runnable {
 
     @Override
     public void run() {
-        this.j6.run();     // Catch: java.lang.Throwable -> L5
-        this.DW.j6();
-        return;
-    L5:
-        th = move-exception;
-        this.DW.j6();
-        throw th;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    try {
+                        this.j6.run();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 5; continue $sw0;
+                    }
+                    this.DW.j6();
+                    return;
+                }
+                case 5: {
+                    th = $ex0;
+                    this.DW.j6();
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

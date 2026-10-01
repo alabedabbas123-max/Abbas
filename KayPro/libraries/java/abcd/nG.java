@@ -15,9 +15,19 @@ class nG implements abcd.MF {
 
     @Override
     public abcd.AbstractiG next() {
-        if (this.DW.hasNext() == true) goto L7;
-        return null;
-    L7:
-        return (abcd.AbstractiG) this.DW.next();
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (this.DW.hasNext() == true) { $pc0 = 7; continue $sw0; }
+                    return null;
+                }
+                case 7: {
+                    return (abcd.AbstractiG) this.DW.next();
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

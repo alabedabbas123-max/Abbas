@@ -29,17 +29,42 @@ class hb extends com.aide.common.Abstractma {
 
     @abcd.Interfacesu(method = -2767068283982644797L)
     private void j6(android.app.Activity r11, android.widget.LinearLayout r12) {
-    L7:
-        th = move-exception;
-        if (VH == false) goto L11;
-        abcd.wu.j6(th, -530578913367934144L, this, r11, r12);
-    L11:
-        throw th;
-    L3:
-        if (Zo == false) goto L5;
-        abcd.wu.j6(-530578913367934144L, this, r11, r12);     // Catch: java.lang.Throwable -> L7
-    L5:
-        com.aide.ui.trainer.n.j6(r12, com.aide.ui.U.SI().DW(), this.u7, false, new com.aide.ui.eb(this, r11), new com.aide.ui.fb(this, r11, r12), null, new com.aide.ui.gb(this, r11), null);     // Catch: java.lang.Throwable -> L7
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 3;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 7: {
+                    th = $ex0;
+                    if (VH == false) { $pc0 = 11; continue $sw0; }
+                    abcd.wu.j6(th, -530578913367934144L, this, r11, r12);
+                    $pc0 = 11; continue $sw0;
+                }
+                case 11: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 3: {
+                    if (Zo == false) { $pc0 = 5; continue $sw0; }
+                    try {
+                        abcd.wu.j6(-530578913367934144L, this, r11, r12);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 7; continue $sw0;
+                    }
+                    $pc0 = 5; continue $sw0;
+                }
+                case 5: {
+                    try {
+                        com.aide.ui.trainer.n.j6(r12, com.aide.ui.U.SI().DW(), this.u7, false, new com.aide.ui.eb(this, r11), new com.aide.ui.fb(this, r11, r12), null, new com.aide.ui.gb(this, r11), null);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 7; continue $sw0;
+                    }
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     static void j6(com.aide.ui.hb r0, android.app.Activity r1, android.widget.LinearLayout r2) {
@@ -54,20 +79,45 @@ class hb extends com.aide.common.Abstractma {
     @Override
     @abcd.Interfacesu(method = -982706334512133296L)
     protected android.app.Dialog j6(android.app.Activity r6) {
-    L8:
-        th = move-exception;
-        if (VH == false) goto L12;
-        abcd.wu.j6(th, -1588154207801548053L, this, r6);
-    L12:
-        throw th;
-    L4:
-        if (Zo == false) goto L6;
-        abcd.wu.j6(-1588154207801548053L, this, r6);     // Catch: java.lang.Throwable -> L8
-    L6:
-        android.view.View r2 = android.view.LayoutInflater.from(r6).inflate(com.almlkaide.kaypro.R.layout.trainer_dialog, null);     // Catch: java.lang.Throwable -> L8
-        j6(r6, (android.widget.LinearLayout) r2.findViewById(com.almlkaide.kaypro.R.id.trainerDialogLayout));     // Catch: java.lang.Throwable -> L8
-        this.gn = new android.app.AlertDialog.Builder(r6).setTitle(com.almlkaide.kaypro.R.string.trainer_option_question).setView(r2).setCancelable(false).create();     // Catch: java.lang.Throwable -> L8
-        this.gn.setOnShowListener(new com.aide.ui.db(this, r6));     // Catch: java.lang.Throwable -> L8
-        return this.gn;
+        android.view.View r2 = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = 4;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case 8: {
+                    th = $ex1;
+                    if (VH == false) { $pc1 = 12; continue $sw1; }
+                    abcd.wu.j6(th, -1588154207801548053L, this, r6);
+                    $pc1 = 12; continue $sw1;
+                }
+                case 12: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (Zo == false) { $pc1 = 6; continue $sw1; }
+                    try {
+                        abcd.wu.j6(-1588154207801548053L, this, r6);
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        $pc1 = 8; continue $sw1;
+                    }
+                    $pc1 = 6; continue $sw1;
+                }
+                case 6: {
+                    try {
+                        r2 = android.view.LayoutInflater.from(r6).inflate(com.almlkaide.kaypro.R.layout.trainer_dialog, null);
+                        j6(r6, (android.widget.LinearLayout) r2.findViewById(com.almlkaide.kaypro.R.id.trainerDialogLayout));
+                        this.gn = new android.app.AlertDialog.Builder(r6).setTitle(com.almlkaide.kaypro.R.string.trainer_option_question).setView(r2).setCancelable(false).create();
+                        this.gn.setOnShowListener(new com.aide.ui.db(this, r6));
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        $pc1 = 8; continue $sw1;
+                    }
+                    return this.gn;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

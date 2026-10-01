@@ -27,26 +27,67 @@ class ViewOnClickListenere implements android.view.View.OnClickListener {
     @Override
     @abcd.Interfacesu(method = -607949149793948703L)
     public void onClick(android.view.View r8) {
-    L12:
-        th = move-exception;
-        if (DW == false) goto L17;
-        abcd.wu.j6(th, -3758391342628997560L, this, r8);
-    L17:
-        throw th;
-    L4:
-        if (j6 == false) goto L6;
-        abcd.wu.j6(-3758391342628997560L, this, r8);     // Catch: java.lang.Throwable -> L12
-    L6:
-        android.widget.PopupMenu r2 = new android.widget.PopupMenu(this.v5.FH, this.FH);     // Catch: java.lang.Throwable -> L12
-        android.view.Menu r3 = r2.getMenu();     // Catch: java.lang.Throwable -> L12
+        android.widget.PopupMenu r2 = null;
+        android.view.Menu r3 = null;
         int r5 = 0;
-    L8:
-        if (r5 >= this.Hw.getTabCount()) goto L10;
-        r3.add(0, r5, 0, this.Hw.getTabAt(r5).getText());     // Catch: java.lang.Throwable -> L12
-        r5 = r5 + 1;     // Catch: java.lang.Throwable -> L12
-        goto L8
-    L10:
-        r2.setOnMenuItemClickListener(new com.aide.common.ClassD(this));     // Catch: java.lang.Throwable -> L12
-        r2.show();     // Catch: java.lang.Throwable -> L12
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 4;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 12: {
+                    th = $ex0;
+                    if (DW == false) { $pc0 = 17; continue $sw0; }
+                    abcd.wu.j6(th, -3758391342628997560L, this, r8);
+                    $pc0 = 17; continue $sw0;
+                }
+                case 17: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (j6 == false) { $pc0 = 6; continue $sw0; }
+                    try {
+                        abcd.wu.j6(-3758391342628997560L, this, r8);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 12; continue $sw0;
+                    }
+                    $pc0 = 6; continue $sw0;
+                }
+                case 6: {
+                    try {
+                        r2 = new android.widget.PopupMenu(this.v5.FH, this.FH);
+                        r3 = r2.getMenu();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 12; continue $sw0;
+                    }
+                    r5 = 0;
+                    $pc0 = 8; continue $sw0;
+                }
+                case 8: {
+                    if (r5 >= this.Hw.getTabCount()) { $pc0 = 10; continue $sw0; }
+                    try {
+                        r3.add(0, r5, 0, this.Hw.getTabAt(r5).getText());
+                        r5 = r5 + 1;
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 12; continue $sw0;
+                    }
+                    { $pc0 = 8; continue $sw0; }
+                }
+                case 10: {
+                    try {
+                        r2.setOnMenuItemClickListener(new com.aide.common.ClassD(this));
+                        r2.show();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 12; continue $sw0;
+                    }
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

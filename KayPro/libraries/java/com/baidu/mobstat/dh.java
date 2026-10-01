@@ -129,7 +129,7 @@ public class dh {
     /* JADX WARN: Type inference failed for: r4v2 */
     /* JADX WARN: Type inference failed for: r4v4, types: [java.io.ByteArrayOutputStream, java.io.OutputStream] */
     public static byte[] m6731b(byte[] bArr, int i, int i2, int i3) throws Throwable {
-        ?? r2 = 3;
+        java.lang.Object r2 = 3;
         if (bArr == null) {
             throw new NullPointerException("Cannot serialize a null array.");
         }
@@ -140,11 +140,11 @@ public class dh {
             throw new IllegalArgumentException("Cannot have length offset: " + i2);
         }
         int i4 = i + i2;
-        ?? length = bArr.length;
+        java.lang.Object length = bArr.length;
         if (i4 > length) {
             throw new IllegalArgumentException(String.format("Cannot have offset of %d and length of %d with array of length %d", Integer.valueOf(i), Integer.valueOf(i2), Integer.valueOf(bArr.length)));
         }
-        ?? aVar = i3 & 2;
+        java.lang.Object aVar = i3 & 2;
         try {
             if (aVar == 0) {
                 boolean z = (i3 & 8) != 0;

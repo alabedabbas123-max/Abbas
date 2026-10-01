@@ -196,17 +196,29 @@ public class ar {
     }
 
     public a.b.c.ar U(int r2) {
-        if (r2 < (-1)) goto L9;
-        if (r2 > 5) goto L9;
-        return a(r2);
-    L9:
-        if (r2 != ((byte) r2)) goto L12;
-        return e(r2);
-    L12:
-        if (r2 != ((short) r2)) goto L17;
-        return f(r2);
-    L17:
-        return g(r2);
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (r2 < (-1)) { $pc0 = 9; continue $sw0; }
+                    if (r2 > 5) { $pc0 = 9; continue $sw0; }
+                    return a(r2);
+                }
+                case 9: {
+                    if (r2 != ((byte) r2)) { $pc0 = 12; continue $sw0; }
+                    return e(r2);
+                }
+                case 12: {
+                    if (r2 != ((short) r2)) { $pc0 = 17; continue $sw0; }
+                    return f(r2);
+                }
+                case 17: {
+                    return g(r2);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public a.b.c.ar V() {
@@ -246,27 +258,41 @@ public class ar {
     }
 
     public a.b.c.ar a(int r2, char r3) {
-        switch(r3) {
-            case 66: goto L9;
-            case 67: goto L9;
-            case 68: goto L12;
-            case 70: goto L11;
-            case 73: goto L9;
-            case 74: goto L10;
-            case 83: goto L9;
-            case 90: goto L9;
-            default: goto L4;
-        };
-    L4:
-        return n(r2);
-    L9:
-        return j(r2);
-    L10:
-        return k(r2);
-    L11:
-        return l(r2);
-    L12:
-        return m(r2);
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    switch(r3) {
+                        case 66: { $pc1 = 9; continue $sw1; }
+                        case 67: { $pc1 = 9; continue $sw1; }
+                        case 68: { $pc1 = 12; continue $sw1; }
+                        case 70: { $pc1 = 11; continue $sw1; }
+                        case 73: { $pc1 = 9; continue $sw1; }
+                        case 74: { $pc1 = 10; continue $sw1; }
+                        case 83: { $pc1 = 9; continue $sw1; }
+                        case 90: { $pc1 = 9; continue $sw1; }
+                        default: { $pc1 = 4; continue $sw1; }
+                    };
+                }
+                case 4: {
+                    return n(r2);
+                }
+                case 9: {
+                    return j(r2);
+                }
+                case 10: {
+                    return k(r2);
+                }
+                case 11: {
+                    return l(r2);
+                }
+                case 12: {
+                    return m(r2);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public a.b.c.ar a(int r3, int r4) {
@@ -314,15 +340,29 @@ public class ar {
     }
 
     public a.b.c.ar a(a.b.d.c[] r4) {
-        int r1 = r4.length;
+        int r1 = 0;
         int r0 = 0;
-    L3:
-        if (r0 >= r1) goto L5;
-        d(r4[r0]);
-        r0 = r0 + 1;
-        goto L3
-    L5:
-        return this;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    r1 = r4.length;
+                    r0 = 0;
+                    $pc2 = 3; continue $sw2;
+                }
+                case 3: {
+                    if (r0 >= r1) { $pc2 = 5; continue $sw2; }
+                    d(r4[r0]);
+                    r0 = r0 + 1;
+                    { $pc2 = 3; continue $sw2; }
+                }
+                case 5: {
+                    return this;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public a.b.c.ar aA() {
@@ -458,19 +498,39 @@ public class ar {
     }
 
     public a.b.c.ar b(double r4) {
-        if (r4 == 0.0d) goto L7;
-        if (r4 == 1.0d) goto L7;
-        return a(r4);
-    L7:
-        return d((int) r4);
+        java.lang.Throwable $ex3 = null;
+        int $pc3 = -1;
+        $sw3: while (true) {
+            switch ($pc3) {
+                case -1: {
+                    if (r4 == 0.0d) { $pc3 = 7; continue $sw3; }
+                    if (r4 == 1.0d) { $pc3 = 7; continue $sw3; }
+                    return a(r4);
+                }
+                case 7: {
+                    return d((int) r4);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public a.b.c.ar b(float r2) {
-        if (r2 == 0.0f) goto L7;
-        if (r2 == 1.0f) goto L7;
-        return a(r2);
-    L7:
-        return c((int) r2);
+        java.lang.Throwable $ex4 = null;
+        int $pc4 = -1;
+        $sw4: while (true) {
+            switch ($pc4) {
+                case -1: {
+                    if (r2 == 0.0f) { $pc4 = 7; continue $sw4; }
+                    if (r2 == 1.0f) { $pc4 = 7; continue $sw4; }
+                    return a(r2);
+                }
+                case 7: {
+                    return c((int) r2);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public a.b.c.ar b(int r3) {
@@ -478,27 +538,41 @@ public class ar {
     }
 
     public a.b.c.ar b(int r2, char r3) {
-        switch(r3) {
-            case 66: goto L9;
-            case 67: goto L9;
-            case 68: goto L12;
-            case 70: goto L11;
-            case 73: goto L9;
-            case 74: goto L10;
-            case 83: goto L9;
-            case 90: goto L9;
-            default: goto L4;
-        };
-    L4:
-        return s(r2);
-    L9:
-        return o(r2);
-    L10:
-        return p(r2);
-    L11:
-        return q(r2);
-    L12:
-        return r(r2);
+        java.lang.Throwable $ex5 = null;
+        int $pc5 = -1;
+        $sw5: while (true) {
+            switch ($pc5) {
+                case -1: {
+                    switch(r3) {
+                        case 66: { $pc5 = 9; continue $sw5; }
+                        case 67: { $pc5 = 9; continue $sw5; }
+                        case 68: { $pc5 = 12; continue $sw5; }
+                        case 70: { $pc5 = 11; continue $sw5; }
+                        case 73: { $pc5 = 9; continue $sw5; }
+                        case 74: { $pc5 = 10; continue $sw5; }
+                        case 83: { $pc5 = 9; continue $sw5; }
+                        case 90: { $pc5 = 9; continue $sw5; }
+                        default: { $pc5 = 4; continue $sw5; }
+                    };
+                }
+                case 4: {
+                    return s(r2);
+                }
+                case 9: {
+                    return o(r2);
+                }
+                case 10: {
+                    return p(r2);
+                }
+                case 11: {
+                    return q(r2);
+                }
+                case 12: {
+                    return r(r2);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public a.b.c.ar b(int r2, java.lang.String r3) {
@@ -506,11 +580,21 @@ public class ar {
     }
 
     public a.b.c.ar b(long r4) {
-        if (r4 == 0) goto L7;
-        if (r4 == 1) goto L7;
-        return a(r4);
-    L7:
-        return b((int) r4);
+        java.lang.Throwable $ex6 = null;
+        int $pc6 = -1;
+        $sw6: while (true) {
+            switch ($pc6) {
+                case -1: {
+                    if (r4 == 0) { $pc6 = 7; continue $sw6; }
+                    if (r4 == 1) { $pc6 = 7; continue $sw6; }
+                    return a(r4);
+                }
+                case 7: {
+                    return b((int) r4);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public a.b.c.ar b(a.b.c r7, a.b.i r8) {

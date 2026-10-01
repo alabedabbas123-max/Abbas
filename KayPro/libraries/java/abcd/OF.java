@@ -27,17 +27,37 @@ abstract class OF extends abcd.LF {
         }
 
         boolean FH() {
-            if (this.FH != this.Hw) goto L6;
-            return true;
-        L6:
-            return false;
+            java.lang.Throwable $ex0 = null;
+            int $pc0 = -1;
+            $sw0: while (true) {
+                switch ($pc0) {
+                    case -1: {
+                        if (this.FH != this.Hw) { $pc0 = 6; continue $sw0; }
+                        return true;
+                    }
+                    case 6: {
+                        return false;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         boolean Hw() {
-            if (this.Hw != 256) goto L6;
-            return true;
-        L6:
-            return false;
+            java.lang.Throwable $ex1 = null;
+            int $pc1 = -1;
+            $sw1: while (true) {
+                switch ($pc1) {
+                    case -1: {
+                        if (this.Hw != 256) { $pc1 = 6; continue $sw1; }
+                        return true;
+                    }
+                    case 6: {
+                        return false;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         void VH() {
@@ -58,10 +78,20 @@ abstract class OF extends abcd.LF {
         }
 
         boolean j6() {
-            if (this.FH <= 0) goto L6;
-            return true;
-        L6:
-            return false;
+            java.lang.Throwable $ex2 = null;
+            int $pc2 = -1;
+            $sw2: while (true) {
+                switch ($pc2) {
+                    case -1: {
+                        if (this.FH <= 0) { $pc2 = 6; continue $sw2; }
+                        return true;
+                    }
+                    case 6: {
+                        return false;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         abcd.dG v5() {
@@ -79,13 +109,24 @@ abstract class OF extends abcd.LF {
         }
 
         abcd.OF.a j6() {
-            abcd.OF.a r0 = this.j6;
-            if (r0 == null) goto L5;
-            this.j6 = r0.j6;
-            r0.DW();
-            return r0;
-        L5:
-            return new abcd.OF.a();
+            abcd.OF.a r0 = null;
+            java.lang.Throwable $ex3 = null;
+            int $pc3 = -1;
+            $sw3: while (true) {
+                switch ($pc3) {
+                    case -1: {
+                        r0 = this.j6;
+                        if (r0 == null) { $pc3 = 5; continue $sw3; }
+                        this.j6 = r0.j6;
+                        r0.DW();
+                        return r0;
+                    }
+                    case 5: {
+                        return new abcd.OF.a();
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         void j6(abcd.OF.a r2) {
@@ -99,14 +140,29 @@ abstract class OF extends abcd.LF {
     }
 
     OF(abcd.XF r2) {
-        this.FH = new abcd.OF.b();
-        this.DW = r2.DW();
-        r2.j6(this);
-    L3:
-        abcd.dG r0 = r2.j6();
-        if (r0 == null) goto L5;
-        j6(r0);
-        goto L3
+        abcd.dG r0 = null;
+        java.lang.Throwable $ex4 = null;
+        int $pc4 = -1;
+        $sw4: while (true) {
+            switch ($pc4) {
+                case -1: {
+                    this.FH = new abcd.OF.b();
+                    this.DW = r2.DW();
+                    r2.j6(this);
+                    $pc4 = 3; continue $sw4;
+                }
+                case 3: {
+                    r0 = r2.j6();
+                    if (r0 == null) { $pc4 = 5; continue $sw4; }
+                    j6(r0);
+                    { $pc4 = 3; continue $sw4; }
+                }
+                case 5: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

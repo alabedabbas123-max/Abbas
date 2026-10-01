@@ -1,6 +1,6 @@
 package io.fabric.sdk.android.services.common;
 
-public final enum m extends java.lang.Enum<io.fabric.sdk.android.services.common.m> {
+public final class m extends com.almlkaide.kaypro.internal.EnumBase {
     public static final io.fabric.sdk.android.services.common.m DW = null;
     public static final io.fabric.sdk.android.services.common.m FH = null;
     public static final io.fabric.sdk.android.services.common.m Hw = null;
@@ -22,17 +22,28 @@ public final enum m extends java.lang.Enum<io.fabric.sdk.android.services.common
     }
 
     public static io.fabric.sdk.android.services.common.m j6(java.lang.String r1) {
-        if ("io.crash.air".equals(r1) == true) goto L5;
-        if (r1 == null) goto L10;
-        return Hw;
-    L10:
-        return j6;
-    L5:
-        return FH;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if ("io.crash.air".equals(r1) == true) { $pc0 = 5; continue $sw0; }
+                    if (r1 == null) { $pc0 = 10; continue $sw0; }
+                    return Hw;
+                }
+                case 10: {
+                    return j6;
+                }
+                case 5: {
+                    return FH;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static io.fabric.sdk.android.services.common.m valueOf(java.lang.String r1) {
-        return (io.fabric.sdk.android.services.common.m) java.lang.Enum.valueOf(io.fabric.sdk.android.services.common.m.class, r1);
+        return (io.fabric.sdk.android.services.common.m) com.almlkaide.kaypro.internal.EnumBase.valueOf(io.fabric.sdk.android.services.common.m.values(), r1);
     }
 
     public static io.fabric.sdk.android.services.common.m[] values() {

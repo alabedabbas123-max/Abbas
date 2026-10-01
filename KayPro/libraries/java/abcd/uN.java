@@ -155,168 +155,299 @@ public class uN implements abcd.InterfacetN {
     }
 
     private boolean j6(abcd.qN r5, abcd.qN r6) {
-        if (r5 != r6) goto L6;
-        return true;
-    L6:
-        if (r5 != null) goto L8;
-        return false;
-    L8:
-        if (r6 != null) goto L11;
-        return false;
-    L11:
-        if (r5.v5().equals(r6.v5()) == true) goto L14;
-        return false;
-    L14:
-        if (abcd.vN.j6(abcd.vN.j6(r5.Zo())).equals(abcd.vN.j6(abcd.vN.j6(r6.Zo()))) == true) goto L16;
-        return false;
-    L16:
-        return true;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (r5 != r6) { $pc0 = 6; continue $sw0; }
+                    return true;
+                }
+                case 6: {
+                    if (r5 != null) { $pc0 = 8; continue $sw0; }
+                    return false;
+                }
+                case 8: {
+                    if (r6 != null) { $pc0 = 11; continue $sw0; }
+                    return false;
+                }
+                case 11: {
+                    if (r5.v5().equals(r6.v5()) == true) { $pc0 = 14; continue $sw0; }
+                    return false;
+                }
+                case 14: {
+                    if (abcd.vN.j6(abcd.vN.j6(r5.Zo())).equals(abcd.vN.j6(abcd.vN.j6(r6.Zo()))) == true) { $pc0 = 16; continue $sw0; }
+                    return false;
+                }
+                case 16: {
+                    return true;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     private boolean j6(boolean r5, abcd.rN r6, abcd.rN[] r7) {
-        if (r5 == false) goto L14;
-        int r8 = r7.length - 1;
-    L5:
-        if (r8 < 0) goto L17;
-        if (r7[r8] == null) goto L13;
-        if (j6(r6, r7[r8]) == false) goto L13;
-        r7[r8] = null;
-        return true;
-    L13:
-        r8 = r8 - 1;
-    L17:
-        return false;
-    L14:
+        int r8 = 0;
         int r9 = 0;
-    L16:
-        if (r9 == r7.length) goto L17;
-        if (r7[r9] == null) goto L24;
-        if (j6(r6, r7[r9]) == false) goto L24;
-        r7[r9] = null;
-        return true;
-    L24:
-        r9 = r9 + 1;
-        goto L16
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if (r5 == false) { $pc1 = 14; continue $sw1; }
+                    r8 = r7.length - 1;
+                    $pc1 = 5; continue $sw1;
+                }
+                case 5: {
+                    if (r8 < 0) { $pc1 = 17; continue $sw1; }
+                    if (r7[r8] == null) { $pc1 = 13; continue $sw1; }
+                    if (j6(r6, r7[r8]) == false) { $pc1 = 13; continue $sw1; }
+                    r7[r8] = null;
+                    return true;
+                }
+                case 13: {
+                    r8 = r8 - 1;
+                    $pc1 = 17; continue $sw1;
+                }
+                case 17: {
+                    return false;
+                }
+                case 14: {
+                    r9 = 0;
+                    $pc1 = 16; continue $sw1;
+                }
+                case 16: {
+                    if (r9 == r7.length) { $pc1 = 17; continue $sw1; }
+                    if (r7[r9] == null) { $pc1 = 24; continue $sw1; }
+                    if (j6(r6, r7[r9]) == false) { $pc1 = 24; continue $sw1; }
+                    r7[r9] = null;
+                    return true;
+                }
+                case 24: {
+                    r9 = r9 + 1;
+                    { $pc1 = 16; continue $sw1; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
     public int DW(abcd.sN r7) {
-        abcd.rN[] r8 = r7.v5();
+        abcd.rN[] r8 = null;
         int r1 = 0;
         int r2 = 0;
-    L4:
-        if (r1 == r8.length) goto L5;
-        if (r8[r1].VH() == false) goto L13;
-        abcd.qN[] r3 = r8[r1].Zo();
-        int r4 = r2;
+        abcd.qN[] r3 = null;
+        int r4 = 0;
         int r5 = 0;
-    L10:
-        if (r5 == r3.length) goto L11;
-        r4 = (r4 ^ r3[r5].v5().hashCode()) ^ j6(r3[r5].Zo());
-        r5 = r5 + 1;
-        goto L10
-    L11:
-        r2 = r4;
-    L14:
-        r1 = r1 + 1;
-        goto L4
-    L13:
-        r2 = (r2 ^ r8[r1].v5().v5().hashCode()) ^ j6(r8[r1].v5().Zo());
-        goto L14
-    L5:
-        return r2;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    r8 = r7.v5();
+                    r1 = 0;
+                    r2 = 0;
+                    $pc2 = 4; continue $sw2;
+                }
+                case 4: {
+                    if (r1 == r8.length) { $pc2 = 5; continue $sw2; }
+                    if (r8[r1].VH() == false) { $pc2 = 13; continue $sw2; }
+                    r3 = r8[r1].Zo();
+                    r4 = r2;
+                    r5 = 0;
+                    $pc2 = 10; continue $sw2;
+                }
+                case 10: {
+                    if (r5 == r3.length) { $pc2 = 11; continue $sw2; }
+                    r4 = (r4 ^ r3[r5].v5().hashCode()) ^ j6(r3[r5].Zo());
+                    r5 = r5 + 1;
+                    { $pc2 = 10; continue $sw2; }
+                }
+                case 11: {
+                    r2 = r4;
+                    $pc2 = 14; continue $sw2;
+                }
+                case 14: {
+                    r1 = r1 + 1;
+                    { $pc2 = 4; continue $sw2; }
+                }
+                case 13: {
+                    r2 = (r2 ^ r8[r1].v5().v5().hashCode()) ^ j6(r8[r1].v5().Zo());
+                    { $pc2 = 14; continue $sw2; }
+                }
+                case 5: {
+                    return r2;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
     public java.lang.String j6(abcd.sN r11) {
-        java.lang.StringBuffer r0 = new java.lang.StringBuffer();
-        abcd.rN[] r12 = r11.v5();
+        java.lang.StringBuffer r0 = null;
+        abcd.rN[] r12 = null;
         int r3 = 0;
-        boolean r4 = true;
-    L4:
-        if (r3 >= r12.length) goto L6;
-        if (r4 == false) goto L9;
-        r4 = false;
-    L11:
-        if (r12[r3].VH() == false) goto L20;
-        abcd.qN[] r5 = r12[r3].Zo();
+        boolean r4 = false;
+        abcd.qN[] r5 = null;
         int r6 = 0;
-        boolean r7 = true;
-    L14:
-        if (r6 == r5.length) goto L21;
-        if (r7 == false) goto L18;
-        r7 = false;
-    L19:
-        abcd.vN.j6(r0, r5[r6], sh);
-        r6 = r6 + 1;
-        goto L14
-    L18:
-        r0.append('+');
-    L21:
-        r3 = r3 + 1;
-        goto L4
-    L20:
-        abcd.vN.j6(r0, r12[r3].v5(), sh);
-        goto L21
-    L9:
-        r0.append(',');
-        goto L11
-    L6:
-        return r0.toString();
+        boolean r7 = false;
+        java.lang.Throwable $ex3 = null;
+        int $pc3 = -1;
+        $sw3: while (true) {
+            switch ($pc3) {
+                case -1: {
+                    r0 = new java.lang.StringBuffer();
+                    r12 = r11.v5();
+                    r3 = 0;
+                    r4 = true;
+                    $pc3 = 4; continue $sw3;
+                }
+                case 4: {
+                    if (r3 >= r12.length) { $pc3 = 6; continue $sw3; }
+                    if (r4 == false) { $pc3 = 9; continue $sw3; }
+                    r4 = false;
+                    $pc3 = 11; continue $sw3;
+                }
+                case 11: {
+                    if (r12[r3].VH() == false) { $pc3 = 20; continue $sw3; }
+                    r5 = r12[r3].Zo();
+                    r6 = 0;
+                    r7 = true;
+                    $pc3 = 14; continue $sw3;
+                }
+                case 14: {
+                    if (r6 == r5.length) { $pc3 = 21; continue $sw3; }
+                    if (r7 == false) { $pc3 = 18; continue $sw3; }
+                    r7 = false;
+                    $pc3 = 19; continue $sw3;
+                }
+                case 19: {
+                    abcd.vN.j6(r0, r5[r6], sh);
+                    r6 = r6 + 1;
+                    { $pc3 = 14; continue $sw3; }
+                }
+                case 18: {
+                    r0.append('+');
+                    $pc3 = 21; continue $sw3;
+                }
+                case 21: {
+                    r3 = r3 + 1;
+                    { $pc3 = 4; continue $sw3; }
+                }
+                case 20: {
+                    abcd.vN.j6(r0, r12[r3].v5(), sh);
+                    { $pc3 = 21; continue $sw3; }
+                }
+                case 9: {
+                    r0.append(',');
+                    { $pc3 = 11; continue $sw3; }
+                }
+                case 6: {
+                    return r0.toString();
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     protected boolean j6(abcd.rN r5, abcd.rN r6) {
-        if (r5.VH() == false) goto L20;
-        if (r6.VH() == false) goto L18;
-        abcd.qN[] r7 = r5.Zo();
-        abcd.qN[] r8 = r6.Zo();
-        if (r7.length == r8.length) goto L9;
-        return false;
-    L9:
+        abcd.qN[] r7 = null;
+        abcd.qN[] r8 = null;
         int r0 = 0;
-    L11:
-        if (r0 == r7.length) goto L12;
-        if (j6(r7[r0], r8[r0]) == false) goto L16;
-        r0 = r0 + 1;
-        goto L11
-    L16:
-        return false;
-    L12:
-        return true;
-    L18:
-        return false;
-    L20:
-        if (r6.VH() == false) goto L22;
-        return false;
-    L22:
-        return j6(r5.v5(), r6.v5());
+        java.lang.Throwable $ex4 = null;
+        int $pc4 = -1;
+        $sw4: while (true) {
+            switch ($pc4) {
+                case -1: {
+                    if (r5.VH() == false) { $pc4 = 20; continue $sw4; }
+                    if (r6.VH() == false) { $pc4 = 18; continue $sw4; }
+                    r7 = r5.Zo();
+                    r8 = r6.Zo();
+                    if (r7.length == r8.length) { $pc4 = 9; continue $sw4; }
+                    return false;
+                }
+                case 9: {
+                    r0 = 0;
+                    $pc4 = 11; continue $sw4;
+                }
+                case 11: {
+                    if (r0 == r7.length) { $pc4 = 12; continue $sw4; }
+                    if (j6(r7[r0], r8[r0]) == false) { $pc4 = 16; continue $sw4; }
+                    r0 = r0 + 1;
+                    { $pc4 = 11; continue $sw4; }
+                }
+                case 16: {
+                    return false;
+                }
+                case 12: {
+                    return true;
+                }
+                case 18: {
+                    return false;
+                }
+                case 20: {
+                    if (r6.VH() == false) { $pc4 = 22; continue $sw4; }
+                    return false;
+                }
+                case 22: {
+                    return j6(r5.v5(), r6.v5());
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
     public boolean j6(abcd.sN r6, abcd.sN r7) {
-        abcd.rN[] r8 = r6.v5();
-        abcd.rN[] r9 = r7.v5();
-        if (r8.length == r9.length) goto L6;
-        return false;
-    L6:
-        if (r8[0].v5() != null) goto L8;
-    L13:
+        abcd.rN[] r8 = null;
+        abcd.rN[] r9 = null;
         boolean r0 = false;
-    L14:
         int r3 = 0;
-    L16:
-        if (r3 == r8.length) goto L17;
-        if (j6(r0, r8[r3], r9) == false) goto L20;
-        r3 = r3 + 1;
-        goto L16
-    L20:
-        return false;
-    L17:
-        return true;
-    L8:
-        if (r9[0].v5() == null) goto L13;
-        if (r8[0].v5().v5().equals(r9[0].v5().v5()) == true) goto L13;
-        r0 = true;
-        goto L14
+        java.lang.Throwable $ex5 = null;
+        int $pc5 = -1;
+        $sw5: while (true) {
+            switch ($pc5) {
+                case -1: {
+                    r8 = r6.v5();
+                    r9 = r7.v5();
+                    if (r8.length == r9.length) { $pc5 = 6; continue $sw5; }
+                    return false;
+                }
+                case 6: {
+                    if (r8[0].v5() != null) { $pc5 = 8; continue $sw5; }
+                    $pc5 = 13; continue $sw5;
+                }
+                case 13: {
+                    r0 = false;
+                    $pc5 = 14; continue $sw5;
+                }
+                case 14: {
+                    r3 = 0;
+                    $pc5 = 16; continue $sw5;
+                }
+                case 16: {
+                    if (r3 == r8.length) { $pc5 = 17; continue $sw5; }
+                    if (j6(r0, r8[r3], r9) == false) { $pc5 = 20; continue $sw5; }
+                    r3 = r3 + 1;
+                    { $pc5 = 16; continue $sw5; }
+                }
+                case 20: {
+                    return false;
+                }
+                case 17: {
+                    return true;
+                }
+                case 8: {
+                    if (r9[0].v5() == null) { $pc5 = 13; continue $sw5; }
+                    if (r8[0].v5().v5().equals(r9[0].v5().v5()) == true) { $pc5 = 13; continue $sw5; }
+                    r0 = true;
+                    { $pc5 = 14; continue $sw5; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

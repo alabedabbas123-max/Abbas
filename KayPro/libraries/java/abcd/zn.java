@@ -7,10 +7,21 @@ public final class zn extends abcd.AbstractBn implements abcd.Interfacern {
 
     @Override
     public abcd.Ms Zo() {
-        abcd.km r0 = (abcd.km) getAttributes().j6("ConstantValue");
-        if (r0 != null) goto L7;
-        return null;
-    L7:
-        return r0.j6();
+        abcd.km r0 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = (abcd.km) getAttributes().j6("ConstantValue");
+                    if (r0 != null) { $pc0 = 7; continue $sw0; }
+                    return null;
+                }
+                case 7: {
+                    return r0.j6();
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

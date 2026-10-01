@@ -20,18 +20,33 @@ public final class Ko extends abcd.Abstractao {
 
     @Override
     public boolean VH(abcd.AbstractVn r5) {
-        abcd.cs r0 = r5.gn();
-        if ((r5 instanceof abcd.Tn) == true) goto L5;
-    L14:
-        return false;
-    L5:
-        if (r0.size() != 1) goto L14;
-        if (abcd.Abstractao.Hw(r0.get(0).we()) == false) goto L14;
-        abcd.Abstractms r6 = ((abcd.Tn) r5).we();
-        if ((r6 instanceof abcd.Ds) == true) goto L13;
-        return false;
-    L13:
-        return ((abcd.Ds) r6).J8();
+        abcd.cs r0 = null;
+        abcd.Abstractms r6 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = r5.gn();
+                    if ((r5 instanceof abcd.Tn) == true) { $pc0 = 5; continue $sw0; }
+                    $pc0 = 14; continue $sw0;
+                }
+                case 14: {
+                    return false;
+                }
+                case 5: {
+                    if (r0.size() != 1) { $pc0 = 14; continue $sw0; }
+                    if (abcd.Abstractao.Hw(r0.get(0).we()) == false) { $pc0 = 14; continue $sw0; }
+                    r6 = ((abcd.Tn) r5).we();
+                    if ((r6 instanceof abcd.Ds) == true) { $pc0 = 13; continue $sw0; }
+                    return false;
+                }
+                case 13: {
+                    return ((abcd.Ds) r6).J8();
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

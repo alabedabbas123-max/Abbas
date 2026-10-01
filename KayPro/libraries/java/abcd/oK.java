@@ -13,31 +13,75 @@ class oK extends java.lang.Thread {
 
     @Override
     public void run() {
-        java.io.InputStream r0 = this.j6.getErrorStream();
-    L12:
-        e = move-exception;
-        if (this.DW == false) goto L16;
-        e.printStackTrace(java.lang.System.err);
-    L16:
-        this.FH.set(true);
-    L25:
-        r0.close();     // Catch: java.io.IOException -> L19
-        return;
-    L19:
-        e = move-exception;
-        if (this.DW == false) goto L23;
-        e.printStackTrace(java.lang.System.err);
-    L23:
-        this.FH.set(true);
-        return;
-    L4:
-        if (this.DW == false) goto L10;
-    L5:
-        int r2 = r0.read();     // Catch: java.io.IOException -> L12
-        if (r2 == (-1)) goto L25;
-        java.lang.System.err.print((char) r2);     // Catch: java.io.IOException -> L12
-    L10:
-        if (r0.read() != (-1)) goto L10;
-        goto L25
+        java.io.InputStream r0 = null;
+        int r2 = 0;
+        java.lang.Throwable e = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = this.j6.getErrorStream();
+                    $pc0 = 12; continue $sw0;
+                }
+                case 12: {
+                    e = $ex0;
+                    if (this.DW == false) { $pc0 = 16; continue $sw0; }
+                    e.printStackTrace(java.lang.System.err);
+                    $pc0 = 16; continue $sw0;
+                }
+                case 16: {
+                    this.FH.set(true);
+                    $pc0 = 25; continue $sw0;
+                }
+                case 25: {
+                    try {
+                        r0.close();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.io.IOException) { $pc0 = 19; continue $sw0; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    return;
+                }
+                case 19: {
+                    e = $ex0;
+                    if (this.DW == false) { $pc0 = 23; continue $sw0; }
+                    e.printStackTrace(java.lang.System.err);
+                    $pc0 = 23; continue $sw0;
+                }
+                case 23: {
+                    this.FH.set(true);
+                    return;
+                }
+                case 4: {
+                    if (this.DW == false) { $pc0 = 10; continue $sw0; }
+                    $pc0 = 5; continue $sw0;
+                }
+                case 5: {
+                    try {
+                        r2 = r0.read();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.io.IOException) { $pc0 = 12; continue $sw0; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    if (r2 == (-1)) { $pc0 = 25; continue $sw0; }
+                    try {
+                        java.lang.System.err.print((char) r2);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.io.IOException) { $pc0 = 12; continue $sw0; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    $pc0 = 10; continue $sw0;
+                }
+                case 10: {
+                    if (r0.read() != (-1)) { $pc0 = 10; continue $sw0; }
+                    { $pc0 = 25; continue $sw0; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

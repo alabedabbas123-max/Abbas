@@ -4,12 +4,22 @@ public final class lp extends abcd.Abstractmp implements java.lang.Comparable<ab
     private final abcd.ws DW;
 
     public lp(abcd.ws r1, int r2) {
-        super(r2);
-        if (r1 == null) goto L7;
-        this.DW = r1;
-        return;
-    L7:
-        throw new java.lang.NullPointerException("field == null");
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    super(r2);
+                    if (r1 == null) { $pc0 = 7; continue $sw0; }
+                    this.DW = r1;
+                    return;
+                }
+                case 7: {
+                    throw new java.lang.NullPointerException("field == null");
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public abcd.ws Zo() {
@@ -27,13 +37,24 @@ public final class lp extends abcd.Abstractmp implements java.lang.Comparable<ab
     }
 
     public boolean equals(java.lang.Object r3) {
-        if ((r3 instanceof abcd.lp) == true) goto L6;
-        return false;
-    L6:
-        if (j6((abcd.lp) r3) != 0) goto L9;
-        return true;
-    L9:
-        return false;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if ((r3 instanceof abcd.lp) == true) { $pc1 = 6; continue $sw1; }
+                    return false;
+                }
+                case 6: {
+                    if (j6((abcd.lp) r3) != 0) { $pc1 = 9; continue $sw1; }
+                    return true;
+                }
+                case 9: {
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public int hashCode() {
@@ -42,17 +63,31 @@ public final class lp extends abcd.Abstractmp implements java.lang.Comparable<ab
 
     @Override
     public int j6(abcd.jp r5, abcd.Lt r6, int r7, int r8) {
-        int r9 = r5.v5().j6(this.DW);
-        int r10 = r9 - r7;
-        int r0 = Hw();
-        if (r6.Hw() == false) goto L5;
-        r6.j6(0, java.lang.String.format("  [%x] %s", new java.lang.Object[]{java.lang.Integer.valueOf(r8), this.DW.aM()}));
-        r6.j6(abcd.eu.j6(r10), "    field_idx:    " + abcd.Yt.gn(r9));
-        r6.j6(abcd.eu.j6(r0), "    access_flags: " + abcd.Mr.DW(r0));
-    L5:
-        r6.DW(r10);
-        r6.DW(r0);
-        return r9;
+        int r9 = 0;
+        int r10 = 0;
+        int r0 = 0;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    r9 = r5.v5().j6(this.DW);
+                    r10 = r9 - r7;
+                    r0 = Hw();
+                    if (r6.Hw() == false) { $pc2 = 5; continue $sw2; }
+                    r6.j6(0, java.lang.String.format("  [%x] %s", new java.lang.Object[]{java.lang.Integer.valueOf(r8), this.DW.aM()}));
+                    r6.j6(abcd.eu.j6(r10), "    field_idx:    " + abcd.Yt.gn(r9));
+                    r6.j6(abcd.eu.j6(r0), "    access_flags: " + abcd.Mr.DW(r0));
+                    $pc2 = 5; continue $sw2;
+                }
+                case 5: {
+                    r6.DW(r10);
+                    r6.DW(r0);
+                    return r9;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public int j6(abcd.lp r2) {

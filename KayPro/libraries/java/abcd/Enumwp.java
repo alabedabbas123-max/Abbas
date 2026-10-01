@@ -1,6 +1,6 @@
 package abcd;
 
-public final enum Enumwp extends java.lang.Enum<abcd.Enumwp> implements abcd.Interfacelu {
+public final class Enumwp extends com.almlkaide.kaypro.internal.EnumBase implements abcd.Interfacelu {
     public static final abcd.Enumwp DW = null;
     public static final abcd.Enumwp EQ = null;
     public static final abcd.Enumwp FH = null;
@@ -55,17 +55,29 @@ public final enum Enumwp extends java.lang.Enum<abcd.Enumwp> implements abcd.Int
     }
 
     private Enumwp(java.lang.String r1, int r2, int r3, java.lang.String r4) {
-        super(r1, r2);
-        this.rN = r3;
-        this.er = r4;
-        if (r4.endsWith("_item") == false) goto L5;
-        r4 = r4.substring(0, r4.length() - 5);
-    L5:
-        this.yS = r4.replace('_', ' ');
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    super(r1, r2);
+                    this.rN = r3;
+                    this.er = r4;
+                    if (r4.endsWith("_item") == false) { $pc0 = 5; continue $sw0; }
+                    r4 = r4.substring(0, r4.length() - 5);
+                    $pc0 = 5; continue $sw0;
+                }
+                case 5: {
+                    this.yS = r4.replace('_', ' ');
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static abcd.Enumwp valueOf(java.lang.String r1) {
-        return (abcd.Enumwp) java.lang.Enum.valueOf(abcd.Enumwp.class, r1);
+        return (abcd.Enumwp) com.almlkaide.kaypro.internal.EnumBase.valueOf(abcd.Enumwp.values(), r1);
     }
 
     public static abcd.Enumwp[] values() {

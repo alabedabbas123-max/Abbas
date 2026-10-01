@@ -27,17 +27,30 @@ public class e extends a.b.a.c.m {
 
     @Override
     public boolean equals(java.lang.Object r4) {
-        if (super.equals(r4) == true) goto L5;
-        return false;
-    L5:
-        a.b.a.c.e r5 = (a.b.a.c.e) r4;
-        if (this.e == r5.e) goto L8;
-        return false;
-    L8:
-        if (this.f52a == r5.f52a) goto L11;
-        return true;
-    L11:
-        return false;
+        a.b.a.c.e r5 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (super.equals(r4) == true) { $pc0 = 5; continue $sw0; }
+                    return false;
+                }
+                case 5: {
+                    r5 = (a.b.a.c.e) r4;
+                    if (this.e == r5.e) { $pc0 = 8; continue $sw0; }
+                    return false;
+                }
+                case 8: {
+                    if (this.f52a == r5.f52a) { $pc0 = 11; continue $sw0; }
+                    return true;
+                }
+                case 11: {
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

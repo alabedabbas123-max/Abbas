@@ -19,21 +19,41 @@ class MO {
     }
 
     java.math.BigInteger j6(abcd.TO r4, java.security.SecureRandom r5) {
-        java.math.BigInteger r0 = r4.Hw();
-        int r1 = r4.DW();
-        if (r1 != 0) goto L5;
-        java.math.BigInteger r2 = FH;
-        int r3 = r4.FH();
-        if (r3 == 0) goto L9;
-        r2 = DW.shiftLeft(r3 - 1);
-    L9:
-        java.math.BigInteger r6 = r0.subtract(FH);
-        java.math.BigInteger r7 = r4.v5();
-        if (r7 == null) goto L13;
-        r6 = r7.subtract(FH);
-    L13:
-        return abcd.PP.j6(r2, r6, r5);
-    L5:
-        return new java.math.BigInteger(r1, r5).setBit(r1 - 1);
+        java.math.BigInteger r0 = null;
+        int r1 = 0;
+        java.math.BigInteger r2 = null;
+        int r3 = 0;
+        java.math.BigInteger r6 = null;
+        java.math.BigInteger r7 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = r4.Hw();
+                    r1 = r4.DW();
+                    if (r1 != 0) { $pc0 = 5; continue $sw0; }
+                    r2 = FH;
+                    r3 = r4.FH();
+                    if (r3 == 0) { $pc0 = 9; continue $sw0; }
+                    r2 = DW.shiftLeft(r3 - 1);
+                    $pc0 = 9; continue $sw0;
+                }
+                case 9: {
+                    r6 = r0.subtract(FH);
+                    r7 = r4.v5();
+                    if (r7 == null) { $pc0 = 13; continue $sw0; }
+                    r6 = r7.subtract(FH);
+                    $pc0 = 13; continue $sw0;
+                }
+                case 13: {
+                    return abcd.PP.j6(r2, r6, r5);
+                }
+                case 5: {
+                    return new java.math.BigInteger(r1, r5).setBit(r1 - 1);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

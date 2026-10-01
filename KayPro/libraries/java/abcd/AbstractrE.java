@@ -21,30 +21,51 @@ public abstract class AbstractrE {
     }
 
     private AbstractrE(int r5, int r6) {
-        this.gn = r5;
-        this.u7 = r6;
         int r0 = 0;
-        if (r5 == 0) goto L12;
-        byte[] r1 = new byte[10];
-        int r2 = r1.length;
-    L5:
-        if (r5 == 0) goto L6;
-        r2 = r2 - 1;
-        r1[r2] = (byte) ((r5 & 7) + 48);
-        r5 = r5 >> 3;
-        goto L5
-    L6:
-        this.VH = new byte[r1.length - r2];
-    L7:
-        byte[] r7 = this.VH;
-        if (r0 >= r7.length) goto L16;
-        r7[r0] = r1[r2 + r0];
-        r0 = r0 + 1;
-        goto L7
-    L16:
-        return;
-    L12:
-        this.VH = new byte[]{48};
+        byte[] r1 = null;
+        int r2 = 0;
+        byte[] r7 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    this.gn = r5;
+                    this.u7 = r6;
+                    r0 = 0;
+                    if (r5 == 0) { $pc0 = 12; continue $sw0; }
+                    r1 = new byte[10];
+                    r2 = r1.length;
+                    $pc0 = 5; continue $sw0;
+                }
+                case 5: {
+                    if (r5 == 0) { $pc0 = 6; continue $sw0; }
+                    r2 = r2 - 1;
+                    r1[r2] = (byte) ((r5 & 7) + 48);
+                    r5 = r5 >> 3;
+                    { $pc0 = 5; continue $sw0; }
+                }
+                case 6: {
+                    this.VH = new byte[r1.length - r2];
+                    $pc0 = 7; continue $sw0;
+                }
+                case 7: {
+                    r7 = this.VH;
+                    if (r0 >= r7.length) { $pc0 = 16; continue $sw0; }
+                    r7[r0] = r1[r2 + r0];
+                    r0 = r0 + 1;
+                    { $pc0 = 7; continue $sw0; }
+                }
+                case 16: {
+                    return;
+                }
+                case 12: {
+                    this.VH = new byte[]{48};
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     AbstractrE(int r1, int r2, abcd.AbstractrE r3) {
@@ -52,28 +73,46 @@ public abstract class AbstractrE {
     }
 
     public static final abcd.AbstractrE DW(int r2) {
-        int r0 = 61440 & r2;
-        if (r0 != 0) goto L5;
-        if (r2 == 0) goto L27;
-    L29:
-        return new abcd.qE(r2, -1, r2);
-    L27:
-        return Zo;
-    L5:
-        if (r0 == 16384) goto L24;
-        if (r0 == 32768) goto L18;
-        if (r0 == 40960) goto L16;
-        if (r0 != 57344) goto L29;
-        return v5;
-    L16:
-        return DW;
-    L18:
-        if ((r2 & 73) == 0) goto L22;
-        return Hw;
-    L22:
-        return FH;
-    L24:
-        return j6;
+        int r0 = 0;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    r0 = 61440 & r2;
+                    if (r0 != 0) { $pc1 = 5; continue $sw1; }
+                    if (r2 == 0) { $pc1 = 27; continue $sw1; }
+                    $pc1 = 29; continue $sw1;
+                }
+                case 29: {
+                    return new abcd.qE(r2, -1, r2);
+                }
+                case 27: {
+                    return Zo;
+                }
+                case 5: {
+                    if (r0 == 16384) { $pc1 = 24; continue $sw1; }
+                    if (r0 == 32768) { $pc1 = 18; continue $sw1; }
+                    if (r0 == 40960) { $pc1 = 16; continue $sw1; }
+                    if (r0 != 57344) { $pc1 = 29; continue $sw1; }
+                    return v5;
+                }
+                case 16: {
+                    return DW;
+                }
+                case 18: {
+                    if ((r2 & 73) == 0) { $pc1 = 22; continue $sw1; }
+                    return Hw;
+                }
+                case 22: {
+                    return FH;
+                }
+                case 24: {
+                    return j6;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public int DW() {

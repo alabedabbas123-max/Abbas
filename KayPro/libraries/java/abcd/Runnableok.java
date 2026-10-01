@@ -27,48 +27,118 @@ class Runnableok implements java.lang.Runnable {
     @Override
     @abcd.Interfacesu(method = -805343711958410448L)
     public void run() {
-    L21:
-        th = move-exception;
-        if (DW == false) goto L25;
-        abcd.wu.j6(th, 2354084318773793760L, this);
-    L25:
-        throw th;
-    L4:
-        if (j6 == false) goto L27;
-        abcd.wu.j6(2354084318773793760L, this);     // Catch: java.lang.Throwable -> L21
-    L27:
-        abcd.yk.Hw(this.v5);     // Catch: java.lang.Throwable -> L8 org.json.JSONException -> L10 abcd.yk.c -> L12 abcd.yk.b -> L14 java.lang.InterruptedException -> L16 android.os.RemoteException -> L18
-        java.util.Map<java.lang.String, abcd.yk.g> r2 = abcd.yk.j6(this.v5, this.FH);     // Catch: java.lang.Throwable -> L8 org.json.JSONException -> L10 abcd.yk.c -> L12 abcd.yk.b -> L14 java.lang.InterruptedException -> L16 android.os.RemoteException -> L18
-        this.Hw.j6(r2);     // Catch: java.lang.Throwable -> L8 org.json.JSONException -> L10 abcd.yk.c -> L12 abcd.yk.b -> L14 java.lang.InterruptedException -> L16 android.os.RemoteException -> L18
-    L34:
-        return;
-    L12:
-        e = move-exception;
-        this.v5.j6(e);     // Catch: java.lang.Throwable -> L21
-        this.Hw.j6("Internal error in in-app billing (cancelled).");     // Catch: java.lang.Throwable -> L21
-        return;
-    L14:
-        e = move-exception;
-        this.v5.j6(e);     // Catch: java.lang.Throwable -> L21
-        this.Hw.j6(e.getMessage());     // Catch: java.lang.Throwable -> L21
-        return;
-    L18:
-        e = move-exception;
-        this.v5.j6(e);     // Catch: java.lang.Throwable -> L21
-        this.Hw.j6("Error communicating with Play Store service.");     // Catch: java.lang.Throwable -> L21
-        return;
-    L16:
-        e = move-exception;
-        this.v5.j6(e);     // Catch: java.lang.Throwable -> L21
-        this.Hw.j6("Internal error in in-app billing (interrupted).");     // Catch: java.lang.Throwable -> L21
-        return;
-    L10:
-        e = move-exception;
-        this.v5.j6(e);     // Catch: java.lang.Throwable -> L21
-        this.Hw.j6("Internal error in in-app billing (JSON parse).");     // Catch: java.lang.Throwable -> L21
-        return;
-    L8:
-        th = move-exception;
-        this.v5.j6(th);     // Catch: java.lang.Throwable -> L21
+        java.util.Map<java.lang.String, abcd.yk.g> r2 = null;
+        java.lang.Throwable e = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 4;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 21: {
+                    th = $ex0;
+                    if (DW == false) { $pc0 = 25; continue $sw0; }
+                    abcd.wu.j6(th, 2354084318773793760L, this);
+                    $pc0 = 25; continue $sw0;
+                }
+                case 25: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (j6 == false) { $pc0 = 27; continue $sw0; }
+                    try {
+                        abcd.wu.j6(2354084318773793760L, this);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 21; continue $sw0;
+                    }
+                    $pc0 = 27; continue $sw0;
+                }
+                case 27: {
+                    try {
+                        abcd.yk.Hw(this.v5);
+                        r2 = abcd.yk.j6(this.v5, this.FH);
+                        this.Hw.j6(r2);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof org.json.JSONException) { $pc0 = 10; continue $sw0; }
+                        if ($t instanceof abcd.yk.c) { $pc0 = 12; continue $sw0; }
+                        if ($t instanceof abcd.yk.b) { $pc0 = 14; continue $sw0; }
+                        if ($t instanceof java.lang.InterruptedException) { $pc0 = 16; continue $sw0; }
+                        if ($t instanceof android.os.RemoteException) { $pc0 = 18; continue $sw0; }
+                        $pc0 = 8; continue $sw0;
+                    }
+                    $pc0 = 34; continue $sw0;
+                }
+                case 34: {
+                    return;
+                }
+                case 12: {
+                    e = $ex0;
+                    try {
+                        this.v5.j6(e);
+                        this.Hw.j6("Internal error in in-app billing (cancelled).");
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 21; continue $sw0;
+                    }
+                    return;
+                }
+                case 14: {
+                    e = $ex0;
+                    try {
+                        this.v5.j6(e);
+                        this.Hw.j6(e.getMessage());
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 21; continue $sw0;
+                    }
+                    return;
+                }
+                case 18: {
+                    e = $ex0;
+                    try {
+                        this.v5.j6(e);
+                        this.Hw.j6("Error communicating with Play Store service.");
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 21; continue $sw0;
+                    }
+                    return;
+                }
+                case 16: {
+                    e = $ex0;
+                    try {
+                        this.v5.j6(e);
+                        this.Hw.j6("Internal error in in-app billing (interrupted).");
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 21; continue $sw0;
+                    }
+                    return;
+                }
+                case 10: {
+                    e = $ex0;
+                    try {
+                        this.v5.j6(e);
+                        this.Hw.j6("Internal error in in-app billing (JSON parse).");
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 21; continue $sw0;
+                    }
+                    return;
+                }
+                case 8: {
+                    th = $ex0;
+                    try {
+                        this.v5.j6(th);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 21; continue $sw0;
+                    }
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

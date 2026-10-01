@@ -24,31 +24,54 @@ public class KeyPairGeneratorSpi extends java.security.KeyPairGenerator {
 
     @Override
     public java.security.KeyPair generateKeyPair() {
-        if (this.VH == true) goto L14;
-        java.lang.Integer r0 = new java.lang.Integer(this.Hw);
-        if (j6.containsKey(r0) == false) goto L7;
-        this.DW = (abcd.RO) j6.get(r0);
-    L13:
-        this.FH.j6(this.DW);
-        this.VH = true;
-        goto L14
-    L7:
-        javax.crypto.spec.DHParameterSpec r1 = abcd.pP.FH.j6();
-        if (r1 != null) goto L10;
-    L12:
-        abcd.NO r2 = new abcd.NO();
-        r2.j6(this.Hw, this.v5, this.Zo);
-        this.DW = new abcd.RO(this.Zo, r2.j6());
-        j6.put(r0, this.DW);
-        goto L13
-    L10:
-        if (r1.getP().bitLength() != this.Hw) goto L12;
-        this.DW = new abcd.RO(this.Zo, new abcd.TO(r1.getP(), r1.getG(), null, r1.getL()));
-    L14:
-        abcd.oO r3 = this.FH.j6();
-        abcd.VO r4 = (abcd.VO) r3.DW();
-        abcd.UO r5 = (abcd.UO) r3.j6();
-        return new java.security.KeyPair(new org.spongycastle.jcajce.provider.asymmetric.dh.BCDHPublicKey(r4), new org.spongycastle.jcajce.provider.asymmetric.dh.BCDHPrivateKey(r5));
+        java.lang.Integer r0 = null;
+        javax.crypto.spec.DHParameterSpec r1 = null;
+        abcd.NO r2 = null;
+        abcd.oO r3 = null;
+        abcd.VO r4 = null;
+        abcd.UO r5 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (this.VH == true) { $pc0 = 14; continue $sw0; }
+                    r0 = new java.lang.Integer(this.Hw);
+                    if (j6.containsKey(r0) == false) { $pc0 = 7; continue $sw0; }
+                    this.DW = (abcd.RO) j6.get(r0);
+                    $pc0 = 13; continue $sw0;
+                }
+                case 13: {
+                    this.FH.j6(this.DW);
+                    this.VH = true;
+                    { $pc0 = 14; continue $sw0; }
+                }
+                case 7: {
+                    r1 = abcd.pP.FH.j6();
+                    if (r1 != null) { $pc0 = 10; continue $sw0; }
+                    $pc0 = 12; continue $sw0;
+                }
+                case 12: {
+                    r2 = new abcd.NO();
+                    r2.j6(this.Hw, this.v5, this.Zo);
+                    this.DW = new abcd.RO(this.Zo, r2.j6());
+                    j6.put(r0, this.DW);
+                    { $pc0 = 13; continue $sw0; }
+                }
+                case 10: {
+                    if (r1.getP().bitLength() != this.Hw) { $pc0 = 12; continue $sw0; }
+                    this.DW = new abcd.RO(this.Zo, new abcd.TO(r1.getP(), r1.getG(), null, r1.getL()));
+                    $pc0 = 14; continue $sw0;
+                }
+                case 14: {
+                    r3 = this.FH.j6();
+                    r4 = (abcd.VO) r3.DW();
+                    r5 = (abcd.UO) r3.j6();
+                    return new java.security.KeyPair(new org.spongycastle.jcajce.provider.asymmetric.dh.BCDHPublicKey(r4), new org.spongycastle.jcajce.provider.asymmetric.dh.BCDHPrivateKey(r5));
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
@@ -59,13 +82,24 @@ public class KeyPairGeneratorSpi extends java.security.KeyPairGenerator {
 
     @Override
     public void initialize(java.security.spec.AlgorithmParameterSpec r6, java.security.SecureRandom r7) {
-        if ((r6 instanceof javax.crypto.spec.DHParameterSpec) == false) goto L7;
-        javax.crypto.spec.DHParameterSpec r8 = (javax.crypto.spec.DHParameterSpec) r6;
-        this.DW = new abcd.RO(r7, new abcd.TO(r8.getP(), r8.getG(), null, r8.getL()));
-        this.FH.j6(this.DW);
-        this.VH = true;
-        return;
-    L7:
-        throw new java.security.InvalidAlgorithmParameterException("parameter object not a DHParameterSpec");
+        javax.crypto.spec.DHParameterSpec r8 = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if ((r6 instanceof javax.crypto.spec.DHParameterSpec) == false) { $pc1 = 7; continue $sw1; }
+                    r8 = (javax.crypto.spec.DHParameterSpec) r6;
+                    this.DW = new abcd.RO(r7, new abcd.TO(r8.getP(), r8.getG(), null, r8.getL()));
+                    this.FH.j6(this.DW);
+                    this.VH = true;
+                    return;
+                }
+                case 7: {
+                    throw new java.security.InvalidAlgorithmParameterException("parameter object not a DHParameterSpec");
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

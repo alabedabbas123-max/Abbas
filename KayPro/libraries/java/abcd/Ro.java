@@ -21,29 +21,48 @@ public final class Ro extends abcd.Abstractao {
 
     @Override
     public boolean VH(abcd.AbstractVn r5) {
-        if (abcd.Abstractao.j6 == true) goto L5;
-        return false;
-    L5:
-        abcd.cs r0 = r5.gn();
-        if ((r5 instanceof abcd.Tn) == true) goto L8;
-        return false;
-    L8:
-        if (r0.size() == 2) goto L10;
-        return false;
-    L10:
-        if (abcd.Abstractao.Zo(r0.get(0).we()) == true) goto L12;
-        return false;
-    L12:
-        if (abcd.Abstractao.Zo(r0.get(1).we()) == false) goto L24;
-        abcd.Abstractms r6 = ((abcd.Tn) r5).we();
-        if ((r6 instanceof abcd.Ks) == false) goto L17;
-    L18:
-        return true;
-    L17:
-        if ((r6 instanceof abcd.ws) == true) goto L18;
-        return false;
-    L24:
-        return false;
+        abcd.cs r0 = null;
+        abcd.Abstractms r6 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (abcd.Abstractao.j6 == true) { $pc0 = 5; continue $sw0; }
+                    return false;
+                }
+                case 5: {
+                    r0 = r5.gn();
+                    if ((r5 instanceof abcd.Tn) == true) { $pc0 = 8; continue $sw0; }
+                    return false;
+                }
+                case 8: {
+                    if (r0.size() == 2) { $pc0 = 10; continue $sw0; }
+                    return false;
+                }
+                case 10: {
+                    if (abcd.Abstractao.Zo(r0.get(0).we()) == true) { $pc0 = 12; continue $sw0; }
+                    return false;
+                }
+                case 12: {
+                    if (abcd.Abstractao.Zo(r0.get(1).we()) == false) { $pc0 = 24; continue $sw0; }
+                    r6 = ((abcd.Tn) r5).we();
+                    if ((r6 instanceof abcd.Ks) == false) { $pc0 = 17; continue $sw0; }
+                    $pc0 = 18; continue $sw0;
+                }
+                case 18: {
+                    return true;
+                }
+                case 17: {
+                    if ((r6 instanceof abcd.ws) == true) { $pc0 = 18; continue $sw0; }
+                    return false;
+                }
+                case 24: {
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
@@ -59,10 +78,20 @@ public final class Ro extends abcd.Abstractao {
 
     @Override
     public java.lang.String j6(abcd.AbstractVn r1, boolean r2) {
-        if (r2 == true) goto L4;
-        return "";
-    L4:
-        return abcd.Abstractao.Hw(r1);
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if (r2 == true) { $pc1 = 4; continue $sw1; }
+                    return "";
+                }
+                case 4: {
+                    return abcd.Abstractao.Hw(r1);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

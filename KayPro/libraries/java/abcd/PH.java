@@ -12,29 +12,52 @@ class PH implements java.util.Iterator<abcd.TH> {
 
     @Override
     public boolean hasNext() {
-        if (this.DW == null) goto L6;
-        return true;
-    L6:
-        if (this.j6.hasNext() == false) goto L7;
-        this.DW = this.j6.next().get();
-        if (this.DW != null) goto L11;
-        this.j6.remove();
-        goto L6
-    L11:
-        return true;
-    L7:
-        return false;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (this.DW == null) { $pc0 = 6; continue $sw0; }
+                    return true;
+                }
+                case 6: {
+                    if (this.j6.hasNext() == false) { $pc0 = 7; continue $sw0; }
+                    this.DW = this.j6.next().get();
+                    if (this.DW != null) { $pc0 = 11; continue $sw0; }
+                    this.j6.remove();
+                    { $pc0 = 6; continue $sw0; }
+                }
+                case 11: {
+                    return true;
+                }
+                case 7: {
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     /* JADX WARN: Can't rename method to resolve collision */
     @Override
     public abcd.TH next() {
-        if (hasNext() == false) goto L7;
-        abcd.TH r0 = this.DW;
-        this.DW = null;
-        return r0;
-    L7:
-        throw new java.util.NoSuchElementException();
+        abcd.TH r0 = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if (hasNext() == false) { $pc1 = 7; continue $sw1; }
+                    r0 = this.DW;
+                    this.DW = null;
+                    return r0;
+                }
+                case 7: {
+                    throw new java.util.NoSuchElementException();
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

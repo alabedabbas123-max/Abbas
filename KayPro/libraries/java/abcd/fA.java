@@ -14,19 +14,41 @@ public class fA {
     }
 
     public static abcd.fA j6(android.content.Context r5, java.lang.String r6) {
-        if (r6 != null) goto L10;
-    L8:
-        return null;
-    L10:
-        int r1 = io.fabric.sdk.android.services.common.i.Hw(r5);     // Catch: java.lang.Exception -> L6
-        io.fabric.sdk.android.Fabric.getLogger().Hw("Fabric", "App icon resource ID is " + r1);     // Catch: java.lang.Exception -> L6
-        android.graphics.BitmapFactory.Options r2 = new android.graphics.BitmapFactory.Options();     // Catch: java.lang.Exception -> L6
-        r2.inJustDecodeBounds = true;     // Catch: java.lang.Exception -> L6
-        android.graphics.BitmapFactory.decodeResource(r5.getResources(), r1, r2);     // Catch: java.lang.Exception -> L6
-        return new abcd.fA(r6, r1, r2.outWidth, r2.outHeight);
-    L6:
-        e = move-exception;
-        io.fabric.sdk.android.Fabric.getLogger().FH("Fabric", "Failed to load icon", e);
-        goto L8
+        int r1 = 0;
+        android.graphics.BitmapFactory.Options r2 = null;
+        java.lang.Throwable e = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (r6 != null) { $pc0 = 10; continue $sw0; }
+                    $pc0 = 8; continue $sw0;
+                }
+                case 8: {
+                    return null;
+                }
+                case 10: {
+                    try {
+                        r1 = io.fabric.sdk.android.services.common.i.Hw(r5);
+                        io.fabric.sdk.android.Fabric.getLogger().Hw("Fabric", "App icon resource ID is " + r1);
+                        r2 = new android.graphics.BitmapFactory.Options();
+                        r2.inJustDecodeBounds = true;
+                        android.graphics.BitmapFactory.decodeResource(r5.getResources(), r1, r2);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.lang.Exception) { $pc0 = 6; continue $sw0; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    return new abcd.fA(r6, r1, r2.outWidth, r2.outHeight);
+                }
+                case 6: {
+                    e = $ex0;
+                    io.fabric.sdk.android.Fabric.getLogger().FH("Fabric", "Failed to load icon", e);
+                    { $pc0 = 8; continue $sw0; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

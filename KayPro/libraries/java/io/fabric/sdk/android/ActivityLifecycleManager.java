@@ -15,12 +15,28 @@ public class ActivityLifecycleManager {
 
         @android.annotation.TargetApi(14)
         private void j6() {
-            java.util.Iterator<android.app.Application.ActivityLifecycleCallbacks> r0 = this.j6.iterator();
-        L4:
-            if (r0.hasNext() == false) goto L6;
-            android.app.Application.ActivityLifecycleCallbacks r1 = r0.next();
-            this.DW.unregisterActivityLifecycleCallbacks(r1);
-            goto L4
+            java.util.Iterator<android.app.Application.ActivityLifecycleCallbacks> r0 = null;
+            android.app.Application.ActivityLifecycleCallbacks r1 = null;
+            java.lang.Throwable $ex0 = null;
+            int $pc0 = -1;
+            $sw0: while (true) {
+                switch ($pc0) {
+                    case -1: {
+                        r0 = this.j6.iterator();
+                        $pc0 = 4; continue $sw0;
+                    }
+                    case 4: {
+                        if (r0.hasNext() == false) { $pc0 = 6; continue $sw0; }
+                        r1 = r0.next();
+                        this.DW.unregisterActivityLifecycleCallbacks(r1);
+                        { $pc0 = 4; continue $sw0; }
+                    }
+                    case 6: {
+                        return;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         static void j6(io.fabric.sdk.android.ActivityLifecycleManager.a r0) {
@@ -33,13 +49,24 @@ public class ActivityLifecycleManager {
 
         @android.annotation.TargetApi(14)
         private boolean j6(io.fabric.sdk.android.ActivityLifecycleManager.b r2) {
-            if (this.DW == null) goto L6;
-            io.fabric.sdk.android.a r0 = new io.fabric.sdk.android.a(this, r2);
-            this.DW.registerActivityLifecycleCallbacks(r0);
-            this.j6.add(r0);
-            return true;
-        L6:
-            return false;
+            io.fabric.sdk.android.a r0 = null;
+            java.lang.Throwable $ex1 = null;
+            int $pc1 = -1;
+            $sw1: while (true) {
+                switch ($pc1) {
+                    case -1: {
+                        if (this.DW == null) { $pc1 = 6; continue $sw1; }
+                        r0 = new io.fabric.sdk.android.a(this, r2);
+                        this.DW.registerActivityLifecycleCallbacks(r0);
+                        this.j6.add(r0);
+                        return true;
+                    }
+                    case 6: {
+                        return false;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
     }
 
@@ -67,26 +94,64 @@ public class ActivityLifecycleManager {
     }
 
     public ActivityLifecycleManager(android.content.Context r2) {
-        this.j6 = (android.app.Application) r2.getApplicationContext();
-        if (android.os.Build.VERSION.SDK_INT < 14) goto L6;
-        this.DW = new io.fabric.sdk.android.ActivityLifecycleManager.a(this.j6);
-        return;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    this.j6 = (android.app.Application) r2.getApplicationContext();
+                    if (android.os.Build.VERSION.SDK_INT < 14) { $pc2 = 6; continue $sw2; }
+                    this.DW = new io.fabric.sdk.android.ActivityLifecycleManager.a(this.j6);
+                    return;
+                }
+                case 6: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public void j6() {
-        io.fabric.sdk.android.ActivityLifecycleManager.a r0 = this.DW;
-        if (r0 == null) goto L6;
-        io.fabric.sdk.android.ActivityLifecycleManager.a.j6(r0);
-        return;
+        io.fabric.sdk.android.ActivityLifecycleManager.a r0 = null;
+        java.lang.Throwable $ex3 = null;
+        int $pc3 = -1;
+        $sw3: while (true) {
+            switch ($pc3) {
+                case -1: {
+                    r0 = this.DW;
+                    if (r0 == null) { $pc3 = 6; continue $sw3; }
+                    io.fabric.sdk.android.ActivityLifecycleManager.a.j6(r0);
+                    return;
+                }
+                case 6: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public boolean j6(io.fabric.sdk.android.ActivityLifecycleManager.b r2) {
-        io.fabric.sdk.android.ActivityLifecycleManager.a r0 = this.DW;
-        if (r0 != null) goto L5;
-    L7:
-        return false;
-    L5:
-        if (io.fabric.sdk.android.ActivityLifecycleManager.a.j6(r0, r2) == false) goto L7;
-        return true;
+        io.fabric.sdk.android.ActivityLifecycleManager.a r0 = null;
+        java.lang.Throwable $ex4 = null;
+        int $pc4 = -1;
+        $sw4: while (true) {
+            switch ($pc4) {
+                case -1: {
+                    r0 = this.DW;
+                    if (r0 != null) { $pc4 = 5; continue $sw4; }
+                    $pc4 = 7; continue $sw4;
+                }
+                case 7: {
+                    return false;
+                }
+                case 5: {
+                    if (io.fabric.sdk.android.ActivityLifecycleManager.a.j6(r0, r2) == false) { $pc4 = 7; continue $sw4; }
+                    return true;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

@@ -7,9 +7,19 @@ class pE extends abcd.AbstractrE {
 
     @Override
     public boolean j6(int r1) {
-        if (r1 != 0) goto L5;
-        return true;
-    L5:
-        return false;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (r1 != 0) { $pc0 = 5; continue $sw0; }
+                    return true;
+                }
+                case 5: {
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

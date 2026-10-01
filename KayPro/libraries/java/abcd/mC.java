@@ -20,12 +20,23 @@ public final class mC<S extends abcd.CC> extends DC<lC<S>> {
     }
 
     public boolean j6(lC<S> r3, int r4, lC<S> r5, int r6) {
-        if (r3.DW[r4] == r5.DW[r6]) goto L5;
-        return false;
-    L5:
-        if (this.j6.j6(r3.j6, r4, r5.j6, r6) == false) goto L10;
-        return true;
-    L10:
-        return false;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (r3.DW[r4] == r5.DW[r6]) { $pc0 = 5; continue $sw0; }
+                    return false;
+                }
+                case 5: {
+                    if (this.j6.j6(r3.j6, r4, r5.j6, r6) == false) { $pc0 = 10; continue $sw0; }
+                    return true;
+                }
+                case 10: {
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

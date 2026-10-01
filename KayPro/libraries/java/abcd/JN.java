@@ -70,84 +70,156 @@ public class JN extends abcd.AbstractyL {
     }
 
     public JN(abcd.FL r8) {
-        this.nw = new java.util.Hashtable();
-        this.SI = new java.util.Vector();
-        java.util.Enumeration r9 = r8.u7();
-    L4:
-        if (r9.hasMoreElements() == false) goto L5;
-        abcd.FL r0 = abcd.FL.j6(r9.nextElement());
-        if (r0.tp() != 3) goto L10;
-        this.nw.put(r0.j6(0), new abcd.IN(abcd.dM.j6(r0.j6(1)), abcd.AL.j6(r0.j6(2))));
-    L12:
-        this.SI.addElement(r0.j6(0));
-        goto L4
-    L10:
-        if (r0.tp() != 2) goto L14;
-        this.nw.put(r0.j6(0), new abcd.IN(false, abcd.AL.j6(r0.j6(1))));
-        goto L12
-    L14:
-        throw new java.lang.IllegalArgumentException("Bad sequence size: " + r0.tp());
+        java.util.Enumeration r9 = null;
+        abcd.FL r0 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    this.nw = new java.util.Hashtable();
+                    this.SI = new java.util.Vector();
+                    r9 = r8.u7();
+                    $pc0 = 4; continue $sw0;
+                }
+                case 4: {
+                    if (r9.hasMoreElements() == false) { $pc0 = 5; continue $sw0; }
+                    r0 = abcd.FL.j6(r9.nextElement());
+                    if (r0.tp() != 3) { $pc0 = 10; continue $sw0; }
+                    this.nw.put(r0.j6(0), new abcd.IN(abcd.dM.j6(r0.j6(1)), abcd.AL.j6(r0.j6(2))));
+                    $pc0 = 12; continue $sw0;
+                }
+                case 12: {
+                    this.SI.addElement(r0.j6(0));
+                    { $pc0 = 4; continue $sw0; }
+                }
+                case 10: {
+                    if (r0.tp() != 2) { $pc0 = 14; continue $sw0; }
+                    this.nw.put(r0.j6(0), new abcd.IN(false, abcd.AL.j6(r0.j6(1))));
+                    { $pc0 = 12; continue $sw0; }
+                }
+                case 14: {
+                    throw new java.lang.IllegalArgumentException("Bad sequence size: " + r0.tp());
+                }
+                case 5: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public JN(java.util.Vector r4, java.util.Hashtable r5) {
-        this.nw = new java.util.Hashtable();
-        this.SI = new java.util.Vector();
-        if (r4 != null) goto L5;
-        java.util.Enumeration r6 = r5.keys();
-    L7:
-        if (r6.hasMoreElements() == false) goto L8;
-        this.SI.addElement(abcd.oM.j6(r6.nextElement()));
-        goto L7
-    L8:
-        java.util.Enumeration r0 = this.SI.elements();
-    L10:
-        if (r0.hasMoreElements() == false) goto L11;
-        abcd.zL r7 = abcd.oM.j6(r0.nextElement());
-        abcd.IN r1 = (abcd.IN) r5.get(r7);
-        this.nw.put(r7, r1);
-        goto L10
-    L11:
-        return;
-    L5:
-        r6 = r4.elements();
-        goto L7
+        java.util.Enumeration r6 = null;
+        java.util.Enumeration r0 = null;
+        abcd.zL r7 = null;
+        abcd.IN r1 = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    this.nw = new java.util.Hashtable();
+                    this.SI = new java.util.Vector();
+                    if (r4 != null) { $pc1 = 5; continue $sw1; }
+                    r6 = r5.keys();
+                    $pc1 = 7; continue $sw1;
+                }
+                case 7: {
+                    if (r6.hasMoreElements() == false) { $pc1 = 8; continue $sw1; }
+                    this.SI.addElement(abcd.oM.j6(r6.nextElement()));
+                    { $pc1 = 7; continue $sw1; }
+                }
+                case 8: {
+                    r0 = this.SI.elements();
+                    $pc1 = 10; continue $sw1;
+                }
+                case 10: {
+                    if (r0.hasMoreElements() == false) { $pc1 = 11; continue $sw1; }
+                    r7 = abcd.oM.j6(r0.nextElement());
+                    r1 = (abcd.IN) r5.get(r7);
+                    this.nw.put(r7, r1);
+                    { $pc1 = 10; continue $sw1; }
+                }
+                case 11: {
+                    return;
+                }
+                case 5: {
+                    r6 = r4.elements();
+                    { $pc1 = 7; continue $sw1; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static abcd.JN j6(java.lang.Object r3) {
-        if (r3 == null) goto L21;
-        if ((r3 instanceof abcd.JN) == true) goto L21;
-        if ((r3 instanceof abcd.FL) == false) goto L11;
-        return new abcd.JN((abcd.FL) r3);
-    L11:
-        if ((r3 instanceof abcd.AN) == false) goto L15;
-        return new abcd.JN((abcd.FL) ((abcd.AN) r3).DW());
-    L15:
-        if ((r3 instanceof abcd.LL) == false) goto L19;
-        return j6(((abcd.LL) r3).u7());
-    L19:
-        throw new java.lang.IllegalArgumentException("illegal object in getInstance: " + r3.getClass().getName());
-    L21:
-        return (abcd.JN) r3;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    if (r3 == null) { $pc2 = 21; continue $sw2; }
+                    if ((r3 instanceof abcd.JN) == true) { $pc2 = 21; continue $sw2; }
+                    if ((r3 instanceof abcd.FL) == false) { $pc2 = 11; continue $sw2; }
+                    return new abcd.JN((abcd.FL) r3);
+                }
+                case 11: {
+                    if ((r3 instanceof abcd.AN) == false) { $pc2 = 15; continue $sw2; }
+                    return new abcd.JN((abcd.FL) ((abcd.AN) r3).DW());
+                }
+                case 15: {
+                    if ((r3 instanceof abcd.LL) == false) { $pc2 = 19; continue $sw2; }
+                    return j6(((abcd.LL) r3).u7());
+                }
+                case 19: {
+                    throw new java.lang.IllegalArgumentException("illegal object in getInstance: " + r3.getClass().getName());
+                }
+                case 21: {
+                    return (abcd.JN) r3;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
     public abcd.EL DW() {
-        abcd.rL r0 = new abcd.rL();
-        java.util.Enumeration r1 = this.SI.elements();
-    L4:
-        if (r1.hasMoreElements() == false) goto L6;
-        abcd.zL r2 = (abcd.zL) r1.nextElement();
-        abcd.IN r3 = (abcd.IN) this.nw.get(r2);
-        abcd.rL r4 = new abcd.rL();
-        r4.j6(r2);
-        if (r3.DW() == false) goto L10;
-        r4.j6(new abcd.dM(true));
-    L10:
-        r4.j6(r3.j6());
-        r0.j6(new abcd.tM(r4));
-        goto L4
-    L6:
-        return new abcd.tM(r0);
+        abcd.rL r0 = null;
+        java.util.Enumeration r1 = null;
+        abcd.zL r2 = null;
+        abcd.IN r3 = null;
+        abcd.rL r4 = null;
+        java.lang.Throwable $ex3 = null;
+        int $pc3 = -1;
+        $sw3: while (true) {
+            switch ($pc3) {
+                case -1: {
+                    r0 = new abcd.rL();
+                    r1 = this.SI.elements();
+                    $pc3 = 4; continue $sw3;
+                }
+                case 4: {
+                    if (r1.hasMoreElements() == false) { $pc3 = 6; continue $sw3; }
+                    r2 = (abcd.zL) r1.nextElement();
+                    r3 = (abcd.IN) this.nw.get(r2);
+                    r4 = new abcd.rL();
+                    r4.j6(r2);
+                    if (r3.DW() == false) { $pc3 = 10; continue $sw3; }
+                    r4.j6(new abcd.dM(true));
+                    $pc3 = 10; continue $sw3;
+                }
+                case 10: {
+                    r4.j6(r3.j6());
+                    r0.j6(new abcd.tM(r4));
+                    { $pc3 = 4; continue $sw3; }
+                }
+                case 6: {
+                    return new abcd.tM(r0);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public abcd.IN j6(abcd.oM r2) {

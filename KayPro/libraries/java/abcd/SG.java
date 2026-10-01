@@ -57,12 +57,30 @@ class SG extends abcd.UH {
 
     @Override
     public abcd.yE j6() {
-        if (this.v5 != null) goto L11;
-        if (DW() != 0) goto L11;
-        this.v5 = this.j6.j6(this.Hw);     // Catch: java.io.IOException -> L8
-    L8:
-        return null;
-    L11:
-        return this.v5;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (this.v5 != null) { $pc0 = 11; continue $sw0; }
+                    if (DW() != 0) { $pc0 = 11; continue $sw0; }
+                    try {
+                        this.v5 = this.j6.j6(this.Hw);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.io.IOException) { $pc0 = 8; continue $sw0; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    $pc0 = 8; continue $sw0;
+                }
+                case 8: {
+                    return null;
+                }
+                case 11: {
+                    return this.v5;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

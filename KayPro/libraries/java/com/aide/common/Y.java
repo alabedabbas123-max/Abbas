@@ -27,26 +27,65 @@ class Y extends com.aide.common.Abstractma {
     @Override
     @abcd.Interfacesu(method = 2538487364002070459L)
     public android.app.Dialog j6(android.app.Activity r8) {
-    L11:
-        th = move-exception;
-        if (VH == false) goto L15;
-        abcd.wu.j6(th, -4965164946137233320L, this, r8);
-    L15:
-        throw th;
-    L4:
-        if (Zo == false) goto L6;
-        abcd.wu.j6(-4965164946137233320L, this, r8);     // Catch: java.lang.Throwable -> L11
-    L6:
-        com.aide.common.KeyStrokeEditText r2 = new com.aide.common.KeyStrokeEditText(r8);     // Catch: java.lang.Throwable -> L11
-        r2.setKeyStroke(this.gn);     // Catch: java.lang.Throwable -> L11
-        r2.setOnEditorActionListener(new com.aide.common.T(this, r8, r2));     // Catch: java.lang.Throwable -> L11
-        android.app.AlertDialog.Builder r3 = new android.app.AlertDialog.Builder(r8);     // Catch: java.lang.Throwable -> L11
-        r3.setView(r2).setMessage(this.tp).setCancelable(true).setPositiveButton(r8.getResources().getString(com.aide.ui.Ra.dialog_ok), new com.aide.common.W(this, r8, r2)).setNegativeButton(r8.getResources().getString(com.aide.ui.Ra.dialog_cancel), new com.aide.common.V(this, r8, r2)).setNeutralButton("Default", new com.aide.common.U(this, r8, r2));     // Catch: java.lang.Throwable -> L11
-        if (this.EQ == null) goto L9;
-        r3.setTitle(this.EQ);     // Catch: java.lang.Throwable -> L11
-    L9:
-        android.app.AlertDialog r4 = r3.create();     // Catch: java.lang.Throwable -> L11
-        r4.setOnShowListener(new com.aide.common.X(this, r8, r2));     // Catch: java.lang.Throwable -> L11
-        return r4;
+        com.aide.common.KeyStrokeEditText r2 = null;
+        android.app.AlertDialog.Builder r3 = null;
+        android.app.AlertDialog r4 = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 4;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 11: {
+                    th = $ex0;
+                    if (VH == false) { $pc0 = 15; continue $sw0; }
+                    abcd.wu.j6(th, -4965164946137233320L, this, r8);
+                    $pc0 = 15; continue $sw0;
+                }
+                case 15: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (Zo == false) { $pc0 = 6; continue $sw0; }
+                    try {
+                        abcd.wu.j6(-4965164946137233320L, this, r8);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 11; continue $sw0;
+                    }
+                    $pc0 = 6; continue $sw0;
+                }
+                case 6: {
+                    try {
+                        r2 = new com.aide.common.KeyStrokeEditText(r8);
+                        r2.setKeyStroke(this.gn);
+                        r2.setOnEditorActionListener(new com.aide.common.T(this, r8, r2));
+                        r3 = new android.app.AlertDialog.Builder(r8);
+                        r3.setView(r2).setMessage(this.tp).setCancelable(true).setPositiveButton(r8.getResources().getString(com.aide.ui.Ra.dialog_ok), new com.aide.common.W(this, r8, r2)).setNegativeButton(r8.getResources().getString(com.aide.ui.Ra.dialog_cancel), new com.aide.common.V(this, r8, r2)).setNeutralButton("Default", new com.aide.common.U(this, r8, r2));
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 11; continue $sw0;
+                    }
+                    if (this.EQ == null) { $pc0 = 9; continue $sw0; }
+                    try {
+                        r3.setTitle(this.EQ);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 11; continue $sw0;
+                    }
+                    $pc0 = 9; continue $sw0;
+                }
+                case 9: {
+                    try {
+                        r4 = r3.create();
+                        r4.setOnShowListener(new com.aide.common.X(this, r8, r2));
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 11; continue $sw0;
+                    }
+                    return r4;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

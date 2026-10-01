@@ -9,15 +9,28 @@ public abstract class Cs extends abcd.Ds {
 
     @Override
     protected int DW(abcd.Abstractms r5) {
-        long r0 = ((abcd.Cs) r5).j6;
-        long r2 = this.j6;
-        if (r2 >= r0) goto L7;
-        return -1;
-    L7:
-        if (r2 <= r0) goto L10;
-        return 1;
-    L10:
-        return 0;
+        long r0 = 0L;
+        long r2 = 0L;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = ((abcd.Cs) r5).j6;
+                    r2 = this.j6;
+                    if (r2 >= r0) { $pc0 = 7; continue $sw0; }
+                    return -1;
+                }
+                case 7: {
+                    if (r2 <= r0) { $pc0 = 10; continue $sw0; }
+                    return 1;
+                }
+                case 10: {
+                    return 0;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
@@ -27,11 +40,22 @@ public abstract class Cs extends abcd.Ds {
 
     @Override
     public final boolean J8() {
-        long r0 = this.j6;
-        if (((int) r0) != r0) goto L5;
-        return true;
-    L5:
-        return false;
+        long r0 = 0L;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    r0 = this.j6;
+                    if (((int) r0) != r0) { $pc1 = 5; continue $sw1; }
+                    return true;
+                }
+                case 5: {
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
@@ -40,13 +64,25 @@ public abstract class Cs extends abcd.Ds {
     }
 
     public final boolean equals(java.lang.Object r5) {
-        if (r5 != null) goto L4;
-    L8:
-        return false;
-    L4:
-        if (getClass() != r5.getClass()) goto L8;
-        if (this.j6 != ((abcd.Cs) r5).j6) goto L8;
-        return true;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    if (r5 != null) { $pc2 = 4; continue $sw2; }
+                    $pc2 = 8; continue $sw2;
+                }
+                case 8: {
+                    return false;
+                }
+                case 4: {
+                    if (getClass() != r5.getClass()) { $pc2 = 8; continue $sw2; }
+                    if (this.j6 != ((abcd.Cs) r5).j6) { $pc2 = 8; continue $sw2; }
+                    return true;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public final int hashCode() {

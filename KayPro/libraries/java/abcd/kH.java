@@ -16,17 +16,31 @@ public class kH {
     }
 
     public boolean j6(java.lang.String r5) {
-        if (r5 != null) goto L6;
-        return false;
-    L6:
-        if (r5.endsWith("\n") == true) goto L8;
-        r5 = java.lang.String.valueOf(r5) + "\n";
-    L8:
-        abcd.WG r1 = new abcd.WG(this.j6, this.DW);
-        if (r1.Hw() == true) goto L11;
-        return false;
-    L11:
-        r1.j6(abcd.hE.j6(r5));
-        return r1.j6();
+        abcd.WG r1 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (r5 != null) { $pc0 = 6; continue $sw0; }
+                    return false;
+                }
+                case 6: {
+                    if (r5.endsWith("\n") == true) { $pc0 = 8; continue $sw0; }
+                    r5 = java.lang.String.valueOf(r5) + "\n";
+                    $pc0 = 8; continue $sw0;
+                }
+                case 8: {
+                    r1 = new abcd.WG(this.j6, this.DW);
+                    if (r1.Hw() == true) { $pc0 = 11; continue $sw0; }
+                    return false;
+                }
+                case 11: {
+                    r1.j6(abcd.hE.j6(r5));
+                    return r1.j6();
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

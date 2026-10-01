@@ -328,7 +328,7 @@ public class Resolve {
         }
         if (z2) {
             Type typeElemtype = this.types.elemtype(type);
-            for (?? r10 = list; r10.nonEmpty(); r10 = r10.tail) {
+            for (java.lang.Object r10 = list; r10.nonEmpty(); r10 = r10.tail) {
                 if (!this.types.isConvertible((Type) r10.head, typeElemtype, warner)) {
                     throw this.inapplicableMethodException.setMessage("varargs.argument.mismatch", r10.head, typeElemtype);
                 }

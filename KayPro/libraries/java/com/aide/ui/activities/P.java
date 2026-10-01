@@ -23,21 +23,47 @@ class P implements java.lang.Runnable {
     @Override
     @abcd.Interfacesu(method = -113970927176049669L)
     public void run() {
-    L11:
-        th = move-exception;
-        if (DW == false) goto L15;
-        abcd.wu.j6(th, 731623696426836669L, this);
-    L15:
-        throw th;
-    L4:
-        if (j6 == false) goto L7;
-        abcd.wu.j6(731623696426836669L, this);     // Catch: java.lang.Throwable -> L11
-    L7:
-        if (com.aide.ui.activities.ShopLearningPopupActivity.Hw(this.Hw.FH) == false) goto L9;
-        return;
-    L9:
-        abcd.F.j6("LerningShopOKShown");     // Catch: java.lang.Throwable -> L11
-        com.aide.ui.activities.ShopLearningPopupActivity.j6(this.Hw.FH, this.FH);     // Catch: java.lang.Throwable -> L11
-        com.aide.ui.activities.ShopLearningPopupActivity.v5(this.Hw.FH);     // Catch: java.lang.Throwable -> L11
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 4;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 11: {
+                    th = $ex0;
+                    if (DW == false) { $pc0 = 15; continue $sw0; }
+                    abcd.wu.j6(th, 731623696426836669L, this);
+                    $pc0 = 15; continue $sw0;
+                }
+                case 15: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (j6 == false) { $pc0 = 7; continue $sw0; }
+                    try {
+                        abcd.wu.j6(731623696426836669L, this);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 11; continue $sw0;
+                    }
+                    $pc0 = 7; continue $sw0;
+                }
+                case 7: {
+                    if (com.aide.ui.activities.ShopLearningPopupActivity.Hw(this.Hw.FH) == false) { $pc0 = 9; continue $sw0; }
+                    return;
+                }
+                case 9: {
+                    try {
+                        abcd.F.j6("LerningShopOKShown");
+                        com.aide.ui.activities.ShopLearningPopupActivity.j6(this.Hw.FH, this.FH);
+                        com.aide.ui.activities.ShopLearningPopupActivity.v5(this.Hw.FH);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 11; continue $sw0;
+                    }
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

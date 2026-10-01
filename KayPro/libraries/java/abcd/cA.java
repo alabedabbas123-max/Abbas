@@ -5,21 +5,42 @@ class cA implements abcd.InterfaceoA {
     }
 
     private abcd.Wz DW(org.json.JSONObject r10) {
-        java.lang.String r2 = r10.getString("identifier");
-        java.lang.String r3 = r10.getString("status");
-        java.lang.String r4 = r10.getString("url");
-        java.lang.String r5 = r10.getString("reports_url");
-        java.lang.String r6 = r10.getString("ndk_reports_url");
-        boolean r7 = r10.optBoolean("update_required", false);
-        if (r10.has("icon") == true) goto L5;
-    L7:
+        java.lang.String r2 = null;
+        java.lang.String r3 = null;
+        java.lang.String r4 = null;
+        java.lang.String r5 = null;
+        java.lang.String r6 = null;
+        boolean r7 = false;
         abcd.Uz r11 = null;
-    L9:
-        return new abcd.Wz(r2, r3, r4, r5, r6, r7, r11);
-    L5:
-        if (r10.getJSONObject("icon").has("hash") == false) goto L7;
-        r11 = v5(r10.getJSONObject("icon"));
-        goto L9
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r2 = r10.getString("identifier");
+                    r3 = r10.getString("status");
+                    r4 = r10.getString("url");
+                    r5 = r10.getString("reports_url");
+                    r6 = r10.getString("ndk_reports_url");
+                    r7 = r10.optBoolean("update_required", false);
+                    if (r10.has("icon") == true) { $pc0 = 5; continue $sw0; }
+                    $pc0 = 7; continue $sw0;
+                }
+                case 7: {
+                    r11 = null;
+                    $pc0 = 9; continue $sw0;
+                }
+                case 9: {
+                    return new abcd.Wz(r2, r3, r4, r5, r6, r7, r11);
+                }
+                case 5: {
+                    if (r10.getJSONObject("icon").has("hash") == false) { $pc0 = 7; continue $sw0; }
+                    r11 = v5(r10.getJSONObject("icon"));
+                    { $pc0 = 9; continue $sw0; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     private abcd.Yz FH(org.json.JSONObject r4) {
@@ -39,11 +60,22 @@ class cA implements abcd.InterfaceoA {
     }
 
     private long j6(io.fabric.sdk.android.services.common.k r5, long r6, org.json.JSONObject r8) {
-        if (r8.has("expires_at") == true) goto L7;
-        long r7 = r6 * 1000;
-        return r7 + r5.j6();
-    L7:
-        return r8.getLong("expires_at");
+        long r7 = 0L;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if (r8.has("expires_at") == true) { $pc1 = 7; continue $sw1; }
+                    r7 = r6 * 1000;
+                    return r7 + r5.j6();
+                }
+                case 7: {
+                    return r8.getLong("expires_at");
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     private abcd.Tz j6(org.json.JSONObject r15) {

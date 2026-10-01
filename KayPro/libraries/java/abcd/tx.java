@@ -15,9 +15,19 @@ public class tx {
     }
 
     public static boolean j6(android.os.Parcel r0) {
-        if (r0.readInt() == 0) goto L6;
-        return true;
-    L6:
-        return false;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (r0.readInt() == 0) { $pc0 = 6; continue $sw0; }
+                    return true;
+                }
+                case 6: {
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

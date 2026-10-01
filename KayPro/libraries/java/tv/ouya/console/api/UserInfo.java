@@ -65,88 +65,158 @@ public class UserInfo implements android.os.Parcelable {
     }
 
     public boolean equals(java.lang.Object r5) {
-        if (this != r5) goto L6;
-        return true;
-    L6:
-        if (r5 != null) goto L8;
-    L49:
-        return false;
-    L8:
-        if (tv.ouya.console.api.UserInfo.class != r5.getClass()) goto L49;
-        tv.ouya.console.api.UserInfo r6 = (tv.ouya.console.api.UserInfo) r5;
-        java.lang.String r2 = this.FH;
-        if (r2 == null) goto L16;
-        if (r2.equals(r6.FH) == false) goto L17;
-    L18:
-        java.lang.String r3 = this.Hw;
-        if (r3 == null) goto L24;
-        if (r3.equals(r6.Hw) == false) goto L25;
-    L26:
-        java.lang.String r4 = this.DW;
-        if (r4 == null) goto L32;
-        if (r4.equals(r6.DW) == false) goto L33;
-    L34:
-        java.util.Calendar r7 = this.v5;
-        if (r7 == null) goto L40;
-        if (r7.equals(r6.v5) == true) goto L43;
-    L41:
-        return false;
-    L43:
-        if (this.VH == r6.VH) goto L46;
-        return false;
-    L46:
-        if (this.gn == r6.gn) goto L48;
-        return false;
-    L48:
-        return true;
-    L40:
-        if (r6.v5 == null) goto L43;
-    L33:
-        return false;
-    L32:
-        if (r6.DW == null) goto L34;
-    L25:
-        return false;
-    L24:
-        if (r6.Hw == null) goto L26;
-    L17:
-        return false;
-    L16:
-        if (r6.FH == null) goto L18;
-        goto L17
+        tv.ouya.console.api.UserInfo r6 = null;
+        java.lang.String r2 = null;
+        java.lang.String r3 = null;
+        java.lang.String r4 = null;
+        java.util.Calendar r7 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (this != r5) { $pc0 = 6; continue $sw0; }
+                    return true;
+                }
+                case 6: {
+                    if (r5 != null) { $pc0 = 8; continue $sw0; }
+                    $pc0 = 49; continue $sw0;
+                }
+                case 49: {
+                    return false;
+                }
+                case 8: {
+                    if (tv.ouya.console.api.UserInfo.class != r5.getClass()) { $pc0 = 49; continue $sw0; }
+                    r6 = (tv.ouya.console.api.UserInfo) r5;
+                    r2 = this.FH;
+                    if (r2 == null) { $pc0 = 16; continue $sw0; }
+                    if (r2.equals(r6.FH) == false) { $pc0 = 17; continue $sw0; }
+                    $pc0 = 18; continue $sw0;
+                }
+                case 18: {
+                    r3 = this.Hw;
+                    if (r3 == null) { $pc0 = 24; continue $sw0; }
+                    if (r3.equals(r6.Hw) == false) { $pc0 = 25; continue $sw0; }
+                    $pc0 = 26; continue $sw0;
+                }
+                case 26: {
+                    r4 = this.DW;
+                    if (r4 == null) { $pc0 = 32; continue $sw0; }
+                    if (r4.equals(r6.DW) == false) { $pc0 = 33; continue $sw0; }
+                    $pc0 = 34; continue $sw0;
+                }
+                case 34: {
+                    r7 = this.v5;
+                    if (r7 == null) { $pc0 = 40; continue $sw0; }
+                    if (r7.equals(r6.v5) == true) { $pc0 = 43; continue $sw0; }
+                    $pc0 = 41; continue $sw0;
+                }
+                case 41: {
+                    return false;
+                }
+                case 43: {
+                    if (this.VH == r6.VH) { $pc0 = 46; continue $sw0; }
+                    return false;
+                }
+                case 46: {
+                    if (this.gn == r6.gn) { $pc0 = 48; continue $sw0; }
+                    return false;
+                }
+                case 48: {
+                    return true;
+                }
+                case 40: {
+                    if (r6.v5 == null) { $pc0 = 43; continue $sw0; }
+                    $pc0 = 33; continue $sw0;
+                }
+                case 33: {
+                    return false;
+                }
+                case 32: {
+                    if (r6.DW == null) { $pc0 = 34; continue $sw0; }
+                    $pc0 = 25; continue $sw0;
+                }
+                case 25: {
+                    return false;
+                }
+                case 24: {
+                    if (r6.Hw == null) { $pc0 = 26; continue $sw0; }
+                    $pc0 = 17; continue $sw0;
+                }
+                case 17: {
+                    return false;
+                }
+                case 16: {
+                    if (r6.FH == null) { $pc0 = 18; continue $sw0; }
+                    { $pc0 = 17; continue $sw0; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public int hashCode() {
-        java.lang.String r0 = this.DW;
+        java.lang.String r0 = null;
         int r1 = 0;
-        if (r0 == null) goto L5;
-        int r2 = r0.hashCode();
-    L6:
-        int r3 = r2 * 31;
-        java.lang.String r4 = this.FH;
-        if (r4 == null) goto L9;
-        int r5 = r4.hashCode();
-    L10:
-        int r6 = (r3 + r5) * 31;
-        java.lang.String r7 = this.Hw;
-        if (r7 == null) goto L13;
-        int r8 = r7.hashCode();
-    L14:
-        int r9 = (r6 + r8) * 31;
-        java.util.Calendar r10 = this.v5;
-        if (r10 == null) goto L18;
-        r1 = r10.hashCode();
-    L18:
-        return ((((((r9 + r1) * 31) + new java.lang.Integer(this.Zo).hashCode()) * 31) + java.lang.Boolean.valueOf(this.VH).hashCode()) * 31) + java.lang.Boolean.valueOf(this.gn).hashCode();
-    L13:
-        r8 = 0;
-        goto L14
-    L9:
-        r5 = 0;
-        goto L10
-    L5:
-        r2 = 0;
-        goto L6
+        int r2 = 0;
+        int r3 = 0;
+        java.lang.String r4 = null;
+        int r5 = 0;
+        int r6 = 0;
+        java.lang.String r7 = null;
+        int r8 = 0;
+        int r9 = 0;
+        java.util.Calendar r10 = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    r0 = this.DW;
+                    r1 = 0;
+                    if (r0 == null) { $pc1 = 5; continue $sw1; }
+                    r2 = r0.hashCode();
+                    $pc1 = 6; continue $sw1;
+                }
+                case 6: {
+                    r3 = r2 * 31;
+                    r4 = this.FH;
+                    if (r4 == null) { $pc1 = 9; continue $sw1; }
+                    r5 = r4.hashCode();
+                    $pc1 = 10; continue $sw1;
+                }
+                case 10: {
+                    r6 = (r3 + r5) * 31;
+                    r7 = this.Hw;
+                    if (r7 == null) { $pc1 = 13; continue $sw1; }
+                    r8 = r7.hashCode();
+                    $pc1 = 14; continue $sw1;
+                }
+                case 14: {
+                    r9 = (r6 + r8) * 31;
+                    r10 = this.v5;
+                    if (r10 == null) { $pc1 = 18; continue $sw1; }
+                    r1 = r10.hashCode();
+                    $pc1 = 18; continue $sw1;
+                }
+                case 18: {
+                    return ((((((r9 + r1) * 31) + new java.lang.Integer(this.Zo).hashCode()) * 31) + java.lang.Boolean.valueOf(this.VH).hashCode()) * 31) + java.lang.Boolean.valueOf(this.gn).hashCode();
+                }
+                case 13: {
+                    r8 = 0;
+                    { $pc1 = 14; continue $sw1; }
+                }
+                case 9: {
+                    r5 = 0;
+                    { $pc1 = 10; continue $sw1; }
+                }
+                case 5: {
+                    r2 = 0;
+                    { $pc1 = 6; continue $sw1; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public java.lang.String toString() {
@@ -155,20 +225,34 @@ public class UserInfo implements android.os.Parcelable {
 
     @Override
     public void writeToParcel(android.os.Parcel r3, int r4) {
-        r3.writeString(this.DW);
-        r3.writeString(this.FH);
-        r3.writeString(this.Hw);
-        java.util.Calendar r5 = this.v5;
-        if (r5 != null) goto L5;
-        long r0 = 0;
-    L6:
-        r3.writeLong(r0);
-        r3.writeInt(this.Zo);
-        r3.writeByte(this.VH ? 1 : 0);
-        r3.writeByte(this.gn ? 1 : 0);
-        return;
-    L5:
-        r0 = r5.getTimeInMillis();
-        goto L6
+        java.util.Calendar r5 = null;
+        long r0 = 0L;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    r3.writeString(this.DW);
+                    r3.writeString(this.FH);
+                    r3.writeString(this.Hw);
+                    r5 = this.v5;
+                    if (r5 != null) { $pc2 = 5; continue $sw2; }
+                    r0 = 0;
+                    $pc2 = 6; continue $sw2;
+                }
+                case 6: {
+                    r3.writeLong(r0);
+                    r3.writeInt(this.Zo);
+                    r3.writeByte(this.VH ? 1 : 0);
+                    r3.writeByte(this.gn ? 1 : 0);
+                    return;
+                }
+                case 5: {
+                    r0 = r5.getTimeInMillis();
+                    { $pc2 = 6; continue $sw2; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

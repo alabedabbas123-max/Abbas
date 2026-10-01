@@ -33,10 +33,20 @@ public class UserTouchAction {
     }
 
     public java.lang.Class<?> getActivityClass() {
-        if (getActivity() != null) goto L7;
-        return null;
-    L7:
-        return getActivity().getClass();
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (getActivity() != null) { $pc0 = 7; continue $sw0; }
+                    return null;
+                }
+                case 7: {
+                    return getActivity().getClass();
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public int getKind() {
@@ -44,11 +54,22 @@ public class UserTouchAction {
     }
 
     public java.lang.String getViewIdText() {
-        com.appfour.backbone.api.objects.UserActionWidget r0 = this.widget;
-        if (r0 != null) goto L7;
-        return null;
-    L7:
-        return r0.getViewIdText();
+        com.appfour.backbone.api.objects.UserActionWidget r0 = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    r0 = this.widget;
+                    if (r0 != null) { $pc1 = 7; continue $sw1; }
+                    return null;
+                }
+                case 7: {
+                    return r0.getViewIdText();
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public com.appfour.backbone.api.objects.UserActionWidget getWidget() {

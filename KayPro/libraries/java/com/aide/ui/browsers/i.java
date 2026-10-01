@@ -25,22 +25,53 @@ class i implements android.widget.AdapterView.OnItemLongClickListener {
     @Override
     @abcd.Interfacesu(method = -1510103773586112649L)
     public boolean onItemLongClick(android.widget.AdapterView<?> r10, android.view.View r11, int r12, long r13) {
-    L10:
-        th = move-exception;
-        if (DW == false) goto L14;
-        abcd.wu.j6(th, 1424469017040956483L, this, r10, r11, new java.lang.Integer(r12), new java.lang.Long(r13));
-    L14:
-        throw th;
-    L3:
-        if (j6 == false) goto L5;
-        abcd.wu.j6(1424469017040956483L, this, r10, r11, new java.lang.Integer(r12), new java.lang.Long(r13));     // Catch: java.lang.Throwable -> L10
-    L5:
-        com.aide.ui.browsers.FileBrowser.b r0 = (com.aide.ui.browsers.FileBrowser.b) this.FH.getItemAtPosition(r12);     // Catch: java.lang.Throwable -> L10
-        if (r0 != null) goto L8;
-        return true;
-    L8:
-        com.aide.ui.browsers.FileBrowser.j6(this.Hw, r0);     // Catch: java.lang.Throwable -> L10
-        com.aide.ui.browsers.FileBrowser.j6(this.Hw, r11, true);     // Catch: java.lang.Throwable -> L10
-        return true;
+        com.aide.ui.browsers.FileBrowser.b r0 = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 3;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 10: {
+                    th = $ex0;
+                    if (DW == false) { $pc0 = 14; continue $sw0; }
+                    abcd.wu.j6(th, 1424469017040956483L, this, r10, r11, new java.lang.Integer(r12), new java.lang.Long(r13));
+                    $pc0 = 14; continue $sw0;
+                }
+                case 14: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 3: {
+                    if (j6 == false) { $pc0 = 5; continue $sw0; }
+                    try {
+                        abcd.wu.j6(1424469017040956483L, this, r10, r11, new java.lang.Integer(r12), new java.lang.Long(r13));
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 10; continue $sw0;
+                    }
+                    $pc0 = 5; continue $sw0;
+                }
+                case 5: {
+                    try {
+                        r0 = (com.aide.ui.browsers.FileBrowser.b) this.FH.getItemAtPosition(r12);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 10; continue $sw0;
+                    }
+                    if (r0 != null) { $pc0 = 8; continue $sw0; }
+                    return true;
+                }
+                case 8: {
+                    try {
+                        com.aide.ui.browsers.FileBrowser.j6(this.Hw, r0);
+                        com.aide.ui.browsers.FileBrowser.j6(this.Hw, r11, true);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 10; continue $sw0;
+                    }
+                    return true;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

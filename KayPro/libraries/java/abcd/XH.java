@@ -1,6 +1,6 @@
 package abcd;
 
-public final enum XH extends java.lang.Enum<abcd.XH> {
+public final class XH extends com.almlkaide.kaypro.internal.EnumBase {
     public static final abcd.XH DW = null;
     public static final abcd.XH FH = null;
     public static final abcd.XH Hw = null;
@@ -20,7 +20,7 @@ public final enum XH extends java.lang.Enum<abcd.XH> {
     }
 
     public static abcd.XH valueOf(java.lang.String r1) {
-        return (abcd.XH) java.lang.Enum.valueOf(abcd.XH.class, r1);
+        return (abcd.XH) com.almlkaide.kaypro.internal.EnumBase.valueOf(abcd.XH.values(), r1);
     }
 
     public static abcd.XH[] values() {

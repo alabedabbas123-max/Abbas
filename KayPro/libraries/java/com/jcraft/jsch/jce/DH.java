@@ -41,15 +41,28 @@ public class DH implements com.jcraft.jsch.DH {
 
     @Override
     public byte[] FH() {
-        if (this.Zo != null) goto L6;
-        java.security.PublicKey r0 = java.security.KeyFactory.getInstance("DH").generatePublic(new javax.crypto.spec.DHPublicKeySpec(this.v5, this.j6, this.DW));
-        this.u7.doPhase(r0, true);
-        byte[] r1 = this.u7.generateSecret();
-        this.Zo = new java.math.BigInteger(r1);
-        this.VH = this.Zo.toByteArray();
-        this.VH = r1;
-    L6:
-        return this.VH;
+        java.security.PublicKey r0 = null;
+        byte[] r1 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (this.Zo != null) { $pc0 = 6; continue $sw0; }
+                    r0 = java.security.KeyFactory.getInstance("DH").generatePublic(new javax.crypto.spec.DHPublicKeySpec(this.v5, this.j6, this.DW));
+                    this.u7.doPhase(r0, true);
+                    r1 = this.u7.generateSecret();
+                    this.Zo = new java.math.BigInteger(r1);
+                    this.VH = this.Zo.toByteArray();
+                    this.VH = r1;
+                    $pc0 = 6; continue $sw0;
+                }
+                case 6: {
+                    return this.VH;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     void j6(java.math.BigInteger r1) {
@@ -63,15 +76,28 @@ public class DH implements com.jcraft.jsch.DH {
 
     @Override
     public byte[] j6() {
-        if (this.FH != null) goto L6;
-        javax.crypto.spec.DHParameterSpec r0 = new javax.crypto.spec.DHParameterSpec(this.j6, this.DW);
-        this.gn.initialize(r0);
-        java.security.KeyPair r1 = this.gn.generateKeyPair();
-        this.u7.init(r1.getPrivate());
-        r1.getPublic().getEncoded();
-        this.FH = ((javax.crypto.interfaces.DHPublicKey) r1.getPublic()).getY();
-        this.Hw = this.FH.toByteArray();
-    L6:
-        return this.Hw;
+        javax.crypto.spec.DHParameterSpec r0 = null;
+        java.security.KeyPair r1 = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if (this.FH != null) { $pc1 = 6; continue $sw1; }
+                    r0 = new javax.crypto.spec.DHParameterSpec(this.j6, this.DW);
+                    this.gn.initialize(r0);
+                    r1 = this.gn.generateKeyPair();
+                    this.u7.init(r1.getPrivate());
+                    r1.getPublic().getEncoded();
+                    this.FH = ((javax.crypto.interfaces.DHPublicKey) r1.getPublic()).getY();
+                    this.Hw = this.FH.toByteArray();
+                    $pc1 = 6; continue $sw1;
+                }
+                case 6: {
+                    return this.Hw;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

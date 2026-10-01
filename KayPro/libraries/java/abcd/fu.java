@@ -11,20 +11,42 @@ class fu implements abcd._t {
 
     @Override
     public boolean hasNext() {
-        if (this.j6 >= this.DW.j6.size()) goto L5;
-        return true;
-    L5:
-        return false;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (this.j6 >= this.DW.j6.size()) { $pc0 = 5; continue $sw0; }
+                    return true;
+                }
+                case 5: {
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
     public int next() {
-        if (hasNext() == false) goto L7;
-        abcd.au r0 = this.DW.j6;
-        int r1 = this.j6;
-        this.j6 = r1 + 1;
-        return r0.get(r1);
-    L7:
-        throw new java.util.NoSuchElementException();
+        abcd.au r0 = null;
+        int r1 = 0;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if (hasNext() == false) { $pc1 = 7; continue $sw1; }
+                    r0 = this.DW.j6;
+                    r1 = this.j6;
+                    this.j6 = r1 + 1;
+                    return r0.get(r1);
+                }
+                case 7: {
+                    throw new java.util.NoSuchElementException();
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

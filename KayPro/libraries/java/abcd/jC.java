@@ -6,7 +6,7 @@ public class jC {
     int Hw;
     int j6;
 
-    public static final enum a extends java.lang.Enum<abcd.jC.a> {
+    public static final class a extends com.almlkaide.kaypro.internal.EnumBase {
         public static final abcd.jC.a DW = null;
         public static final abcd.jC.a FH = null;
         public static final abcd.jC.a Hw = null;
@@ -26,7 +26,7 @@ public class jC {
         }
 
         public static abcd.jC.a valueOf(java.lang.String r1) {
-            return (abcd.jC.a) java.lang.Enum.valueOf(abcd.jC.a.class, r1);
+            return (abcd.jC.a) com.almlkaide.kaypro.internal.EnumBase.valueOf(abcd.jC.a.values(), r1);
         }
 
         public static abcd.jC.a[] values() {
@@ -74,28 +74,51 @@ public class jC {
     }
 
     public boolean equals(java.lang.Object r4) {
-        if ((r4 instanceof abcd.jC) == false) goto L14;
-        abcd.jC r5 = (abcd.jC) r4;
-        if (this.j6 != r5.j6) goto L14;
-        if (this.DW != r5.DW) goto L14;
-        if (this.FH != r5.FH) goto L14;
-        if (this.Hw != r5.Hw) goto L14;
-        return true;
-    L14:
-        return false;
+        abcd.jC r5 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if ((r4 instanceof abcd.jC) == false) { $pc0 = 14; continue $sw0; }
+                    r5 = (abcd.jC) r4;
+                    if (this.j6 != r5.j6) { $pc0 = 14; continue $sw0; }
+                    if (this.DW != r5.DW) { $pc0 = 14; continue $sw0; }
+                    if (this.FH != r5.FH) { $pc0 = 14; continue $sw0; }
+                    if (this.Hw != r5.Hw) { $pc0 = 14; continue $sw0; }
+                    return true;
+                }
+                case 14: {
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public final abcd.jC.a gn() {
-        if (this.j6 >= this.DW) goto L11;
-        if (this.FH >= this.Hw) goto L9;
-        return abcd.jC.a.FH;
-    L9:
-        return abcd.jC.a.DW;
-    L11:
-        if (this.FH >= this.Hw) goto L15;
-        return abcd.jC.a.j6;
-    L15:
-        return abcd.jC.a.Hw;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if (this.j6 >= this.DW) { $pc1 = 11; continue $sw1; }
+                    if (this.FH >= this.Hw) { $pc1 = 9; continue $sw1; }
+                    return abcd.jC.a.FH;
+                }
+                case 9: {
+                    return abcd.jC.a.DW;
+                }
+                case 11: {
+                    if (this.FH >= this.Hw) { $pc1 = 15; continue $sw1; }
+                    return abcd.jC.a.j6;
+                }
+                case 15: {
+                    return abcd.jC.a.Hw;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public int hashCode() {
@@ -115,13 +138,24 @@ public class jC {
     }
 
     public final boolean u7() {
-        if (this.j6 == this.DW) goto L5;
-        return false;
-    L5:
-        if (this.FH != this.Hw) goto L10;
-        return true;
-    L10:
-        return false;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    if (this.j6 == this.DW) { $pc2 = 5; continue $sw2; }
+                    return false;
+                }
+                case 5: {
+                    if (this.FH != this.Hw) { $pc2 = 10; continue $sw2; }
+                    return true;
+                }
+                case 10: {
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public final int v5() {

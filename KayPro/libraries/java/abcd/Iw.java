@@ -51,60 +51,107 @@ public class Iw extends org.apache.http.conn.ssl.SSLSocketFactory {
     }
 
     private void j6(javax.net.ssl.SSLSocket r6) {
-        java.util.List r0 = java.util.Arrays.asList(r6.getSupportedProtocols());
-        if (r0.contains("TLSv1.2") == false) goto L6;
-        r6.setEnabledProtocols(new java.lang.String[]{"TLSv1.2"});
-    L11:
-        java.lang.String[] r1 = r6.getSupportedCipherSuites();
-        java.util.ArrayList r2 = new java.util.ArrayList(java.util.Arrays.asList(j6));
-        r2.retainAll(java.util.Arrays.asList(r1));
-        r6.setEnabledCipherSuites((java.lang.String[]) r2.toArray(new java.lang.String[r2.size()]));
-        return;
-    L6:
-        if (r0.contains("TLSv1.0") == false) goto L9;
-        r6.setEnabledProtocols(new java.lang.String[]{"TLSv1.0"});
-        goto L11
-    L9:
-        if (r0.contains("TLSv1") == false) goto L14;
-        r6.setEnabledProtocols(new java.lang.String[]{"TLSv1"});
-        goto L11
-    L14:
-        throw new javax.net.ssl.SSLException("Minimal TLS version 1 support required!");
+        java.util.List r0 = null;
+        java.lang.String[] r1 = null;
+        java.util.ArrayList r2 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = java.util.Arrays.asList(r6.getSupportedProtocols());
+                    if (r0.contains("TLSv1.2") == false) { $pc0 = 6; continue $sw0; }
+                    r6.setEnabledProtocols(new java.lang.String[]{"TLSv1.2"});
+                    $pc0 = 11; continue $sw0;
+                }
+                case 11: {
+                    r1 = r6.getSupportedCipherSuites();
+                    r2 = new java.util.ArrayList(java.util.Arrays.asList(j6));
+                    r2.retainAll(java.util.Arrays.asList(r1));
+                    r6.setEnabledCipherSuites((java.lang.String[]) r2.toArray(new java.lang.String[r2.size()]));
+                    return;
+                }
+                case 6: {
+                    if (r0.contains("TLSv1.0") == false) { $pc0 = 9; continue $sw0; }
+                    r6.setEnabledProtocols(new java.lang.String[]{"TLSv1.0"});
+                    { $pc0 = 11; continue $sw0; }
+                }
+                case 9: {
+                    if (r0.contains("TLSv1") == false) { $pc0 = 14; continue $sw0; }
+                    r6.setEnabledProtocols(new java.lang.String[]{"TLSv1"});
+                    { $pc0 = 11; continue $sw0; }
+                }
+                case 14: {
+                    throw new javax.net.ssl.SSLException("Minimal TLS version 1 support required!");
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     private static final byte[] j6() {
-        byte[][] r0 = {DW(), FH(), Hw()};
-        int r1 = r0.length;
+        byte[][] r0 = null;
+        int r1 = 0;
         int r3 = 0;
         int r4 = 0;
-    L3:
-        if (r3 >= r1) goto L5;
-        r4 = r4 + r0[r3].length;
-        r3 = r3 + 1;
-        goto L3
-    L5:
-        byte[] r2 = new byte[r4];
-        int r5 = r0.length;
+        byte[] r2 = null;
+        int r5 = 0;
         int r6 = 0;
         int r7 = 0;
-    L6:
-        if (r6 >= r5) goto L11;
-        byte[] r8 = r0[r6];
-        int r9 = r8.length;
-        int r10 = r7;
+        byte[] r8 = null;
+        int r9 = 0;
+        int r10 = 0;
         int r11 = 0;
-    L8:
-        if (r11 >= r9) goto L10;
-        r2[r10] = r8[r11];
-        r10 = r10 + 1;
-        r11 = r11 + 1;
-        goto L8
-    L10:
-        r6 = r6 + 1;
-        r7 = r10;
-        goto L6
-    L11:
-        return r2;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    r0 = new byte[][]{DW(), FH(), Hw()};
+                    r1 = r0.length;
+                    r3 = 0;
+                    r4 = 0;
+                    $pc1 = 3; continue $sw1;
+                }
+                case 3: {
+                    if (r3 >= r1) { $pc1 = 5; continue $sw1; }
+                    r4 = r4 + r0[r3].length;
+                    r3 = r3 + 1;
+                    { $pc1 = 3; continue $sw1; }
+                }
+                case 5: {
+                    r2 = new byte[r4];
+                    r5 = r0.length;
+                    r6 = 0;
+                    r7 = 0;
+                    $pc1 = 6; continue $sw1;
+                }
+                case 6: {
+                    if (r6 >= r5) { $pc1 = 11; continue $sw1; }
+                    r8 = r0[r6];
+                    r9 = r8.length;
+                    r10 = r7;
+                    r11 = 0;
+                    $pc1 = 8; continue $sw1;
+                }
+                case 8: {
+                    if (r11 >= r9) { $pc1 = 10; continue $sw1; }
+                    r2[r10] = r8[r11];
+                    r10 = r10 + 1;
+                    r11 = r11 + 1;
+                    { $pc1 = 8; continue $sw1; }
+                }
+                case 10: {
+                    r6 = r6 + 1;
+                    r7 = r10;
+                    { $pc1 = 6; continue $sw1; }
+                }
+                case 11: {
+                    return r2;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     private java.security.KeyStore v5() {
@@ -117,31 +164,69 @@ public class Iw extends org.apache.http.conn.ssl.SSLSocketFactory {
 
     @Override
     public java.net.Socket connectSocket(java.net.Socket r2, java.lang.String r3, int r4, java.net.InetAddress r5, int r6, org.apache.http.params.HttpParams r7) {
-        if (r2 != null) goto L5;
-        r2 = createSocket();
-    L5:
-        javax.net.ssl.SSLSocket r8 = (javax.net.ssl.SSLSocket) r2;
-        j6(r8);
-        if (r5 != null) goto L8;
-        if (r6 > 0) goto L8;
-    L11:
-        int r9 = org.apache.http.params.HttpConnectionParams.getConnectionTimeout(r7);
-        int r10 = org.apache.http.params.HttpConnectionParams.getSoTimeout(r7);
-        r8.connect(new java.net.InetSocketAddress(r3, r4), r9);
-        r8.setSoTimeout(r10);
-        org.apache.http.conn.ssl.SSLSocketFactory.STRICT_HOSTNAME_VERIFIER.verify(r3, r8);     // Catch: java.io.IOException -> L14
-        return r8;
-    L14:
-        e = move-exception;
-        r8.close();     // Catch: java.lang.Exception -> L17
-    L16:
-        throw e;
-    L8:
-        if (r6 >= 0) goto L10;
-        r6 = 0;
-    L10:
-        r8.bind(new java.net.InetSocketAddress(r5, r6));
-        goto L11
+        javax.net.ssl.SSLSocket r8 = null;
+        int r9 = 0;
+        int r10 = 0;
+        java.lang.Throwable e = null;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    if (r2 != null) { $pc2 = 5; continue $sw2; }
+                    r2 = createSocket();
+                    $pc2 = 5; continue $sw2;
+                }
+                case 5: {
+                    r8 = (javax.net.ssl.SSLSocket) r2;
+                    j6(r8);
+                    if (r5 != null) { $pc2 = 8; continue $sw2; }
+                    if (r6 > 0) { $pc2 = 8; continue $sw2; }
+                    $pc2 = 11; continue $sw2;
+                }
+                case 11: {
+                    r9 = org.apache.http.params.HttpConnectionParams.getConnectionTimeout(r7);
+                    r10 = org.apache.http.params.HttpConnectionParams.getSoTimeout(r7);
+                    r8.connect(new java.net.InetSocketAddress(r3, r4), r9);
+                    r8.setSoTimeout(r10);
+                    try {
+                        org.apache.http.conn.ssl.SSLSocketFactory.STRICT_HOSTNAME_VERIFIER.verify(r3, r8);
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        if ($t instanceof java.io.IOException) { $pc2 = 14; continue $sw2; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    return r8;
+                }
+                case 14: {
+                    e = $ex2;
+                    try {
+                        r8.close();
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        if ($t instanceof java.lang.Exception) { $pc2 = 17; continue $sw2; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    $pc2 = 16; continue $sw2;
+                }
+                case 16: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(e);
+                }
+                case 8: {
+                    if (r6 >= 0) { $pc2 = 10; continue $sw2; }
+                    r6 = 0;
+                    $pc2 = 10; continue $sw2;
+                }
+                case 10: {
+                    r8.bind(new java.net.InetSocketAddress(r5, r6));
+                    { $pc2 = 11; continue $sw2; }
+                }
+                case 17: {
+                    throw new java.lang.IllegalStateException();
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
@@ -153,18 +238,49 @@ public class Iw extends org.apache.http.conn.ssl.SSLSocketFactory {
 
     @Override
     public java.net.Socket createSocket(java.net.Socket r2, java.lang.String r3, int r4, boolean r5) {
-        if (r4 != (-1)) goto L5;
-        r4 = 443;
-    L5:
-        javax.net.ssl.SSLSocket r6 = (javax.net.ssl.SSLSocket) this.FH.createSocket(r2, r3, r4, r5);
-        j6(r6);
-        org.apache.http.conn.ssl.SSLSocketFactory.STRICT_HOSTNAME_VERIFIER.verify(r3, r6);     // Catch: java.io.IOException -> L8
-        return r6;
-    L8:
-        e = move-exception;
-        r6.close();     // Catch: java.lang.Exception -> L11
-    L10:
-        throw e;
+        javax.net.ssl.SSLSocket r6 = null;
+        java.lang.Throwable e = null;
+        java.lang.Throwable $ex3 = null;
+        int $pc3 = -1;
+        $sw3: while (true) {
+            switch ($pc3) {
+                case -1: {
+                    if (r4 != (-1)) { $pc3 = 5; continue $sw3; }
+                    r4 = 443;
+                    $pc3 = 5; continue $sw3;
+                }
+                case 5: {
+                    r6 = (javax.net.ssl.SSLSocket) this.FH.createSocket(r2, r3, r4, r5);
+                    j6(r6);
+                    try {
+                        org.apache.http.conn.ssl.SSLSocketFactory.STRICT_HOSTNAME_VERIFIER.verify(r3, r6);
+                    } catch (java.lang.Throwable $t) {
+                        $ex3 = $t;
+                        if ($t instanceof java.io.IOException) { $pc3 = 8; continue $sw3; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    return r6;
+                }
+                case 8: {
+                    e = $ex3;
+                    try {
+                        r6.close();
+                    } catch (java.lang.Throwable $t) {
+                        $ex3 = $t;
+                        if ($t instanceof java.lang.Exception) { $pc3 = 11; continue $sw3; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    $pc3 = 10; continue $sw3;
+                }
+                case 10: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(e);
+                }
+                case 11: {
+                    throw new java.lang.IllegalStateException();
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

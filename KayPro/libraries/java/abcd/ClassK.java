@@ -11,10 +11,21 @@ public class ClassK<K, V> extends x<K, V> implements java.util.Map<K, V> {
     }
 
     private r<K, V> DW() {
-        if (this.gn != null) goto L6;
-        this.gn = new abcd.ClassJ(this);
-    L6:
-        return this.gn;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (this.gn != null) { $pc0 = 6; continue $sw0; }
+                    this.gn = new abcd.ClassJ(this);
+                    $pc0 = 6; continue $sw0;
+                }
+                case 6: {
+                    return this.gn;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
@@ -33,13 +44,29 @@ public class ClassK<K, V> extends x<K, V> implements java.util.Map<K, V> {
 
     @Override
     public void putAll(java.util.Map<? extends K, ? extends V> r3) {
-        j6(this.VH + r3.size());
-        java.util.Iterator<java.util.Map.Entry<? extends K, ? extends V>> r4 = r3.entrySet().iterator();
-    L4:
-        if (r4.hasNext() == false) goto L6;
-        java.util.Map.Entry<? extends K, ? extends V> r0 = r4.next();
-        put(r0.getKey(), r0.getValue());
-        goto L4
+        java.util.Iterator<java.util.Map.Entry<? extends K, ? extends V>> r4 = null;
+        java.util.Map.Entry<? extends K, ? extends V> r0 = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    j6(this.VH + r3.size());
+                    r4 = r3.entrySet().iterator();
+                    $pc1 = 4; continue $sw1;
+                }
+                case 4: {
+                    if (r4.hasNext() == false) { $pc1 = 6; continue $sw1; }
+                    r0 = r4.next();
+                    put(r0.getKey(), r0.getValue());
+                    { $pc1 = 4; continue $sw1; }
+                }
+                case 6: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

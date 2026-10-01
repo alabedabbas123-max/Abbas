@@ -25,18 +25,42 @@ class ClassJ implements android.widget.AdapterView.OnItemLongClickListener {
     @Override
     @abcd.Interfacesu(method = -1608362703901782144L)
     public boolean onItemLongClick(android.widget.AdapterView<?> r10, android.view.View r11, int r12, long r13) {
-    L8:
-        th = move-exception;
-        if (DW == false) goto L12;
-        abcd.wu.j6(th, -6164577527024316400L, this, r10, r11, new java.lang.Integer(r12), new java.lang.Long(r13));
-    L12:
-        throw th;
-    L3:
-        if (j6 == false) goto L5;
-        abcd.wu.j6(-6164577527024316400L, this, r10, r11, new java.lang.Integer(r12), new java.lang.Long(r13));     // Catch: java.lang.Throwable -> L8
-    L5:
-        this.FH.requestFocus();     // Catch: java.lang.Throwable -> L8
-        ((com.aide.ui.scm.ModifiedFileListEntry) r11).j6();     // Catch: java.lang.Throwable -> L8
-        return true;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 3;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 8: {
+                    th = $ex0;
+                    if (DW == false) { $pc0 = 12; continue $sw0; }
+                    abcd.wu.j6(th, -6164577527024316400L, this, r10, r11, new java.lang.Integer(r12), new java.lang.Long(r13));
+                    $pc0 = 12; continue $sw0;
+                }
+                case 12: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 3: {
+                    if (j6 == false) { $pc0 = 5; continue $sw0; }
+                    try {
+                        abcd.wu.j6(-6164577527024316400L, this, r10, r11, new java.lang.Integer(r12), new java.lang.Long(r13));
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 8; continue $sw0;
+                    }
+                    $pc0 = 5; continue $sw0;
+                }
+                case 5: {
+                    try {
+                        this.FH.requestFocus();
+                        ((com.aide.ui.scm.ModifiedFileListEntry) r11).j6();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 8; continue $sw0;
+                    }
+                    return true;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

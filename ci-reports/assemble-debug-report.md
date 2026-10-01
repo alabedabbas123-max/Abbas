@@ -1,7 +1,7 @@
 # assembleDebug report
 
-- run: 36795496184
-- commit: 719c735a6d5449daea2b1b18bb6277a8ba66203b
+- run: 36795181907
+- commit: 5ccb306b978b301c4ac56280dbfe4a2f13cf8063
 - result: failure
 
 ## error summary
@@ -218,6 +218,6 @@
 
 * Get more help at https://help.gradle.org
 
-BUILD FAILED in 41s
+BUILD FAILED in 50s
 25 actionable tasks: 25 executed
 ```

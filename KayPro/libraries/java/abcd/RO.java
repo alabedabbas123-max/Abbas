@@ -9,10 +9,20 @@ public class RO extends abcd.uO {
     }
 
     static int j6(abcd.TO r1) {
-        if (r1.DW() == 0) goto L6;
-        return r1.DW();
-    L6:
-        return r1.Hw().bitLength();
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (r1.DW() == 0) { $pc0 = 6; continue $sw0; }
+                    return r1.DW();
+                }
+                case 6: {
+                    return r1.Hw().bitLength();
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public abcd.TO DW() {

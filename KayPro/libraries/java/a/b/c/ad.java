@@ -59,16 +59,31 @@ public class ad implements a.b.b.a.f {
 
     @Override
     public void a(a.b.c r6, a.b.b.h r7) {
-        a.b.a.c r0 = (a.b.a.c) new a.b.c.j((a.b.k) r6, false).a("BootstrapMethods");
-        r6.a(r7.b, this);
-        a.b.c[] r2 = r7.c;
+        a.b.a.c r0 = null;
+        a.b.c[] r2 = null;
         a.b.c[] r1 = null;
-        if (r2 == null) goto L5;
-        r1 = new a.b.c[r2.length];
-        java.lang.System.arraycopy(r2, 0, r1, 0, r2.length);
-    L5:
-        r0.a(r6, r7.b(), this.b);
-        this.c = this.f106a.a(this.b.a(), this.c, r1);
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = (a.b.a.c) new a.b.c.j((a.b.k) r6, false).a("BootstrapMethods");
+                    r6.a(r7.b, this);
+                    r2 = r7.c;
+                    r1 = null;
+                    if (r2 == null) { $pc0 = 5; continue $sw0; }
+                    r1 = new a.b.c[r2.length];
+                    java.lang.System.arraycopy(r2, 0, r1, 0, r2.length);
+                    $pc0 = 5; continue $sw0;
+                }
+                case 5: {
+                    r0.a(r6, r7.b(), this.b);
+                    this.c = this.f106a.a(this.b.a(), this.c, r1);
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

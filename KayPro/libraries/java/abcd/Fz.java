@@ -1,6 +1,6 @@
 package abcd;
 
-public final enum Fz extends java.lang.Enum<abcd.Fz> {
+public final class Fz extends com.almlkaide.kaypro.internal.EnumBase {
     public static final abcd.Fz DW = null;
     public static final abcd.Fz FH = null;
     public static final abcd.Fz Hw = null;
@@ -20,7 +20,7 @@ public final enum Fz extends java.lang.Enum<abcd.Fz> {
     }
 
     public static abcd.Fz valueOf(java.lang.String r1) {
-        return (abcd.Fz) java.lang.Enum.valueOf(abcd.Fz.class, r1);
+        return (abcd.Fz) com.almlkaide.kaypro.internal.EnumBase.valueOf(abcd.Fz.values(), r1);
     }
 
     public static abcd.Fz[] values() {

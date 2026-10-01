@@ -15,8 +15,20 @@ class V implements java.lang.Runnable {
 
     @Override
     public void run() {
-        if (this.Hw.VH() == true) goto L6;
-        com.crashlytics.android.core.W.j6(this.Hw, this.j6, this.DW, this.FH);
-        return;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (this.Hw.VH() == true) { $pc0 = 6; continue $sw0; }
+                    com.crashlytics.android.core.W.j6(this.Hw, this.j6, this.DW, this.FH);
+                    return;
+                }
+                case 6: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

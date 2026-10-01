@@ -1298,7 +1298,7 @@ public class JavacParser implements Parser {
                         return this.f478F.m495at(pos).ForeachLoop(var, expr, body2);
                     }
                     accept(Token.SEMI);
-                    ?? expression = this.f479S.token() != Token.SEMI ? parseExpression() : null;
+                    java.lang.Object expression = this.f479S.token() != Token.SEMI ? parseExpression() : null;
                     accept(Token.SEMI);
                     List<JCTree.JCExpressionStatement> steps = this.f479S.token() == Token.RPAREN ? List.m507nil() : forUpdate();
                     accept(Token.RPAREN);

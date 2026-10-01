@@ -16,10 +16,21 @@ class IP implements abcd.InterfacevP {
 
     @Override
     public byte[] FH() {
-        return this.j6.j6();
-    L4:
-        e = move-exception;
-        throw new abcd.EP("exception obtaining signature: " + e.getMessage(), e);
+        java.lang.Throwable e = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    return this.j6.j6();
+                }
+                case 4: {
+                    e = $ex0;
+                    throw new abcd.EP("exception obtaining signature: " + e.getMessage(), e);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

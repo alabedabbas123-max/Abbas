@@ -15,16 +15,30 @@ class n implements abcd.Interfaceyz {
 
     @Override
     public boolean j6(java.util.List<java.io.File> r5) {
-        long r0 = java.lang.System.nanoTime();
-        if (this.DW.j6(r0) == true) goto L5;
-    L9:
-        return false;
-    L5:
-        if (this.j6.j6(r5) == false) goto L8;
-        this.DW.j6();
-        return true;
-    L8:
-        this.DW.DW(r0);
-        goto L9
+        long r0 = 0L;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = java.lang.System.nanoTime();
+                    if (this.DW.j6(r0) == true) { $pc0 = 5; continue $sw0; }
+                    $pc0 = 9; continue $sw0;
+                }
+                case 9: {
+                    return false;
+                }
+                case 5: {
+                    if (this.j6.j6(r5) == false) { $pc0 = 8; continue $sw0; }
+                    this.DW.j6();
+                    return true;
+                }
+                case 8: {
+                    this.DW.DW(r0);
+                    { $pc0 = 9; continue $sw0; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

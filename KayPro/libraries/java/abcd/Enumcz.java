@@ -1,6 +1,6 @@
 package abcd;
 
-public final enum Enumcz extends java.lang.Enum<abcd.Enumcz> {
+public final class Enumcz extends com.almlkaide.kaypro.internal.EnumBase {
     public static final abcd.Enumcz DW = null;
     public static final abcd.Enumcz FH = null;
     public static final abcd.Enumcz Hw = null;
@@ -20,17 +20,30 @@ public final enum Enumcz extends java.lang.Enum<abcd.Enumcz> {
     }
 
     static <Y> int j6(abcd.Interfacehz r1, Y r2) {
-        if ((r2 instanceof abcd.Interfacehz) == false) goto L5;
-        abcd.Enumcz r3 = ((abcd.Interfacehz) r2).v5();
-    L7:
-        return r3.ordinal() - r1.v5().ordinal();
-    L5:
-        r3 = DW;
-        goto L7
+        abcd.Enumcz r3 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if ((r2 instanceof abcd.Interfacehz) == false) { $pc0 = 5; continue $sw0; }
+                    r3 = ((abcd.Interfacehz) r2).v5();
+                    $pc0 = 7; continue $sw0;
+                }
+                case 7: {
+                    return r3.ordinal() - r1.v5().ordinal();
+                }
+                case 5: {
+                    r3 = DW;
+                    { $pc0 = 7; continue $sw0; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static abcd.Enumcz valueOf(java.lang.String r1) {
-        return (abcd.Enumcz) java.lang.Enum.valueOf(abcd.Enumcz.class, r1);
+        return (abcd.Enumcz) com.almlkaide.kaypro.internal.EnumBase.valueOf(abcd.Enumcz.values(), r1);
     }
 
     public static abcd.Enumcz[] values() {

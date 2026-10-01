@@ -84,10 +84,20 @@ public abstract class AbstractyG {
 
         @Override
         public boolean j6(abcd.qG r1, abcd.dG r2) {
-            if (r2.lg() >= 2) goto L6;
-            return true;
-        L6:
-            return false;
+            java.lang.Throwable $ex0 = null;
+            int $pc0 = -1;
+            $sw0: while (true) {
+                switch ($pc0) {
+                    case -1: {
+                        if (r2.lg() >= 2) { $pc0 = 6; continue $sw0; }
+                        return true;
+                    }
+                    case 6: {
+                        return false;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         @Override
@@ -148,11 +158,24 @@ public abstract class AbstractyG {
     public abstract boolean j6(abcd.qG r1, abcd.dG r2);
 
     public java.lang.String toString() {
-        java.lang.String r0 = getClass().getName();
-        int r2 = r0.lastIndexOf(46);
-        if (r2 < 0) goto L6;
-        r0 = r0.substring(r2 + 1);
-    L6:
-        return r0.replace('$', '.');
+        java.lang.String r0 = null;
+        int r2 = 0;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    r0 = getClass().getName();
+                    r2 = r0.lastIndexOf(46);
+                    if (r2 < 0) { $pc1 = 6; continue $sw1; }
+                    r0 = r0.substring(r2 + 1);
+                    $pc1 = 6; continue $sw1;
+                }
+                case 6: {
+                    return r0.replace('$', '.');
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

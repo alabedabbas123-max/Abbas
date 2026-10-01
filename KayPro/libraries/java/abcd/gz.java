@@ -14,10 +14,20 @@ public class gz<V> extends java.util.concurrent.FutureTask<V> implements _y<abcd
     }
 
     protected <T extends _y<abcd.Interfacelz> & abcd.Interfacehz & abcd.Interfacelz> T DW(java.lang.Object r2) {
-        if (abcd.jz.DW(r2) == false) goto L7;
-        return (abcd._y) r2;
-    L7:
-        return new abcd.jz();
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (abcd.jz.DW(r2) == false) { $pc0 = 7; continue $sw0; }
+                    return (abcd._y) r2;
+                }
+                case 7: {
+                    return new abcd.jz();
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public boolean DW() {

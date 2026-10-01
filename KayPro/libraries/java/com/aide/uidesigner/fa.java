@@ -26,21 +26,52 @@ class fa implements com.aide.common.ab<java.lang.Integer> {
 
     @abcd.Interfacesu(method = 863213966894867924L)
     public void j62(java.lang.Integer r7) {
-    L11:
-        th = move-exception;
-        if (DW == false) goto L15;
-        abcd.wu.j6(th, -2933095158329763920L, this, r7);
-    L15:
-        throw th;
-    L4:
-        if (j6 == false) goto L7;
-        abcd.wu.j6(-2933095158329763920L, this, r7);     // Catch: java.lang.Throwable -> L11
-    L7:
-        if (((java.lang.String) this.FH.get(r7.intValue())).equals("none") == false) goto L9;
-        this.Hw.j6(this.v5, null);     // Catch: java.lang.Throwable -> L11
-        return;
-    L9:
-        this.Hw.j6(this.v5, this.Zo[r7.intValue()]);     // Catch: java.lang.Throwable -> L11
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 4;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 11: {
+                    th = $ex0;
+                    if (DW == false) { $pc0 = 15; continue $sw0; }
+                    abcd.wu.j6(th, -2933095158329763920L, this, r7);
+                    $pc0 = 15; continue $sw0;
+                }
+                case 15: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (j6 == false) { $pc0 = 7; continue $sw0; }
+                    try {
+                        abcd.wu.j6(-2933095158329763920L, this, r7);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 11; continue $sw0;
+                    }
+                    $pc0 = 7; continue $sw0;
+                }
+                case 7: {
+                    if (((java.lang.String) this.FH.get(r7.intValue())).equals("none") == false) { $pc0 = 9; continue $sw0; }
+                    try {
+                        this.Hw.j6(this.v5, null);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 11; continue $sw0;
+                    }
+                    return;
+                }
+                case 9: {
+                    try {
+                        this.Hw.j6(this.v5, this.Zo[r7.intValue()]);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 11; continue $sw0;
+                    }
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

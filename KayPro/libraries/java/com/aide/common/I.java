@@ -27,31 +27,90 @@ class I implements com.aide.common.ab<java.util.List<java.lang.Integer>> {
 
     @abcd.Interfacesu(method = -7576421390331842895L)
     public void j62(java.util.List<java.lang.Integer> r7) {
-    L18:
-        th = move-exception;
-        if (DW == false) goto L23;
-        abcd.wu.j6(th, 1553030859183131929L, this, r7);
-    L23:
-        throw th;
-    L4:
-        if (j6 == false) goto L7;
-        abcd.wu.j6(1553030859183131929L, this, r7);     // Catch: java.lang.Throwable -> L18
-    L7:
-        if (r7.size() != 0) goto L9;
-        this.FH.j6(null);     // Catch: java.lang.Throwable -> L18
-        return;
-    L9:
-        java.lang.String r2 = "";
-        java.util.Iterator<java.lang.Integer> r3 = r7.iterator();     // Catch: java.lang.Throwable -> L18
-    L11:
-        if (r3.hasNext() == false) goto L16;
-        int r4 = r3.next().intValue();     // Catch: java.lang.Throwable -> L18
-        if (r2.length() <= 0) goto L15;
-        r2 = r2 + "|";     // Catch: java.lang.Throwable -> L18
-    L15:
-        r2 = r2 + ((java.lang.String) this.Hw.get(r4));     // Catch: java.lang.Throwable -> L18
-        goto L11
-    L16:
-        this.FH.j6(r2);     // Catch: java.lang.Throwable -> L18
+        java.lang.String r2 = null;
+        java.util.Iterator<java.lang.Integer> r3 = null;
+        int r4 = 0;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 4;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 18: {
+                    th = $ex0;
+                    if (DW == false) { $pc0 = 23; continue $sw0; }
+                    abcd.wu.j6(th, 1553030859183131929L, this, r7);
+                    $pc0 = 23; continue $sw0;
+                }
+                case 23: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (j6 == false) { $pc0 = 7; continue $sw0; }
+                    try {
+                        abcd.wu.j6(1553030859183131929L, this, r7);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 18; continue $sw0;
+                    }
+                    $pc0 = 7; continue $sw0;
+                }
+                case 7: {
+                    if (r7.size() != 0) { $pc0 = 9; continue $sw0; }
+                    try {
+                        this.FH.j6(null);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 18; continue $sw0;
+                    }
+                    return;
+                }
+                case 9: {
+                    r2 = "";
+                    try {
+                        r3 = r7.iterator();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 18; continue $sw0;
+                    }
+                    $pc0 = 11; continue $sw0;
+                }
+                case 11: {
+                    if (r3.hasNext() == false) { $pc0 = 16; continue $sw0; }
+                    try {
+                        r4 = r3.next().intValue();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 18; continue $sw0;
+                    }
+                    if (r2.length() <= 0) { $pc0 = 15; continue $sw0; }
+                    try {
+                        r2 = r2 + "|";
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 18; continue $sw0;
+                    }
+                    $pc0 = 15; continue $sw0;
+                }
+                case 15: {
+                    try {
+                        r2 = r2 + ((java.lang.String) this.Hw.get(r4));
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 18; continue $sw0;
+                    }
+                    { $pc0 = 11; continue $sw0; }
+                }
+                case 16: {
+                    try {
+                        this.FH.j6(r2);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 18; continue $sw0;
+                    }
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

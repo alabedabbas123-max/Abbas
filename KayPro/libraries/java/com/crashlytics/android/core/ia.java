@@ -38,25 +38,52 @@ class ia implements java.lang.Thread.UncaughtExceptionHandler {
     /* JADX WARN: Type inference failed for: r7v3, types: [java.util.concurrent.atomic.AtomicBoolean] */
     @Override
     public void uncaughtException(java.lang.Thread r7, java.lang.Throwable r8) {
-        ?? r0 = "Crashlytics completed exception processing. Invoking default exception handler.";
-        this.v5.set(true);
-        this.j6.j6(this.DW, r7, r8, this.FH);     // Catch: java.lang.Throwable -> L5 java.lang.Exception -> L7
-    L4:
-        io.fabric.sdk.android.Fabric.getLogger().Hw("CrashlyticsCore", "Crashlytics completed exception processing. Invoking default exception handler.");
-        r0 = this.Hw;
-        r0.uncaughtException(r7, r8);
-        r7 = this.v5;
-        r7.set(false);
-        return;
-    L5:
-        th = move-exception;
-        io.fabric.sdk.android.Fabric.getLogger().Hw("CrashlyticsCore", r0);
-        this.Hw.uncaughtException(r7, r8);
-        this.v5.set(false);
-        throw th;
-    L7:
-        e = move-exception;
-        io.fabric.sdk.android.Fabric.getLogger().FH("CrashlyticsCore", "An error occurred in the uncaught exception handler", e);     // Catch: java.lang.Throwable -> L5
-        goto L4
+        java.lang.Object r0 = null;
+        java.lang.Throwable e = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = "Crashlytics completed exception processing. Invoking default exception handler.";
+                    this.v5.set(true);
+                    try {
+                        this.j6.j6(this.DW, r7, r8, this.FH);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.lang.Exception) { $pc0 = 7; continue $sw0; }
+                        $pc0 = 5; continue $sw0;
+                    }
+                    $pc0 = 4; continue $sw0;
+                }
+                case 4: {
+                    io.fabric.sdk.android.Fabric.getLogger().Hw("CrashlyticsCore", "Crashlytics completed exception processing. Invoking default exception handler.");
+                    r0 = this.Hw;
+                    r0.uncaughtException(r7, r8);
+                    r7 = this.v5;
+                    r7.set(false);
+                    return;
+                }
+                case 5: {
+                    th = $ex0;
+                    io.fabric.sdk.android.Fabric.getLogger().Hw("CrashlyticsCore", r0);
+                    this.Hw.uncaughtException(r7, r8);
+                    this.v5.set(false);
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 7: {
+                    e = $ex0;
+                    try {
+                        io.fabric.sdk.android.Fabric.getLogger().FH("CrashlyticsCore", "An error occurred in the uncaught exception handler", e);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 5; continue $sw0;
+                    }
+                    { $pc0 = 4; continue $sw0; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

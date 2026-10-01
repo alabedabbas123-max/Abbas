@@ -249,11 +249,22 @@ public final class pP extends java.security.Provider implements abcd.InterfacegP
     }
 
     public static java.security.PublicKey j6(abcd.CN r2) {
-        abcd.InterfacelP r0 = (abcd.InterfacelP) Hw.get(r2.v5().v5());
-        if (r0 != null) goto L7;
-        return null;
-    L7:
-        return r0.generatePublic(r2);
+        abcd.InterfacelP r0 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = (abcd.InterfacelP) Hw.get(r2.v5().v5());
+                    if (r0 != null) { $pc0 = 7; continue $sw0; }
+                    return null;
+                }
+                case 7: {
+                    return r0.generatePublic(r2);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     private void j6() {
@@ -277,33 +288,94 @@ public final class pP extends java.security.Provider implements abcd.InterfacegP
 
     private void j6(java.lang.String r7, java.lang.String[] r8) {
         int r0 = 0;
-    L4:
-        if (r0 == r8.length) goto L5;
         java.lang.Class<?> r1 = null;
-        java.lang.ClassLoader r2 = getClass().getClassLoader();     // Catch: java.lang.ClassNotFoundException -> L13
-        if (r2 == null) goto L11;
-        r1 = r2.loadClass(java.lang.String.valueOf(r7) + r8[r0] + "$Mappings");     // Catch: java.lang.ClassNotFoundException -> L13
-        goto L14
-    L11:
-        r1 = java.lang.Class.forName(java.lang.String.valueOf(r7) + r8[r0] + "$Mappings");     // Catch: java.lang.ClassNotFoundException -> L13
-    L14:
-        if (r1 == null) goto L20;
-        ((abcd.AbstractjP) r1.newInstance()).configure(this);     // Catch: java.lang.Exception -> L17
-    L17:
-        e = move-exception;
-        e.printStackTrace();
-        throw new java.lang.InternalError("cannot create instance of " + r7 + r8[r0] + "$Mappings : " + e);
-    L20:
-        r0 = r0 + 1;
-        goto L4
+        java.lang.ClassLoader r2 = null;
+        java.lang.Throwable e = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    r0 = 0;
+                    $pc1 = 4; continue $sw1;
+                }
+                case 4: {
+                    if (r0 == r8.length) { $pc1 = 5; continue $sw1; }
+                    r1 = null;
+                    try {
+                        r2 = getClass().getClassLoader();
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        if ($t instanceof java.lang.ClassNotFoundException) { $pc1 = 13; continue $sw1; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    if (r2 == null) { $pc1 = 11; continue $sw1; }
+                    try {
+                        r1 = r2.loadClass(java.lang.String.valueOf(r7) + r8[r0] + "$Mappings");
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        if ($t instanceof java.lang.ClassNotFoundException) { $pc1 = 13; continue $sw1; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    { $pc1 = 14; continue $sw1; }
+                }
+                case 11: {
+                    try {
+                        r1 = java.lang.Class.forName(java.lang.String.valueOf(r7) + r8[r0] + "$Mappings");
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        if ($t instanceof java.lang.ClassNotFoundException) { $pc1 = 13; continue $sw1; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    $pc1 = 14; continue $sw1;
+                }
+                case 14: {
+                    if (r1 == null) { $pc1 = 20; continue $sw1; }
+                    try {
+                        ((abcd.AbstractjP) r1.newInstance()).configure(this);
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        if ($t instanceof java.lang.Exception) { $pc1 = 17; continue $sw1; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    $pc1 = 17; continue $sw1;
+                }
+                case 17: {
+                    e = $ex1;
+                    e.printStackTrace();
+                    throw new java.lang.InternalError("cannot create instance of " + r7 + r8[r0] + "$Mappings : " + e);
+                }
+                case 20: {
+                    r0 = r0 + 1;
+                    { $pc1 = 4; continue $sw1; }
+                }
+                case 5: {
+                    $pc1 = 13; continue $sw1;
+                }
+                case 13: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
     public void j6(java.lang.String r3, java.lang.String r4) {
-        if (containsKey(r3) == true) goto L7;
-        put(r3, r4);
-        return;
-    L7:
-        throw new java.lang.IllegalStateException("duplicate provider key (" + r3 + ") found");
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    if (containsKey(r3) == true) { $pc2 = 7; continue $sw2; }
+                    put(r3, r4);
+                    return;
+                }
+                case 7: {
+                    throw new java.lang.IllegalStateException("duplicate provider key (" + r3 + ") found");
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

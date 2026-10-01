@@ -9,13 +9,23 @@ public final class Em extends abcd.AbstractAm {
     }
 
     public Em(java.lang.String r1, abcd.Pt r2, abcd.Interfacens r3) {
-        super(r1);
-        if (r2 == null) goto L7;
-        this.DW = r2;
-        this.FH = r3;
-        return;
-    L7:
-        throw new java.lang.NullPointerException("data == null");
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    super(r1);
+                    if (r2 == null) { $pc0 = 7; continue $sw0; }
+                    this.DW = r2;
+                    this.FH = r3;
+                    return;
+                }
+                case 7: {
+                    throw new java.lang.NullPointerException("data == null");
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

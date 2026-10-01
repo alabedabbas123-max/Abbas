@@ -11,9 +11,19 @@ class ClassX implements java.io.FilenameFilter {
 
     @Override
     public boolean accept(java.io.File r3, java.lang.String r4) {
-        if (r4.length() >= 35) goto L6;
-        return false;
-    L6:
-        return this.j6.contains(r4.substring(0, 35));
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (r4.length() >= 35) { $pc0 = 6; continue $sw0; }
+                    return false;
+                }
+                case 6: {
+                    return this.j6.contains(r4.substring(0, 35));
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

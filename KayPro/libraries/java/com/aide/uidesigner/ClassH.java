@@ -23,19 +23,39 @@ class ClassH implements abcd.G {
     @Override
     @abcd.Interfacesu(method = -6668640337867396735L)
     public boolean j6() {
-    L11:
-        th = move-exception;
-        if (DW == false) goto L15;
-        abcd.wu.j6(th, -736952301685551735L, this);
-    L15:
-        throw th;
-    L4:
-        if (j6 == false) goto L7;
-        abcd.wu.j6(-736952301685551735L, this);     // Catch: java.lang.Throwable -> L11
-    L7:
-        if (this.FH.getPackageName().startsWith("com.aide.designer") == false) goto L9;
-        return true;
-    L9:
-        return android.preference.PreferenceManager.getDefaultSharedPreferences(this.FH).getBoolean("send_analytics_data", true);
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 4;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 11: {
+                    th = $ex0;
+                    if (DW == false) { $pc0 = 15; continue $sw0; }
+                    abcd.wu.j6(th, -736952301685551735L, this);
+                    $pc0 = 15; continue $sw0;
+                }
+                case 15: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (j6 == false) { $pc0 = 7; continue $sw0; }
+                    try {
+                        abcd.wu.j6(-736952301685551735L, this);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 11; continue $sw0;
+                    }
+                    $pc0 = 7; continue $sw0;
+                }
+                case 7: {
+                    if (this.FH.getPackageName().startsWith("com.aide.designer") == false) { $pc0 = 9; continue $sw0; }
+                    return true;
+                }
+                case 9: {
+                    return android.preference.PreferenceManager.getDefaultSharedPreferences(this.FH).getBoolean("send_analytics_data", true);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

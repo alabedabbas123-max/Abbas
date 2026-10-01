@@ -20,14 +20,27 @@ public final class Qo extends abcd.Abstractao {
 
     @Override
     public boolean VH(abcd.AbstractVn r5) {
-        abcd.cs r0 = r5.gn();
-        if ((r5 instanceof abcd.Tn) == true) goto L5;
-    L11:
-        return false;
-    L5:
-        if (r0.size() != 1) goto L11;
-        if (abcd.Abstractao.Hw(r0.get(0).we()) == false) goto L11;
-        return ((abcd.Tn) r5).we() instanceof abcd.Cs;
+        abcd.cs r0 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = r5.gn();
+                    if ((r5 instanceof abcd.Tn) == true) { $pc0 = 5; continue $sw0; }
+                    $pc0 = 11; continue $sw0;
+                }
+                case 11: {
+                    return false;
+                }
+                case 5: {
+                    if (r0.size() != 1) { $pc0 = 11; continue $sw0; }
+                    if (abcd.Abstractao.Hw(r0.get(0).we()) == false) { $pc0 = 11; continue $sw0; }
+                    return ((abcd.Tn) r5).we() instanceof abcd.Cs;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

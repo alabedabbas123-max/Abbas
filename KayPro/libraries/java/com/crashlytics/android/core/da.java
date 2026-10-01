@@ -22,10 +22,21 @@ class da {
     }
 
     public boolean j6() {
-        return Hw().createNewFile();
-    L4:
-        e = move-exception;
-        io.fabric.sdk.android.Fabric.getLogger().FH("CrashlyticsCore", "Error creating marker: " + this.j6, e);
-        return false;
+        java.lang.Throwable e = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    return Hw().createNewFile();
+                }
+                case 4: {
+                    e = $ex0;
+                    io.fabric.sdk.android.Fabric.getLogger().FH("CrashlyticsCore", "Error creating marker: " + this.j6, e);
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

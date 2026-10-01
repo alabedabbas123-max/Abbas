@@ -21,29 +21,80 @@ public class JP {
 
         @Override
         public void write(int r4) {
-            this.j6.update((byte) r4);     // Catch: java.security.SignatureException -> L4
-            return;
-        L4:
-            e = move-exception;
-            throw new abcd.DP("exception in content signer: " + e.getMessage(), e);
+            java.lang.Throwable e = null;
+            java.lang.Throwable $ex0 = null;
+            int $pc0 = -1;
+            $sw0: while (true) {
+                switch ($pc0) {
+                    case -1: {
+                        try {
+                            this.j6.update((byte) r4);
+                        } catch (java.lang.Throwable $t) {
+                            $ex0 = $t;
+                            if ($t instanceof java.security.SignatureException) { $pc0 = 4; continue $sw0; }
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                        }
+                        return;
+                    }
+                    case 4: {
+                        e = $ex0;
+                        throw new abcd.DP("exception in content signer: " + e.getMessage(), e);
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         @Override
         public void write(byte[] r4) {
-            this.j6.update(r4);     // Catch: java.security.SignatureException -> L4
-            return;
-        L4:
-            e = move-exception;
-            throw new abcd.DP("exception in content signer: " + e.getMessage(), e);
+            java.lang.Throwable e = null;
+            java.lang.Throwable $ex1 = null;
+            int $pc1 = -1;
+            $sw1: while (true) {
+                switch ($pc1) {
+                    case -1: {
+                        try {
+                            this.j6.update(r4);
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            if ($t instanceof java.security.SignatureException) { $pc1 = 4; continue $sw1; }
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                        }
+                        return;
+                    }
+                    case 4: {
+                        e = $ex1;
+                        throw new abcd.DP("exception in content signer: " + e.getMessage(), e);
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         @Override
         public void write(byte[] r2, int r3, int r4) {
-            this.j6.update(r2, r3, r4);     // Catch: java.security.SignatureException -> L4
-            return;
-        L4:
-            e = move-exception;
-            throw new abcd.DP("exception in content signer: " + e.getMessage(), e);
+            java.lang.Throwable e = null;
+            java.lang.Throwable $ex2 = null;
+            int $pc2 = -1;
+            $sw2: while (true) {
+                switch ($pc2) {
+                    case -1: {
+                        try {
+                            this.j6.update(r2, r3, r4);
+                        } catch (java.lang.Throwable $t) {
+                            $ex2 = $t;
+                            if ($t instanceof java.security.SignatureException) { $pc2 = 4; continue $sw2; }
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                        }
+                        return;
+                    }
+                    case 4: {
+                        e = $ex2;
+                        throw new abcd.DP("exception in content signer: " + e.getMessage(), e);
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
     }
 
@@ -68,15 +119,49 @@ public class JP {
     }
 
     public abcd.InterfacevP j6(java.security.PrivateKey r4) {
-        java.security.Signature r0 = this.j6.DW(this.Hw);     // Catch: java.security.GeneralSecurityException -> L8
-        if (this.DW == null) goto L5;
-        r0.initSign(r4, this.DW);     // Catch: java.security.GeneralSecurityException -> L8
-    L6:
-        return new abcd.IP(this, r0);
-    L5:
-        r0.initSign(r4);     // Catch: java.security.GeneralSecurityException -> L8
-    L8:
-        e = move-exception;
-        throw new abcd.BP("cannot create signer: " + e.getMessage(), e);
+        java.security.Signature r0 = null;
+        java.lang.Throwable e = null;
+        java.lang.Throwable $ex3 = null;
+        int $pc3 = -1;
+        $sw3: while (true) {
+            switch ($pc3) {
+                case -1: {
+                    try {
+                        r0 = this.j6.DW(this.Hw);
+                    } catch (java.lang.Throwable $t) {
+                        $ex3 = $t;
+                        if ($t instanceof java.security.GeneralSecurityException) { $pc3 = 8; continue $sw3; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    if (this.DW == null) { $pc3 = 5; continue $sw3; }
+                    try {
+                        r0.initSign(r4, this.DW);
+                    } catch (java.lang.Throwable $t) {
+                        $ex3 = $t;
+                        if ($t instanceof java.security.GeneralSecurityException) { $pc3 = 8; continue $sw3; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    $pc3 = 6; continue $sw3;
+                }
+                case 6: {
+                    return new abcd.IP(this, r0);
+                }
+                case 5: {
+                    try {
+                        r0.initSign(r4);
+                    } catch (java.lang.Throwable $t) {
+                        $ex3 = $t;
+                        if ($t instanceof java.security.GeneralSecurityException) { $pc3 = 8; continue $sw3; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    $pc3 = 8; continue $sw3;
+                }
+                case 8: {
+                    e = $ex3;
+                    throw new abcd.BP("cannot create signer: " + e.getMessage(), e);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

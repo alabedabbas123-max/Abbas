@@ -26,36 +26,70 @@ public class zO implements abcd.InterfacetO {
     }
 
     protected void DW(byte[] r7) {
-        byte r0 = this.Zo[15];
+        byte r0 = 0;
         int r1 = 0;
-    L4:
-        if (r1 >= 16) goto L5;
-        byte[] r2 = this.Zo;
-        byte r3 = r2[r1];
-        r2[r1] = (byte) (j6[(r0 ^ r7[r1]) & 255] ^ r3);
-        r0 = r2[r1];
-        r1 = r1 + 1;
-        goto L4
+        byte[] r2 = null;
+        byte r3 = 0;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = this.Zo[15];
+                    r1 = 0;
+                    $pc0 = 4; continue $sw0;
+                }
+                case 4: {
+                    if (r1 >= 16) { $pc0 = 5; continue $sw0; }
+                    r2 = this.Zo;
+                    r3 = r2[r1];
+                    r2[r1] = (byte) (j6[(r0 ^ r7[r1]) & 255] ^ r3);
+                    r0 = r2[r1];
+                    r1 = r1 + 1;
+                    { $pc0 = 4; continue $sw0; }
+                }
+                case 5: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
     public int j6(byte[] r5, int r6) {
-        int r0 = this.Hw.length;
-        int r1 = this.v5;
-        byte r2 = (byte) (r0 - r1);
-    L3:
-        byte[] r3 = this.Hw;
-        if (r1 >= r3.length) goto L5;
-        r3[r1] = r2;
-        r1 = r1 + 1;
-        goto L3
-    L5:
-        DW(r3);
-        j6(this.Hw);
-        j6(this.Zo);
-        java.lang.System.arraycopy(this.DW, this.FH, r5, r6, 16);
-        reset();
-        return 16;
+        int r0 = 0;
+        int r1 = 0;
+        byte r2 = 0;
+        byte[] r3 = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    r0 = this.Hw.length;
+                    r1 = this.v5;
+                    r2 = (byte) (r0 - r1);
+                    $pc1 = 3; continue $sw1;
+                }
+                case 3: {
+                    r3 = this.Hw;
+                    if (r1 >= r3.length) { $pc1 = 5; continue $sw1; }
+                    r3[r1] = r2;
+                    r1 = r1 + 1;
+                    { $pc1 = 3; continue $sw1; }
+                }
+                case 5: {
+                    DW(r3);
+                    j6(this.Hw);
+                    j6(this.Zo);
+                    java.lang.System.arraycopy(this.DW, this.FH, r5, r6, 16);
+                    reset();
+                    return 16;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
@@ -65,98 +99,182 @@ public class zO implements abcd.InterfacetO {
 
     @Override
     public void j6(byte r4) {
-        byte[] r0 = this.Hw;
-        int r1 = this.v5;
-        this.v5 = r1 + 1;
-        r0[r1] = r4;
-        if (this.v5 != 16) goto L6;
-        DW(r0);
-        j6(this.Hw);
-        this.v5 = 0;
-        return;
+        byte[] r0 = null;
+        int r1 = 0;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    r0 = this.Hw;
+                    r1 = this.v5;
+                    this.v5 = r1 + 1;
+                    r0[r1] = r4;
+                    if (this.v5 != 16) { $pc2 = 6; continue $sw2; }
+                    DW(r0);
+                    j6(this.Hw);
+                    this.v5 = 0;
+                    return;
+                }
+                case 6: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     protected void j6(byte[] r7) {
         int r1 = 0;
-    L4:
-        if (r1 >= 16) goto L5;
-        byte[] r2 = this.DW;
-        r2[r1 + 16] = r7[r1];
-        r2[r1 + 32] = (byte) (r7[r1] ^ r2[r1]);
-        r1 = r1 + 1;
-        goto L4
-    L5:
+        byte[] r2 = null;
         int r8 = 0;
         int r3 = 0;
-    L7:
-        if (r3 >= 18) goto L8;
-        int r4 = r8;
+        int r4 = 0;
         int r9 = 0;
-    L11:
-        if (r9 >= 48) goto L12;
-        byte[] r5 = this.DW;
-        byte r6 = r5[r9];
-        byte r10 = (byte) (j6[r4] ^ r6);
-        r5[r9] = r10;
-        r4 = r10 & 255;
-        r9 = r9 + 1;
-        goto L11
-    L12:
-        r8 = (r4 + r3) % 256;
-        r3 = r3 + 1;
-        goto L7
+        byte[] r5 = null;
+        byte r6 = 0;
+        byte r10 = 0;
+        java.lang.Throwable $ex3 = null;
+        int $pc3 = -1;
+        $sw3: while (true) {
+            switch ($pc3) {
+                case -1: {
+                    r1 = 0;
+                    $pc3 = 4; continue $sw3;
+                }
+                case 4: {
+                    if (r1 >= 16) { $pc3 = 5; continue $sw3; }
+                    r2 = this.DW;
+                    r2[r1 + 16] = r7[r1];
+                    r2[r1 + 32] = (byte) (r7[r1] ^ r2[r1]);
+                    r1 = r1 + 1;
+                    { $pc3 = 4; continue $sw3; }
+                }
+                case 5: {
+                    r8 = 0;
+                    r3 = 0;
+                    $pc3 = 7; continue $sw3;
+                }
+                case 7: {
+                    if (r3 >= 18) { $pc3 = 8; continue $sw3; }
+                    r4 = r8;
+                    r9 = 0;
+                    $pc3 = 11; continue $sw3;
+                }
+                case 11: {
+                    if (r9 >= 48) { $pc3 = 12; continue $sw3; }
+                    r5 = this.DW;
+                    r6 = r5[r9];
+                    r10 = (byte) (j6[r4] ^ r6);
+                    r5[r9] = r10;
+                    r4 = r10 & 255;
+                    r9 = r9 + 1;
+                    { $pc3 = 11; continue $sw3; }
+                }
+                case 12: {
+                    r8 = (r4 + r3) % 256;
+                    r3 = r3 + 1;
+                    { $pc3 = 7; continue $sw3; }
+                }
+                case 8: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
     public void reset() {
-        this.FH = 0;
         int r1 = 0;
-    L3:
-        byte[] r2 = this.DW;
-        if (r1 == r2.length) goto L5;
-        r2[r1] = 0;
-        r1 = r1 + 1;
-        goto L3
-    L5:
-        this.v5 = 0;
+        byte[] r2 = null;
         int r3 = 0;
-    L6:
-        byte[] r4 = this.Hw;
-        if (r3 == r4.length) goto L8;
-        r4[r3] = 0;
-        r3 = r3 + 1;
-        goto L6
-    L8:
-        this.VH = 0;
+        byte[] r4 = null;
         int r5 = 0;
-    L9:
-        byte[] r6 = this.Zo;
-        if (r5 == r6.length) goto L11;
-        r6[r5] = 0;
-        r5 = r5 + 1;
-        goto L9
+        byte[] r6 = null;
+        java.lang.Throwable $ex4 = null;
+        int $pc4 = -1;
+        $sw4: while (true) {
+            switch ($pc4) {
+                case -1: {
+                    this.FH = 0;
+                    r1 = 0;
+                    $pc4 = 3; continue $sw4;
+                }
+                case 3: {
+                    r2 = this.DW;
+                    if (r1 == r2.length) { $pc4 = 5; continue $sw4; }
+                    r2[r1] = 0;
+                    r1 = r1 + 1;
+                    { $pc4 = 3; continue $sw4; }
+                }
+                case 5: {
+                    this.v5 = 0;
+                    r3 = 0;
+                    $pc4 = 6; continue $sw4;
+                }
+                case 6: {
+                    r4 = this.Hw;
+                    if (r3 == r4.length) { $pc4 = 8; continue $sw4; }
+                    r4[r3] = 0;
+                    r3 = r3 + 1;
+                    { $pc4 = 6; continue $sw4; }
+                }
+                case 8: {
+                    this.VH = 0;
+                    r5 = 0;
+                    $pc4 = 9; continue $sw4;
+                }
+                case 9: {
+                    r6 = this.Zo;
+                    if (r5 == r6.length) { $pc4 = 11; continue $sw4; }
+                    r6[r5] = 0;
+                    r5 = r5 + 1;
+                    { $pc4 = 9; continue $sw4; }
+                }
+                case 11: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
     public void update(byte[] r4, int r5, int r6) {
-    L3:
-        if (this.v5 == 0) goto L8;
-        if (r6 <= 0) goto L8;
-        j6(r4[r5]);
-        r5 = r5 + 1;
-        r6 = r6 - 1;
-    L8:
-        if (r6 <= 16) goto L9;
-        java.lang.System.arraycopy(r4, r5, this.Hw, 0, 16);
-        DW(this.Hw);
-        j6(this.Hw);
-        r6 = r6 - 16;
-        r5 = r5 + 16;
-    L9:
-        if (r6 <= 0) goto L10;
-        j6(r4[r5]);
-        r5 = r5 + 1;
-        r6 = r6 - 1;
-        goto L9
+        java.lang.Throwable $ex5 = null;
+        int $pc5 = 3;
+        $sw5: while (true) {
+            switch ($pc5) {
+                case 3: {
+                    if (this.v5 == 0) { $pc5 = 8; continue $sw5; }
+                    if (r6 <= 0) { $pc5 = 8; continue $sw5; }
+                    j6(r4[r5]);
+                    r5 = r5 + 1;
+                    r6 = r6 - 1;
+                    $pc5 = 8; continue $sw5;
+                }
+                case 8: {
+                    if (r6 <= 16) { $pc5 = 9; continue $sw5; }
+                    java.lang.System.arraycopy(r4, r5, this.Hw, 0, 16);
+                    DW(this.Hw);
+                    j6(this.Hw);
+                    r6 = r6 - 16;
+                    r5 = r5 + 16;
+                    $pc5 = 9; continue $sw5;
+                }
+                case 9: {
+                    if (r6 <= 0) { $pc5 = 10; continue $sw5; }
+                    j6(r4[r5]);
+                    r5 = r5 + 1;
+                    r6 = r6 - 1;
+                    { $pc5 = 9; continue $sw5; }
+                }
+                case 10: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

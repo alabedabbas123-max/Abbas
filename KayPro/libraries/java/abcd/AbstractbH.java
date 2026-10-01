@@ -16,10 +16,20 @@ public abstract class AbstractbH implements java.lang.Iterable<abcd.AbstractbH.b
 
         @Override
         public boolean hasNext() {
-            if (this.DW >= this.FH.j6()) goto L6;
-            return true;
-        L6:
-            return false;
+            java.lang.Throwable $ex0 = null;
+            int $pc0 = -1;
+            $sw0: while (true) {
+                switch ($pc0) {
+                    case -1: {
+                        if (this.DW >= this.FH.j6()) { $pc0 = 6; continue $sw0; }
+                        return true;
+                    }
+                    case 6: {
+                        return false;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         protected abstract abcd.AbstractbH.b j6();
@@ -56,50 +66,130 @@ public abstract class AbstractbH implements java.lang.Iterable<abcd.AbstractbH.b
     }
 
     public static abcd.AbstractbH j6(java.io.File r6) {
-        java.io.FileInputStream r0 = new java.io.FileInputStream(r6);
-        abcd.AbstractbH r7 = j6(r0);     // Catch: java.lang.Throwable -> L6 java.io.IOException -> L8
-    L20:
-        r0.close();     // Catch: java.io.IOException -> L13
-    L5:
-        return r7;
-    L8:
-        e = move-exception;
-        java.lang.String r8 = r6.getAbsolutePath();     // Catch: java.lang.Throwable -> L6
-        java.io.IOException r2 = new java.io.IOException(java.text.MessageFormat.format(org.eclipse.jgit.JGitText.j6().unreadablePackIndex, new java.lang.Object[]{r8}));     // Catch: java.lang.Throwable -> L6
-        r2.initCause(e);     // Catch: java.lang.Throwable -> L6
-        throw r2;     // Catch: java.lang.Throwable -> L6
-    L6:
-        th = move-exception;
-        r0.close();     // Catch: java.io.IOException -> L14
-    L12:
-        throw th;
+        java.io.FileInputStream r0 = null;
+        abcd.AbstractbH r7 = null;
+        java.lang.String r8 = null;
+        java.io.IOException r2 = null;
+        java.lang.Throwable e = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    r0 = new java.io.FileInputStream(r6);
+                    try {
+                        r7 = j6(r0);
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        if ($t instanceof java.io.IOException) { $pc1 = 8; continue $sw1; }
+                        $pc1 = 6; continue $sw1;
+                    }
+                    $pc1 = 20; continue $sw1;
+                }
+                case 20: {
+                    try {
+                        r0.close();
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        if ($t instanceof java.io.IOException) { $pc1 = 13; continue $sw1; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    $pc1 = 5; continue $sw1;
+                }
+                case 5: {
+                    return r7;
+                }
+                case 8: {
+                    e = $ex1;
+                    try {
+                        r8 = r6.getAbsolutePath();
+                        r2 = new java.io.IOException(java.text.MessageFormat.format(org.eclipse.jgit.JGitText.j6().unreadablePackIndex, new java.lang.Object[]{r8}));
+                        r2.initCause(e);
+                        throw r2;
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        $pc1 = 6; continue $sw1;
+                    }
+                }
+                case 6: {
+                    th = $ex1;
+                    try {
+                        r0.close();
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        if ($t instanceof java.io.IOException) { $pc1 = 14; continue $sw1; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    $pc1 = 12; continue $sw1;
+                }
+                case 12: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 13: {
+                    $pc1 = 14; continue $sw1;
+                }
+                case 14: {
+                    throw new java.lang.IllegalStateException();
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static abcd.AbstractbH j6(java.io.InputStream r4) {
-        byte[] r0 = new byte[8];
-        abcd.BK.j6(r4, r0, 0, r0.length);
-        if (j6(r0) == false) goto L11;
-        int r1 = abcd.FK.j6(r0, 4);
-        if (r1 != 2) goto L9;
-        return new abcd.fH(r4);
-    L9:
-        throw new java.io.IOException(java.text.MessageFormat.format(org.eclipse.jgit.JGitText.j6().unsupportedPackIndexVersion, new java.lang.Object[]{java.lang.Integer.valueOf(r1)}));
-    L11:
-        return new abcd.dH(r4, r0);
+        byte[] r0 = null;
+        int r1 = 0;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    r0 = new byte[8];
+                    abcd.BK.j6(r4, r0, 0, r0.length);
+                    if (j6(r0) == false) { $pc2 = 11; continue $sw2; }
+                    r1 = abcd.FK.j6(r0, 4);
+                    if (r1 != 2) { $pc2 = 9; continue $sw2; }
+                    return new abcd.fH(r4);
+                }
+                case 9: {
+                    throw new java.io.IOException(java.text.MessageFormat.format(org.eclipse.jgit.JGitText.j6().unsupportedPackIndexVersion, new java.lang.Object[]{java.lang.Integer.valueOf(r1)}));
+                }
+                case 11: {
+                    return new abcd.dH(r4, r0);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     private static boolean j6(byte[] r5) {
-        byte[] r0 = abcd.AbstractgH.j6;
+        byte[] r0 = null;
         int r2 = 0;
-    L4:
-        if (r2 >= r0.length) goto L5;
-        if (r5[r2] != r0[r2]) goto L9;
-        r2 = r2 + 1;
-        goto L4
-    L9:
-        return false;
-    L5:
-        return true;
+        java.lang.Throwable $ex3 = null;
+        int $pc3 = -1;
+        $sw3: while (true) {
+            switch ($pc3) {
+                case -1: {
+                    r0 = abcd.AbstractgH.j6;
+                    r2 = 0;
+                    $pc3 = 4; continue $sw3;
+                }
+                case 4: {
+                    if (r2 >= r0.length) { $pc3 = 5; continue $sw3; }
+                    if (r5[r2] != r0[r2]) { $pc3 = 9; continue $sw3; }
+                    r2 = r2 + 1;
+                    { $pc3 = 4; continue $sw3; }
+                }
+                case 9: {
+                    return false;
+                }
+                case 5: {
+                    return true;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public abstract long DW();
@@ -109,10 +199,20 @@ public abstract class AbstractbH implements java.lang.Iterable<abcd.AbstractbH.b
     public abstract boolean FH();
 
     public boolean FH(abcd.YD r5) {
-        if (DW(r5) == (-1)) goto L6;
-        return true;
-    L6:
-        return false;
+        java.lang.Throwable $ex4 = null;
+        int $pc4 = -1;
+        $sw4: while (true) {
+            switch ($pc4) {
+                case -1: {
+                    if (DW(r5) == (-1)) { $pc4 = 6; continue $sw4; }
+                    return true;
+                }
+                case 6: {
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
@@ -127,9 +227,19 @@ public abstract class AbstractbH implements java.lang.Iterable<abcd.AbstractbH.b
     public abstract void j6(java.util.Set<abcd.yE> r1, abcd.WD r2, int r3);
 
     public final abcd.yE v5(int r5) {
-        if (r5 < 0) goto L6;
-        return j6(r5);
-    L6:
-        return j6((((long) (r5 >>> 1)) << 1) | ((long) (r5 & 1)));
+        java.lang.Throwable $ex5 = null;
+        int $pc5 = -1;
+        $sw5: while (true) {
+            switch ($pc5) {
+                case -1: {
+                    if (r5 < 0) { $pc5 = 6; continue $sw5; }
+                    return j6(r5);
+                }
+                case 6: {
+                    return j6((((long) (r5 >>> 1)) << 1) | ((long) (r5 & 1)));
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

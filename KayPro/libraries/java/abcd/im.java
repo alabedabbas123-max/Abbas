@@ -5,13 +5,23 @@ public final class im extends abcd.AbstractAm {
     private final int FH;
 
     public im(abcd.Abstractms r2, int r3) {
-        super("AnnotationDefault");
-        if (r2 == null) goto L7;
-        this.DW = r2;
-        this.FH = r3;
-        return;
-    L7:
-        throw new java.lang.NullPointerException("value == null");
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    super("AnnotationDefault");
+                    if (r2 == null) { $pc0 = 7; continue $sw0; }
+                    this.DW = r2;
+                    this.FH = r3;
+                    return;
+                }
+                case 7: {
+                    throw new java.lang.NullPointerException("value == null");
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

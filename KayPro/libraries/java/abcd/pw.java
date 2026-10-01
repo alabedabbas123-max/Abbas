@@ -67,61 +67,181 @@ public class pw {
     }
 
     private static void gn() {
-        long r0 = DW().lastModified();
-        java.io.FileReader r2 = new java.io.FileReader(DW());
+        long r0 = 0L;
+        java.io.FileReader r2 = null;
         java.lang.Throwable r3 = null;
-        java.io.BufferedReader r4 = new java.io.BufferedReader(r2);     // Catch: java.lang.Throwable -> L27 java.lang.Throwable -> L29
-        java.lang.StringBuilder r5 = new java.lang.StringBuilder();     // Catch: java.lang.Throwable -> L14 java.lang.Throwable -> L16
-        char[] r6 = new char[65536];     // Catch: java.lang.Throwable -> L14 java.lang.Throwable -> L16
-    L5:
-        int r7 = r4.read(r6, 0, r6.length);     // Catch: java.lang.Throwable -> L14 java.lang.Throwable -> L16
-        if (r7 < 0) goto L8;
-        r5.append(r6, 0, r7);     // Catch: java.lang.Throwable -> L14 java.lang.Throwable -> L16
-        goto L5
-    L8:
-        v5 = new org.json.JSONObject(r5.toString());     // Catch: java.lang.Throwable -> L14 java.lang.Throwable -> L16
-        if (r0 == 0) goto L11;
-        Zo = r0;     // Catch: java.lang.Throwable -> L14 java.lang.Throwable -> L16
-    L11:
-        r4.close();     // Catch: java.lang.Throwable -> L27 java.lang.Throwable -> L29
-        r2.close();
-        return;
-    L14:
-        java.lang.Throwable th = th;
+        java.io.BufferedReader r4 = null;
+        java.lang.StringBuilder r5 = null;
+        char[] r6 = null;
+        int r7 = 0;
+        java.lang.Throwable th = null;
         java.lang.Throwable r1 = null;
-    L20:
-        if (r1 != null) goto L42;
-        r4.close();     // Catch: java.lang.Throwable -> L27 java.lang.Throwable -> L29
-        throw th;     // Catch: java.lang.Throwable -> L27 java.lang.Throwable -> L29
-    L42:
-        r4.close();     // Catch: java.lang.Throwable -> L23 java.lang.Throwable -> L27
-        throw th;     // Catch: java.lang.Throwable -> L27 java.lang.Throwable -> L29
-    L23:
-        th = move-exception;
-        r1.addSuppressed(th);     // Catch: java.lang.Throwable -> L27 java.lang.Throwable -> L29
-        throw th;     // Catch: java.lang.Throwable -> L27 java.lang.Throwable -> L29
-    L16:
-        th = move-exception;
-        throw th;     // Catch: java.lang.Throwable -> L18
-    L18:
-        th = move-exception;
-        r1 = th;
-        th = th;
-    L29:
-        th = move-exception;
-        throw th;     // Catch: java.lang.Throwable -> L27
-    L27:
-        th = move-exception;
-        if (0 != 0) goto L46;
-        r2.close();
-    L39:
-        throw th;
-    L46:
-        r2.close();     // Catch: java.lang.Throwable -> L35
-    L35:
-        th = move-exception;
-        r3.addSuppressed(th);
-        goto L39
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = DW().lastModified();
+                    r2 = new java.io.FileReader(DW());
+                    r3 = null;
+                    try {
+                        r4 = new java.io.BufferedReader(r2);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.lang.Throwable) { $pc0 = 29; continue $sw0; }
+                        $pc0 = 27; continue $sw0;
+                    }
+                    try {
+                        r5 = new java.lang.StringBuilder();
+                        r6 = new char[65536];
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.lang.Throwable) { $pc0 = 16; continue $sw0; }
+                        $pc0 = 14; continue $sw0;
+                    }
+                    $pc0 = 5; continue $sw0;
+                }
+                case 5: {
+                    try {
+                        r7 = r4.read(r6, 0, r6.length);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.lang.Throwable) { $pc0 = 16; continue $sw0; }
+                        $pc0 = 14; continue $sw0;
+                    }
+                    if (r7 < 0) { $pc0 = 8; continue $sw0; }
+                    try {
+                        r5.append(r6, 0, r7);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.lang.Throwable) { $pc0 = 16; continue $sw0; }
+                        $pc0 = 14; continue $sw0;
+                    }
+                    { $pc0 = 5; continue $sw0; }
+                }
+                case 8: {
+                    try {
+                        v5 = new org.json.JSONObject(r5.toString());
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.lang.Throwable) { $pc0 = 16; continue $sw0; }
+                        $pc0 = 14; continue $sw0;
+                    }
+                    if (r0 == 0) { $pc0 = 11; continue $sw0; }
+                    try {
+                        Zo = r0;
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.lang.Throwable) { $pc0 = 16; continue $sw0; }
+                        $pc0 = 14; continue $sw0;
+                    }
+                    $pc0 = 11; continue $sw0;
+                }
+                case 11: {
+                    try {
+                        r4.close();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.lang.Throwable) { $pc0 = 29; continue $sw0; }
+                        $pc0 = 27; continue $sw0;
+                    }
+                    r2.close();
+                    return;
+                }
+                case 14: {
+                    th = th;
+                    r1 = null;
+                    $pc0 = 20; continue $sw0;
+                }
+                case 20: {
+                    if (r1 != null) { $pc0 = 42; continue $sw0; }
+                    try {
+                        r4.close();
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.lang.Throwable) { $pc0 = 29; continue $sw0; }
+                        $pc0 = 27; continue $sw0;
+                    }
+                }
+                case 42: {
+                    try {
+                        r4.close();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.lang.Throwable) { $pc0 = 27; continue $sw0; }
+                        $pc0 = 23; continue $sw0;
+                    }
+                    try {
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.lang.Throwable) { $pc0 = 29; continue $sw0; }
+                        $pc0 = 27; continue $sw0;
+                    }
+                }
+                case 23: {
+                    th = $ex0;
+                    try {
+                        r1.addSuppressed(th);
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.lang.Throwable) { $pc0 = 29; continue $sw0; }
+                        $pc0 = 27; continue $sw0;
+                    }
+                }
+                case 16: {
+                    th = $ex0;
+                    try {
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 18; continue $sw0;
+                    }
+                }
+                case 18: {
+                    th = $ex0;
+                    r1 = th;
+                    th = th;
+                    $pc0 = 29; continue $sw0;
+                }
+                case 29: {
+                    th = $ex0;
+                    try {
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 27; continue $sw0;
+                    }
+                }
+                case 27: {
+                    th = $ex0;
+                    if (0 != 0) { $pc0 = 46; continue $sw0; }
+                    r2.close();
+                    $pc0 = 39; continue $sw0;
+                }
+                case 39: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 46: {
+                    try {
+                        r2.close();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 35; continue $sw0;
+                    }
+                    $pc0 = 35; continue $sw0;
+                }
+                case 35: {
+                    th = $ex0;
+                    r3.addSuppressed(th);
+                    { $pc0 = 39; continue $sw0; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static int j6(abcd.lw r2, boolean r3) {
@@ -129,82 +249,269 @@ public class pw {
     }
 
     private static int j6(java.lang.String r12, java.lang.String r13, java.lang.String r14, boolean r15) {
-        long r0 = java.lang.System.currentTimeMillis();
-        java.lang.Object r2 = Hw;
-        monitor-enter(r2);
-        boolean r5 = true;
-        abcd.tw r3 = new abcd.tw(v5(), true);     // Catch: java.lang.Throwable -> L53 java.lang.Throwable -> L55 java.io.IOException -> L57
-        r3.j6();     // Catch: java.lang.Throwable -> L53 java.lang.Throwable -> L55 java.io.IOException -> L57
-    L50:
-        th = move-exception;
-        r3.DW();     // Catch: java.lang.Throwable -> L53 java.lang.Throwable -> L55 java.io.IOException -> L57
-        throw th;     // Catch: java.lang.Throwable -> L53 java.lang.Throwable -> L55 java.io.IOException -> L57
-    L6:
-        if (DW().exists() == true) goto L8;
-        if (r15 == true) goto L31;
-        int r16 = j6;     // Catch: java.lang.Throwable -> L50
-        r3.DW();     // Catch: java.lang.Throwable -> L53 java.lang.Throwable -> L55 java.io.IOException -> L57
-        monitor-exit(r2);     // Catch: java.lang.Throwable -> L53
-        return r16;
-    L31:
-        r3.DW();     // Catch: java.lang.Throwable -> L53 java.lang.Throwable -> L55 java.io.IOException -> L57
-        abcd.tw r17 = new abcd.tw(v5(), false);     // Catch: java.lang.Throwable -> L53 java.lang.Throwable -> L55 java.io.IOException -> L57
-        r17.j6();     // Catch: java.lang.Throwable -> L53 java.lang.Throwable -> L55 java.io.IOException -> L57
-    L47:
-        th = move-exception;
-        r17.DW();     // Catch: java.lang.Throwable -> L53 java.lang.Throwable -> L55 java.io.IOException -> L57
-        throw th;     // Catch: java.lang.Throwable -> L53 java.lang.Throwable -> L55 java.io.IOException -> L57
-    L33:
-        if (DW().exists() == true) goto L35;
-    L43:
-        Zo(r12);     // Catch: java.lang.Throwable -> L47
-        u7();     // Catch: java.lang.Throwable -> L47
-        abcd.yw.j6("App state", "Saving appstate elapsed " + (java.lang.System.currentTimeMillis() - r0) + "ms.");     // Catch: java.lang.Throwable -> L47
-        int r18 = FH;     // Catch: java.lang.Throwable -> L47
-        r17.DW();     // Catch: java.lang.Throwable -> L53 java.lang.Throwable -> L55 java.io.IOException -> L57
-        monitor-exit(r2);     // Catch: java.lang.Throwable -> L53
-        return r18;
-    L35:
-        if (Zo == DW().lastModified()) goto L38;
-        gn();     // Catch: java.lang.Throwable -> L47
-    L38:
-        if (r14.equals(v5.optString(r13, null)) == false) goto L43;
-        int r19 = DW;     // Catch: java.lang.Throwable -> L47
-        r17.DW();     // Catch: java.lang.Throwable -> L53 java.lang.Throwable -> L55 java.io.IOException -> L57
-        monitor-exit(r2);     // Catch: java.lang.Throwable -> L53
-        return r19;
-    L8:
-        if (Zo == DW().lastModified()) goto L10;
-        gn();     // Catch: java.lang.Throwable -> L50
-    L12:
-        if (r14.equals(v5.optString(r13, null)) == false) goto L19;
-        if (r5 == false) goto L15;
-        abcd.yw.j6("App state", "Reading appstate value elapsed " + (java.lang.System.currentTimeMillis() - r0) + "ms.");     // Catch: java.lang.Throwable -> L50
-    L15:
-        int r110 = DW;     // Catch: java.lang.Throwable -> L50
-        r3.DW();     // Catch: java.lang.Throwable -> L53 java.lang.Throwable -> L55 java.io.IOException -> L57
-        monitor-exit(r2);     // Catch: java.lang.Throwable -> L53
-        return r110;
-    L19:
-        if (r15 == true) goto L31;
-        if (r5 == false) goto L22;
-        abcd.yw.j6("App state", "Reading appstate value elapsed " + (java.lang.System.currentTimeMillis() - r0) + "ms.");     // Catch: java.lang.Throwable -> L50
-    L22:
-        int r111 = j6;     // Catch: java.lang.Throwable -> L50
-        r3.DW();     // Catch: java.lang.Throwable -> L53 java.lang.Throwable -> L55 java.io.IOException -> L57
-        monitor-exit(r2);     // Catch: java.lang.Throwable -> L53
-        return r111;
-    L10:
-        r5 = false;
-    L53:
-        th = move-exception;
-        throw th;
-    L55:
-        e = move-exception;
-        abcd.yw.j6("I/O error accessing appstate", e);     // Catch: java.lang.Throwable -> L53
-        int r112 = j6;     // Catch: java.lang.Throwable -> L53
-        monitor-exit(r2);     // Catch: java.lang.Throwable -> L53
-        return r112;
+        long r0 = 0L;
+        java.lang.Object r2 = null;
+        boolean r5 = false;
+        abcd.tw r3 = null;
+        int r16 = 0;
+        abcd.tw r17 = null;
+        int r18 = 0;
+        int r19 = 0;
+        int r110 = 0;
+        int r111 = 0;
+        int r112 = 0;
+        java.lang.Throwable e = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    r0 = java.lang.System.currentTimeMillis();
+                    r2 = Hw;
+                    monitor-enter(r2);
+                    r5 = true;
+                    try {
+                        r3 = new abcd.tw(v5(), true);
+                        r3.j6();
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        if ($t instanceof java.lang.Throwable) { $pc1 = 55; continue $sw1; }
+                        if ($t instanceof java.io.IOException) { $pc1 = 57; continue $sw1; }
+                        $pc1 = 53; continue $sw1;
+                    }
+                    $pc1 = 50; continue $sw1;
+                }
+                case 50: {
+                    th = $ex1;
+                    try {
+                        r3.DW();
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        if ($t instanceof java.lang.Throwable) { $pc1 = 55; continue $sw1; }
+                        if ($t instanceof java.io.IOException) { $pc1 = 57; continue $sw1; }
+                        $pc1 = 53; continue $sw1;
+                    }
+                }
+                case 6: {
+                    if (DW().exists() == true) { $pc1 = 8; continue $sw1; }
+                    if (r15 == true) { $pc1 = 31; continue $sw1; }
+                    try {
+                        r16 = j6;
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        $pc1 = 50; continue $sw1;
+                    }
+                    try {
+                        r3.DW();
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        if ($t instanceof java.lang.Throwable) { $pc1 = 55; continue $sw1; }
+                        if ($t instanceof java.io.IOException) { $pc1 = 57; continue $sw1; }
+                        $pc1 = 53; continue $sw1;
+                    }
+                    try {
+                        monitor-exit(r2);
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        $pc1 = 53; continue $sw1;
+                    }
+                    return r16;
+                }
+                case 31: {
+                    try {
+                        r3.DW();
+                        r17 = new abcd.tw(v5(), false);
+                        r17.j6();
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        if ($t instanceof java.lang.Throwable) { $pc1 = 55; continue $sw1; }
+                        if ($t instanceof java.io.IOException) { $pc1 = 57; continue $sw1; }
+                        $pc1 = 53; continue $sw1;
+                    }
+                    $pc1 = 47; continue $sw1;
+                }
+                case 47: {
+                    th = $ex1;
+                    try {
+                        r17.DW();
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        if ($t instanceof java.lang.Throwable) { $pc1 = 55; continue $sw1; }
+                        if ($t instanceof java.io.IOException) { $pc1 = 57; continue $sw1; }
+                        $pc1 = 53; continue $sw1;
+                    }
+                }
+                case 33: {
+                    if (DW().exists() == true) { $pc1 = 35; continue $sw1; }
+                    $pc1 = 43; continue $sw1;
+                }
+                case 43: {
+                    try {
+                        Zo(r12);
+                        u7();
+                        abcd.yw.j6("App state", "Saving appstate elapsed " + (java.lang.System.currentTimeMillis() - r0) + "ms.");
+                        r18 = FH;
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        $pc1 = 47; continue $sw1;
+                    }
+                    try {
+                        r17.DW();
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        if ($t instanceof java.lang.Throwable) { $pc1 = 55; continue $sw1; }
+                        if ($t instanceof java.io.IOException) { $pc1 = 57; continue $sw1; }
+                        $pc1 = 53; continue $sw1;
+                    }
+                    try {
+                        monitor-exit(r2);
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        $pc1 = 53; continue $sw1;
+                    }
+                    return r18;
+                }
+                case 35: {
+                    if (Zo == DW().lastModified()) { $pc1 = 38; continue $sw1; }
+                    try {
+                        gn();
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        $pc1 = 47; continue $sw1;
+                    }
+                    $pc1 = 38; continue $sw1;
+                }
+                case 38: {
+                    if (r14.equals(v5.optString(r13, null)) == false) { $pc1 = 43; continue $sw1; }
+                    try {
+                        r19 = DW;
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        $pc1 = 47; continue $sw1;
+                    }
+                    try {
+                        r17.DW();
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        if ($t instanceof java.lang.Throwable) { $pc1 = 55; continue $sw1; }
+                        if ($t instanceof java.io.IOException) { $pc1 = 57; continue $sw1; }
+                        $pc1 = 53; continue $sw1;
+                    }
+                    try {
+                        monitor-exit(r2);
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        $pc1 = 53; continue $sw1;
+                    }
+                    return r19;
+                }
+                case 8: {
+                    if (Zo == DW().lastModified()) { $pc1 = 10; continue $sw1; }
+                    try {
+                        gn();
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        $pc1 = 50; continue $sw1;
+                    }
+                    $pc1 = 12; continue $sw1;
+                }
+                case 12: {
+                    if (r14.equals(v5.optString(r13, null)) == false) { $pc1 = 19; continue $sw1; }
+                    if (r5 == false) { $pc1 = 15; continue $sw1; }
+                    try {
+                        abcd.yw.j6("App state", "Reading appstate value elapsed " + (java.lang.System.currentTimeMillis() - r0) + "ms.");
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        $pc1 = 50; continue $sw1;
+                    }
+                    $pc1 = 15; continue $sw1;
+                }
+                case 15: {
+                    try {
+                        r110 = DW;
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        $pc1 = 50; continue $sw1;
+                    }
+                    try {
+                        r3.DW();
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        if ($t instanceof java.lang.Throwable) { $pc1 = 55; continue $sw1; }
+                        if ($t instanceof java.io.IOException) { $pc1 = 57; continue $sw1; }
+                        $pc1 = 53; continue $sw1;
+                    }
+                    try {
+                        monitor-exit(r2);
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        $pc1 = 53; continue $sw1;
+                    }
+                    return r110;
+                }
+                case 19: {
+                    if (r15 == true) { $pc1 = 31; continue $sw1; }
+                    if (r5 == false) { $pc1 = 22; continue $sw1; }
+                    try {
+                        abcd.yw.j6("App state", "Reading appstate value elapsed " + (java.lang.System.currentTimeMillis() - r0) + "ms.");
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        $pc1 = 50; continue $sw1;
+                    }
+                    $pc1 = 22; continue $sw1;
+                }
+                case 22: {
+                    try {
+                        r111 = j6;
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        $pc1 = 50; continue $sw1;
+                    }
+                    try {
+                        r3.DW();
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        if ($t instanceof java.lang.Throwable) { $pc1 = 55; continue $sw1; }
+                        if ($t instanceof java.io.IOException) { $pc1 = 57; continue $sw1; }
+                        $pc1 = 53; continue $sw1;
+                    }
+                    try {
+                        monitor-exit(r2);
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        $pc1 = 53; continue $sw1;
+                    }
+                    return r111;
+                }
+                case 10: {
+                    r5 = false;
+                    $pc1 = 53; continue $sw1;
+                }
+                case 53: {
+                    th = $ex1;
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 55: {
+                    e = $ex1;
+                    try {
+                        abcd.yw.j6("I/O error accessing appstate", e);
+                        r112 = j6;
+                        monitor-exit(r2);
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        $pc1 = 53; continue $sw1;
+                    }
+                    return r112;
+                }
+                case 57: {
+                    throw new java.lang.IllegalStateException();
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     private static java.lang.String j6() {
@@ -224,70 +531,220 @@ public class pw {
     }
 
     private static void u7() {
-        long r0 = DW().lastModified();
-        java.io.File r2 = java.io.File.createTempFile("tmp", "json", DW().getParentFile());
-        java.io.FileOutputStream r3 = new java.io.FileOutputStream(r2);     // Catch: java.lang.Throwable -> L51
+        long r0 = 0L;
+        java.io.File r2 = null;
+        java.io.FileOutputStream r3 = null;
         java.lang.Throwable r4 = null;
-        java.io.BufferedWriter r5 = new java.io.BufferedWriter(new java.io.OutputStreamWriter(r3));     // Catch: java.lang.Throwable -> L39 java.lang.Throwable -> L41
-        r5.write(v5.toString(4));     // Catch: java.lang.Throwable -> L26 java.lang.Throwable -> L28
-        r5.flush();     // Catch: java.lang.Throwable -> L26 java.lang.Throwable -> L28
-        r3.getFD().sync();     // Catch: java.lang.Throwable -> L26 java.lang.Throwable -> L28
-        r5.close();     // Catch: java.lang.Throwable -> L39 java.lang.Throwable -> L41
-        r3.close();     // Catch: java.lang.Throwable -> L51
-        if (r2.renameTo(DW()) == false) goto L25;
-        long r6 = DW().lastModified();     // Catch: java.lang.Throwable -> L51
-        if (r6 == 0) goto L23;
-        if (r6 != r0) goto L19;
-        r6 = r6 + 1;     // Catch: java.lang.Throwable -> L51
-        if (DW().setLastModified(r6) == true) goto L19;
-        throw new java.io.IOException("Could not bump app state last modified.");     // Catch: java.lang.Throwable -> L51
-    L19:
-        Zo = r6;     // Catch: java.lang.Throwable -> L51
-        r2.delete();
-        return;
-    L23:
-        throw new java.io.IOException("App state file vanished after creation.");     // Catch: java.lang.Throwable -> L51
-    L25:
-        throw new java.io.IOException("Could not rename temp file to app state file.");     // Catch: java.lang.Throwable -> L51
-    L28:
-        th = move-exception;
-        throw th;     // Catch: java.lang.Throwable -> L30
-    L30:
-        th = move-exception;
-        java.lang.Throwable r1 = th;
-        th = th;
-    L32:
-        if (r1 != null) goto L58;
-        r5.close();     // Catch: java.lang.Throwable -> L39 java.lang.Throwable -> L41
-        throw th;     // Catch: java.lang.Throwable -> L39 java.lang.Throwable -> L41
-    L58:
-        r5.close();     // Catch: java.lang.Throwable -> L35 java.lang.Throwable -> L39
-        throw th;     // Catch: java.lang.Throwable -> L39 java.lang.Throwable -> L41
-    L35:
-        th = move-exception;
-        r1.addSuppressed(th);     // Catch: java.lang.Throwable -> L39 java.lang.Throwable -> L41
-        throw th;     // Catch: java.lang.Throwable -> L39 java.lang.Throwable -> L41
-    L26:
-        th = th;
-        r1 = null;
-    L39:
-        th = move-exception;
-        if (0 != 0) goto L54;
-        r3.close();     // Catch: java.lang.Throwable -> L51
-    L50:
-        throw th;     // Catch: java.lang.Throwable -> L51
-    L54:
-        r3.close();     // Catch: java.lang.Throwable -> L47 java.lang.Throwable -> L51
-    L47:
-        th = move-exception;
-        r4.addSuppressed(th);     // Catch: java.lang.Throwable -> L51
-    L41:
-        th = move-exception;
-        throw th;     // Catch: java.lang.Throwable -> L39
-    L51:
-        th = move-exception;
-        r2.delete();
-        throw th;
+        java.io.BufferedWriter r5 = null;
+        long r6 = 0L;
+        java.lang.Throwable r1 = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    r0 = DW().lastModified();
+                    r2 = java.io.File.createTempFile("tmp", "json", DW().getParentFile());
+                    try {
+                        r3 = new java.io.FileOutputStream(r2);
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        $pc2 = 51; continue $sw2;
+                    }
+                    r4 = null;
+                    try {
+                        r5 = new java.io.BufferedWriter(new java.io.OutputStreamWriter(r3));
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        if ($t instanceof java.lang.Throwable) { $pc2 = 41; continue $sw2; }
+                        $pc2 = 39; continue $sw2;
+                    }
+                    try {
+                        r5.write(v5.toString(4));
+                        r5.flush();
+                        r3.getFD().sync();
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        if ($t instanceof java.lang.Throwable) { $pc2 = 28; continue $sw2; }
+                        $pc2 = 26; continue $sw2;
+                    }
+                    try {
+                        r5.close();
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        if ($t instanceof java.lang.Throwable) { $pc2 = 41; continue $sw2; }
+                        $pc2 = 39; continue $sw2;
+                    }
+                    try {
+                        r3.close();
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        $pc2 = 51; continue $sw2;
+                    }
+                    if (r2.renameTo(DW()) == false) { $pc2 = 25; continue $sw2; }
+                    try {
+                        r6 = DW().lastModified();
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        $pc2 = 51; continue $sw2;
+                    }
+                    if (r6 == 0) { $pc2 = 23; continue $sw2; }
+                    if (r6 != r0) { $pc2 = 19; continue $sw2; }
+                    try {
+                        r6 = r6 + 1;
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        $pc2 = 51; continue $sw2;
+                    }
+                    if (DW().setLastModified(r6) == true) { $pc2 = 19; continue $sw2; }
+                    try {
+                        throw new java.io.IOException("Could not bump app state last modified.");
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        $pc2 = 51; continue $sw2;
+                    }
+                }
+                case 19: {
+                    try {
+                        Zo = r6;
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        $pc2 = 51; continue $sw2;
+                    }
+                    r2.delete();
+                    return;
+                }
+                case 23: {
+                    try {
+                        throw new java.io.IOException("App state file vanished after creation.");
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        $pc2 = 51; continue $sw2;
+                    }
+                }
+                case 25: {
+                    try {
+                        throw new java.io.IOException("Could not rename temp file to app state file.");
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        $pc2 = 51; continue $sw2;
+                    }
+                }
+                case 28: {
+                    th = $ex2;
+                    try {
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        $pc2 = 30; continue $sw2;
+                    }
+                }
+                case 30: {
+                    th = $ex2;
+                    r1 = th;
+                    th = th;
+                    $pc2 = 32; continue $sw2;
+                }
+                case 32: {
+                    if (r1 != null) { $pc2 = 58; continue $sw2; }
+                    try {
+                        r5.close();
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        if ($t instanceof java.lang.Throwable) { $pc2 = 41; continue $sw2; }
+                        $pc2 = 39; continue $sw2;
+                    }
+                }
+                case 58: {
+                    try {
+                        r5.close();
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        if ($t instanceof java.lang.Throwable) { $pc2 = 39; continue $sw2; }
+                        $pc2 = 35; continue $sw2;
+                    }
+                    try {
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        if ($t instanceof java.lang.Throwable) { $pc2 = 41; continue $sw2; }
+                        $pc2 = 39; continue $sw2;
+                    }
+                }
+                case 35: {
+                    th = $ex2;
+                    try {
+                        r1.addSuppressed(th);
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        if ($t instanceof java.lang.Throwable) { $pc2 = 41; continue $sw2; }
+                        $pc2 = 39; continue $sw2;
+                    }
+                }
+                case 26: {
+                    th = th;
+                    r1 = null;
+                    $pc2 = 39; continue $sw2;
+                }
+                case 39: {
+                    th = $ex2;
+                    if (0 != 0) { $pc2 = 54; continue $sw2; }
+                    try {
+                        r3.close();
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        $pc2 = 51; continue $sw2;
+                    }
+                    $pc2 = 50; continue $sw2;
+                }
+                case 50: {
+                    try {
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        $pc2 = 51; continue $sw2;
+                    }
+                }
+                case 54: {
+                    try {
+                        r3.close();
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        if ($t instanceof java.lang.Throwable) { $pc2 = 51; continue $sw2; }
+                        $pc2 = 47; continue $sw2;
+                    }
+                    $pc2 = 47; continue $sw2;
+                }
+                case 47: {
+                    th = $ex2;
+                    try {
+                        r4.addSuppressed(th);
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        $pc2 = 51; continue $sw2;
+                    }
+                    $pc2 = 41; continue $sw2;
+                }
+                case 41: {
+                    th = $ex2;
+                    try {
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        $pc2 = 39; continue $sw2;
+                    }
+                }
+                case 51: {
+                    th = $ex2;
+                    r2.delete();
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static int v5(abcd.lw r2, boolean r3) {

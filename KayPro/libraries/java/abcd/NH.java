@@ -68,11 +68,22 @@ public class NH {
     }
 
     public void Hw(int r2) {
-        if (r2 > 2) goto L5;
-        j6(false);
-        return;
-    L5:
-        this.VH = r2;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (r2 > 2) { $pc0 = 5; continue $sw0; }
+                    j6(false);
+                    return;
+                }
+                case 5: {
+                    this.VH = r2;
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public boolean J0() {

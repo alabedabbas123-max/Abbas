@@ -10,12 +10,29 @@ public class cM extends abcd.EL implements abcd.KL {
     }
 
     public cM(abcd.InterfaceqL r4) {
-        this.DW = r4.DW().j6("DER");     // Catch: java.io.IOException -> L5
-        this.FH = 0;     // Catch: java.io.IOException -> L5
-        return;
-    L5:
-        e = move-exception;
-        throw new java.lang.IllegalArgumentException("Error processing object : " + e.toString());
+        java.lang.Throwable e = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    try {
+                        this.DW = r4.DW().j6("DER");
+                        this.FH = 0;
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.io.IOException) { $pc0 = 5; continue $sw0; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    return;
+                }
+                case 5: {
+                    e = $ex0;
+                    throw new java.lang.IllegalArgumentException("Error processing object : " + e.toString());
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public cM(byte[] r2) {
@@ -28,45 +45,93 @@ public class cM extends abcd.EL implements abcd.KL {
     }
 
     static abcd.cM DW(byte[] r5) {
-        if (r5.length < 1) goto L10;
-        byte r2 = r5[0];
-        byte[] r3 = new byte[r5.length - 1];
-        if (r3.length == 0) goto L8;
-        java.lang.System.arraycopy(r5, 1, r3, 0, r5.length - 1);
-    L8:
-        return new abcd.cM(r3, r2);
-    L10:
-        throw new java.lang.IllegalArgumentException("truncated BIT STRING detected");
+        byte r2 = 0;
+        byte[] r3 = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if (r5.length < 1) { $pc1 = 10; continue $sw1; }
+                    r2 = r5[0];
+                    r3 = new byte[r5.length - 1];
+                    if (r3.length == 0) { $pc1 = 8; continue $sw1; }
+                    java.lang.System.arraycopy(r5, 1, r3, 0, r5.length - 1);
+                    $pc1 = 8; continue $sw1;
+                }
+                case 8: {
+                    return new abcd.cM(r3, r2);
+                }
+                case 10: {
+                    throw new java.lang.IllegalArgumentException("truncated BIT STRING detected");
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     static abcd.cM j6(int r2, java.io.InputStream r3) {
-        if (r2 < 1) goto L14;
-        int r1 = r3.read();
-        byte[] r4 = new byte[r2 - 1];
-        if (r4.length == 0) goto L12;
-        if (abcd.XP.j6(r3, r4) == r4.length) goto L12;
-        throw new java.io.EOFException("EOF encountered in middle of BIT STRING");
-    L12:
-        return new abcd.cM(r4, r1);
-    L14:
-        throw new java.lang.IllegalArgumentException("truncated BIT STRING detected");
+        int r1 = 0;
+        byte[] r4 = null;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    if (r2 < 1) { $pc2 = 14; continue $sw2; }
+                    r1 = r3.read();
+                    r4 = new byte[r2 - 1];
+                    if (r4.length == 0) { $pc2 = 12; continue $sw2; }
+                    if (abcd.XP.j6(r3, r4) == r4.length) { $pc2 = 12; continue $sw2; }
+                    throw new java.io.EOFException("EOF encountered in middle of BIT STRING");
+                }
+                case 12: {
+                    return new abcd.cM(r4, r1);
+                }
+                case 14: {
+                    throw new java.lang.IllegalArgumentException("truncated BIT STRING detected");
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static abcd.cM j6(abcd.LL r0, boolean r1) {
-        abcd.EL r2 = r0.u7();
-        if (r1 == true) goto L10;
-        if ((r2 instanceof abcd.cM) == true) goto L10;
-        return DW(((abcd.AL) r2).u7());
-    L10:
-        return j6(r2);
+        abcd.EL r2 = null;
+        java.lang.Throwable $ex3 = null;
+        int $pc3 = -1;
+        $sw3: while (true) {
+            switch ($pc3) {
+                case -1: {
+                    r2 = r0.u7();
+                    if (r1 == true) { $pc3 = 10; continue $sw3; }
+                    if ((r2 instanceof abcd.cM) == true) { $pc3 = 10; continue $sw3; }
+                    return DW(((abcd.AL) r2).u7());
+                }
+                case 10: {
+                    return j6(r2);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static abcd.cM j6(java.lang.Object r3) {
-        if (r3 == null) goto L9;
-        if ((r3 instanceof abcd.cM) == true) goto L9;
-        throw new java.lang.IllegalArgumentException("illegal object in getInstance: " + r3.getClass().getName());
-    L9:
-        return (abcd.cM) r3;
+        java.lang.Throwable $ex4 = null;
+        int $pc4 = -1;
+        $sw4: while (true) {
+            switch ($pc4) {
+                case -1: {
+                    if (r3 == null) { $pc4 = 9; continue $sw4; }
+                    if ((r3 instanceof abcd.cM) == true) { $pc4 = 9; continue $sw4; }
+                    throw new java.lang.IllegalArgumentException("illegal object in getInstance: " + r3.getClass().getName());
+                }
+                case 9: {
+                    return (abcd.cM) r3;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
@@ -76,21 +141,47 @@ public class cM extends abcd.EL implements abcd.KL {
 
     @Override
     public java.lang.String getString() {
-        java.lang.StringBuffer r0 = new java.lang.StringBuffer("#");
-        java.io.ByteArrayOutputStream r1 = new java.io.ByteArrayOutputStream();
-        new abcd.CL(r1).j6(this);     // Catch: java.io.IOException -> L10
-        byte[] r2 = r1.toByteArray();
+        java.lang.StringBuffer r0 = null;
+        java.io.ByteArrayOutputStream r1 = null;
+        byte[] r2 = null;
         int r3 = 0;
-    L6:
-        if (r3 == r2.length) goto L8;
-        r0.append(j6[(r2[r3] >>> 4) & 15]);
-        r0.append(j6[r2[r3] & 15]);
-        r3 = r3 + 1;
-        goto L6
-    L8:
-        return r0.toString();
-    L11:
-        throw new java.lang.RuntimeException("internal error encoding BitString");
+        java.lang.Throwable $ex5 = null;
+        int $pc5 = -1;
+        $sw5: while (true) {
+            switch ($pc5) {
+                case -1: {
+                    r0 = new java.lang.StringBuffer("#");
+                    r1 = new java.io.ByteArrayOutputStream();
+                    try {
+                        new abcd.CL(r1).j6(this);
+                    } catch (java.lang.Throwable $t) {
+                        $ex5 = $t;
+                        if ($t instanceof java.io.IOException) { $pc5 = 10; continue $sw5; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    r2 = r1.toByteArray();
+                    r3 = 0;
+                    $pc5 = 6; continue $sw5;
+                }
+                case 6: {
+                    if (r3 == r2.length) { $pc5 = 8; continue $sw5; }
+                    r0.append(j6[(r2[r3] >>> 4) & 15]);
+                    r0.append(j6[r2[r3] & 15]);
+                    r3 = r3 + 1;
+                    { $pc5 = 6; continue $sw5; }
+                }
+                case 8: {
+                    return r0.toString();
+                }
+                case 11: {
+                    throw new java.lang.RuntimeException("internal error encoding BitString");
+                }
+                case 10: {
+                    throw new java.lang.IllegalStateException();
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
@@ -108,16 +199,30 @@ public class cM extends abcd.EL implements abcd.KL {
 
     @Override
     protected boolean j6(abcd.EL r4) {
-        if ((r4 instanceof abcd.cM) == true) goto L5;
-        return false;
-    L5:
-        abcd.cM r5 = (abcd.cM) r4;
-        if (this.FH == r5.FH) goto L8;
-    L11:
-        return false;
-    L8:
-        if (abcd.OP.j6(this.DW, r5.DW) == false) goto L11;
-        return true;
+        abcd.cM r5 = null;
+        java.lang.Throwable $ex6 = null;
+        int $pc6 = -1;
+        $sw6: while (true) {
+            switch ($pc6) {
+                case -1: {
+                    if ((r4 instanceof abcd.cM) == true) { $pc6 = 5; continue $sw6; }
+                    return false;
+                }
+                case 5: {
+                    r5 = (abcd.cM) r4;
+                    if (this.FH == r5.FH) { $pc6 = 8; continue $sw6; }
+                    $pc6 = 11; continue $sw6;
+                }
+                case 11: {
+                    return false;
+                }
+                case 8: {
+                    if (abcd.OP.j6(this.DW, r5.DW) == false) { $pc6 = 11; continue $sw6; }
+                    return true;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public java.lang.String toString() {

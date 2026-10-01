@@ -8,16 +8,29 @@ public class kM extends abcd.EL implements abcd.KL {
     }
 
     public kM(java.lang.String r1, boolean r2) {
-        if (r1 == null) goto L13;
-        if (r2 == true) goto L6;
-    L10:
-        this.j6 = abcd.TP.j6(r1);
-        return;
-    L6:
-        if (DW(r1) == true) goto L10;
-        throw new java.lang.IllegalArgumentException("string contains illegal characters");
-    L13:
-        throw new java.lang.NullPointerException("string cannot be null");
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (r1 == null) { $pc0 = 13; continue $sw0; }
+                    if (r2 == true) { $pc0 = 6; continue $sw0; }
+                    $pc0 = 10; continue $sw0;
+                }
+                case 10: {
+                    this.j6 = abcd.TP.j6(r1);
+                    return;
+                }
+                case 6: {
+                    if (DW(r1) == true) { $pc0 = 10; continue $sw0; }
+                    throw new java.lang.IllegalArgumentException("string contains illegal characters");
+                }
+                case 13: {
+                    throw new java.lang.NullPointerException("string cannot be null");
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     kM(byte[] r1) {
@@ -25,16 +38,30 @@ public class kM extends abcd.EL implements abcd.KL {
     }
 
     public static boolean DW(java.lang.String r4) {
-        int r0 = r4.length() - 1;
-    L3:
-        if (r0 < 0) goto L4;
-        if (r4.charAt(r0) > 127) goto L7;
-        r0 = r0 - 1;
-        goto L3
-    L7:
-        return false;
-    L4:
-        return true;
+        int r0 = 0;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    r0 = r4.length() - 1;
+                    $pc1 = 3; continue $sw1;
+                }
+                case 3: {
+                    if (r0 < 0) { $pc1 = 4; continue $sw1; }
+                    if (r4.charAt(r0) > 127) { $pc1 = 7; continue $sw1; }
+                    r0 = r0 - 1;
+                    { $pc1 = 3; continue $sw1; }
+                }
+                case 7: {
+                    return false;
+                }
+                case 4: {
+                    return true;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
@@ -59,10 +86,20 @@ public class kM extends abcd.EL implements abcd.KL {
 
     @Override
     boolean j6(abcd.EL r2) {
-        if ((r2 instanceof abcd.kM) == true) goto L7;
-        return false;
-    L7:
-        return abcd.OP.j6(this.j6, ((abcd.kM) r2).j6);
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    if ((r2 instanceof abcd.kM) == true) { $pc2 = 7; continue $sw2; }
+                    return false;
+                }
+                case 7: {
+                    return abcd.OP.j6(this.j6, ((abcd.kM) r2).j6);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public java.lang.String toString() {

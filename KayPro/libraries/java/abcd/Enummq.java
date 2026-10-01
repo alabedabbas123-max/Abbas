@@ -1,6 +1,6 @@
 package abcd;
 
-public final enum Enummq extends java.lang.Enum<abcd.Enummq> {
+public final class Enummq extends com.almlkaide.kaypro.internal.EnumBase {
     public static final abcd.Enummq DW = null;
     private static final abcd.Enummq[] EQ = null;
     public static final abcd.Enummq FH = null;
@@ -32,7 +32,7 @@ public final enum Enummq extends java.lang.Enum<abcd.Enummq> {
     }
 
     public static abcd.Enummq valueOf(java.lang.String r1) {
-        return (abcd.Enummq) java.lang.Enum.valueOf(abcd.Enummq.class, r1);
+        return (abcd.Enummq) com.almlkaide.kaypro.internal.EnumBase.valueOf(abcd.Enummq.values(), r1);
     }
 
     public static abcd.Enummq[] values() {

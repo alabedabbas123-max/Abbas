@@ -20,19 +20,47 @@ final class fy<TResult> implements ny<TResult> {
     }
 
     public final void j6(abcd.Yx r2) {
-        if (r2.FH() == false) goto L15;
-        java.lang.Object r3 = this.DW;
-        monitor-enter(r3);
-    L12:
-        th = move-exception;
-        throw th;
-    L7:
-        if (this.FH != null) goto L10;
-        monitor-exit(r3);     // Catch: java.lang.Throwable -> L12
-        return;
-    L10:
-        monitor-exit(r3);     // Catch: java.lang.Throwable -> L12
-        this.j6.execute(new abcd.Runnablegy(this));
-        return;
+        java.lang.Object r3 = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (r2.FH() == false) { $pc0 = 15; continue $sw0; }
+                    r3 = this.DW;
+                    monitor-enter(r3);
+                    $pc0 = 12; continue $sw0;
+                }
+                case 12: {
+                    th = $ex0;
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 7: {
+                    if (this.FH != null) { $pc0 = 10; continue $sw0; }
+                    try {
+                        monitor-exit(r3);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 12; continue $sw0;
+                    }
+                    return;
+                }
+                case 10: {
+                    try {
+                        monitor-exit(r3);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 12; continue $sw0;
+                    }
+                    this.j6.execute(new abcd.Runnablegy(this));
+                    return;
+                }
+                case 15: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

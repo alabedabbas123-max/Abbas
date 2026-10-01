@@ -13,13 +13,25 @@ public class a extends a.an {
 
     @Override
     protected java.lang.String a() {
-        if (this.b >= this.f0a.length) goto L6;
-        java.lang.String[] r0 = this.f0a;
-        int r1 = this.b;
-        this.b = r1 + 1;
-        return r0[r1];
-    L6:
-        return null;
+        java.lang.String[] r0 = null;
+        int r1 = 0;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (this.b >= this.f0a.length) { $pc0 = 6; continue $sw0; }
+                    r0 = this.f0a;
+                    r1 = this.b;
+                    this.b = r1 + 1;
+                    return r0[r1];
+                }
+                case 6: {
+                    return null;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

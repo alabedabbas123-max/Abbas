@@ -38,12 +38,24 @@ public class uF<S extends abcd.CC> implements java.lang.Iterable<abcd.qF> {
     }
 
     public void j6(int r3, int r4, int r5, abcd.qF.a r6) {
-        this.FH.j6(r6.ordinal());
-        this.FH.j6(r3);
-        this.FH.j6(r4);
-        this.FH.j6(r5);
-        if (r6 == abcd.qF.a.j6) goto L6;
-        this.Hw = true;
-        return;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    this.FH.j6(r6.ordinal());
+                    this.FH.j6(r3);
+                    this.FH.j6(r4);
+                    this.FH.j6(r5);
+                    if (r6 == abcd.qF.a.j6) { $pc0 = 6; continue $sw0; }
+                    this.Hw = true;
+                    return;
+                }
+                case 6: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

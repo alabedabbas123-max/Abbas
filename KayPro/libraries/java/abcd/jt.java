@@ -18,9 +18,19 @@ class jt extends abcd.Abstractqt {
 
     @Override
     public abcd.bs j6(abcd.bs r3) {
-        if (r3.we() == this.j6.we()) goto L5;
-        return r3;
-    L5:
-        return this.DW;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (r3.we() == this.j6.we()) { $pc0 = 5; continue $sw0; }
+                    return r3;
+                }
+                case 5: {
+                    return this.DW;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

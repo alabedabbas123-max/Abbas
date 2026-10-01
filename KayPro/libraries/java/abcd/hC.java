@@ -12,7 +12,7 @@ public class hC {
     protected abcd.WD u7;
     protected abcd.AbstractrE v5;
 
-    public static final enum a extends java.lang.Enum<abcd.hC.a> {
+    public static final class a extends com.almlkaide.kaypro.internal.EnumBase {
         public static final abcd.hC.a DW = null;
         public static final abcd.hC.a FH = null;
         public static final abcd.hC.a Hw = null;
@@ -34,7 +34,7 @@ public class hC {
         }
 
         public static abcd.hC.a valueOf(java.lang.String r1) {
-            return (abcd.hC.a) java.lang.Enum.valueOf(abcd.hC.a.class, r1);
+            return (abcd.hC.a) com.almlkaide.kaypro.internal.EnumBase.valueOf(abcd.hC.a.values(), r1);
         }
 
         public static abcd.hC.a[] values() {
@@ -46,7 +46,7 @@ public class hC {
         }
     }
 
-    public static final enum b extends java.lang.Enum<abcd.hC.b> {
+    public static final class b extends com.almlkaide.kaypro.internal.EnumBase {
         public static final abcd.hC.b DW = null;
         private static final abcd.hC.b[] FH = null;
         public static final abcd.hC.b j6 = null;
@@ -62,7 +62,7 @@ public class hC {
         }
 
         public static abcd.hC.b valueOf(java.lang.String r1) {
-            return (abcd.hC.b) java.lang.Enum.valueOf(abcd.hC.b.class, r1);
+            return (abcd.hC.b) com.almlkaide.kaypro.internal.EnumBase.valueOf(abcd.hC.b.values(), r1);
         }
 
         public static abcd.hC.b[] values() {
@@ -99,61 +99,89 @@ public class hC {
     }
 
     public static java.util.List<abcd.hC> j6(abcd.YJ r6, boolean r7) {
-        if (r6.Zo() != 2) goto L34;
-        if (r7 == true) goto L6;
-    L10:
-        java.util.ArrayList r0 = new java.util.ArrayList();
-        abcd.uE r1 = new abcd.uE();
-    L12:
-        if (r6.EQ() == false) goto L13;
-        abcd.hC r2 = new abcd.hC();
-        r6.j6(r1, 0);
-        r2.u7 = abcd.WD.j6(r1);
-        r6.j6(r1, 1);
-        r2.tp = abcd.WD.j6(r1);
-        r2.v5 = r6.j6(0);
-        r2.Zo = r6.j6(1);
-        java.lang.String r3 = r6.Hw();
-        r2.FH = r3;
-        r2.Hw = r3;
-        abcd.AbstractrE r4 = r2.v5;
-        abcd.AbstractrE r5 = abcd.AbstractrE.Zo;
-        if (r4 != r5) goto L18;
-        r2.FH = "/dev/null";
-        r2.VH = abcd.hC.a.j6;
-        r0.add(r2);
-    L29:
-        if (r7 == false) goto L12;
-        if (r6.u7() == false) goto L12;
-        r6.j6();
-        goto L12
-    L18:
-        if (r2.Zo != r5) goto L21;
-        r2.Hw = "/dev/null";
-        r2.VH = abcd.hC.a.FH;
-        r0.add(r2);
-        goto L29
-    L21:
-        if (r2.u7.equals(r2.tp) == true) goto L27;
-        r2.VH = abcd.hC.a.DW;
-        if (abcd.BC.j6(r2.v5, r2.Zo) == false) goto L25;
-        r0.add(r2);
-        goto L29
-    L25:
-        r0.addAll(j6(r2));
-        goto L29
-    L27:
-        if (r2.v5 == r2.Zo) goto L29;
-        r2.VH = abcd.hC.a.DW;
-        r0.add(r2);
-        goto L29
-    L13:
-        return r0;
-    L6:
-        if (r6.gn() == false) goto L10;
-        throw new java.lang.IllegalArgumentException(org.eclipse.jgit.JGitText.j6().cannotBeRecursiveWhenTreesAreIncluded);
-    L34:
-        throw new java.lang.IllegalArgumentException(org.eclipse.jgit.JGitText.j6().treeWalkMustHaveExactlyTwoTrees);
+        java.util.ArrayList r0 = null;
+        abcd.uE r1 = null;
+        abcd.hC r2 = null;
+        java.lang.String r3 = null;
+        abcd.AbstractrE r4 = null;
+        abcd.AbstractrE r5 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (r6.Zo() != 2) { $pc0 = 34; continue $sw0; }
+                    if (r7 == true) { $pc0 = 6; continue $sw0; }
+                    $pc0 = 10; continue $sw0;
+                }
+                case 10: {
+                    r0 = new java.util.ArrayList();
+                    r1 = new abcd.uE();
+                    $pc0 = 12; continue $sw0;
+                }
+                case 12: {
+                    if (r6.EQ() == false) { $pc0 = 13; continue $sw0; }
+                    r2 = new abcd.hC();
+                    r6.j6(r1, 0);
+                    r2.u7 = abcd.WD.j6(r1);
+                    r6.j6(r1, 1);
+                    r2.tp = abcd.WD.j6(r1);
+                    r2.v5 = r6.j6(0);
+                    r2.Zo = r6.j6(1);
+                    r3 = r6.Hw();
+                    r2.FH = r3;
+                    r2.Hw = r3;
+                    r4 = r2.v5;
+                    r5 = abcd.AbstractrE.Zo;
+                    if (r4 != r5) { $pc0 = 18; continue $sw0; }
+                    r2.FH = "/dev/null";
+                    r2.VH = abcd.hC.a.j6;
+                    r0.add(r2);
+                    $pc0 = 29; continue $sw0;
+                }
+                case 29: {
+                    if (r7 == false) { $pc0 = 12; continue $sw0; }
+                    if (r6.u7() == false) { $pc0 = 12; continue $sw0; }
+                    r6.j6();
+                    { $pc0 = 12; continue $sw0; }
+                }
+                case 18: {
+                    if (r2.Zo != r5) { $pc0 = 21; continue $sw0; }
+                    r2.Hw = "/dev/null";
+                    r2.VH = abcd.hC.a.FH;
+                    r0.add(r2);
+                    { $pc0 = 29; continue $sw0; }
+                }
+                case 21: {
+                    if (r2.u7.equals(r2.tp) == true) { $pc0 = 27; continue $sw0; }
+                    r2.VH = abcd.hC.a.DW;
+                    if (abcd.BC.j6(r2.v5, r2.Zo) == false) { $pc0 = 25; continue $sw0; }
+                    r0.add(r2);
+                    { $pc0 = 29; continue $sw0; }
+                }
+                case 25: {
+                    r0.addAll(j6(r2));
+                    { $pc0 = 29; continue $sw0; }
+                }
+                case 27: {
+                    if (r2.v5 == r2.Zo) { $pc0 = 29; continue $sw0; }
+                    r2.VH = abcd.hC.a.DW;
+                    r0.add(r2);
+                    { $pc0 = 29; continue $sw0; }
+                }
+                case 13: {
+                    return r0;
+                }
+                case 6: {
+                    if (r6.gn() == false) { $pc0 = 10; continue $sw0; }
+                    throw new java.lang.IllegalArgumentException(org.eclipse.jgit.JGitText.j6().cannotBeRecursiveWhenTreesAreIncluded);
+                }
+                case 34: {
+                    throw new java.lang.IllegalArgumentException(org.eclipse.jgit.JGitText.j6().treeWalkMustHaveExactlyTwoTrees);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     static java.util.List<abcd.hC> j6(abcd.hC r4) {
@@ -177,23 +205,90 @@ public class hC {
     }
 
     static int[] j6() {
-        int[] r0 = DW;
-        if (r0 == null) goto L5;
-        return r0;
-    L5:
-        int[] r1 = new int[abcd.hC.a.values().length];
-        r1[abcd.hC.a.j6.ordinal()] = 1;     // Catch: java.lang.NoSuchFieldError -> L13
-    L18:
-        r1[abcd.hC.a.v5.ordinal()] = 5;     // Catch: java.lang.NoSuchFieldError -> L14
-    L24:
-        r1[abcd.hC.a.FH.ordinal()] = 3;     // Catch: java.lang.NoSuchFieldError -> L15
-    L26:
-        r1[abcd.hC.a.DW.ordinal()] = 2;     // Catch: java.lang.NoSuchFieldError -> L16
-    L20:
-        r1[abcd.hC.a.Hw.ordinal()] = 4;     // Catch: java.lang.NoSuchFieldError -> L17
-    L11:
-        DW = r1;
-        return r1;
+        int[] r0 = null;
+        int[] r1 = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    r0 = DW;
+                    if (r0 == null) { $pc1 = 5; continue $sw1; }
+                    return r0;
+                }
+                case 5: {
+                    r1 = new int[abcd.hC.a.values().length];
+                    try {
+                        r1[abcd.hC.a.j6.ordinal()] = 1;
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        if ($t instanceof java.lang.NoSuchFieldError) { $pc1 = 13; continue $sw1; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    $pc1 = 18; continue $sw1;
+                }
+                case 18: {
+                    try {
+                        r1[abcd.hC.a.v5.ordinal()] = 5;
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        if ($t instanceof java.lang.NoSuchFieldError) { $pc1 = 14; continue $sw1; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    $pc1 = 24; continue $sw1;
+                }
+                case 24: {
+                    try {
+                        r1[abcd.hC.a.FH.ordinal()] = 3;
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        if ($t instanceof java.lang.NoSuchFieldError) { $pc1 = 15; continue $sw1; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    $pc1 = 26; continue $sw1;
+                }
+                case 26: {
+                    try {
+                        r1[abcd.hC.a.DW.ordinal()] = 2;
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        if ($t instanceof java.lang.NoSuchFieldError) { $pc1 = 16; continue $sw1; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    $pc1 = 20; continue $sw1;
+                }
+                case 20: {
+                    try {
+                        r1[abcd.hC.a.Hw.ordinal()] = 4;
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        if ($t instanceof java.lang.NoSuchFieldError) { $pc1 = 17; continue $sw1; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    $pc1 = 11; continue $sw1;
+                }
+                case 11: {
+                    DW = r1;
+                    return r1;
+                }
+                case 13: {
+                    $pc1 = 14; continue $sw1;
+                }
+                case 14: {
+                    $pc1 = 15; continue $sw1;
+                }
+                case 15: {
+                    $pc1 = 16; continue $sw1;
+                }
+                case 16: {
+                    $pc1 = 17; continue $sw1;
+                }
+                case 17: {
+                    throw new java.lang.IllegalStateException();
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public abcd.hC.a DW() {
@@ -201,10 +296,20 @@ public class hC {
     }
 
     public abcd.AbstractrE DW(abcd.hC.b r2) {
-        if (r2 != abcd.hC.b.j6) goto L6;
-        return VH();
-    L6:
-        return Hw();
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    if (r2 != abcd.hC.b.j6) { $pc2 = 6; continue $sw2; }
+                    return VH();
+                }
+                case 6: {
+                    return Hw();
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public abcd.WD FH() {
@@ -212,10 +317,20 @@ public class hC {
     }
 
     public java.lang.String FH(abcd.hC.b r2) {
-        if (r2 != abcd.hC.b.j6) goto L6;
-        return gn();
-    L6:
-        return v5();
+        java.lang.Throwable $ex3 = null;
+        int $pc3 = -1;
+        $sw3: while (true) {
+            switch ($pc3) {
+                case -1: {
+                    if (r2 != abcd.hC.b.j6) { $pc3 = 6; continue $sw3; }
+                    return gn();
+                }
+                case 6: {
+                    return v5();
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public abcd.AbstractrE Hw() {
@@ -235,39 +350,66 @@ public class hC {
     }
 
     public abcd.WD j6(abcd.hC.b r2) {
-        if (r2 != abcd.hC.b.j6) goto L6;
-        return Zo();
-    L6:
-        return FH();
+        java.lang.Throwable $ex4 = null;
+        int $pc4 = -1;
+        $sw4: while (true) {
+            switch ($pc4) {
+                case -1: {
+                    if (r2 != abcd.hC.b.j6) { $pc4 = 6; continue $sw4; }
+                    return Zo();
+                }
+                case 6: {
+                    return FH();
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public java.lang.String toString() {
-        java.lang.StringBuilder r0 = new java.lang.StringBuilder();
-        r0.append("DiffEntry[");
-        r0.append(this.VH);
-        r0.append(" ");
-        int r1 = j6()[this.VH.ordinal()];
-        if (r1 != 1) goto L5;
-        r0.append(this.Hw);
-    L18:
-        r0.append("]");
-        return r0.toString();
-    L5:
-        if (r1 != 2) goto L7;
-        r0.append(this.FH);
-        goto L18
-    L7:
-        if (r1 != 3) goto L9;
-        r0.append(this.FH);
-        goto L18
-    L9:
-        if (r1 != 4) goto L11;
-        r0.append(java.lang.String.valueOf(this.FH) + "->" + this.Hw);
-        goto L18
-    L11:
-        if (r1 != 5) goto L18;
-        r0.append(java.lang.String.valueOf(this.FH) + "->" + this.Hw);
-        goto L18
+        java.lang.StringBuilder r0 = null;
+        int r1 = 0;
+        java.lang.Throwable $ex5 = null;
+        int $pc5 = -1;
+        $sw5: while (true) {
+            switch ($pc5) {
+                case -1: {
+                    r0 = new java.lang.StringBuilder();
+                    r0.append("DiffEntry[");
+                    r0.append(this.VH);
+                    r0.append(" ");
+                    r1 = j6()[this.VH.ordinal()];
+                    if (r1 != 1) { $pc5 = 5; continue $sw5; }
+                    r0.append(this.Hw);
+                    $pc5 = 18; continue $sw5;
+                }
+                case 18: {
+                    r0.append("]");
+                    return r0.toString();
+                }
+                case 5: {
+                    if (r1 != 2) { $pc5 = 7; continue $sw5; }
+                    r0.append(this.FH);
+                    { $pc5 = 18; continue $sw5; }
+                }
+                case 7: {
+                    if (r1 != 3) { $pc5 = 9; continue $sw5; }
+                    r0.append(this.FH);
+                    { $pc5 = 18; continue $sw5; }
+                }
+                case 9: {
+                    if (r1 != 4) { $pc5 = 11; continue $sw5; }
+                    r0.append(java.lang.String.valueOf(this.FH) + "->" + this.Hw);
+                    { $pc5 = 18; continue $sw5; }
+                }
+                case 11: {
+                    if (r1 != 5) { $pc5 = 18; continue $sw5; }
+                    r0.append(java.lang.String.valueOf(this.FH) + "->" + this.Hw);
+                    { $pc5 = 18; continue $sw5; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public int u7() {

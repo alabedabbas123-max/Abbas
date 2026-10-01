@@ -80,10 +80,21 @@ public class IN {
     }
 
     public static abcd.EL j6(abcd.IN r3) {
-        return abcd.EL.j6(r3.j6().u7());
-    L4:
-        e = move-exception;
-        throw new java.lang.IllegalArgumentException("can't convert extension: " + e);
+        java.lang.Throwable e = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    return abcd.EL.j6(r3.j6().u7());
+                }
+                case 4: {
+                    e = $ex0;
+                    throw new java.lang.IllegalArgumentException("can't convert extension: " + e);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public boolean DW() {
@@ -91,23 +102,47 @@ public class IN {
     }
 
     public boolean equals(java.lang.Object r4) {
-        if ((r4 instanceof abcd.IN) == true) goto L5;
-        return false;
-    L5:
-        abcd.IN r5 = (abcd.IN) r4;
-        if (r5.j6().equals(j6()) == true) goto L8;
-    L11:
-        return false;
-    L8:
-        if (r5.DW() != DW()) goto L11;
-        return true;
+        abcd.IN r5 = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if ((r4 instanceof abcd.IN) == true) { $pc1 = 5; continue $sw1; }
+                    return false;
+                }
+                case 5: {
+                    r5 = (abcd.IN) r4;
+                    if (r5.j6().equals(j6()) == true) { $pc1 = 8; continue $sw1; }
+                    $pc1 = 11; continue $sw1;
+                }
+                case 11: {
+                    return false;
+                }
+                case 8: {
+                    if (r5.DW() != DW()) { $pc1 = 11; continue $sw1; }
+                    return true;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public int hashCode() {
-        if (DW() == false) goto L7;
-        return j6().hashCode();
-    L7:
-        return j6().hashCode() ^ (-1);
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    if (DW() == false) { $pc2 = 7; continue $sw2; }
+                    return j6().hashCode();
+                }
+                case 7: {
+                    return j6().hashCode() ^ (-1);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public abcd.AL j6() {

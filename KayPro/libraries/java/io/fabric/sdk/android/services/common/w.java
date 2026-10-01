@@ -12,10 +12,21 @@ class w implements Sy<java.lang.String> {
     }
 
     public java.lang.String m43j6(android.content.Context r2) {
-        java.lang.String r3 = r2.getPackageManager().getInstallerPackageName(r2.getPackageName());
-        if (r3 != null) goto L6;
-        return "";
-    L6:
-        return r3;
+        java.lang.String r3 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r3 = r2.getPackageManager().getInstallerPackageName(r2.getPackageName());
+                    if (r3 != null) { $pc0 = 6; continue $sw0; }
+                    return "";
+                }
+                case 6: {
+                    return r3;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

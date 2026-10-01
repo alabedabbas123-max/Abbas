@@ -13,25 +13,67 @@ public class vI implements abcd.ZI {
         private java.io.InputStream v5;
 
         private a(abcd.vI r2, java.lang.String r3, int r4) {
-            this.Zo = r2;
-            this.DW = r4;
-            this.j6 = (com.jcraft.jsch.ChannelExec) abcd.vI.j6(r2).FH("exec");     // Catch: com.jcraft.jsch.JSchException -> L12
-            this.j6.DW(r3);     // Catch: com.jcraft.jsch.JSchException -> L12
-            DW();     // Catch: com.jcraft.jsch.JSchException -> L12
-            com.jcraft.jsch.ChannelExec r5 = this.j6;     // Catch: com.jcraft.jsch.JSchException -> L12
-            if (this.DW <= 0) goto L6;
-            int r6 = this.DW * 1000;     // Catch: com.jcraft.jsch.JSchException -> L12
-        L7:
-            r5.j6(r6);     // Catch: com.jcraft.jsch.JSchException -> L12
-            if (this.j6.J0() == false) goto L11;
-            return;
-        L11:
-            throw new abcd.yD(abcd.vI.DW(r2), "connection failed");     // Catch: com.jcraft.jsch.JSchException -> L12
-        L6:
-            r6 = 0;
-        L12:
-            e = move-exception;
-            throw new abcd.yD(abcd.vI.DW(r2), e.getMessage(), e);
+            com.jcraft.jsch.ChannelExec r5 = null;
+            int r6 = 0;
+            java.lang.Throwable e = null;
+            java.lang.Throwable $ex0 = null;
+            int $pc0 = -1;
+            $sw0: while (true) {
+                switch ($pc0) {
+                    case -1: {
+                        this.Zo = r2;
+                        this.DW = r4;
+                        try {
+                            this.j6 = (com.jcraft.jsch.ChannelExec) abcd.vI.j6(r2).FH("exec");
+                            this.j6.DW(r3);
+                            DW();
+                            r5 = this.j6;
+                        } catch (java.lang.Throwable $t) {
+                            $ex0 = $t;
+                            if ($t instanceof com.jcraft.jsch.JSchException) { $pc0 = 12; continue $sw0; }
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                        }
+                        if (this.DW <= 0) { $pc0 = 6; continue $sw0; }
+                        try {
+                            r6 = this.DW * 1000;
+                        } catch (java.lang.Throwable $t) {
+                            $ex0 = $t;
+                            if ($t instanceof com.jcraft.jsch.JSchException) { $pc0 = 12; continue $sw0; }
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                        }
+                        $pc0 = 7; continue $sw0;
+                    }
+                    case 7: {
+                        try {
+                            r5.j6(r6);
+                        } catch (java.lang.Throwable $t) {
+                            $ex0 = $t;
+                            if ($t instanceof com.jcraft.jsch.JSchException) { $pc0 = 12; continue $sw0; }
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                        }
+                        if (this.j6.J0() == false) { $pc0 = 11; continue $sw0; }
+                        return;
+                    }
+                    case 11: {
+                        try {
+                            throw new abcd.yD(abcd.vI.DW(r2), "connection failed");
+                        } catch (java.lang.Throwable $t) {
+                            $ex0 = $t;
+                            if ($t instanceof com.jcraft.jsch.JSchException) { $pc0 = 12; continue $sw0; }
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                        }
+                    }
+                    case 6: {
+                        r6 = 0;
+                        $pc0 = 12; continue $sw0;
+                    }
+                    case 12: {
+                        e = $ex0;
+                        throw new abcd.yD(abcd.vI.DW(r2), e.getMessage(), e);
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         a(abcd.vI r1, java.lang.String r2, int r3, abcd.vI.a r4) {
@@ -39,20 +81,36 @@ public class vI implements abcd.ZI {
         }
 
         private void DW() {
-            this.FH = this.j6.gn();
-            java.io.OutputStream r0 = this.j6.u7();
-            if (this.DW > 0) goto L5;
-            this.Hw = r0;
-        L6:
-            this.v5 = this.j6.aM();
-            return;
-        L5:
-            java.io.PipedInputStream r1 = new java.io.PipedInputStream();
-            abcd.YK r2 = new abcd.YK(r1, r0);
-            abcd.uI r3 = new abcd.uI(this, r1, r2);
-            r2.start();
-            this.Hw = r3;
-            goto L6
+            java.io.OutputStream r0 = null;
+            java.io.PipedInputStream r1 = null;
+            abcd.YK r2 = null;
+            abcd.uI r3 = null;
+            java.lang.Throwable $ex1 = null;
+            int $pc1 = -1;
+            $sw1: while (true) {
+                switch ($pc1) {
+                    case -1: {
+                        this.FH = this.j6.gn();
+                        r0 = this.j6.u7();
+                        if (this.DW > 0) { $pc1 = 5; continue $sw1; }
+                        this.Hw = r0;
+                        $pc1 = 6; continue $sw1;
+                    }
+                    case 6: {
+                        this.v5 = this.j6.aM();
+                        return;
+                    }
+                    case 5: {
+                        r1 = new java.io.PipedInputStream();
+                        r2 = new abcd.YK(r1, r0);
+                        r3 = new abcd.uI(this, r1, r2);
+                        r2.start();
+                        this.Hw = r3;
+                        { $pc1 = 6; continue $sw1; }
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         static int j6(abcd.vI.a r0) {
@@ -60,28 +118,61 @@ public class vI implements abcd.ZI {
         }
 
         private boolean j6() {
-            if (this.j6.Zo() < 0) goto L5;
-            return false;
-        L5:
-            if (this.j6.J0() == false) goto L10;
-            return true;
-        L10:
-            return false;
+            java.lang.Throwable $ex2 = null;
+            int $pc2 = -1;
+            $sw2: while (true) {
+                switch ($pc2) {
+                    case -1: {
+                        if (this.j6.Zo() < 0) { $pc2 = 5; continue $sw2; }
+                        return false;
+                    }
+                    case 5: {
+                        if (this.j6.J0() == false) { $pc2 = 10; continue $sw2; }
+                        return true;
+                    }
+                    case 10: {
+                        return false;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         @Override
         public void destroy() {
-            if (this.j6.J0() == false) goto L6;
-            this.j6.DW();
-            return;
+            java.lang.Throwable $ex3 = null;
+            int $pc3 = -1;
+            $sw3: while (true) {
+                switch ($pc3) {
+                    case -1: {
+                        if (this.j6.J0() == false) { $pc3 = 6; continue $sw3; }
+                        this.j6.DW();
+                        return;
+                    }
+                    case 6: {
+                        return;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         @Override
         public int exitValue() {
-            if (j6() == true) goto L7;
-            return this.j6.Zo();
-        L7:
-            throw new java.lang.IllegalStateException();
+            java.lang.Throwable $ex4 = null;
+            int $pc4 = -1;
+            $sw4: while (true) {
+                switch ($pc4) {
+                    case -1: {
+                        if (j6() == true) { $pc4 = 7; continue $sw4; }
+                        return this.j6.Zo();
+                    }
+                    case 7: {
+                        throw new java.lang.IllegalStateException();
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         @Override
@@ -101,12 +192,21 @@ public class vI implements abcd.ZI {
 
         @Override
         public int waitFor() {
-        L3:
-            if (j6() == false) goto L5;
-            java.lang.Thread.sleep(100);
-            goto L3
-        L5:
-            return exitValue();
+            java.lang.Throwable $ex5 = null;
+            int $pc5 = 3;
+            $sw5: while (true) {
+                switch ($pc5) {
+                    case 3: {
+                        if (j6() == false) { $pc5 = 5; continue $sw5; }
+                        java.lang.Thread.sleep(100);
+                        { $pc5 = 3; continue $sw5; }
+                    }
+                    case 5: {
+                        return exitValue();
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
     }
 
@@ -125,9 +225,21 @@ public class vI implements abcd.ZI {
 
     @Override
     public void disconnect() {
-        if (this.j6.tp() == false) goto L6;
-        this.j6.j6();
-        return;
+        java.lang.Throwable $ex6 = null;
+        int $pc6 = -1;
+        $sw6: while (true) {
+            switch ($pc6) {
+                case -1: {
+                    if (this.j6.tp() == false) { $pc6 = 6; continue $sw6; }
+                    this.j6.j6();
+                    return;
+                }
+                case 6: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public com.jcraft.jsch.Channel j6() {

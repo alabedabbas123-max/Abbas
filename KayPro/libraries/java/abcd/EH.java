@@ -30,28 +30,53 @@ public class EH {
     private int DW(abcd.FH r7) {
         int r1 = 0;
         int r2 = 0;
-    L3:
-        int[] r3 = this.Hw;
-        if (r1 >= r3.length) goto L5;
-        int r4 = r3[r1];
-        if (r4 == 0) goto L16;
-        int r5 = r4;
+        int[] r3 = null;
+        int r4 = 0;
+        int r5 = 0;
         int r6 = 0;
-    L10:
-        r6 = r6 + 1;
-        if (r6 == 64) goto L12;
-        r5 = r7.FH[r5];
-        if (r5 != 0) goto L10;
-    L15:
-        r2 = r2 + r6;
-        goto L16
-    L12:
-        r7.FH[r5] = 0;
-    L16:
-        r1 = r1 + 1;
-        goto L3
-    L5:
-        return r2;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r1 = 0;
+                    r2 = 0;
+                    $pc0 = 3; continue $sw0;
+                }
+                case 3: {
+                    r3 = this.Hw;
+                    if (r1 >= r3.length) { $pc0 = 5; continue $sw0; }
+                    r4 = r3[r1];
+                    if (r4 == 0) { $pc0 = 16; continue $sw0; }
+                    r5 = r4;
+                    r6 = 0;
+                    $pc0 = 10; continue $sw0;
+                }
+                case 10: {
+                    r6 = r6 + 1;
+                    if (r6 == 64) { $pc0 = 12; continue $sw0; }
+                    r5 = r7.FH[r5];
+                    if (r5 != 0) { $pc0 = 10; continue $sw0; }
+                    $pc0 = 15; continue $sw0;
+                }
+                case 15: {
+                    r2 = r2 + r6;
+                    { $pc0 = 16; continue $sw0; }
+                }
+                case 12: {
+                    r7.FH[r5] = 0;
+                    $pc0 = 16; continue $sw0;
+                }
+                case 16: {
+                    r1 = r1 + 1;
+                    { $pc0 = 3; continue $sw0; }
+                }
+                case 5: {
+                    return r2;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     private static int j6(int r1, byte r2, byte r3) {
@@ -99,35 +124,68 @@ public class EH {
     }
 
     private static int j6(byte[] r3, int r4, byte[] r5, int r6) {
-        int r0 = r6;
-        int r7 = r4;
-    L4:
-        if (r7 >= r3.length) goto L13;
-        if (r0 >= r5.length) goto L13;
-        if (r3[r7] != r5[r0]) goto L13;
-        r7 = r7 + 1;
-        r0 = r0 + 1;
-    L13:
-        return r7 - r4;
+        int r0 = 0;
+        int r7 = 0;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    r0 = r6;
+                    r7 = r4;
+                    $pc1 = 4; continue $sw1;
+                }
+                case 4: {
+                    if (r7 >= r3.length) { $pc1 = 13; continue $sw1; }
+                    if (r0 >= r5.length) { $pc1 = 13; continue $sw1; }
+                    if (r3[r7] != r5[r0]) { $pc1 = 13; continue $sw1; }
+                    r7 = r7 + 1;
+                    r0 = r0 + 1;
+                    $pc1 = 13; continue $sw1;
+                }
+                case 13: {
+                    return r7 - r4;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     private static int j6(byte[] r3, int r4, byte[] r5, int r6, int r7) {
-        if (r6 != 0) goto L5;
-        return 0;
-    L5:
-        int r8 = r4 - 1;
-        int r0 = r7;
-        int r9 = r6 - 1;
-        int r10 = r8;
-    L7:
-        if (r3[r10] != r5[r9]) goto L14;
-        r10 = r10 - 1;
-        r9 = r9 - 1;
-        if (r9 < 0) goto L14;
-        r0 = r0 - 1;
-        if (r0 > 0) goto L7;
-    L14:
-        return r8 - r10;
+        int r8 = 0;
+        int r0 = 0;
+        int r9 = 0;
+        int r10 = 0;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    if (r6 != 0) { $pc2 = 5; continue $sw2; }
+                    return 0;
+                }
+                case 5: {
+                    r8 = r4 - 1;
+                    r0 = r7;
+                    r9 = r6 - 1;
+                    r10 = r8;
+                    $pc2 = 7; continue $sw2;
+                }
+                case 7: {
+                    if (r3[r10] != r5[r9]) { $pc2 = 14; continue $sw2; }
+                    r10 = r10 - 1;
+                    r9 = r9 - 1;
+                    if (r9 < 0) { $pc2 = 14; continue $sw2; }
+                    r0 = r0 - 1;
+                    if (r0 > 0) { $pc2 = 7; continue $sw2; }
+                    $pc2 = 14; continue $sw2;
+                }
+                case 14: {
+                    return r8 - r10;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static long j6(int r2) {
@@ -151,26 +209,50 @@ public class EH {
     }
 
     private void j6(abcd.FH r9) {
-        int r0 = 1;
+        int r0 = 0;
         int r1 = 0;
-    L3:
-        int[] r2 = this.Hw;
-        if (r1 >= r2.length) goto L5;
-        int r3 = r2[r1];
-        if (r3 == 0) goto L13;
-        r2[r1] = r0;
-    L10:
-        int r4 = r0 + 1;
-        this.v5[r0] = r9.DW[r3];
-        r3 = r9.FH[r3];
-        if (r3 == 0) goto L12;
-        r0 = r4;
-        goto L10
-    L12:
-        r0 = r4;
-    L13:
-        r1 = r1 + 1;
-        goto L3
+        int[] r2 = null;
+        int r3 = 0;
+        int r4 = 0;
+        java.lang.Throwable $ex3 = null;
+        int $pc3 = -1;
+        $sw3: while (true) {
+            switch ($pc3) {
+                case -1: {
+                    r0 = 1;
+                    r1 = 0;
+                    $pc3 = 3; continue $sw3;
+                }
+                case 3: {
+                    r2 = this.Hw;
+                    if (r1 >= r2.length) { $pc3 = 5; continue $sw3; }
+                    r3 = r2[r1];
+                    if (r3 == 0) { $pc3 = 13; continue $sw3; }
+                    r2[r1] = r0;
+                    $pc3 = 10; continue $sw3;
+                }
+                case 10: {
+                    r4 = r0 + 1;
+                    this.v5[r0] = r9.DW[r3];
+                    r3 = r9.FH[r3];
+                    if (r3 == 0) { $pc3 = 12; continue $sw3; }
+                    r0 = r4;
+                    { $pc3 = 10; continue $sw3; }
+                }
+                case 12: {
+                    r0 = r4;
+                    $pc3 = 13; continue $sw3;
+                }
+                case 13: {
+                    r1 = r1 + 1;
+                    { $pc3 = 3; continue $sw3; }
+                }
+                case 5: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public long DW() {
@@ -186,91 +268,156 @@ public class EH {
     }
 
     public boolean j6(java.io.OutputStream r19, byte[] r20, int r21) {
-        int r2 = r20.length;
-        abcd.DH r3 = j6(r19, r2, r21);
-        if (r2 < 16) goto L52;
-        if (this.Hw.length == 0) goto L52;
-        int r7 = j6(r20, 0);
-        int r6 = 16;
+        int r2 = 0;
+        abcd.DH r3 = null;
+        int r7 = 0;
+        int r6 = 0;
         int r8 = 0;
         int r9 = 0;
-    L8:
-        if (r6 >= r2) goto L45;
-        int r10 = this.Zo & r7;
-        int r11 = this.Hw[r10];
-        if (r11 == 0) goto L12;
-        int r12 = -1;
+        int r10 = 0;
+        int r11 = 0;
+        int r12 = 0;
         int r13 = 0;
-        int r14 = -1;
-    L14:
-        int r5 = r11 + 1;
-        long r16 = this.v5[r11];
-        if (j6(r16) != r7) goto L23;
-        if (r9 >= r8) goto L18;
-        int r4 = j6(r20, r8, this.FH, DW(r16), r8 - r9);
-    L19:
-        int r15 = j6(r20, r8, this.FH, DW(r16)) + r4;
-        if (r12 >= r15) goto L26;
-        r13 = r4;
-        r14 = DW(r16);
-        r12 = r15;
-    L26:
-        if (r12 >= 4096) goto L32;
-        if (r5 >= this.v5.length) goto L32;
-        r11 = r5;
-    L32:
-        if (r12 < 16) goto L33;
-        int r17 = r8 - r13;
-        if (r9 >= r17) goto L41;
-        if (r3.j6(r20, r9, r17 - r9) == true) goto L41;
-        return false;
-    L41:
-        if (r3.j6(r14 - r13, r12) == false) goto L42;
-        r9 = r17 + r12;
-        r6 = r9 + 16;
-        if (r2 <= r6) goto L45;
-        r7 = j6(r20, r9);
-        r8 = r9;
-        goto L8
-    L42:
-        return false;
-    L33:
-        r7 = j6(r7, r20[r8], r20[r6]);
-        r8 = r8 + 1;
-        r6 = r6 + 1;
-        goto L8
-    L18:
-        r4 = 0;
-        goto L19
-    L23:
-        if ((j6(r16) & this.Zo) == r10) goto L26;
-    L12:
-        r7 = j6(r7, r20[r8], r20[r6]);
-        r8 = r8 + 1;
-        r6 = r6 + 1;
-    L45:
-        if (r9 < r2) goto L47;
-        return true;
-    L47:
-        return r3.j6(r20, r9, r2 - r9);
-    L52:
-        return r3.j6(r20);
+        int r14 = 0;
+        int r5 = 0;
+        long r16 = 0L;
+        int r4 = 0;
+        int r15 = 0;
+        int r17 = 0;
+        java.lang.Throwable $ex4 = null;
+        int $pc4 = -1;
+        $sw4: while (true) {
+            switch ($pc4) {
+                case -1: {
+                    r2 = r20.length;
+                    r3 = j6(r19, r2, r21);
+                    if (r2 < 16) { $pc4 = 52; continue $sw4; }
+                    if (this.Hw.length == 0) { $pc4 = 52; continue $sw4; }
+                    r7 = j6(r20, 0);
+                    r6 = 16;
+                    r8 = 0;
+                    r9 = 0;
+                    $pc4 = 8; continue $sw4;
+                }
+                case 8: {
+                    if (r6 >= r2) { $pc4 = 45; continue $sw4; }
+                    r10 = this.Zo & r7;
+                    r11 = this.Hw[r10];
+                    if (r11 == 0) { $pc4 = 12; continue $sw4; }
+                    r12 = -1;
+                    r13 = 0;
+                    r14 = -1;
+                    $pc4 = 14; continue $sw4;
+                }
+                case 14: {
+                    r5 = r11 + 1;
+                    r16 = this.v5[r11];
+                    if (j6(r16) != r7) { $pc4 = 23; continue $sw4; }
+                    if (r9 >= r8) { $pc4 = 18; continue $sw4; }
+                    r4 = j6(r20, r8, this.FH, DW(r16), r8 - r9);
+                    $pc4 = 19; continue $sw4;
+                }
+                case 19: {
+                    r15 = j6(r20, r8, this.FH, DW(r16)) + r4;
+                    if (r12 >= r15) { $pc4 = 26; continue $sw4; }
+                    r13 = r4;
+                    r14 = DW(r16);
+                    r12 = r15;
+                    $pc4 = 26; continue $sw4;
+                }
+                case 26: {
+                    if (r12 >= 4096) { $pc4 = 32; continue $sw4; }
+                    if (r5 >= this.v5.length) { $pc4 = 32; continue $sw4; }
+                    r11 = r5;
+                    $pc4 = 32; continue $sw4;
+                }
+                case 32: {
+                    if (r12 < 16) { $pc4 = 33; continue $sw4; }
+                    r17 = r8 - r13;
+                    if (r9 >= r17) { $pc4 = 41; continue $sw4; }
+                    if (r3.j6(r20, r9, r17 - r9) == true) { $pc4 = 41; continue $sw4; }
+                    return false;
+                }
+                case 41: {
+                    if (r3.j6(r14 - r13, r12) == false) { $pc4 = 42; continue $sw4; }
+                    r9 = r17 + r12;
+                    r6 = r9 + 16;
+                    if (r2 <= r6) { $pc4 = 45; continue $sw4; }
+                    r7 = j6(r20, r9);
+                    r8 = r9;
+                    { $pc4 = 8; continue $sw4; }
+                }
+                case 42: {
+                    return false;
+                }
+                case 33: {
+                    r7 = j6(r7, r20[r8], r20[r6]);
+                    r8 = r8 + 1;
+                    r6 = r6 + 1;
+                    { $pc4 = 8; continue $sw4; }
+                }
+                case 18: {
+                    r4 = 0;
+                    { $pc4 = 19; continue $sw4; }
+                }
+                case 23: {
+                    if ((j6(r16) & this.Zo) == r10) { $pc4 = 26; continue $sw4; }
+                    $pc4 = 12; continue $sw4;
+                }
+                case 12: {
+                    r7 = j6(r7, r20[r8], r20[r6]);
+                    r8 = r8 + 1;
+                    r6 = r6 + 1;
+                    $pc4 = 45; continue $sw4;
+                }
+                case 45: {
+                    if (r9 < r2) { $pc4 = 47; continue $sw4; }
+                    return true;
+                }
+                case 47: {
+                    return r3.j6(r20, r9, r2 - r9);
+                }
+                case 52: {
+                    return r3.j6(r20);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public java.lang.String toString() {
         int r1 = 0;
-        java.lang.String[] r0 = {"bytes", "KiB", "MiB", "GiB"};
-        long r3 = j6();
-    L4:
-        if (1024 > r3) goto L13;
-        if (r1 >= (r0.length - 1)) goto L13;
-        int r8 = (int) (r3 % 1024);
-        r3 = r3 / 1024;
-        if (r8 == 0) goto L11;
-        r3 = r3 + 1;
-    L11:
-        r1 = r1 + 1;
-    L13:
-        return "DeltaIndex[" + r3 + " " + r0[r1] + "]";
+        java.lang.String[] r0 = null;
+        long r3 = 0L;
+        int r8 = 0;
+        java.lang.Throwable $ex5 = null;
+        int $pc5 = -1;
+        $sw5: while (true) {
+            switch ($pc5) {
+                case -1: {
+                    r1 = 0;
+                    r0 = new java.lang.String[]{"bytes", "KiB", "MiB", "GiB"};
+                    r3 = j6();
+                    $pc5 = 4; continue $sw5;
+                }
+                case 4: {
+                    if (1024 > r3) { $pc5 = 13; continue $sw5; }
+                    if (r1 >= (r0.length - 1)) { $pc5 = 13; continue $sw5; }
+                    r8 = (int) (r3 % 1024);
+                    r3 = r3 / 1024;
+                    if (r8 == 0) { $pc5 = 11; continue $sw5; }
+                    r3 = r3 + 1;
+                    $pc5 = 11; continue $sw5;
+                }
+                case 11: {
+                    r1 = r1 + 1;
+                    $pc5 = 13; continue $sw5;
+                }
+                case 13: {
+                    return "DeltaIndex[" + r3 + " " + r0[r1] + "]";
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

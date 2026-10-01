@@ -30,18 +30,40 @@ public class yE extends abcd.YD implements java.io.Serializable {
     }
 
     public static final boolean DW(java.lang.String r4) {
-        if (r4.length() == 40) goto L5;
-        return false;
-    L5:
         int r0 = 0;
-    L6:
-        if (r0 >= 40) goto L7;
-        abcd.IK.j6((byte) r4.charAt(r0));     // Catch: java.lang.ArrayIndexOutOfBoundsException -> L11
-        r0 = r0 + 1;
-    L11:
-        return false;
-    L7:
-        return true;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (r4.length() == 40) { $pc0 = 5; continue $sw0; }
+                    return false;
+                }
+                case 5: {
+                    r0 = 0;
+                    $pc0 = 6; continue $sw0;
+                }
+                case 6: {
+                    if (r0 >= 40) { $pc0 = 7; continue $sw0; }
+                    try {
+                        abcd.IK.j6((byte) r4.charAt(r0));
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.lang.ArrayIndexOutOfBoundsException) { $pc0 = 11; continue $sw0; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    r0 = r0 + 1;
+                    $pc0 = 11; continue $sw0;
+                }
+                case 11: {
+                    return false;
+                }
+                case 7: {
+                    return true;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static final abcd.yE Hw(byte[] r6, int r7) {
@@ -53,16 +75,36 @@ public class yE extends abcd.YD implements java.io.Serializable {
     }
 
     private static final abcd.yE Zo(byte[] r7, int r8) {
-        return new abcd.yE(abcd.IK.gn(r7, r8), abcd.IK.gn(r7, r8 + 8), abcd.IK.gn(r7, r8 + 16), abcd.IK.gn(r7, r8 + 24), abcd.IK.gn(r7, r8 + 32));
-    L5:
-        throw new abcd.aD(r7, r8, 40);
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    return new abcd.yE(abcd.IK.gn(r7, r8), abcd.IK.gn(r7, r8 + 8), abcd.IK.gn(r7, r8 + 16), abcd.IK.gn(r7, r8 + 24), abcd.IK.gn(r7, r8 + 32));
+                }
+                case 5: {
+                    throw new abcd.aD(r7, r8, 40);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static abcd.yE j6(java.lang.String r3) {
-        if (r3.length() != 40) goto L7;
-        return Zo(abcd.hE.DW(r3), 0);
-    L7:
-        throw new java.lang.IllegalArgumentException("Invalid id: " + r3);
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    if (r3.length() != 40) { $pc2 = 7; continue $sw2; }
+                    return Zo(abcd.hE.DW(r3), 0);
+                }
+                case 7: {
+                    throw new java.lang.IllegalArgumentException("Invalid id: " + r3);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static final abcd.yE j6(byte[] r1) {
@@ -70,74 +112,113 @@ public class yE extends abcd.YD implements java.io.Serializable {
     }
 
     public static final java.lang.String j6(abcd.yE r0) {
-        if (r0 == null) goto L5;
-        return r0.we();
-    L5:
-        return u7;
+        java.lang.Throwable $ex3 = null;
+        int $pc3 = -1;
+        $sw3: while (true) {
+            switch ($pc3) {
+                case -1: {
+                    if (r0 == null) { $pc3 = 5; continue $sw3; }
+                    return r0.we();
+                }
+                case 5: {
+                    return u7;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static boolean j6(byte[] r2, int r3, byte[] r4, int r5) {
-        if (r2[r3] == r4[r5]) goto L5;
-        return false;
-    L5:
-        if (r2[r3 + 1] == r4[r5 + 1]) goto L7;
-        return false;
-    L7:
-        if (r2[r3 + 2] == r4[r5 + 2]) goto L9;
-        return false;
-    L9:
-        if (r2[r3 + 3] == r4[r5 + 3]) goto L11;
-        return false;
-    L11:
-        if (r2[r3 + 4] == r4[r5 + 4]) goto L13;
-        return false;
-    L13:
-        if (r2[r3 + 5] == r4[r5 + 5]) goto L15;
-        return false;
-    L15:
-        if (r2[r3 + 6] == r4[r5 + 6]) goto L17;
-        return false;
-    L17:
-        if (r2[r3 + 7] == r4[r5 + 7]) goto L19;
-        return false;
-    L19:
-        if (r2[r3 + 8] == r4[r5 + 8]) goto L21;
-        return false;
-    L21:
-        if (r2[r3 + 9] == r4[r5 + 9]) goto L23;
-        return false;
-    L23:
-        if (r2[r3 + 10] == r4[r5 + 10]) goto L25;
-        return false;
-    L25:
-        if (r2[r3 + 11] == r4[r5 + 11]) goto L27;
-        return false;
-    L27:
-        if (r2[r3 + 12] == r4[r5 + 12]) goto L29;
-        return false;
-    L29:
-        if (r2[r3 + 13] == r4[r5 + 13]) goto L31;
-        return false;
-    L31:
-        if (r2[r3 + 14] == r4[r5 + 14]) goto L33;
-        return false;
-    L33:
-        if (r2[r3 + 15] == r4[r5 + 15]) goto L35;
-        return false;
-    L35:
-        if (r2[r3 + 16] == r4[r5 + 16]) goto L37;
-        return false;
-    L37:
-        if (r2[r3 + 17] == r4[r5 + 17]) goto L39;
-        return false;
-    L39:
-        if (r2[r3 + 18] == r4[r5 + 18]) goto L41;
-        return false;
-    L41:
-        if (r2[r3 + 19] != r4[r5 + 19]) goto L64;
-        return true;
-    L64:
-        return false;
+        java.lang.Throwable $ex4 = null;
+        int $pc4 = -1;
+        $sw4: while (true) {
+            switch ($pc4) {
+                case -1: {
+                    if (r2[r3] == r4[r5]) { $pc4 = 5; continue $sw4; }
+                    return false;
+                }
+                case 5: {
+                    if (r2[r3 + 1] == r4[r5 + 1]) { $pc4 = 7; continue $sw4; }
+                    return false;
+                }
+                case 7: {
+                    if (r2[r3 + 2] == r4[r5 + 2]) { $pc4 = 9; continue $sw4; }
+                    return false;
+                }
+                case 9: {
+                    if (r2[r3 + 3] == r4[r5 + 3]) { $pc4 = 11; continue $sw4; }
+                    return false;
+                }
+                case 11: {
+                    if (r2[r3 + 4] == r4[r5 + 4]) { $pc4 = 13; continue $sw4; }
+                    return false;
+                }
+                case 13: {
+                    if (r2[r3 + 5] == r4[r5 + 5]) { $pc4 = 15; continue $sw4; }
+                    return false;
+                }
+                case 15: {
+                    if (r2[r3 + 6] == r4[r5 + 6]) { $pc4 = 17; continue $sw4; }
+                    return false;
+                }
+                case 17: {
+                    if (r2[r3 + 7] == r4[r5 + 7]) { $pc4 = 19; continue $sw4; }
+                    return false;
+                }
+                case 19: {
+                    if (r2[r3 + 8] == r4[r5 + 8]) { $pc4 = 21; continue $sw4; }
+                    return false;
+                }
+                case 21: {
+                    if (r2[r3 + 9] == r4[r5 + 9]) { $pc4 = 23; continue $sw4; }
+                    return false;
+                }
+                case 23: {
+                    if (r2[r3 + 10] == r4[r5 + 10]) { $pc4 = 25; continue $sw4; }
+                    return false;
+                }
+                case 25: {
+                    if (r2[r3 + 11] == r4[r5 + 11]) { $pc4 = 27; continue $sw4; }
+                    return false;
+                }
+                case 27: {
+                    if (r2[r3 + 12] == r4[r5 + 12]) { $pc4 = 29; continue $sw4; }
+                    return false;
+                }
+                case 29: {
+                    if (r2[r3 + 13] == r4[r5 + 13]) { $pc4 = 31; continue $sw4; }
+                    return false;
+                }
+                case 31: {
+                    if (r2[r3 + 14] == r4[r5 + 14]) { $pc4 = 33; continue $sw4; }
+                    return false;
+                }
+                case 33: {
+                    if (r2[r3 + 15] == r4[r5 + 15]) { $pc4 = 35; continue $sw4; }
+                    return false;
+                }
+                case 35: {
+                    if (r2[r3 + 16] == r4[r5 + 16]) { $pc4 = 37; continue $sw4; }
+                    return false;
+                }
+                case 37: {
+                    if (r2[r3 + 17] == r4[r5 + 17]) { $pc4 = 39; continue $sw4; }
+                    return false;
+                }
+                case 39: {
+                    if (r2[r3 + 18] == r4[r5 + 18]) { $pc4 = 41; continue $sw4; }
+                    return false;
+                }
+                case 41: {
+                    if (r2[r3 + 19] != r4[r5 + 19]) { $pc4 = 64; continue $sw4; }
+                    return true;
+                }
+                case 64: {
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static final abcd.yE v5(byte[] r0, int r1) {

@@ -60,34 +60,72 @@ public final class _p {
     }
 
     private void j6(abcd.hr.a r6, abcd._p.a[] r7) {
-        int r0 = r7.length;
+        int r0 = 0;
         int r1 = 0;
         int r2 = 0;
-    L3:
-        if (r1 >= r0) goto L5;
-        abcd._p.a r3 = r7[r1];
-        int r4 = r3.DW();
-        r6.DW(r4 - r2);
-        r6.DW(r3.j6());
-        r1 = r1 + 1;
-        r2 = r4;
-        goto L3
+        abcd._p.a r3 = null;
+        int r4 = 0;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = r7.length;
+                    r1 = 0;
+                    r2 = 0;
+                    $pc0 = 3; continue $sw0;
+                }
+                case 3: {
+                    if (r1 >= r0) { $pc0 = 5; continue $sw0; }
+                    r3 = r7[r1];
+                    r4 = r3.DW();
+                    r6.DW(r4 - r2);
+                    r6.DW(r3.j6());
+                    r1 = r1 + 1;
+                    r2 = r4;
+                    { $pc0 = 3; continue $sw0; }
+                }
+                case 5: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     private void j6(abcd.hr.a r6, abcd._p.b[] r7) {
-        int r0 = r7.length;
+        int r0 = 0;
         int r1 = 0;
         int r2 = 0;
-    L3:
-        if (r1 >= r0) goto L5;
-        abcd._p.b r3 = r7[r1];
-        int r4 = r3.FH();
-        r6.DW(r4 - r2);
-        r6.DW(r3.j6());
-        r6.DW(r3.DW());
-        r1 = r1 + 1;
-        r2 = r4;
-        goto L3
+        abcd._p.b r3 = null;
+        int r4 = 0;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    r0 = r7.length;
+                    r1 = 0;
+                    r2 = 0;
+                    $pc1 = 3; continue $sw1;
+                }
+                case 3: {
+                    if (r1 >= r0) { $pc1 = 5; continue $sw1; }
+                    r3 = r7[r1];
+                    r4 = r3.FH();
+                    r6.DW(r4 - r2);
+                    r6.DW(r3.j6());
+                    r6.DW(r3.DW());
+                    r1 = r1 + 1;
+                    r2 = r4;
+                    { $pc1 = 3; continue $sw1; }
+                }
+                case 5: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public abcd._p.b[] DW() {

@@ -21,16 +21,30 @@ public class FF {
     }
 
     private <T extends abcd.GF> T DW(java.lang.Class<T> r3) {
-        T r0 = (T) this.Hw.get(r3);
-        if (r0 != null) goto L8;
-        T r1 = (T) abcd.DF.j6(this.FH, r3);
-        T r4 = (T) this.Hw.putIfAbsent(r3, r1);
-        if (r4 != null) goto L7;
-        return r1;
-    L7:
-        return r4;
-    L8:
-        return r0;
+        T r0 = null;
+        T r1 = null;
+        T r4 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = (T) this.Hw.get(r3);
+                    if (r0 != null) { $pc0 = 8; continue $sw0; }
+                    r1 = (T) abcd.DF.j6(this.FH, r3);
+                    r4 = (T) this.Hw.putIfAbsent(r3, r1);
+                    if (r4 != null) { $pc0 = 7; continue $sw0; }
+                    return r1;
+                }
+                case 7: {
+                    return r4;
+                }
+                case 8: {
+                    return r0;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static <T extends abcd.GF> T j6(java.lang.Class<T> r1) {

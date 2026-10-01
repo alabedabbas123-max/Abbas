@@ -29,10 +29,20 @@ public class UserActionWidget {
     }
 
     public java.lang.String getViewIdText() {
-        if (this.view != null) goto L7;
-        return null;
-    L7:
-        return com.appfour.backbone.api.runtime.b.j6().j6(this.view);
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (this.view != null) { $pc0 = 7; continue $sw0; }
+                    return null;
+                }
+                case 7: {
+                    return com.appfour.backbone.api.runtime.b.j6().j6(this.view);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public java.lang.String toString() {

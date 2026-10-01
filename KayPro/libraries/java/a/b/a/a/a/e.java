@@ -25,11 +25,27 @@ public class e extends a.b.a.a.a.h {
 
     public void a(a.b.c r9, a.b.j r10, a.b.a.d r11, a.b.a.a.q r12, a.b.a.a.a.a.a r13) {
         int r0 = 0;
-    L3:
-        int r7 = r0;
-        if (r7 >= this.f28a) goto L6;
-        r13.a(r9, r10, r11, r12, this, this.b[r7]);
-        r0 = r7 + 1;
-        goto L3
+        int r7 = 0;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = 0;
+                    $pc0 = 3; continue $sw0;
+                }
+                case 3: {
+                    r7 = r0;
+                    if (r7 >= this.f28a) { $pc0 = 6; continue $sw0; }
+                    r13.a(r9, r10, r11, r12, this, this.b[r7]);
+                    r0 = r7 + 1;
+                    { $pc0 = 3; continue $sw0; }
+                }
+                case 6: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

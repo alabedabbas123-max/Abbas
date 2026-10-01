@@ -33,47 +33,83 @@ public abstract class AbstracteE implements abcd.LE {
         }
 
         void j6(abcd.AbstracteE r5) {
-            if (this.v5 == false) goto L8;
-            int r0 = this.DW;
-            if (r0 != 0) goto L7;
-            r5.DW(this.j6, this.Zo);
-            goto L8
-        L7:
-            int r1 = this.Zo;
-            java.lang.String r3 = this.j6;
-            r5.j6(r3, r1, r0, (r1 * 100) / r0);
-        L8:
-            java.util.concurrent.Future<?> r6 = this.Hw;
-            if (r6 == null) goto L12;
-            r6.cancel(false);
-            return;
+            int r0 = 0;
+            int r1 = 0;
+            java.lang.String r3 = null;
+            java.util.concurrent.Future<?> r6 = null;
+            java.lang.Throwable $ex0 = null;
+            int $pc0 = -1;
+            $sw0: while (true) {
+                switch ($pc0) {
+                    case -1: {
+                        if (this.v5 == false) { $pc0 = 8; continue $sw0; }
+                        r0 = this.DW;
+                        if (r0 != 0) { $pc0 = 7; continue $sw0; }
+                        r5.DW(this.j6, this.Zo);
+                        { $pc0 = 8; continue $sw0; }
+                    }
+                    case 7: {
+                        r1 = this.Zo;
+                        r3 = this.j6;
+                        r5.j6(r3, r1, r0, (r1 * 100) / r0);
+                        $pc0 = 8; continue $sw0;
+                    }
+                    case 8: {
+                        r6 = this.Hw;
+                        if (r6 == null) { $pc0 = 12; continue $sw0; }
+                        r6.cancel(false);
+                        return;
+                    }
+                    case 12: {
+                        return;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         void j6(abcd.AbstracteE r5, int r6) {
-            this.Zo += r6;
-            int r7 = this.DW;
-            if (r7 == 0) goto L5;
-            int r1 = (this.Zo * 100) / r7;
-            if (this.FH == false) goto L11;
-            r5.DW(this.j6, this.Zo, this.DW, r1);
-            this.v5 = true;
-            j6();
-            this.VH = r1;
-            return;
-        L11:
-            if (r1 == this.VH) goto L17;
-            r5.DW(this.j6, this.Zo, this.DW, r1);
-            this.v5 = true;
-            this.VH = r1;
-            return;
-        L17:
-            return;
-        L5:
-            if (this.FH == false) goto L14;
-            r5.FH(this.j6, this.Zo);
-            this.v5 = true;
-            j6();
-            return;
+            int r7 = 0;
+            int r1 = 0;
+            java.lang.Throwable $ex1 = null;
+            int $pc1 = -1;
+            $sw1: while (true) {
+                switch ($pc1) {
+                    case -1: {
+                        this.Zo += r6;
+                        r7 = this.DW;
+                        if (r7 == 0) { $pc1 = 5; continue $sw1; }
+                        r1 = (this.Zo * 100) / r7;
+                        if (this.FH == false) { $pc1 = 11; continue $sw1; }
+                        r5.DW(this.j6, this.Zo, this.DW, r1);
+                        this.v5 = true;
+                        j6();
+                        this.VH = r1;
+                        return;
+                    }
+                    case 11: {
+                        if (r1 == this.VH) { $pc1 = 17; continue $sw1; }
+                        r5.DW(this.j6, this.Zo, this.DW, r1);
+                        this.v5 = true;
+                        this.VH = r1;
+                        return;
+                    }
+                    case 17: {
+                        return;
+                    }
+                    case 5: {
+                        if (this.FH == false) { $pc1 = 14; continue $sw1; }
+                        r5.FH(this.j6, this.Zo);
+                        this.v5 = true;
+                        j6();
+                        return;
+                    }
+                    case 14: {
+                        return;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         @Override
@@ -112,11 +148,24 @@ public abstract class AbstracteE implements abcd.LE {
 
     @Override
     public void j6() {
-        abcd.AbstracteE.a r0 = this.v5;
-        if (r0 == null) goto L6;
-        r0.j6(this);
-        this.v5 = null;
-        return;
+        abcd.AbstracteE.a r0 = null;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    r0 = this.v5;
+                    if (r0 == null) { $pc2 = 6; continue $sw2; }
+                    r0.j6(this);
+                    this.v5 = null;
+                    return;
+                }
+                case 6: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public void j6(long r1, java.util.concurrent.TimeUnit r3) {
@@ -126,12 +175,25 @@ public abstract class AbstracteE implements abcd.LE {
 
     @Override
     public void j6(java.lang.String r4, int r5) {
-        j6();
-        this.v5 = new abcd.AbstracteE.a(r4, r5);
-        long r6 = this.FH;
-        if (r6 == 0) goto L6;
-        this.v5.j6(r6, this.Hw);
-        return;
+        long r6 = 0L;
+        java.lang.Throwable $ex3 = null;
+        int $pc3 = -1;
+        $sw3: while (true) {
+            switch ($pc3) {
+                case -1: {
+                    j6();
+                    this.v5 = new abcd.AbstracteE.a(r4, r5);
+                    r6 = this.FH;
+                    if (r6 == 0) { $pc3 = 6; continue $sw3; }
+                    this.v5.j6(r6, this.Hw);
+                    return;
+                }
+                case 6: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     protected abstract void j6(java.lang.String r1, int r2, int r3, int r4);
@@ -142,9 +204,22 @@ public abstract class AbstracteE implements abcd.LE {
 
     @Override
     public void update(int r2) {
-        abcd.AbstracteE.a r0 = this.v5;
-        if (r0 == null) goto L6;
-        r0.j6(this, r2);
-        return;
+        abcd.AbstracteE.a r0 = null;
+        java.lang.Throwable $ex4 = null;
+        int $pc4 = -1;
+        $sw4: while (true) {
+            switch ($pc4) {
+                case -1: {
+                    r0 = this.v5;
+                    if (r0 == null) { $pc4 = 6; continue $sw4; }
+                    r0.j6(this, r2);
+                    return;
+                }
+                case 6: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

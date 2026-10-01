@@ -1,27 +1,16 @@
 package abcd;
 
 public interface TM {
-    public static final abcd.zL DW = null;
-    public static final abcd.zL FH = null;
-    public static final abcd.zL Hw = null;
-    public static final abcd.zL VH = null;
-    public static final abcd.zL Zo = null;
-    public static final abcd.zL gn = null;
-    public static final abcd.zL j6 = null;
-    public static final abcd.zL tp = null;
-    public static final abcd.zL u7 = null;
-    public static final abcd.zL v5 = null;
+    public static final abcd.zL DW = abcd.InterfacelN.sG;
+    public static final abcd.zL FH = abcd.InterfacelN.ef;
+    public static final abcd.zL Hw = abcd.InterfacelN.Sf;
+    public static final abcd.zL VH = abcd.InterfacelN.Ev;
+    public static final abcd.zL Zo = abcd.InterfacelN.g3;
+    public static final abcd.zL gn = abcd.InterfacelN.WB;
+    public static final abcd.zL j6 = abcd.InterfacelN.dx;
+    public static final abcd.zL tp = abcd.InterfacelN.jw;
+    public static final abcd.zL u7 = abcd.InterfacelN.mb;
+    public static final abcd.zL v5 = abcd.InterfacelN.vJ;
 
-    static {
-        j6 = abcd.InterfacelN.dx;
-        DW = abcd.InterfacelN.sG;
-        FH = abcd.InterfacelN.ef;
-        Hw = abcd.InterfacelN.Sf;
-        v5 = abcd.InterfacelN.vJ;
-        Zo = abcd.InterfacelN.g3;
-        VH = abcd.InterfacelN.Ev;
-        gn = abcd.InterfacelN.WB;
-        u7 = abcd.InterfacelN.mb;
-        tp = abcd.InterfacelN.jw;
-    }
+
 }

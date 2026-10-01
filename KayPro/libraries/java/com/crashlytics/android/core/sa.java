@@ -43,15 +43,33 @@ class sa implements com.crashlytics.android.core.Ka {
 
     @Override
     public void remove() {
-        java.io.File[] r0 = this.j6;
-        int r1 = r0.length;
+        java.io.File[] r0 = null;
+        int r1 = 0;
         int r2 = 0;
-    L3:
-        if (r2 >= r1) goto L5;
-        java.io.File r3 = r0[r2];
-        io.fabric.sdk.android.Fabric.getLogger().Hw("CrashlyticsCore", "Removing invalid report file at " + r3.getPath());
-        r3.delete();
-        r2 = r2 + 1;
-        goto L3
+        java.io.File r3 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = this.j6;
+                    r1 = r0.length;
+                    r2 = 0;
+                    $pc0 = 3; continue $sw0;
+                }
+                case 3: {
+                    if (r2 >= r1) { $pc0 = 5; continue $sw0; }
+                    r3 = r0[r2];
+                    io.fabric.sdk.android.Fabric.getLogger().Hw("CrashlyticsCore", "Removing invalid report file at " + r3.getPath());
+                    r3.delete();
+                    r2 = r2 + 1;
+                    { $pc0 = 3; continue $sw0; }
+                }
+                case 5: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

@@ -45,7 +45,7 @@ final class I {
         }
     }
 
-    static final enum b extends java.lang.Enum<com.crashlytics.android.answers.I.b> {
+    static final class b extends com.almlkaide.kaypro.internal.EnumBase {
         public static final com.crashlytics.android.answers.I.b DW = null;
         public static final com.crashlytics.android.answers.I.b FH = null;
         public static final com.crashlytics.android.answers.I.b Hw = null;
@@ -73,7 +73,7 @@ final class I {
         }
 
         public static com.crashlytics.android.answers.I.b valueOf(java.lang.String r1) {
-            return (com.crashlytics.android.answers.I.b) java.lang.Enum.valueOf(com.crashlytics.android.answers.I.b.class, r1);
+            return (com.crashlytics.android.answers.I.b) com.almlkaide.kaypro.internal.EnumBase.valueOf(com.crashlytics.android.answers.I.b.values(), r1);
         }
 
         public static com.crashlytics.android.answers.I.b[] values() {
@@ -123,9 +123,20 @@ final class I {
     }
 
     public java.lang.String toString() {
-        if (this.u7 != null) goto L6;
-        this.u7 = "[" + com.crashlytics.android.answers.I.class.getSimpleName() + ": timestamp=" + this.DW + ", type=" + this.FH + ", details=" + this.Hw + ", customType=" + this.v5 + ", customAttributes=" + this.Zo + ", predefinedType=" + this.VH + ", predefinedAttributes=" + this.gn + ", metadata=[" + this.j6 + "]]";
-    L6:
-        return this.u7;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (this.u7 != null) { $pc0 = 6; continue $sw0; }
+                    this.u7 = "[" + com.crashlytics.android.answers.I.class.getSimpleName() + ": timestamp=" + this.DW + ", type=" + this.FH + ", details=" + this.Hw + ", customType=" + this.v5 + ", customAttributes=" + this.Zo + ", predefinedType=" + this.VH + ", predefinedAttributes=" + this.gn + ", metadata=[" + this.j6 + "]]";
+                    $pc0 = 6; continue $sw0;
+                }
+                case 6: {
+                    return this.u7;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

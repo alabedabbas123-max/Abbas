@@ -19,11 +19,22 @@ class jH extends java.io.InputStream {
 
     @Override
     public int read() {
-        byte[] r1 = new byte[1];
-        if (read(r1, 0, 1) == 1) goto L7;
-        return -1;
-    L7:
-        return r1[0] & 255;
+        byte[] r1 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r1 = new byte[1];
+                    if (read(r1, 0, 1) == 1) { $pc0 = 7; continue $sw0; }
+                    return -1;
+                }
+                case 7: {
+                    return r1[0] & 255;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

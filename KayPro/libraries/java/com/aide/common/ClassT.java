@@ -42,46 +42,108 @@ public class ClassT extends com.aide.common.Abstractma {
     }
 
     public ClassT(java.lang.String r9, int r10, com.aide.common.ClassT.a r11) {
-    L7:
-        th = move-exception;
-        if (VH == false) goto L11;
-        abcd.wu.j6(th, 1222370413163975881L, null, r9, new java.lang.Integer(r10), r11);
-    L11:
-        throw th;
-    L3:
-        if (Zo == false) goto L5;
-        abcd.wu.j6(1222370413163975881L, null, r9, new java.lang.Integer(r10), r11);     // Catch: java.lang.Throwable -> L7
-    L5:
-        this.gn = com.aide.common.ColorPickerView.j6(r10);     // Catch: java.lang.Throwable -> L7
-        this.u7 = this.gn;     // Catch: java.lang.Throwable -> L7
-        this.tp = r10;     // Catch: java.lang.Throwable -> L7
-        this.EQ = r11;     // Catch: java.lang.Throwable -> L7
-        this.J0 = r9;     // Catch: java.lang.Throwable -> L7
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 3;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 7: {
+                    th = $ex0;
+                    if (VH == false) { $pc0 = 11; continue $sw0; }
+                    abcd.wu.j6(th, 1222370413163975881L, null, r9, new java.lang.Integer(r10), r11);
+                    $pc0 = 11; continue $sw0;
+                }
+                case 11: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 3: {
+                    if (Zo == false) { $pc0 = 5; continue $sw0; }
+                    try {
+                        abcd.wu.j6(1222370413163975881L, null, r9, new java.lang.Integer(r10), r11);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 7; continue $sw0;
+                    }
+                    $pc0 = 5; continue $sw0;
+                }
+                case 5: {
+                    try {
+                        this.gn = com.aide.common.ColorPickerView.j6(r10);
+                        this.u7 = this.gn;
+                        this.tp = r10;
+                        this.EQ = r11;
+                        this.J0 = r9;
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 7; continue $sw0;
+                    }
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public ClassT(java.lang.String r9, java.lang.String r10, com.aide.common.ClassT.a r11) {
-    L11:
-        th = move-exception;
-        if (VH == false) goto L15;
-        abcd.wu.j6(th, 1709014343747098864L, null, r9, r10, r11);
-    L15:
-        throw th;
-    L3:
-        if (Zo == false) goto L6;
-        abcd.wu.j6(1709014343747098864L, null, r9, r10, r11);     // Catch: java.lang.Throwable -> L11
-    L6:
-        if (r10 != null) goto L8;
-        this.gn = "#000000";     // Catch: java.lang.Throwable -> L11
-    L9:
-        this.u7 = this.gn;     // Catch: java.lang.Throwable -> L11
-        this.tp = com.aide.common.ColorPickerView.j6(this.u7);     // Catch: java.lang.Throwable -> L11
-        this.EQ = r11;     // Catch: java.lang.Throwable -> L11
-        this.we = true;     // Catch: java.lang.Throwable -> L11
-        this.J0 = r9;     // Catch: java.lang.Throwable -> L11
-        return;
-    L8:
-        this.gn = r10;     // Catch: java.lang.Throwable -> L11
-        goto L9
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = 3;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case 11: {
+                    th = $ex1;
+                    if (VH == false) { $pc1 = 15; continue $sw1; }
+                    abcd.wu.j6(th, 1709014343747098864L, null, r9, r10, r11);
+                    $pc1 = 15; continue $sw1;
+                }
+                case 15: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 3: {
+                    if (Zo == false) { $pc1 = 6; continue $sw1; }
+                    try {
+                        abcd.wu.j6(1709014343747098864L, null, r9, r10, r11);
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        $pc1 = 11; continue $sw1;
+                    }
+                    $pc1 = 6; continue $sw1;
+                }
+                case 6: {
+                    if (r10 != null) { $pc1 = 8; continue $sw1; }
+                    try {
+                        this.gn = "#000000";
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        $pc1 = 11; continue $sw1;
+                    }
+                    $pc1 = 9; continue $sw1;
+                }
+                case 9: {
+                    try {
+                        this.u7 = this.gn;
+                        this.tp = com.aide.common.ColorPickerView.j6(this.u7);
+                        this.EQ = r11;
+                        this.we = true;
+                        this.J0 = r9;
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        $pc1 = 11; continue $sw1;
+                    }
+                    return;
+                }
+                case 8: {
+                    try {
+                        this.gn = r10;
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        $pc1 = 11; continue $sw1;
+                    }
+                    { $pc1 = 9; continue $sw1; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     static boolean DW(com.aide.common.ClassT r0) {
@@ -127,32 +189,73 @@ public class ClassT extends com.aide.common.Abstractma {
     @Override
     @abcd.Interfacesu(method = -61553950938186860L)
     protected android.app.Dialog j6(android.app.Activity r7) {
-    L11:
-        th = move-exception;
-        if (VH == false) goto L15;
-        abcd.wu.j6(th, 324682982038763397L, this, r7);
-    L15:
-        throw th;
-    L4:
-        if (Zo == false) goto L6;
-        abcd.wu.j6(324682982038763397L, this, r7);     // Catch: java.lang.Throwable -> L11
-    L6:
-        android.view.View r2 = android.view.LayoutInflater.from(r7).inflate(com.aide.ui.Oa.colorpicker, null);     // Catch: java.lang.Throwable -> L11
-        com.aide.common.ColorPickerView r3 = (com.aide.common.ColorPickerView) r2.findViewById(com.aide.ui.Na.colorpickerColorPickerView);     // Catch: java.lang.Throwable -> L11
-        android.widget.EditText r4 = (android.widget.EditText) r2.findViewById(com.aide.ui.Na.colorpickerEditText);     // Catch: java.lang.Throwable -> L11
-        r3.setOnColorChangedListener(new com.aide.common.ClassO(this, r4));     // Catch: java.lang.Throwable -> L11
-        r3.setInitialColor(this.gn);     // Catch: java.lang.Throwable -> L11
-        r3.setCurrentColor(this.gn);     // Catch: java.lang.Throwable -> L11
-        r4.setText(this.gn);     // Catch: java.lang.Throwable -> L11
-        r4.addTextChangedListener(new com.aide.common.ClassP(this, r3));     // Catch: java.lang.Throwable -> L11
-        android.app.AlertDialog.Builder r5 = new android.app.AlertDialog.Builder(r7);     // Catch: java.lang.Throwable -> L11
-        r5.setView(r2).setCancelable(true).setPositiveButton(16909213, new com.aide.common.r(this)).setNegativeButton(17039360, new com.aide.common.DialogInterfaceOnClickListenerq(this));     // Catch: java.lang.Throwable -> L11
-        if (this.we == false) goto L9;
-        r5.setNeutralButton(com.almlkaide.kaypro.R.string.dialog_bt_none, new com.aide.common.DialogInterfaceOnClickListeners(this));     // Catch: java.lang.Throwable -> L11
-    L9:
-        r5.setTitle(this.J0);     // Catch: java.lang.Throwable -> L11
-        android.app.AlertDialog r6 = r5.create();     // Catch: java.lang.Throwable -> L11
-        r6.getWindow().setSoftInputMode(2);     // Catch: java.lang.Throwable -> L11
-        return r6;
+        android.view.View r2 = null;
+        com.aide.common.ColorPickerView r3 = null;
+        android.widget.EditText r4 = null;
+        android.app.AlertDialog.Builder r5 = null;
+        android.app.AlertDialog r6 = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = 4;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case 11: {
+                    th = $ex2;
+                    if (VH == false) { $pc2 = 15; continue $sw2; }
+                    abcd.wu.j6(th, 324682982038763397L, this, r7);
+                    $pc2 = 15; continue $sw2;
+                }
+                case 15: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (Zo == false) { $pc2 = 6; continue $sw2; }
+                    try {
+                        abcd.wu.j6(324682982038763397L, this, r7);
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        $pc2 = 11; continue $sw2;
+                    }
+                    $pc2 = 6; continue $sw2;
+                }
+                case 6: {
+                    try {
+                        r2 = android.view.LayoutInflater.from(r7).inflate(com.aide.ui.Oa.colorpicker, null);
+                        r3 = (com.aide.common.ColorPickerView) r2.findViewById(com.aide.ui.Na.colorpickerColorPickerView);
+                        r4 = (android.widget.EditText) r2.findViewById(com.aide.ui.Na.colorpickerEditText);
+                        r3.setOnColorChangedListener(new com.aide.common.ClassO(this, r4));
+                        r3.setInitialColor(this.gn);
+                        r3.setCurrentColor(this.gn);
+                        r4.setText(this.gn);
+                        r4.addTextChangedListener(new com.aide.common.ClassP(this, r3));
+                        r5 = new android.app.AlertDialog.Builder(r7);
+                        r5.setView(r2).setCancelable(true).setPositiveButton(16909213, new com.aide.common.r(this)).setNegativeButton(17039360, new com.aide.common.DialogInterfaceOnClickListenerq(this));
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        $pc2 = 11; continue $sw2;
+                    }
+                    if (this.we == false) { $pc2 = 9; continue $sw2; }
+                    try {
+                        r5.setNeutralButton(com.almlkaide.kaypro.R.string.dialog_bt_none, new com.aide.common.DialogInterfaceOnClickListeners(this));
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        $pc2 = 11; continue $sw2;
+                    }
+                    $pc2 = 9; continue $sw2;
+                }
+                case 9: {
+                    try {
+                        r5.setTitle(this.J0);
+                        r6 = r5.create();
+                        r6.getWindow().setSoftInputMode(2);
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        $pc2 = 11; continue $sw2;
+                    }
+                    return r6;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

@@ -23,24 +23,50 @@ class B implements android.app.ActionBar.OnNavigationListener {
     @Override
     @abcd.Interfacesu(method = 5524384594919569775L)
     public boolean onNavigationItemSelected(int r8, long r9) {
-    L10:
-        th = move-exception;
-        if (DW == false) goto L14;
-        abcd.wu.j6(th, -526981627819788264L, this, new java.lang.Integer(r8), new java.lang.Long(r9));
-    L14:
-        throw th;
-    L3:
-        if (j6 == false) goto L6;
-        abcd.wu.j6(-526981627819788264L, this, new java.lang.Integer(r8), new java.lang.Long(r9));     // Catch: java.lang.Throwable -> L10
-    L6:
-        if (r8 == com.aide.ui.activities.HelpViewActivity.j6(this.FH)) goto L17;
-        com.aide.ui.activities.HelpViewActivity.j6(this.FH, r8);     // Catch: java.lang.Throwable -> L10
-        com.aide.ui.activities.Enumo r0 = com.aide.ui.activities.Enumo.Mr()[r8];     // Catch: java.lang.Throwable -> L10
-        com.aide.ui.activities.HelpViewActivity.DW(this.FH).getSettings().setJavaScriptEnabled(r0.a8());     // Catch: java.lang.Throwable -> L10
-        com.aide.ui.activities.HelpViewActivity.DW(this.FH).loadUrl(r0.j3());     // Catch: java.lang.Throwable -> L10
-        com.aide.ui.activities.HelpViewActivity.DW(this.FH).clearHistory();     // Catch: java.lang.Throwable -> L10
-        return true;
-    L17:
-        return true;
+        com.aide.ui.activities.Enumo r0 = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 3;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 10: {
+                    th = $ex0;
+                    if (DW == false) { $pc0 = 14; continue $sw0; }
+                    abcd.wu.j6(th, -526981627819788264L, this, new java.lang.Integer(r8), new java.lang.Long(r9));
+                    $pc0 = 14; continue $sw0;
+                }
+                case 14: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 3: {
+                    if (j6 == false) { $pc0 = 6; continue $sw0; }
+                    try {
+                        abcd.wu.j6(-526981627819788264L, this, new java.lang.Integer(r8), new java.lang.Long(r9));
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 10; continue $sw0;
+                    }
+                    $pc0 = 6; continue $sw0;
+                }
+                case 6: {
+                    if (r8 == com.aide.ui.activities.HelpViewActivity.j6(this.FH)) { $pc0 = 17; continue $sw0; }
+                    try {
+                        com.aide.ui.activities.HelpViewActivity.j6(this.FH, r8);
+                        r0 = com.aide.ui.activities.Enumo.Mr()[r8];
+                        com.aide.ui.activities.HelpViewActivity.DW(this.FH).getSettings().setJavaScriptEnabled(r0.a8());
+                        com.aide.ui.activities.HelpViewActivity.DW(this.FH).loadUrl(r0.j3());
+                        com.aide.ui.activities.HelpViewActivity.DW(this.FH).clearHistory();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 10; continue $sw0;
+                    }
+                    return true;
+                }
+                case 17: {
+                    return true;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

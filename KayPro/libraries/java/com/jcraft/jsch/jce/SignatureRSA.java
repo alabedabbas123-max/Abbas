@@ -34,24 +34,46 @@ public class SignatureRSA implements com.jcraft.jsch.SignatureRSA {
 
     @Override
     public boolean j6(byte[] r8) {
-        if (r8[0] != 0) goto L10;
-        if (r8[1] != 0) goto L10;
-        if (r8[2] != 0) goto L10;
-        int r3 = (r8[0] << 24) & (-16777216);
-        int r2 = 4 + (((((r8[1] << 16) & 16711680) | r3) | ((r8[2] << 8) & 65280)) | (r8[3] & 255));
-        int r1 = r2 + 1;
-        int r4 = (r8[r2] << 24) & (-16777216);
-        int r5 = r1 + 1;
-        int r6 = ((r8[r1] << 16) & 16711680) | r4;
-        int r7 = r5 + 1;
-        int r9 = r6 | ((r8[r5] << 8) & 65280);
-        int r10 = r7 + 1;
-        int r11 = r9 | (r8[r7] & 255);
-        byte[] r12 = new byte[r11];
-        java.lang.System.arraycopy(r8, r10, r12, 0, r11);
-        r8 = r12;
-    L10:
-        return this.j6.verify(r8);
+        int r3 = 0;
+        int r2 = 0;
+        int r1 = 0;
+        int r4 = 0;
+        int r5 = 0;
+        int r6 = 0;
+        int r7 = 0;
+        int r9 = 0;
+        int r10 = 0;
+        int r11 = 0;
+        byte[] r12 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (r8[0] != 0) { $pc0 = 10; continue $sw0; }
+                    if (r8[1] != 0) { $pc0 = 10; continue $sw0; }
+                    if (r8[2] != 0) { $pc0 = 10; continue $sw0; }
+                    r3 = (r8[0] << 24) & (-16777216);
+                    r2 = 4 + (((((r8[1] << 16) & 16711680) | r3) | ((r8[2] << 8) & 65280)) | (r8[3] & 255));
+                    r1 = r2 + 1;
+                    r4 = (r8[r2] << 24) & (-16777216);
+                    r5 = r1 + 1;
+                    r6 = ((r8[r1] << 16) & 16711680) | r4;
+                    r7 = r5 + 1;
+                    r9 = r6 | ((r8[r5] << 8) & 65280);
+                    r10 = r7 + 1;
+                    r11 = r9 | (r8[r7] & 255);
+                    r12 = new byte[r11];
+                    java.lang.System.arraycopy(r8, r10, r12, 0, r11);
+                    r8 = r12;
+                    $pc0 = 10; continue $sw0;
+                }
+                case 10: {
+                    return this.j6.verify(r8);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

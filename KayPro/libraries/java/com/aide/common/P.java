@@ -23,19 +23,51 @@ class P implements android.content.DialogInterface.OnClickListener {
     @Override
     @abcd.Interfacesu(method = -79892099794367061L)
     public void onClick(android.content.DialogInterface r8, int r9) {
-    L9:
-        th = move-exception;
-        if (DW == false) goto L13;
-        abcd.wu.j6(th, -92113997589922737L, this, r8, new java.lang.Integer(r9));
-    L13:
-        throw th;
-    L3:
-        if (j6 == false) goto L5;
-        abcd.wu.j6(-92113997589922737L, this, r8, new java.lang.Integer(r9));     // Catch: java.lang.Throwable -> L9
-    L5:
-        r8.dismiss();     // Catch: java.lang.Throwable -> L9
-        if (this.FH.tp == null) goto L16;
-        this.FH.tp.run();     // Catch: java.lang.Throwable -> L9
-        return;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 3;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 9: {
+                    th = $ex0;
+                    if (DW == false) { $pc0 = 13; continue $sw0; }
+                    abcd.wu.j6(th, -92113997589922737L, this, r8, new java.lang.Integer(r9));
+                    $pc0 = 13; continue $sw0;
+                }
+                case 13: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 3: {
+                    if (j6 == false) { $pc0 = 5; continue $sw0; }
+                    try {
+                        abcd.wu.j6(-92113997589922737L, this, r8, new java.lang.Integer(r9));
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 9; continue $sw0;
+                    }
+                    $pc0 = 5; continue $sw0;
+                }
+                case 5: {
+                    try {
+                        r8.dismiss();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 9; continue $sw0;
+                    }
+                    if (this.FH.tp == null) { $pc0 = 16; continue $sw0; }
+                    try {
+                        this.FH.tp.run();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 9; continue $sw0;
+                    }
+                    return;
+                }
+                case 16: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

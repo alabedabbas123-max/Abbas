@@ -10,9 +10,19 @@ public class Api {
     }
 
     public static <T> T catch_(com.appfour.backbone.api.objects.CatchExceptions<T> r0) {
-        return r0.getValue();
-    L4:
-        return null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    return r0.getValue();
+                }
+                case 4: {
+                    return null;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static com.appfour.backbone.api.define.DefineOccurrences defineEvent(java.lang.String r1) {
@@ -80,10 +90,20 @@ public class Api {
     }
 
     public static boolean hasBeenUpdated() {
-        if (getInstallTime() == getLastUpdateTime()) goto L5;
-        return true;
-    L5:
-        return false;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if (getInstallTime() == getLastUpdateTime()) { $pc1 = 5; continue $sw1; }
+                    return true;
+                }
+                case 5: {
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static java.lang.String identifier(java.lang.Object r1) {
@@ -91,10 +111,20 @@ public class Api {
     }
 
     public static <T> T if_(boolean r0, T r1) {
-        if (r0 == true) goto L6;
-        return null;
-    L6:
-        return r1;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    if (r0 == true) { $pc2 = 6; continue $sw2; }
+                    return null;
+                }
+                case 6: {
+                    return r1;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static boolean isMainProcess() {

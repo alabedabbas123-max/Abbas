@@ -10,36 +10,137 @@ public class CallableeB implements java.util.concurrent.Callable<abcd.cB> {
     /* JADX WARN: Can't rename method to resolve collision */
     @Override
     public abcd.cB call() {
-        abcd.VE r0 = new abcd.VE();     // Catch: java.io.IOException -> L26
-        if (this.DW == false) goto L5;
-        r0.QX();     // Catch: java.io.IOException -> L26
-    L5:
-        r0.we();     // Catch: java.io.IOException -> L26
-        if (this.j6 == null) goto L13;
-        java.io.File r1 = this.j6;     // Catch: java.io.IOException -> L26
-        if (this.DW == true) goto L11;
-        r1 = new java.io.File(r1, ".git");     // Catch: java.io.IOException -> L26
-    L11:
-        r0.FH(r1);     // Catch: java.io.IOException -> L26
-    L21:
-        abcd.UE r2 = r0.j6();     // Catch: java.io.IOException -> L26
-        if (r2.EQ().DW() == true) goto L24;
-        r2.j6(this.DW);     // Catch: java.io.IOException -> L26
-    L24:
-        return new abcd.cB(r2);
-    L13:
-        if (r0.v5() != null) goto L21;
-        java.io.File r3 = new java.io.File(".");     // Catch: java.io.IOException -> L26
-        if (r3.getParentFile() == null) goto L18;
-        r3 = r3.getParentFile();     // Catch: java.io.IOException -> L26
-    L18:
-        if (this.DW == true) goto L20;
-        r3 = new java.io.File(r3, ".git");     // Catch: java.io.IOException -> L26
-    L20:
-        r0.FH(r3);     // Catch: java.io.IOException -> L26
-    L26:
-        e = move-exception;
-        throw new abcd.SB(e.getMessage(), e);
+        abcd.VE r0 = null;
+        java.io.File r1 = null;
+        abcd.UE r2 = null;
+        java.io.File r3 = null;
+        java.lang.Throwable e = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    try {
+                        r0 = new abcd.VE();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.io.IOException) { $pc0 = 26; continue $sw0; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    if (this.DW == false) { $pc0 = 5; continue $sw0; }
+                    try {
+                        r0.QX();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.io.IOException) { $pc0 = 26; continue $sw0; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    $pc0 = 5; continue $sw0;
+                }
+                case 5: {
+                    try {
+                        r0.we();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.io.IOException) { $pc0 = 26; continue $sw0; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    if (this.j6 == null) { $pc0 = 13; continue $sw0; }
+                    try {
+                        r1 = this.j6;
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.io.IOException) { $pc0 = 26; continue $sw0; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    if (this.DW == true) { $pc0 = 11; continue $sw0; }
+                    try {
+                        r1 = new java.io.File(r1, ".git");
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.io.IOException) { $pc0 = 26; continue $sw0; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    $pc0 = 11; continue $sw0;
+                }
+                case 11: {
+                    try {
+                        r0.FH(r1);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.io.IOException) { $pc0 = 26; continue $sw0; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    $pc0 = 21; continue $sw0;
+                }
+                case 21: {
+                    try {
+                        r2 = r0.j6();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.io.IOException) { $pc0 = 26; continue $sw0; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    if (r2.EQ().DW() == true) { $pc0 = 24; continue $sw0; }
+                    try {
+                        r2.j6(this.DW);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.io.IOException) { $pc0 = 26; continue $sw0; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    $pc0 = 24; continue $sw0;
+                }
+                case 24: {
+                    return new abcd.cB(r2);
+                }
+                case 13: {
+                    if (r0.v5() != null) { $pc0 = 21; continue $sw0; }
+                    try {
+                        r3 = new java.io.File(".");
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.io.IOException) { $pc0 = 26; continue $sw0; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    if (r3.getParentFile() == null) { $pc0 = 18; continue $sw0; }
+                    try {
+                        r3 = r3.getParentFile();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.io.IOException) { $pc0 = 26; continue $sw0; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    $pc0 = 18; continue $sw0;
+                }
+                case 18: {
+                    if (this.DW == true) { $pc0 = 20; continue $sw0; }
+                    try {
+                        r3 = new java.io.File(r3, ".git");
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.io.IOException) { $pc0 = 26; continue $sw0; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    $pc0 = 20; continue $sw0;
+                }
+                case 20: {
+                    try {
+                        r0.FH(r3);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.io.IOException) { $pc0 = 26; continue $sw0; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    $pc0 = 26; continue $sw0;
+                }
+                case 26: {
+                    e = $ex0;
+                    throw new abcd.SB(e.getMessage(), e);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

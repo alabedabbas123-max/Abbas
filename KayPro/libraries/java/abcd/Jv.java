@@ -23,7 +23,7 @@ public class Jv {
         }
     }
 
-    private static final enum b extends java.lang.Enum<abcd.Jv.b> {
+    private static final class b extends com.almlkaide.kaypro.internal.EnumBase {
         public static final abcd.Jv.b DW = null;
         public static final abcd.Jv.b FH = null;
         public static final abcd.Jv.b Hw = null;
@@ -53,12 +53,23 @@ public class Jv {
         }
 
         private static abcd.Jv.b DW(int r2) {
-            abcd.Jv.b[] r0 = values();
-            if (r2 < 0) goto L10;
-            if (r2 >= r0.length) goto L10;
-            return r0[r2];
-        L10:
-            return VH;
+            abcd.Jv.b[] r0 = null;
+            java.lang.Throwable $ex0 = null;
+            int $pc0 = -1;
+            $sw0: while (true) {
+                switch ($pc0) {
+                    case -1: {
+                        r0 = values();
+                        if (r2 < 0) { $pc0 = 10; continue $sw0; }
+                        if (r2 >= r0.length) { $pc0 = 10; continue $sw0; }
+                        return r0[r2];
+                    }
+                    case 10: {
+                        return VH;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         static abcd.Jv.b j6(int r0) {
@@ -66,7 +77,7 @@ public class Jv {
         }
 
         public static abcd.Jv.b valueOf(java.lang.String r1) {
-            return (abcd.Jv.b) java.lang.Enum.valueOf(abcd.Jv.b.class, r1);
+            return (abcd.Jv.b) com.almlkaide.kaypro.internal.EnumBase.valueOf(abcd.Jv.b.values(), r1);
         }
 
         public static abcd.Jv.b[] values() {
@@ -99,60 +110,153 @@ public class Jv {
     }
 
     private static abcd.Jv.a DW(java.lang.String r10) {
-        if (r10 != null) goto L8;
-        return null;
-    L8:
-        org.json.JSONObject r1 = new org.json.JSONObject(r10);     // Catch: org.json.JSONException -> L7
-        r1.getInt("purchaseState");     // Catch: org.json.JSONException -> L7
-        java.lang.String r5 = r1.getString("productId");     // Catch: org.json.JSONException -> L7
-        java.lang.String r4 = r1.getString("packageName");     // Catch: org.json.JSONException -> L7
-        long r6 = r1.getLong("purchaseTime");     // Catch: org.json.JSONException -> L7
-        java.lang.String r3 = r1.optString("orderId");     // Catch: org.json.JSONException -> L7
-        java.lang.String r9 = r1.getString("purchaseToken");     // Catch: org.json.JSONException -> L7
-        return new abcd.Jv.a(r3, r4, r5, r6, r1.optString("developerPayload", null), r9);
-    L7:
-        return null;
+        org.json.JSONObject r1 = null;
+        java.lang.String r5 = null;
+        java.lang.String r4 = null;
+        long r6 = 0L;
+        java.lang.String r3 = null;
+        java.lang.String r9 = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if (r10 != null) { $pc1 = 8; continue $sw1; }
+                    return null;
+                }
+                case 8: {
+                    try {
+                        r1 = new org.json.JSONObject(r10);
+                        r1.getInt("purchaseState");
+                        r5 = r1.getString("productId");
+                        r4 = r1.getString("packageName");
+                        r6 = r1.getLong("purchaseTime");
+                        r3 = r1.optString("orderId");
+                        r9 = r1.getString("purchaseToken");
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        if ($t instanceof org.json.JSONException) { $pc1 = 7; continue $sw1; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    return new abcd.Jv.a(r3, r4, r5, r6, r1.optString("developerPayload", null), r9);
+                }
+                case 7: {
+                    return null;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     private static com.appfour.backbone.api.objects.InAppProduct j6(java.lang.String r10) {
-        abcd.Jv.c r0 = j6.get(r10);
-        if (r0 == null) goto L7;
-        return new com.appfour.backbone.api.objects.InAppProduct(new com.appfour.backbone.api.objects.Market("com.android.vending"), r10, "subs".equals(r0.j6), r0.Zo, r0.VH);
-    L7:
-        return new com.appfour.backbone.api.objects.InAppProduct(new com.appfour.backbone.api.objects.Market("com.android.vending"), r10);
+        abcd.Jv.c r0 = null;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    r0 = j6.get(r10);
+                    if (r0 == null) { $pc2 = 7; continue $sw2; }
+                    return new com.appfour.backbone.api.objects.InAppProduct(new com.appfour.backbone.api.objects.Market("com.android.vending"), r10, "subs".equals(r0.j6), r0.Zo, r0.VH);
+                }
+                case 7: {
+                    return new com.appfour.backbone.api.objects.InAppProduct(new com.appfour.backbone.api.objects.Market("com.android.vending"), r10);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     private static void j6(android.app.Activity r0, android.content.IntentSender r1, int r2) {
-        if (r1 != null) goto L4;
-        return;
-    L4:
-        if (r1.equals(DW) == false) goto L8;
-        abcd.kv.j6(r0, j6(FH));
-        return;
+        java.lang.Throwable $ex3 = null;
+        int $pc3 = -1;
+        $sw3: while (true) {
+            switch ($pc3) {
+                case -1: {
+                    if (r1 != null) { $pc3 = 4; continue $sw3; }
+                    return;
+                }
+                case 4: {
+                    if (r1.equals(DW) == false) { $pc3 = 8; continue $sw3; }
+                    abcd.kv.j6(r0, j6(FH));
+                    return;
+                }
+                case 8: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     private static void j6(android.os.Bundle r12) {
-        if (abcd.Jv.b.j6(r12.getInt("RESPONSE_CODE")) != abcd.Jv.b.j6) goto L11;
-        java.util.ArrayList<java.lang.String> r13 = r12.getStringArrayList("DETAILS_LIST");     // Catch: org.json.JSONException -> L12
-        if (r13 == null) goto L17;
-        java.util.Iterator<java.lang.String> r14 = r13.iterator();     // Catch: org.json.JSONException -> L12
-    L8:
-        if (r14.hasNext() == false) goto L19;
-        org.json.JSONObject r1 = new org.json.JSONObject(r14.next());     // Catch: org.json.JSONException -> L12
-        java.lang.String r3 = r1.getString("type");     // Catch: org.json.JSONException -> L12
-        java.lang.String r0 = r1.getString("productId");     // Catch: org.json.JSONException -> L12
-        java.lang.String r5 = r1.getString("title");     // Catch: org.json.JSONException -> L12
-        java.lang.String r6 = r1.getString("description");     // Catch: org.json.JSONException -> L12
-        java.lang.String r7 = r1.getString("price");     // Catch: org.json.JSONException -> L12
-        long r8 = r1.getLong("price_amount_micros");     // Catch: org.json.JSONException -> L12
-        java.lang.String r10 = r1.getString("price_currency_code");     // Catch: org.json.JSONException -> L12
-        j6.put(r0, new abcd.Jv.c(r3, r0, r5, r6, r7, r8, r10));     // Catch: org.json.JSONException -> L12
-    L19:
-        return;
-    L17:
-        return;
-    L11:
-        return;
+        java.util.ArrayList<java.lang.String> r13 = null;
+        java.util.Iterator<java.lang.String> r14 = null;
+        org.json.JSONObject r1 = null;
+        java.lang.String r3 = null;
+        java.lang.String r0 = null;
+        java.lang.String r5 = null;
+        java.lang.String r6 = null;
+        java.lang.String r7 = null;
+        long r8 = 0L;
+        java.lang.String r10 = null;
+        java.lang.Throwable $ex4 = null;
+        int $pc4 = -1;
+        $sw4: while (true) {
+            switch ($pc4) {
+                case -1: {
+                    if (abcd.Jv.b.j6(r12.getInt("RESPONSE_CODE")) != abcd.Jv.b.j6) { $pc4 = 11; continue $sw4; }
+                    try {
+                        r13 = r12.getStringArrayList("DETAILS_LIST");
+                    } catch (java.lang.Throwable $t) {
+                        $ex4 = $t;
+                        if ($t instanceof org.json.JSONException) { $pc4 = 12; continue $sw4; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    if (r13 == null) { $pc4 = 17; continue $sw4; }
+                    try {
+                        r14 = r13.iterator();
+                    } catch (java.lang.Throwable $t) {
+                        $ex4 = $t;
+                        if ($t instanceof org.json.JSONException) { $pc4 = 12; continue $sw4; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    $pc4 = 8; continue $sw4;
+                }
+                case 8: {
+                    if (r14.hasNext() == false) { $pc4 = 19; continue $sw4; }
+                    try {
+                        r1 = new org.json.JSONObject(r14.next());
+                        r3 = r1.getString("type");
+                        r0 = r1.getString("productId");
+                        r5 = r1.getString("title");
+                        r6 = r1.getString("description");
+                        r7 = r1.getString("price");
+                        r8 = r1.getLong("price_amount_micros");
+                        r10 = r1.getString("price_currency_code");
+                        j6.put(r0, new abcd.Jv.c(r3, r0, r5, r6, r7, r8, r10));
+                    } catch (java.lang.Throwable $t) {
+                        $ex4 = $t;
+                        if ($t instanceof org.json.JSONException) { $pc4 = 12; continue $sw4; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    $pc4 = 19; continue $sw4;
+                }
+                case 19: {
+                    return;
+                }
+                case 17: {
+                    return;
+                }
+                case 11: {
+                    return;
+                }
+                case 12: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static void j6(android.os.Bundle r0, java.lang.Object r1, int r2, java.lang.String r3, java.lang.String r4, android.os.Bundle r5) {
@@ -160,60 +264,125 @@ public class Jv {
     }
 
     public static void j6(android.os.Bundle r0, java.lang.Object r1, int r2, java.lang.String r3, java.lang.String r4, java.lang.String r5, java.lang.String r6) {
-        if (abcd.Jv.b.j6(r0.getInt("RESPONSE_CODE")) != abcd.Jv.b.j6) goto L6;
-        DW = ((android.app.PendingIntent) r0.getParcelable("BUY_INTENT")).getIntentSender();
-        FH = r4;
-        return;
+        java.lang.Throwable $ex5 = null;
+        int $pc5 = -1;
+        $sw5: while (true) {
+            switch ($pc5) {
+                case -1: {
+                    if (abcd.Jv.b.j6(r0.getInt("RESPONSE_CODE")) != abcd.Jv.b.j6) { $pc5 = 6; continue $sw5; }
+                    DW = ((android.app.PendingIntent) r0.getParcelable("BUY_INTENT")).getIntentSender();
+                    FH = r4;
+                    return;
+                }
+                case 6: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static void j6(java.lang.Object r3, int r4, int r5, android.content.Intent r6) {
-        if ((r3 instanceof android.app.Activity) == false) goto L19;
-        if (r6 != null) goto L6;
-        return;
-    L6:
-        if (r6.hasExtra("RESPONSE_CODE") == true) goto L8;
-        return;
-    L8:
-        if (r6.hasExtra("INAPP_PURCHASE_DATA") == true) goto L10;
-        return;
-    L10:
-        if (r6.hasExtra("INAPP_DATA_SIGNATURE") == false) goto L23;
-        abcd.Jv.b r7 = abcd.Jv.b.j6(r6.getIntExtra("RESPONSE_CODE", 0));
-        abcd.yw.j6("PlayInAppBilling", "onActivityResult " + r7);
-        if (r7 != abcd.Jv.b.j6) goto L24;
-        java.lang.String r8 = r6.getStringExtra("INAPP_PURCHASE_DATA");
-        r6.getStringExtra("INAPP_DATA_SIGNATURE");
-        if (j6() == true) goto L25;
-        abcd.Jv.a r9 = DW(r8);
-        if (r9 == null) goto L26;
-        abcd.kv.DW((android.app.Activity) r3, j6(r9.FH));
-        return;
-    L26:
-        return;
-    L25:
-        return;
-    L24:
-        return;
-    L23:
-        return;
+        abcd.Jv.b r7 = null;
+        java.lang.String r8 = null;
+        abcd.Jv.a r9 = null;
+        java.lang.Throwable $ex6 = null;
+        int $pc6 = -1;
+        $sw6: while (true) {
+            switch ($pc6) {
+                case -1: {
+                    if ((r3 instanceof android.app.Activity) == false) { $pc6 = 19; continue $sw6; }
+                    if (r6 != null) { $pc6 = 6; continue $sw6; }
+                    return;
+                }
+                case 6: {
+                    if (r6.hasExtra("RESPONSE_CODE") == true) { $pc6 = 8; continue $sw6; }
+                    return;
+                }
+                case 8: {
+                    if (r6.hasExtra("INAPP_PURCHASE_DATA") == true) { $pc6 = 10; continue $sw6; }
+                    return;
+                }
+                case 10: {
+                    if (r6.hasExtra("INAPP_DATA_SIGNATURE") == false) { $pc6 = 23; continue $sw6; }
+                    r7 = abcd.Jv.b.j6(r6.getIntExtra("RESPONSE_CODE", 0));
+                    abcd.yw.j6("PlayInAppBilling", "onActivityResult " + r7);
+                    if (r7 != abcd.Jv.b.j6) { $pc6 = 24; continue $sw6; }
+                    r8 = r6.getStringExtra("INAPP_PURCHASE_DATA");
+                    r6.getStringExtra("INAPP_DATA_SIGNATURE");
+                    if (j6() == true) { $pc6 = 25; continue $sw6; }
+                    r9 = DW(r8);
+                    if (r9 == null) { $pc6 = 26; continue $sw6; }
+                    abcd.kv.DW((android.app.Activity) r3, j6(r9.FH));
+                    return;
+                }
+                case 26: {
+                    return;
+                }
+                case 25: {
+                    return;
+                }
+                case 24: {
+                    return;
+                }
+                case 23: {
+                    return;
+                }
+                case 19: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static void j6(java.lang.Object r0, android.content.IntentSender r1, int r2, android.content.Intent r3, int r4, int r5, int r6) {
-        if ((r0 instanceof android.app.Activity) == false) goto L6;
-        j6((android.app.Activity) r0, r1, r2);
-        return;
+        java.lang.Throwable $ex7 = null;
+        int $pc7 = -1;
+        $sw7: while (true) {
+            switch ($pc7) {
+                case -1: {
+                    if ((r0 instanceof android.app.Activity) == false) { $pc7 = 6; continue $sw7; }
+                    j6((android.app.Activity) r0, r1, r2);
+                    return;
+                }
+                case 6: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     private static boolean j6() {
-        java.io.ByteArrayInputStream r3 = new java.io.ByteArrayInputStream(abcd.wu.j6().getPackageManager().getPackageInfo(abcd.wu.j6().getPackageName(), 64).signatures[0].toByteArray());     // Catch: java.lang.Throwable -> L5
-        java.security.PublicKey r2 = ((java.security.cert.X509Certificate) java.security.cert.CertificateFactory.getInstance("X509").generateCertificate(r3)).getPublicKey();     // Catch: java.lang.Throwable -> L5
-        java.security.Signature r4 = java.security.Signature.getInstance("SHA1withRSA");     // Catch: java.lang.Throwable -> L5
-        r4.initVerify(r2);     // Catch: java.lang.Throwable -> L5
-        r4.update("xxx".getBytes());     // Catch: java.lang.Throwable -> L5
-        return r4.verify(android.util.Base64.decode("xxx", 0));
-    L5:
-        th = move-exception;
-        abcd.yw.j6("Verify check error", th);
-        return false;
+        java.io.ByteArrayInputStream r3 = null;
+        java.security.PublicKey r2 = null;
+        java.security.Signature r4 = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex8 = null;
+        int $pc8 = -1;
+        $sw8: while (true) {
+            switch ($pc8) {
+                case -1: {
+                    try {
+                        r3 = new java.io.ByteArrayInputStream(abcd.wu.j6().getPackageManager().getPackageInfo(abcd.wu.j6().getPackageName(), 64).signatures[0].toByteArray());
+                        r2 = ((java.security.cert.X509Certificate) java.security.cert.CertificateFactory.getInstance("X509").generateCertificate(r3)).getPublicKey();
+                        r4 = java.security.Signature.getInstance("SHA1withRSA");
+                        r4.initVerify(r2);
+                        r4.update("xxx".getBytes());
+                    } catch (java.lang.Throwable $t) {
+                        $ex8 = $t;
+                        $pc8 = 5; continue $sw8;
+                    }
+                    return r4.verify(android.util.Base64.decode("xxx", 0));
+                }
+                case 5: {
+                    th = $ex8;
+                    abcd.yw.j6("Verify check error", th);
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

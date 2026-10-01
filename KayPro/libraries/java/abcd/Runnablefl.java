@@ -25,19 +25,46 @@ class Runnablefl implements java.lang.Runnable {
     @Override
     @abcd.Interfacesu(method = -1541392253138727820L)
     public void run() {
-    L8:
-        th = move-exception;
-        if (DW == false) goto L12;
-        abcd.wu.j6(th, 1084821237590194671L, this);
-    L12:
-        throw th;
-    L4:
-        if (j6 == false) goto L6;
-        abcd.wu.j6(1084821237590194671L, this);     // Catch: java.lang.Throwable -> L8
-    L6:
-        java.util.Map r7 = this.FH;     // Catch: java.lang.Throwable -> L8
-        java.util.ArrayList r5 = new java.util.ArrayList(r7.keySet());     // Catch: java.lang.Throwable -> L8
-        java.util.Collections.sort(r5, java.lang.String.CASE_INSENSITIVE_ORDER);     // Catch: java.lang.Throwable -> L8
-        abcd.Binderml.j6(this.v5, this.Hw, r5, 0, r7, new java.util.Hashtable());     // Catch: java.lang.Throwable -> L8
+        java.util.Map r7 = null;
+        java.util.ArrayList r5 = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 4;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 8: {
+                    th = $ex0;
+                    if (DW == false) { $pc0 = 12; continue $sw0; }
+                    abcd.wu.j6(th, 1084821237590194671L, this);
+                    $pc0 = 12; continue $sw0;
+                }
+                case 12: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (j6 == false) { $pc0 = 6; continue $sw0; }
+                    try {
+                        abcd.wu.j6(1084821237590194671L, this);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 8; continue $sw0;
+                    }
+                    $pc0 = 6; continue $sw0;
+                }
+                case 6: {
+                    try {
+                        r7 = this.FH;
+                        r5 = new java.util.ArrayList(r7.keySet());
+                        java.util.Collections.sort(r5, java.lang.String.CASE_INSENSITIVE_ORDER);
+                        abcd.Binderml.j6(this.v5, this.Hw, r5, 0, r7, new java.util.Hashtable());
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 8; continue $sw0;
+                    }
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

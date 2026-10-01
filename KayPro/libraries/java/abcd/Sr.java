@@ -5,13 +5,23 @@ public final class Sr extends abcd.Tr {
     private final java.util.ArrayList<abcd.Abstractms> v5;
 
     public Sr(abcd.es r2, abcd.hs r3, abcd.cs r4, java.util.ArrayList<abcd.Abstractms> r5, abcd.Abstractms r6) {
-        super(r2, r3, null, r4);
-        if (r2.DW() != 1) goto L7;
-        this.v5 = r5;
-        this.Zo = r6;
-        return;
-    L7:
-        throw new java.lang.IllegalArgumentException("bogus branchingness");
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    super(r2, r3, null, r4);
+                    if (r2.DW() != 1) { $pc0 = 7; continue $sw0; }
+                    this.v5 = r5;
+                    this.Zo = r6;
+                    return;
+                }
+                case 7: {
+                    throw new java.lang.IllegalArgumentException("bogus branchingness");
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

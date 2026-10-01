@@ -62,137 +62,242 @@ public class KO implements abcd.InterfacepO {
     }
 
     private void j6(int[] r9, byte[] r10, int r11, byte[] r12, int r13) {
-        int r0 = j6(r10, r11);
-        int r14 = j6(r10, r11 + 4);
-        int r1 = 7;
-        if (this.EQ == false) goto L14;
+        int r0 = 0;
+        int r14 = 0;
+        int r1 = 0;
         int r15 = 0;
-    L5:
-        if (r15 >= 3) goto L6;
-        int r5 = r14;
+        int r5 = 0;
         int r16 = 0;
-    L11:
-        if (r16 >= 8) goto L12;
-        int r6 = r5 ^ j6(r0, r9[r16]);
-        r16 = r16 + 1;
-        r5 = r0;
-        r0 = r6;
-        goto L11
-    L12:
-        r15 = r15 + 1;
-        r14 = r5;
-        goto L5
-    L6:
-        int r17 = r14;
-        int r18 = r0;
-    L7:
-        if (r1 <= 0) goto L18;
-        int r19 = r17 ^ j6(r18, r9[r1]);
-        r1 = r1 - 1;
-        r17 = r18;
-        r18 = r19;
-    L18:
-        int r20 = j6(r18, r9[0]) ^ r17;
-        j6(r18, r12, r13);
-        j6(r20, r12, r13 + 4);
-        return;
-    L14:
-        r17 = r14;
+        int r6 = 0;
+        int r17 = 0;
+        int r18 = 0;
+        int r19 = 0;
+        int r20 = 0;
         int r110 = 0;
-    L15:
-        if (r110 >= 8) goto L16;
-        int r111 = r17 ^ j6(r0, r9[r110]);
-        r110 = r110 + 1;
-        int r7 = r0;
-        r0 = r111;
-        r17 = r7;
-        goto L15
-    L16:
-        r18 = r0;
+        int r111 = 0;
+        int r7 = 0;
         int r8 = 0;
-    L17:
-        if (r8 >= 3) goto L18;
-        int r2 = r17;
-        int r112 = r18;
-        int r113 = 7;
-    L21:
-        if (r113 < 0) goto L26;
-        if (r8 != 2) goto L27;
-        if (r113 == 0) goto L26;
-    L27:
-        int r3 = r2 ^ j6(r112, r9[r113]);
-        r113 = r113 - 1;
-        r2 = r112;
-        r112 = r3;
-    L26:
-        r8 = r8 + 1;
-        r18 = r112;
-        r17 = r2;
-        goto L17
+        int r2 = 0;
+        int r112 = 0;
+        int r113 = 0;
+        int r3 = 0;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = j6(r10, r11);
+                    r14 = j6(r10, r11 + 4);
+                    r1 = 7;
+                    if (this.EQ == false) { $pc0 = 14; continue $sw0; }
+                    r15 = 0;
+                    $pc0 = 5; continue $sw0;
+                }
+                case 5: {
+                    if (r15 >= 3) { $pc0 = 6; continue $sw0; }
+                    r5 = r14;
+                    r16 = 0;
+                    $pc0 = 11; continue $sw0;
+                }
+                case 11: {
+                    if (r16 >= 8) { $pc0 = 12; continue $sw0; }
+                    r6 = r5 ^ j6(r0, r9[r16]);
+                    r16 = r16 + 1;
+                    r5 = r0;
+                    r0 = r6;
+                    { $pc0 = 11; continue $sw0; }
+                }
+                case 12: {
+                    r15 = r15 + 1;
+                    r14 = r5;
+                    { $pc0 = 5; continue $sw0; }
+                }
+                case 6: {
+                    r17 = r14;
+                    r18 = r0;
+                    $pc0 = 7; continue $sw0;
+                }
+                case 7: {
+                    if (r1 <= 0) { $pc0 = 18; continue $sw0; }
+                    r19 = r17 ^ j6(r18, r9[r1]);
+                    r1 = r1 - 1;
+                    r17 = r18;
+                    r18 = r19;
+                    $pc0 = 18; continue $sw0;
+                }
+                case 18: {
+                    r20 = j6(r18, r9[0]) ^ r17;
+                    j6(r18, r12, r13);
+                    j6(r20, r12, r13 + 4);
+                    return;
+                }
+                case 14: {
+                    r17 = r14;
+                    r110 = 0;
+                    $pc0 = 15; continue $sw0;
+                }
+                case 15: {
+                    if (r110 >= 8) { $pc0 = 16; continue $sw0; }
+                    r111 = r17 ^ j6(r0, r9[r110]);
+                    r110 = r110 + 1;
+                    r7 = r0;
+                    r0 = r111;
+                    r17 = r7;
+                    { $pc0 = 15; continue $sw0; }
+                }
+                case 16: {
+                    r18 = r0;
+                    r8 = 0;
+                    $pc0 = 17; continue $sw0;
+                }
+                case 17: {
+                    if (r8 >= 3) { $pc0 = 18; continue $sw0; }
+                    r2 = r17;
+                    r112 = r18;
+                    r113 = 7;
+                    $pc0 = 21; continue $sw0;
+                }
+                case 21: {
+                    if (r113 < 0) { $pc0 = 26; continue $sw0; }
+                    if (r8 != 2) { $pc0 = 27; continue $sw0; }
+                    if (r113 == 0) { $pc0 = 26; continue $sw0; }
+                    $pc0 = 27; continue $sw0;
+                }
+                case 27: {
+                    r3 = r2 ^ j6(r112, r9[r113]);
+                    r113 = r113 - 1;
+                    r2 = r112;
+                    r112 = r3;
+                    $pc0 = 26; continue $sw0;
+                }
+                case 26: {
+                    r8 = r8 + 1;
+                    r18 = r112;
+                    r17 = r2;
+                    { $pc0 = 17; continue $sw0; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static byte[] j6(java.lang.String r1) {
-        byte[] r2 = (byte[]) u7.get(abcd.TP.FH(r1));
-        if (r2 == null) goto L7;
-        return abcd.OP.j6(r2);
-    L7:
-        throw new java.lang.IllegalArgumentException("Unknown S-Box - possible types: \"Default\", \"E-Test\", \"E-A\", \"E-B\", \"E-C\", \"E-D\", \"D-Test\", \"D-A\".");
+        byte[] r2 = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    r2 = (byte[]) u7.get(abcd.TP.FH(r1));
+                    if (r2 == null) { $pc1 = 7; continue $sw1; }
+                    return abcd.OP.j6(r2);
+                }
+                case 7: {
+                    throw new java.lang.IllegalArgumentException("Unknown S-Box - possible types: \"Default\", \"E-Test\", \"E-A\", \"E-B\", \"E-C\", \"E-D\", \"D-Test\", \"D-A\".");
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     private int[] j6(boolean r4, byte[] r5) {
-        this.EQ = r4;
-        if (r5.length != 32) goto L9;
-        int[] r0 = new int[8];
+        int[] r0 = null;
         int r1 = 0;
-    L5:
-        if (r1 == 8) goto L6;
-        r0[r1] = j6(r5, r1 * 4);
-        r1 = r1 + 1;
-        goto L5
-    L6:
-        return r0;
-    L9:
-        throw new java.lang.IllegalArgumentException("Key length invalid. Key needs to be 32 byte - 256 bit!!!");
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    this.EQ = r4;
+                    if (r5.length != 32) { $pc2 = 9; continue $sw2; }
+                    r0 = new int[8];
+                    r1 = 0;
+                    $pc2 = 5; continue $sw2;
+                }
+                case 5: {
+                    if (r1 == 8) { $pc2 = 6; continue $sw2; }
+                    r0[r1] = j6(r5, r1 * 4);
+                    r1 = r1 + 1;
+                    { $pc2 = 5; continue $sw2; }
+                }
+                case 6: {
+                    return r0;
+                }
+                case 9: {
+                    throw new java.lang.IllegalArgumentException("Key length invalid. Key needs to be 32 byte - 256 bit!!!");
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
     public int j6(byte[] r7, int r8, byte[] r9, int r10) {
-        int[] r1 = this.tp;
-        if (r1 == null) goto L15;
-        if ((r8 + 8) > r7.length) goto L13;
-        if ((r10 + 8) > r9.length) goto L11;
-        j6(r1, r7, r8, r9, r10);
-        return 8;
-    L11:
-        throw new abcd.rO("output buffer too short");
-    L13:
-        throw new abcd.rO("input buffer too short");
-    L15:
-        throw new java.lang.IllegalStateException("GOST28147 engine not initialised");
+        int[] r1 = null;
+        java.lang.Throwable $ex3 = null;
+        int $pc3 = -1;
+        $sw3: while (true) {
+            switch ($pc3) {
+                case -1: {
+                    r1 = this.tp;
+                    if (r1 == null) { $pc3 = 15; continue $sw3; }
+                    if ((r8 + 8) > r7.length) { $pc3 = 13; continue $sw3; }
+                    if ((r10 + 8) > r9.length) { $pc3 = 11; continue $sw3; }
+                    j6(r1, r7, r8, r9, r10);
+                    return 8;
+                }
+                case 11: {
+                    throw new abcd.rO("output buffer too short");
+                }
+                case 13: {
+                    throw new abcd.rO("input buffer too short");
+                }
+                case 15: {
+                    throw new java.lang.IllegalStateException("GOST28147 engine not initialised");
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
     public void j6(boolean r4, abcd.InterfaceqO r5) {
-        if ((r5 instanceof abcd.YO) == false) goto L12;
-        abcd.YO r6 = (abcd.YO) r5;
-        byte[] r0 = r6.DW();
-        if (r0.length != j6.length) goto L10;
-        this.we = abcd.OP.j6(r0);
-        if (r6.j6() == null) goto L15;
-        this.tp = j6(r4, ((abcd.XO) r6.j6()).j6());
-        return;
-    L15:
-        return;
-    L10:
-        throw new java.lang.IllegalArgumentException("invalid S-box passed to GOST28147 init");
-    L12:
-        if ((r5 instanceof abcd.XO) == false) goto L14;
-        this.tp = j6(r4, ((abcd.XO) r5).j6());
-        return;
-    L14:
-        if (r5 != null) goto L17;
-        return;
-    L17:
-        throw new java.lang.IllegalArgumentException("invalid parameter passed to GOST28147 init - " + r5.getClass().getName());
+        abcd.YO r6 = null;
+        byte[] r0 = null;
+        java.lang.Throwable $ex4 = null;
+        int $pc4 = -1;
+        $sw4: while (true) {
+            switch ($pc4) {
+                case -1: {
+                    if ((r5 instanceof abcd.YO) == false) { $pc4 = 12; continue $sw4; }
+                    r6 = (abcd.YO) r5;
+                    r0 = r6.DW();
+                    if (r0.length != j6.length) { $pc4 = 10; continue $sw4; }
+                    this.we = abcd.OP.j6(r0);
+                    if (r6.j6() == null) { $pc4 = 15; continue $sw4; }
+                    this.tp = j6(r4, ((abcd.XO) r6.j6()).j6());
+                    return;
+                }
+                case 15: {
+                    return;
+                }
+                case 10: {
+                    throw new java.lang.IllegalArgumentException("invalid S-box passed to GOST28147 init");
+                }
+                case 12: {
+                    if ((r5 instanceof abcd.XO) == false) { $pc4 = 14; continue $sw4; }
+                    this.tp = j6(r4, ((abcd.XO) r5).j6());
+                    return;
+                }
+                case 14: {
+                    if (r5 != null) { $pc4 = 17; continue $sw4; }
+                    return;
+                }
+                case 17: {
+                    throw new java.lang.IllegalArgumentException("invalid parameter passed to GOST28147 init - " + r5.getClass().getName());
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

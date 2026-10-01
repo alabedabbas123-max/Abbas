@@ -9,12 +9,28 @@ public abstract class r extends a.b.a.a.d {
     }
 
     public void a(a.b.c r4, a.b.a.a.b.h r5) {
-        a.b.a.a.q[] r0 = (a.b.a.a.q[]) this.d;
+        a.b.a.a.q[] r0 = null;
         int r1 = 0;
-    L4:
-        if (r1 >= this.c) goto L6;
-        r5.a(r4, r0[r1]);
-        r1 = r1 + 1;
-        goto L4
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = (a.b.a.a.q[]) this.d;
+                    r1 = 0;
+                    $pc0 = 4; continue $sw0;
+                }
+                case 4: {
+                    if (r1 >= this.c) { $pc0 = 6; continue $sw0; }
+                    r5.a(r4, r0[r1]);
+                    r1 = r1 + 1;
+                    { $pc0 = 4; continue $sw0; }
+                }
+                case 6: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

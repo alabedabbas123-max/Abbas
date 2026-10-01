@@ -93,75 +93,144 @@ public final class Ps extends abcd.Xt implements abcd.Ss {
     }
 
     public static java.lang.String DW(abcd.Ss r4) {
-        int r0 = r4.size();
-        if (r0 != 0) goto L6;
-        return "<empty>";
-    L6:
-        java.lang.StringBuffer r1 = new java.lang.StringBuffer(100);
+        int r0 = 0;
+        java.lang.StringBuffer r1 = null;
         int r2 = 0;
-    L7:
-        if (r2 >= r0) goto L12;
-        if (r2 == 0) goto L10;
-        r1.append(", ");
-    L10:
-        r1.append(r4.getType(r2).aM());
-        r2 = r2 + 1;
-        goto L7
-    L12:
-        return r1.toString();
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = r4.size();
+                    if (r0 != 0) { $pc0 = 6; continue $sw0; }
+                    return "<empty>";
+                }
+                case 6: {
+                    r1 = new java.lang.StringBuffer(100);
+                    r2 = 0;
+                    $pc0 = 7; continue $sw0;
+                }
+                case 7: {
+                    if (r2 >= r0) { $pc0 = 12; continue $sw0; }
+                    if (r2 == 0) { $pc0 = 10; continue $sw0; }
+                    r1.append(", ");
+                    $pc0 = 10; continue $sw0;
+                }
+                case 10: {
+                    r1.append(r4.getType(r2).aM());
+                    r2 = r2 + 1;
+                    { $pc0 = 7; continue $sw0; }
+                }
+                case 12: {
+                    return r1.toString();
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static boolean DW(abcd.Ss r5, abcd.Ss r6) {
-        int r0 = r5.size();
-        if (r6.size() == r0) goto L5;
-        return false;
-    L5:
+        int r0 = 0;
         int r1 = 0;
-    L6:
-        if (r1 >= r0) goto L11;
-        if (r5.getType(r1).equals(r6.getType(r1)) == false) goto L9;
-        r1 = r1 + 1;
-        goto L6
-    L9:
-        return false;
-    L11:
-        return true;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    r0 = r5.size();
+                    if (r6.size() == r0) { $pc1 = 5; continue $sw1; }
+                    return false;
+                }
+                case 5: {
+                    r1 = 0;
+                    $pc1 = 6; continue $sw1;
+                }
+                case 6: {
+                    if (r1 >= r0) { $pc1 = 11; continue $sw1; }
+                    if (r5.getType(r1).equals(r6.getType(r1)) == false) { $pc1 = 9; continue $sw1; }
+                    r1 = r1 + 1;
+                    { $pc1 = 6; continue $sw1; }
+                }
+                case 9: {
+                    return false;
+                }
+                case 11: {
+                    return true;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static int j6(abcd.Ss r4) {
-        int r0 = r4.size();
+        int r0 = 0;
         int r1 = 0;
         int r2 = 0;
-    L3:
-        if (r1 >= r0) goto L5;
-        r2 = (r2 * 31) + r4.getType(r1).hashCode();
-        r1 = r1 + 1;
-        goto L3
-    L5:
-        return r2;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    r0 = r4.size();
+                    r1 = 0;
+                    r2 = 0;
+                    $pc2 = 3; continue $sw2;
+                }
+                case 3: {
+                    if (r1 >= r0) { $pc2 = 5; continue $sw2; }
+                    r2 = (r2 * 31) + r4.getType(r1).hashCode();
+                    r1 = r1 + 1;
+                    { $pc2 = 3; continue $sw2; }
+                }
+                case 5: {
+                    return r2;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static int j6(abcd.Ss r7, abcd.Ss r8) {
-        int r0 = r7.size();
-        int r1 = r8.size();
-        int r2 = java.lang.Math.min(r0, r1);
+        int r0 = 0;
+        int r1 = 0;
+        int r2 = 0;
         int r4 = 0;
-    L3:
-        if (r4 >= r2) goto L8;
-        int r5 = r7.getType(r4).j6(r8.getType(r4));
-        if (r5 != 0) goto L6;
-        r4 = r4 + 1;
-        goto L3
-    L6:
-        return r5;
-    L8:
-        if (r0 != r1) goto L10;
-        return 0;
-    L10:
-        if (r0 >= r1) goto L13;
-        return -1;
-    L13:
-        return 1;
+        int r5 = 0;
+        java.lang.Throwable $ex3 = null;
+        int $pc3 = -1;
+        $sw3: while (true) {
+            switch ($pc3) {
+                case -1: {
+                    r0 = r7.size();
+                    r1 = r8.size();
+                    r2 = java.lang.Math.min(r0, r1);
+                    r4 = 0;
+                    $pc3 = 3; continue $sw3;
+                }
+                case 3: {
+                    if (r4 >= r2) { $pc3 = 8; continue $sw3; }
+                    r5 = r7.getType(r4).j6(r8.getType(r4));
+                    if (r5 != 0) { $pc3 = 6; continue $sw3; }
+                    r4 = r4 + 1;
+                    { $pc3 = 3; continue $sw3; }
+                }
+                case 6: {
+                    return r5;
+                }
+                case 8: {
+                    if (r0 != r1) { $pc3 = 10; continue $sw3; }
+                    return 0;
+                }
+                case 10: {
+                    if (r0 >= r1) { $pc3 = 13; continue $sw3; }
+                    return -1;
+                }
+                case 13: {
+                    return 1;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static abcd.Ps j6(abcd.Qs r2, abcd.Qs r3) {
@@ -189,18 +258,34 @@ public final class Ps extends abcd.Xt implements abcd.Ss {
     }
 
     public abcd.Ps FH(abcd.Qs r4) {
-        int r0 = size();
-        abcd.Ps r1 = new abcd.Ps(r0 + 1);
+        int r0 = 0;
+        abcd.Ps r1 = null;
         int r2 = 0;
-        r1.j6(0, r4);
-    L3:
-        if (r2 >= r0) goto L5;
-        int r5 = r2 + 1;
-        r1.j6(r5, FH(r2));
-        r2 = r5;
-        goto L3
-    L5:
-        return r1;
+        int r5 = 0;
+        java.lang.Throwable $ex4 = null;
+        int $pc4 = -1;
+        $sw4: while (true) {
+            switch ($pc4) {
+                case -1: {
+                    r0 = size();
+                    r1 = new abcd.Ps(r0 + 1);
+                    r2 = 0;
+                    r1.j6(0, r4);
+                    $pc4 = 3; continue $sw4;
+                }
+                case 3: {
+                    if (r2 >= r0) { $pc4 = 5; continue $sw4; }
+                    r5 = r2 + 1;
+                    r1.j6(r5, FH(r2));
+                    r2 = r5;
+                    { $pc4 = 3; continue $sw4; }
+                }
+                case 5: {
+                    return r1;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public abcd.Qs get(int r1) {
@@ -214,18 +299,33 @@ public final class Ps extends abcd.Xt implements abcd.Ss {
 
     @Override
     public abcd.Ss j6(abcd.Qs r5) {
-        int r0 = size();
-        abcd.Ps r1 = new abcd.Ps(r0 + 1);
+        int r0 = 0;
+        abcd.Ps r1 = null;
         int r2 = 0;
-    L3:
-        if (r2 >= r0) goto L5;
-        r1.j6(r2, DW(r2));
-        r2 = r2 + 1;
-        goto L3
-    L5:
-        r1.j6(r0, r5);
-        r1.we();
-        return r1;
+        java.lang.Throwable $ex5 = null;
+        int $pc5 = -1;
+        $sw5: while (true) {
+            switch ($pc5) {
+                case -1: {
+                    r0 = size();
+                    r1 = new abcd.Ps(r0 + 1);
+                    r2 = 0;
+                    $pc5 = 3; continue $sw5;
+                }
+                case 3: {
+                    if (r2 >= r0) { $pc5 = 5; continue $sw5; }
+                    r1.j6(r2, DW(r2));
+                    r2 = r2 + 1;
+                    { $pc5 = 3; continue $sw5; }
+                }
+                case 5: {
+                    r1.j6(r0, r5);
+                    r1.we();
+                    return r1;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public void j6(int r1, abcd.Qs r2) {
@@ -233,15 +333,30 @@ public final class Ps extends abcd.Xt implements abcd.Ss {
     }
 
     public int rN() {
-        int r0 = size();
+        int r0 = 0;
         int r1 = 0;
         int r2 = 0;
-    L3:
-        if (r1 >= r0) goto L5;
-        r2 = r2 + get(r1).Zo();
-        r1 = r1 + 1;
-        goto L3
-    L5:
-        return r2;
+        java.lang.Throwable $ex6 = null;
+        int $pc6 = -1;
+        $sw6: while (true) {
+            switch ($pc6) {
+                case -1: {
+                    r0 = size();
+                    r1 = 0;
+                    r2 = 0;
+                    $pc6 = 3; continue $sw6;
+                }
+                case 3: {
+                    if (r1 >= r0) { $pc6 = 5; continue $sw6; }
+                    r2 = r2 + get(r1).Zo();
+                    r1 = r1 + 1;
+                    { $pc6 = 3; continue $sw6; }
+                }
+                case 5: {
+                    return r2;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

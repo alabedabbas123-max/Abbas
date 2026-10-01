@@ -20,18 +20,33 @@ public final class Bo extends abcd.Abstractao {
 
     @Override
     public boolean VH(abcd.AbstractVn r5) {
-        abcd.cs r0 = r5.gn();
-        if ((r5 instanceof abcd.po) == true) goto L5;
-    L13:
-        return false;
-    L5:
-        if (r0.size() != 1) goto L13;
-        if (abcd.Abstractao.Hw(r0.get(0).we()) == false) goto L13;
-        abcd.po r6 = (abcd.po) r5;
-        if (r6.Ws() == true) goto L12;
-        return true;
-    L12:
-        return j6(r6);
+        abcd.cs r0 = null;
+        abcd.po r6 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = r5.gn();
+                    if ((r5 instanceof abcd.po) == true) { $pc0 = 5; continue $sw0; }
+                    $pc0 = 13; continue $sw0;
+                }
+                case 13: {
+                    return false;
+                }
+                case 5: {
+                    if (r0.size() != 1) { $pc0 = 13; continue $sw0; }
+                    if (abcd.Abstractao.Hw(r0.get(0).we()) == false) { $pc0 = 13; continue $sw0; }
+                    r6 = (abcd.po) r5;
+                    if (r6.Ws() == true) { $pc0 = 12; continue $sw0; }
+                    return true;
+                }
+                case 12: {
+                    return j6(r6);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
@@ -58,12 +73,25 @@ public final class Bo extends abcd.Abstractao {
 
     @Override
     public boolean j6(abcd.po r1) {
-        int r2 = r1.J8();
-        if (r2 != 0) goto L5;
-    L7:
-        return false;
-    L5:
-        if (abcd.Abstractao.FH(r2) == false) goto L7;
-        return true;
+        int r2 = 0;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    r2 = r1.J8();
+                    if (r2 != 0) { $pc1 = 5; continue $sw1; }
+                    $pc1 = 7; continue $sw1;
+                }
+                case 7: {
+                    return false;
+                }
+                case 5: {
+                    if (abcd.Abstractao.FH(r2) == false) { $pc1 = 7; continue $sw1; }
+                    return true;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

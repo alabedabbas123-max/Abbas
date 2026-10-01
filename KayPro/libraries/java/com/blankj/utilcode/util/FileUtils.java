@@ -427,7 +427,7 @@ public final class FileUtils {
     /* JADX WARN: Type inference failed for: r1v8 */
     public static int getFileLines(File file) throws Throwable {
         int i = 1;
-        ?? r1 = 0;
+        java.lang.Object r1 = 0;
         r1 = 0;
         r1 = 0;
         try {

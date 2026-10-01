@@ -2,24 +2,17 @@ package abcd;
 
 public interface ME {
 
-    public static final enum a extends java.lang.Enum<abcd.ME.a> {
-        public static final abcd.ME.a DW = null;
-        public static final abcd.ME.a FH = null;
-        public static final abcd.ME.a Hw = null;
-        private static final abcd.ME.a[] Zo = null;
-        public static final abcd.ME.a j6 = null;
-        public static final abcd.ME.a v5 = null;
+    public static final class a extends com.almlkaide.kaypro.internal.EnumBase {
+        public static final abcd.ME.a DW = new abcd.ME.a("LOOSE", 1, true, false);
+        public static final abcd.ME.a FH = new abcd.ME.a("PACKED", 2, false, true);
+        public static final abcd.ME.a Hw = new abcd.ME.a("LOOSE_PACKED", 3, true, true);
+        private static final abcd.ME.a[] Zo = new abcd.ME.a[]{j6, DW, FH, Hw, v5};
+        public static final abcd.ME.a j6 = new abcd.ME.a("NEW", 0, true, false);
+        public static final abcd.ME.a v5 = new abcd.ME.a("NETWORK", 4, false, false);
         private final boolean VH;
         private final boolean gn;
 
-        static {
-            j6 = new abcd.ME.a("NEW", 0, true, false);
-            DW = new abcd.ME.a("LOOSE", 1, true, false);
-            FH = new abcd.ME.a("PACKED", 2, false, true);
-            Hw = new abcd.ME.a("LOOSE_PACKED", 3, true, true);
-            v5 = new abcd.ME.a("NETWORK", 4, false, false);
-            Zo = new abcd.ME.a[]{j6, DW, FH, Hw, v5};
-        }
+
 
         private a(java.lang.String r1, int r2, boolean r3, boolean r4) {
             super(r1, r2);
@@ -28,7 +21,7 @@ public interface ME {
         }
 
         public static abcd.ME.a valueOf(java.lang.String r1) {
-            return (abcd.ME.a) java.lang.Enum.valueOf(abcd.ME.a.class, r1);
+            return (abcd.ME.a) com.almlkaide.kaypro.internal.EnumBase.valueOf(abcd.ME.a.values(), r1);
         }
 
         public static abcd.ME.a[] values() {

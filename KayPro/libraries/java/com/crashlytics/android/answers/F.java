@@ -31,13 +31,25 @@ class F implements com.crashlytics.android.answers.q.a {
     }
 
     public void FH() {
-        this.DW.DW();
-        this.FH.j6(new com.crashlytics.android.answers.ClassL(this, this.Hw));
-        this.Hw.j6(this);
-        if (Hw() == false) goto L6;
-        j6(this.j6);
-        this.v5.DW();
-        return;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    this.DW.DW();
+                    this.FH.j6(new com.crashlytics.android.answers.ClassL(this, this.Hw));
+                    this.Hw.j6(this);
+                    if (Hw() == false) { $pc0 = 6; continue $sw0; }
+                    j6(this.j6);
+                    this.v5.DW();
+                    return;
+                }
+                case 6: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     boolean Hw() {
@@ -69,11 +81,21 @@ class F implements com.crashlytics.android.answers.q.a {
     }
 
     public void j6(java.lang.String r4, java.lang.String r5) {
-        if (android.os.Looper.myLooper() == android.os.Looper.getMainLooper()) goto L7;
-        io.fabric.sdk.android.Fabric.getLogger().Hw("Answers", "Logged crash");
-        this.DW.FH(com.crashlytics.android.answers.I.j6(r4, r5));
-        return;
-    L7:
-        throw new java.lang.IllegalStateException("onCrash called from main thread!!!");
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if (android.os.Looper.myLooper() == android.os.Looper.getMainLooper()) { $pc1 = 7; continue $sw1; }
+                    io.fabric.sdk.android.Fabric.getLogger().Hw("Answers", "Logged crash");
+                    this.DW.FH(com.crashlytics.android.answers.I.j6(r4, r5));
+                    return;
+                }
+                case 7: {
+                    throw new java.lang.IllegalStateException("onCrash called from main thread!!!");
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

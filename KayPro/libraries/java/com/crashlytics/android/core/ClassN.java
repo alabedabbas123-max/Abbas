@@ -61,21 +61,41 @@ class ClassN {
     }
 
     public static com.crashlytics.android.core.ClassN j6(android.app.Activity r5, abcd.gA r6, com.crashlytics.android.core.ClassN.a r7) {
-        com.crashlytics.android.core.ClassN.b r0 = new com.crashlytics.android.core.ClassN.b(null);
-        com.crashlytics.android.core.qa r1 = new com.crashlytics.android.core.qa(r5, r6);
-        android.app.AlertDialog.Builder r2 = new android.app.AlertDialog.Builder(r5);
-        android.widget.ScrollView r8 = j6(r5, r1.FH());
-        com.crashlytics.android.core.DialogInterfaceOnClickListenerk r3 = new com.crashlytics.android.core.DialogInterfaceOnClickListenerk(r0);
-        r2.setView(r8).setTitle(r1.v5()).setCancelable(false).setNeutralButton(r1.Hw(), r3);
-        if (r6.Hw == false) goto L6;
-        com.crashlytics.android.core.DialogInterfaceOnClickListenerl r9 = new com.crashlytics.android.core.DialogInterfaceOnClickListenerl(r0);
-        r2.setNegativeButton(r1.DW(), r9);
-    L6:
-        if (r6.Zo == false) goto L9;
-        com.crashlytics.android.core.DialogInterfaceOnClickListenerm r10 = new com.crashlytics.android.core.DialogInterfaceOnClickListenerm(r7, r0);
-        r2.setPositiveButton(r1.j6(), r10);
-    L9:
-        return new com.crashlytics.android.core.ClassN(r2, r0);
+        com.crashlytics.android.core.ClassN.b r0 = null;
+        com.crashlytics.android.core.qa r1 = null;
+        android.app.AlertDialog.Builder r2 = null;
+        android.widget.ScrollView r8 = null;
+        com.crashlytics.android.core.DialogInterfaceOnClickListenerk r3 = null;
+        com.crashlytics.android.core.DialogInterfaceOnClickListenerl r9 = null;
+        com.crashlytics.android.core.DialogInterfaceOnClickListenerm r10 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = new com.crashlytics.android.core.ClassN.b(null);
+                    r1 = new com.crashlytics.android.core.qa(r5, r6);
+                    r2 = new android.app.AlertDialog.Builder(r5);
+                    r8 = j6(r5, r1.FH());
+                    r3 = new com.crashlytics.android.core.DialogInterfaceOnClickListenerk(r0);
+                    r2.setView(r8).setTitle(r1.v5()).setCancelable(false).setNeutralButton(r1.Hw(), r3);
+                    if (r6.Hw == false) { $pc0 = 6; continue $sw0; }
+                    r9 = new com.crashlytics.android.core.DialogInterfaceOnClickListenerl(r0);
+                    r2.setNegativeButton(r1.DW(), r9);
+                    $pc0 = 6; continue $sw0;
+                }
+                case 6: {
+                    if (r6.Zo == false) { $pc0 = 9; continue $sw0; }
+                    r10 = new com.crashlytics.android.core.DialogInterfaceOnClickListenerm(r7, r0);
+                    r2.setPositiveButton(r1.j6(), r10);
+                    $pc0 = 9; continue $sw0;
+                }
+                case 9: {
+                    return new com.crashlytics.android.core.ClassN(r2, r0);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public boolean DW() {

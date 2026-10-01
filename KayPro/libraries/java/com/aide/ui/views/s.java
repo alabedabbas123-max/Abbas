@@ -25,23 +25,62 @@ class s extends android.animation.AnimatorListenerAdapter {
     @Override
     @abcd.Interfacesu(method = 3731465117122560333L)
     public void onAnimationEnd(android.animation.Animator r5) {
-    L13:
-        th = move-exception;
-        if (DW == false) goto L17;
-        abcd.wu.j6(th, -2777247055128298063L, this, r5);
-    L17:
-        throw th;
-    L4:
-        if (j6 == false) goto L6;
-        abcd.wu.j6(-2777247055128298063L, this, r5);     // Catch: java.lang.Throwable -> L13
-    L6:
-        com.aide.ui.views.SplitView.access$202(this.Hw, false);     // Catch: java.lang.Throwable -> L13
-        com.aide.ui.views.SplitView.access$300(this.Hw);     // Catch: java.lang.Throwable -> L13
-        if (com.aide.ui.views.SplitView.access$100(this.Hw) == null) goto L10;
-        com.aide.ui.views.SplitView.access$100(this.Hw).j6(com.aide.ui.views.SplitView.access$200(this.Hw));     // Catch: java.lang.Throwable -> L13
-    L10:
-        if (this.FH == null) goto L20;
-        this.FH.run();     // Catch: java.lang.Throwable -> L13
-        return;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 4;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 13: {
+                    th = $ex0;
+                    if (DW == false) { $pc0 = 17; continue $sw0; }
+                    abcd.wu.j6(th, -2777247055128298063L, this, r5);
+                    $pc0 = 17; continue $sw0;
+                }
+                case 17: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (j6 == false) { $pc0 = 6; continue $sw0; }
+                    try {
+                        abcd.wu.j6(-2777247055128298063L, this, r5);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 13; continue $sw0;
+                    }
+                    $pc0 = 6; continue $sw0;
+                }
+                case 6: {
+                    try {
+                        com.aide.ui.views.SplitView.access$202(this.Hw, false);
+                        com.aide.ui.views.SplitView.access$300(this.Hw);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 13; continue $sw0;
+                    }
+                    if (com.aide.ui.views.SplitView.access$100(this.Hw) == null) { $pc0 = 10; continue $sw0; }
+                    try {
+                        com.aide.ui.views.SplitView.access$100(this.Hw).j6(com.aide.ui.views.SplitView.access$200(this.Hw));
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 13; continue $sw0;
+                    }
+                    $pc0 = 10; continue $sw0;
+                }
+                case 10: {
+                    if (this.FH == null) { $pc0 = 20; continue $sw0; }
+                    try {
+                        this.FH.run();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 13; continue $sw0;
+                    }
+                    return;
+                }
+                case 20: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

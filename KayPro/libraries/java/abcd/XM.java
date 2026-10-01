@@ -16,20 +16,33 @@ public class XM extends abcd.AbstractyL implements abcd.InterfacepL {
     }
 
     public static abcd.XM j6(java.lang.Object r3) {
-        if (r3 == null) goto L21;
-        if ((r3 instanceof abcd.XM) == true) goto L21;
-        if ((r3 instanceof abcd.VM) == false) goto L11;
-        return new abcd.XM((abcd.VM) r3);
-    L11:
-        if ((r3 instanceof abcd.AL) == false) goto L15;
-        return new abcd.XM((abcd.AL) r3);
-    L15:
-        if ((r3 instanceof abcd.EL) == false) goto L19;
-        return new abcd.XM((abcd.EL) r3);
-    L19:
-        throw new java.lang.IllegalArgumentException("Illegal object in SignerIdentifier: " + r3.getClass().getName());
-    L21:
-        return (abcd.XM) r3;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (r3 == null) { $pc0 = 21; continue $sw0; }
+                    if ((r3 instanceof abcd.XM) == true) { $pc0 = 21; continue $sw0; }
+                    if ((r3 instanceof abcd.VM) == false) { $pc0 = 11; continue $sw0; }
+                    return new abcd.XM((abcd.VM) r3);
+                }
+                case 11: {
+                    if ((r3 instanceof abcd.AL) == false) { $pc0 = 15; continue $sw0; }
+                    return new abcd.XM((abcd.AL) r3);
+                }
+                case 15: {
+                    if ((r3 instanceof abcd.EL) == false) { $pc0 = 19; continue $sw0; }
+                    return new abcd.XM((abcd.EL) r3);
+                }
+                case 19: {
+                    throw new java.lang.IllegalArgumentException("Illegal object in SignerIdentifier: " + r3.getClass().getName());
+                }
+                case 21: {
+                    return (abcd.XM) r3;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

@@ -85,23 +85,47 @@ public class zN {
     }
 
     public boolean equals(java.lang.Object r4) {
-        if ((r4 instanceof abcd.zN) == true) goto L5;
-        return false;
-    L5:
-        abcd.zN r5 = (abcd.zN) r4;
-        if (r5.j6().equals(j6()) == true) goto L8;
-    L11:
-        return false;
-    L8:
-        if (r5.DW() != DW()) goto L11;
-        return true;
+        abcd.zN r5 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if ((r4 instanceof abcd.zN) == true) { $pc0 = 5; continue $sw0; }
+                    return false;
+                }
+                case 5: {
+                    r5 = (abcd.zN) r4;
+                    if (r5.j6().equals(j6()) == true) { $pc0 = 8; continue $sw0; }
+                    $pc0 = 11; continue $sw0;
+                }
+                case 11: {
+                    return false;
+                }
+                case 8: {
+                    if (r5.DW() != DW()) { $pc0 = 11; continue $sw0; }
+                    return true;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public int hashCode() {
-        if (DW() == false) goto L7;
-        return j6().hashCode();
-    L7:
-        return j6().hashCode() ^ (-1);
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if (DW() == false) { $pc1 = 7; continue $sw1; }
+                    return j6().hashCode();
+                }
+                case 7: {
+                    return j6().hashCode() ^ (-1);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public abcd.AL j6() {

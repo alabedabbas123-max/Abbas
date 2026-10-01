@@ -15,11 +15,22 @@ public abstract class AbstractcJ {
     }
 
     public static void j6(abcd.AbstractcJ r0) {
-        if (r0 == null) goto L4;
-        j6 = r0;
-        return;
-    L4:
-        j6 = new abcd.mI();
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (r0 == null) { $pc0 = 4; continue $sw0; }
+                    j6 = r0;
+                    return;
+                }
+                case 4: {
+                    j6 = new abcd.mI();
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public abstract abcd.ZI j6(abcd.HJ r1, abcd.AbstractkI r2, abcd.AbstractpK r3, int r4);

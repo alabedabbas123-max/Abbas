@@ -19,10 +19,20 @@ public class yF extends abcd.AbstractvF {
 
         @Override
         protected boolean Hw() {
-            if (this.gn >= this.VH.length) goto L6;
-            return true;
-        L6:
-            return false;
+            java.lang.Throwable $ex0 = null;
+            int $pc0 = -1;
+            $sw0: while (true) {
+                switch ($pc0) {
+                    case -1: {
+                        if (this.gn >= this.VH.length) { $pc0 = 6; continue $sw0; }
+                        return true;
+                    }
+                    case 6: {
+                        return false;
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
     }
 

@@ -7,7 +7,7 @@ public class WA {
     private final java.util.List<abcd.ME> Hw;
     private final java.util.Map<java.lang.String, abcd.C1498xF.a> v5;
 
-    public static enum a extends java.lang.Enum<abcd.WA.a> {
+    public static class a extends com.almlkaide.kaypro.internal.EnumBase {
         public static final abcd.WA.a DW = null;
         public static final abcd.WA.a FH = null;
         private static final abcd.WA.a[] Hw = null;
@@ -29,7 +29,7 @@ public class WA {
         }
 
         public static abcd.WA.a valueOf(java.lang.String r1) {
-            return (abcd.WA.a) java.lang.Enum.valueOf(abcd.WA.a.class, r1);
+            return (abcd.WA.a) com.almlkaide.kaypro.internal.EnumBase.valueOf(abcd.WA.a.values(), r1);
         }
 
         public static abcd.WA.a[] values() {

@@ -9,10 +9,21 @@ public final class vs extends abcd.Fs {
     }
 
     public abcd.ws J8() {
-        if (this.FH != null) goto L6;
-        this.FH = new abcd.ws(VH(), we());
-    L6:
-        return this.FH;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (this.FH != null) { $pc0 = 6; continue $sw0; }
+                    this.FH = new abcd.ws(VH(), we());
+                    $pc0 = 6; continue $sw0;
+                }
+                case 6: {
+                    return this.FH;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

@@ -20,11 +20,26 @@ class q {
     }
 
     private void FH() {
-        java.util.Iterator<com.crashlytics.android.answers.q.a> r0 = this.DW.iterator();
-    L4:
-        if (r0.hasNext() == false) goto L6;
-        r0.next().j6();
-        goto L4
+        java.util.Iterator<com.crashlytics.android.answers.q.a> r0 = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    r0 = this.DW.iterator();
+                    $pc0 = 4; continue $sw0;
+                }
+                case 4: {
+                    if (r0.hasNext() == false) { $pc0 = 6; continue $sw0; }
+                    r0.next().j6();
+                    { $pc0 = 4; continue $sw0; }
+                }
+                case 6: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     static void j6(com.crashlytics.android.answers.q r0) {
@@ -32,25 +47,59 @@ class q {
     }
 
     public void DW() {
-        this.v5 = false;
-        java.util.concurrent.ScheduledFuture<?> r1 = this.Hw.getAndSet(null);
-        if (r1 == null) goto L6;
-        r1.cancel(false);
-        return;
+        java.util.concurrent.ScheduledFuture<?> r1 = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    this.v5 = false;
+                    r1 = this.Hw.getAndSet(null);
+                    if (r1 == null) { $pc1 = 6; continue $sw1; }
+                    r1.cancel(false);
+                    return;
+                }
+                case 6: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public void j6() {
-        if (this.FH == true) goto L5;
-        return;
-    L5:
-        if (this.v5 == true) goto L15;
-        this.v5 = true;
-        this.Hw.compareAndSet(null, this.j6.schedule(new com.crashlytics.android.answers.p(this), 5000, java.util.concurrent.TimeUnit.MILLISECONDS));     // Catch: java.util.concurrent.RejectedExecutionException -> L9
-        return;
-    L9:
-        e = move-exception;
-        io.fabric.sdk.android.Fabric.getLogger().j6("Answers", "Failed to schedule background detector", e);
-        return;
+        java.lang.Throwable e = null;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    if (this.FH == true) { $pc2 = 5; continue $sw2; }
+                    return;
+                }
+                case 5: {
+                    if (this.v5 == true) { $pc2 = 15; continue $sw2; }
+                    this.v5 = true;
+                    try {
+                        this.Hw.compareAndSet(null, this.j6.schedule(new com.crashlytics.android.answers.p(this), 5000, java.util.concurrent.TimeUnit.MILLISECONDS));
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        if ($t instanceof java.util.concurrent.RejectedExecutionException) { $pc2 = 9; continue $sw2; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    return;
+                }
+                case 9: {
+                    e = $ex2;
+                    io.fabric.sdk.android.Fabric.getLogger().j6("Answers", "Failed to schedule background detector", e);
+                    return;
+                }
+                case 15: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public void j6(com.crashlytics.android.answers.q.a r2) {

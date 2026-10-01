@@ -9,14 +9,24 @@ public final class Dm extends abcd.Xt {
         private final abcd.Ks j6;
 
         public a(abcd.Ks r1, abcd.Ks r2, abcd.Js r3, int r4) {
-            if (r1 == null) goto L7;
-            this.j6 = r1;
-            this.DW = r2;
-            this.FH = r3;
-            this.Hw = r4;
-            return;
-        L7:
-            throw new java.lang.NullPointerException("innerClass == null");
+            java.lang.Throwable $ex0 = null;
+            int $pc0 = -1;
+            $sw0: while (true) {
+                switch ($pc0) {
+                    case -1: {
+                        if (r1 == null) { $pc0 = 7; continue $sw0; }
+                        this.j6 = r1;
+                        this.DW = r2;
+                        this.FH = r3;
+                        this.Hw = r4;
+                        return;
+                    }
+                    case 7: {
+                        throw new java.lang.NullPointerException("innerClass == null");
+                    }
+                    default: throw new java.lang.IllegalStateException();
+                }
+            }
         }
 
         public abcd.Ks DW() {

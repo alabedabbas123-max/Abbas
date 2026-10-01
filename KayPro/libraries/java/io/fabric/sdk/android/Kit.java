@@ -14,23 +14,37 @@ public abstract class Kit<Result> implements java.lang.Comparable<io.fabric.sdk.
     }
 
     public int compareTo2(io.fabric.sdk.android.Kit r4) {
-        if (containsAnnotatedDependency(r4) == false) goto L6;
-        return 1;
-    L6:
-        if (r4.containsAnnotatedDependency(this) == false) goto L9;
-        return -1;
-    L9:
-        if (hasAnnotatedDependency() == false) goto L14;
-        if (r4.hasAnnotatedDependency() == true) goto L14;
-        return 1;
-    L14:
-        if (hasAnnotatedDependency() == false) goto L16;
-        return 0;
-    L16:
-        if (r4.hasAnnotatedDependency() == false) goto L20;
-        return -1;
-    L20:
-        return 0;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (containsAnnotatedDependency(r4) == false) { $pc0 = 6; continue $sw0; }
+                    return 1;
+                }
+                case 6: {
+                    if (r4.containsAnnotatedDependency(this) == false) { $pc0 = 9; continue $sw0; }
+                    return -1;
+                }
+                case 9: {
+                    if (hasAnnotatedDependency() == false) { $pc0 = 14; continue $sw0; }
+                    if (r4.hasAnnotatedDependency() == true) { $pc0 = 14; continue $sw0; }
+                    return 1;
+                }
+                case 14: {
+                    if (hasAnnotatedDependency() == false) { $pc0 = 16; continue $sw0; }
+                    return 0;
+                }
+                case 16: {
+                    if (r4.hasAnnotatedDependency() == false) { $pc0 = 20; continue $sw0; }
+                    return -1;
+                }
+                case 20: {
+                    return 0;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override
@@ -39,19 +53,35 @@ public abstract class Kit<Result> implements java.lang.Comparable<io.fabric.sdk.
     }
 
     boolean containsAnnotatedDependency(io.fabric.sdk.android.Kit r7) {
-        if (hasAnnotatedDependency() == false) goto L11;
-        java.lang.Class<?>[] r0 = this.dependsOnAnnotation.value();
-        int r2 = r0.length;
+        java.lang.Class<?>[] r0 = null;
+        int r2 = 0;
         int r3 = 0;
-    L5:
-        if (r3 >= r2) goto L11;
-        if (r0[r3].isAssignableFrom(r7.getClass()) == true) goto L8;
-        r3 = r3 + 1;
-        goto L5
-    L8:
-        return true;
-    L11:
-        return false;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if (hasAnnotatedDependency() == false) { $pc1 = 11; continue $sw1; }
+                    r0 = this.dependsOnAnnotation.value();
+                    r2 = r0.length;
+                    r3 = 0;
+                    $pc1 = 5; continue $sw1;
+                }
+                case 5: {
+                    if (r3 >= r2) { $pc1 = 11; continue $sw1; }
+                    if (r0[r3].isAssignableFrom(r7.getClass()) == true) { $pc1 = 8; continue $sw1; }
+                    r3 = r3 + 1;
+                    { $pc1 = 5; continue $sw1; }
+                }
+                case 8: {
+                    return true;
+                }
+                case 11: {
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     protected abstract Result doInBackground();
@@ -81,10 +111,20 @@ public abstract class Kit<Result> implements java.lang.Comparable<io.fabric.sdk.
     public abstract java.lang.String getVersion();
 
     boolean hasAnnotatedDependency() {
-        if (this.dependsOnAnnotation == null) goto L5;
-        return true;
-    L5:
-        return false;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    if (this.dependsOnAnnotation == null) { $pc2 = 5; continue $sw2; }
+                    return true;
+                }
+                case 5: {
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     final void initialize() {

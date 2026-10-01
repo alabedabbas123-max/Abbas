@@ -7,20 +7,32 @@ public abstract class AbstractBn implements abcd.Interfacetn {
     private final abcd.Ks j6;
 
     public AbstractBn(abcd.Ks r1, int r2, abcd.Hs r3, abcd.Interfacepn r4) {
-        if (r1 == null) goto L13;
-        if (r3 == null) goto L11;
-        if (r4 == null) goto L9;
-        this.j6 = r1;
-        this.DW = r2;
-        this.FH = r3;
-        this.Hw = r4;
-        return;
-    L9:
-        throw new java.lang.NullPointerException("attributes == null");
-    L11:
-        throw new java.lang.NullPointerException("nat == null");
-    L13:
-        throw new java.lang.NullPointerException("definingClass == null");
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (r1 == null) { $pc0 = 13; continue $sw0; }
+                    if (r3 == null) { $pc0 = 11; continue $sw0; }
+                    if (r4 == null) { $pc0 = 9; continue $sw0; }
+                    this.j6 = r1;
+                    this.DW = r2;
+                    this.FH = r3;
+                    this.Hw = r4;
+                    return;
+                }
+                case 9: {
+                    throw new java.lang.NullPointerException("attributes == null");
+                }
+                case 11: {
+                    throw new java.lang.NullPointerException("nat == null");
+                }
+                case 13: {
+                    throw new java.lang.NullPointerException("definingClass == null");
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

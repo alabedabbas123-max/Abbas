@@ -18,10 +18,22 @@ class d implements io.fabric.sdk.android.h {
 
     @Override
     public void j6(java.lang.Object r5) {
-        this.j6.countDown();
-        if (this.j6.getCount() != 0) goto L6;
-        io.fabric.sdk.android.Fabric.access$200(this.FH).set(true);
-        io.fabric.sdk.android.Fabric.access$300(this.FH).j6(this.FH);
-        return;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    this.j6.countDown();
+                    if (this.j6.getCount() != 0) { $pc0 = 6; continue $sw0; }
+                    io.fabric.sdk.android.Fabric.access$200(this.FH).set(true);
+                    io.fabric.sdk.android.Fabric.access$300(this.FH).j6(this.FH);
+                    return;
+                }
+                case 6: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

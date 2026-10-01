@@ -32,20 +32,45 @@ public class sa {
     }
 
     public sa(android.app.Activity r8, java.lang.String r9) {
-    L7:
-        th = move-exception;
-        if (DW == false) goto L11;
-        abcd.wu.j6(th, -2259859479713448584L, null, r8, r9);
-    L11:
-        throw th;
-    L3:
-        if (j6 == false) goto L5;
-        abcd.wu.j6(-2259859479713448584L, null, r8, r9);     // Catch: java.lang.Throwable -> L7
-    L5:
-        this.Zo = new android.os.Handler();     // Catch: java.lang.Throwable -> L7
-        this.FH = r8;     // Catch: java.lang.Throwable -> L7
-        this.Hw = r9;     // Catch: java.lang.Throwable -> L7
-        this.gn = 500;     // Catch: java.lang.Throwable -> L7
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = 3;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case 7: {
+                    th = $ex0;
+                    if (DW == false) { $pc0 = 11; continue $sw0; }
+                    abcd.wu.j6(th, -2259859479713448584L, null, r8, r9);
+                    $pc0 = 11; continue $sw0;
+                }
+                case 11: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 3: {
+                    if (j6 == false) { $pc0 = 5; continue $sw0; }
+                    try {
+                        abcd.wu.j6(-2259859479713448584L, null, r8, r9);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 7; continue $sw0;
+                    }
+                    $pc0 = 5; continue $sw0;
+                }
+                case 5: {
+                    try {
+                        this.Zo = new android.os.Handler();
+                        this.FH = r8;
+                        this.Hw = r9;
+                        this.gn = 500;
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 7; continue $sw0;
+                    }
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     static void j6(com.aide.common.sa r0) {
@@ -54,86 +79,215 @@ public class sa {
 
     @abcd.Interfacesu(method = 4282309975616894155L)
     private void v5() {
-    L8:
-        th = move-exception;
-        if (DW == false) goto L12;
-        abcd.wu.j6(th, -1183668049773131675L, this);
-    L12:
-        throw th;
-    L4:
-        if (j6 == false) goto L6;
-        abcd.wu.j6(-1183668049773131675L, this);     // Catch: java.lang.Throwable -> L8
-    L6:
-        this.v5 = new android.app.ProgressDialog(this.FH);     // Catch: java.lang.Throwable -> L8
-        this.v5.setMessage(this.Hw);     // Catch: java.lang.Throwable -> L8
-        this.v5.setOnCancelListener(new com.aide.common.DialogInterfaceOnCancelListenerra(this));     // Catch: java.lang.Throwable -> L8
-        this.v5.getWindow().clearFlags(2);     // Catch: java.lang.Throwable -> L8
-        this.v5.show();     // Catch: java.lang.Throwable -> L8
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = 4;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case 8: {
+                    th = $ex1;
+                    if (DW == false) { $pc1 = 12; continue $sw1; }
+                    abcd.wu.j6(th, -1183668049773131675L, this);
+                    $pc1 = 12; continue $sw1;
+                }
+                case 12: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (j6 == false) { $pc1 = 6; continue $sw1; }
+                    try {
+                        abcd.wu.j6(-1183668049773131675L, this);
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        $pc1 = 8; continue $sw1;
+                    }
+                    $pc1 = 6; continue $sw1;
+                }
+                case 6: {
+                    try {
+                        this.v5 = new android.app.ProgressDialog(this.FH);
+                        this.v5.setMessage(this.Hw);
+                        this.v5.setOnCancelListener(new com.aide.common.DialogInterfaceOnCancelListenerra(this));
+                        this.v5.getWindow().clearFlags(2);
+                        this.v5.show();
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        $pc1 = 8; continue $sw1;
+                    }
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @abcd.Interfacesu(method = -2790036783533969775L)
     protected void DW() {
-    L7:
-        th = move-exception;
-        if (DW == false) goto L11;
-        abcd.wu.j6(th, -2001298607835609485L, this);
-    L11:
-        throw th;
-    L4:
-        if (j6 == false) goto L14;
-        abcd.wu.j6(-2001298607835609485L, this);     // Catch: java.lang.Throwable -> L7
-        return;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = 4;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case 7: {
+                    th = $ex2;
+                    if (DW == false) { $pc2 = 11; continue $sw2; }
+                    abcd.wu.j6(th, -2001298607835609485L, this);
+                    $pc2 = 11; continue $sw2;
+                }
+                case 11: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (j6 == false) { $pc2 = 14; continue $sw2; }
+                    try {
+                        abcd.wu.j6(-2001298607835609485L, this);
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        $pc2 = 7; continue $sw2;
+                    }
+                    return;
+                }
+                case 14: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public void FH() {
-    L8:
-        th = move-exception;
-        if (DW == false) goto L12;
-        abcd.wu.j6(th, -2273123547971387904L, this);
-    L12:
-        throw th;
-    L4:
-        if (j6 == false) goto L6;
-        abcd.wu.j6(-2273123547971387904L, this);     // Catch: java.lang.Throwable -> L8
-    L6:
-        j6();     // Catch: java.lang.Throwable -> L8
-        v5();     // Catch: java.lang.Throwable -> L8
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex3 = null;
+        int $pc3 = 4;
+        $sw3: while (true) {
+            switch ($pc3) {
+                case 8: {
+                    th = $ex3;
+                    if (DW == false) { $pc3 = 12; continue $sw3; }
+                    abcd.wu.j6(th, -2273123547971387904L, this);
+                    $pc3 = 12; continue $sw3;
+                }
+                case 12: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (j6 == false) { $pc3 = 6; continue $sw3; }
+                    try {
+                        abcd.wu.j6(-2273123547971387904L, this);
+                    } catch (java.lang.Throwable $t) {
+                        $ex3 = $t;
+                        $pc3 = 8; continue $sw3;
+                    }
+                    $pc3 = 6; continue $sw3;
+                }
+                case 6: {
+                    try {
+                        j6();
+                        v5();
+                    } catch (java.lang.Throwable $t) {
+                        $ex3 = $t;
+                        $pc3 = 8; continue $sw3;
+                    }
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public void Hw() {
-    L8:
-        th = move-exception;
-        if (DW == false) goto L12;
-        abcd.wu.j6(th, -6258904993486479808L, this);
-    L12:
-        throw th;
-    L4:
-        if (j6 == false) goto L6;
-        abcd.wu.j6(-6258904993486479808L, this);     // Catch: java.lang.Throwable -> L8
-    L6:
-        j6();     // Catch: java.lang.Throwable -> L8
-        this.VH = new com.aide.common.Runnableqa(this);     // Catch: java.lang.Throwable -> L8
-        this.Zo.postDelayed(this.VH, this.gn);     // Catch: java.lang.Throwable -> L8
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex4 = null;
+        int $pc4 = 4;
+        $sw4: while (true) {
+            switch ($pc4) {
+                case 8: {
+                    th = $ex4;
+                    if (DW == false) { $pc4 = 12; continue $sw4; }
+                    abcd.wu.j6(th, -6258904993486479808L, this);
+                    $pc4 = 12; continue $sw4;
+                }
+                case 12: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (j6 == false) { $pc4 = 6; continue $sw4; }
+                    try {
+                        abcd.wu.j6(-6258904993486479808L, this);
+                    } catch (java.lang.Throwable $t) {
+                        $ex4 = $t;
+                        $pc4 = 8; continue $sw4;
+                    }
+                    $pc4 = 6; continue $sw4;
+                }
+                case 6: {
+                    try {
+                        j6();
+                        this.VH = new com.aide.common.Runnableqa(this);
+                        this.Zo.postDelayed(this.VH, this.gn);
+                    } catch (java.lang.Throwable $t) {
+                        $ex4 = $t;
+                        $pc4 = 8; continue $sw4;
+                    }
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public void j6() {
-    L13:
-        th = move-exception;
-        if (DW == false) goto L17;
-        abcd.wu.j6(th, -1950676336890241184L, this);
-    L17:
-        throw th;
-    L4:
-        if (j6 == false) goto L7;
-        abcd.wu.j6(-1950676336890241184L, this);     // Catch: java.lang.Throwable -> L13
-    L7:
-        if (this.VH == null) goto L10;
-        this.Zo.removeCallbacks(this.VH);     // Catch: java.lang.Throwable -> L13
-        this.VH = null;     // Catch: java.lang.Throwable -> L13
-    L10:
-        if (this.v5 == null) goto L20;
-        this.v5.dismiss();     // Catch: java.lang.Throwable -> L13
-        this.v5 = null;     // Catch: java.lang.Throwable -> L13
-        return;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex5 = null;
+        int $pc5 = 4;
+        $sw5: while (true) {
+            switch ($pc5) {
+                case 13: {
+                    th = $ex5;
+                    if (DW == false) { $pc5 = 17; continue $sw5; }
+                    abcd.wu.j6(th, -1950676336890241184L, this);
+                    $pc5 = 17; continue $sw5;
+                }
+                case 17: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (j6 == false) { $pc5 = 7; continue $sw5; }
+                    try {
+                        abcd.wu.j6(-1950676336890241184L, this);
+                    } catch (java.lang.Throwable $t) {
+                        $ex5 = $t;
+                        $pc5 = 13; continue $sw5;
+                    }
+                    $pc5 = 7; continue $sw5;
+                }
+                case 7: {
+                    if (this.VH == null) { $pc5 = 10; continue $sw5; }
+                    try {
+                        this.Zo.removeCallbacks(this.VH);
+                        this.VH = null;
+                    } catch (java.lang.Throwable $t) {
+                        $ex5 = $t;
+                        $pc5 = 13; continue $sw5;
+                    }
+                    $pc5 = 10; continue $sw5;
+                }
+                case 10: {
+                    if (this.v5 == null) { $pc5 = 20; continue $sw5; }
+                    try {
+                        this.v5.dismiss();
+                        this.v5 = null;
+                    } catch (java.lang.Throwable $t) {
+                        $ex5 = $t;
+                        $pc5 = 13; continue $sw5;
+                    }
+                    return;
+                }
+                case 20: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

@@ -18,9 +18,21 @@ public abstract class h implements a.b.o {
     public abstract void a(a.b.c r1, a.b.a.a.a r2, a.b.a.a.b.g r3);
 
     public void a(a.b.g.aq r3) {
-        if (this.e == null) goto L6;
-        this.e.a(this.d, r3);
-        return;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (this.e == null) { $pc0 = 6; continue $sw0; }
+                    this.e.a(this.d, r3);
+                    return;
+                }
+                case 6: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

@@ -20,12 +20,24 @@ public abstract class r implements a.b.o {
     public abstract void b(a.b.c r1, a.b.j r2, a.b.a.d r3, int r4, int r5, a.b.a.c.a.b r6);
 
     public boolean equals(java.lang.Object r3) {
-        if (r3 != null) goto L4;
-    L7:
-        return false;
-    L4:
-        if (getClass() != r3.getClass()) goto L7;
-        return true;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (r3 != null) { $pc0 = 4; continue $sw0; }
+                    $pc0 = 7; continue $sw0;
+                }
+                case 7: {
+                    return false;
+                }
+                case 4: {
+                    if (getClass() != r3.getClass()) { $pc0 = 7; continue $sw0; }
+                    return true;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

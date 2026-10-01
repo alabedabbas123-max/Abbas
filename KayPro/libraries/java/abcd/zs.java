@@ -14,9 +14,20 @@ public final class zs extends abcd.Abstractqs {
     }
 
     public abcd.Gs rN() {
-        if (this.v5 != null) goto L6;
-        this.v5 = new abcd.Gs(VH(), we());
-    L6:
-        return this.v5;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (this.v5 != null) { $pc0 = 6; continue $sw0; }
+                    this.v5 = new abcd.Gs(VH(), we());
+                    $pc0 = 6; continue $sw0;
+                }
+                case 6: {
+                    return this.v5;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

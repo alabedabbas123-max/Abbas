@@ -10,20 +10,32 @@ class z implements abcd.Interfacenz {
     }
 
     public z(abcd.Interfacenz r4, double r5, java.util.Random r7) {
-        if (r5 < 0.0d) goto L15;
-        if (r5 > 1.0d) goto L15;
-        if (r4 == null) goto L13;
-        if (r7 == null) goto L11;
-        this.j6 = r4;
-        this.FH = r5;
-        this.DW = r7;
-        return;
-    L11:
-        throw new java.lang.NullPointerException("random must not be null");
-    L13:
-        throw new java.lang.NullPointerException("backoff must not be null");
-    L15:
-        throw new java.lang.IllegalArgumentException("jitterPercent must be between 0.0 and 1.0");
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (r5 < 0.0d) { $pc0 = 15; continue $sw0; }
+                    if (r5 > 1.0d) { $pc0 = 15; continue $sw0; }
+                    if (r4 == null) { $pc0 = 13; continue $sw0; }
+                    if (r7 == null) { $pc0 = 11; continue $sw0; }
+                    this.j6 = r4;
+                    this.FH = r5;
+                    this.DW = r7;
+                    return;
+                }
+                case 11: {
+                    throw new java.lang.NullPointerException("random must not be null");
+                }
+                case 13: {
+                    throw new java.lang.NullPointerException("backoff must not be null");
+                }
+                case 15: {
+                    throw new java.lang.IllegalArgumentException("jitterPercent must be between 0.0 and 1.0");
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     double j6() {

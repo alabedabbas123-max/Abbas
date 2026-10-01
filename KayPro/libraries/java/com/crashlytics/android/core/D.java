@@ -7,11 +7,23 @@ class D extends com.crashlytics.android.core.W.d {
 
     @Override
     public boolean accept(java.io.File r1, java.lang.String r2) {
-        if (super.accept(r1, r2) == true) goto L5;
-    L7:
-        return false;
-    L5:
-        if (r2.endsWith(".cls") == false) goto L7;
-        return true;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (super.accept(r1, r2) == true) { $pc0 = 5; continue $sw0; }
+                    $pc0 = 7; continue $sw0;
+                }
+                case 7: {
+                    return false;
+                }
+                case 5: {
+                    if (r2.endsWith(".cls") == false) { $pc0 = 7; continue $sw0; }
+                    return true;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

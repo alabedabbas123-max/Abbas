@@ -11,10 +11,21 @@ public class SafeToast extends android.widget.Toast {
 
     @Override
     public void show() {
-        if (android.os.Looper.myLooper() != android.os.Looper.getMainLooper()) goto L5;
-        super.show();
-        return;
-    L5:
-        new android.os.Handler(android.os.Looper.getMainLooper()).post(new io.fabric.sdk.android.services.common.B(this));
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (android.os.Looper.myLooper() != android.os.Looper.getMainLooper()) { $pc0 = 5; continue $sw0; }
+                    super.show();
+                    return;
+                }
+                case 5: {
+                    new android.os.Handler(android.os.Looper.getMainLooper()).post(new io.fabric.sdk.android.services.common.B(this));
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

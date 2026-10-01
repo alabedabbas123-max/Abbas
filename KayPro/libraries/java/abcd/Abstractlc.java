@@ -16,52 +16,139 @@ public abstract class Abstractlc {
     private static java.lang.Object j6;
 
     static {
-        abcd.wu.j6(abcd.Abstractlc.class, 1067082844909081120L, 1067082844909081120L);     // Catch: java.lang.Throwable -> L8
-        if (FH == false) goto L6;
-        abcd.wu.j6(3176102765441174928L, null);     // Catch: java.lang.Throwable -> L8
-    L6:
-        j6 = new java.lang.Object();     // Catch: java.lang.Throwable -> L8
-        return;
-    L8:
-        th = move-exception;
-        if (Hw == false) goto L12;
-        abcd.wu.j6(th, 3176102765441174928L, null);
-    L12:
-        throw th;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    try {
+                        abcd.wu.j6(abcd.Abstractlc.class, 1067082844909081120L, 1067082844909081120L);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 8; continue $sw0;
+                    }
+                    if (FH == false) { $pc0 = 6; continue $sw0; }
+                    try {
+                        abcd.wu.j6(3176102765441174928L, null);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 8; continue $sw0;
+                    }
+                    $pc0 = 6; continue $sw0;
+                }
+                case 6: {
+                    try {
+                        j6 = new java.lang.Object();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 8; continue $sw0;
+                    }
+                    return;
+                }
+                case 8: {
+                    th = $ex0;
+                    if (Hw == false) { $pc0 = 12; continue $sw0; }
+                    abcd.wu.j6(th, 3176102765441174928L, null);
+                    $pc0 = 12; continue $sw0;
+                }
+                case 12: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public Abstractlc() {
-    L8:
-        th = move-exception;
-        if (Hw == false) goto L12;
-        abcd.wu.j6(th, 267002143026857037L, null);
-    L12:
-        throw th;
-    L4:
-        if (FH == false) goto L6;
-        abcd.wu.j6(267002143026857037L, null);     // Catch: java.lang.Throwable -> L8
-    L6:
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = 4;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case 8: {
+                    th = $ex1;
+                    if (Hw == false) { $pc1 = 12; continue $sw1; }
+                    abcd.wu.j6(th, 267002143026857037L, null);
+                    $pc1 = 12; continue $sw1;
+                }
+                case 12: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (FH == false) { $pc1 = 6; continue $sw1; }
+                    try {
+                        abcd.wu.j6(267002143026857037L, null);
+                    } catch (java.lang.Throwable $t) {
+                        $ex1 = $t;
+                        $pc1 = 8; continue $sw1;
+                    }
+                    $pc1 = 6; continue $sw1;
+                }
+                case 6: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public static abcd.Abstractlc j6() {
-    L14:
-        th = move-exception;
-        if (Hw == false) goto L18;
-        abcd.wu.j6(th, -1705772020450490709L, null);
-    L18:
-        throw th;
-    L4:
-        if (FH == false) goto L6;
-        abcd.wu.j6(-1705772020450490709L, null);     // Catch: java.lang.Throwable -> L14
-    L6:
-        java.lang.Object r3 = j6;     // Catch: java.lang.Throwable -> L14
-        monitor-enter(r3);     // Catch: java.lang.Throwable -> L14
-        abcd.Abstractlc r4 = DW;     // Catch: java.lang.Throwable -> L11
-        monitor-exit(r3);     // Catch: java.lang.Throwable -> L11
-        return r4;
-    L11:
-        th = move-exception;
-        throw th;     // Catch: java.lang.Throwable -> L14
+        java.lang.Object r3 = null;
+        abcd.Abstractlc r4 = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = 4;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case 14: {
+                    th = $ex2;
+                    if (Hw == false) { $pc2 = 18; continue $sw2; }
+                    abcd.wu.j6(th, -1705772020450490709L, null);
+                    $pc2 = 18; continue $sw2;
+                }
+                case 18: {
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (FH == false) { $pc2 = 6; continue $sw2; }
+                    try {
+                        abcd.wu.j6(-1705772020450490709L, null);
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        $pc2 = 14; continue $sw2;
+                    }
+                    $pc2 = 6; continue $sw2;
+                }
+                case 6: {
+                    try {
+                        r3 = j6;
+                        monitor-enter(r3);
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        $pc2 = 14; continue $sw2;
+                    }
+                    try {
+                        r4 = DW;
+                        monitor-exit(r3);
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        $pc2 = 11; continue $sw2;
+                    }
+                    return r4;
+                }
+                case 11: {
+                    th = $ex2;
+                    try {
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    } catch (java.lang.Throwable $t) {
+                        $ex2 = $t;
+                        $pc2 = 14; continue $sw2;
+                    }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public abstract boolean j6(java.io.File r1, long r2);

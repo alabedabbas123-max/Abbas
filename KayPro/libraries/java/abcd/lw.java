@@ -50,25 +50,40 @@ public class lw implements com.appfour.backbone.api.define.DefineOccurrences {
     }
 
     private int j6(boolean r2) {
-        if (this.FH == false) goto L7;
-        return abcd.pw.j6;
-    L7:
-        if (this.Hw == false) goto L11;
-        return abcd.pw.j6(this, r2);
-    L11:
-        if (this.v5 == false) goto L15;
-        return abcd.pw.DW(this, r2);
-    L15:
-        if (this.Zo == false) goto L19;
-        return abcd.pw.FH(this, r2);
-    L19:
-        if (this.VH == false) goto L23;
-        return abcd.pw.v5(this, r2);
-    L23:
-        if (this.gn == false) goto L27;
-        return abcd.pw.Hw(this, r2);
-    L27:
-        return abcd.pw.j6;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (this.FH == false) { $pc0 = 7; continue $sw0; }
+                    return abcd.pw.j6;
+                }
+                case 7: {
+                    if (this.Hw == false) { $pc0 = 11; continue $sw0; }
+                    return abcd.pw.j6(this, r2);
+                }
+                case 11: {
+                    if (this.v5 == false) { $pc0 = 15; continue $sw0; }
+                    return abcd.pw.DW(this, r2);
+                }
+                case 15: {
+                    if (this.Zo == false) { $pc0 = 19; continue $sw0; }
+                    return abcd.pw.FH(this, r2);
+                }
+                case 19: {
+                    if (this.VH == false) { $pc0 = 23; continue $sw0; }
+                    return abcd.pw.v5(this, r2);
+                }
+                case 23: {
+                    if (this.gn == false) { $pc0 = 27; continue $sw0; }
+                    return abcd.pw.Hw(this, r2);
+                }
+                case 27: {
+                    return abcd.pw.j6;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     static abcd.lw.a j6(abcd.lw r0) {
@@ -76,14 +91,27 @@ public class lw implements com.appfour.backbone.api.define.DefineOccurrences {
     }
 
     private void j6(long r3, com.appfour.backbone.api.objects.EventData r5) {
-        if (this.FH == false) goto L7;
-        abcd.iw.j6(this, r3, r5);
-        return;
-    L7:
-        if (j6(true) == abcd.pw.DW) goto L10;
-        abcd.iw.j6(this, r3, r5);
-        abcd.kv.DW(j6());
-        return;
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if (this.FH == false) { $pc1 = 7; continue $sw1; }
+                    abcd.iw.j6(this, r3, r5);
+                    return;
+                }
+                case 7: {
+                    if (j6(true) == abcd.pw.DW) { $pc1 = 10; continue $sw1; }
+                    abcd.iw.j6(this, r3, r5);
+                    abcd.kv.DW(j6());
+                    return;
+                }
+                case 10: {
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     static void j6(abcd.lw r0, long r1, com.appfour.backbone.api.objects.EventData r3) {
@@ -95,10 +123,20 @@ public class lw implements com.appfour.backbone.api.define.DefineOccurrences {
     }
 
     public boolean FH() {
-        if (j6(false) != abcd.pw.j6) goto L6;
-        return true;
-    L6:
-        return false;
+        java.lang.Throwable $ex2 = null;
+        int $pc2 = -1;
+        $sw2: while (true) {
+            switch ($pc2) {
+                case -1: {
+                    if (j6(false) != abcd.pw.j6) { $pc2 = 6; continue $sw2; }
+                    return true;
+                }
+                case 6: {
+                    return false;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     @Override

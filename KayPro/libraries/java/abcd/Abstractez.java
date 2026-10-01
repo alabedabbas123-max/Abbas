@@ -44,11 +44,21 @@ public abstract class Abstractez<Params, Progress, Result> extends Xy<Params, Pr
     }
 
     public void j6(abcd.Interfacelz r3) {
-        if (Hw() != abcd.Xy.d.j6) goto L7;
-        ((abcd._y) ((abcd.Interfacehz) gn())).j6(r3);
-        return;
-    L7:
-        throw new java.lang.IllegalStateException("Must not add Dependency after task is running");
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (Hw() != abcd.Xy.d.j6) { $pc0 = 7; continue $sw0; }
+                    ((abcd._y) ((abcd.Interfacehz) gn())).j6(r3);
+                    return;
+                }
+                case 7: {
+                    throw new java.lang.IllegalStateException("Must not add Dependency after task is running");
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public void j6(java.lang.Object r1) {

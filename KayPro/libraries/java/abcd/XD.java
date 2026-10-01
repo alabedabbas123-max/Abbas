@@ -22,13 +22,24 @@ class XD extends java.util.zip.Inflater {
 
     @Override
     public int inflate(byte[] r1, int r2, int r3) {
-        if (r3 == 0) goto L6;
-        return super.inflate(r1, r2, r3);
-    L6:
-        if (super.inflate(j6, 0, 1) > 0) goto L9;
-        return 0;
-    L9:
-        throw new java.lang.RuntimeException();
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    if (r3 == 0) { $pc0 = 6; continue $sw0; }
+                    return super.inflate(r1, r2, r3);
+                }
+                case 6: {
+                    if (super.inflate(j6, 0, 1) > 0) { $pc0 = 9; continue $sw0; }
+                    return 0;
+                }
+                case 9: {
+                    throw new java.lang.RuntimeException();
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     void j6() {

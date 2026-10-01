@@ -7,7 +7,7 @@ public class jE {
     private final boolean Hw;
     private final java.lang.String v5;
 
-    public static final enum a extends java.lang.Enum<abcd.jE.a> {
+    public static final class a extends com.almlkaide.kaypro.internal.EnumBase {
         public static final abcd.jE.a DW = null;
         public static final abcd.jE.a FH = null;
         private static final abcd.jE.a[] Hw = null;
@@ -25,7 +25,7 @@ public class jE {
         }
 
         public static abcd.jE.a valueOf(java.lang.String r1) {
-            return (abcd.jE.a) java.lang.Enum.valueOf(abcd.jE.a.class, r1);
+            return (abcd.jE.a) com.almlkaide.kaypro.internal.EnumBase.valueOf(abcd.jE.a.values(), r1);
         }
 
         public static abcd.jE.a[] values() {

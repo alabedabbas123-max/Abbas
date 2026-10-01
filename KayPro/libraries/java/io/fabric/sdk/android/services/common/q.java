@@ -15,16 +15,40 @@ class q extends io.fabric.sdk.android.services.common.g {
 
     @Override
     public void j6() {
-        io.fabric.sdk.android.Fabric.getLogger().Hw("Fabric", "Executing shutdown hook for " + this.j6);     // Catch: java.lang.InterruptedException -> L7
-        this.DW.shutdown();     // Catch: java.lang.InterruptedException -> L7
-        if (this.DW.awaitTermination(this.FH, this.Hw) == true) goto L11;
-        io.fabric.sdk.android.Fabric.getLogger().Hw("Fabric", this.j6 + " did not shut down in the allocated time. Requesting immediate shutdown.");     // Catch: java.lang.InterruptedException -> L7
-        this.DW.shutdownNow();     // Catch: java.lang.InterruptedException -> L7
-        return;
-    L11:
-        return;
-    L7:
-        io.fabric.sdk.android.Fabric.getLogger().Hw("Fabric", java.lang.String.format(java.util.Locale.US, "Interrupted while waiting for %s to shut down. Requesting immediate shutdown.", new java.lang.Object[]{this.j6}));
-        this.DW.shutdownNow();
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    try {
+                        io.fabric.sdk.android.Fabric.getLogger().Hw("Fabric", "Executing shutdown hook for " + this.j6);
+                        this.DW.shutdown();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.lang.InterruptedException) { $pc0 = 7; continue $sw0; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    if (this.DW.awaitTermination(this.FH, this.Hw) == true) { $pc0 = 11; continue $sw0; }
+                    try {
+                        io.fabric.sdk.android.Fabric.getLogger().Hw("Fabric", this.j6 + " did not shut down in the allocated time. Requesting immediate shutdown.");
+                        this.DW.shutdownNow();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        if ($t instanceof java.lang.InterruptedException) { $pc0 = 7; continue $sw0; }
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    }
+                    return;
+                }
+                case 11: {
+                    return;
+                }
+                case 7: {
+                    io.fabric.sdk.android.Fabric.getLogger().Hw("Fabric", java.lang.String.format(java.util.Locale.US, "Interrupted while waiting for %s to shut down. Requesting immediate shutdown.", new java.lang.Object[]{this.j6}));
+                    this.DW.shutdownNow();
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

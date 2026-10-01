@@ -23,42 +23,88 @@ class ClassG extends java.io.FileOutputStream {
 
     @Override
     public synchronized void close() {
-        monitor-enter(this);
-    L21:
-        th = move-exception;
-        throw th;
-    L4:
-        if (this.v5 == false) goto L8;
-        monitor-exit(this);
-        return;
-    L8:
-        this.v5 = true;     // Catch: java.lang.Throwable -> L21
-        super.flush();     // Catch: java.lang.Throwable -> L21
-        super.close();     // Catch: java.lang.Throwable -> L21
-        java.io.File r0 = new java.io.File(this.DW + ".cls");     // Catch: java.lang.Throwable -> L21
-        if (this.FH.renameTo(r0) == false) goto L13;
-        this.FH = null;     // Catch: java.lang.Throwable -> L21
-        this.Hw = r0;     // Catch: java.lang.Throwable -> L21
-        monitor-exit(this);
-        return;
-    L13:
-        java.lang.String r1 = "";
-        if (r0.exists() == false) goto L16;
-        r1 = " (target already exists)";
-    L20:
-        throw new java.io.IOException("Could not rename temp file: " + this.FH + " -> " + r0 + r1);     // Catch: java.lang.Throwable -> L21
-    L16:
-        if (this.FH.exists() == true) goto L20;
-        r1 = " (source does not exist)";
-        goto L20
+        java.io.File r0 = null;
+        java.lang.String r1 = null;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    monitor-enter(this);
+                    $pc0 = 21; continue $sw0;
+                }
+                case 21: {
+                    th = $ex0;
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                case 4: {
+                    if (this.v5 == false) { $pc0 = 8; continue $sw0; }
+                    monitor-exit(this);
+                    return;
+                }
+                case 8: {
+                    try {
+                        this.v5 = true;
+                        super.flush();
+                        super.close();
+                        r0 = new java.io.File(this.DW + ".cls");
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 21; continue $sw0;
+                    }
+                    if (this.FH.renameTo(r0) == false) { $pc0 = 13; continue $sw0; }
+                    try {
+                        this.FH = null;
+                        this.Hw = r0;
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 21; continue $sw0;
+                    }
+                    monitor-exit(this);
+                    return;
+                }
+                case 13: {
+                    r1 = "";
+                    if (r0.exists() == false) { $pc0 = 16; continue $sw0; }
+                    r1 = " (target already exists)";
+                    $pc0 = 20; continue $sw0;
+                }
+                case 20: {
+                    try {
+                        throw new java.io.IOException("Could not rename temp file: " + this.FH + " -> " + r0 + r1);
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 21; continue $sw0;
+                    }
+                }
+                case 16: {
+                    if (this.FH.exists() == true) { $pc0 = 20; continue $sw0; }
+                    r1 = " (source does not exist)";
+                    { $pc0 = 20; continue $sw0; }
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 
     public void j6() {
-        if (this.v5 == false) goto L5;
-        return;
-    L5:
-        this.v5 = true;
-        super.flush();
-        super.close();
+        java.lang.Throwable $ex1 = null;
+        int $pc1 = -1;
+        $sw1: while (true) {
+            switch ($pc1) {
+                case -1: {
+                    if (this.v5 == false) { $pc1 = 5; continue $sw1; }
+                    return;
+                }
+                case 5: {
+                    this.v5 = true;
+                    super.flush();
+                    super.close();
+                    return;
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

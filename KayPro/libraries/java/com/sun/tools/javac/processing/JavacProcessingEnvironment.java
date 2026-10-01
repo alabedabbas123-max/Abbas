@@ -591,7 +591,7 @@ public class JavacProcessingEnvironment implements ProcessingEnvironment, Closea
         if (unmatchedAnnotations.size() == 0) {
             unmatchedAnnotations.put("", null);
         }
-        ?? Iterator2 = this.discoveredProcs.iterator2();
+        java.lang.Object Iterator2 = this.discoveredProcs.iterator2();
         Set<Element> rootElements = new LinkedHashSet<>();
         rootElements.addAll(topLevelClasses);
         rootElements.addAll(packageInfoFiles);

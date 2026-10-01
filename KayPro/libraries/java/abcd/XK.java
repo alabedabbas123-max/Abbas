@@ -11,12 +11,28 @@ public class XK extends java.io.BufferedOutputStream {
 
     @Override
     public void close() {
-        flush();     // Catch: java.lang.Throwable -> L5
-        super.close();
-        return;
-    L5:
-        th = move-exception;
-        super.close();
-        throw th;
+        java.lang.Throwable th = null;
+        java.lang.Throwable $ex0 = null;
+        int $pc0 = -1;
+        $sw0: while (true) {
+            switch ($pc0) {
+                case -1: {
+                    try {
+                        flush();
+                    } catch (java.lang.Throwable $t) {
+                        $ex0 = $t;
+                        $pc0 = 5; continue $sw0;
+                    }
+                    super.close();
+                    return;
+                }
+                case 5: {
+                    th = $ex0;
+                    super.close();
+                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                }
+                default: throw new java.lang.IllegalStateException();
+            }
+        }
     }
 }

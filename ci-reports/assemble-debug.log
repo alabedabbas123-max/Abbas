@@ -1,0 +1,2461 @@
+Downloading https://services.gradle.org/distributions/gradle-7.6.4-bin.zip
+...........10%............20%............30%...........40%............50%............60%...........70%............80%............90%............100%
+
+Welcome to Gradle 7.6.4!
+
+Here are the highlights of this release:
+ - Added support for Java 19.
+ - Introduced `--rerun` flag for individual task rerun.
+ - Improved dependency block for test suites to be strongly typed.
+ - Added a pluggable system for Java toolchains provisioning.
+
+For more details see https://docs.gradle.org/7.6.4/release-notes.html
+
+To honour the JVM settings for this build a single-use Daemon process will be forked. See https://docs.gradle.org/7.6.4/userguide/gradle_daemon.html#sec:disabling_the_daemon.
+Daemon will be stopped at the end of the build 
+Checking the license for package Android SDK Build-Tools 30.0.3 in /usr/local/lib/android/sdk/licenses
+License for package Android SDK Build-Tools 30.0.3 accepted.
+Preparing "Install Android SDK Build-Tools 30.0.3 (revision: 30.0.3)".
+"Install Android SDK Build-Tools 30.0.3 (revision: 30.0.3)" ready.
+Installing Android SDK Build-Tools 30.0.3 in /usr/local/lib/android/sdk/build-tools/30.0.3
+"Install Android SDK Build-Tools 30.0.3 (revision: 30.0.3)" complete.
+"Install Android SDK Build-Tools 30.0.3 (revision: 30.0.3)" finished.
+Checking the license for package Android SDK Platform 33 in /usr/local/lib/android/sdk/licenses
+License for package Android SDK Platform 33 accepted.
+Preparing "Install Android SDK Platform 33 (revision: 3)".
+"Install Android SDK Platform 33 (revision: 3)" ready.
+Installing Android SDK Platform 33 in /usr/local/lib/android/sdk/platforms/android-33
+"Install Android SDK Platform 33 (revision: 3)" complete.
+"Install Android SDK Platform 33 (revision: 3)" finished.
+> Task :preBuild UP-TO-DATE
+> Task :preDebugBuild UP-TO-DATE
+> Task :mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :compileDebugAidl NO-SOURCE
+> Task :compileDebugRenderscript NO-SOURCE
+> Task :generateDebugBuildConfig
+> Task :javaPreCompileDebug
+> Task :checkDebugAarMetadata
+> Task :generateDebugResValues
+> Task :mapDebugSourceSetPaths
+> Task :generateDebugResources
+> Task :createDebugCompatibleScreenManifests
+> Task :extractDeepLinksDebug
+
+> Task :processDebugMainManifest
+package="com.almlkaide.kaypro" found in source AndroidManifest.xml: /home/runner/work/Abbas/Abbas/KayPro/AndroidManifest.xml.
+Setting the namespace via a source AndroidManifest.xml's package attribute is deprecated.
+Please instead set the namespace (or testNamespace) in the module's build.gradle file, as described here: https://developer.android.com/studio/build/configure-app-module#set-namespace
+This migration can be done automatically using the AGP Upgrade Assistant, please refer to https://developer.android.com/studio/build/agp-upgrade-assistant for more information.
+
+> Task :mergeDebugResources
+> Task :processDebugManifest
+> Task :mergeDebugShaders
+> Task :compileDebugShaders NO-SOURCE
+> Task :generateDebugAssets UP-TO-DATE
+> Task :mergeDebugAssets
+> Task :processDebugJavaRes NO-SOURCE
+> Task :compressDebugAssets
+> Task :checkDebugDuplicateClasses
+> Task :mergeDebugJavaResource
+> Task :desugarDebugFileDependencies
+> Task :mergeDebugJniLibFolders
+> Task :processDebugManifestForPackage
+> Task :mergeDebugNativeLibs
+
+> Task :stripDebugDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libcrash_analysis.so, liblink.so.
+
+> Task :validateSigningDebug
+> Task :writeDebugAppMetadata
+> Task :writeDebugSigningConfigVersions
+warn: removing resource com.almlkaide.kaypro:array/layout_design_activity_xml_theme without required default value.
+
+> Task :processDebugResources
+
+> Task :compileDebugJavaWithJavac
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/crashlytics/android/Crashlytics.java:171: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/crashlytics/android/Crashlytics.java:178: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/crashlytics/android/core/W.java:2056: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/crashlytics/android/core/W.java:2065: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/crashlytics/android/core/ca.java:756: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/crashlytics/android/core/ca.java:770: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/crashlytics/android/core/La.java:251: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/crashlytics/android/core/La.java:256: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/crashlytics/android/core/La.java:343: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/crashlytics/android/core/La.java:358: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/crashlytics/android/core/La.java:369: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/crashlytics/android/core/La.java:392: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/crashlytics/android/core/La.java:431: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/crashlytics/android/core/ma.java:154: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/crashlytics/android/core/ma.java:178: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/crashlytics/android/core/ClassG.java:34: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/crashlytics/android/core/ClassG.java:43: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/crashlytics/android/core/ClassG.java:64: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/dropbox/client2/android/AuthActivity.java:157: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/dropbox/client2/android/AuthActivity.java:160: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/ChannelForwardedTCPIP.java:61: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/ChannelForwardedTCPIP.java:103: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/ChannelForwardedTCPIP.java:117: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/ChannelForwardedTCPIP.java:168: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/ChannelForwardedTCPIP.java:209: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/ChannelForwardedTCPIP.java:250: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/ChannelForwardedTCPIP.java:269: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/ChannelForwardedTCPIP.java:299: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/ChannelForwardedTCPIP.java:348: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/ChannelForwardedTCPIP.java:367: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/ChannelForwardedTCPIP.java:516: error: not a statement
+                        monitor-enter(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/ChannelForwardedTCPIP.java:538: error: not a statement
+                        monitor-exit(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/ChannelForwardedTCPIP.java:547: error: not a statement
+                        monitor-exit(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/UserAuthPublicKey.java:37: error: not a statement
+                    monitor-enter(r2);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/UserAuthPublicKey.java:47: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/UserAuthPublicKey.java:277: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/UserAuthPublicKey.java:336: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/UserAuthPublicKey.java:345: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/ChannelSession.java:182: error: not a statement
+                    monitor-enter(r3);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/ChannelSession.java:185: error: not a statement
+                        monitor-exit(r3);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/ChannelX11.java:45: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/ChannelX11.java:56: error: not a statement
+                        monitor-enter(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/ChannelX11.java:64: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/ChannelX11.java:111: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/ChannelX11.java:162: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/ChannelX11.java:166: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/ChannelX11.java:268: error: not a statement
+                    monitor-enter(r6);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/ChannelX11.java:271: error: not a statement
+                        monitor-exit(r6);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/KnownHosts.java:94: error: not a statement
+                        monitor-enter(r1);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/KnownHosts.java:98: error: not a statement
+                            monitor-exit(r1);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/KnownHosts.java:111: error: not a statement
+                            monitor-enter(r0);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/KnownHosts.java:123: error: not a statement
+                            monitor-exit(r0);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/KnownHosts.java:175: error: not a statement
+                            monitor-enter(r0);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/KnownHosts.java:188: error: not a statement
+                            monitor-exit(r0);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/KnownHosts.java:294: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/KnownHosts.java:312: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/KnownHosts.java:404: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/KnownHosts.java:406: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/KnownHosts.java:418: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/KnownHosts.java:449: error: not a statement
+                    monitor-enter(r2);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/KnownHosts.java:477: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/KnownHosts.java:495: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/KnownHosts.java:546: error: not a statement
+                    monitor-enter(r3);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/KnownHosts.java:586: error: not a statement
+                        monitor-exit(r3);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/KnownHosts.java:1263: error: not a statement
+                        monitor-enter(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/KnownHosts.java:1359: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/KnownHosts.java:1419: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/KnownHosts.java:1501: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/KnownHosts.java:1547: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/KnownHosts.java:1624: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Channel.java:94: error: not a statement
+                        monitor-enter(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Channel.java:103: error: not a statement
+                        monitor-exit(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Channel.java:119: error: not a statement
+                        monitor-exit(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Channel.java:139: error: not a statement
+                        monitor-enter(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Channel.java:178: error: not a statement
+                        monitor-exit(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Channel.java:207: error: not a statement
+                        monitor-exit(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Channel.java:410: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Channel.java:416: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Channel.java:443: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Channel.java:465: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Channel.java:483: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Channel.java:553: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Channel.java:556: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Channel.java:587: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Channel.java:629: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Channel.java:668: error: not a statement
+                        monitor-enter(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Channel.java:687: error: not a statement
+                        monitor-exit(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Channel.java:698: error: not a statement
+                        monitor-exit(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Channel.java:759: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Channel.java:766: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Channel.java:832: error: not a statement
+                        monitor-enter(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Channel.java:863: error: not a statement
+                        monitor-exit(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Channel.java:945: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Channel.java:1006: error: not a statement
+                        monitor-exit(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Channel.java:1088: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Channel.java:1105: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Channel.java:1210: error: not a statement
+                        monitor-enter(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Channel.java:1218: error: not a statement
+                        monitor-exit(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Channel.java:1289: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Channel.java:1306: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Packet.java:115: error: not a statement
+                    monitor-enter(r8);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Packet.java:118: error: not a statement
+                        monitor-exit(r8);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/JSch.java:95: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/JSch.java:98: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/JSch.java:146: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/JSch.java:149: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/JSch.java:201: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/JSch.java:208: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/JSch.java:268: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/JSch.java:287: error: not a statement
+                        monitor-exit(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/JSch.java:342: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/JSch.java:353: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/JSch.java:383: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/JSch.java:386: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/JSch.java:417: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/JSch.java:420: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/KeyPair.java:1916: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/KeyPair.java:1977: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Session.java:342: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Session.java:361: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Session.java:469: error: not a statement
+                    monitor-enter(r7);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Session.java:473: error: not a statement
+                        monitor-exit(r7);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Session.java:639: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Session.java:704: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Session.java:1075: error: not a statement
+                    monitor-enter(r15);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Session.java:1078: error: not a statement
+                        monitor-exit(r15);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Session.java:1089: error: not a statement
+                    monitor-enter(r15);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Session.java:1092: error: not a statement
+                        monitor-exit(r15);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Session.java:1110: error: not a statement
+                    monitor-enter(r15);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Session.java:1125: error: not a statement
+                        monitor-exit(r15);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Session.java:1180: error: not a statement
+                    monitor-enter(r15);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Session.java:1183: error: not a statement
+                        monitor-exit(r15);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Session.java:2321: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Session.java:2342: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Session.java:2385: error: not a statement
+                        monitor-enter(r1);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Session.java:2393: error: not a statement
+                        monitor-exit(r1);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Session.java:2570: error: not a statement
+                        monitor-enter(r9);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Session.java:2581: error: not a statement
+                        monitor-exit(r9);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Session.java:3137: error: not a statement
+                        monitor-enter(r26);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Session.java:3185: error: not a statement
+                        monitor-exit(r26);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Session.java:3431: error: not a statement
+                    monitor-enter(r5);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Session.java:3434: error: not a statement
+                        monitor-exit(r5);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Session.java:3510: error: not a statement
+                    monitor-enter(r14);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Session.java:3568: error: not a statement
+                        monitor-exit(r14);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Session.java:3576: error: not a statement
+                    monitor-enter(r14);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Session.java:3648: error: not a statement
+                        monitor-exit(r14);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Session.java:3663: error: not a statement
+                    monitor-enter(r14);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Session.java:3675: error: not a statement
+                        monitor-exit(r14);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Session.java:3685: error: not a statement
+                        monitor-exit(r14);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Session.java:3698: error: not a statement
+                        monitor-exit(r14);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Session.java:3720: error: not a statement
+                        monitor-exit(r14);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Session.java:3763: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Session.java:3783: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Session.java:4204: error: not a statement
+                        monitor-enter(r22);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Session.java:4221: error: not a statement
+                        monitor-exit(r22);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Session.java:4279: error: not a statement
+                        monitor-enter(r23);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/Session.java:4296: error: not a statement
+                        monitor-exit(r23);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/ChannelDirectTCPIP.java:164: error: not a statement
+                        monitor-enter(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/ChannelDirectTCPIP.java:186: error: not a statement
+                        monitor-exit(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/ChannelDirectTCPIP.java:195: error: not a statement
+                        monitor-exit(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/PortWatcher.java:112: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/PortWatcher.java:139: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/PortWatcher.java:161: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/PortWatcher.java:243: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/PortWatcher.java:297: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/jce/AES128CBC.java:55: error: not a statement
+                        monitor-enter(javax.crypto.Cipher.class);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/jce/AES128CBC.java:74: error: not a statement
+                        monitor-exit(javax.crypto.Cipher.class);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/jce/ARCFOUR128.java:50: error: not a statement
+                        monitor-enter(javax.crypto.Cipher.class);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/jce/ARCFOUR128.java:69: error: not a statement
+                        monitor-exit(javax.crypto.Cipher.class);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/jce/AES192CTR.java:55: error: not a statement
+                        monitor-enter(javax.crypto.Cipher.class);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/jce/AES192CTR.java:74: error: not a statement
+                        monitor-exit(javax.crypto.Cipher.class);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/jce/AES128CTR.java:55: error: not a statement
+                        monitor-enter(javax.crypto.Cipher.class);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/jce/AES128CTR.java:74: error: not a statement
+                        monitor-exit(javax.crypto.Cipher.class);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/jce/BlowfishCBC.java:55: error: not a statement
+                        monitor-enter(javax.crypto.Cipher.class);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/jce/BlowfishCBC.java:74: error: not a statement
+                        monitor-exit(javax.crypto.Cipher.class);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/jce/AES256CBC.java:55: error: not a statement
+                        monitor-enter(javax.crypto.Cipher.class);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/jce/AES256CBC.java:74: error: not a statement
+                        monitor-exit(javax.crypto.Cipher.class);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/jce/AES256CTR.java:55: error: not a statement
+                        monitor-enter(javax.crypto.Cipher.class);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/jce/AES256CTR.java:74: error: not a statement
+                        monitor-exit(javax.crypto.Cipher.class);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/jce/ARCFOUR256.java:50: error: not a statement
+                        monitor-enter(javax.crypto.Cipher.class);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/jce/ARCFOUR256.java:69: error: not a statement
+                        monitor-exit(javax.crypto.Cipher.class);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/jce/TripleDESCTR.java:55: error: not a statement
+                        monitor-enter(javax.crypto.Cipher.class);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/jce/TripleDESCTR.java:74: error: not a statement
+                        monitor-exit(javax.crypto.Cipher.class);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/jce/ARCFOUR.java:47: error: not a statement
+                        monitor-enter(javax.crypto.Cipher.class);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/jce/ARCFOUR.java:66: error: not a statement
+                        monitor-exit(javax.crypto.Cipher.class);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/jce/AES192CBC.java:55: error: not a statement
+                        monitor-enter(javax.crypto.Cipher.class);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/jce/AES192CBC.java:74: error: not a statement
+                        monitor-exit(javax.crypto.Cipher.class);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/jce/TripleDESCBC.java:55: error: not a statement
+                        monitor-enter(javax.crypto.Cipher.class);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/jce/TripleDESCBC.java:74: error: not a statement
+                        monitor-exit(javax.crypto.Cipher.class);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/LocalIdentityRepository.java:23: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/LocalIdentityRepository.java:25: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/LocalIdentityRepository.java:57: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/LocalIdentityRepository.java:65: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/LocalIdentityRepository.java:83: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/LocalIdentityRepository.java:105: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/LocalIdentityRepository.java:124: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/LocalIdentityRepository.java:142: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/LocalIdentityRepository.java:159: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/LocalIdentityRepository.java:171: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/LocalIdentityRepository.java:195: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/LocalIdentityRepository.java:224: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/ChannelAgentForwarding.java:146: error: not a statement
+                    monitor-enter(r3);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/ChannelAgentForwarding.java:216: error: not a statement
+                        monitor-exit(r3);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/ChannelAgentForwarding.java:241: error: not a statement
+                    monitor-enter(r6);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/jcraft/jsch/ChannelAgentForwarding.java:285: error: not a statement
+                        monitor-exit(r6);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/LogCatConsole.java:178: error: not a statement
+                            monitor-enter(r2);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/LogCatConsole.java:249: error: not a statement
+                            monitor-exit(r2);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/LogCatConsole.java:442: error: not a statement
+                            monitor-enter(r2);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/LogCatConsole.java:453: error: not a statement
+                            monitor-exit(r2);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/LogCatConsole.java:476: error: not a statement
+                            monitor-exit(r2);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/LogCatConsole.java:522: error: not a statement
+                            monitor-enter(r0);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/LogCatConsole.java:533: error: not a statement
+                            monitor-exit(r0);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/LogCatConsole.java:563: error: not a statement
+                            monitor-exit(r0);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/LogCatConsole.java:572: error: not a statement
+                            monitor-exit(r0);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/LogCatConsole.java:779: error: not a statement
+                            monitor-enter(r2);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/LogCatConsole.java:786: error: not a statement
+                            monitor-exit(r2);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/LogCatConsole.java:838: error: not a statement
+                            monitor-enter(r2);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/LogCatConsole.java:859: error: not a statement
+                            monitor-exit(r2);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/LogCatConsole.java:868: error: not a statement
+                            monitor-exit(r2);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/LogCatConsole.java:955: error: not a statement
+                            monitor-enter(r0);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/LogCatConsole.java:965: error: not a statement
+                            monitor-exit(r0);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/LogCatConsole.java:995: error: not a statement
+                            monitor-exit(r0);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/LogCatConsole.java:1005: error: not a statement
+                            monitor-exit(r0);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/LogCatConsole.java:1015: error: not a statement
+                            monitor-exit(r0);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/LogCatConsole.java:1024: error: not a statement
+                            monitor-exit(r0);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/LogCatConsole.java:1034: error: not a statement
+                            monitor-exit(r0);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/LogCatConsole.java:1044: error: not a statement
+                            monitor-exit(r0);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/LogCatConsole.java:1054: error: not a statement
+                            monitor-exit(r0);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/LogCatConsole.java:1063: error: not a statement
+                            monitor-exit(r0);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/LogCatConsole.java:1109: error: not a statement
+                            monitor-enter(r0);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/LogCatConsole.java:1149: error: not a statement
+                            monitor-exit(r0);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/LogCatConsole.java:1213: error: not a statement
+                            monitor-enter(r2);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/LogCatConsole.java:1239: error: not a statement
+                            monitor-exit(r2);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/LogCatConsole.java:1471: error: not a statement
+                            monitor-enter(r2);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/LogCatConsole.java:1478: error: not a statement
+                            monitor-exit(r2);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/LogCatConsole.java:1973: error: not a statement
+                        monitor-enter(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/LogCatConsole.java:1980: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/LogCatConsole.java:2071: error: not a statement
+                        monitor-enter(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/LogCatConsole.java:2078: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/LogCatConsole.java:2134: error: not a statement
+                        monitor-enter(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/LogCatConsole.java:2141: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/LogCatConsole.java:2197: error: not a statement
+                        monitor-enter(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/LogCatConsole.java:2205: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/LogCatConsole.java:2331: error: not a statement
+                        monitor-enter(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/LogCatConsole.java:2375: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/LogCatConsole.java:2429: error: not a statement
+                        monitor-enter(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/LogCatConsole.java:2473: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/LogCatConsole.java:2625: error: not a statement
+                        monitor-enter(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/LogCatConsole.java:2632: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/LogCatConsole.java:2727: error: not a statement
+                        monitor-enter(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/LogCatConsole.java:2734: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/LogCatConsole.java:2832: error: not a statement
+                        monitor-enter(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/LogCatConsole.java:2839: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/AIDEEditorPager.java:2215: error: integer number too large
+                    r0 = -5289718353106690437;
+                          ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/trainer/g.java:4920: error: integer number too large
+                    r0 = -4868317514726911395;
+                          ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/scm/DiffView.java:1602: error: not a statement
+                        monitor-enter(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/scm/DiffView.java:1624: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/scm/DiffView.java:1654: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/scm/DiffView.java:1717: error: not a statement
+                        monitor-enter(r5);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/scm/DiffView.java:1755: error: not a statement
+                        monitor-exit(r5);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/scm/ua.java:1349: error: not a statement
+                            monitor-enter(r2);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/scm/ua.java:1370: error: not a statement
+                            monitor-exit(r2);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/scm/ua.java:1379: error: not a statement
+                            monitor-exit(r2);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/scm/ua.java:1470: error: not a statement
+                            monitor-enter(r0);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/scm/ua.java:1490: error: not a statement
+                            monitor-exit(r0);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/scm/ua.java:1512: error: not a statement
+                            monitor-exit(r0);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/scm/ua.java:1598: error: not a statement
+                            monitor-enter(r2);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/scm/ua.java:1605: error: not a statement
+                            monitor-exit(r2);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/scm/ua.java:1658: error: not a statement
+                            monitor-enter(r2);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/scm/ua.java:1665: error: not a statement
+                            monitor-exit(r2);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/scm/ua.java:1716: error: not a statement
+                            monitor-enter(r2);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/scm/ua.java:1736: error: not a statement
+                            monitor-exit(r2);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/scm/ua.java:1748: error: not a statement
+                            monitor-exit(r2);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/scm/ua.java:2531: error: not a statement
+                        monitor-enter(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/scm/ua.java:2553: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/scm/ua.java:2608: error: not a statement
+                        monitor-enter(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/scm/ua.java:2630: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/scm/ua.java:2641: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/CodeEditText.java:754: error: not a statement
+                            monitor-enter(r2);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/CodeEditText.java:763: error: not a statement
+                            monitor-exit(r2);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/CodeEditText.java:924: error: not a statement
+                        monitor-enter(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/CodeEditText.java:929: error: not a statement
+                            monitor-exit(r2);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/a.java:53: error: not a statement
+                        monitor-enter(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/a.java:60: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/a.java:67: error: not a statement
+                        monitor-enter(r1);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/a.java:74: error: not a statement
+                        monitor-exit(r1);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/a.java:171: error: not a statement
+                        monitor-enter(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/a.java:178: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/a.java:185: error: not a statement
+                        monitor-enter(r1);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/a.java:192: error: not a statement
+                        monitor-exit(r1);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/editor/AbstractRunnablei.java:111: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/editor/AbstractRunnablei.java:146: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/editor/AbstractRunnablei.java:168: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/editor/AbstractRunnablei.java:290: error: not a statement
+                        monitor-enter(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/editor/AbstractRunnablei.java:297: error: not a statement
+                        monitor-exit(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/editor/ClassQ.java:171: error: not a statement
+                        monitor-enter(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/editor/ClassQ.java:196: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/editor/ClassQ.java:206: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/editor/ClassQ.java:220: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/editor/ClassQ.java:233: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/editor/ClassQ.java:246: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/editor/ClassQ.java:260: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/editor/ClassQ.java:281: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/editor/ClassQ.java:291: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/editor/ClassQ.java:305: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/editor/ClassQ.java:318: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/editor/ClassG.java:1301: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/editor/ClassG.java:1357: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/editor/ClassG.java:1895: error: not a statement
+                        monitor-enter(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/editor/ClassG.java:1935: error: not a statement
+                        monitor-exit(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/editor/ClassG.java:2005: error: not a statement
+                        monitor-enter(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/editor/ClassG.java:2029: error: not a statement
+                        monitor-exit(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/editor/ClassG.java:3205: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/editor/ClassG.java:3235: error: not a statement
+                        monitor-exit(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/editor/ClassG.java:3263: error: not a statement
+                        monitor-exit(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/editor/ClassG.java:3362: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/editor/ClassG.java:3503: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/editor/ClassG.java:3582: error: not a statement
+                        monitor-enter(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/editor/ClassG.java:3605: error: not a statement
+                        monitor-exit(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/editor/ClassG.java:3663: error: not a statement
+                        monitor-enter(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/editor/ClassG.java:3687: error: not a statement
+                        monitor-exit(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/editor/ClassG.java:3753: error: not a statement
+                        monitor-enter(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/editor/ClassG.java:3782: error: not a statement
+                        monitor-exit(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/editor/ClassG.java:3839: error: not a statement
+                        monitor-enter(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/editor/ClassG.java:3862: error: not a statement
+                        monitor-exit(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/editor/ClassG.java:3920: error: not a statement
+                        monitor-enter(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/editor/ClassG.java:3947: error: not a statement
+                        monitor-exit(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/editor/ClassG.java:4095: error: not a statement
+                        monitor-enter(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/editor/ClassG.java:4134: error: not a statement
+                        monitor-exit(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/editor/ClassG.java:4417: error: not a statement
+                        monitor-enter(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/ui/views/editor/ClassG.java:4469: error: not a statement
+                        monitor-exit(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/uidesigner/la.java:1382: error: integer number too large
+                    r0 = -109065846718888472;
+                          ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/common/Sa.java:79: error: integer number too large
+                    r0 = 3509514631334873775;
+                         ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/engine/SourceEntity.java:2477: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/com/aide/engine/SourceEntity.java:2522: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/io/fabric/sdk/android/services/common/i.java:101: error: not a statement
+                    monitor-enter(io.fabric.sdk.android.services.common.i.class);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/io/fabric/sdk/android/services/common/i.java:198: error: not a statement
+                    monitor-exit(io.fabric.sdk.android.services.common.i.class);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/io/fabric/sdk/android/services/common/l.java:108: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/io/fabric/sdk/android/services/common/l.java:128: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/io/fabric/sdk/android/services/common/D.java:27: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/io/fabric/sdk/android/services/common/D.java:36: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/io/fabric/sdk/android/services/common/D.java:41: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/io/fabric/sdk/android/services/common/D.java:52: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/io/fabric/sdk/android/services/common/D.java:67: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/io/fabric/sdk/android/services/common/D.java:76: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/io/fabric/sdk/android/services/common/D.java:87: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/io/fabric/sdk/android/services/common/z.java:460: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/io/fabric/sdk/android/services/common/z.java:466: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/io/fabric/sdk/android/services/common/z.java:491: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/io/fabric/sdk/android/services/common/z.java:510: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/io/fabric/sdk/android/services/common/z.java:575: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/io/fabric/sdk/android/services/common/z.java:582: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/io/fabric/sdk/android/services/common/z.java:601: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/io/fabric/sdk/android/services/common/z.java:627: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/io/fabric/sdk/android/services/common/z.java:649: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/io/fabric/sdk/android/services/common/z.java:673: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/io/fabric/sdk/android/services/common/z.java:700: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/io/fabric/sdk/android/services/common/z.java:758: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/io/fabric/sdk/android/services/common/v.java:288: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/io/fabric/sdk/android/services/common/v.java:313: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/io/fabric/sdk/android/Fabric.java:369: error: not a statement
+                    monitor-enter(io.fabric.sdk.android.Fabric.class);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/io/fabric/sdk/android/Fabric.java:388: error: not a statement
+                        monitor-exit(io.fabric.sdk.android.Fabric.class);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/io/fabric/sdk/android/Fabric.java:411: error: not a statement
+                    monitor-enter(io.fabric.sdk.android.Fabric.class);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/io/fabric/sdk/android/Fabric.java:430: error: not a statement
+                        monitor-exit(io.fabric.sdk.android.Fabric.class);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ll.java:66: error: not a statement
+                        monitor-enter(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ll.java:95: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ks.java:81: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ks.java:100: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/RunnableDi.java:110: error: not a statement
+                        monitor-enter(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/RunnableDi.java:161: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/RunnableDi.java:173: error: not a statement
+                        monitor-enter(abcd.Ji.j6(this.FH));
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/RunnableDi.java:205: error: not a statement
+                        monitor-enter(r4);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/RunnableDi.java:212: error: not a statement
+                        monitor-exit(r4);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/RunnableDi.java:219: error: not a statement
+                        monitor-enter(r5);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/RunnableDi.java:226: error: not a statement
+                        monitor-exit(r5);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/RunnableDi.java:305: error: not a statement
+                        monitor-enter(r9);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/RunnableDi.java:312: error: not a statement
+                        monitor-exit(r9);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Runnablegy.java:20: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Runnablegy.java:39: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/qy.java:33: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/qy.java:43: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/qy.java:52: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/qy.java:99: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/qy.java:110: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/qy.java:144: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/qy.java:156: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/qy.java:166: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/qy.java:187: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/qy.java:199: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/qy.java:209: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/qy.java:235: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/qy.java:238: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/qy.java:263: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/qy.java:275: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/qy.java:285: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/qy.java:338: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/qy.java:341: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/qy.java:367: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/qy.java:379: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/qy.java:421: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/qy.java:426: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/qy.java:452: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/qy.java:457: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/qy.java:484: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/qy.java:501: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ji.java:1499: error: not a statement
+                        monitor-enter(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ji.java:1508: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ji.java:1807: error: not a statement
+                        monitor-enter(r3);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ji.java:1814: error: not a statement
+                        monitor-exit(r3);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ji.java:1834: error: not a statement
+                        monitor-enter(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ji.java:1855: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ji.java:1869: error: not a statement
+                        monitor-enter(r4);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ji.java:1876: error: not a statement
+                        monitor-exit(r4);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ji.java:1908: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ji.java:1915: error: not a statement
+                        monitor-enter(r5);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ji.java:1922: error: not a statement
+                        monitor-exit(r5);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ji.java:1941: error: not a statement
+                        monitor-enter(this.U2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ji.java:1982: error: not a statement
+                        monitor-enter(this.lg);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ji.java:2009: error: not a statement
+                        monitor-enter(this.U2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ji.java:2411: error: not a statement
+                        monitor-enter(r24);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ji.java:2430: error: not a statement
+                        monitor-exit(r24);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ji.java:2683: error: not a statement
+                        monitor-enter(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ji.java:2690: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ji.java:2810: error: not a statement
+                        monitor-enter(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ji.java:2820: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ji.java:3431: error: not a statement
+                        monitor-enter(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ji.java:3438: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ji.java:3621: error: not a statement
+                        monitor-enter(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ji.java:3628: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ji.java:3635: error: not a statement
+                        monitor-enter(r3);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ji.java:3663: error: not a statement
+                        monitor-exit(r3);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ji.java:3752: error: not a statement
+                        monitor-enter(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ji.java:3763: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ji.java:3823: error: not a statement
+                        monitor-enter(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ji.java:3833: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ji.java:3889: error: not a statement
+                        monitor-enter(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ji.java:3907: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ji.java:3920: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ji.java:4143: error: not a statement
+                        monitor-enter(r4);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ji.java:4152: error: not a statement
+                        monitor-exit(r4);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ji.java:4219: error: not a statement
+                        monitor-enter(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ji.java:4226: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Abstractjw.java:95: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Abstractjw.java:110: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/qw.java:42: error: not a statement
+                    monitor-enter(r1);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/qw.java:45: error: not a statement
+                        monitor-exit(r1);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/qw.java:593: error: not a statement
+                    monitor-enter(r1);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/qw.java:596: error: not a statement
+                        monitor-exit(r1);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Abstractnc.java:151: error: not a statement
+                        monitor-enter(r3);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Abstractnc.java:158: error: not a statement
+                        monitor-exit(r3);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ly.java:32: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ly.java:42: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ly.java:51: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Gy.java:1844: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Gy.java:1868: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Nl.java:70: error: not a statement
+                        monitor-enter(r1);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Nl.java:91: error: not a statement
+                        monitor-exit(r1);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Nl.java:118: error: not a statement
+                        monitor-exit(r1);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Nl.java:180: error: not a statement
+                        monitor-enter(r3);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Nl.java:209: error: not a statement
+                        monitor-exit(r3);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ServiceConnectionsk.java:55: error: not a statement
+                        monitor-enter(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ServiceConnectionsk.java:64: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ServiceConnectionsk.java:124: error: not a statement
+                        monitor-enter(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ServiceConnectionsk.java:132: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ClassM.java:123: error: not a statement
+                    monitor-enter(abcd.ClassM.class);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ClassM.java:140: error: not a statement
+                        monitor-exit(abcd.ClassM.class);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ClassM.java:149: error: not a statement
+                        monitor-exit(abcd.ClassM.class);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ClassM.java:163: error: not a statement
+                    monitor-enter(abcd.ClassM.class);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ClassM.java:180: error: not a statement
+                        monitor-exit(abcd.ClassM.class);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ClassM.java:189: error: not a statement
+                        monitor-exit(abcd.ClassM.class);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ClassM.java:288: error: not a statement
+                    monitor-enter(abcd.ClassM.class);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ClassM.java:330: error: not a statement
+                        monitor-exit(abcd.ClassM.class);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ClassM.java:342: error: not a statement
+                    monitor-enter(abcd.ClassM.class);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ClassM.java:384: error: not a statement
+                        monitor-exit(abcd.ClassM.class);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/wu.java:519: error: not a statement
+                        monitor-enter(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/wu.java:534: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/wu.java:615: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/xc.java:52: error: not a statement
+                        monitor-enter(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/xc.java:60: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Abstractpc.java:127: error: not a statement
+                        monitor-enter(r3);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Abstractpc.java:134: error: not a statement
+                        monitor-exit(r3);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Os.java:54: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Os.java:64: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Os.java:74: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Os.java:195: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Os.java:198: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/bs.java:160: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/bs.java:170: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/bs.java:181: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/pw.java:272: error: not a statement
+                    monitor-enter(r2);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/pw.java:315: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/pw.java:370: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/pw.java:404: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/pw.java:448: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/pw.java:482: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/pw.java:502: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/AbstractvF.java:36: error: not a statement
+                    monitor-enter(abcd.AbstractvF.class);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/AbstractvF.java:51: error: not a statement
+                    monitor-exit(abcd.AbstractvF.class);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ew.java:22: error: not a statement
+                    monitor-enter(r3);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ew.java:25: error: not a statement
+                        monitor-exit(r3);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Runnablecw.java:183: error: not a statement
+                        monitor-enter(r9);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Runnablecw.java:190: error: not a statement
+                        monitor-exit(r9);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/aH.java:625: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/aH.java:637: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/aH.java:673: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/aH.java:676: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/aH.java:704: error: not a statement
+                    monitor-enter(r1);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/aH.java:723: error: not a statement
+                        monitor-exit(r1);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/aH.java:735: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/aH.java:738: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/aH.java:764: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/aH.java:782: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/aH.java:946: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/aH.java:958: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/aH.java:1047: error: not a statement
+                        monitor-enter(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/aH.java:1059: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/aH.java:1103: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/aH.java:1116: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/aH.java:1158: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/aH.java:1182: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/aH.java:1298: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/aH.java:1321: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/aH.java:1341: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/aH.java:1345: error: not a statement
+                        monitor-exit(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/aH.java:1532: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/aH.java:1550: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/aH.java:1988: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/aH.java:2013: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/aH.java:2023: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/aH.java:2121: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/aH.java:2140: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/aH.java:2144: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Gk.java:1286: error: not a statement
+                        monitor-enter(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Gk.java:1320: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Runnabledw.java:29: error: not a statement
+                        monitor-enter(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Runnabledw.java:37: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Runnabledw.java:128: error: not a statement
+                        monitor-enter(r4);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Runnabledw.java:137: error: not a statement
+                        monitor-exit(r4);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Abstractrc.java:126: error: not a statement
+                        monitor-enter(r3);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Abstractrc.java:133: error: not a statement
+                        monitor-exit(r3);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ck.java:360: error: not a statement
+                        monitor-enter(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ck.java:375: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ck.java:440: error: not a statement
+                        monitor-enter(r12);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ck.java:447: error: not a statement
+                        monitor-exit(r12);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ck.java:466: error: not a statement
+                        monitor-enter(r13);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ck.java:474: error: not a statement
+                        monitor-exit(r13);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ck.java:1044: error: not a statement
+                        monitor-enter(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ck.java:1107: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ck.java:1378: error: not a statement
+                        monitor-enter(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ck.java:1387: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ck.java:1680: error: not a statement
+                        monitor-enter(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ck.java:1700: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ck.java:1881: error: not a statement
+                        monitor-enter(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ck.java:1888: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ck.java:1943: error: not a statement
+                        monitor-enter(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ck.java:1963: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ck.java:2070: error: not a statement
+                        monitor-enter(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ck.java:2079: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ck.java:2134: error: not a statement
+                        monitor-enter(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ck.java:2154: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ck.java:2261: error: not a statement
+                        monitor-enter(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ck.java:2268: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ck.java:2319: error: not a statement
+                        monitor-enter(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ck.java:2326: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ck.java:2925: error: not a statement
+                        monitor-enter(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ck.java:2932: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Da.java:1811: error: integer number too large
+                    r0 = -2259415113590980200;
+                          ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Dv.java:886: error: not a statement
+                    monitor-enter(r2);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Dv.java:897: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Dv.java:906: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Dv.java:946: error: not a statement
+                    monitor-enter(r6);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Dv.java:967: error: not a statement
+                        monitor-exit(r6);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/sw.java:20: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/sw.java:24: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/sw.java:72: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/sw.java:83: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/sw.java:105: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/kv.java:127: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/kv.java:162: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/kv.java:761: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/kv.java:764: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/kv.java:1339: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/kv.java:1375: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Xy.java:95: error: not a statement
+                        monitor-enter(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Xy.java:112: error: not a statement
+                        monitor-exit(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Xy.java:132: error: not a statement
+                        monitor-enter(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Xy.java:150: error: not a statement
+                        monitor-exit(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Abstractqc.java:126: error: not a statement
+                        monitor-enter(r3);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Abstractqc.java:133: error: not a statement
+                        monitor-exit(r3);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Abstractqc.java:183: error: not a statement
+                        monitor-enter(r3);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Abstractqc.java:190: error: not a statement
+                        monitor-exit(r3);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/jy.java:36: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/jy.java:46: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/jy.java:55: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/yc.java:130: error: not a statement
+                        monitor-enter(r3);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/yc.java:137: error: not a statement
+                        monitor-exit(r3);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Runnableiy.java:22: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Runnableiy.java:41: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Abstractmc.java:126: error: not a statement
+                        monitor-enter(r3);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Abstractmc.java:133: error: not a statement
+                        monitor-exit(r3);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ol.java:217: error: not a statement
+                                monitor-enter(r2);
+                                       ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ol.java:225: error: not a statement
+                                monitor-exit(r2);
+                                       ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ol.java:328: error: not a statement
+                                monitor-enter(r2);
+                                       ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ol.java:369: error: not a statement
+                                monitor-exit(r2);
+                                       ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ol.java:548: error: not a statement
+                            monitor-enter(r3);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ol.java:561: error: not a statement
+                            monitor-exit(r3);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ol.java:576: error: not a statement
+                            monitor-exit(r3);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ol.java:645: error: not a statement
+                            monitor-enter(r7);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ol.java:652: error: not a statement
+                            monitor-exit(r7);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ol.java:709: error: not a statement
+                        monitor-enter(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ol.java:724: error: not a statement
+                        monitor-exit(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ol.java:773: error: not a statement
+                        monitor-enter(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ol.java:810: error: not a statement
+                        monitor-exit(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ol.java:890: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ol.java:925: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ol.java:930: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ol.java:965: error: not a statement
+                        monitor-enter(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ol.java:973: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ol.java:985: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ol.java:1101: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ol.java:1273: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ol.java:1312: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ol.java:1364: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ml.java:72: error: not a statement
+                        monitor-enter(r1);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ml.java:93: error: not a statement
+                        monitor-exit(r1);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ml.java:120: error: not a statement
+                        monitor-exit(r1);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ml.java:182: error: not a statement
+                        monitor-enter(r4);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ml.java:211: error: not a statement
+                        monitor-exit(r4);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/yk.java:1206: error: not a statement
+                            monitor-enter(r2);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/yk.java:1214: error: not a statement
+                            monitor-exit(r2);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/yk.java:2570: error: not a statement
+                        monitor-enter(r4);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/yk.java:2587: error: not a statement
+                        monitor-exit(r4);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/yk.java:2596: error: not a statement
+                        monitor-exit(r4);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/yk.java:2606: error: not a statement
+                        monitor-enter(r6);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/yk.java:2641: error: not a statement
+                        monitor-exit(r6);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/yk.java:2650: error: not a statement
+                        monitor-exit(r6);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/yk.java:2658: error: not a statement
+                        monitor-enter(r9);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/yk.java:2675: error: not a statement
+                        monitor-exit(r9);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/yk.java:2684: error: not a statement
+                        monitor-exit(r9);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/yk.java:2737: error: not a statement
+                        monitor-enter(this.Ws);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/yk.java:3115: error: not a statement
+                        monitor-enter(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/yk.java:3122: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/yk.java:3195: error: not a statement
+                        monitor-enter(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/yk.java:3236: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/yk.java:3246: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/yk.java:3404: error: not a statement
+                        monitor-enter(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/yk.java:3423: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/yk.java:3433: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/yk.java:3738: error: not a statement
+                        monitor-enter(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/yk.java:3775: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/yk.java:3785: error: not a statement
+                        monitor-exit(r2);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Cv.java:21: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Cv.java:26: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/uw.java:74: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/uw.java:87: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/uw.java:98: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/uw.java:107: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/fy.java:32: error: not a statement
+                    monitor-enter(r3);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/fy.java:42: error: not a statement
+                        monitor-exit(r3);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/fy.java:51: error: not a statement
+                        monitor-exit(r3);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ClassV.java:21: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ClassV.java:24: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Py.java:39: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Py.java:50: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Abstractlc.java:126: error: not a statement
+                        monitor-enter(r3);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Abstractlc.java:133: error: not a statement
+                        monitor-exit(r3);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ow.java:204: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ow.java:207: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ow.java:573: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ow.java:710: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ow.java:748: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ow.java:829: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/DF.java:20: error: not a statement
+                    monitor-enter(abcd.DF.class);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/DF.java:64: error: not a statement
+                    monitor-exit(abcd.DF.class);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/yI.java:155: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/yI.java:172: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/hy.java:31: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/hy.java:41: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/hy.java:50: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/WK.java:38: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/WK.java:42: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Qs.java:144: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Qs.java:154: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Qs.java:164: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Qs.java:236: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Qs.java:239: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Zt.java:97: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Zt.java:160: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Zt.java:229: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Zt.java:250: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Zt.java:272: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Zt.java:293: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/uH.java:68: error: not a statement
+                        monitor-enter(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/uH.java:77: error: not a statement
+                        monitor-exit(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/uH.java:87: error: not a statement
+                        monitor-exit(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/uH.java:209: error: not a statement
+                    monitor-enter(r3);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/uH.java:225: error: not a statement
+                        monitor-exit(r3);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/uH.java:261: error: not a statement
+                        monitor-exit(r3);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Runnablemw.java:39: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Runnablemw.java:41: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Runnablemw.java:94: error: not a statement
+                        monitor-enter(r6);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Runnablemw.java:114: error: not a statement
+                        monitor-exit(r6);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Runnablemw.java:149: error: not a statement
+                    monitor-enter(r8);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Runnablemw.java:152: error: not a statement
+                        monitor-exit(r8);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Runnablemw.java:158: error: not a statement
+                    monitor-enter(r9);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Runnablemw.java:182: error: not a statement
+                        monitor-exit(r9);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Runnablemw.java:188: error: not a statement
+                    monitor-enter(r12);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Runnablemw.java:212: error: not a statement
+                        monitor-exit(r12);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Runnablemy.java:22: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Runnablemy.java:41: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Za.java:106: error: integer number too large
+                    r0 = -863417904741332815;
+                          ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/RunnableFk.java:99: error: not a statement
+                        monitor-enter(r6);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/RunnableFk.java:120: error: not a statement
+                        monitor-exit(r6);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Zk.java:1260: error: integer number too large
+                    r0 = 14875035873500811;
+                         ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ClassX.java:68: error: not a statement
+                    monitor-enter(abcd.ClassK.class);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ClassX.java:110: error: not a statement
+                        monitor-exit(abcd.ClassK.class);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ClassX.java:122: error: not a statement
+                    monitor-enter(abcd.ClassK.class);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ClassX.java:164: error: not a statement
+                        monitor-exit(abcd.ClassK.class);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ClassX.java:186: error: not a statement
+                    monitor-enter(abcd.ClassK.class);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ClassX.java:203: error: not a statement
+                        monitor-exit(abcd.ClassK.class);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ClassX.java:212: error: not a statement
+                        monitor-exit(abcd.ClassK.class);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ClassX.java:226: error: not a statement
+                    monitor-enter(abcd.ClassK.class);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ClassX.java:243: error: not a statement
+                        monitor-exit(abcd.ClassK.class);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ClassX.java:252: error: not a statement
+                        monitor-exit(abcd.ClassK.class);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/tE.java:21: error: not a statement
+                    monitor-enter(abcd.tE.class);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/tE.java:40: error: not a statement
+                    monitor-exit(abcd.tE.class);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/tE.java:44: error: not a statement
+                    monitor-exit(abcd.tE.class);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/tE.java:61: error: not a statement
+                    monitor-enter(abcd.tE.class);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/tE.java:79: error: not a statement
+                    monitor-exit(abcd.tE.class);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/tE.java:83: error: not a statement
+                    monitor-exit(abcd.tE.class);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ty.java:27: error: not a statement
+                    monitor-enter(abcd.ty.class);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ty.java:63: error: not a statement
+                        monitor-exit(abcd.ty.class);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ty.java:87: error: not a statement
+                    monitor-enter(abcd.ty.class);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ty.java:90: error: not a statement
+                        monitor-exit(abcd.ty.class);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ClassZ.java:391: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/ClassZ.java:395: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/AbstractAa.java:510: error: integer number too large
+                    r0 = -1873808331444597780;
+                          ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/AbstractAa.java:660: error: integer number too large
+                    r0 = -1238879461921243856;
+                          ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/AbstractAa.java:1226: error: integer number too large
+                    r0 = 2941961060510501136;
+                         ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/VK.java:28: error: not a statement
+                        monitor-enter(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/VK.java:48: error: not a statement
+                        monitor-exit(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/VK.java:63: error: not a statement
+                        monitor-enter(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/VK.java:87: error: not a statement
+                        monitor-exit(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/VK.java:111: error: not a statement
+                        monitor-enter(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/VK.java:128: error: not a statement
+                        monitor-exit(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/VK.java:153: error: not a statement
+                        monitor-enter(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/VK.java:199: error: not a statement
+                        monitor-exit(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ww.java:209: error: not a statement
+                        monitor-enter(abcd.Ww.e.class);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ww.java:228: error: not a statement
+                        monitor-exit(abcd.Ww.e.class);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ww.java:245: error: not a statement
+                            monitor-enter(this);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ww.java:253: error: not a statement
+                            monitor-exit(this);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ww.java:261: error: not a statement
+                            monitor-enter(abcd.Ww.e.class);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ww.java:282: error: not a statement
+                            monitor-exit(abcd.Ww.e.class);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ww.java:292: error: not a statement
+                            monitor-exit(abcd.Ww.e.class);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ww.java:459: error: not a statement
+        monitor-enter(this);
+               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ww.java:460: error: not a statement
+        monitor-exit(this);
+               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ww.java:555: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ww.java:665: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/oy.java:23: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/oy.java:36: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/oy.java:47: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/oy.java:56: error: not a statement
+                    monitor-enter(r1);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/oy.java:65: error: not a statement
+                        monitor-exit(r1);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/oy.java:76: error: not a statement
+                        monitor-exit(r1);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/oy.java:101: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/oy.java:121: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/jz.java:88: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/jz.java:95: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/jz.java:119: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/jz.java:126: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/jz.java:155: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/jz.java:162: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Runnableky.java:22: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Runnableky.java:41: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ez.java:26: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ez.java:41: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ez.java:70: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ez.java:78: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ez.java:98: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ez.java:116: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Gw.java:530: error: not a statement
+                    monitor-enter(abcd.Gw.class);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Gw.java:538: error: not a statement
+                    monitor-exit(abcd.Gw.class);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/LM.java:81: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/LM.java:105: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/LM.java:144: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/LM.java:168: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/LM.java:186: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/LM.java:201: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/LM.java:211: error: not a statement
+                    monitor-exit(this);
+                           ^
+789 errors
+
+> Task :compileDebugJavaWithJavac FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileDebugJavaWithJavac'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 49s
+25 actionable tasks: 25 executed

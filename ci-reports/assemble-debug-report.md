@@ -1,223 +1,194 @@
 # assembleDebug report
 
-- run: 36795181907
-- commit: 5ccb306b978b301c4ac56280dbfe4a2f13cf8063
+- run: 36797184409
+- commit: e0708b73c416ae7234adff5cfdfc1a2bd91d6686
 - result: failure
 
 ## error summary
 ```
-76:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:252: error: illegal start of expression
-79:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:252: error: illegal start of expression
-82:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:252: error: : expected
-85:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:253: error: illegal start of expression
-88:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:253: error: illegal start of expression
-91:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:253: error: : expected
-94:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:254: error: illegal start of expression
-97:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:254: error: illegal start of expression
-100:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:254: error: : expected
-103:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:255: error: illegal start of expression
-106:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:255: error: illegal start of expression
-109:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:255: error: : expected
-112:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:258: error: illegal start of expression
-115:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:258: error: illegal start of expression
-118:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:258: error: : expected
-121:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:260: error: illegal start of expression
-124:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:260: error: illegal start of expression
-127:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:260: error: : expected
-130:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:293: error: illegal start of expression
-133:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:293: error: illegal start of expression
-136:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:293: error: : expected
-139:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/xutils/image/ImageLoader.java:166: error: illegal start of expression
-142:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/xutils/image/ImageLoader.java:166: error: illegal start of expression
-145:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/xutils/image/ImageLoader.java:166: error: : expected
-148:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/xutils/image/ImageLoader.java:168: error: illegal start of expression
-151:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/xutils/image/ImageLoader.java:168: error: illegal start of expression
-154:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/xutils/image/ImageLoader.java:168: error: : expected
-157:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/xutils/image/ImageLoader.java:172: error: illegal start of expression
-160:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/xutils/image/ImageLoader.java:172: error: illegal start of expression
-163:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/xutils/image/ImageLoader.java:172: error: : expected
-166:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/xutils/image/ImageLoader.java:175: error: illegal start of expression
-169:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/xutils/image/ImageLoader.java:175: error: illegal start of expression
-172:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/xutils/image/ImageLoader.java:175: error: : expected
-175:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:26: error: illegal start of expression
-178:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:26: error: not a statement
-181:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:28: error: illegal start of expression
-184:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:28: error: not a statement
-187:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:35: error: illegal start of expression
-190:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:35: error: not a statement
-193:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:56: error: illegal start of expression
-196:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:56: error: not a statement
-199:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:59: error: variable declaration not allowed here
-202:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:60: error: illegal start of expression
-205:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:60: error: not a statement
-208:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:64: error: illegal start of expression
-211:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:64: error: not a statement
-214:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:65: error: illegal start of expression
-217:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:65: error: not a statement
-220:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:66: error: illegal start of expression
-223:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:66: error: not a statement
-226:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:88: error: illegal start of expression
-229:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:88: error: not a statement
-232:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/AlgorithmParametersSpi.java:18: error: illegal start of expression
-235:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/AlgorithmParametersSpi.java:18: error: not a statement
-238:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/AlgorithmParametersSpi.java:26: error: illegal start of expression
-241:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/AlgorithmParametersSpi.java:26: error: not a statement
-244:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/AlgorithmParametersSpi.java:34: error: illegal start of expression
-247:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/AlgorithmParametersSpi.java:34: error: not a statement
-250:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/AlgorithmParametersSpi.java:44: error: illegal start of expression
-253:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/AlgorithmParametersSpi.java:44: error: not a statement
+    779 error: not a statement
+     10 error: integer number too large
+```
+
+## files with most errors
+```
+     48 /KayPro/libraries/java/com/aide/ui/LogCatConsole.java
+     39 /KayPro/libraries/java/com/jcraft/jsch/Session.java
+     37 /KayPro/libraries/java/abcd/Ji.java
+     30 /KayPro/libraries/java/com/jcraft/jsch/Channel.java
+     30 /KayPro/libraries/java/abcd/aH.java
+     26 /KayPro/libraries/java/abcd/qy.java
+     26 /KayPro/libraries/java/abcd/ck.java
+     25 /KayPro/libraries/java/com/aide/ui/views/editor/ClassG.java
+     23 /KayPro/libraries/java/abcd/yk.java
+     23 /KayPro/libraries/java/abcd/Ol.java
+     22 /KayPro/libraries/java/com/jcraft/jsch/KnownHosts.java
+     18 /KayPro/libraries/java/com/aide/ui/scm/ua.java
+     14 /KayPro/libraries/java/com/jcraft/jsch/JSch.java
+     13 /KayPro/libraries/java/com/jcraft/jsch/ChannelForwardedTCPIP.java
+     12 /KayPro/libraries/java/io/fabric/sdk/android/services/common/z.java
+     12 /KayPro/libraries/java/com/jcraft/jsch/LocalIdentityRepository.java
+     11 /KayPro/libraries/java/com/aide/ui/views/editor/ClassQ.java
+     11 /KayPro/libraries/java/abcd/Ww.java
+     10 /KayPro/libraries/java/abcd/Runnablemw.java
+     10 /KayPro/libraries/java/abcd/ClassX.java
+     10 /KayPro/libraries/java/abcd/ClassM.java
+      9 /KayPro/libraries/java/abcd/RunnableDi.java
+      8 /KayPro/libraries/java/com/jcraft/jsch/ChannelX11.java
+      8 /KayPro/libraries/java/com/aide/ui/views/a.java
+      8 /KayPro/libraries/java/abcd/oy.java
 ```
 
 ## last 150 log lines
 ```
-	at org.gradle.api.internal.tasks.compile.AnnotationProcessorDiscoveringCompiler.execute(AnnotationProcessorDiscoveringCompiler.java:51)
-	at org.gradle.api.internal.tasks.compile.AnnotationProcessorDiscoveringCompiler.execute(AnnotationProcessorDiscoveringCompiler.java:37)
-	at org.gradle.api.internal.tasks.compile.ModuleApplicationNameWritingCompiler.execute(ModuleApplicationNameWritingCompiler.java:46)
-	at org.gradle.api.internal.tasks.compile.ModuleApplicationNameWritingCompiler.execute(ModuleApplicationNameWritingCompiler.java:36)
-	at org.gradle.jvm.toolchain.internal.DefaultToolchainJavaCompiler.execute(DefaultToolchainJavaCompiler.java:57)
-	at org.gradle.api.tasks.compile.JavaCompile.lambda$createToolchainCompiler$1(JavaCompile.java:237)
-	at org.gradle.api.internal.tasks.compile.CleaningJavaCompiler.execute(CleaningJavaCompiler.java:53)
-	at org.gradle.api.internal.tasks.compile.incremental.IncrementalCompilerFactory.lambda$createRebuildAllCompiler$0(IncrementalCompilerFactory.java:52)
-	at org.gradle.api.internal.tasks.compile.incremental.SelectiveCompiler.execute(SelectiveCompiler.java:70)
-	at org.gradle.api.internal.tasks.compile.incremental.SelectiveCompiler.execute(SelectiveCompiler.java:44)
-	at org.gradle.api.internal.tasks.compile.incremental.IncrementalResultStoringCompiler.execute(IncrementalResultStoringCompiler.java:66)
-	at org.gradle.api.internal.tasks.compile.incremental.IncrementalResultStoringCompiler.execute(IncrementalResultStoringCompiler.java:52)
-	at org.gradle.api.internal.tasks.compile.CompileJavaBuildOperationReportingCompiler$2.call(CompileJavaBuildOperationReportingCompiler.java:59)
-	at org.gradle.api.internal.tasks.compile.CompileJavaBuildOperationReportingCompiler$2.call(CompileJavaBuildOperationReportingCompiler.java:51)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
-	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
-	at org.gradle.api.internal.tasks.compile.CompileJavaBuildOperationReportingCompiler.execute(CompileJavaBuildOperationReportingCompiler.java:51)
-	at org.gradle.api.tasks.compile.JavaCompile.performCompilation(JavaCompile.java:288)
-	at org.gradle.api.tasks.compile.JavaCompile.performIncrementalCompilation(JavaCompile.java:170)
-	at org.gradle.api.tasks.compile.JavaCompile.compile(JavaCompile.java:148)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at org.gradle.internal.reflect.JavaMethod.invoke(JavaMethod.java:125)
-	at org.gradle.api.internal.project.taskfactory.IncrementalInputsTaskAction.doExecute(IncrementalInputsTaskAction.java:32)
-	at org.gradle.api.internal.project.taskfactory.StandardTaskAction.execute(StandardTaskAction.java:51)
-	at org.gradle.api.internal.project.taskfactory.AbstractIncrementalTaskAction.execute(AbstractIncrementalTaskAction.java:25)
-	at org.gradle.api.internal.project.taskfactory.StandardTaskAction.execute(StandardTaskAction.java:29)
-	at org.gradle.api.internal.tasks.execution.TaskExecution$3.run(TaskExecution.java:236)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:26)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.run(DefaultBuildOperationRunner.java:47)
-	at org.gradle.internal.operations.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:68)
-	at org.gradle.api.internal.tasks.execution.TaskExecution.executeAction(TaskExecution.java:221)
-	at org.gradle.api.internal.tasks.execution.TaskExecution.executeActions(TaskExecution.java:204)
-	at org.gradle.api.internal.tasks.execution.TaskExecution.executeWithPreviousOutputFiles(TaskExecution.java:187)
-	at org.gradle.api.internal.tasks.execution.TaskExecution.execute(TaskExecution.java:165)
-	at org.gradle.internal.execution.steps.ExecuteStep.executeInternal(ExecuteStep.java:89)
-	at org.gradle.internal.execution.steps.ExecuteStep.access$000(ExecuteStep.java:40)
-	at org.gradle.internal.execution.steps.ExecuteStep$1.call(ExecuteStep.java:53)
-	at org.gradle.internal.execution.steps.ExecuteStep$1.call(ExecuteStep.java:50)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
-	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
-	at org.gradle.internal.execution.steps.ExecuteStep.execute(ExecuteStep.java:50)
-	at org.gradle.internal.execution.steps.ExecuteStep.execute(ExecuteStep.java:40)
-	at org.gradle.internal.execution.steps.RemovePreviousOutputsStep.execute(RemovePreviousOutputsStep.java:68)
-	at org.gradle.internal.execution.steps.RemovePreviousOutputsStep.execute(RemovePreviousOutputsStep.java:38)
-	at org.gradle.internal.execution.steps.CancelExecutionStep.execute(CancelExecutionStep.java:41)
-	at org.gradle.internal.execution.steps.TimeoutStep.executeWithoutTimeout(TimeoutStep.java:74)
-	at org.gradle.internal.execution.steps.TimeoutStep.execute(TimeoutStep.java:55)
-	at org.gradle.internal.execution.steps.CreateOutputsStep.execute(CreateOutputsStep.java:51)
-	at org.gradle.internal.execution.steps.CreateOutputsStep.execute(CreateOutputsStep.java:29)
-	at org.gradle.internal.execution.steps.CaptureStateAfterExecutionStep.executeDelegateBroadcastingChanges(CaptureStateAfterExecutionStep.java:124)
-	at org.gradle.internal.execution.steps.CaptureStateAfterExecutionStep.execute(CaptureStateAfterExecutionStep.java:80)
-	at org.gradle.internal.execution.steps.CaptureStateAfterExecutionStep.execute(CaptureStateAfterExecutionStep.java:58)
-	at org.gradle.internal.execution.steps.ResolveInputChangesStep.execute(ResolveInputChangesStep.java:48)
-	at org.gradle.internal.execution.steps.ResolveInputChangesStep.execute(ResolveInputChangesStep.java:36)
-	at org.gradle.internal.execution.steps.BuildCacheStep.executeWithoutCache(BuildCacheStep.java:181)
-	at org.gradle.internal.execution.steps.BuildCacheStep.lambda$execute$1(BuildCacheStep.java:71)
-	at org.gradle.internal.Either$Right.fold(Either.java:175)
-	at org.gradle.internal.execution.caching.CachingState.fold(CachingState.java:59)
-	at org.gradle.internal.execution.steps.BuildCacheStep.execute(BuildCacheStep.java:69)
-	at org.gradle.internal.execution.steps.BuildCacheStep.execute(BuildCacheStep.java:47)
-	at org.gradle.internal.execution.steps.StoreExecutionStateStep.execute(StoreExecutionStateStep.java:36)
-	at org.gradle.internal.execution.steps.StoreExecutionStateStep.execute(StoreExecutionStateStep.java:25)
-	at org.gradle.internal.execution.steps.RecordOutputsStep.execute(RecordOutputsStep.java:36)
-	at org.gradle.internal.execution.steps.RecordOutputsStep.execute(RecordOutputsStep.java:22)
-	at org.gradle.internal.execution.steps.SkipUpToDateStep.executeBecause(SkipUpToDateStep.java:110)
-	at org.gradle.internal.execution.steps.SkipUpToDateStep.lambda$execute$2(SkipUpToDateStep.java:56)
-	at org.gradle.internal.execution.steps.SkipUpToDateStep.execute(SkipUpToDateStep.java:56)
-	at org.gradle.internal.execution.steps.SkipUpToDateStep.execute(SkipUpToDateStep.java:38)
-	at org.gradle.internal.execution.steps.ResolveChangesStep.execute(ResolveChangesStep.java:73)
-	at org.gradle.internal.execution.steps.ResolveChangesStep.execute(ResolveChangesStep.java:44)
-	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsFinishedStep.execute(MarkSnapshottingInputsFinishedStep.java:37)
-	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsFinishedStep.execute(MarkSnapshottingInputsFinishedStep.java:27)
-	at org.gradle.internal.execution.steps.ResolveCachingStateStep.execute(ResolveCachingStateStep.java:89)
-	at org.gradle.internal.execution.steps.ResolveCachingStateStep.execute(ResolveCachingStateStep.java:50)
-	at org.gradle.internal.execution.steps.ValidateStep.execute(ValidateStep.java:102)
-	at org.gradle.internal.execution.steps.ValidateStep.execute(ValidateStep.java:57)
-	at org.gradle.internal.execution.steps.CaptureStateBeforeExecutionStep.execute(CaptureStateBeforeExecutionStep.java:76)
-	at org.gradle.internal.execution.steps.CaptureStateBeforeExecutionStep.execute(CaptureStateBeforeExecutionStep.java:50)
-	at org.gradle.internal.execution.steps.SkipEmptyWorkStep.executeWithNoEmptySources(SkipEmptyWorkStep.java:254)
-	at org.gradle.internal.execution.steps.SkipEmptyWorkStep.executeWithNoEmptySources(SkipEmptyWorkStep.java:209)
-	at org.gradle.internal.execution.steps.SkipEmptyWorkStep.execute(SkipEmptyWorkStep.java:88)
-	at org.gradle.internal.execution.steps.SkipEmptyWorkStep.execute(SkipEmptyWorkStep.java:56)
-	at org.gradle.internal.execution.steps.RemoveUntrackedExecutionStateStep.execute(RemoveUntrackedExecutionStateStep.java:32)
-	at org.gradle.internal.execution.steps.RemoveUntrackedExecutionStateStep.execute(RemoveUntrackedExecutionStateStep.java:21)
-	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsStartedStep.execute(MarkSnapshottingInputsStartedStep.java:38)
-	at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:43)
-	at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:31)
-	at org.gradle.internal.execution.steps.AssignWorkspaceStep.lambda$execute$0(AssignWorkspaceStep.java:40)
-	at org.gradle.api.internal.tasks.execution.TaskExecution$4.withWorkspace(TaskExecution.java:281)
-	at org.gradle.internal.execution.steps.AssignWorkspaceStep.execute(AssignWorkspaceStep.java:40)
-	at org.gradle.internal.execution.steps.AssignWorkspaceStep.execute(AssignWorkspaceStep.java:30)
-	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:37)
-	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:27)
-	at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:44)
-	at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:33)
-	at org.gradle.internal.execution.impl.DefaultExecutionEngine$1.execute(DefaultExecutionEngine.java:76)
-	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:139)
-	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:128)
-	at org.gradle.api.internal.tasks.execution.CleanupStaleOutputsExecuter.execute(CleanupStaleOutputsExecuter.java:77)
-	at org.gradle.api.internal.tasks.execution.FinalizePropertiesTaskExecuter.execute(FinalizePropertiesTaskExecuter.java:46)
-	at org.gradle.api.internal.tasks.execution.ResolveTaskExecutionModeExecuter.execute(ResolveTaskExecutionModeExecuter.java:51)
-	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:57)
-	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:57)
-	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:36)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
-	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter.execute(EventFiringTaskExecuter.java:52)
-	at org.gradle.execution.plan.LocalTaskNodeExecutor.execute(LocalTaskNodeExecutor.java:69)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:322)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:309)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:302)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:288)
-	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:462)
-	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:379)
-	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
-	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:49)
+                        monitor-enter(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/VK.java:199: error: not a statement
+                        monitor-exit(this);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ww.java:209: error: not a statement
+                        monitor-enter(abcd.Ww.e.class);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ww.java:228: error: not a statement
+                        monitor-exit(abcd.Ww.e.class);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ww.java:245: error: not a statement
+                            monitor-enter(this);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ww.java:253: error: not a statement
+                            monitor-exit(this);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ww.java:261: error: not a statement
+                            monitor-enter(abcd.Ww.e.class);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ww.java:282: error: not a statement
+                            monitor-exit(abcd.Ww.e.class);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ww.java:292: error: not a statement
+                            monitor-exit(abcd.Ww.e.class);
+                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ww.java:459: error: not a statement
+        monitor-enter(this);
+               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ww.java:460: error: not a statement
+        monitor-exit(this);
+               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ww.java:555: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ww.java:665: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/oy.java:23: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/oy.java:36: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/oy.java:47: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/oy.java:56: error: not a statement
+                    monitor-enter(r1);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/oy.java:65: error: not a statement
+                        monitor-exit(r1);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/oy.java:76: error: not a statement
+                        monitor-exit(r1);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/oy.java:101: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/oy.java:121: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/jz.java:88: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/jz.java:95: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/jz.java:119: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/jz.java:126: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/jz.java:155: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/jz.java:162: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Runnableky.java:22: error: not a statement
+                    monitor-enter(r0);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Runnableky.java:41: error: not a statement
+                        monitor-exit(r0);
+                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ez.java:26: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ez.java:41: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ez.java:70: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ez.java:78: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ez.java:98: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Ez.java:116: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Gw.java:530: error: not a statement
+                    monitor-enter(abcd.Gw.class);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/Gw.java:538: error: not a statement
+                    monitor-exit(abcd.Gw.class);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/LM.java:81: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/LM.java:105: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/LM.java:144: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/LM.java:168: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/LM.java:186: error: not a statement
+                    monitor-enter(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/LM.java:201: error: not a statement
+                    monitor-exit(this);
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/abcd/LM.java:211: error: not a statement
+                    monitor-exit(this);
+                           ^
+789 errors
 
+> Task :compileDebugJavaWithJavac FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileDebugJavaWithJavac'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
 
 * Get more help at https://help.gradle.org
 
-BUILD FAILED in 50s
+BUILD FAILED in 49s
 25 actionable tasks: 25 executed
 ```

@@ -113,18 +113,19 @@ jobs:
           retention-days: 14
           if-no-files-found: warn
 
-      # Handing the APK back through the branch is the only transfer channel
-      # available: the agent's sandbox cannot reach GitHub's artifact storage.
-      # It is removed from the branch again as soon as it has been collected.
-      - name: Hand the APK back through the branch
+      # The APK is normally left in the workflow artifact only, to keep binaries
+      # out of a repository that is still public. Create the marker file
+      # apk-output/DELIVER to have one run copy it onto the branch instead --
+      # that is the only transfer channel the agent's sandbox has, because it
+      # cannot reach GitHub's artifact storage.
+      - name: Publish the report (and the APK when asked)
         if: always()
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -- KayPro/build.gradle || true
-          mkdir -p apk-output
           APK=$(ls KayPro/build/outputs/apk/debug/*.apk 2>/dev/null | head -1 || true)
-          if [ -n "$APK" ]; then
+          if [ -n "$APK" ] && [ -f apk-output/DELIVER ]; then
             cp "$APK" "apk-output/KayPro-com.almlkaide.kaypro-debug.apk"
             sha256sum apk-output/*.apk > apk-output/SHA256SUMS
             ls -lh apk-output/

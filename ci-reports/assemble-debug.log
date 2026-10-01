@@ -575,5 +575,5 @@ Caused by: org.gradle.api.internal.tasks.compile.CompilationFailedException: Com
 
 * Get more help at https://help.gradle.org
 
-BUILD FAILED in 50s
+BUILD FAILED in 41s
 25 actionable tasks: 25 executed

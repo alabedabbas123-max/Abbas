@@ -40,6 +40,7 @@ Installing Android SDK Platform 33 in /usr/local/lib/android/sdk/platforms/andro
 > Task :generateDebugResources
 > Task :createDebugCompatibleScreenManifests
 > Task :extractDeepLinksDebug
+> Task :mergeDebugResources
 
 > Task :processDebugMainManifest
 package="com.almlkaide.kaypro" found in source AndroidManifest.xml: /home/runner/work/Abbas/Abbas/KayPro/AndroidManifest.xml.
@@ -47,21 +48,23 @@ Setting the namespace via a source AndroidManifest.xml's package attribute is de
 Please instead set the namespace (or testNamespace) in the module's build.gradle file, as described here: https://developer.android.com/studio/build/configure-app-module#set-namespace
 This migration can be done automatically using the AGP Upgrade Assistant, please refer to https://developer.android.com/studio/build/agp-upgrade-assistant for more information.
 
-> Task :mergeDebugResources
 > Task :processDebugManifest
 > Task :mergeDebugShaders
 > Task :compileDebugShaders NO-SOURCE
 > Task :generateDebugAssets UP-TO-DATE
 > Task :mergeDebugAssets
-> Task :processDebugManifestForPackage
-> Task :compressDebugAssets
 > Task :processDebugJavaRes NO-SOURCE
+> Task :compressDebugAssets
 > Task :checkDebugDuplicateClasses
+> Task :mergeDebugJavaResource
+> Task :desugarDebugFileDependencies
+> Task :processDebugManifestForPackage
+> Task :mergeDebugJniLibFolders
+> Task :mergeDebugNativeLibs
 warn: removing resource com.almlkaide.kaypro:array/layout_design_activity_xml_theme without required default value.
 
-> Task :mergeDebugJavaResource
 > Task :processDebugResources
-> Task :desugarDebugFileDependencies
+> Task :validateSigningDebug
 
 > Task :compileDebugJavaWithJavac
 /home/runner/work/Abbas/Abbas/KayPro/java/com/almlkaide/kaypro/formatter/FormatFactory.java:9: error: package com.google.gson does not exist
@@ -144292,5 +144295,5 @@ Execution failed for task ':compileDebugJavaWithJavac'.
 
 * Get more help at https://help.gradle.org
 
-BUILD FAILED in 1m 17s
-19 actionable tasks: 19 executed
+BUILD FAILED in 1m 20s
+22 actionable tasks: 22 executed

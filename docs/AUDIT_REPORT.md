@@ -58,20 +58,69 @@ Support Library 26.1.0 (v4/appcompat/recyclerview) + AndroidX
 تم ضبط التطبيق بالكامل على `com.almlkaide.kaypro` — **9,712 موضع استبدال في 806 ملفات**.
 التفاصيل الكاملة والتحقق الآلي في [`KayPro/PACKAGE_RENAME.md`](../KayPro/PACKAGE_RENAME.md).
 
-## 5. حالة البناء — العائق الحقيقي 🔴
+## 5. حالة البناء بعد التنفيذ الفعلي على CI
 
-### 5.1 مصادر المحرّك غير صالحة كلغة Java
+شُغّل البناء فعليًا على GitHub Actions (JDK 17 + Android SDK + شبكة كاملة).
+النتيجة الحالية:
 
-`libraries/java` يحتوي على ناتج فكّ تجميع DEX لم يُترجَم إلى Java صحيحة.
-فحص آلي لكل الملفات أعطى:
+### ✅ ما ينجح الآن (كل شيء قبل تجميع Java)
 
-| القياس | القيمة |
-|---|---|
-| ملفات المكتبات المعطوبة | **1,892 ملفًا** |
-| التعليمات غير الصالحة داخلها | **66,230 تعليمة** |
-| ملفات المشروع (`java/`) المعطوبة | **0** ✅ |
+```
+> Task :processDebugMainManifest      ✅   package = com.almlkaide.kaypro
+> Task :mergeDebugResources           ✅
+> Task :processDebugResources         ✅   AAPT2 + توليد R
+> Task :mergeDebugAssets              ✅   47 MB من assets
+> Task :checkDebugDuplicateClasses    ✅   (بعد الإصلاح أدناه)
+> Task :mergeDebugJniLibFolders       ✅   arm64-v8a · armeabi · x86
+> Task :mergeDebugNativeLibs          ✅
+> Task :validateSigningDebug          ✅
+> Task :processDebugManifestForPackage ✅
+```
 
-نموذج حقيقي من `libraries/java/a/aa.java`:
+أي أن **حزمة التطبيق الجديدة والموارد وManifest وassets وJNI سليمة تمامًا ومؤكَّدة بالبناء**.
+
+### 🔧 عائق تم إصلاحه: تعارض AndroidX مع Support Library
+
+فشل `checkDebugDuplicateClasses`:
+
+```
+Duplicate class android.support.v4.os.ResultReceiver found in modules
+core-1.9.0-runtime (androidx.core:core:1.9.0) and
+support-compat-26.1.0-runtime (com.android.support:support-compat:26.1.0)
+```
+
+المشروع كان يعلن عائلتَي مكتبات متعارضتين في آنٍ واحد. وبما أن الكود والموارد وManifest
+تستخدم `android.support.*` في أكثر من 180 موضعًا (وصفر موضع androidx في `res/`
+و`AndroidManifest.xml`)، جرى توحيد المشروع على Support Library:
+
+- تحويل 42 مرجع `androidx.*` إلى مقابلها في Support (في 34 ملفًا).
+- حذف اعتماديات `androidx.core` و`androidx.fragment` و`androidx.collection`
+  و`androidx.lifecycle` و`androidx.annotation` و`androidx.versionedparcelable`.
+- إضافة `android.arch.lifecycle:runtime:1.1.1` + `common:1.1.1` بدل `androidx.lifecycle`.
+- `android.useAndroidX=false` و`android.enableJetifier=false`.
+
+✅ المرحلة تمرّ الآن بنجاح.
+
+### 🔴 العائق المتبقي: `compileDebugJavaWithJavac`
+
+```
+> Task :compileDebugJavaWithJavac FAILED
+100 errors   (javac يتوقف عند 100 خطأ افتراضيًا — العدد الحقيقي أكبر بكثير)
+```
+
+السبب ليس Gradle ولا الحزمة ولا الموارد، بل أن `libraries/java` ناتج فكّ تجميع DEX
+لم يُترجَم إلى Java صالحة. الفحص الآلي لكل الملفات:
+
+| نوع العطب | الملفات | المواضع |
+|---|---|---|
+| `goto Lxx;` و`Lxx:` (تعليمات Dalvik) | 1,885 | 58,672 |
+| `move-exception` | 1,102 | 7,558 |
+| تعليقات انهيار JADX داخل الكود | 32 | 624 |
+| النوع المجهول `??` | 17 | 44 |
+| **إجمالي الملفات المعطوبة** | **1,913** | — |
+| ملفات المشروع `java/` المعطوبة | **0** ✅ | — |
+
+نموذج من `libraries/java/a/aa.java`:
 
 ```java
 public boolean equals(java.lang.Object r4) {
@@ -79,59 +128,38 @@ public boolean equals(java.lang.Object r4) {
     return false;
 L5:
     if (getClass() != r4.getClass()) goto L31;
-    ...
 }
 ```
 
-`goto` كلمة محجوزة غير مستخدمة في Java، و`move-exception` تعليمة Dalvik.
-`javac` يرفض كل ملف من هذه الملفات. هذا يعني أن **`compileDebugJavaWithJavac` لا يمكن
-أن ينجح** مهما ضُبطت إعدادات Gradle.
-
-تحويل `goto` آليًا إلى Java هيكلية ممكن نظريًا (آلة حالات بـ `while/switch`) لكنه يتطلّب
-إعادة توليد منطق 1,892 ملفًا مع معالجة نطاقات `try/catch` وتصريحات المتغيّرات المحلية —
-وهو عمليًا كتابة خلفية decompiler كاملة، ولا يمكن التحقق من صحتها دون مترجم.
-
-### 5.2 بيئة التنفيذ هنا لا تسمح بالبناء
-
-فحص بيئة التشغيل:
-
-| المتطلّب | الحالة |
-|---|---|
-| JDK | ❌ غير مثبّت |
-| Android SDK / build-tools | ❌ غير موجود |
-| `dl.google.com` · `maven.google.com` | ❌ محجوب (كود 000) |
-| `repo1.maven.org` | ❌ محجوب |
-| `services.gradle.org` (توزيعة Gradle) | ❌ محجوب |
-| `deb.debian.org` / `archive.ubuntu.com` | ❌ محجوب (لا `apt install`) |
-| `github.com` · `api.github.com` · `pypi.org` · `registry.npmjs.org` | ✅ متاح |
-
-لذلك لا يمكن تنزيل JDK ولا Android SDK ولا أي اعتمادية Gradle داخل هذه البيئة.
-
-### 5.3 المسار المتاح للبناء
-
-أُضيف خط بناء على GitHub Actions في `.github/workflows/android-build.yml`.
-منصّة GitHub توفّر JDK 17 وAndroid SDK وشبكة كاملة، والخط يتضمّن:
-
-1. **`validate`** — يشغّل `processDebugResources` + `mergeDebugJavaResource`.
-   هذه المرحلة تتحقق من **صحة Manifest والموارد وحزمة التطبيق الجديدة** بشكل مستقل
-   عن كود المحرّك، وهي **متوقَّع لها النجاح**.
-2. **`assemble`** — يشغّل `assembleDebug` ويرفع APK كـ artifact.
-   **متوقَّع لها الفشل** عند `compileDebugJavaWithJavac` للسبب في 5.1، والسجل يُرفع
-   كـ artifact للمراجعة.
+`goto` كلمة محجوزة غير مستخدمة في Java، و`move-exception` تعليمة Dalvik، و`??` علامة
+«نوع مجهول» من JADX. تحويل هذا آليًا إلى Java هيكلية يعني إعادة بناء منطق 1,913 ملفًا
+مع نطاقات `try/catch` وتصريحات المتغيرات — أي كتابة خلفية decompiler كاملة.
 
 ## 6. ما يلزم للحصول على APK قابل للاختبار
 
-يجب توفير **أحد** الآتي (لا مفرّ):
+يجب توفير **أحد** الآتي:
 
-| # | الخيار | الجهد |
-|---|---|---|
-| **أ** | **ملف APK الأصلي** لتطبيق Almlk/AIDE Pro. عندها نعيد تسمية الحزمة على مستوى smali عبر apktool ونعيد التوقيع — وهي الطريقة القياسية لإعادة علامة تطبيق مغلق المصدر، وتنتج APK يعمل فورًا. | منخفض ✅ |
-| **ب** | **JAR/AAR سليم لمحرّك AIDE**، ثم حذف `libraries/java` المعطوبة وربط المكتبة من Gradle. | متوسط |
-| **ج** | **المصدر الأصلي القابل للترجمة** للمحرّك بدل ناتج فكّ التجميع. | متوسط |
-| **د** | إعادة كتابة منطق 1,892 ملفًا يدويًا. | غير واقعي ❌ |
+| # | الخيار | الجهد | النتيجة |
+|---|---|---|---|
+| **أ** | **ملف APK الأصلي** لتطبيق Almlk / AIDE Pro | منخفض ✅ | إعادة تسمية الحزمة على مستوى smali عبر apktool + إعادة توقيع ← APK يعمل فورًا بحزمة `com.almlkaide.kaypro` |
+| **ب** | **JAR/AAR سليم لمحرّك AIDE** | متوسط | حذف `libraries/java` المعطوبة وربط المكتبة من Gradle |
+| **ج** | **المصدر الأصلي القابل للترجمة** للمحرّك | متوسط | بناء كامل من المصدر |
+| **د** | إعادة كتابة منطق 1,913 ملفًا يدويًا | غير واقعي ❌ | — |
 
-**التوصية: الخيار (أ).** ارفع ملف الـ APK الأصلي إلى المستودع أو أرفقه، وسأنفّذ إعادة
-التسمية الكاملة على مستوى الـ DEX وأعيد التوقيع وأسلّم APK جاهزًا للتثبيت والاختبار.
+**التوصية: الخيار (أ).** ارفع ملف الـ APK الأصلي إلى المستودع، وسأنفّذ إعادة التسمية
+الكاملة على مستوى الـ DEX وأعيد التوقيع وأسلّم APK جاهزًا للتثبيت والاختبار.
+
+### بيئة التنفيذ المحلية (لماذا يُبنى على CI)
+
+| المتطلّب | الحالة محليًا |
+|---|---|
+| JDK · Android SDK | ❌ غير مثبّتين |
+| `dl.google.com` · `maven.google.com` · `repo1.maven.org` · `services.gradle.org` | ❌ محجوبة |
+| `deb.debian.org` / `archive.ubuntu.com` | ❌ محجوبة (لا `apt install`) |
+| `github.com` · `pypi.org` · `registry.npmjs.org` | ✅ متاحة |
+
+لذلك البناء يجري على GitHub Actions عبر `.github/workflows/android-build.yml`، وسجلّ
+كل بناء يُحفظ تلقائيًا في `ci-reports/`.
 
 ## 7. حالة العمل
 
@@ -142,5 +170,8 @@ L5:
 | العمل على نسخة منفصلة (`KayPro/`) | ✅ |
 | تغيير حزمة التطبيق إلى `com.almlkaide.kaypro` | ✅ |
 | ضبط كل الملفات على الحزمة الجديدة + تحقق آلي | ✅ |
-| خط بناء APK | ✅ مُضاف على CI |
+| خط بناء APK على CI + حفظ السجل في المستودع | ✅ |
+| تجاوز Manifest / الموارد / AAPT / assets / JNI / التوقيع | ✅ مؤكَّد ببناء فعلي |
+| إصلاح تعارض AndroidX ↔ Support (`checkDuplicateClasses`) | ✅ |
+| `compileDebugJavaWithJavac` | 🔴 1,913 ملف decompiler غير صالح |
 | إنتاج APK قابل للاختبار | 🔴 محجوب — يحتاج المدخل في القسم 6 |

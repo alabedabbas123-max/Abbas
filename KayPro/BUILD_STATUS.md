@@ -15,22 +15,38 @@
   مع تحقق آلي: 6,619 ملف Java مطابق لمساره، وكل XML صالح، وصفر بقايا للحزم القديمة.
 - نجاح مراحل Manifest ودمج الموارد وAAPT وربط الموارد بالكامل.
 
-الأمر التالي ينجح:
+المهام التالية تنجح على CI:
 
 ```bash
-./gradlew processDebugResources mergeDebugJavaResource
+./gradlew processDebugResources mergeDebugJavaResource \
+              mergeDebugAssets mergeDebugNativeLibs checkDebugDuplicateClasses
 ```
+
+## توحيد المكتبات على Support Library ✅
+
+فشل `checkDebugDuplicateClasses` بسبب وجود `androidx.core:core:1.9.0` مع
+`com.android.support:support-compat:26.1.0` (كلاهما يحوي `android.support.v4.os.ResultReceiver`
+و`INotificationSideChannel` و`IResultReceiver`).
+
+وُحّد المشروع على Support Library لأن الكود والموارد وManifest تستخدمها في 180+ موضعًا:
+
+- تحويل 42 مرجع `androidx.*` إلى مقابلها في Support (34 ملفًا).
+- حذف كل اعتماديات AndroidX، وإضافة `android.arch.lifecycle:runtime/common:1.1.1`.
+- `android.useAndroidX=false` · `android.enableJetifier=false`.
 
 ## نتيجة `assembleDebug` 🔴
 
 يصل البناء إلى `compileDebugJavaWithJavac` ثم يتوقف — والسبب في مصادر المحرّك المفكوكة،
 وليس في Gradle أو Manifest أو XML أو الاعتماديات الرسمية.
 
-| القياس | القيمة |
-|---|---|
-| ملفات معطوبة داخل `libraries/java` | **1,892** |
-| تعليمات غير صالحة في Java (`goto Lx;` · `Lx:` · `move-exception`) | **66,230** |
-| ملفات معطوبة داخل `java/` (كود المشروع) | **0** ✅ |
+| نوع العطب | الملفات | المواضع |
+|---|---|---|
+| `goto Lxx;` · `Lxx:` | 1,885 | 58,672 |
+| `move-exception` | 1,102 | 7,558 |
+| تعليقات انهيار JADX | 32 | 624 |
+| النوع المجهول `??` | 17 | 44 |
+| **إجمالي الملفات المعطوبة في `libraries/java`** | **1,913** | — |
+| ملفات معطوبة في `java/` (كود المشروع) | **0** ✅ | — |
 
 مثال فعلي من `libraries/java/a/aa.java`:
 

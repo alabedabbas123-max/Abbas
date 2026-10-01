@@ -1,18 +1,116 @@
 # assembleDebug report
 
-- run: 36794784183
-- commit: e3ff3db5f485930c7bd1196775a538f2e5a324c0
+- run: 36795181907
+- commit: 5ccb306b978b301c4ac56280dbfe4a2f13cf8063
 - result: failure
 
 ## error summary
 ```
-79:> Task :checkDebugDuplicateClasses FAILED
-84:FAILURE: Build failed with an exception.
-86:* What went wrong:
+76:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:252: error: illegal start of expression
+79:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:252: error: illegal start of expression
+82:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:252: error: : expected
+85:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:253: error: illegal start of expression
+88:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:253: error: illegal start of expression
+91:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:253: error: : expected
+94:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:254: error: illegal start of expression
+97:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:254: error: illegal start of expression
+100:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:254: error: : expected
+103:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:255: error: illegal start of expression
+106:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:255: error: illegal start of expression
+109:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:255: error: : expected
+112:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:258: error: illegal start of expression
+115:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:258: error: illegal start of expression
+118:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:258: error: : expected
+121:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:260: error: illegal start of expression
+124:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:260: error: illegal start of expression
+127:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:260: error: : expected
+130:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:293: error: illegal start of expression
+133:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:293: error: illegal start of expression
+136:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:293: error: : expected
+139:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/xutils/image/ImageLoader.java:166: error: illegal start of expression
+142:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/xutils/image/ImageLoader.java:166: error: illegal start of expression
+145:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/xutils/image/ImageLoader.java:166: error: : expected
+148:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/xutils/image/ImageLoader.java:168: error: illegal start of expression
+151:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/xutils/image/ImageLoader.java:168: error: illegal start of expression
+154:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/xutils/image/ImageLoader.java:168: error: : expected
+157:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/xutils/image/ImageLoader.java:172: error: illegal start of expression
+160:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/xutils/image/ImageLoader.java:172: error: illegal start of expression
+163:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/xutils/image/ImageLoader.java:172: error: : expected
+166:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/xutils/image/ImageLoader.java:175: error: illegal start of expression
+169:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/xutils/image/ImageLoader.java:175: error: illegal start of expression
+172:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/xutils/image/ImageLoader.java:175: error: : expected
+175:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:26: error: illegal start of expression
+178:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:26: error: not a statement
+181:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:28: error: illegal start of expression
+184:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:28: error: not a statement
+187:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:35: error: illegal start of expression
+190:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:35: error: not a statement
+193:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:56: error: illegal start of expression
+196:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:56: error: not a statement
+199:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:59: error: variable declaration not allowed here
+202:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:60: error: illegal start of expression
+205:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:60: error: not a statement
+208:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:64: error: illegal start of expression
+211:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:64: error: not a statement
+214:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:65: error: illegal start of expression
+217:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:65: error: not a statement
+220:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:66: error: illegal start of expression
+223:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:66: error: not a statement
+226:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:88: error: illegal start of expression
+229:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:88: error: not a statement
+232:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/AlgorithmParametersSpi.java:18: error: illegal start of expression
+235:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/AlgorithmParametersSpi.java:18: error: not a statement
+238:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/AlgorithmParametersSpi.java:26: error: illegal start of expression
+241:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/AlgorithmParametersSpi.java:26: error: not a statement
+244:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/AlgorithmParametersSpi.java:34: error: illegal start of expression
+247:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/AlgorithmParametersSpi.java:34: error: not a statement
+250:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/AlgorithmParametersSpi.java:44: error: illegal start of expression
+253:/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/AlgorithmParametersSpi.java:44: error: not a statement
 ```
 
 ## last 150 log lines
 ```
+	at org.gradle.api.internal.tasks.compile.AnnotationProcessorDiscoveringCompiler.execute(AnnotationProcessorDiscoveringCompiler.java:51)
+	at org.gradle.api.internal.tasks.compile.AnnotationProcessorDiscoveringCompiler.execute(AnnotationProcessorDiscoveringCompiler.java:37)
+	at org.gradle.api.internal.tasks.compile.ModuleApplicationNameWritingCompiler.execute(ModuleApplicationNameWritingCompiler.java:46)
+	at org.gradle.api.internal.tasks.compile.ModuleApplicationNameWritingCompiler.execute(ModuleApplicationNameWritingCompiler.java:36)
+	at org.gradle.jvm.toolchain.internal.DefaultToolchainJavaCompiler.execute(DefaultToolchainJavaCompiler.java:57)
+	at org.gradle.api.tasks.compile.JavaCompile.lambda$createToolchainCompiler$1(JavaCompile.java:237)
+	at org.gradle.api.internal.tasks.compile.CleaningJavaCompiler.execute(CleaningJavaCompiler.java:53)
+	at org.gradle.api.internal.tasks.compile.incremental.IncrementalCompilerFactory.lambda$createRebuildAllCompiler$0(IncrementalCompilerFactory.java:52)
+	at org.gradle.api.internal.tasks.compile.incremental.SelectiveCompiler.execute(SelectiveCompiler.java:70)
+	at org.gradle.api.internal.tasks.compile.incremental.SelectiveCompiler.execute(SelectiveCompiler.java:44)
+	at org.gradle.api.internal.tasks.compile.incremental.IncrementalResultStoringCompiler.execute(IncrementalResultStoringCompiler.java:66)
+	at org.gradle.api.internal.tasks.compile.incremental.IncrementalResultStoringCompiler.execute(IncrementalResultStoringCompiler.java:52)
+	at org.gradle.api.internal.tasks.compile.CompileJavaBuildOperationReportingCompiler$2.call(CompileJavaBuildOperationReportingCompiler.java:59)
+	at org.gradle.api.internal.tasks.compile.CompileJavaBuildOperationReportingCompiler$2.call(CompileJavaBuildOperationReportingCompiler.java:51)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
+	at org.gradle.api.internal.tasks.compile.CompileJavaBuildOperationReportingCompiler.execute(CompileJavaBuildOperationReportingCompiler.java:51)
+	at org.gradle.api.tasks.compile.JavaCompile.performCompilation(JavaCompile.java:288)
+	at org.gradle.api.tasks.compile.JavaCompile.performIncrementalCompilation(JavaCompile.java:170)
+	at org.gradle.api.tasks.compile.JavaCompile.compile(JavaCompile.java:148)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at org.gradle.internal.reflect.JavaMethod.invoke(JavaMethod.java:125)
+	at org.gradle.api.internal.project.taskfactory.IncrementalInputsTaskAction.doExecute(IncrementalInputsTaskAction.java:32)
+	at org.gradle.api.internal.project.taskfactory.StandardTaskAction.execute(StandardTaskAction.java:51)
+	at org.gradle.api.internal.project.taskfactory.AbstractIncrementalTaskAction.execute(AbstractIncrementalTaskAction.java:25)
+	at org.gradle.api.internal.project.taskfactory.StandardTaskAction.execute(StandardTaskAction.java:29)
+	at org.gradle.api.internal.tasks.execution.TaskExecution$3.run(TaskExecution.java:236)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:26)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
 	at org.gradle.internal.operations.DefaultBuildOperationRunner.run(DefaultBuildOperationRunner.java:47)
 	at org.gradle.internal.operations.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:68)
 	at org.gradle.api.internal.tasks.execution.TaskExecution.executeAction(TaskExecution.java:221)
@@ -70,7 +168,8 @@
 	at org.gradle.internal.execution.steps.CaptureStateBeforeExecutionStep.execute(CaptureStateBeforeExecutionStep.java:76)
 	at org.gradle.internal.execution.steps.CaptureStateBeforeExecutionStep.execute(CaptureStateBeforeExecutionStep.java:50)
 	at org.gradle.internal.execution.steps.SkipEmptyWorkStep.executeWithNoEmptySources(SkipEmptyWorkStep.java:254)
-	at org.gradle.internal.execution.steps.SkipEmptyWorkStep.execute(SkipEmptyWorkStep.java:91)
+	at org.gradle.internal.execution.steps.SkipEmptyWorkStep.executeWithNoEmptySources(SkipEmptyWorkStep.java:209)
+	at org.gradle.internal.execution.steps.SkipEmptyWorkStep.execute(SkipEmptyWorkStep.java:88)
 	at org.gradle.internal.execution.steps.SkipEmptyWorkStep.execute(SkipEmptyWorkStep.java:56)
 	at org.gradle.internal.execution.steps.RemoveUntrackedExecutionStateStep.execute(RemoveUntrackedExecutionStateStep.java:32)
 	at org.gradle.internal.execution.steps.RemoveUntrackedExecutionStateStep.execute(RemoveUntrackedExecutionStateStep.java:21)
@@ -115,52 +214,10 @@
 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:379)
 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
 	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:49)
-Caused by: java.lang.RuntimeException: Duplicate class android.support.v4.app.INotificationSideChannel found in modules core-1.9.0-runtime (androidx.core:core:1.9.0) and support-compat-26.1.0-runtime (com.android.support:support-compat:26.1.0)
-Duplicate class android.support.v4.app.INotificationSideChannel$Stub found in modules core-1.9.0-runtime (androidx.core:core:1.9.0) and support-compat-26.1.0-runtime (com.android.support:support-compat:26.1.0)
-Duplicate class android.support.v4.app.INotificationSideChannel$Stub$Proxy found in modules core-1.9.0-runtime (androidx.core:core:1.9.0) and support-compat-26.1.0-runtime (com.android.support:support-compat:26.1.0)
-Duplicate class android.support.v4.os.IResultReceiver found in modules core-1.9.0-runtime (androidx.core:core:1.9.0) and support-compat-26.1.0-runtime (com.android.support:support-compat:26.1.0)
-Duplicate class android.support.v4.os.IResultReceiver$Stub found in modules core-1.9.0-runtime (androidx.core:core:1.9.0) and support-compat-26.1.0-runtime (com.android.support:support-compat:26.1.0)
-Duplicate class android.support.v4.os.IResultReceiver$Stub$Proxy found in modules core-1.9.0-runtime (androidx.core:core:1.9.0) and support-compat-26.1.0-runtime (com.android.support:support-compat:26.1.0)
-Duplicate class android.support.v4.os.ResultReceiver found in modules core-1.9.0-runtime (androidx.core:core:1.9.0) and support-compat-26.1.0-runtime (com.android.support:support-compat:26.1.0)
-Duplicate class android.support.v4.os.ResultReceiver$1 found in modules core-1.9.0-runtime (androidx.core:core:1.9.0) and support-compat-26.1.0-runtime (com.android.support:support-compat:26.1.0)
-Duplicate class android.support.v4.os.ResultReceiver$MyResultReceiver found in modules core-1.9.0-runtime (androidx.core:core:1.9.0) and support-compat-26.1.0-runtime (com.android.support:support-compat:26.1.0)
-Duplicate class android.support.v4.os.ResultReceiver$MyRunnable found in modules core-1.9.0-runtime (androidx.core:core:1.9.0) and support-compat-26.1.0-runtime (com.android.support:support-compat:26.1.0)
-
-Go to the documentation to learn how to <a href="d.android.com/r/tools/classpath-sync-errors">Fix dependency resolution errors</a>.
-	at com.android.build.gradle.internal.tasks.CheckDuplicateClassesDelegate.run(CheckDuplicateClassesDelegate.kt:65)
-	at com.android.build.gradle.internal.tasks.CheckDuplicatesRunnable.execute(CheckDuplicateClassesDelegate.kt:91)
-	at org.gradle.workers.internal.DefaultWorkerServer.execute(DefaultWorkerServer.java:63)
-	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:66)
-	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:62)
-	at org.gradle.internal.classloader.ClassLoaderUtils.executeInClassloader(ClassLoaderUtils.java:100)
-	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.lambda$execute$0(NoIsolationWorkerFactory.java:62)
-	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:44)
-	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:41)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
-	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
-	at org.gradle.workers.internal.AbstractWorker.executeWrappedInBuildOperation(AbstractWorker.java:41)
-	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.execute(NoIsolationWorkerFactory.java:59)
-	at org.gradle.workers.internal.DefaultWorkerExecutor.lambda$submitWork$2(DefaultWorkerExecutor.java:212)
-	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runExecution(DefaultConditionalExecutionQueue.java:187)
-	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.access$700(DefaultConditionalExecutionQueue.java:120)
-	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner$1.run(DefaultConditionalExecutionQueue.java:162)
-	at org.gradle.internal.Factories$1.create(Factories.java:31)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:249)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:109)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:114)
-	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runBatch(DefaultConditionalExecutionQueue.java:157)
-	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.run(DefaultConditionalExecutionQueue.java:126)
-	... 2 more
 
 
 * Get more help at https://help.gradle.org
 
-BUILD FAILED in 43s
-17 actionable tasks: 17 executed
+BUILD FAILED in 50s
+25 actionable tasks: 25 executed
 ```

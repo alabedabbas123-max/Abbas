@@ -34,28 +34,7 @@ Installing Android SDK Platform 33 in /usr/local/lib/android/sdk/platforms/andro
 > Task :compileDebugRenderscript NO-SOURCE
 > Task :generateDebugBuildConfig
 > Task :javaPreCompileDebug
-
 > Task :checkDebugAarMetadata
-WARNING:Your project has set `android.useAndroidX=true`, but configuration `:debugRuntimeClasspath` still contains legacy support libraries, which may cause runtime issues.
-This behavior will not be allowed in Android Gradle plugin 8.0.
-Please use only AndroidX dependencies or set `android.enableJetifier=true` in the `gradle.properties` file to migrate your project to AndroidX (see https://developer.android.com/jetpack/androidx/migrate for more info).
-The following legacy support libraries are detected:
-:debugRuntimeClasspath -> com.android.support:support-v4:26.1.0
-:debugRuntimeClasspath -> com.android.support:support-v4:26.1.0 -> com.android.support:support-compat:26.1.0
-:debugRuntimeClasspath -> com.android.support:appcompat-v7:26.1.0 -> com.android.support:support-annotations:26.1.0
-:debugRuntimeClasspath -> com.android.support:support-v4:26.1.0 -> com.android.support:support-compat:26.1.0 -> android.arch.lifecycle:runtime:1.0.0
-:debugRuntimeClasspath -> com.android.support:support-v4:26.1.0 -> com.android.support:support-compat:26.1.0 -> android.arch.lifecycle:runtime:1.0.0 -> android.arch.lifecycle:common:1.0.0
-:debugRuntimeClasspath -> com.android.support:support-v4:26.1.0 -> com.android.support:support-compat:26.1.0 -> android.arch.lifecycle:runtime:1.0.0 -> android.arch.core:common:1.0.0
-:debugRuntimeClasspath -> com.android.support:support-v4:26.1.0 -> com.android.support:support-media-compat:26.1.0
-:debugRuntimeClasspath -> com.android.support:support-v4:26.1.0 -> com.android.support:support-core-utils:26.1.0
-:debugRuntimeClasspath -> com.android.support:support-v4:26.1.0 -> com.android.support:support-core-ui:26.1.0
-:debugRuntimeClasspath -> com.android.support:support-v4:26.1.0 -> com.android.support:support-fragment:26.1.0
-:debugRuntimeClasspath -> com.android.support:appcompat-v7:26.1.0
-:debugRuntimeClasspath -> com.android.support:appcompat-v7:26.1.0 -> com.android.support:support-vector-drawable:26.1.0
-:debugRuntimeClasspath -> com.android.support:appcompat-v7:26.1.0 -> com.android.support:animated-vector-drawable:26.1.0
-:debugRuntimeClasspath -> com.android.support:recyclerview-v7:26.1.0
-:debugRuntimeClasspath -> com.google.android.gms:play-services-ads:17.2.1 -> com.android.support:customtabs:26.1.0
-
 > Task :generateDebugResValues
 > Task :mapDebugSourceSetPaths
 > Task :generateDebugResources
@@ -76,35 +55,341 @@ This migration can be done automatically using the AGP Upgrade Assistant, please
 > Task :mergeDebugAssets
 > Task :processDebugJavaRes NO-SOURCE
 > Task :compressDebugAssets
-> Task :checkDebugDuplicateClasses FAILED
+> Task :checkDebugDuplicateClasses
 > Task :mergeDebugJavaResource
 > Task :desugarDebugFileDependencies
+> Task :mergeDebugJniLibFolders
+> Task :mergeDebugNativeLibs
+> Task :validateSigningDebug
+> Task :writeDebugAppMetadata
+> Task :writeDebugSigningConfigVersions
 > Task :processDebugManifestForPackage
+
+> Task :stripDebugDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libcrash_analysis.so, liblink.so.
+warn: removing resource com.almlkaide.kaypro:array/layout_design_activity_xml_theme without required default value.
+
+
+> Task :processDebugResources
+
+> Task :compileDebugJavaWithJavac
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:252: error: illegal start of expression
+        ?? r8;
+        ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:252: error: illegal start of expression
+        ?? r8;
+         ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:252: error: : expected
+        ?? r8;
+             ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:253: error: illegal start of expression
+        ?? r2;
+        ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:253: error: illegal start of expression
+        ?? r2;
+         ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:253: error: : expected
+        ?? r2;
+             ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:254: error: illegal start of expression
+        ?? r0;
+        ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:254: error: illegal start of expression
+        ?? r0;
+         ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:254: error: : expected
+        ?? r0;
+             ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:255: error: illegal start of expression
+        ?? r1;
+        ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:255: error: illegal start of expression
+        ?? r1;
+         ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:255: error: : expected
+        ?? r1;
+             ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:258: error: illegal start of expression
+        ?? randomAccessFile;
+        ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:258: error: illegal start of expression
+        ?? randomAccessFile;
+         ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:258: error: : expected
+        ?? randomAccessFile;
+                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:260: error: illegal start of expression
+        ?? randomAccessFile2 = 0;
+        ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:260: error: illegal start of expression
+        ?? randomAccessFile2 = 0;
+         ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:260: error: : expected
+        ?? randomAccessFile2 = 0;
+                                ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:293: error: illegal start of expression
+        ?? r9 = randomAccessFile2;
+        ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:293: error: illegal start of expression
+        ?? r9 = randomAccessFile2;
+         ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/apache/commons/io/input/Tailer.java:293: error: : expected
+        ?? r9 = randomAccessFile2;
+                                 ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/xutils/image/ImageLoader.java:166: error: illegal start of expression
+        ?? r2;
+        ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/xutils/image/ImageLoader.java:166: error: illegal start of expression
+        ?? r2;
+         ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/xutils/image/ImageLoader.java:166: error: : expected
+        ?? r2;
+             ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/xutils/image/ImageLoader.java:168: error: illegal start of expression
+        ?? r3;
+        ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/xutils/image/ImageLoader.java:168: error: illegal start of expression
+        ?? r3;
+         ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/xutils/image/ImageLoader.java:168: error: : expected
+        ?? r3;
+             ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/xutils/image/ImageLoader.java:172: error: illegal start of expression
+        ?? r4;
+        ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/xutils/image/ImageLoader.java:172: error: illegal start of expression
+        ?? r4;
+         ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/xutils/image/ImageLoader.java:172: error: : expected
+        ?? r4;
+             ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/xutils/image/ImageLoader.java:175: error: illegal start of expression
+        ?? r5 = 0;
+        ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/xutils/image/ImageLoader.java:175: error: illegal start of expression
+        ?? r5 = 0;
+         ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/xutils/image/ImageLoader.java:175: error: : expected
+        ?? r5 = 0;
+                 ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:26: error: illegal start of expression
+        if (r2.equals(abcd.InterfacelN.XL) == false) goto L9;
+                                                     ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:26: error: not a statement
+        if (r2.equals(abcd.InterfacelN.XL) == false) goto L9;
+                                                          ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:28: error: illegal start of expression
+        if (r5.Zo() == null) goto L7;
+                             ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:28: error: not a statement
+        if (r5.Zo() == null) goto L7;
+                                  ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:35: error: illegal start of expression
+        if (r2.equals(abcd.QN.br) == false) goto L13;
+                                            ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:35: error: not a statement
+        if (r2.equals(abcd.QN.br) == false) goto L13;
+                                                 ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:56: error: illegal start of expression
+        if ((r4 instanceof javax.crypto.interfaces.DHPrivateKey) == true) goto L5;
+                                                                          ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:56: error: not a statement
+        if ((r4 instanceof javax.crypto.interfaces.DHPrivateKey) == true) goto L5;
+                                                                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:59: error: variable declaration not allowed here
+        javax.crypto.interfaces.DHPrivateKey r5 = (javax.crypto.interfaces.DHPrivateKey) r4;
+                                             ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:60: error: illegal start of expression
+        if (getX().equals(r5.getX()) == true) goto L8;
+                                              ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:60: error: not a statement
+        if (getX().equals(r5.getX()) == true) goto L8;
+                                                   ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:64: error: illegal start of expression
+        if (getParams().getG().equals(r5.getParams().getG()) == false) goto L15;
+                                                                       ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:64: error: not a statement
+        if (getParams().getG().equals(r5.getParams().getG()) == false) goto L15;
+                                                                            ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:65: error: illegal start of expression
+        if (getParams().getP().equals(r5.getParams().getP()) == false) goto L15;
+                                                                       ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:65: error: not a statement
+        if (getParams().getP().equals(r5.getParams().getP()) == false) goto L15;
+                                                                            ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:66: error: illegal start of expression
+        if (getParams().getL() != r5.getParams().getL()) goto L15;
+                                                         ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:66: error: not a statement
+        if (getParams().getL() != r5.getParams().getL()) goto L15;
+                                                              ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:88: error: illegal start of expression
+        if (this.FH == null) goto L8;
+                             ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey.java:88: error: not a statement
+        if (this.FH == null) goto L8;
+                                  ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/AlgorithmParametersSpi.java:18: error: illegal start of expression
+        if (j6(r1) == true) goto L5;
+                            ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/AlgorithmParametersSpi.java:18: error: not a statement
+        if (j6(r1) == true) goto L5;
+                                 ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/AlgorithmParametersSpi.java:26: error: illegal start of expression
+        if (r2 == null) goto L6;
+                        ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/AlgorithmParametersSpi.java:26: error: not a statement
+        if (r2 == null) goto L6;
+                             ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/AlgorithmParametersSpi.java:34: error: illegal start of expression
+        if ((r2 instanceof javax.crypto.spec.DHParameterSpec) == false) goto L7;
+                                                                        ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/AlgorithmParametersSpi.java:34: error: not a statement
+        if ((r2 instanceof javax.crypto.spec.DHParameterSpec) == false) goto L7;
+                                                                             ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/AlgorithmParametersSpi.java:44: error: illegal start of expression
+        if (r6.Zo() == null) goto L6;
+                             ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/AlgorithmParametersSpi.java:44: error: not a statement
+        if (r6.Zo() == null) goto L6;
+                                  ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/AlgorithmParametersSpi.java:58: error: illegal start of expression
+        if (j6(r4) == false) goto L7;
+                             ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/AlgorithmParametersSpi.java:58: error: not a statement
+        if (j6(r4) == false) goto L7;
+                                  ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/AlgorithmParametersSpi.java:71: error: illegal start of expression
+        if (r2 != javax.crypto.spec.DHParameterSpec.class) goto L7;
+                                                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/AlgorithmParametersSpi.java:71: error: not a statement
+        if (r2 != javax.crypto.spec.DHParameterSpec.class) goto L7;
+                                                                ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/AlgorithmParametersSpi.java:78: error: illegal start of expression
+        if (r2 != null) goto L4;
+                        ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/AlgorithmParametersSpi.java:78: error: not a statement
+        if (r2 != null) goto L4;
+                             ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/AlgorithmParametersSpi.java:81: error: illegal start of expression
+        if (r2.equals("ASN.1") == true) goto L9;
+                                        ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/AlgorithmParametersSpi.java:81: error: not a statement
+        if (r2.equals("ASN.1") == true) goto L9;
+                                             ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/DHUtil.java:8: error: illegal start of expression
+        if ((r6 instanceof javax.crypto.interfaces.DHPrivateKey) == false) goto L7;
+                                                                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/DHUtil.java:8: error: not a statement
+        if ((r6 instanceof javax.crypto.interfaces.DHPrivateKey) == false) goto L7;
+                                                                                ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/DHUtil.java:16: error: illegal start of expression
+        if ((r6 instanceof javax.crypto.interfaces.DHPublicKey) == false) goto L7;
+                                                                          ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/DHUtil.java:16: error: not a statement
+        if ((r6 instanceof javax.crypto.interfaces.DHPublicKey) == false) goto L7;
+                                                                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/KeyAgreementSpi.java:27: error: illegal start of expression
+        if (r6[0] != 0) goto L6;
+                        ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/KeyAgreementSpi.java:27: error: not a statement
+        if (r6[0] != 0) goto L6;
+                             ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/KeyAgreementSpi.java:37: error: illegal start of expression
+        if (this.DW == null) goto L20;
+                             ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/KeyAgreementSpi.java:37: error: not a statement
+        if (this.DW == null) goto L20;
+                                  ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/KeyAgreementSpi.java:38: error: illegal start of expression
+        if ((r3 instanceof javax.crypto.interfaces.DHPublicKey) == false) goto L18;
+                                                                          ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/KeyAgreementSpi.java:38: error: not a statement
+        if ((r3 instanceof javax.crypto.interfaces.DHPublicKey) == false) goto L18;
+                                                                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/KeyAgreementSpi.java:40: error: illegal start of expression
+        if (r5.getParams().getG().equals(this.Hw) == false) goto L16;
+                                                            ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/KeyAgreementSpi.java:40: error: not a statement
+        if (r5.getParams().getG().equals(this.Hw) == false) goto L16;
+                                                                 ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/KeyAgreementSpi.java:41: error: illegal start of expression
+        if (r5.getParams().getP().equals(this.FH) == false) goto L16;
+                                                            ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/KeyAgreementSpi.java:41: error: not a statement
+        if (r5.getParams().getP().equals(this.FH) == false) goto L16;
+                                                                 ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/KeyAgreementSpi.java:42: error: illegal start of expression
+        if (r4 == false) goto L13;
+                         ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/KeyAgreementSpi.java:42: error: not a statement
+        if (r4 == false) goto L13;
+                              ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/KeyAgreementSpi.java:58: error: illegal start of expression
+        if (this.DW == null) goto L11;
+                             ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/KeyAgreementSpi.java:58: error: not a statement
+        if (this.DW == null) goto L11;
+                                  ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/KeyAgreementSpi.java:60: error: illegal start of expression
+        if ((r4.length - r5) < r0.length) goto L9;
+                                          ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/KeyAgreementSpi.java:60: error: not a statement
+        if ((r4.length - r5) < r0.length) goto L9;
+                                               ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/KeyAgreementSpi.java:71: error: illegal start of expression
+        if (this.DW == null) goto L14;
+                             ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/KeyAgreementSpi.java:71: error: not a statement
+        if (this.DW == null) goto L14;
+                                  ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/KeyAgreementSpi.java:74: error: illegal start of expression
+        if (j6.containsKey(r0) == false) goto L12;
+                                         ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/KeyAgreementSpi.java:74: error: not a statement
+        if (j6.containsKey(r0) == false) goto L12;
+                                              ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/KeyAgreementSpi.java:77: error: illegal start of expression
+        if (r0.startsWith("DES") == false) goto L10;
+                                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/KeyAgreementSpi.java:77: error: not a statement
+        if (r0.startsWith("DES") == false) goto L10;
+                                                ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/KeyAgreementSpi.java:89: error: illegal start of expression
+        if (this.DW == null) goto L7;
+                             ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/KeyAgreementSpi.java:89: error: not a statement
+        if (this.DW == null) goto L7;
+                                  ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/KeyAgreementSpi.java:97: error: illegal start of expression
+        if ((r1 instanceof javax.crypto.interfaces.DHPrivateKey) == false) goto L7;
+                                                                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/KeyAgreementSpi.java:97: error: not a statement
+        if ((r1 instanceof javax.crypto.interfaces.DHPrivateKey) == false) goto L7;
+                                                                                ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/KeyAgreementSpi.java:111: error: illegal start of expression
+        if ((r1 instanceof javax.crypto.interfaces.DHPrivateKey) == false) goto L15;
+                                                                           ^
+/home/runner/work/Abbas/Abbas/KayPro/libraries/java/org/spongycastle/jcajce/provider/asymmetric/dh/KeyAgreementSpi.java:111: error: not a statement
+        if ((r1 instanceof javax.crypto.interfaces.DHPrivateKey) == false) goto L15;
+                                                                                ^
+100 errors
+only showing the first 100 errors, of 97410 total; use -Xmaxerrs if you would like to see more
+
+> Task :compileDebugJavaWithJavac FAILED
 
 FAILURE: Build failed with an exception.
 
 * What went wrong:
-Execution failed for task ':checkDebugDuplicateClasses'.
-> A failure occurred while executing com.android.build.gradle.internal.tasks.CheckDuplicatesRunnable
-   > Duplicate class android.support.v4.app.INotificationSideChannel found in modules core-1.9.0-runtime (androidx.core:core:1.9.0) and support-compat-26.1.0-runtime (com.android.support:support-compat:26.1.0)
-     Duplicate class android.support.v4.app.INotificationSideChannel$Stub found in modules core-1.9.0-runtime (androidx.core:core:1.9.0) and support-compat-26.1.0-runtime (com.android.support:support-compat:26.1.0)
-     Duplicate class android.support.v4.app.INotificationSideChannel$Stub$Proxy found in modules core-1.9.0-runtime (androidx.core:core:1.9.0) and support-compat-26.1.0-runtime (com.android.support:support-compat:26.1.0)
-     Duplicate class android.support.v4.os.IResultReceiver found in modules core-1.9.0-runtime (androidx.core:core:1.9.0) and support-compat-26.1.0-runtime (com.android.support:support-compat:26.1.0)
-     Duplicate class android.support.v4.os.IResultReceiver$Stub found in modules core-1.9.0-runtime (androidx.core:core:1.9.0) and support-compat-26.1.0-runtime (com.android.support:support-compat:26.1.0)
-     Duplicate class android.support.v4.os.IResultReceiver$Stub$Proxy found in modules core-1.9.0-runtime (androidx.core:core:1.9.0) and support-compat-26.1.0-runtime (com.android.support:support-compat:26.1.0)
-     Duplicate class android.support.v4.os.ResultReceiver found in modules core-1.9.0-runtime (androidx.core:core:1.9.0) and support-compat-26.1.0-runtime (com.android.support:support-compat:26.1.0)
-     Duplicate class android.support.v4.os.ResultReceiver$1 found in modules core-1.9.0-runtime (androidx.core:core:1.9.0) and support-compat-26.1.0-runtime (com.android.support:support-compat:26.1.0)
-     Duplicate class android.support.v4.os.ResultReceiver$MyResultReceiver found in modules core-1.9.0-runtime (androidx.core:core:1.9.0) and support-compat-26.1.0-runtime (com.android.support:support-compat:26.1.0)
-     Duplicate class android.support.v4.os.ResultReceiver$MyRunnable found in modules core-1.9.0-runtime (androidx.core:core:1.9.0) and support-compat-26.1.0-runtime (com.android.support:support-compat:26.1.0)
-     
-     Go to the documentation to learn how to <a href="d.android.com/r/tools/classpath-sync-errors">Fix dependency resolution errors</a>.
+Execution failed for task ':compileDebugJavaWithJavac'.
+> Compilation failed; see the compiler error output for details.
 
 * Try:
 > Run with --info or --debug option to get more log output.
 > Run with --scan to get full insights.
 
 * Exception is:
-org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':checkDebugDuplicateClasses'.
+org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':compileDebugJavaWithJavac'.
 	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.lambda$executeIfValid$1(ExecuteActionsTaskExecuter.java:142)
 	at org.gradle.internal.Try$Failure.ifSuccessfulOrElse(Try.java:282)
 	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:140)
@@ -136,18 +421,47 @@ org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':checkDe
 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:379)
 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
 	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:49)
-Caused by: org.gradle.workers.internal.DefaultWorkerExecutor$WorkExecutionException: A failure occurred while executing com.android.build.gradle.internal.tasks.CheckDuplicatesRunnable
-	at org.gradle.workers.internal.DefaultWorkerExecutor$WorkItemExecution.waitForCompletion(DefaultWorkerExecutor.java:348)
-	at org.gradle.internal.work.DefaultAsyncWorkTracker.lambda$waitForItemsAndGatherFailures$2(DefaultAsyncWorkTracker.java:130)
-	at org.gradle.internal.Factories$1.create(Factories.java:31)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.withoutLocks(DefaultWorkerLeaseService.java:321)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.withoutLocks(DefaultWorkerLeaseService.java:304)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.withoutLock(DefaultWorkerLeaseService.java:309)
-	at org.gradle.internal.work.DefaultAsyncWorkTracker.waitForItemsAndGatherFailures(DefaultAsyncWorkTracker.java:126)
-	at org.gradle.internal.work.DefaultAsyncWorkTracker.waitForItemsAndGatherFailures(DefaultAsyncWorkTracker.java:92)
-	at org.gradle.internal.work.DefaultAsyncWorkTracker.waitForAll(DefaultAsyncWorkTracker.java:78)
-	at org.gradle.internal.work.DefaultAsyncWorkTracker.waitForCompletion(DefaultAsyncWorkTracker.java:66)
-	at org.gradle.api.internal.tasks.execution.TaskExecution$3.run(TaskExecution.java:244)
+Caused by: org.gradle.api.internal.tasks.compile.CompilationFailedException: Compilation failed; see the compiler error output for details.
+	at org.gradle.api.internal.tasks.compile.JdkJavaCompiler.execute(JdkJavaCompiler.java:57)
+	at org.gradle.api.internal.tasks.compile.JdkJavaCompiler.execute(JdkJavaCompiler.java:39)
+	at org.gradle.api.internal.tasks.compile.NormalizingJavaCompiler.delegateAndHandleErrors(NormalizingJavaCompiler.java:98)
+	at org.gradle.api.internal.tasks.compile.NormalizingJavaCompiler.execute(NormalizingJavaCompiler.java:52)
+	at org.gradle.api.internal.tasks.compile.NormalizingJavaCompiler.execute(NormalizingJavaCompiler.java:38)
+	at org.gradle.api.internal.tasks.compile.AnnotationProcessorDiscoveringCompiler.execute(AnnotationProcessorDiscoveringCompiler.java:51)
+	at org.gradle.api.internal.tasks.compile.AnnotationProcessorDiscoveringCompiler.execute(AnnotationProcessorDiscoveringCompiler.java:37)
+	at org.gradle.api.internal.tasks.compile.ModuleApplicationNameWritingCompiler.execute(ModuleApplicationNameWritingCompiler.java:46)
+	at org.gradle.api.internal.tasks.compile.ModuleApplicationNameWritingCompiler.execute(ModuleApplicationNameWritingCompiler.java:36)
+	at org.gradle.jvm.toolchain.internal.DefaultToolchainJavaCompiler.execute(DefaultToolchainJavaCompiler.java:57)
+	at org.gradle.api.tasks.compile.JavaCompile.lambda$createToolchainCompiler$1(JavaCompile.java:237)
+	at org.gradle.api.internal.tasks.compile.CleaningJavaCompiler.execute(CleaningJavaCompiler.java:53)
+	at org.gradle.api.internal.tasks.compile.incremental.IncrementalCompilerFactory.lambda$createRebuildAllCompiler$0(IncrementalCompilerFactory.java:52)
+	at org.gradle.api.internal.tasks.compile.incremental.SelectiveCompiler.execute(SelectiveCompiler.java:70)
+	at org.gradle.api.internal.tasks.compile.incremental.SelectiveCompiler.execute(SelectiveCompiler.java:44)
+	at org.gradle.api.internal.tasks.compile.incremental.IncrementalResultStoringCompiler.execute(IncrementalResultStoringCompiler.java:66)
+	at org.gradle.api.internal.tasks.compile.incremental.IncrementalResultStoringCompiler.execute(IncrementalResultStoringCompiler.java:52)
+	at org.gradle.api.internal.tasks.compile.CompileJavaBuildOperationReportingCompiler$2.call(CompileJavaBuildOperationReportingCompiler.java:59)
+	at org.gradle.api.internal.tasks.compile.CompileJavaBuildOperationReportingCompiler$2.call(CompileJavaBuildOperationReportingCompiler.java:51)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
+	at org.gradle.api.internal.tasks.compile.CompileJavaBuildOperationReportingCompiler.execute(CompileJavaBuildOperationReportingCompiler.java:51)
+	at org.gradle.api.tasks.compile.JavaCompile.performCompilation(JavaCompile.java:288)
+	at org.gradle.api.tasks.compile.JavaCompile.performIncrementalCompilation(JavaCompile.java:170)
+	at org.gradle.api.tasks.compile.JavaCompile.compile(JavaCompile.java:148)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at org.gradle.internal.reflect.JavaMethod.invoke(JavaMethod.java:125)
+	at org.gradle.api.internal.project.taskfactory.IncrementalInputsTaskAction.doExecute(IncrementalInputsTaskAction.java:32)
+	at org.gradle.api.internal.project.taskfactory.StandardTaskAction.execute(StandardTaskAction.java:51)
+	at org.gradle.api.internal.project.taskfactory.AbstractIncrementalTaskAction.execute(AbstractIncrementalTaskAction.java:25)
+	at org.gradle.api.internal.project.taskfactory.StandardTaskAction.execute(StandardTaskAction.java:29)
+	at org.gradle.api.internal.tasks.execution.TaskExecution$3.run(TaskExecution.java:236)
 	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
 	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:26)
 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
@@ -211,7 +525,8 @@ Caused by: org.gradle.workers.internal.DefaultWorkerExecutor$WorkExecutionExcept
 	at org.gradle.internal.execution.steps.CaptureStateBeforeExecutionStep.execute(CaptureStateBeforeExecutionStep.java:76)
 	at org.gradle.internal.execution.steps.CaptureStateBeforeExecutionStep.execute(CaptureStateBeforeExecutionStep.java:50)
 	at org.gradle.internal.execution.steps.SkipEmptyWorkStep.executeWithNoEmptySources(SkipEmptyWorkStep.java:254)
-	at org.gradle.internal.execution.steps.SkipEmptyWorkStep.execute(SkipEmptyWorkStep.java:91)
+	at org.gradle.internal.execution.steps.SkipEmptyWorkStep.executeWithNoEmptySources(SkipEmptyWorkStep.java:209)
+	at org.gradle.internal.execution.steps.SkipEmptyWorkStep.execute(SkipEmptyWorkStep.java:88)
 	at org.gradle.internal.execution.steps.SkipEmptyWorkStep.execute(SkipEmptyWorkStep.java:56)
 	at org.gradle.internal.execution.steps.RemoveUntrackedExecutionStateStep.execute(RemoveUntrackedExecutionStateStep.java:32)
 	at org.gradle.internal.execution.steps.RemoveUntrackedExecutionStateStep.execute(RemoveUntrackedExecutionStateStep.java:21)
@@ -256,51 +571,9 @@ Caused by: org.gradle.workers.internal.DefaultWorkerExecutor$WorkExecutionExcept
 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:379)
 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
 	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:49)
-Caused by: java.lang.RuntimeException: Duplicate class android.support.v4.app.INotificationSideChannel found in modules core-1.9.0-runtime (androidx.core:core:1.9.0) and support-compat-26.1.0-runtime (com.android.support:support-compat:26.1.0)
-Duplicate class android.support.v4.app.INotificationSideChannel$Stub found in modules core-1.9.0-runtime (androidx.core:core:1.9.0) and support-compat-26.1.0-runtime (com.android.support:support-compat:26.1.0)
-Duplicate class android.support.v4.app.INotificationSideChannel$Stub$Proxy found in modules core-1.9.0-runtime (androidx.core:core:1.9.0) and support-compat-26.1.0-runtime (com.android.support:support-compat:26.1.0)
-Duplicate class android.support.v4.os.IResultReceiver found in modules core-1.9.0-runtime (androidx.core:core:1.9.0) and support-compat-26.1.0-runtime (com.android.support:support-compat:26.1.0)
-Duplicate class android.support.v4.os.IResultReceiver$Stub found in modules core-1.9.0-runtime (androidx.core:core:1.9.0) and support-compat-26.1.0-runtime (com.android.support:support-compat:26.1.0)
-Duplicate class android.support.v4.os.IResultReceiver$Stub$Proxy found in modules core-1.9.0-runtime (androidx.core:core:1.9.0) and support-compat-26.1.0-runtime (com.android.support:support-compat:26.1.0)
-Duplicate class android.support.v4.os.ResultReceiver found in modules core-1.9.0-runtime (androidx.core:core:1.9.0) and support-compat-26.1.0-runtime (com.android.support:support-compat:26.1.0)
-Duplicate class android.support.v4.os.ResultReceiver$1 found in modules core-1.9.0-runtime (androidx.core:core:1.9.0) and support-compat-26.1.0-runtime (com.android.support:support-compat:26.1.0)
-Duplicate class android.support.v4.os.ResultReceiver$MyResultReceiver found in modules core-1.9.0-runtime (androidx.core:core:1.9.0) and support-compat-26.1.0-runtime (com.android.support:support-compat:26.1.0)
-Duplicate class android.support.v4.os.ResultReceiver$MyRunnable found in modules core-1.9.0-runtime (androidx.core:core:1.9.0) and support-compat-26.1.0-runtime (com.android.support:support-compat:26.1.0)
-
-Go to the documentation to learn how to <a href="d.android.com/r/tools/classpath-sync-errors">Fix dependency resolution errors</a>.
-	at com.android.build.gradle.internal.tasks.CheckDuplicateClassesDelegate.run(CheckDuplicateClassesDelegate.kt:65)
-	at com.android.build.gradle.internal.tasks.CheckDuplicatesRunnable.execute(CheckDuplicateClassesDelegate.kt:91)
-	at org.gradle.workers.internal.DefaultWorkerServer.execute(DefaultWorkerServer.java:63)
-	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:66)
-	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:62)
-	at org.gradle.internal.classloader.ClassLoaderUtils.executeInClassloader(ClassLoaderUtils.java:100)
-	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.lambda$execute$0(NoIsolationWorkerFactory.java:62)
-	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:44)
-	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:41)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
-	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
-	at org.gradle.workers.internal.AbstractWorker.executeWrappedInBuildOperation(AbstractWorker.java:41)
-	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.execute(NoIsolationWorkerFactory.java:59)
-	at org.gradle.workers.internal.DefaultWorkerExecutor.lambda$submitWork$2(DefaultWorkerExecutor.java:212)
-	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runExecution(DefaultConditionalExecutionQueue.java:187)
-	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.access$700(DefaultConditionalExecutionQueue.java:120)
-	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner$1.run(DefaultConditionalExecutionQueue.java:162)
-	at org.gradle.internal.Factories$1.create(Factories.java:31)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:249)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:109)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:114)
-	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runBatch(DefaultConditionalExecutionQueue.java:157)
-	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.run(DefaultConditionalExecutionQueue.java:126)
-	... 2 more
 
 
 * Get more help at https://help.gradle.org
 
-BUILD FAILED in 43s
-17 actionable tasks: 17 executed
+BUILD FAILED in 50s
+25 actionable tasks: 25 executed

@@ -10,6 +10,7 @@ on:
   push:
     paths:
       - 'KayPro/**'
+      - '.github/workflows/package-source.yml'
 
 permissions:
   contents: write

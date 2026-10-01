@@ -54,13 +54,14 @@ This migration can be done automatically using the AGP Upgrade Assistant, please
 > Task :generateDebugAssets UP-TO-DATE
 > Task :mergeDebugAssets
 > Task :processDebugManifestForPackage
-> Task :processDebugJavaRes NO-SOURCE
 > Task :compressDebugAssets
+> Task :processDebugJavaRes NO-SOURCE
+> Task :mergeDebugJavaResource
+> Task :checkDebugDuplicateClasses
 warn: removing resource com.almlkaide.kaypro:array/layout_design_activity_xml_theme without required default value.
 
 > Task :processDebugResources
-> Task :checkDebugDuplicateClasses
-> Task :mergeDebugJavaResource
+> Task :desugarDebugFileDependencies
 
 > Task :compileDebugJavaWithJavac
 /home/runner/work/Abbas/Abbas/KayPro/java/com/almlkaide/kaypro/formatter/FormatFactory.java:9: error: package com.google.gson does not exist
@@ -144291,5 +144292,5 @@ Execution failed for task ':compileDebugJavaWithJavac'.
 
 * Get more help at https://help.gradle.org
 
-BUILD FAILED in 1m 16s
-18 actionable tasks: 18 executed
+BUILD FAILED in 1m 5s
+19 actionable tasks: 19 executed

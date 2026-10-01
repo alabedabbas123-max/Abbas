@@ -1,7 +1,7 @@
 # assembleDebug report
 
-- run: 36800114356
-- commit: 065150feb817f8b278eb706dfc65d555f9497529
+- run: 36801395399
+- commit: a5f40de26fb1a5d9a79ce4f4e9e6ff01b45b3f27
 - result: failure
 
 ## error summary
@@ -77,6 +77,8 @@
     137 /KayPro/libraries/java/a/b/c/ClassH.java
 ```
 
-## raw log
-
-Kept as a private workflow artifact, not committed (it echoes source lines).
+## failing tasks
+```
+> Task :compileDebugJavaWithJavac FAILED
+FAILURE: Build failed with an exception.
+```

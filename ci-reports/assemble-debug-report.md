@@ -1,7 +1,7 @@
 # assembleDebug report
 
-- run: 36799708767
-- commit: 6260215f21c7a96b7e04010e2e4c9877d2a31ccd
+- run: 36800114356
+- commit: 065150feb817f8b278eb706dfc65d555f9497529
 - result: failure
 
 ## error summary
@@ -227,6 +227,6 @@ Execution failed for task ':compileDebugJavaWithJavac'.
 
 * Get more help at https://help.gradle.org
 
-BUILD FAILED in 1m 5s
-19 actionable tasks: 19 executed
+BUILD FAILED in 1m 17s
+25 actionable tasks: 25 executed
 ```

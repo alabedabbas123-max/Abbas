@@ -807,7 +807,7 @@ public class KC {
                     throw new java.io.IOException(org.eclipse.jgit.JGitText.j6().dirCacheDoesNotHaveABackingFile);
                 }
                 case 23: {
-                    $pc16 = 24; continue $sw16;
+                    return;
                 }
                 case 24: {
                     return;

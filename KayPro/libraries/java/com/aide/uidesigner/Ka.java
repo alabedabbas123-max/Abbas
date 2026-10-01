@@ -757,7 +757,7 @@ public class Ka {
             android.view.View r6 = null;
             java.lang.Throwable th = null;
             java.lang.Throwable $ex14 = null;
-            int $pc14 = 14;
+            int $pc14 = 4;
             $sw14: while (true) {
                 switch ($pc14) {
                     case 14: {

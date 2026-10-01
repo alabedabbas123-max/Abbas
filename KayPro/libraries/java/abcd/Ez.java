@@ -15,119 +15,122 @@ public class Ez implements abcd.Jz {
     }
 
     private synchronized javax.net.ssl.SSLSocketFactory DW() {
-        javax.net.ssl.SSLSocketFactory r0 = null;
-        java.lang.Throwable e = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex0 = null;
-        int $pc0 = -1;
-        $sw0: while (true) {
-            switch ($pc0) {
-                case -1: {
-                    monitor-enter(this);
-                    try {
-                        this.Hw = true;
-                    } catch (java.lang.Throwable $t) {
-                        $ex0 = $t;
-                        $pc0 = 13; continue $sw0;
+        synchronized (this) {
+            javax.net.ssl.SSLSocketFactory r0 = null;
+            java.lang.Throwable e = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex0 = null;
+            int $pc0 = -1;
+            $sw0: while (true) {
+                switch ($pc0) {
+                    case -1: {
+                        try {
+                            this.Hw = true;
+                        } catch (java.lang.Throwable $t) {
+                            $ex0 = $t;
+                            $pc0 = 13; continue $sw0;
+                        }
+                        try {
+                            r0 = abcd.Kz.j6(this.DW);
+                            this.j6.Hw("Fabric", "Custom SSL pinning enabled");
+                        } catch (java.lang.Throwable $t) {
+                            $ex0 = $t;
+                            if ($t instanceof java.lang.Exception) { $pc0 = 8; continue $sw0; }
+                            $pc0 = 13; continue $sw0;
+                        }
+                        return r0;
                     }
-                    try {
-                        r0 = abcd.Kz.j6(this.DW);
-                        this.j6.Hw("Fabric", "Custom SSL pinning enabled");
-                    } catch (java.lang.Throwable $t) {
-                        $ex0 = $t;
-                        if ($t instanceof java.lang.Exception) { $pc0 = 8; continue $sw0; }
-                        $pc0 = 13; continue $sw0;
+                    case 8: {
+                        e = $ex0;
+                        try {
+                            this.j6.FH("Fabric", "Exception while validating pinned certs", e);
+                        } catch (java.lang.Throwable $t) {
+                            $ex0 = $t;
+                            $pc0 = 13; continue $sw0;
+                        }
+                        return null;
                     }
-                    monitor-exit(this);
-                    return r0;
-                }
-                case 8: {
-                    e = $ex0;
-                    try {
-                        this.j6.FH("Fabric", "Exception while validating pinned certs", e);
-                    } catch (java.lang.Throwable $t) {
-                        $ex0 = $t;
-                        $pc0 = 13; continue $sw0;
+                    case 13: {
+                        th = $ex0;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
                     }
-                    return null;
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 13: {
-                    th = $ex0;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 
     private synchronized void FH() {
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex1 = null;
-        int $pc1 = -1;
-        $sw1: while (true) {
-            switch ($pc1) {
-                case -1: {
-                    monitor-enter(this);
-                    try {
-                        this.Hw = false;
-                        this.FH = null;
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        $pc1 = 7; continue $sw1;
+        synchronized (this) {
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex1 = null;
+            int $pc1 = -1;
+            $sw1: while (true) {
+                switch ($pc1) {
+                    case -1: {
+                        try {
+                            this.Hw = false;
+                            this.FH = null;
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            $pc1 = 7; continue $sw1;
+                        }
+                        return;
                     }
-                    monitor-exit(this);
-                    return;
+                    case 7: {
+                        th = $ex1;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 7: {
-                    th = $ex1;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 
     private synchronized javax.net.ssl.SSLSocketFactory j6() {
-        javax.net.ssl.SSLSocketFactory r0 = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex2 = null;
-        int $pc2 = -1;
-        $sw2: while (true) {
-            switch ($pc2) {
-                case -1: {
-                    monitor-enter(this);
-                    $pc2 = 11; continue $sw2;
-                }
-                case 11: {
-                    th = $ex2;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 4: {
-                    if (this.FH == null) { $pc2 = 6; continue $sw2; }
-                    $pc2 = 8; continue $sw2;
-                }
-                case 8: {
-                    try {
-                        r0 = this.FH;
-                    } catch (java.lang.Throwable $t) {
-                        $ex2 = $t;
-                        $pc2 = 11; continue $sw2;
+        synchronized (this) {
+            javax.net.ssl.SSLSocketFactory r0 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex2 = null;
+            int $pc2 = -1;
+            $sw2: while (true) {
+                switch ($pc2) {
+                    case -1: {
+                        $pc2 = 4; continue $sw2;
                     }
-                    monitor-exit(this);
-                    return r0;
-                }
-                case 6: {
-                    if (this.Hw == true) { $pc2 = 8; continue $sw2; }
-                    try {
-                        this.FH = DW();
-                    } catch (java.lang.Throwable $t) {
-                        $ex2 = $t;
-                        $pc2 = 11; continue $sw2;
+                    case 11: {
+                        th = $ex2;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
                     }
-                    { $pc2 = 8; continue $sw2; }
+                    case 4: {
+                        if (this.FH == null) { $pc2 = 6; continue $sw2; }
+                        $pc2 = 8; continue $sw2;
+                    }
+                    case 8: {
+                        try {
+                            r0 = this.FH;
+                        } catch (java.lang.Throwable $t) {
+                            $ex2 = $t;
+                            $pc2 = 11; continue $sw2;
+                        }
+                        return r0;
+                    }
+                    case 6: {
+                        if (this.Hw == true) { $pc2 = 8; continue $sw2; }
+                        try {
+                            this.FH = DW();
+                        } catch (java.lang.Throwable $t) {
+                            $ex2 = $t;
+                            $pc2 = 11; continue $sw2;
+                        }
+                        { $pc2 = 8; continue $sw2; }
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 

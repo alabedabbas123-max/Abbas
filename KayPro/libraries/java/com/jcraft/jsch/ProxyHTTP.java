@@ -57,7 +57,7 @@ public class ProxyHTTP implements com.jcraft.jsch.Proxy {
                     this.FH = null;
                     this.Hw = null;
                     this.v5 = null;
-                    $pc0 = 13; continue $sw0;
+                    return;
                 }
                 case 13: {
                     return;
@@ -308,7 +308,7 @@ public class ProxyHTTP implements com.jcraft.jsch.Proxy {
                         if ($t instanceof java.lang.RuntimeException) { $pc1 = 54; continue $sw1; }
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
                     }
-                    $pc1 = 54; continue $sw1;
+                    $pc1 = 53; continue $sw1;
                 }
                 case 54: {
                     e = $ex1;
@@ -330,7 +330,7 @@ public class ProxyHTTP implements com.jcraft.jsch.Proxy {
                     throw new com.jcraft.jsch.JSchException("ProxyHTTP: " + e.toString(), e);
                 }
                 case 58: {
-                    $pc1 = 59; continue $sw1;
+                    return;
                 }
                 case 59: {
                     return;

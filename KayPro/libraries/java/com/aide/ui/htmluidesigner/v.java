@@ -413,7 +413,7 @@ public class v {
                         if ($t instanceof java.lang.Exception) { $pc5 = 9; continue $sw5; }
                         $pc5 = 15; continue $sw5;
                     }
-                    $pc5 = 9; continue $sw5;
+                    return;
                 }
                 case 9: {
                     e = $ex5;
@@ -424,7 +424,7 @@ public class v {
                         if ($t instanceof java.lang.Exception) { $pc5 = 12; continue $sw5; }
                         $pc5 = 15; continue $sw5;
                     }
-                    $pc5 = 12; continue $sw5;
+                    return;
                 }
                 case 12: {
                     e = $ex5;
@@ -815,7 +815,7 @@ public class v {
                         if ($t instanceof java.lang.Exception) { $pc10 = 22; continue $sw10; }
                         $pc10 = 27; continue $sw10;
                     }
-                    $pc10 = 22; continue $sw10;
+                    $pc10 = 9; continue $sw10;
                 }
                 case 22: {
                     e = $ex10;

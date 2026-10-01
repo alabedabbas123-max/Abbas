@@ -29,98 +29,97 @@ class ChannelX11 extends com.jcraft.jsch.Channel {
     }
 
     static byte[] FH(com.jcraft.jsch.Session r8) {
-        java.util.Hashtable r0 = null;
-        byte[] r1 = null;
-        com.jcraft.jsch.Random r2 = null;
-        byte[] r3 = null;
-        int r4 = 0;
-        int r5 = 0;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex0 = null;
-        int $pc0 = -1;
-        $sw0: while (true) {
-            switch ($pc0) {
-                case -1: {
-                    r0 = gW;
-                    monitor-enter(r0);
-                    try {
-                        r1 = (byte[]) gW.get(r8);
-                    } catch (java.lang.Throwable $t) {
-                        $ex0 = $t;
-                        $pc0 = 21; continue $sw0;
+        synchronized (gW) {
+            java.util.Hashtable r0 = null;
+            byte[] r1 = null;
+            com.jcraft.jsch.Random r2 = null;
+            byte[] r3 = null;
+            int r4 = 0;
+            int r5 = 0;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex0 = null;
+            int $pc0 = -1;
+            $sw0: while (true) {
+                switch ($pc0) {
+                    case -1: {
+                        r0 = gW;
+                        try {
+                            r1 = (byte[]) gW.get(r8);
+                        } catch (java.lang.Throwable $t) {
+                            $ex0 = $t;
+                            $pc0 = 21; continue $sw0;
+                        }
+                        if (r1 != null) { $pc0 = 19; continue $sw0; }
+                        try {
+                            r2 = com.jcraft.jsch.Session.j6;
+                            r3 = new byte[16];
+                        } catch (java.lang.Throwable $t) {
+                            $ex0 = $t;
+                            $pc0 = 21; continue $sw0;
+                        }
+                        r4 = 0;
+                        try {
+                            r2.j6(r3, 0, 16);
+                        } catch (java.lang.Throwable $t) {
+                            $ex0 = $t;
+                            $pc0 = 16; continue $sw0;
+                        }
+                        try {
+                            yS.put(r8, r3);
+                            r1 = new byte[32];
+                        } catch (java.lang.Throwable $t) {
+                            $ex0 = $t;
+                            $pc0 = 21; continue $sw0;
+                        }
+                        $pc0 = 12; continue $sw0;
                     }
-                    if (r1 != null) { $pc0 = 19; continue $sw0; }
-                    try {
-                        r2 = com.jcraft.jsch.Session.j6;
-                        r3 = new byte[16];
-                        monitor-enter(r2);
-                    } catch (java.lang.Throwable $t) {
-                        $ex0 = $t;
-                        $pc0 = 21; continue $sw0;
+                    case 12: {
+                        if (r4 >= 16) { $pc0 = 13; continue $sw0; }
+                        try {
+                            r5 = r4 * 2;
+                            r1[r5] = BT[(r3[r4] >>> 4) & 15];
+                            r1[r5 + 1] = BT[r3[r4] & 15];
+                        } catch (java.lang.Throwable $t) {
+                            $ex0 = $t;
+                            $pc0 = 21; continue $sw0;
+                        }
+                        r4 = r4 + 1;
+                        { $pc0 = 12; continue $sw0; }
                     }
-                    r4 = 0;
-                    try {
-                        r2.j6(r3, 0, 16);
-                        monitor-exit(r2);
-                    } catch (java.lang.Throwable $t) {
-                        $ex0 = $t;
-                        $pc0 = 16; continue $sw0;
+                    case 13: {
+                        try {
+                            gW.put(r8, r1);
+                        } catch (java.lang.Throwable $t) {
+                            $ex0 = $t;
+                            $pc0 = 21; continue $sw0;
+                        }
+                        { $pc0 = 19; continue $sw0; }
                     }
-                    try {
-                        yS.put(r8, r3);
-                        r1 = new byte[32];
-                    } catch (java.lang.Throwable $t) {
-                        $ex0 = $t;
-                        $pc0 = 21; continue $sw0;
+                    case 16: {
+                        th = $ex0;
+                        try {
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                        } catch (java.lang.Throwable $t) {
+                            $ex0 = $t;
+                            $pc0 = 21; continue $sw0;
+                        }
                     }
-                    $pc0 = 12; continue $sw0;
-                }
-                case 12: {
-                    if (r4 >= 16) { $pc0 = 13; continue $sw0; }
-                    try {
-                        r5 = r4 * 2;
-                        r1[r5] = BT[(r3[r4] >>> 4) & 15];
-                        r1[r5 + 1] = BT[r3[r4] & 15];
-                    } catch (java.lang.Throwable $t) {
-                        $ex0 = $t;
-                        $pc0 = 21; continue $sw0;
+                    case 19: {
+                        try {
+                        } catch (java.lang.Throwable $t) {
+                            $ex0 = $t;
+                            $pc0 = 21; continue $sw0;
+                        }
+                        return r1;
                     }
-                    r4 = r4 + 1;
-                    { $pc0 = 12; continue $sw0; }
-                }
-                case 13: {
-                    try {
-                        gW.put(r8, r1);
-                    } catch (java.lang.Throwable $t) {
-                        $ex0 = $t;
-                        $pc0 = 21; continue $sw0;
-                    }
-                    { $pc0 = 19; continue $sw0; }
-                }
-                case 16: {
-                    th = $ex0;
-                    try {
+                    case 21: {
+                        th = $ex0;
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                    } catch (java.lang.Throwable $t) {
-                        $ex0 = $t;
-                        $pc0 = 21; continue $sw0;
                     }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 19: {
-                    try {
-                        monitor-exit(r0);
-                    } catch (java.lang.Throwable $t) {
-                        $ex0 = $t;
-                        $pc0 = 21; continue $sw0;
-                    }
-                    return r1;
-                }
-                case 21: {
-                    th = $ex0;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 
@@ -151,31 +150,32 @@ class ChannelX11 extends com.jcraft.jsch.Channel {
     }
 
     static void Hw(com.jcraft.jsch.Session r2) {
-        java.util.Hashtable r0 = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex2 = null;
-        int $pc2 = -1;
-        $sw2: while (true) {
-            switch ($pc2) {
-                case -1: {
-                    r0 = gW;
-                    monitor-enter(r0);
-                    try {
-                        gW.remove(r2);
-                        yS.remove(r2);
-                        monitor-exit(r0);
-                    } catch (java.lang.Throwable $t) {
-                        $ex2 = $t;
-                        $pc2 = 7; continue $sw2;
+        synchronized (gW) {
+            java.util.Hashtable r0 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex2 = null;
+            int $pc2 = -1;
+            $sw2: while (true) {
+                switch ($pc2) {
+                    case -1: {
+                        r0 = gW;
+                        try {
+                            gW.remove(r2);
+                            yS.remove(r2);
+                        } catch (java.lang.Throwable $t) {
+                            $ex2 = $t;
+                            $pc2 = 7; continue $sw2;
+                        }
+                        return;
                     }
-                    return;
+                    case 7: {
+                        th = $ex2;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 7: {
-                    th = $ex2;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 
@@ -212,104 +212,105 @@ class ChannelX11 extends com.jcraft.jsch.Channel {
 
     @Override
     void j6(byte[] r7, int r8, int r9) {
-        com.jcraft.jsch.Session r0 = null;
-        byte[] r10 = null;
-        int r11 = 0;
-        int r1 = 0;
-        int r2 = 0;
-        int r4 = 0;
-        byte[] r3 = null;
-        int r5 = 0;
-        java.util.Hashtable r6 = null;
-        byte[] r12 = null;
-        byte[] r13 = null;
-        int r14 = 0;
-        int r15 = 0;
-        java.lang.Throwable e = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex4 = null;
-        int $pc4 = -1;
-        $sw4: while (true) {
-            switch ($pc4) {
-                case -1: {
-                    if (this.vy == true) { $pc4 = 38; continue $sw4; }
-                    this.EQ.DW(r7, r8, r9);
-                    return;
-                }
-                case 38: {
-                    try {
-                        r0 = EQ();
-                    } catch (java.lang.Throwable $t) {
-                        $ex4 = $t;
-                        if ($t instanceof com.jcraft.jsch.JSchException) { $pc4 = 31; continue $sw4; }
-                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+        synchronized (yS) {
+            com.jcraft.jsch.Session r0 = null;
+            byte[] r10 = null;
+            int r11 = 0;
+            int r1 = 0;
+            int r2 = 0;
+            int r4 = 0;
+            byte[] r3 = null;
+            int r5 = 0;
+            java.util.Hashtable r6 = null;
+            byte[] r12 = null;
+            byte[] r13 = null;
+            int r14 = 0;
+            int r15 = 0;
+            java.lang.Throwable e = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex4 = null;
+            int $pc4 = -1;
+            $sw4: while (true) {
+                switch ($pc4) {
+                    case -1: {
+                        if (this.vy == true) { $pc4 = 38; continue $sw4; }
+                        this.EQ.DW(r7, r8, r9);
+                        return;
                     }
-                    r10 = FH(r7, r8, r9);
-                    r11 = r10.length;
-                    if (r11 >= 9) { $pc4 = 8; continue $sw4; }
-                    return;
-                }
-                case 8: {
-                    r1 = ((r10[6] & 255) * 256) + (r10[7] & 255);
-                    r2 = ((r10[8] & 255) * 256) + (r10[9] & 255);
-                    if ((r10[0] & 255) != 66) { $pc4 = 11; continue $sw4; }
-                    $pc4 = 13; continue $sw4;
-                }
-                case 13: {
-                    r4 = (-r1) & 3;
-                    if (r11 >= (((r1 + 12) + r4) + r2)) { $pc4 = 16; continue $sw4; }
-                    return;
-                }
-                case 16: {
-                    r3 = new byte[r2];
-                    r5 = (12 + r1) + r4;
-                    java.lang.System.arraycopy(r10, r5, r3, 0, r2);
-                    r6 = yS;
-                    monitor-enter(r6);
-                    try {
-                        r12 = (byte[]) yS.get(r0);
-                        monitor-exit(r6);
-                    } catch (java.lang.Throwable $t) {
-                        $ex4 = $t;
-                        $pc4 = 28; continue $sw4;
+                    case 38: {
+                        try {
+                            r0 = EQ();
+                        } catch (java.lang.Throwable $t) {
+                            $ex4 = $t;
+                            if ($t instanceof com.jcraft.jsch.JSchException) { $pc4 = 31; continue $sw4; }
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                        }
+                        r10 = FH(r7, r8, r9);
+                        r11 = r10.length;
+                        if (r11 >= 9) { $pc4 = 8; continue $sw4; }
+                        return;
                     }
-                    if (j6(r3, r12) == false) { $pc4 = 25; continue $sw4; }
-                    r13 = er;
-                    if (r13 == null) { $pc4 = 26; continue $sw4; }
-                    java.lang.System.arraycopy(r13, 0, r10, r5, r2);
-                    $pc4 = 26; continue $sw4;
+                    case 8: {
+                        r1 = ((r10[6] & 255) * 256) + (r10[7] & 255);
+                        r2 = ((r10[8] & 255) * 256) + (r10[9] & 255);
+                        if ((r10[0] & 255) != 66) { $pc4 = 11; continue $sw4; }
+                        $pc4 = 13; continue $sw4;
+                    }
+                    case 13: {
+                        r4 = (-r1) & 3;
+                        if (r11 >= (((r1 + 12) + r4) + r2)) { $pc4 = 16; continue $sw4; }
+                        return;
+                    }
+                    case 16: {
+                        r3 = new byte[r2];
+                        r5 = (12 + r1) + r4;
+                        java.lang.System.arraycopy(r10, r5, r3, 0, r2);
+                        r6 = yS;
+                        try {
+                            r12 = (byte[]) yS.get(r0);
+                        } catch (java.lang.Throwable $t) {
+                            $ex4 = $t;
+                            $pc4 = 28; continue $sw4;
+                        }
+                        if (j6(r3, r12) == false) { $pc4 = 25; continue $sw4; }
+                        r13 = er;
+                        if (r13 == null) { $pc4 = 26; continue $sw4; }
+                        java.lang.System.arraycopy(r13, 0, r10, r5, r2);
+                        $pc4 = 26; continue $sw4;
+                    }
+                    case 26: {
+                        this.vy = false;
+                        this.EQ.DW(r10, 0, r11);
+                        this.ei = null;
+                        return;
+                    }
+                    case 25: {
+                        this.we = null;
+                        FH();
+                        this.EQ.j6();
+                        DW();
+                        $pc4 = 11; continue $sw4;
+                    }
+                    case 28: {
+                        th = $ex4;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    case 11: {
+                        if ((r10[0] & 255) != 108) { $pc4 = 13; continue $sw4; }
+                        r14 = (r1 >>> 8) & 255;
+                        r1 = ((r1 << 8) & 65280) | r14;
+                        r15 = (r2 >>> 8) & 255;
+                        r2 = ((r2 << 8) & 65280) | r15;
+                        return;
+                    }
+                    case 31: {
+                        e = $ex4;
+                        throw new java.io.IOException(e.toString());
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 26: {
-                    this.vy = false;
-                    this.EQ.DW(r10, 0, r11);
-                    this.ei = null;
-                    return;
-                }
-                case 25: {
-                    this.we = null;
-                    FH();
-                    this.EQ.j6();
-                    DW();
-                    $pc4 = 28; continue $sw4;
-                }
-                case 28: {
-                    th = $ex4;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 11: {
-                    if ((r10[0] & 255) != 108) { $pc4 = 13; continue $sw4; }
-                    r14 = (r1 >>> 8) & 255;
-                    r1 = ((r1 << 8) & 65280) | r14;
-                    r15 = (r2 >>> 8) & 255;
-                    r2 = ((r2 << 8) & 65280) | r15;
-                    $pc4 = 31; continue $sw4;
-                }
-                case 31: {
-                    e = $ex4;
-                    throw new java.io.IOException(e.toString());
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 
@@ -385,7 +386,7 @@ class ChannelX11 extends com.jcraft.jsch.Channel {
                     DW(1);
                     this.Ws = true;
                     DW();
-                    $pc5 = 24; continue $sw5;
+                    return;
                 }
                 case 24: {
                     return;

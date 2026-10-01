@@ -532,7 +532,7 @@ class lL {
                         if ($t instanceof java.lang.Exception) { $pc6 = 36; continue $sw6; }
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
                     }
-                    $pc6 = 36; continue $sw6;
+                    $pc6 = 29; continue $sw6;
                 }
                 case 36: {
                     e = $ex6;

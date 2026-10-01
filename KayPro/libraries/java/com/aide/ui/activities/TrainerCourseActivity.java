@@ -2317,7 +2317,7 @@ public class TrainerCourseActivity extends android.app.Activity {
                         $ex36 = $t;
                         $pc36 = 41; continue $sw36;
                     }
-                    $pc36 = 41; continue $sw36;
+                    $pc36 = 45; continue $sw36;
                 }
                 case 41: {
                     th = $ex36;

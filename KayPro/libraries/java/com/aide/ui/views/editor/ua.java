@@ -327,7 +327,7 @@ class ua extends java.io.Reader {
                     }
                     r12 = r12 + 1;
                     r2 = r4;
-                    $pc3 = 25; continue $sw3;
+                    $pc3 = 27; continue $sw3;
                 }
                 case 25: {
                     th = th;

@@ -722,68 +722,69 @@ public class CodeEditText extends android.view.ViewGroup {
 
         @abcd.Interfacesu(method = 1780196175913818495L)
         protected void P8() {
-            java.lang.Object r2 = null;
-            com.aide.engine.ClassO r3 = null;
-            java.lang.Throwable th = null;
-            java.lang.Throwable $ex16 = null;
-            int $pc16 = 4;
-            $sw16: while (true) {
-                switch ($pc16) {
-                    case 15: {
-                        th = $ex16;
-                        if (rN == false) { $pc16 = 19; continue $sw16; }
-                        abcd.wu.j6(th, -93411212262996993L, this);
-                        $pc16 = 19; continue $sw16;
-                    }
-                    case 19: {
-                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                    }
-                    case 4: {
-                        if (lg == false) { $pc16 = 6; continue $sw16; }
-                        try {
-                            abcd.wu.j6(-93411212262996993L, this);
-                        } catch (java.lang.Throwable $t) {
-                            $ex16 = $t;
-                            $pc16 = 15; continue $sw16;
+            synchronized (this.er) {
+                java.lang.Object r2 = null;
+                com.aide.engine.ClassO r3 = null;
+                java.lang.Throwable th = null;
+                java.lang.Throwable $ex16 = null;
+                int $pc16 = 4;
+                $sw16: while (true) {
+                    switch ($pc16) {
+                        case 15: {
+                            th = $ex16;
+                            if (rN == false) { $pc16 = 19; continue $sw16; }
+                            abcd.wu.j6(th, -93411212262996993L, this);
+                            $pc16 = 19; continue $sw16;
                         }
-                        $pc16 = 6; continue $sw16;
-                    }
-                    case 6: {
-                        try {
-                            r2 = this.er;
-                            monitor-enter(r2);
-                        } catch (java.lang.Throwable $t) {
-                            $ex16 = $t;
-                            $pc16 = 15; continue $sw16;
-                        }
-                        try {
-                            r3 = this.yS;
-                            this.yS = this.gW;
-                            this.gW = r3;
-                            monitor-exit(r2);
-                        } catch (java.lang.Throwable $t) {
-                            $ex16 = $t;
-                            $pc16 = 12; continue $sw16;
-                        }
-                        try {
-                            this.ei.post(new com.aide.ui.views.b(this));
-                        } catch (java.lang.Throwable $t) {
-                            $ex16 = $t;
-                            $pc16 = 15; continue $sw16;
-                        }
-                        return;
-                    }
-                    case 12: {
-                        th = $ex16;
-                        try {
+                        case 19: {
                             throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                        } catch (java.lang.Throwable $t) {
-                            $ex16 = $t;
-                            $pc16 = 15; continue $sw16;
                         }
+                        case 4: {
+                            if (lg == false) { $pc16 = 6; continue $sw16; }
+                            try {
+                                abcd.wu.j6(-93411212262996993L, this);
+                            } catch (java.lang.Throwable $t) {
+                                $ex16 = $t;
+                                $pc16 = 15; continue $sw16;
+                            }
+                            $pc16 = 6; continue $sw16;
+                        }
+                        case 6: {
+                            try {
+                                r2 = this.er;
+                            } catch (java.lang.Throwable $t) {
+                                $ex16 = $t;
+                                $pc16 = 15; continue $sw16;
+                            }
+                            try {
+                                r3 = this.yS;
+                                this.yS = this.gW;
+                                this.gW = r3;
+                            } catch (java.lang.Throwable $t) {
+                                $ex16 = $t;
+                                $pc16 = 12; continue $sw16;
+                            }
+                            try {
+                                this.ei.post(new com.aide.ui.views.b(this));
+                            } catch (java.lang.Throwable $t) {
+                                $ex16 = $t;
+                                $pc16 = 15; continue $sw16;
+                            }
+                            return;
+                        }
+                        case 12: {
+                            th = $ex16;
+                            try {
+                                throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                            } catch (java.lang.Throwable $t) {
+                                $ex16 = $t;
+                                $pc16 = 15; continue $sw16;
+                            }
+                        }
+                        default: throw new java.lang.IllegalStateException();
                     }
-                    default: throw new java.lang.IllegalStateException();
                 }
+        
             }
         }
 
@@ -906,40 +907,41 @@ public class CodeEditText extends android.view.ViewGroup {
         }
 
         public void j6(com.aide.engine.Enumm[] r13, int[] r14, int[] r15, int[] r16, int[] r17, int r18) {
-            java.lang.Object r2 = null;
-            com.aide.engine.ClassO r0 = null;
-            java.lang.Throwable th = null;
-            java.lang.Throwable $ex20 = null;
-            int $pc20 = -1;
-            $sw20: while (true) {
-                switch ($pc20) {
-                    case -1: {
-                        if (lg == false) { $pc20 = 6; continue $sw20; }
-                        abcd.wu.j6(-1809935377194553227L, this, new java.lang.Object[]{r13, r14, r15, r16, r17, new java.lang.Integer(r18)});
-                        $pc20 = 6; continue $sw20;
-                    }
-                    case 6: {
-                        this.P8.j6(r13, r14, r15, r16, r17, r18);
-                        r2 = this.BT;
-                        monitor-enter(r2);
-                        try {
-                            r0 = this.vy;
-                            this.vy = this.P8;
-                            this.P8 = r0;
-                            monitor-exit(r2);
-                        } catch (java.lang.Throwable $t) {
-                            $ex20 = $t;
-                            $pc20 = 12; continue $sw20;
+            synchronized (this.BT) {
+                java.lang.Object r2 = null;
+                com.aide.engine.ClassO r0 = null;
+                java.lang.Throwable th = null;
+                java.lang.Throwable $ex20 = null;
+                int $pc20 = -1;
+                $sw20: while (true) {
+                    switch ($pc20) {
+                        case -1: {
+                            if (lg == false) { $pc20 = 6; continue $sw20; }
+                            abcd.wu.j6(-1809935377194553227L, this, new java.lang.Object[]{r13, r14, r15, r16, r17, new java.lang.Integer(r18)});
+                            $pc20 = 6; continue $sw20;
                         }
-                        this.ei.post(new com.aide.ui.views.c(this));
-                        return;
+                        case 6: {
+                            this.P8.j6(r13, r14, r15, r16, r17, r18);
+                            r2 = this.BT;
+                            try {
+                                r0 = this.vy;
+                                this.vy = this.P8;
+                                this.P8 = r0;
+                            } catch (java.lang.Throwable $t) {
+                                $ex20 = $t;
+                                $pc20 = 12; continue $sw20;
+                            }
+                            this.ei.post(new com.aide.ui.views.c(this));
+                            return;
+                        }
+                        case 12: {
+                            th = $ex20;
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                        }
+                        default: throw new java.lang.IllegalStateException();
                     }
-                    case 12: {
-                        th = $ex20;
-                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                    }
-                    default: throw new java.lang.IllegalStateException();
                 }
+        
             }
         }
 
@@ -2573,7 +2575,7 @@ public class CodeEditText extends android.view.ViewGroup {
                 this = this;
                 boolean r0 = com.aide.ui.views.CodeEditText.c.Jm     // Catch: java.lang.Throwable -> L2b
                 if (r0 == 0) goto L11;
-                r0 = 430987089562994064
+                r0 = 430987089562994064L
                 java.lang.Integer r2 = new java.lang.Integer     // Catch: java.lang.Throwable -> L2b
                 r2.<init>(r8)     // Catch: java.lang.Throwable -> L2b
                 abcd.wu.j6(r0, r7, r2, r9)     // Catch: java.lang.Throwable -> L2b
@@ -2596,7 +2598,7 @@ public class CodeEditText extends android.view.ViewGroup {
                 r0 = move-exception;
                 boolean r1 = com.aide.ui.views.CodeEditText.c.Bx
                 if (r1 == 0) goto L40;
-                r2 = 430987089562994064
+                r2 = 430987089562994064L
                 java.lang.Integer r5 = new java.lang.Integer
                 r5.<init>(r8)
                 r1 = r0
@@ -2677,7 +2679,7 @@ public class CodeEditText extends android.view.ViewGroup {
                 this = this;
                 boolean r0 = com.aide.ui.views.CodeEditText.c.Jm     // Catch: java.lang.Throwable -> L37
                 if (r0 == 0) goto L11;
-                r0 = -6512005121637667345
+                r0 = -6512005121637667345L
                 java.lang.Integer r2 = new java.lang.Integer     // Catch: java.lang.Throwable -> L37
                 r2.<init>(r8)     // Catch: java.lang.Throwable -> L37
                 abcd.wu.j6(r0, r7, r2, r9)     // Catch: java.lang.Throwable -> L37
@@ -2707,7 +2709,7 @@ public class CodeEditText extends android.view.ViewGroup {
                 r0 = move-exception;
                 boolean r1 = com.aide.ui.views.CodeEditText.c.Bx
                 if (r1 == 0) goto L4c
-                r2 = -6512005121637667345
+                r2 = -6512005121637667345L
                 java.lang.Integer r5 = new java.lang.Integer
                 r5.<init>(r8)
                 r1 = r0
@@ -2907,7 +2909,7 @@ public class CodeEditText extends android.view.ViewGroup {
             int r110 = 0;
             java.lang.Throwable th = null;
             java.lang.Throwable $ex55 = null;
-            int $pc55 = 89;
+            int $pc55 = 4;
             $sw55: while (true) {
                 switch ($pc55) {
                     case 89: {
@@ -2930,7 +2932,7 @@ public class CodeEditText extends android.view.ViewGroup {
                         $pc55 = 95; continue $sw55;
                     }
                     case 95: {
-                        $pc55 = 86; continue $sw55;
+                        $pc55 = 8; continue $sw55;
                     }
                     case 86: {
                         th = $ex55;

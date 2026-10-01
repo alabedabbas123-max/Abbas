@@ -72,7 +72,7 @@ public class UJ extends abcd.TJ {
                 case 13: {
                     r5 = r5 + 1;
                     r3 = r6;
-                    $pc0 = 12; continue $sw0;
+                    $pc0 = 8; continue $sw0;
                 }
                 case 12: {
                     DW(r5);

@@ -283,7 +283,7 @@ public class DHGEX256 extends com.jcraft.jsch.KeyExchange {
                 }
                 case 20: {
                     java.lang.System.err.println(e);
-                    $pc2 = 18; continue $sw2;
+                    $pc2 = 25; continue $sw2;
                 }
                 case 18: {
                     e = e;
@@ -360,7 +360,7 @@ public class DHGEX256 extends com.jcraft.jsch.KeyExchange {
                     r110 = r66.j6(r13);
                     if (com.jcraft.jsch.JSch.v5().isEnabled(1) == false) { $pc2 = 39; continue $sw2; }
                     com.jcraft.jsch.JSch.v5().j6(1, "ssh_dss_verify: signature " + r110);
-                    $pc2 = 30; continue $sw2;
+                    $pc2 = 34; continue $sw2;
                 }
                 case 30: {
                     e = e;
@@ -368,7 +368,7 @@ public class DHGEX256 extends com.jcraft.jsch.KeyExchange {
                 }
                 case 34: {
                     java.lang.System.err.println(e);
-                    $pc2 = 32; continue $sw2;
+                    $pc2 = 38; continue $sw2;
                 }
                 case 32: {
                     e = e;

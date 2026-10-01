@@ -960,7 +960,7 @@ public class la {
             switch ($pc11) {
                 case -1: {
                     r2 = r21;
-                    $pc11 = 49; continue $sw11;
+                    $pc11 = 54; continue $sw11;
                 }
                 case 49: {
                     th = $ex11;
@@ -1379,8 +1379,8 @@ public class la {
         $sw15: while (true) {
             switch ($pc15) {
                 case -1: {
-                    r0 = -109065846718888472;
-                    $pc15 = 16; continue $sw15;
+                    r0 = -109065846718888472L;
+                    $pc15 = 21; continue $sw15;
                 }
                 case 16: {
                     th = $ex15;

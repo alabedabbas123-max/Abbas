@@ -596,7 +596,7 @@ public class Kj {
                     case 19: {
                         if (this.VH.get(r2).booleanValue() == false) { $pc5 = 21; continue $sw5; }
                         r7 = true;
-                        $pc5 = 32; continue $sw5;
+                        $pc5 = 34; continue $sw5;
                     }
                     case 32: {
                         e = e;
@@ -765,7 +765,7 @@ public class Kj {
                         r2 = ".jar";
                         r3 = ".aar";
                         r4 = ".pom";
-                        $pc7 = 80; continue $sw7;
+                        $pc7 = 85; continue $sw7;
                     }
                     case 80: {
                         th = $ex7;
@@ -1003,11 +1003,11 @@ public class Kj {
                     }
                     case 67: {
                         r114 = r7;
-                        $pc7 = 61; continue $sw7;
+                        $pc7 = 63; continue $sw7;
                     }
                     case 61: {
                         r113 = r2;
-                        $pc7 = 62; continue $sw7;
+                        $pc7 = 63; continue $sw7;
                     }
                     case 62: {
                         r113 = r2;
@@ -1018,7 +1018,7 @@ public class Kj {
                         r113 = r2;
                         r111 = r3;
                         r110 = r4;
-                        $pc7 = 66; continue $sw7;
+                        $pc7 = 71; continue $sw7;
                     }
                     case 66: {
                         r113 = r2;
@@ -1059,22 +1059,22 @@ public class Kj {
                         return null;
                     }
                     case 59: {
-                        $pc7 = 87; continue $sw7;
+                        throw new java.lang.IllegalStateException();
                     }
                     case 87: {
-                        $pc7 = 88; continue $sw7;
+                        throw new java.lang.IllegalStateException();
                     }
                     case 88: {
-                        $pc7 = 89; continue $sw7;
+                        throw new java.lang.IllegalStateException();
                     }
                     case 89: {
-                        $pc7 = 90; continue $sw7;
+                        throw new java.lang.IllegalStateException();
                     }
                     case 90: {
-                        $pc7 = 91; continue $sw7;
+                        throw new java.lang.IllegalStateException();
                     }
                     case 91: {
-                        $pc7 = 92; continue $sw7;
+                        throw new java.lang.IllegalStateException();
                     }
                     case 92: {
                         throw new java.lang.IllegalStateException();
@@ -1769,7 +1769,7 @@ public class Kj {
                     th = $ex16;
                     r4 = th;
                     th = th;
-                    $pc16 = 28; continue $sw16;
+                    $pc16 = 50; continue $sw16;
                 }
                 case 28: {
                     th = $ex16;
@@ -1799,7 +1799,7 @@ public class Kj {
                         $ex16 = $t;
                         $pc16 = 34; continue $sw16;
                     }
-                    $pc16 = 34; continue $sw16;
+                    $pc16 = 37; continue $sw16;
                 }
                 case 34: {
                     th = $ex16;
@@ -2513,7 +2513,7 @@ public class Kj {
             switch ($pc26) {
                 case -1: {
                     r8 = this;
-                    $pc26 = 124; continue $sw26;
+                    $pc26 = 127; continue $sw26;
                 }
                 case 124: {
                     th = th;
@@ -2694,7 +2694,7 @@ public class Kj {
                         if ($t instanceof java.lang.NumberFormatException) { $pc26 = 58; continue $sw26; }
                         $pc26 = 116; continue $sw26;
                     }
-                    $pc26 = 58; continue $sw26;
+                    $pc26 = 59; continue $sw26;
                 }
                 case 58: {
                     r13 = -1;
@@ -2803,7 +2803,7 @@ public class Kj {
                     }
                     r21 = r1;
                     r110 = r112;
-                    $pc26 = 80; continue $sw26;
+                    $pc26 = 104; continue $sw26;
                 }
                 case 80: {
                     th = th;
@@ -2845,7 +2845,7 @@ public class Kj {
                         $pc26 = 94; continue $sw26;
                     }
                     r19 = r33;
-                    $pc26 = 94; continue $sw26;
+                    $pc26 = 93; continue $sw26;
                 }
                 case 94: {
                     th = th;
@@ -2877,16 +2877,16 @@ public class Kj {
                 }
                 case 100: {
                     th = th;
-                    $pc26 = 102; continue $sw26;
+                    $pc26 = 40; continue $sw26;
                 }
                 case 102: {
                     th = th;
-                    $pc26 = 106; continue $sw26;
+                    $pc26 = 40; continue $sw26;
                 }
                 case 106: {
                     th = th;
                     r17 = r16;
-                    $pc26 = 114; continue $sw26;
+                    $pc26 = 40; continue $sw26;
                 }
                 case 114: {
                     th = th;
@@ -2903,7 +2903,7 @@ public class Kj {
                     }
                     if (r5 != 206) { $pc26 = 45; continue $sw26; }
                     r6 = true;
-                    $pc26 = 116; continue $sw26;
+                    $pc26 = 27; continue $sw26;
                 }
                 case 116: {
                     th = th;
@@ -2912,7 +2912,7 @@ public class Kj {
                 }
                 case 27: {
                     r13 = -1;
-                    $pc26 = 29; continue $sw26;
+                    $pc26 = 32; continue $sw26;
                 }
                 case 29: {
                     th = $ex26;

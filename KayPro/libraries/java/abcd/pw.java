@@ -205,7 +205,7 @@ public class pw {
                     th = $ex0;
                     r1 = th;
                     th = th;
-                    $pc0 = 29; continue $sw0;
+                    $pc0 = 39; continue $sw0;
                 }
                 case 29: {
                     th = $ex0;
@@ -232,7 +232,7 @@ public class pw {
                         $ex0 = $t;
                         $pc0 = 35; continue $sw0;
                     }
-                    $pc0 = 35; continue $sw0;
+                    return;
                 }
                 case 35: {
                     th = $ex0;
@@ -249,268 +249,264 @@ public class pw {
     }
 
     private static int j6(java.lang.String r12, java.lang.String r13, java.lang.String r14, boolean r15) {
-        long r0 = 0L;
-        java.lang.Object r2 = null;
-        boolean r5 = false;
-        abcd.tw r3 = null;
-        int r16 = 0;
-        abcd.tw r17 = null;
-        int r18 = 0;
-        int r19 = 0;
-        int r110 = 0;
-        int r111 = 0;
-        int r112 = 0;
-        java.lang.Throwable e = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex1 = null;
-        int $pc1 = -1;
-        $sw1: while (true) {
-            switch ($pc1) {
-                case -1: {
-                    r0 = java.lang.System.currentTimeMillis();
-                    r2 = Hw;
-                    monitor-enter(r2);
-                    r5 = true;
-                    try {
-                        r3 = new abcd.tw(v5(), true);
-                        r3.j6();
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        if ($t instanceof java.lang.Throwable) { $pc1 = 55; continue $sw1; }
-                        if ($t instanceof java.io.IOException) { $pc1 = 57; continue $sw1; }
-                        $pc1 = 53; continue $sw1;
+        synchronized (Hw) {
+            long r0 = 0L;
+            java.lang.Object r2 = null;
+            boolean r5 = false;
+            abcd.tw r3 = null;
+            int r16 = 0;
+            abcd.tw r17 = null;
+            int r18 = 0;
+            int r19 = 0;
+            int r110 = 0;
+            int r111 = 0;
+            int r112 = 0;
+            java.lang.Throwable e = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex1 = null;
+            int $pc1 = -1;
+            $sw1: while (true) {
+                switch ($pc1) {
+                    case -1: {
+                        r0 = java.lang.System.currentTimeMillis();
+                        r2 = Hw;
+                        r5 = true;
+                        try {
+                            r3 = new abcd.tw(v5(), true);
+                            r3.j6();
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            if ($t instanceof java.lang.Throwable) { $pc1 = 55; continue $sw1; }
+                            if ($t instanceof java.io.IOException) { $pc1 = 57; continue $sw1; }
+                            $pc1 = 53; continue $sw1;
+                        }
+                        $pc1 = 6; continue $sw1;
                     }
-                    $pc1 = 50; continue $sw1;
-                }
-                case 50: {
-                    th = $ex1;
-                    try {
-                        r3.DW();
+                    case 50: {
+                        th = $ex1;
+                        try {
+                            r3.DW();
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            if ($t instanceof java.lang.Throwable) { $pc1 = 55; continue $sw1; }
+                            if ($t instanceof java.io.IOException) { $pc1 = 57; continue $sw1; }
+                            $pc1 = 53; continue $sw1;
+                        }
+                    }
+                    case 6: {
+                        if (DW().exists() == true) { $pc1 = 8; continue $sw1; }
+                        if (r15 == true) { $pc1 = 31; continue $sw1; }
+                        try {
+                            r16 = j6;
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            $pc1 = 50; continue $sw1;
+                        }
+                        try {
+                            r3.DW();
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            if ($t instanceof java.lang.Throwable) { $pc1 = 55; continue $sw1; }
+                            if ($t instanceof java.io.IOException) { $pc1 = 57; continue $sw1; }
+                            $pc1 = 53; continue $sw1;
+                        }
+                        try {
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            $pc1 = 53; continue $sw1;
+                        }
+                        return r16;
+                    }
+                    case 31: {
+                        try {
+                            r3.DW();
+                            r17 = new abcd.tw(v5(), false);
+                            r17.j6();
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            if ($t instanceof java.lang.Throwable) { $pc1 = 55; continue $sw1; }
+                            if ($t instanceof java.io.IOException) { $pc1 = 57; continue $sw1; }
+                            $pc1 = 53; continue $sw1;
+                        }
+                        $pc1 = 33; continue $sw1;
+                    }
+                    case 47: {
+                        th = $ex1;
+                        try {
+                            r17.DW();
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            if ($t instanceof java.lang.Throwable) { $pc1 = 55; continue $sw1; }
+                            if ($t instanceof java.io.IOException) { $pc1 = 57; continue $sw1; }
+                            $pc1 = 53; continue $sw1;
+                        }
+                    }
+                    case 33: {
+                        if (DW().exists() == true) { $pc1 = 35; continue $sw1; }
+                        $pc1 = 43; continue $sw1;
+                    }
+                    case 43: {
+                        try {
+                            Zo(r12);
+                            u7();
+                            abcd.yw.j6("App state", "Saving appstate elapsed " + (java.lang.System.currentTimeMillis() - r0) + "ms.");
+                            r18 = FH;
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            $pc1 = 47; continue $sw1;
+                        }
+                        try {
+                            r17.DW();
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            if ($t instanceof java.lang.Throwable) { $pc1 = 55; continue $sw1; }
+                            if ($t instanceof java.io.IOException) { $pc1 = 57; continue $sw1; }
+                            $pc1 = 53; continue $sw1;
+                        }
+                        try {
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            $pc1 = 53; continue $sw1;
+                        }
+                        return r18;
+                    }
+                    case 35: {
+                        if (Zo == DW().lastModified()) { $pc1 = 38; continue $sw1; }
+                        try {
+                            gn();
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            $pc1 = 47; continue $sw1;
+                        }
+                        $pc1 = 38; continue $sw1;
+                    }
+                    case 38: {
+                        if (r14.equals(v5.optString(r13, null)) == false) { $pc1 = 43; continue $sw1; }
+                        try {
+                            r19 = DW;
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            $pc1 = 47; continue $sw1;
+                        }
+                        try {
+                            r17.DW();
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            if ($t instanceof java.lang.Throwable) { $pc1 = 55; continue $sw1; }
+                            if ($t instanceof java.io.IOException) { $pc1 = 57; continue $sw1; }
+                            $pc1 = 53; continue $sw1;
+                        }
+                        try {
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            $pc1 = 53; continue $sw1;
+                        }
+                        return r19;
+                    }
+                    case 8: {
+                        if (Zo == DW().lastModified()) { $pc1 = 10; continue $sw1; }
+                        try {
+                            gn();
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            $pc1 = 50; continue $sw1;
+                        }
+                        $pc1 = 12; continue $sw1;
+                    }
+                    case 12: {
+                        if (r14.equals(v5.optString(r13, null)) == false) { $pc1 = 19; continue $sw1; }
+                        if (r5 == false) { $pc1 = 15; continue $sw1; }
+                        try {
+                            abcd.yw.j6("App state", "Reading appstate value elapsed " + (java.lang.System.currentTimeMillis() - r0) + "ms.");
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            $pc1 = 50; continue $sw1;
+                        }
+                        $pc1 = 15; continue $sw1;
+                    }
+                    case 15: {
+                        try {
+                            r110 = DW;
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            $pc1 = 50; continue $sw1;
+                        }
+                        try {
+                            r3.DW();
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            if ($t instanceof java.lang.Throwable) { $pc1 = 55; continue $sw1; }
+                            if ($t instanceof java.io.IOException) { $pc1 = 57; continue $sw1; }
+                            $pc1 = 53; continue $sw1;
+                        }
+                        try {
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            $pc1 = 53; continue $sw1;
+                        }
+                        return r110;
+                    }
+                    case 19: {
+                        if (r15 == true) { $pc1 = 31; continue $sw1; }
+                        if (r5 == false) { $pc1 = 22; continue $sw1; }
+                        try {
+                            abcd.yw.j6("App state", "Reading appstate value elapsed " + (java.lang.System.currentTimeMillis() - r0) + "ms.");
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            $pc1 = 50; continue $sw1;
+                        }
+                        $pc1 = 22; continue $sw1;
+                    }
+                    case 22: {
+                        try {
+                            r111 = j6;
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            $pc1 = 50; continue $sw1;
+                        }
+                        try {
+                            r3.DW();
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            if ($t instanceof java.lang.Throwable) { $pc1 = 55; continue $sw1; }
+                            if ($t instanceof java.io.IOException) { $pc1 = 57; continue $sw1; }
+                            $pc1 = 53; continue $sw1;
+                        }
+                        try {
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            $pc1 = 53; continue $sw1;
+                        }
+                        return r111;
+                    }
+                    case 10: {
+                        r5 = false;
+                        throw new java.lang.IllegalStateException();
+                    }
+                    case 53: {
+                        th = $ex1;
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        if ($t instanceof java.lang.Throwable) { $pc1 = 55; continue $sw1; }
-                        if ($t instanceof java.io.IOException) { $pc1 = 57; continue $sw1; }
-                        $pc1 = 53; continue $sw1;
                     }
+                    case 55: {
+                        e = $ex1;
+                        try {
+                            abcd.yw.j6("I/O error accessing appstate", e);
+                            r112 = j6;
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            $pc1 = 53; continue $sw1;
+                        }
+                        return r112;
+                    }
+                    case 57: {
+                        throw new java.lang.IllegalStateException();
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 6: {
-                    if (DW().exists() == true) { $pc1 = 8; continue $sw1; }
-                    if (r15 == true) { $pc1 = 31; continue $sw1; }
-                    try {
-                        r16 = j6;
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        $pc1 = 50; continue $sw1;
-                    }
-                    try {
-                        r3.DW();
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        if ($t instanceof java.lang.Throwable) { $pc1 = 55; continue $sw1; }
-                        if ($t instanceof java.io.IOException) { $pc1 = 57; continue $sw1; }
-                        $pc1 = 53; continue $sw1;
-                    }
-                    try {
-                        monitor-exit(r2);
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        $pc1 = 53; continue $sw1;
-                    }
-                    return r16;
-                }
-                case 31: {
-                    try {
-                        r3.DW();
-                        r17 = new abcd.tw(v5(), false);
-                        r17.j6();
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        if ($t instanceof java.lang.Throwable) { $pc1 = 55; continue $sw1; }
-                        if ($t instanceof java.io.IOException) { $pc1 = 57; continue $sw1; }
-                        $pc1 = 53; continue $sw1;
-                    }
-                    $pc1 = 47; continue $sw1;
-                }
-                case 47: {
-                    th = $ex1;
-                    try {
-                        r17.DW();
-                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        if ($t instanceof java.lang.Throwable) { $pc1 = 55; continue $sw1; }
-                        if ($t instanceof java.io.IOException) { $pc1 = 57; continue $sw1; }
-                        $pc1 = 53; continue $sw1;
-                    }
-                }
-                case 33: {
-                    if (DW().exists() == true) { $pc1 = 35; continue $sw1; }
-                    $pc1 = 43; continue $sw1;
-                }
-                case 43: {
-                    try {
-                        Zo(r12);
-                        u7();
-                        abcd.yw.j6("App state", "Saving appstate elapsed " + (java.lang.System.currentTimeMillis() - r0) + "ms.");
-                        r18 = FH;
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        $pc1 = 47; continue $sw1;
-                    }
-                    try {
-                        r17.DW();
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        if ($t instanceof java.lang.Throwable) { $pc1 = 55; continue $sw1; }
-                        if ($t instanceof java.io.IOException) { $pc1 = 57; continue $sw1; }
-                        $pc1 = 53; continue $sw1;
-                    }
-                    try {
-                        monitor-exit(r2);
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        $pc1 = 53; continue $sw1;
-                    }
-                    return r18;
-                }
-                case 35: {
-                    if (Zo == DW().lastModified()) { $pc1 = 38; continue $sw1; }
-                    try {
-                        gn();
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        $pc1 = 47; continue $sw1;
-                    }
-                    $pc1 = 38; continue $sw1;
-                }
-                case 38: {
-                    if (r14.equals(v5.optString(r13, null)) == false) { $pc1 = 43; continue $sw1; }
-                    try {
-                        r19 = DW;
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        $pc1 = 47; continue $sw1;
-                    }
-                    try {
-                        r17.DW();
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        if ($t instanceof java.lang.Throwable) { $pc1 = 55; continue $sw1; }
-                        if ($t instanceof java.io.IOException) { $pc1 = 57; continue $sw1; }
-                        $pc1 = 53; continue $sw1;
-                    }
-                    try {
-                        monitor-exit(r2);
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        $pc1 = 53; continue $sw1;
-                    }
-                    return r19;
-                }
-                case 8: {
-                    if (Zo == DW().lastModified()) { $pc1 = 10; continue $sw1; }
-                    try {
-                        gn();
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        $pc1 = 50; continue $sw1;
-                    }
-                    $pc1 = 12; continue $sw1;
-                }
-                case 12: {
-                    if (r14.equals(v5.optString(r13, null)) == false) { $pc1 = 19; continue $sw1; }
-                    if (r5 == false) { $pc1 = 15; continue $sw1; }
-                    try {
-                        abcd.yw.j6("App state", "Reading appstate value elapsed " + (java.lang.System.currentTimeMillis() - r0) + "ms.");
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        $pc1 = 50; continue $sw1;
-                    }
-                    $pc1 = 15; continue $sw1;
-                }
-                case 15: {
-                    try {
-                        r110 = DW;
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        $pc1 = 50; continue $sw1;
-                    }
-                    try {
-                        r3.DW();
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        if ($t instanceof java.lang.Throwable) { $pc1 = 55; continue $sw1; }
-                        if ($t instanceof java.io.IOException) { $pc1 = 57; continue $sw1; }
-                        $pc1 = 53; continue $sw1;
-                    }
-                    try {
-                        monitor-exit(r2);
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        $pc1 = 53; continue $sw1;
-                    }
-                    return r110;
-                }
-                case 19: {
-                    if (r15 == true) { $pc1 = 31; continue $sw1; }
-                    if (r5 == false) { $pc1 = 22; continue $sw1; }
-                    try {
-                        abcd.yw.j6("App state", "Reading appstate value elapsed " + (java.lang.System.currentTimeMillis() - r0) + "ms.");
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        $pc1 = 50; continue $sw1;
-                    }
-                    $pc1 = 22; continue $sw1;
-                }
-                case 22: {
-                    try {
-                        r111 = j6;
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        $pc1 = 50; continue $sw1;
-                    }
-                    try {
-                        r3.DW();
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        if ($t instanceof java.lang.Throwable) { $pc1 = 55; continue $sw1; }
-                        if ($t instanceof java.io.IOException) { $pc1 = 57; continue $sw1; }
-                        $pc1 = 53; continue $sw1;
-                    }
-                    try {
-                        monitor-exit(r2);
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        $pc1 = 53; continue $sw1;
-                    }
-                    return r111;
-                }
-                case 10: {
-                    r5 = false;
-                    $pc1 = 53; continue $sw1;
-                }
-                case 53: {
-                    th = $ex1;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 55: {
-                    e = $ex1;
-                    try {
-                        abcd.yw.j6("I/O error accessing appstate", e);
-                        r112 = j6;
-                        monitor-exit(r2);
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        $pc1 = 53; continue $sw1;
-                    }
-                    return r112;
-                }
-                case 57: {
-                    throw new java.lang.IllegalStateException();
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 
@@ -687,7 +683,7 @@ public class pw {
                 case 26: {
                     th = th;
                     r1 = null;
-                    $pc2 = 39; continue $sw2;
+                    $pc2 = 50; continue $sw2;
                 }
                 case 39: {
                     th = $ex2;
@@ -716,7 +712,7 @@ public class pw {
                         if ($t instanceof java.lang.Throwable) { $pc2 = 51; continue $sw2; }
                         $pc2 = 47; continue $sw2;
                     }
-                    $pc2 = 47; continue $sw2;
+                    return;
                 }
                 case 47: {
                     th = $ex2;
@@ -726,7 +722,7 @@ public class pw {
                         $ex2 = $t;
                         $pc2 = 51; continue $sw2;
                     }
-                    $pc2 = 41; continue $sw2;
+                    return;
                 }
                 case 41: {
                     th = $ex2;

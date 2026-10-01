@@ -22,7 +22,7 @@ class oK extends java.lang.Thread {
             switch ($pc0) {
                 case -1: {
                     r0 = this.j6.getErrorStream();
-                    $pc0 = 12; continue $sw0;
+                    $pc0 = 16; continue $sw0;
                 }
                 case 12: {
                     e = $ex0;

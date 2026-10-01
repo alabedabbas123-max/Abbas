@@ -83,10 +83,10 @@ public class BK {
                     throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
                 }
                 case 19: {
-                    $pc0 = 20; continue $sw0;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 20: {
-                    $pc0 = 21; continue $sw0;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 21: {
                     throw new java.lang.IllegalStateException();
@@ -301,10 +301,10 @@ public class BK {
                     throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
                 }
                 case 17: {
-                    $pc5 = 18; continue $sw5;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 18: {
-                    $pc5 = 19; continue $sw5;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 19: {
                     throw new java.lang.IllegalStateException();

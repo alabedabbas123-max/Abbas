@@ -122,15 +122,15 @@ public class YK extends java.lang.Thread {
                         if ($t instanceof java.io.IOException) { $pc1 = 29; continue $sw1; }
                         $pc1 = 23; continue $sw1;
                     }
-                    $pc1 = 18; continue $sw1;
+                    $pc1 = 38; continue $sw1;
                 }
                 case 18: {
                     r4 = true;
-                    $pc1 = 19; continue $sw1;
+                    $pc1 = 38; continue $sw1;
                 }
                 case 19: {
                     r2 = r2 + 1;
-                    $pc1 = 23; continue $sw1;
+                    $pc1 = 38; continue $sw1;
                 }
                 case 23: {
                     th = $ex1;
@@ -157,16 +157,16 @@ public class YK extends java.lang.Thread {
                     throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
                 }
                 case 29: {
-                    $pc1 = 30; continue $sw1;
+                    return;
                 }
                 case 30: {
-                    $pc1 = 31; continue $sw1;
+                    return;
                 }
                 case 31: {
-                    $pc1 = 32; continue $sw1;
+                    return;
                 }
                 case 32: {
-                    $pc1 = 33; continue $sw1;
+                    return;
                 }
                 case 33: {
                     return;

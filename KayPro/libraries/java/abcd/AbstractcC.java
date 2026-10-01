@@ -101,7 +101,7 @@ public abstract class AbstractcC {
                         return r1;
                     }
                     case 10: {
-                        $pc1 = 11; continue $sw1;
+                        throw new java.lang.IllegalStateException();
                     }
                     case 11: {
                         throw new java.lang.IllegalStateException();

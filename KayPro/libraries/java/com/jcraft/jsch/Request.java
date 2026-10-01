@@ -56,7 +56,7 @@ abstract class Request {
                     throw new com.jcraft.jsch.JSchException("failed to send channel request");
                 }
                 case 27: {
-                    $pc0 = 28; continue $sw0;
+                    return;
                 }
                 case 28: {
                     return;

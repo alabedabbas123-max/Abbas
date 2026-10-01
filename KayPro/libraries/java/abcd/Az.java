@@ -111,7 +111,7 @@ public class Az implements abcd.Interfacevz {
                 }
                 case 3: {
                     this.Hw.delete();
-                    $pc2 = 5; continue $sw2;
+                    return;
                 }
                 case 5: {
                     return;

@@ -92,7 +92,7 @@ class BinderMk extends com.aide.engine.service.u.a {
                     }
                     r6 = r7;
                     r10 = r8;
-                    $pc0 = 13; continue $sw0;
+                    $pc0 = 15; continue $sw0;
                 }
                 case 13: {
                     th = th;

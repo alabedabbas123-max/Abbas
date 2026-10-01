@@ -111,19 +111,19 @@ class ClassH {
                     throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
                 }
                 case 19: {
-                    $pc0 = 20; continue $sw0;
+                    return;
                 }
                 case 20: {
-                    $pc0 = 21; continue $sw0;
+                    return;
                 }
                 case 21: {
-                    $pc0 = 22; continue $sw0;
+                    return;
                 }
                 case 22: {
-                    $pc0 = 23; continue $sw0;
+                    return;
                 }
                 case 23: {
-                    $pc0 = 24; continue $sw0;
+                    return;
                 }
                 case 24: {
                     return;

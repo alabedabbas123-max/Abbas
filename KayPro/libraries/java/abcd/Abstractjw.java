@@ -84,55 +84,56 @@ public abstract class Abstractjw implements com.appfour.backbone.api.define.Defi
     }
 
     public void j6(abcd.Abstractjw.a r3, java.util.List<abcd.lw> r4) {
-        java.lang.Object r0 = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex2 = null;
-        int $pc2 = -1;
-        $sw2: while (true) {
-            switch ($pc2) {
-                case -1: {
-                    r0 = this.j6;
-                    monitor-enter(r0);
-                    try {
-                        this.DW = r4;
-                        this.FH = new java.util.HashSet();
-                        this.Hw = null;
-                        r3.get();
-                    } catch (java.lang.Throwable $t) {
-                        $ex2 = $t;
-                        $pc2 = 9; continue $sw2;
+        synchronized (this.j6) {
+            java.lang.Object r0 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex2 = null;
+            int $pc2 = -1;
+            $sw2: while (true) {
+                switch ($pc2) {
+                    case -1: {
+                        r0 = this.j6;
+                        try {
+                            this.DW = r4;
+                            this.FH = new java.util.HashSet();
+                            this.Hw = null;
+                            r3.get();
+                        } catch (java.lang.Throwable $t) {
+                            $ex2 = $t;
+                            $pc2 = 9; continue $sw2;
+                        }
+                        try {
+                            XL();
+                            this.DW = null;
+                            this.FH = null;
+                            this.Hw = null;
+                        } catch (java.lang.Throwable $t) {
+                            $ex2 = $t;
+                            $pc2 = 12; continue $sw2;
+                        }
+                        return;
                     }
-                    try {
-                        XL();
-                        this.DW = null;
-                        this.FH = null;
-                        this.Hw = null;
-                        monitor-exit(r0);
-                    } catch (java.lang.Throwable $t) {
-                        $ex2 = $t;
-                        $pc2 = 12; continue $sw2;
-                    }
-                    return;
-                }
-                case 12: {
-                    th = $ex2;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 9: {
-                    th = $ex2;
-                    try {
-                        XL();
-                        this.DW = null;
-                        this.FH = null;
-                        this.Hw = null;
+                    case 12: {
+                        th = $ex2;
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                    } catch (java.lang.Throwable $t) {
-                        $ex2 = $t;
-                        $pc2 = 12; continue $sw2;
                     }
+                    case 9: {
+                        th = $ex2;
+                        try {
+                            XL();
+                            this.DW = null;
+                            this.FH = null;
+                            this.Hw = null;
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                        } catch (java.lang.Throwable $t) {
+                            $ex2 = $t;
+                            $pc2 = 12; continue $sw2;
+                        }
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 

@@ -275,7 +275,7 @@ public class ClassY<E> implements java.lang.Cloneable {
                     return null;
                 }
                 case 6: {
-                    $pc7 = 8; continue $sw7;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 8: {
                     throw new java.lang.IllegalStateException();

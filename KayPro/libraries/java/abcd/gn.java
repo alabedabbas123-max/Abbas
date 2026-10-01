@@ -70,7 +70,7 @@ public class gn {
                         if ($t instanceof abcd.wn) { $pc0 = 12; continue $sw0; }
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
                     }
-                    $pc0 = 14; continue $sw0;
+                    $pc0 = 23; continue $sw0;
                 }
                 case 14: {
                     e = e;

@@ -1447,7 +1447,7 @@ public class ClassB {
                     case -1: {
                         r10 = r31;
                         r12 = r33;
-                        $pc16 = 160; continue $sw16;
+                        $pc16 = 163; continue $sw16;
                     }
                     case 160: {
                         th = th;
@@ -1634,7 +1634,7 @@ public class ClassB {
                     }
                     case 44: {
                         r26 = r17;
-                        $pc16 = 47; continue $sw16;
+                        $pc16 = 49; continue $sw16;
                     }
                     case 47: {
                         th = th;
@@ -1952,7 +1952,7 @@ public class ClassB {
                     }
                     case 143: {
                         r216 = r34;
-                        $pc16 = 156; continue $sw16;
+                        $pc16 = 150; continue $sw16;
                     }
                     case 156: {
                         th = th;
@@ -2383,7 +2383,7 @@ public class ClassB {
                             $pc21 = 22; continue $sw21;
                         }
                         r12 = r3;
-                        $pc21 = 22; continue $sw21;
+                        $pc21 = 60; continue $sw21;
                     }
                     case 22: {
                         th = th;
@@ -2407,7 +2407,7 @@ public class ClassB {
                             $pc21 = 30; continue $sw21;
                         }
                         r10 = r4;
-                        $pc21 = 30; continue $sw21;
+                        $pc21 = 61; continue $sw21;
                     }
                     case 30: {
                         th = th;

@@ -9,82 +9,82 @@ public class tE {
     }
 
     private static synchronized java.util.zip.Inflater DW() {
-        java.util.zip.Inflater[] r1 = null;
-        int r3 = 0;
-        java.util.zip.Inflater r2 = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex0 = null;
-        int $pc0 = -1;
-        $sw0: while (true) {
-            switch ($pc0) {
-                case -1: {
-                    monitor-enter(abcd.tE.class);
-                    $pc0 = 11; continue $sw0;
-                }
-                case 11: {
-                    th = $ex0;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 5: {
-                    if (DW <= 0) { $pc0 = 9; continue $sw0; }
-                    try {
-                        r1 = j6;
-                        r3 = DW - 1;
-                        DW = r3;
-                        r2 = r1[r3];
-                        j6[DW] = null;
-                    } catch (java.lang.Throwable $t) {
-                        $ex0 = $t;
-                        $pc0 = 11; continue $sw0;
+        synchronized (abcd.tE.class) {
+            java.util.zip.Inflater[] r1 = null;
+            int r3 = 0;
+            java.util.zip.Inflater r2 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex0 = null;
+            int $pc0 = -1;
+            $sw0: while (true) {
+                switch ($pc0) {
+                    case -1: {
+                        $pc0 = 5; continue $sw0;
                     }
-                    monitor-exit(abcd.tE.class);
-                    return r2;
+                    case 11: {
+                        th = $ex0;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    case 5: {
+                        if (DW <= 0) { $pc0 = 9; continue $sw0; }
+                        try {
+                            r1 = j6;
+                            r3 = DW - 1;
+                            DW = r3;
+                            r2 = r1[r3];
+                            j6[DW] = null;
+                        } catch (java.lang.Throwable $t) {
+                            $ex0 = $t;
+                            $pc0 = 11; continue $sw0;
+                        }
+                        return r2;
+                    }
+                    case 9: {
+                        return null;
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 9: {
-                    monitor-exit(abcd.tE.class);
-                    return null;
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 
     private static synchronized boolean DW(java.util.zip.Inflater r4) {
-        java.util.zip.Inflater[] r1 = null;
-        int r2 = 0;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex1 = null;
-        int $pc1 = -1;
-        $sw1: while (true) {
-            switch ($pc1) {
-                case -1: {
-                    monitor-enter(abcd.tE.class);
-                    $pc1 = 13; continue $sw1;
-                }
-                case 13: {
-                    th = $ex1;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 5: {
-                    if (DW >= 4) { $pc1 = 10; continue $sw1; }
-                    try {
-                        r1 = j6;
-                        r2 = DW;
-                        DW = r2 + 1;
-                        r1[r2] = r4;
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        $pc1 = 13; continue $sw1;
+        synchronized (abcd.tE.class) {
+            java.util.zip.Inflater[] r1 = null;
+            int r2 = 0;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex1 = null;
+            int $pc1 = -1;
+            $sw1: while (true) {
+                switch ($pc1) {
+                    case -1: {
+                        $pc1 = 5; continue $sw1;
                     }
-                    monitor-exit(abcd.tE.class);
-                    return false;
+                    case 13: {
+                        th = $ex1;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    case 5: {
+                        if (DW >= 4) { $pc1 = 10; continue $sw1; }
+                        try {
+                            r1 = j6;
+                            r2 = DW;
+                            DW = r2 + 1;
+                            r1[r2] = r4;
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            $pc1 = 13; continue $sw1;
+                        }
+                        return false;
+                    }
+                    case 10: {
+                        return true;
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 10: {
-                    monitor-exit(abcd.tE.class);
-                    return true;
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 

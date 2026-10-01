@@ -426,7 +426,7 @@ public class d {
             switch ($pc7) {
                 case -1: {
                     r13 = r20;
-                    $pc7 = 81; continue $sw7;
+                    $pc7 = 84; continue $sw7;
                 }
                 case 81: {
                     th = th;
@@ -566,7 +566,7 @@ public class d {
                         if ($t instanceof android.os.RemoteException) { $pc7 = 65; continue $sw7; }
                         $pc7 = 73; continue $sw7;
                     }
-                    $pc7 = 65; continue $sw7;
+                    $pc7 = 55; continue $sw7;
                 }
                 case 65: {
                     e = $ex7;
@@ -608,7 +608,7 @@ public class d {
                         if ($t instanceof android.os.RemoteException) { $pc7 = 34; continue $sw7; }
                         $pc7 = 73; continue $sw7;
                     }
-                    $pc7 = 34; continue $sw7;
+                    $pc7 = 39; continue $sw7;
                 }
                 case 34: {
                     e = $ex7;
@@ -642,7 +642,7 @@ public class d {
                         if ($t instanceof android.os.RemoteException) { $pc7 = 44; continue $sw7; }
                         $pc7 = 73; continue $sw7;
                     }
-                    $pc7 = 44; continue $sw7;
+                    $pc7 = 74; continue $sw7;
                 }
                 case 44: {
                     e = $ex7;
@@ -652,7 +652,7 @@ public class d {
                         $ex7 = $t;
                         $pc7 = 73; continue $sw7;
                     }
-                    $pc7 = 73; continue $sw7;
+                    $pc7 = 74; continue $sw7;
                 }
                 case 73: {
                     th = th;
@@ -678,7 +678,7 @@ public class d {
                         $ex7 = $t;
                         $pc7 = 79; continue $sw7;
                     }
-                    $pc7 = 14; continue $sw7;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 14: {
                     e = $ex7;
@@ -689,12 +689,12 @@ public class d {
                         $pc7 = 12; continue $sw7;
                     }
                     r5 = -1;
-                    $pc7 = 12; continue $sw7;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 12: {
                     th = th;
                     r14 = r23;
-                    $pc7 = 79; continue $sw7;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 79: {
                     th = th;
@@ -849,7 +849,7 @@ public class d {
                         if ($t instanceof java.io.IOException) { $pc9 = 23; continue $sw9; }
                         $pc9 = 33; continue $sw9;
                     }
-                    $pc9 = 23; continue $sw9;
+                    $pc9 = 27; continue $sw9;
                 }
                 case 23: {
                     e = e;
@@ -879,7 +879,7 @@ public class d {
                         if ($t instanceof java.io.IOException) { $pc9 = 30; continue $sw9; }
                         $pc9 = 33; continue $sw9;
                     }
-                    $pc9 = 30; continue $sw9;
+                    return;
                 }
                 case 30: {
                     e = $ex9;
@@ -889,13 +889,13 @@ public class d {
                         $ex9 = $t;
                         $pc9 = 33; continue $sw9;
                     }
-                    $pc9 = 17; continue $sw9;
+                    return;
                 }
                 case 17: {
                     e = $ex9;
                     r1 = null;
                     e = e;
-                    $pc9 = 15; continue $sw9;
+                    return;
                 }
                 case 15: {
                     th = $ex9;

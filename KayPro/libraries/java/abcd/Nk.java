@@ -1032,7 +1032,7 @@ public class Nk {
                         if ($t instanceof java.io.IOException) { $pc17 = 28; continue $sw17; }
                         $pc17 = 31; continue $sw17;
                     }
-                    $pc17 = 28; continue $sw17;
+                    $pc17 = 29; continue $sw17;
                 }
                 case 28: {
                     try {
@@ -1806,7 +1806,7 @@ public class Nk {
                 }
                 case 13: {
                     r6 = false;
-                    $pc30 = 16; continue $sw30;
+                    $pc30 = 18; continue $sw30;
                 }
                 case 16: {
                     try {

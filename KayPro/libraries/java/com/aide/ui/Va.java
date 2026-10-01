@@ -71,7 +71,7 @@ class Va {
                     throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
                 }
                 case 15: {
-                    $pc0 = 16; continue $sw0;
+                    return;
                 }
                 case 16: {
                     return;

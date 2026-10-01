@@ -74,7 +74,7 @@ class aA implements abcd.Zz {
                         $pc0 = 13; continue $sw0;
                     }
                     r5 = null;
-                    $pc0 = 20; continue $sw0;
+                    $pc0 = 22; continue $sw0;
                 }
                 case 20: {
                     th = $ex0;
@@ -89,7 +89,7 @@ class aA implements abcd.Zz {
                 case 15: {
                     e = e;
                     r4 = null;
-                    $pc0 = 13; continue $sw0;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 13: {
                     th = th;
@@ -147,7 +147,7 @@ class aA implements abcd.Zz {
                         $pc1 = 12; continue $sw1;
                     }
                     io.fabric.sdk.android.services.common.i.j6(r1, "Failed to close settings writer.");
-                    $pc1 = 8; continue $sw1;
+                    $pc1 = 17; continue $sw1;
                 }
                 case 8: {
                     th = th;
@@ -160,7 +160,7 @@ class aA implements abcd.Zz {
                 }
                 case 12: {
                     th = th;
-                    $pc1 = 14; continue $sw1;
+                    $pc1 = 26; continue $sw1;
                 }
                 case 14: {
                     e = e;

@@ -291,7 +291,7 @@ public class N {
         private java.lang.Class<?> j6(java.lang.String r6) {
             java.lang.Throwable th = null;
             java.lang.Throwable $ex5 = null;
-            int $pc5 = 14;
+            int $pc5 = 4;
             $sw5: while (true) {
                 switch ($pc5) {
                     case 14: {

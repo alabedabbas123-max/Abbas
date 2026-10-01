@@ -33,7 +33,7 @@ public final class Hx {
                         $pc0 = 15; continue $sw0;
                     }
                     if (r1 == null) { $pc0 = 9; continue $sw0; }
-                    $pc0 = 13; continue $sw0;
+                    $pc0 = 17; continue $sw0;
                 }
                 case 13: {
                     th = th;
@@ -91,7 +91,7 @@ public final class Hx {
                         $ex0 = $t;
                         $pc0 = 13; continue $sw0;
                     }
-                    $pc0 = 15; continue $sw0;
+                    return;
                 }
                 case 15: {
                     th = th;

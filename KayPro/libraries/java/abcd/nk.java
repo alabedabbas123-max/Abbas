@@ -141,28 +141,28 @@ class nk {
                     throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
                 }
                 case 22: {
-                    $pc0 = 23; continue $sw0;
+                    return;
                 }
                 case 23: {
-                    $pc0 = 24; continue $sw0;
+                    return;
                 }
                 case 24: {
-                    $pc0 = 25; continue $sw0;
+                    return;
                 }
                 case 25: {
-                    $pc0 = 26; continue $sw0;
+                    return;
                 }
                 case 26: {
-                    $pc0 = 27; continue $sw0;
+                    return;
                 }
                 case 27: {
-                    $pc0 = 28; continue $sw0;
+                    return;
                 }
                 case 28: {
-                    $pc0 = 29; continue $sw0;
+                    return;
                 }
                 case 29: {
-                    $pc0 = 30; continue $sw0;
+                    return;
                 }
                 case 30: {
                     return;

@@ -591,10 +591,10 @@ public abstract class _J extends abcd.TJ {
                     return r1;
                 }
                 case 11: {
-                    $pc9 = 12; continue $sw9;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 12: {
-                    $pc9 = 13; continue $sw9;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 13: {
                     throw new java.lang.IllegalStateException();
@@ -662,13 +662,13 @@ public abstract class _J extends abcd.TJ {
                     return r1;
                 }
                 case 12: {
-                    $pc10 = 13; continue $sw10;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 13: {
-                    $pc10 = 14; continue $sw10;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 14: {
-                    $pc10 = 15; continue $sw10;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 15: {
                     throw new java.lang.IllegalStateException();
@@ -726,10 +726,10 @@ public abstract class _J extends abcd.TJ {
                     return r1;
                 }
                 case 11: {
-                    $pc11 = 12; continue $sw11;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 12: {
-                    $pc11 = 13; continue $sw11;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 13: {
                     throw new java.lang.IllegalStateException();

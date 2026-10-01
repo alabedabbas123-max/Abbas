@@ -807,7 +807,7 @@ public final class IK {
                 case 15: {
                     if (r2 != 45) { $pc19 = 20; continue $sw19; }
                     r3 = -1;
-                    $pc19 = 27; continue $sw19;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 27: {
                     r3 = 0;

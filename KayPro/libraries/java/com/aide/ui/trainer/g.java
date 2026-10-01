@@ -637,7 +637,7 @@ public class g {
             java.lang.String r2 = null;
             java.lang.Throwable th = null;
             java.lang.Throwable $ex14 = null;
-            int $pc14 = 12;
+            int $pc14 = 4;
             $sw14: while (true) {
                 switch ($pc14) {
                     case 12: {
@@ -1070,7 +1070,7 @@ public class g {
         public long tp() {
             java.lang.Throwable th = null;
             java.lang.Throwable $ex24 = null;
-            int $pc24 = 10;
+            int $pc24 = 4;
             $sw24: while (true) {
                 switch ($pc24) {
                     case 10: {
@@ -3423,7 +3423,7 @@ public class g {
         public java.util.Date u7() {
             java.lang.Throwable th = null;
             java.lang.Throwable $ex85 = null;
-            int $pc85 = 10;
+            int $pc85 = 4;
             $sw85: while (true) {
                 switch ($pc85) {
                     case 10: {
@@ -3700,7 +3700,7 @@ public class g {
         public long VH() {
             java.lang.Throwable th = null;
             java.lang.Throwable $ex92 = null;
-            int $pc92 = 10;
+            int $pc92 = 4;
             $sw92: while (true) {
                 switch ($pc92) {
                     case 10: {
@@ -4026,7 +4026,7 @@ public class g {
                 }
                 case 23: {
                     r6 = r12;
-                    $pc98 = 18; continue $sw98;
+                    $pc98 = 22; continue $sw98;
                 }
                 case 18: {
                     e2 = e;
@@ -4039,7 +4039,7 @@ public class g {
                         $ex98 = $t;
                         $pc98 = 27; continue $sw98;
                     }
-                    $pc98 = 20; continue $sw98;
+                    $pc98 = 24; continue $sw98;
                 }
                 case 20: {
                     e = $ex98;
@@ -4365,7 +4365,7 @@ public class g {
         android.content.res.Resources r5 = null;
         java.lang.Throwable th = null;
         java.lang.Throwable $ex104 = null;
-        int $pc104 = 11;
+        int $pc104 = 4;
         $sw104: while (true) {
             switch ($pc104) {
                 case 11: {
@@ -4508,7 +4508,7 @@ public class g {
     public static int j6(org.w3c.dom.Element r8, java.lang.String r9, int r10) {
         java.lang.Throwable th = null;
         java.lang.Throwable $ex107 = null;
-        int $pc107 = 8;
+        int $pc107 = 3;
         $sw107: while (true) {
             switch ($pc107) {
                 case 8: {
@@ -4917,8 +4917,8 @@ public class g {
         $sw114: while (true) {
             switch ($pc114) {
                 case -1: {
-                    r0 = -4868317514726911395;
-                    $pc114 = 15; continue $sw114;
+                    r0 = -4868317514726911395L;
+                    $pc114 = 20; continue $sw114;
                 }
                 case 15: {
                     th = $ex114;
@@ -4976,7 +4976,7 @@ public class g {
     public java.lang.String FH(java.lang.String r5) {
         java.lang.Throwable th = null;
         java.lang.Throwable $ex115 = null;
-        int $pc115 = 10;
+        int $pc115 = 4;
         $sw115: while (true) {
             switch ($pc115) {
                 case 10: {

@@ -203,7 +203,7 @@ class ZF extends abcd.XF {
         int r1 = 0;
         java.lang.Throwable th = null;
         java.lang.Throwable $ex4 = null;
-        int $pc4 = 12;
+        int $pc4 = 4;
         $sw4: while (true) {
             switch ($pc4) {
                 case 12: {

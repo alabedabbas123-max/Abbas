@@ -144,42 +144,43 @@ class ma implements com.crashlytics.android.core.Interfaceb {
     }
 
     synchronized java.lang.Object j6(java.lang.Class r4) {
-        java.lang.Object r5 = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex5 = null;
-        int $pc5 = -1;
-        $sw5: while (true) {
-            switch ($pc5) {
-                case -1: {
-                    monitor-enter(this);
-                    $pc5 = 9; continue $sw5;
-                }
-                case 9: {
-                    th = $ex5;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 4: {
-                    if (this.FH != null) { $pc5 = 6; continue $sw5; }
-                    try {
-                        this.FH = java.lang.reflect.Proxy.newProxyInstance(this.DW.getContext().getClassLoader(), new java.lang.Class[]{r4}, new com.crashlytics.android.core.la(this));
-                    } catch (java.lang.Throwable $t) {
-                        $ex5 = $t;
-                        $pc5 = 9; continue $sw5;
+        synchronized (this) {
+            java.lang.Object r5 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex5 = null;
+            int $pc5 = -1;
+            $sw5: while (true) {
+                switch ($pc5) {
+                    case -1: {
+                        $pc5 = 4; continue $sw5;
                     }
-                    $pc5 = 6; continue $sw5;
-                }
-                case 6: {
-                    try {
-                        r5 = this.FH;
-                    } catch (java.lang.Throwable $t) {
-                        $ex5 = $t;
-                        $pc5 = 9; continue $sw5;
+                    case 9: {
+                        th = $ex5;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
                     }
-                    monitor-exit(this);
-                    return r5;
+                    case 4: {
+                        if (this.FH != null) { $pc5 = 6; continue $sw5; }
+                        try {
+                            this.FH = java.lang.reflect.Proxy.newProxyInstance(this.DW.getContext().getClassLoader(), new java.lang.Class[]{r4}, new com.crashlytics.android.core.la(this));
+                        } catch (java.lang.Throwable $t) {
+                            $ex5 = $t;
+                            $pc5 = 9; continue $sw5;
+                        }
+                        $pc5 = 6; continue $sw5;
+                    }
+                    case 6: {
+                        try {
+                            r5 = this.FH;
+                        } catch (java.lang.Throwable $t) {
+                            $ex5 = $t;
+                            $pc5 = 9; continue $sw5;
+                        }
+                        return r5;
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 

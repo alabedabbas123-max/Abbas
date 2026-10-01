@@ -431,7 +431,7 @@ public class ca {
                     return r2;
                 }
                 case 53: {
-                    $pc5 = 54; continue $sw5;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 54: {
                     throw new java.lang.IllegalStateException();
@@ -445,7 +445,7 @@ public class ca {
     private int FH(java.lang.String r7) {
         java.lang.Throwable th = null;
         java.lang.Throwable $ex6 = null;
-        int $pc6 = 14;
+        int $pc6 = 4;
         $sw6: while (true) {
             switch ($pc6) {
                 case 14: {

@@ -322,7 +322,7 @@ class hj extends Si<abcd.hj> {
                         $ex3 = $t;
                         $pc3 = 36; continue $sw3;
                     }
-                    $pc3 = 43; continue $sw3;
+                    return;
                 }
                 case 43: {
                     return;

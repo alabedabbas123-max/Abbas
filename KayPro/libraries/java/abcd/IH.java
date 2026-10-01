@@ -218,7 +218,7 @@ class IH {
                 }
                 case 8: {
                     r8.FH = r0;
-                    $pc5 = 9; continue $sw5;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 9: {
                     e = $ex5;
@@ -420,7 +420,7 @@ class IH {
                 case 23: {
                     if (r5.DW() >= r2) { $pc9 = 25; continue $sw9; }
                     r2 = (int) this.EQ.DW();
-                    $pc9 = 33; continue $sw9;
+                    $pc9 = 39; continue $sw9;
                 }
                 case 33: {
                     return 0;
@@ -655,7 +655,7 @@ class IH {
                         $ex14 = $t;
                         $pc14 = 22; continue $sw14;
                     }
-                    $pc14 = 22; continue $sw14;
+                    $pc14 = 27; continue $sw14;
                 }
                 case 22: {
                     th = $ex14;

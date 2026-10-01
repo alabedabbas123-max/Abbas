@@ -410,7 +410,7 @@ public class WhatsNewDialog {
                     }
                     case 15: {
                         r5 = "New app";
-                        $pc4 = 44; continue $sw4;
+                        $pc4 = 11; continue $sw4;
                     }
                     case 44: {
                         th = th;
@@ -701,7 +701,7 @@ public class WhatsNewDialog {
     private static int DW(android.content.Context r6) {
         java.lang.Throwable th = null;
         java.lang.Throwable $ex11 = null;
-        int $pc11 = 10;
+        int $pc11 = 4;
         $sw11: while (true) {
             switch ($pc11) {
                 case 10: {
@@ -781,7 +781,7 @@ public class WhatsNewDialog {
     private static java.lang.String FH(android.content.Context r6) {
         java.lang.Throwable th = null;
         java.lang.Throwable $ex13 = null;
-        int $pc13 = 10;
+        int $pc13 = 4;
         $sw13: while (true) {
             switch ($pc13) {
                 case 10: {

@@ -329,7 +329,7 @@ public abstract class KeyPair {
                 }
                 case 5: {
                     r5 = r4;
-                    $pc6 = 19; continue $sw6;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 19: {
                     e = $ex6;
@@ -1537,7 +1537,7 @@ public abstract class KeyPair {
                     throw ((com.jcraft.jsch.JSchException) e);
                 }
                 case 465: {
-                    $pc8 = 466; continue $sw8;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 466: {
                     throw new java.lang.IllegalStateException();
@@ -1892,228 +1892,229 @@ public abstract class KeyPair {
     }
 
     synchronized byte[] j6(byte[] r9, byte[] r10) {
-        byte[] r0 = null;
-        int r1 = 0;
-        int r2 = 0;
-        int r3 = 0;
-        byte[] r4 = null;
-        byte[] r5 = null;
-        byte[] r6 = null;
-        int r7 = 0;
-        com.jcraft.jsch.HASH r8 = null;
-        int r11 = 0;
-        int r12 = 0;
-        com.jcraft.jsch.HASH r13 = null;
-        byte[] r14 = null;
-        int r15 = 0;
-        java.lang.Throwable e = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex15 = null;
-        int $pc15 = -1;
-        $sw15: while (true) {
-            switch ($pc15) {
-                case -1: {
-                    monitor-enter(this);
-                    $pc15 = 48; continue $sw15;
-                }
-                case 48: {
-                    th = $ex15;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 4: {
-                    if (this.tp != null) { $pc15 = 7; continue $sw15; }
-                    try {
-                        this.tp = Zo();
-                    } catch (java.lang.Throwable $t) {
-                        $ex15 = $t;
-                        $pc15 = 48; continue $sw15;
+        synchronized (this) {
+            byte[] r0 = null;
+            int r1 = 0;
+            int r2 = 0;
+            int r3 = 0;
+            byte[] r4 = null;
+            byte[] r5 = null;
+            byte[] r6 = null;
+            int r7 = 0;
+            com.jcraft.jsch.HASH r8 = null;
+            int r11 = 0;
+            int r12 = 0;
+            com.jcraft.jsch.HASH r13 = null;
+            byte[] r14 = null;
+            int r15 = 0;
+            java.lang.Throwable e = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex15 = null;
+            int $pc15 = -1;
+            $sw15: while (true) {
+                switch ($pc15) {
+                    case -1: {
+                        $pc15 = 4; continue $sw15;
                     }
-                    $pc15 = 7; continue $sw15;
-                }
-                case 7: {
-                    if (this.EQ != null) { $pc15 = 9; continue $sw15; }
-                    try {
-                        this.EQ = VH();
-                    } catch (java.lang.Throwable $t) {
-                        $ex15 = $t;
-                        $pc15 = 48; continue $sw15;
+                    case 48: {
+                        th = $ex15;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
                     }
-                    $pc15 = 9; continue $sw15;
-                }
-                case 9: {
-                    try {
-                        r0 = new byte[this.tp.j6()];
-                        r1 = this.EQ.j6();
-                        r2 = (r0.length / r1) * r1;
-                    } catch (java.lang.Throwable $t) {
-                        $ex15 = $t;
-                        $pc15 = 48; continue $sw15;
+                    case 4: {
+                        if (this.tp != null) { $pc15 = 7; continue $sw15; }
+                        try {
+                            this.tp = Zo();
+                        } catch (java.lang.Throwable $t) {
+                            $ex15 = $t;
+                            $pc15 = 48; continue $sw15;
+                        }
+                        $pc15 = 7; continue $sw15;
                     }
-                    if ((r0.length % r1) != 0) { $pc15 = 12; continue $sw15; }
-                    r3 = 0;
-                    $pc15 = 13; continue $sw15;
-                }
-                case 13: {
-                    try {
-                        r4 = new byte[r2 + r3];
-                    } catch (java.lang.Throwable $t) {
-                        $ex15 = $t;
-                        $pc15 = 48; continue $sw15;
+                    case 7: {
+                        if (this.EQ != null) { $pc15 = 9; continue $sw15; }
+                        try {
+                            this.EQ = VH();
+                        } catch (java.lang.Throwable $t) {
+                            $ex15 = $t;
+                            $pc15 = 48; continue $sw15;
+                        }
+                        $pc15 = 9; continue $sw15;
                     }
-                    r5 = null;
-                    $pc15 = 44; continue $sw15;
-                }
-                case 44: {
-                    e = $ex15;
-                    try {
-                        java.lang.System.err.println(e);
-                    } catch (java.lang.Throwable $t) {
-                        $ex15 = $t;
-                        $pc15 = 48; continue $sw15;
+                    case 9: {
+                        try {
+                            r0 = new byte[this.tp.j6()];
+                            r1 = this.EQ.j6();
+                            r2 = (r0.length / r1) * r1;
+                        } catch (java.lang.Throwable $t) {
+                            $ex15 = $t;
+                            $pc15 = 48; continue $sw15;
+                        }
+                        if ((r0.length % r1) != 0) { $pc15 = 12; continue $sw15; }
+                        r3 = 0;
+                        $pc15 = 13; continue $sw15;
                     }
-                    $pc15 = 46; continue $sw15;
-                }
-                case 46: {
-                    monitor-exit(this);
-                    return r0;
-                }
-                case 16: {
-                    if (this.VH != 0) { $pc15 = 29; continue $sw15; }
-                    r6 = null;
-                    r7 = 0;
-                    $pc15 = 19; continue $sw15;
-                }
-                case 19: {
-                    if ((r7 + r1) > r4.length) { $pc15 = 20; continue $sw15; }
-                    if (r6 == null) { $pc15 = 23; continue $sw15; }
-                    try {
-                        this.EQ.update(r6, 0, r6.length);
-                    } catch (java.lang.Throwable $t) {
-                        $ex15 = $t;
-                        if ($t instanceof java.lang.Exception) { $pc15 = 44; continue $sw15; }
-                        $pc15 = 48; continue $sw15;
+                    case 13: {
+                        try {
+                            r4 = new byte[r2 + r3];
+                        } catch (java.lang.Throwable $t) {
+                            $ex15 = $t;
+                            $pc15 = 48; continue $sw15;
+                        }
+                        r5 = null;
+                        $pc15 = 46; continue $sw15;
                     }
-                    $pc15 = 23; continue $sw15;
-                }
-                case 23: {
-                    try {
-                        this.EQ.update(r9, 0, r9.length);
-                        r8 = this.EQ;
-                    } catch (java.lang.Throwable $t) {
-                        $ex15 = $t;
-                        if ($t instanceof java.lang.Exception) { $pc15 = 44; continue $sw15; }
-                        $pc15 = 48; continue $sw15;
+                    case 44: {
+                        e = $ex15;
+                        try {
+                            java.lang.System.err.println(e);
+                        } catch (java.lang.Throwable $t) {
+                            $ex15 = $t;
+                            $pc15 = 48; continue $sw15;
+                        }
+                        $pc15 = 46; continue $sw15;
                     }
-                    r11 = 8;
-                    if (r10.length > 8) { $pc15 = 27; continue $sw15; }
-                    try {
-                        r11 = r10.length;
-                    } catch (java.lang.Throwable $t) {
-                        $ex15 = $t;
-                        if ($t instanceof java.lang.Exception) { $pc15 = 44; continue $sw15; }
-                        $pc15 = 48; continue $sw15;
+                    case 46: {
+                        return r0;
                     }
-                    $pc15 = 27; continue $sw15;
-                }
-                case 27: {
-                    try {
-                        r8.update(r10, 0, r11);
-                        r6 = this.EQ.FH();
-                        java.lang.System.arraycopy(r6, 0, r4, r7, r6.length);
-                        r7 = r7 + r6.length;
-                    } catch (java.lang.Throwable $t) {
-                        $ex15 = $t;
-                        if ($t instanceof java.lang.Exception) { $pc15 = 44; continue $sw15; }
-                        $pc15 = 48; continue $sw15;
+                    case 16: {
+                        if (this.VH != 0) { $pc15 = 29; continue $sw15; }
+                        r6 = null;
+                        r7 = 0;
+                        $pc15 = 19; continue $sw15;
                     }
-                    { $pc15 = 19; continue $sw15; }
-                }
-                case 20: {
-                    try {
-                        java.lang.System.arraycopy(r4, 0, r0, 0, r0.length);
-                    } catch (java.lang.Throwable $t) {
-                        $ex15 = $t;
-                        if ($t instanceof java.lang.Exception) { $pc15 = 44; continue $sw15; }
-                        $pc15 = 48; continue $sw15;
+                    case 19: {
+                        if ((r7 + r1) > r4.length) { $pc15 = 20; continue $sw15; }
+                        if (r6 == null) { $pc15 = 23; continue $sw15; }
+                        try {
+                            this.EQ.update(r6, 0, r6.length);
+                        } catch (java.lang.Throwable $t) {
+                            $ex15 = $t;
+                            if ($t instanceof java.lang.Exception) { $pc15 = 44; continue $sw15; }
+                            $pc15 = 48; continue $sw15;
+                        }
+                        $pc15 = 23; continue $sw15;
                     }
-                    { $pc15 = 46; continue $sw15; }
-                }
-                case 29: {
-                    if (this.VH != 1) { $pc15 = 38; continue $sw15; }
-                    r12 = 0;
-                    $pc15 = 32; continue $sw15;
-                }
-                case 32: {
-                    if ((r12 + r1) > r4.length) { $pc15 = 33; continue $sw15; }
-                    if (r5 == null) { $pc15 = 36; continue $sw15; }
-                    try {
-                        this.EQ.update(r5, 0, r5.length);
-                    } catch (java.lang.Throwable $t) {
-                        $ex15 = $t;
-                        if ($t instanceof java.lang.Exception) { $pc15 = 44; continue $sw15; }
-                        $pc15 = 48; continue $sw15;
+                    case 23: {
+                        try {
+                            this.EQ.update(r9, 0, r9.length);
+                            r8 = this.EQ;
+                        } catch (java.lang.Throwable $t) {
+                            $ex15 = $t;
+                            if ($t instanceof java.lang.Exception) { $pc15 = 44; continue $sw15; }
+                            $pc15 = 48; continue $sw15;
+                        }
+                        r11 = 8;
+                        if (r10.length > 8) { $pc15 = 27; continue $sw15; }
+                        try {
+                            r11 = r10.length;
+                        } catch (java.lang.Throwable $t) {
+                            $ex15 = $t;
+                            if ($t instanceof java.lang.Exception) { $pc15 = 44; continue $sw15; }
+                            $pc15 = 48; continue $sw15;
+                        }
+                        $pc15 = 27; continue $sw15;
                     }
-                    $pc15 = 36; continue $sw15;
-                }
-                case 36: {
-                    try {
-                        this.EQ.update(r9, 0, r9.length);
-                        r5 = this.EQ.FH();
-                        java.lang.System.arraycopy(r5, 0, r4, r12, r5.length);
-                        r12 = r12 + r5.length;
-                    } catch (java.lang.Throwable $t) {
-                        $ex15 = $t;
-                        if ($t instanceof java.lang.Exception) { $pc15 = 44; continue $sw15; }
-                        $pc15 = 48; continue $sw15;
+                    case 27: {
+                        try {
+                            r8.update(r10, 0, r11);
+                            r6 = this.EQ.FH();
+                            java.lang.System.arraycopy(r6, 0, r4, r7, r6.length);
+                            r7 = r7 + r6.length;
+                        } catch (java.lang.Throwable $t) {
+                            $ex15 = $t;
+                            if ($t instanceof java.lang.Exception) { $pc15 = 44; continue $sw15; }
+                            $pc15 = 48; continue $sw15;
+                        }
+                        { $pc15 = 19; continue $sw15; }
                     }
-                    { $pc15 = 32; continue $sw15; }
-                }
-                case 33: {
-                    try {
-                        java.lang.System.arraycopy(r4, 0, r0, 0, r0.length);
-                    } catch (java.lang.Throwable $t) {
-                        $ex15 = $t;
-                        if ($t instanceof java.lang.Exception) { $pc15 = 44; continue $sw15; }
-                        $pc15 = 48; continue $sw15;
+                    case 20: {
+                        try {
+                            java.lang.System.arraycopy(r4, 0, r0, 0, r0.length);
+                        } catch (java.lang.Throwable $t) {
+                            $ex15 = $t;
+                            if ($t instanceof java.lang.Exception) { $pc15 = 44; continue $sw15; }
+                            $pc15 = 48; continue $sw15;
+                        }
+                        { $pc15 = 46; continue $sw15; }
                     }
-                    { $pc15 = 46; continue $sw15; }
-                }
-                case 38: {
-                    if (this.VH != 2) { $pc15 = 46; continue $sw15; }
-                    try {
-                        r13 = (com.jcraft.jsch.HASH) java.lang.Class.forName(com.jcraft.jsch.JSch.DW("sha-1")).newInstance();
-                        r14 = new byte[4];
-                        r0 = new byte[40];
-                    } catch (java.lang.Throwable $t) {
-                        $ex15 = $t;
-                        if ($t instanceof java.lang.Exception) { $pc15 = 44; continue $sw15; }
-                        $pc15 = 48; continue $sw15;
+                    case 29: {
+                        if (this.VH != 1) { $pc15 = 38; continue $sw15; }
+                        r12 = 0;
+                        $pc15 = 32; continue $sw15;
                     }
-                    r15 = 0;
-                    $pc15 = 40; continue $sw15;
-                }
-                case 40: {
-                    if (r15 >= 2) { $pc15 = 46; continue $sw15; }
-                    try {
-                        r13.DW();
-                        r14[3] = (byte) r15;
-                        r13.update(r14, 0, r14.length);
-                        r13.update(r9, 0, r9.length);
-                        java.lang.System.arraycopy(r13.FH(), 0, r0, r15 * 20, 20);
-                    } catch (java.lang.Throwable $t) {
-                        $ex15 = $t;
-                        if ($t instanceof java.lang.Exception) { $pc15 = 44; continue $sw15; }
-                        $pc15 = 48; continue $sw15;
+                    case 32: {
+                        if ((r12 + r1) > r4.length) { $pc15 = 33; continue $sw15; }
+                        if (r5 == null) { $pc15 = 36; continue $sw15; }
+                        try {
+                            this.EQ.update(r5, 0, r5.length);
+                        } catch (java.lang.Throwable $t) {
+                            $ex15 = $t;
+                            if ($t instanceof java.lang.Exception) { $pc15 = 44; continue $sw15; }
+                            $pc15 = 48; continue $sw15;
+                        }
+                        $pc15 = 36; continue $sw15;
                     }
-                    r15 = r15 + 1;
-                    { $pc15 = 40; continue $sw15; }
+                    case 36: {
+                        try {
+                            this.EQ.update(r9, 0, r9.length);
+                            r5 = this.EQ.FH();
+                            java.lang.System.arraycopy(r5, 0, r4, r12, r5.length);
+                            r12 = r12 + r5.length;
+                        } catch (java.lang.Throwable $t) {
+                            $ex15 = $t;
+                            if ($t instanceof java.lang.Exception) { $pc15 = 44; continue $sw15; }
+                            $pc15 = 48; continue $sw15;
+                        }
+                        { $pc15 = 32; continue $sw15; }
+                    }
+                    case 33: {
+                        try {
+                            java.lang.System.arraycopy(r4, 0, r0, 0, r0.length);
+                        } catch (java.lang.Throwable $t) {
+                            $ex15 = $t;
+                            if ($t instanceof java.lang.Exception) { $pc15 = 44; continue $sw15; }
+                            $pc15 = 48; continue $sw15;
+                        }
+                        { $pc15 = 46; continue $sw15; }
+                    }
+                    case 38: {
+                        if (this.VH != 2) { $pc15 = 46; continue $sw15; }
+                        try {
+                            r13 = (com.jcraft.jsch.HASH) java.lang.Class.forName(com.jcraft.jsch.JSch.DW("sha-1")).newInstance();
+                            r14 = new byte[4];
+                            r0 = new byte[40];
+                        } catch (java.lang.Throwable $t) {
+                            $ex15 = $t;
+                            if ($t instanceof java.lang.Exception) { $pc15 = 44; continue $sw15; }
+                            $pc15 = 48; continue $sw15;
+                        }
+                        r15 = 0;
+                        $pc15 = 40; continue $sw15;
+                    }
+                    case 40: {
+                        if (r15 >= 2) { $pc15 = 46; continue $sw15; }
+                        try {
+                            r13.DW();
+                            r14[3] = (byte) r15;
+                            r13.update(r14, 0, r14.length);
+                            r13.update(r9, 0, r9.length);
+                            java.lang.System.arraycopy(r13.FH(), 0, r0, r15 * 20, 20);
+                        } catch (java.lang.Throwable $t) {
+                            $ex15 = $t;
+                            if ($t instanceof java.lang.Exception) { $pc15 = 44; continue $sw15; }
+                            $pc15 = 48; continue $sw15;
+                        }
+                        r15 = r15 + 1;
+                        { $pc15 = 40; continue $sw15; }
+                    }
+                    case 12: {
+                        r3 = r1;
+                        { $pc15 = 13; continue $sw15; }
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 12: {
-                    r3 = r1;
-                    { $pc15 = 13; continue $sw15; }
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 

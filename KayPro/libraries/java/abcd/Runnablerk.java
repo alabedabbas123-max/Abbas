@@ -145,7 +145,7 @@ class Runnablerk implements java.lang.Runnable {
                 }
                 case 9: {
                     r3 = "inapp";
-                    $pc0 = 18; continue $sw0;
+                    return;
                 }
                 case 18: {
                     th = $ex0;

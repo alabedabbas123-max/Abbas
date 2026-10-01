@@ -3228,7 +3228,7 @@ public class CodeEditTextScrollView extends android.widget.ScrollView {
                 }
                 case 14: {
                     if (this.J0.isVisible() == false) { $pc65 = 16; continue $sw65; }
-                    $pc65 = 18; continue $sw65;
+                    return;
                 }
                 case 18: {
                     th = $ex65;

@@ -26,7 +26,7 @@ public class yA {
                         if ($t instanceof java.lang.ClassNotFoundException) { $pc0 = 21; continue $sw0; }
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
                     }
-                    $pc0 = 5; continue $sw0;
+                    $pc0 = 22; continue $sw0;
                 }
                 case 5: {
                     e = $ex0;
@@ -45,7 +45,7 @@ public class yA {
                         if ($t instanceof java.lang.ClassNotFoundException) { $pc0 = 12; continue $sw0; }
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
                     }
-                    $pc0 = 10; continue $sw0;
+                    $pc0 = 14; continue $sw0;
                 }
                 case 10: {
                     e = $ex0;
@@ -64,7 +64,7 @@ public class yA {
                     throw new java.lang.IllegalStateException("No base64 encoder implementation is available.");
                 }
                 case 12: {
-                    $pc0 = 21; continue $sw0;
+                    return;
                 }
                 case 21: {
                     return;

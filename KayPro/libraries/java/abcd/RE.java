@@ -115,7 +115,7 @@ public abstract class RE {
                     return abcd.RE.a.DW;
                 }
                 case 55: {
-                    $pc1 = 52; continue $sw1;
+                    $pc1 = 8; continue $sw1;
                 }
                 case 52: {
                     th = $ex1;
@@ -299,7 +299,7 @@ public abstract class RE {
                 case -1: {
                     if (r5.startsWith("refs/") == false) { $pc4 = 42; continue $sw4; }
                     if (gn().FH(Hw()) == true) { $pc4 = 7; continue $sw4; }
-                    $pc4 = 36; continue $sw4;
+                    $pc4 = 9; continue $sw4;
                 }
                 case 36: {
                     e = $ex4;

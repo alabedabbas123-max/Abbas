@@ -30,7 +30,7 @@ public class aM extends abcd.EL {
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
                     }
                     r0 = r0 + 1;
-                    $pc0 = 9; continue $sw0;
+                    $pc0 = 5; continue $sw0;
                 }
                 case 9: {
                     e = $ex0;

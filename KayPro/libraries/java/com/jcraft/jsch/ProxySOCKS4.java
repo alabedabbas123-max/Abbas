@@ -56,7 +56,7 @@ public class ProxySOCKS4 implements com.jcraft.jsch.Proxy {
                     this.FH = null;
                     this.Hw = null;
                     this.v5 = null;
-                    $pc0 = 13; continue $sw0;
+                    return;
                 }
                 case 13: {
                     return;
@@ -280,7 +280,7 @@ public class ProxySOCKS4 implements com.jcraft.jsch.Proxy {
                         if ($t instanceof java.lang.RuntimeException) { $pc1 = 46; continue $sw1; }
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
                     }
-                    $pc1 = 46; continue $sw1;
+                    $pc1 = 45; continue $sw1;
                 }
                 case 46: {
                     e = $ex1;
@@ -302,7 +302,7 @@ public class ProxySOCKS4 implements com.jcraft.jsch.Proxy {
                     throw new com.jcraft.jsch.JSchException("ProxySOCKS4: " + e.toString());
                 }
                 case 50: {
-                    $pc1 = 51; continue $sw1;
+                    return;
                 }
                 case 51: {
                     return;

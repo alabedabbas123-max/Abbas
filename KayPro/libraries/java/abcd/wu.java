@@ -503,138 +503,138 @@ public class wu {
     }
 
     public static void j6(java.lang.Object r7, long r8, java.lang.String r10, java.lang.String r11, java.lang.String r12, java.lang.String r13) {
-        java.lang.Object r0 = null;
-        boolean r2 = false;
-        boolean r9 = false;
-        android.app.Application r14 = null;
-        java.io.File r1 = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex17 = null;
-        int $pc17 = -1;
-        $sw17: while (true) {
-            switch ($pc17) {
-                case -1: {
-                    try {
-                        r0 = FH;
-                        monitor-enter(r0);
-                    } catch (java.lang.Throwable $t) {
-                        $ex17 = $t;
-                        $pc17 = 34; continue $sw17;
+        synchronized (FH) {
+            java.lang.Object r0 = null;
+            boolean r2 = false;
+            boolean r9 = false;
+            android.app.Application r14 = null;
+            java.io.File r1 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex17 = null;
+            int $pc17 = -1;
+            $sw17: while (true) {
+                switch ($pc17) {
+                    case -1: {
+                        try {
+                            r0 = FH;
+                        } catch (java.lang.Throwable $t) {
+                            $ex17 = $t;
+                            $pc17 = 34; continue $sw17;
+                        }
+                        r2 = false;
+                        if (j6 == null) { $pc17 = 7; continue $sw17; }
+                        $pc17 = 19; continue $sw17;
                     }
-                    r2 = false;
-                    if (j6 == null) { $pc17 = 7; continue $sw17; }
-                    $pc17 = 19; continue $sw17;
-                }
-                case 19: {
-                    r9 = false;
-                    $pc17 = 20; continue $sw17;
-                }
-                case 20: {
-                    try {
-                        monitor-exit(r0);
-                    } catch (java.lang.Throwable $t) {
-                        $ex17 = $t;
-                        $pc17 = 31; continue $sw17;
+                    case 19: {
+                        r9 = false;
+                        $pc17 = 20; continue $sw17;
                     }
-                    if (j6 != null) { $pc17 = 24; continue $sw17; }
-                    return;
-                }
-                case 24: {
-                    if (com.appfour.backbone.api.Api.isMainProcess() == false) { $pc17 = 29; continue $sw17; }
-                    if (r2 == false) { $pc17 = 27; continue $sw17; }
-                    try {
-                        abcd.kv.j6(new com.appfour.backbone.api.objects.Market(j6.getPackageManager().getInstallerPackageName(j6.getPackageName())));
-                    } catch (java.lang.Throwable $t) {
-                        $ex17 = $t;
-                        $pc17 = 34; continue $sw17;
+                    case 20: {
+                        try {
+                        } catch (java.lang.Throwable $t) {
+                            $ex17 = $t;
+                            $pc17 = 31; continue $sw17;
+                        }
+                        if (j6 != null) { $pc17 = 24; continue $sw17; }
+                        return;
                     }
-                    { $pc17 = 29; continue $sw17; }
-                }
-                case 27: {
-                    if (r9 == false) { $pc17 = 29; continue $sw17; }
-                    try {
-                        abcd.kv.FH();
-                    } catch (java.lang.Throwable $t) {
-                        $ex17 = $t;
-                        $pc17 = 34; continue $sw17;
+                    case 24: {
+                        if (com.appfour.backbone.api.Api.isMainProcess() == false) { $pc17 = 29; continue $sw17; }
+                        if (r2 == false) { $pc17 = 27; continue $sw17; }
+                        try {
+                            abcd.kv.j6(new com.appfour.backbone.api.objects.Market(j6.getPackageManager().getInstallerPackageName(j6.getPackageName())));
+                        } catch (java.lang.Throwable $t) {
+                            $ex17 = $t;
+                            $pc17 = 34; continue $sw17;
+                        }
+                        { $pc17 = 29; continue $sw17; }
                     }
-                    $pc17 = 29; continue $sw17;
-                }
-                case 29: {
-                    try {
-                        abcd.kv.j6(j6);
-                    } catch (java.lang.Throwable $t) {
-                        $ex17 = $t;
-                        $pc17 = 34; continue $sw17;
+                    case 27: {
+                        if (r9 == false) { $pc17 = 29; continue $sw17; }
+                        try {
+                            abcd.kv.FH();
+                        } catch (java.lang.Throwable $t) {
+                            $ex17 = $t;
+                            $pc17 = 34; continue $sw17;
+                        }
+                        $pc17 = 29; continue $sw17;
                     }
-                    return;
-                }
-                case 7: {
-                    if (android.os.Build.VERSION.SDK_INT < 14) { $pc17 = 19; continue $sw17; }
-                    if (java.lang.System.currentTimeMillis() >= 1575158400000L) { $pc17 = 19; continue $sw17; }
-                    try {
-                        r14 = j6(r7);
-                    } catch (java.lang.Throwable $t) {
-                        $ex17 = $t;
-                        $pc17 = 31; continue $sw17;
+                    case 29: {
+                        try {
+                            abcd.kv.j6(j6);
+                        } catch (java.lang.Throwable $t) {
+                            $ex17 = $t;
+                            $pc17 = 34; continue $sw17;
+                        }
+                        return;
                     }
-                    if (r14 == null) { $pc17 = 19; continue $sw17; }
-                    try {
-                        r1 = abcd.uw.DW(r14, r13);
-                    } catch (java.lang.Throwable $t) {
-                        $ex17 = $t;
-                        $pc17 = 31; continue $sw17;
+                    case 7: {
+                        if (android.os.Build.VERSION.SDK_INT < 14) { $pc17 = 19; continue $sw17; }
+                        if (java.lang.System.currentTimeMillis() >= 1575158400000L) { $pc17 = 19; continue $sw17; }
+                        try {
+                            r14 = j6(r7);
+                        } catch (java.lang.Throwable $t) {
+                            $ex17 = $t;
+                            $pc17 = 31; continue $sw17;
+                        }
+                        if (r14 == null) { $pc17 = 19; continue $sw17; }
+                        try {
+                            r1 = abcd.uw.DW(r14, r13);
+                        } catch (java.lang.Throwable $t) {
+                            $ex17 = $t;
+                            $pc17 = 31; continue $sw17;
+                        }
+                        if (r1 != null) { $pc17 = 15; continue $sw17; }
+                        $pc17 = 18; continue $sw17;
                     }
-                    if (r1 != null) { $pc17 = 15; continue $sw17; }
-                    $pc17 = 18; continue $sw17;
-                }
-                case 18: {
-                    try {
-                        j6 = r14;
-                        DW = r10;
-                        abcd.Mv.aM();
-                        r2 = abcd.rw.j6();
-                        r9 = abcd.rw.DW();
-                        abcd.qw.DW();
-                        abcd.xw.j6();
-                        abcd.kv.j6(r2);
-                        abcd.ow.j6(r2, r8, r11, r12);
-                        abcd.Lv.j6();
-                        abcd.Hv.u7();
-                        abcd.Ov.j6();
-                        abcd.Yv.j6(r13);
-                    } catch (java.lang.Throwable $t) {
-                        $ex17 = $t;
-                        $pc17 = 31; continue $sw17;
+                    case 18: {
+                        try {
+                            j6 = r14;
+                            DW = r10;
+                            abcd.Mv.aM();
+                            r2 = abcd.rw.j6();
+                            r9 = abcd.rw.DW();
+                            abcd.qw.DW();
+                            abcd.xw.j6();
+                            abcd.kv.j6(r2);
+                            abcd.ow.j6(r2, r8, r11, r12);
+                            abcd.Lv.j6();
+                            abcd.Hv.u7();
+                            abcd.Ov.j6();
+                            abcd.Yv.j6(r13);
+                        } catch (java.lang.Throwable $t) {
+                            $ex17 = $t;
+                            $pc17 = 31; continue $sw17;
+                        }
+                        { $pc17 = 20; continue $sw17; }
                     }
-                    { $pc17 = 20; continue $sw17; }
-                }
-                case 15: {
-                    if (r1.exists() == false) { $pc17 = 18; continue $sw17; }
-                    try {
-                        monitor-exit(r0);
-                    } catch (java.lang.Throwable $t) {
-                        $ex17 = $t;
-                        $pc17 = 31; continue $sw17;
+                    case 15: {
+                        if (r1.exists() == false) { $pc17 = 18; continue $sw17; }
+                        try {
+                        } catch (java.lang.Throwable $t) {
+                            $ex17 = $t;
+                            $pc17 = 31; continue $sw17;
+                        }
+                        return;
                     }
-                    return;
-                }
-                case 31: {
-                    th = $ex17;
-                    try {
-                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                    } catch (java.lang.Throwable $t) {
-                        $ex17 = $t;
-                        $pc17 = 34; continue $sw17;
+                    case 31: {
+                        th = $ex17;
+                        try {
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                        } catch (java.lang.Throwable $t) {
+                            $ex17 = $t;
+                            $pc17 = 34; continue $sw17;
+                        }
                     }
+                    case 34: {
+                        th = $ex17;
+                        abcd.yw.j6("Runtime Error", th);
+                        return;
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 34: {
-                    th = $ex17;
-                    abcd.yw.j6("Runtime Error", th);
-                    return;
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 

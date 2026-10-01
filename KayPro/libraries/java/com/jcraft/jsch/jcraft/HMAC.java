@@ -98,7 +98,7 @@ class HMAC {
                 }
                 case 4: {
                     this.FH.update(this.j6, 0, 64);
-                    $pc1 = 6; continue $sw1;
+                    return;
                 }
                 case 6: {
                     return;

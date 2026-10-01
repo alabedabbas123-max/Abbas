@@ -289,7 +289,7 @@ public class _H {
                         if ($t instanceof java.security.spec.InvalidKeySpecException) { $pc5 = 30; continue $sw5; }
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
                     }
-                    $pc5 = 27; continue $sw5;
+                    $pc5 = 10; continue $sw5;
                 }
                 case 27: {
                     e = $ex5;

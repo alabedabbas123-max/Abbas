@@ -87,119 +87,120 @@ public class i {
     }
 
     public static synchronized long DW() {
-        long r1 = 0L;
-        java.lang.String r3 = null;
-        java.lang.String r4 = null;
-        long r2 = 0L;
-        java.lang.Throwable e = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex1 = null;
-        int $pc1 = -1;
-        $sw1: while (true) {
-            switch ($pc1) {
-                case -1: {
-                    monitor-enter(io.fabric.sdk.android.services.common.i.class);
-                    $pc1 = 26; continue $sw1;
-                }
-                case 26: {
-                    th = $ex1;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 5: {
-                    if (FH != (-1)) { $pc1 = 23; continue $sw1; }
-                    r1 = 0;
-                    try {
-                        r3 = j6(new java.io.File("/proc/meminfo"), "MemTotal");
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        $pc1 = 26; continue $sw1;
+        synchronized (io.fabric.sdk.android.services.common.i.class) {
+            long r1 = 0L;
+            java.lang.String r3 = null;
+            java.lang.String r4 = null;
+            long r2 = 0L;
+            java.lang.Throwable e = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex1 = null;
+            int $pc1 = -1;
+            $sw1: while (true) {
+                switch ($pc1) {
+                    case -1: {
+                        $pc1 = 5; continue $sw1;
                     }
-                    if (android.text.TextUtils.isEmpty(r3) == true) { $pc1 = 22; continue $sw1; }
-                    try {
-                        r4 = r3.toUpperCase(java.util.Locale.US);
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        $pc1 = 26; continue $sw1;
+                    case 26: {
+                        th = $ex1;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
                     }
-                    $pc1 = 20; continue $sw1;
-                }
-                case 20: {
-                    e = $ex1;
-                    try {
-                        io.fabric.sdk.android.Fabric.getLogger().FH("Fabric", "Unexpected meminfo format while computing RAM: " + r4, e);
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        $pc1 = 26; continue $sw1;
+                    case 5: {
+                        if (FH != (-1)) { $pc1 = 23; continue $sw1; }
+                        r1 = 0;
+                        try {
+                            r3 = j6(new java.io.File("/proc/meminfo"), "MemTotal");
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            $pc1 = 26; continue $sw1;
+                        }
+                        if (android.text.TextUtils.isEmpty(r3) == true) { $pc1 = 22; continue $sw1; }
+                        try {
+                            r4 = r3.toUpperCase(java.util.Locale.US);
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            $pc1 = 26; continue $sw1;
+                        }
+                        $pc1 = 10; continue $sw1;
                     }
-                    { $pc1 = 22; continue $sw1; }
-                }
-                case 10: {
-                    if (r4.endsWith("KB") == false) { $pc1 = 13; continue $sw1; }
-                    try {
-                        r1 = j6(r4, "KB", 1024);
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        if ($t instanceof java.lang.NumberFormatException) { $pc1 = 20; continue $sw1; }
-                        $pc1 = 26; continue $sw1;
+                    case 20: {
+                        e = $ex1;
+                        try {
+                            io.fabric.sdk.android.Fabric.getLogger().FH("Fabric", "Unexpected meminfo format while computing RAM: " + r4, e);
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            $pc1 = 26; continue $sw1;
+                        }
+                        { $pc1 = 22; continue $sw1; }
                     }
-                    $pc1 = 31; continue $sw1;
-                }
-                case 31: {
-                    $pc1 = 13; continue $sw1;
-                }
-                case 13: {
-                    if (r4.endsWith("MB") == false) { $pc1 = 16; continue $sw1; }
-                    try {
-                        r1 = j6(r4, "MB", 1048576);
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        if ($t instanceof java.lang.NumberFormatException) { $pc1 = 20; continue $sw1; }
-                        $pc1 = 26; continue $sw1;
+                    case 10: {
+                        if (r4.endsWith("KB") == false) { $pc1 = 13; continue $sw1; }
+                        try {
+                            r1 = j6(r4, "KB", 1024);
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            if ($t instanceof java.lang.NumberFormatException) { $pc1 = 20; continue $sw1; }
+                            $pc1 = 26; continue $sw1;
+                        }
+                        $pc1 = 31; continue $sw1;
                     }
-                    { $pc1 = 31; continue $sw1; }
-                }
-                case 16: {
-                    if (r4.endsWith("GB") == false) { $pc1 = 18; continue $sw1; }
-                    try {
-                        r1 = j6(r4, "GB", 1073741824);
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        if ($t instanceof java.lang.NumberFormatException) { $pc1 = 20; continue $sw1; }
-                        $pc1 = 26; continue $sw1;
+                    case 31: {
+                        $pc1 = 13; continue $sw1;
                     }
-                    { $pc1 = 31; continue $sw1; }
-                }
-                case 18: {
-                    try {
-                        io.fabric.sdk.android.Fabric.getLogger().Hw("Fabric", "Unexpected meminfo format while computing RAM: " + r4);
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        if ($t instanceof java.lang.NumberFormatException) { $pc1 = 20; continue $sw1; }
-                        $pc1 = 26; continue $sw1;
+                    case 13: {
+                        if (r4.endsWith("MB") == false) { $pc1 = 16; continue $sw1; }
+                        try {
+                            r1 = j6(r4, "MB", 1048576);
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            if ($t instanceof java.lang.NumberFormatException) { $pc1 = 20; continue $sw1; }
+                            $pc1 = 26; continue $sw1;
+                        }
+                        { $pc1 = 31; continue $sw1; }
                     }
-                    $pc1 = 22; continue $sw1;
-                }
-                case 22: {
-                    try {
-                        FH = r1;
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        $pc1 = 26; continue $sw1;
+                    case 16: {
+                        if (r4.endsWith("GB") == false) { $pc1 = 18; continue $sw1; }
+                        try {
+                            r1 = j6(r4, "GB", 1073741824);
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            if ($t instanceof java.lang.NumberFormatException) { $pc1 = 20; continue $sw1; }
+                            $pc1 = 26; continue $sw1;
+                        }
+                        { $pc1 = 31; continue $sw1; }
                     }
-                    $pc1 = 23; continue $sw1;
-                }
-                case 23: {
-                    try {
-                        r2 = FH;
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        $pc1 = 26; continue $sw1;
+                    case 18: {
+                        try {
+                            io.fabric.sdk.android.Fabric.getLogger().Hw("Fabric", "Unexpected meminfo format while computing RAM: " + r4);
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            if ($t instanceof java.lang.NumberFormatException) { $pc1 = 20; continue $sw1; }
+                            $pc1 = 26; continue $sw1;
+                        }
+                        $pc1 = 22; continue $sw1;
                     }
-                    monitor-exit(io.fabric.sdk.android.services.common.i.class);
-                    return r2;
+                    case 22: {
+                        try {
+                            FH = r1;
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            $pc1 = 26; continue $sw1;
+                        }
+                        $pc1 = 23; continue $sw1;
+                    }
+                    case 23: {
+                        try {
+                            r2 = FH;
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            $pc1 = 26; continue $sw1;
+                        }
+                        return r2;
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 
@@ -384,7 +385,7 @@ public class i {
                 case 14: {
                     e = e;
                     r9 = null;
-                    $pc8 = 12; continue $sw8;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 12: {
                     th = $ex8;
@@ -790,7 +791,7 @@ public class i {
                 }
                 case 13: {
                     j6(r1, "Failed to close system file reader.");
-                    $pc20 = 14; continue $sw20;
+                    $pc20 = 20; continue $sw20;
                 }
                 case 14: {
                     e = e;
@@ -803,7 +804,7 @@ public class i {
                         $ex20 = $t;
                         $pc20 = 22; continue $sw20;
                     }
-                    $pc20 = 22; continue $sw20;
+                    $pc20 = 23; continue $sw20;
                 }
                 case 22: {
                     th = th;
@@ -816,7 +817,7 @@ public class i {
                 case 18: {
                     e = e;
                     r1 = null;
-                    $pc20 = 16; continue $sw20;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 16: {
                     th = th;

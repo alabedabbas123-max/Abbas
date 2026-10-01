@@ -40,10 +40,10 @@ class Gt {
                     return;
                 }
                 case 7: {
-                    $pc0 = 8; continue $sw0;
+                    return;
                 }
                 case 8: {
-                    $pc0 = 9; continue $sw0;
+                    return;
                 }
                 case 9: {
                     return;

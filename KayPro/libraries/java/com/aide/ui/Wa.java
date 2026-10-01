@@ -625,7 +625,7 @@ public class Wa implements android.widget.TextView.OnEditorActionListener, andro
         int r3 = 0;
         java.lang.Throwable th = null;
         java.lang.Throwable $ex13 = null;
-        int $pc13 = 15;
+        int $pc13 = 4;
         $sw13: while (true) {
             switch ($pc13) {
                 case 15: {

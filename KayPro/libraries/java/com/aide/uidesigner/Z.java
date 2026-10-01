@@ -211,49 +211,49 @@ class Z {
                     throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
                 }
                 case 29: {
-                    $pc0 = 30; continue $sw0;
+                    return;
                 }
                 case 30: {
-                    $pc0 = 31; continue $sw0;
+                    return;
                 }
                 case 31: {
-                    $pc0 = 32; continue $sw0;
+                    return;
                 }
                 case 32: {
-                    $pc0 = 33; continue $sw0;
+                    return;
                 }
                 case 33: {
-                    $pc0 = 34; continue $sw0;
+                    return;
                 }
                 case 34: {
-                    $pc0 = 35; continue $sw0;
+                    return;
                 }
                 case 35: {
-                    $pc0 = 36; continue $sw0;
+                    return;
                 }
                 case 36: {
-                    $pc0 = 37; continue $sw0;
+                    return;
                 }
                 case 37: {
-                    $pc0 = 38; continue $sw0;
+                    return;
                 }
                 case 38: {
-                    $pc0 = 39; continue $sw0;
+                    return;
                 }
                 case 39: {
-                    $pc0 = 40; continue $sw0;
+                    return;
                 }
                 case 40: {
-                    $pc0 = 41; continue $sw0;
+                    return;
                 }
                 case 41: {
-                    $pc0 = 42; continue $sw0;
+                    return;
                 }
                 case 42: {
-                    $pc0 = 43; continue $sw0;
+                    return;
                 }
                 case 43: {
-                    $pc0 = 44; continue $sw0;
+                    return;
                 }
                 case 44: {
                     return;

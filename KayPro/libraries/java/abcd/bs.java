@@ -147,50 +147,50 @@ public final class bs implements abcd.Rs, abcd.Interfacelu, java.lang.Comparable
     }
 
     private static abcd.bs Zo(int r2, abcd.Rs r3, abcd.Vr r4) {
-        java.util.HashMap<java.lang.Object, abcd.bs> r0 = null;
-        abcd.bs r5 = null;
-        abcd.bs r6 = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex4 = null;
-        int $pc4 = -1;
-        $sw4: while (true) {
-            switch ($pc4) {
-                case -1: {
-                    r0 = j6;
-                    monitor-enter(r0);
-                    try {
-                        DW.j6(r2, r3, r4);
-                        r5 = j6.get(DW);
-                    } catch (java.lang.Throwable $t) {
-                        $ex4 = $t;
-                        $pc4 = 11; continue $sw4;
+        synchronized (j6) {
+            java.util.HashMap<java.lang.Object, abcd.bs> r0 = null;
+            abcd.bs r5 = null;
+            abcd.bs r6 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex4 = null;
+            int $pc4 = -1;
+            $sw4: while (true) {
+                switch ($pc4) {
+                    case -1: {
+                        r0 = j6;
+                        try {
+                            DW.j6(r2, r3, r4);
+                            r5 = j6.get(DW);
+                        } catch (java.lang.Throwable $t) {
+                            $ex4 = $t;
+                            $pc4 = 11; continue $sw4;
+                        }
+                        if (r5 == null) { $pc4 = 8; continue $sw4; }
+                        try {
+                        } catch (java.lang.Throwable $t) {
+                            $ex4 = $t;
+                            $pc4 = 11; continue $sw4;
+                        }
+                        return r5;
                     }
-                    if (r5 == null) { $pc4 = 8; continue $sw4; }
-                    try {
-                        monitor-exit(r0);
-                    } catch (java.lang.Throwable $t) {
-                        $ex4 = $t;
-                        $pc4 = 11; continue $sw4;
+                    case 8: {
+                        try {
+                            r6 = DW.j6();
+                            j6.put(r6, r6);
+                        } catch (java.lang.Throwable $t) {
+                            $ex4 = $t;
+                            $pc4 = 11; continue $sw4;
+                        }
+                        return r6;
                     }
-                    return r5;
-                }
-                case 8: {
-                    try {
-                        r6 = DW.j6();
-                        j6.put(r6, r6);
-                        monitor-exit(r0);
-                    } catch (java.lang.Throwable $t) {
-                        $ex4 = $t;
-                        $pc4 = 11; continue $sw4;
+                    case 11: {
+                        th = $ex4;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
                     }
-                    return r6;
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 11: {
-                    th = $ex4;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 

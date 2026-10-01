@@ -459,7 +459,7 @@ final class Ly {
                 }
                 case 36: {
                     this.DW = 17;
-                    $pc7 = 121; continue $sw7;
+                    $pc7 = 264; continue $sw7;
                 }
                 case 121: {
                     e = $ex7;
@@ -487,7 +487,7 @@ final class Ly {
                 }
                 case 44: {
                     this.DW = 18;
-                    $pc7 = 118; continue $sw7;
+                    $pc7 = 266; continue $sw7;
                 }
                 case 118: {
                     e = $ex7;
@@ -522,7 +522,7 @@ final class Ly {
                 }
                 case 25: {
                     this.DW = 16;
-                    $pc7 = 26; continue $sw7;
+                    $pc7 = 13; continue $sw7;
                 }
                 case 26: {
                     e = $ex7;
@@ -569,7 +569,7 @@ final class Ly {
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
                     }
                     r3 = r0;
-                    $pc7 = 84; continue $sw7;
+                    $pc7 = 92; continue $sw7;
                 }
                 case 84: {
                     e = $ex7;
@@ -613,7 +613,7 @@ final class Ly {
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
                     }
                     r3 = r0;
-                    $pc7 = 98; continue $sw7;
+                    $pc7 = 106; continue $sw7;
                 }
                 case 98: {
                     e = $ex7;
@@ -638,7 +638,7 @@ final class Ly {
                     this.DW = 13;
                     this.tp.u7 = "header crc mismatch";
                     this.Zo = 5;
-                    $pc7 = 114; continue $sw7;
+                    $pc7 = 117; continue $sw7;
                 }
                 case 114: {
                     e = $ex7;
@@ -737,7 +737,7 @@ final class Ly {
                 }
                 case 140: {
                     this.DW = 23;
-                    $pc7 = 167; continue $sw7;
+                    $pc7 = 126; continue $sw7;
                 }
                 case 167: {
                     e = $ex7;
@@ -901,7 +901,7 @@ final class Ly {
                 }
                 case 232: {
                     this.DW = 12;
-                    $pc7 = 224; continue $sw7;
+                    $pc7 = 227; continue $sw7;
                 }
                 case 224: {
                     e = $ex7;
@@ -1025,7 +1025,7 @@ final class Ly {
                 case 52: {
                     if ((this.EQ & 512) == 0) { $pc7 = 60; continue $sw7; }
                     j6(2, this.v5);
-                    $pc7 = 54; continue $sw7;
+                    $pc7 = 62; continue $sw7;
                 }
                 case 54: {
                     e = $ex7;
@@ -1072,7 +1072,7 @@ final class Ly {
                 }
                 case 76: {
                     this.DW = 20;
-                    $pc7 = 70; continue $sw7;
+                    $pc7 = 73; continue $sw7;
                 }
                 case 70: {
                     e = $ex7;

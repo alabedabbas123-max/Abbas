@@ -200,118 +200,117 @@ public abstract class Ww implements abcd.Zw {
         }
 
         public static synchronized void j6(abcd.Ww.a r2, int r3, int r4) {
-            java.lang.Throwable th = null;
-            java.lang.Throwable $ex2 = null;
-            int $pc2 = -1;
-            $sw2: while (true) {
-                switch ($pc2) {
-                    case -1: {
-                        monitor-enter(abcd.Ww.e.class);
-                        $pc2 = 9; continue $sw2;
-                    }
-                    case 9: {
-                        th = $ex2;
-                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                    }
-                    case 5: {
-                        if (j6 != null) { $pc2 = 7; continue $sw2; }
-                        try {
-                            j6 = new abcd.Ww.e(r2, r3, r4);
-                            j6.start();
-                        } catch (java.lang.Throwable $t) {
-                            $ex2 = $t;
-                            $pc2 = 9; continue $sw2;
+            synchronized (abcd.Ww.e.class) {
+                java.lang.Throwable th = null;
+                java.lang.Throwable $ex2 = null;
+                int $pc2 = -1;
+                $sw2: while (true) {
+                    switch ($pc2) {
+                        case -1: {
+                            $pc2 = 5; continue $sw2;
                         }
-                        $pc2 = 7; continue $sw2;
+                        case 9: {
+                            th = $ex2;
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                        }
+                        case 5: {
+                            if (j6 != null) { $pc2 = 7; continue $sw2; }
+                            try {
+                                j6 = new abcd.Ww.e(r2, r3, r4);
+                                j6.start();
+                            } catch (java.lang.Throwable $t) {
+                                $ex2 = $t;
+                                $pc2 = 9; continue $sw2;
+                            }
+                            $pc2 = 7; continue $sw2;
+                        }
+                        case 7: {
+                            return;
+                        }
+                        default: throw new java.lang.IllegalStateException();
                     }
-                    case 7: {
-                        monitor-exit(abcd.Ww.e.class);
-                        return;
-                    }
-                    default: throw new java.lang.IllegalStateException();
                 }
+        
             }
         }
 
         @Override
         public void run() {
-            java.lang.Throwable th = null;
-            java.lang.Throwable $ex3 = null;
-            int $pc3 = 9;
-            $sw3: while (true) {
-                switch ($pc3) {
-                    case 23: {
-                        try {
-                            monitor-enter(this);
-                        } catch (java.lang.Throwable $t) {
-                            $ex3 = $t;
-                            if ($t instanceof java.lang.InterruptedException) { $pc3 = 21; continue $sw3; }
-                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+            synchronized (abcd.Ww.e.class) {
+                java.lang.Throwable th = null;
+                java.lang.Throwable $ex3 = null;
+                int $pc3 = 9;
+                $sw3: while (true) {
+                    switch ($pc3) {
+                        case 23: {
+                            try {
+                            } catch (java.lang.Throwable $t) {
+                                $ex3 = $t;
+                                if ($t instanceof java.lang.InterruptedException) { $pc3 = 21; continue $sw3; }
+                                throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                            }
+                            try {
+                                wait(this.Hw);
+                            } catch (java.lang.Throwable $t) {
+                                $ex3 = $t;
+                                $pc3 = 18; continue $sw3;
+                            }
+                            try {
+                                this.DW.closeExpiredConnections();
+                                this.DW.closeIdleConnections(this.FH, java.util.concurrent.TimeUnit.SECONDS);
+                            } catch (java.lang.Throwable $t) {
+                                $ex3 = $t;
+                                if ($t instanceof java.lang.InterruptedException) { $pc3 = 21; continue $sw3; }
+                                throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                            }
+                            $pc3 = 9; continue $sw3;
                         }
-                        try {
-                            wait(this.Hw);
-                            monitor-exit(this);
-                        } catch (java.lang.Throwable $t) {
-                            $ex3 = $t;
-                            $pc3 = 18; continue $sw3;
+                        case 15: {
+                            th = $ex3;
+                            try {
+                                throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                            } catch (java.lang.Throwable $t) {
+                                $ex3 = $t;
+                                if ($t instanceof java.lang.InterruptedException) { $pc3 = 21; continue $sw3; }
+                                throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                            }
                         }
-                        try {
-                            this.DW.closeExpiredConnections();
-                            this.DW.closeIdleConnections(this.FH, java.util.concurrent.TimeUnit.SECONDS);
-                            monitor-enter(abcd.Ww.e.class);
-                        } catch (java.lang.Throwable $t) {
-                            $ex3 = $t;
-                            if ($t instanceof java.lang.InterruptedException) { $pc3 = 21; continue $sw3; }
-                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                        case 9: {
+                            if (this.DW.getConnectionsInPool() == 0) { $pc3 = 10; continue $sw3; }
+                            try {
+                            } catch (java.lang.Throwable $t) {
+                                $ex3 = $t;
+                                $pc3 = 15; continue $sw3;
+                            }
+                            { $pc3 = 23; continue $sw3; }
                         }
-                        $pc3 = 15; continue $sw3;
-                    }
-                    case 15: {
-                        th = $ex3;
-                        try {
-                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                        } catch (java.lang.Throwable $t) {
-                            $ex3 = $t;
-                            if ($t instanceof java.lang.InterruptedException) { $pc3 = 21; continue $sw3; }
-                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                        case 10: {
+                            try {
+                                j6 = null;
+                            } catch (java.lang.Throwable $t) {
+                                $ex3 = $t;
+                                $pc3 = 15; continue $sw3;
+                            }
+                            return;
                         }
-                    }
-                    case 9: {
-                        if (this.DW.getConnectionsInPool() == 0) { $pc3 = 10; continue $sw3; }
-                        try {
-                            monitor-exit(abcd.Ww.e.class);
-                        } catch (java.lang.Throwable $t) {
-                            $ex3 = $t;
-                            $pc3 = 15; continue $sw3;
+                        case 18: {
+                            th = $ex3;
+                            try {
+                                throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                            } catch (java.lang.Throwable $t) {
+                                $ex3 = $t;
+                                if ($t instanceof java.lang.InterruptedException) { $pc3 = 21; continue $sw3; }
+                                throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                            }
                         }
-                        { $pc3 = 23; continue $sw3; }
-                    }
-                    case 10: {
-                        try {
+                        case 21: {
                             j6 = null;
-                            monitor-exit(abcd.Ww.e.class);
-                        } catch (java.lang.Throwable $t) {
-                            $ex3 = $t;
-                            $pc3 = 15; continue $sw3;
+                            return;
                         }
-                        return;
+                        default: throw new java.lang.IllegalStateException();
                     }
-                    case 18: {
-                        th = $ex3;
-                        try {
-                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                        } catch (java.lang.Throwable $t) {
-                            $ex3 = $t;
-                            if ($t instanceof java.lang.InterruptedException) { $pc3 = 21; continue $sw3; }
-                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
-                        }
-                    }
-                    case 21: {
-                        j6 = null;
-                        return;
-                    }
-                    default: throw new java.lang.IllegalStateException();
                 }
+        
             }
         }
     }
@@ -456,9 +455,10 @@ public abstract class Ww implements abcd.Zw {
 
     @Override
     public synchronized abcd.Zw.b j6() {
-        monitor-enter(this);
-        monitor-exit(this);
-        return null;
+        synchronized (this) {
+            return null;
+    
+        }
     }
 
     public void j6(abcd.Xw r2) {
@@ -538,135 +538,136 @@ public abstract class Ww implements abcd.Zw {
 
     @Override
     public synchronized org.apache.http.client.HttpClient v5() {
-        org.apache.http.params.BasicHttpParams r0 = null;
-        abcd.Iw r1 = null;
-        org.apache.http.conn.scheme.SchemeRegistry r2 = null;
-        abcd.Ww.a r3 = null;
-        org.apache.http.params.BasicHttpParams r4 = null;
-        abcd.Tw r5 = null;
-        org.apache.http.client.HttpClient r6 = null;
-        java.lang.Throwable e = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex11 = null;
-        int $pc11 = -1;
-        $sw11: while (true) {
-            switch ($pc11) {
-                case -1: {
-                    monitor-enter(this);
-                    $pc11 = 29; continue $sw11;
-                }
-                case 29: {
-                    th = $ex11;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 4: {
-                    if (this.v5 != null) { $pc11 = 26; continue $sw11; }
-                    try {
-                        r0 = new org.apache.http.params.BasicHttpParams();
-                        org.apache.http.conn.params.ConnManagerParams.setMaxConnectionsPerRoute(r0, new abcd.Sw(this));
-                        org.apache.http.conn.params.ConnManagerParams.setMaxTotalConnections(r0, 20);
-                    } catch (java.lang.Throwable $t) {
-                        $ex11 = $t;
-                        $pc11 = 29; continue $sw11;
+        synchronized (this) {
+            org.apache.http.params.BasicHttpParams r0 = null;
+            abcd.Iw r1 = null;
+            org.apache.http.conn.scheme.SchemeRegistry r2 = null;
+            abcd.Ww.a r3 = null;
+            org.apache.http.params.BasicHttpParams r4 = null;
+            abcd.Tw r5 = null;
+            org.apache.http.client.HttpClient r6 = null;
+            java.lang.Throwable e = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex11 = null;
+            int $pc11 = -1;
+            $sw11: while (true) {
+                switch ($pc11) {
+                    case -1: {
+                        $pc11 = 4; continue $sw11;
                     }
-                    try {
-                        r1 = new abcd.Iw();
-                    } catch (java.lang.Throwable $t) {
-                        $ex11 = $t;
-                        if ($t instanceof java.io.IOException) { $pc11 = 8; continue $sw11; }
-                        if ($t instanceof java.security.cert.CertificateException) { $pc11 = 11; continue $sw11; }
-                        if ($t instanceof java.security.KeyStoreException) { $pc11 = 14; continue $sw11; }
-                        if ($t instanceof java.security.NoSuchAlgorithmException) { $pc11 = 17; continue $sw11; }
-                        if ($t instanceof java.security.UnrecoverableKeyException) { $pc11 = 20; continue $sw11; }
-                        if ($t instanceof java.security.KeyManagementException) { $pc11 = 23; continue $sw11; }
-                        $pc11 = 29; continue $sw11;
+                    case 29: {
+                        th = $ex11;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
                     }
-                    try {
-                        r2 = new org.apache.http.conn.scheme.SchemeRegistry();
-                        r2.register(new org.apache.http.conn.scheme.Scheme("http", org.apache.http.conn.scheme.PlainSocketFactory.getSocketFactory(), 80));
-                        r2.register(new org.apache.http.conn.scheme.Scheme("https", r1, 443));
-                        r3 = new abcd.Ww.a(r0, r2);
-                        r4 = new org.apache.http.params.BasicHttpParams();
-                        org.apache.http.params.HttpConnectionParams.setConnectionTimeout(r4, 30000);
-                        org.apache.http.params.HttpConnectionParams.setSoTimeout(r4, 30000);
-                        org.apache.http.params.HttpConnectionParams.setSocketBufferSize(r4, 8192);
-                        org.apache.http.params.HttpProtocolParams.setUserAgent(r4, "OfficialDropboxJavaSDK/" + abcd.Dw.j6);
-                        r5 = new abcd.Tw(this, r3, r4);
-                        r5.addRequestInterceptor(new abcd.Uw(this));
-                        r5.addResponseInterceptor(new abcd.Vw(this));
-                        this.v5 = r5;
-                    } catch (java.lang.Throwable $t) {
-                        $ex11 = $t;
-                        $pc11 = 29; continue $sw11;
+                    case 4: {
+                        if (this.v5 != null) { $pc11 = 26; continue $sw11; }
+                        try {
+                            r0 = new org.apache.http.params.BasicHttpParams();
+                            org.apache.http.conn.params.ConnManagerParams.setMaxConnectionsPerRoute(r0, new abcd.Sw(this));
+                            org.apache.http.conn.params.ConnManagerParams.setMaxTotalConnections(r0, 20);
+                        } catch (java.lang.Throwable $t) {
+                            $ex11 = $t;
+                            $pc11 = 29; continue $sw11;
+                        }
+                        try {
+                            r1 = new abcd.Iw();
+                        } catch (java.lang.Throwable $t) {
+                            $ex11 = $t;
+                            if ($t instanceof java.io.IOException) { $pc11 = 8; continue $sw11; }
+                            if ($t instanceof java.security.cert.CertificateException) { $pc11 = 11; continue $sw11; }
+                            if ($t instanceof java.security.KeyStoreException) { $pc11 = 14; continue $sw11; }
+                            if ($t instanceof java.security.NoSuchAlgorithmException) { $pc11 = 17; continue $sw11; }
+                            if ($t instanceof java.security.UnrecoverableKeyException) { $pc11 = 20; continue $sw11; }
+                            if ($t instanceof java.security.KeyManagementException) { $pc11 = 23; continue $sw11; }
+                            $pc11 = 29; continue $sw11;
+                        }
+                        try {
+                            r2 = new org.apache.http.conn.scheme.SchemeRegistry();
+                            r2.register(new org.apache.http.conn.scheme.Scheme("http", org.apache.http.conn.scheme.PlainSocketFactory.getSocketFactory(), 80));
+                            r2.register(new org.apache.http.conn.scheme.Scheme("https", r1, 443));
+                            r3 = new abcd.Ww.a(r0, r2);
+                            r4 = new org.apache.http.params.BasicHttpParams();
+                            org.apache.http.params.HttpConnectionParams.setConnectionTimeout(r4, 30000);
+                            org.apache.http.params.HttpConnectionParams.setSoTimeout(r4, 30000);
+                            org.apache.http.params.HttpConnectionParams.setSocketBufferSize(r4, 8192);
+                            org.apache.http.params.HttpProtocolParams.setUserAgent(r4, "OfficialDropboxJavaSDK/" + abcd.Dw.j6);
+                            r5 = new abcd.Tw(this, r3, r4);
+                            r5.addRequestInterceptor(new abcd.Uw(this));
+                            r5.addResponseInterceptor(new abcd.Vw(this));
+                            this.v5 = r5;
+                        } catch (java.lang.Throwable $t) {
+                            $ex11 = $t;
+                            $pc11 = 29; continue $sw11;
+                        }
+                        { $pc11 = 26; continue $sw11; }
                     }
-                    { $pc11 = 26; continue $sw11; }
+                    case 11: {
+                        e = $ex11;
+                        try {
+                            throw new java.lang.RuntimeException(e);
+                        } catch (java.lang.Throwable $t) {
+                            $ex11 = $t;
+                            $pc11 = 29; continue $sw11;
+                        }
+                    }
+                    case 17: {
+                        e = $ex11;
+                        try {
+                            throw new java.lang.RuntimeException(e);
+                        } catch (java.lang.Throwable $t) {
+                            $ex11 = $t;
+                            $pc11 = 29; continue $sw11;
+                        }
+                    }
+                    case 20: {
+                        e = $ex11;
+                        try {
+                            throw new java.lang.RuntimeException(e);
+                        } catch (java.lang.Throwable $t) {
+                            $ex11 = $t;
+                            $pc11 = 29; continue $sw11;
+                        }
+                    }
+                    case 8: {
+                        e = $ex11;
+                        try {
+                            throw new java.lang.RuntimeException(e);
+                        } catch (java.lang.Throwable $t) {
+                            $ex11 = $t;
+                            $pc11 = 29; continue $sw11;
+                        }
+                    }
+                    case 23: {
+                        e = $ex11;
+                        try {
+                            throw new java.lang.RuntimeException(e);
+                        } catch (java.lang.Throwable $t) {
+                            $ex11 = $t;
+                            $pc11 = 29; continue $sw11;
+                        }
+                    }
+                    case 14: {
+                        e = $ex11;
+                        try {
+                            throw new java.lang.RuntimeException(e);
+                        } catch (java.lang.Throwable $t) {
+                            $ex11 = $t;
+                            $pc11 = 29; continue $sw11;
+                        }
+                    }
+                    case 26: {
+                        try {
+                            r6 = this.v5;
+                        } catch (java.lang.Throwable $t) {
+                            $ex11 = $t;
+                            $pc11 = 29; continue $sw11;
+                        }
+                        return r6;
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 11: {
-                    e = $ex11;
-                    try {
-                        throw new java.lang.RuntimeException(e);
-                    } catch (java.lang.Throwable $t) {
-                        $ex11 = $t;
-                        $pc11 = 29; continue $sw11;
-                    }
-                }
-                case 17: {
-                    e = $ex11;
-                    try {
-                        throw new java.lang.RuntimeException(e);
-                    } catch (java.lang.Throwable $t) {
-                        $ex11 = $t;
-                        $pc11 = 29; continue $sw11;
-                    }
-                }
-                case 20: {
-                    e = $ex11;
-                    try {
-                        throw new java.lang.RuntimeException(e);
-                    } catch (java.lang.Throwable $t) {
-                        $ex11 = $t;
-                        $pc11 = 29; continue $sw11;
-                    }
-                }
-                case 8: {
-                    e = $ex11;
-                    try {
-                        throw new java.lang.RuntimeException(e);
-                    } catch (java.lang.Throwable $t) {
-                        $ex11 = $t;
-                        $pc11 = 29; continue $sw11;
-                    }
-                }
-                case 23: {
-                    e = $ex11;
-                    try {
-                        throw new java.lang.RuntimeException(e);
-                    } catch (java.lang.Throwable $t) {
-                        $ex11 = $t;
-                        $pc11 = 29; continue $sw11;
-                    }
-                }
-                case 14: {
-                    e = $ex11;
-                    try {
-                        throw new java.lang.RuntimeException(e);
-                    } catch (java.lang.Throwable $t) {
-                        $ex11 = $t;
-                        $pc11 = 29; continue $sw11;
-                    }
-                }
-                case 26: {
-                    try {
-                        r6 = this.v5;
-                    } catch (java.lang.Throwable $t) {
-                        $ex11 = $t;
-                        $pc11 = 29; continue $sw11;
-                    }
-                    monitor-exit(this);
-                    return r6;
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 }

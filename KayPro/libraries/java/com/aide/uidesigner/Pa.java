@@ -823,7 +823,7 @@ public abstract class Pa implements com.aide.common.UndoManager.a {
         java.lang.Float r19 = null;
         java.lang.Throwable th = null;
         java.lang.Throwable $ex11 = null;
-        int $pc11 = 47;
+        int $pc11 = 3;
         $sw11: while (true) {
             switch ($pc11) {
                 case 47: {
@@ -885,7 +885,7 @@ public abstract class Pa implements com.aide.common.UndoManager.a {
                         $ex11 = $t;
                         $pc11 = 52; continue $sw11;
                     }
-                    $pc11 = 43; continue $sw11;
+                    $pc11 = 19; continue $sw11;
                 }
                 case 43: {
                     th = $ex11;
@@ -1113,7 +1113,7 @@ public abstract class Pa implements com.aide.common.UndoManager.a {
         java.lang.String r10 = null;
         java.lang.Throwable th = null;
         java.lang.Throwable $ex13 = null;
-        int $pc13 = 11;
+        int $pc13 = 3;
         $sw13: while (true) {
             switch ($pc13) {
                 case 11: {
@@ -1290,7 +1290,7 @@ public abstract class Pa implements com.aide.common.UndoManager.a {
                         if ($t instanceof java.lang.Exception) { $pc14 = 17; continue $sw14; }
                         $pc14 = 29; continue $sw14;
                     }
-                    $pc14 = 17; continue $sw14;
+                    $pc14 = 9; continue $sw14;
                 }
                 case 17: {
                     e = e;
@@ -1316,7 +1316,7 @@ public abstract class Pa implements com.aide.common.UndoManager.a {
         java.lang.String r10 = null;
         java.lang.Throwable th = null;
         java.lang.Throwable $ex15 = null;
-        int $pc15 = 11;
+        int $pc15 = 3;
         $sw15: while (true) {
             switch ($pc15) {
                 case 11: {
@@ -1407,7 +1407,7 @@ public abstract class Pa implements com.aide.common.UndoManager.a {
         java.lang.String r1 = null;
         java.lang.Throwable th = null;
         java.lang.Throwable $ex17 = null;
-        int $pc17 = 29;
+        int $pc17 = 4;
         $sw17: while (true) {
             switch ($pc17) {
                 case 29: {
@@ -1587,7 +1587,7 @@ public abstract class Pa implements com.aide.common.UndoManager.a {
                     return new com.aide.uidesigner.ClassC(new android.view.ViewGroup.LayoutParams(-2, -2));
                 }
                 case 24: {
-                    $pc18 = 31; continue $sw18;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 31: {
                     throw new java.lang.IllegalStateException();

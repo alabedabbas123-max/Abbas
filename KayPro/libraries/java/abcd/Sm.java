@@ -190,7 +190,7 @@ public class Sm extends abcd.AbstractRm {
                         if ($t instanceof abcd.an) { $pc4 = 19; continue $sw4; }
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
                     }
-                    $pc4 = 19; continue $sw4;
+                    $pc4 = 16; continue $sw4;
                 }
                 case 19: {
                     e = $ex4;
@@ -276,7 +276,7 @@ public class Sm extends abcd.AbstractRm {
                         if ($t instanceof abcd.an) { $pc5 = 8; continue $sw5; }
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
                     }
-                    $pc5 = 8; continue $sw5;
+                    $pc5 = 17; continue $sw5;
                 }
                 case 8: {
                     e = $ex5;

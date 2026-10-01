@@ -501,7 +501,7 @@ public class AppWizardActivity extends android.support.v4.app.FragmentActivity {
     private int j6(java.lang.String r8, java.lang.String r9) {
         java.lang.Throwable th = null;
         java.lang.Throwable $ex9 = null;
-        int $pc9 = 9;
+        int $pc9 = 3;
         $sw9: while (true) {
             switch ($pc9) {
                 case 9: {

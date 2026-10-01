@@ -39,7 +39,7 @@ class UserAuthPassword extends com.jcraft.jsch.UserAuth {
                     $pc0 = 74; continue $sw0;
                 }
                 case 74: {
-                    $pc0 = 68; continue $sw0;
+                    $pc0 = 72; continue $sw0;
                 }
                 case 68: {
                     th = $ex0;

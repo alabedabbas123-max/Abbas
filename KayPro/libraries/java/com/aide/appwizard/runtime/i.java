@@ -2431,7 +2431,7 @@ public class i {
                         $ex53 = $t;
                         $pc53 = 9; continue $sw53;
                     }
-                    $pc53 = 14; continue $sw53;
+                    return;
                 }
                 case 14: {
                     return;

@@ -200,7 +200,7 @@ class AdvertisingInfoServiceStrategy implements io.fabric.sdk.android.services.c
                     r1 = new io.fabric.sdk.android.services.common.AdvertisingInfoServiceStrategy.a(null);
                     r2 = new android.content.Intent("com.google.android.gms.ads.identifier.service.START");
                     r2.setPackage("com.google.android.gms");
-                    $pc3 = 22; continue $sw3;
+                    $pc3 = 24; continue $sw3;
                 }
                 case 22: {
                     th = $ex3;

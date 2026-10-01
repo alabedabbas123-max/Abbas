@@ -731,7 +731,7 @@ public class e {
                 }
                 case 10: {
                     r10 = false;
-                    $pc14 = 17; continue $sw14;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 17: {
                     return true;

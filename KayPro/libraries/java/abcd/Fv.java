@@ -37,7 +37,7 @@ class Fv implements java.lang.Runnable {
                 }
                 case 9: {
                     r2 = 10;
-                    $pc0 = 4; continue $sw0;
+                    return;
                 }
                 case 4: {
                     th = $ex0;

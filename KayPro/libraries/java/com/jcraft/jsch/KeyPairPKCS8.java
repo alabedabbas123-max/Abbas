@@ -217,7 +217,7 @@ public class KeyPairPKCS8 extends com.jcraft.jsch.KeyPair {
         java.lang.String r1 = null;
         java.lang.String r7 = null;
         java.lang.Throwable $ex1 = null;
-        int $pc1 = 17;
+        int $pc1 = 4;
         $sw1: while (true) {
             switch ($pc1) {
                 case 17: {
@@ -383,7 +383,7 @@ public class KeyPairPKCS8 extends com.jcraft.jsch.KeyPair {
                     return false;
                 }
                 case 28: {
-                    $pc2 = 29; continue $sw2;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 29: {
                     throw new java.lang.IllegalStateException();

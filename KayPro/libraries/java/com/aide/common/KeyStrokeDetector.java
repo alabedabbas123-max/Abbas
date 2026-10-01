@@ -1001,7 +1001,7 @@ public class KeyStrokeDetector {
         int r2 = 0;
         boolean r3 = false;
         java.lang.Throwable $ex11 = null;
-        int $pc11 = 20;
+        int $pc11 = 3;
         $sw11: while (true) {
             switch ($pc11) {
                 case 20: {
@@ -1039,7 +1039,7 @@ public class KeyStrokeDetector {
                     $pc11 = 25; continue $sw11;
                 }
                 case 25: {
-                    $pc11 = 18; continue $sw11;
+                    $pc11 = 11; continue $sw11;
                 }
                 case 18: {
                     th = th;
@@ -1251,7 +1251,7 @@ public class KeyStrokeDetector {
         boolean r3 = false;
         com.aide.common.ClassU r4 = null;
         java.lang.Throwable $ex16 = null;
-        int $pc16 = 25;
+        int $pc16 = 3;
         $sw16: while (true) {
             switch ($pc16) {
                 case 25: {
@@ -1289,7 +1289,7 @@ public class KeyStrokeDetector {
                     $pc16 = 30; continue $sw16;
                 }
                 case 30: {
-                    $pc16 = 23; continue $sw16;
+                    $pc16 = 11; continue $sw16;
                 }
                 case 23: {
                     th = th;

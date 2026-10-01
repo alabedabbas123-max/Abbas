@@ -91,18 +91,18 @@ final class Ba {
                 }
                 case 15: {
                     r1 = null;
-                    $pc2 = 12; continue $sw2;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 12: {
                     r1 = null;
-                    $pc2 = 9; continue $sw2;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 9: {
                     th = th;
                     { $pc2 = 10; continue $sw2; }
                 }
                 case 18: {
-                    $pc2 = 19; continue $sw2;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 19: {
                     throw new java.lang.IllegalStateException();

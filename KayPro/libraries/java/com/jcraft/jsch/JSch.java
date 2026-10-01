@@ -83,31 +83,32 @@ public class JSch {
     }
 
     public static java.lang.String DW(java.lang.String r2) {
-        java.util.Hashtable r0 = null;
-        java.lang.String r3 = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex0 = null;
-        int $pc0 = -1;
-        $sw0: while (true) {
-            switch ($pc0) {
-                case -1: {
-                    r0 = j6;
-                    monitor-enter(r0);
-                    try {
-                        r3 = (java.lang.String) j6.get(r2);
-                        monitor-exit(r0);
-                    } catch (java.lang.Throwable $t) {
-                        $ex0 = $t;
-                        $pc0 = 7; continue $sw0;
+        synchronized (j6) {
+            java.util.Hashtable r0 = null;
+            java.lang.String r3 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex0 = null;
+            int $pc0 = -1;
+            $sw0: while (true) {
+                switch ($pc0) {
+                    case -1: {
+                        r0 = j6;
+                        try {
+                            r3 = (java.lang.String) j6.get(r2);
+                        } catch (java.lang.Throwable $t) {
+                            $ex0 = $t;
+                            $pc0 = 7; continue $sw0;
+                        }
+                        return r3;
                     }
-                    return r3;
+                    case 7: {
+                        th = $ex0;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 7: {
-                    th = $ex0;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 
@@ -134,31 +135,32 @@ public class JSch {
     }
 
     protected boolean DW(com.jcraft.jsch.Session r3) {
-        java.util.Vector r0 = null;
-        boolean r4 = false;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex2 = null;
-        int $pc2 = -1;
-        $sw2: while (true) {
-            switch ($pc2) {
-                case -1: {
-                    r0 = this.Hw;
-                    monitor-enter(r0);
-                    try {
-                        r4 = this.Hw.remove(r3);
-                        monitor-exit(r0);
-                    } catch (java.lang.Throwable $t) {
-                        $ex2 = $t;
-                        $pc2 = 7; continue $sw2;
+        synchronized (this.Hw) {
+            java.util.Vector r0 = null;
+            boolean r4 = false;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex2 = null;
+            int $pc2 = -1;
+            $sw2: while (true) {
+                switch ($pc2) {
+                    case -1: {
+                        r0 = this.Hw;
+                        try {
+                            r4 = this.Hw.remove(r3);
+                        } catch (java.lang.Throwable $t) {
+                            $ex2 = $t;
+                            $pc2 = 7; continue $sw2;
+                        }
+                        return r4;
                     }
-                    return r4;
+                    case 7: {
+                        th = $ex2;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 7: {
-                    th = $ex2;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 
@@ -191,29 +193,30 @@ public class JSch {
     }
 
     public synchronized com.jcraft.jsch.IdentityRepository Hw() {
-        com.jcraft.jsch.IdentityRepository r0 = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex4 = null;
-        int $pc4 = -1;
-        $sw4: while (true) {
-            switch ($pc4) {
-                case -1: {
-                    monitor-enter(this);
-                    try {
-                        r0 = this.Zo;
-                    } catch (java.lang.Throwable $t) {
-                        $ex4 = $t;
-                        $pc4 = 6; continue $sw4;
+        synchronized (this) {
+            com.jcraft.jsch.IdentityRepository r0 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex4 = null;
+            int $pc4 = -1;
+            $sw4: while (true) {
+                switch ($pc4) {
+                    case -1: {
+                        try {
+                            r0 = this.Zo;
+                        } catch (java.lang.Throwable $t) {
+                            $ex4 = $t;
+                            $pc4 = 6; continue $sw4;
+                        }
+                        return r0;
                     }
-                    monitor-exit(this);
-                    return r0;
+                    case 6: {
+                        th = $ex4;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 6: {
-                    th = $ex4;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 
@@ -243,196 +246,200 @@ public class JSch {
     }
 
     public void j6(com.jcraft.jsch.Identity r4, byte[] r5) {
-        com.jcraft.jsch.IdentityRepository r6 = null;
-        byte[] r0 = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex6 = null;
-        int $pc6 = -1;
-        $sw6: while (true) {
-            switch ($pc6) {
-                case -1: {
-                    if (r5 != null) { $pc6 = 31; continue $sw6; }
-                    $pc6 = 11; continue $sw6;
-                }
-                case 11: {
-                    r6 = this.Zo;
-                    if ((r6 instanceof com.jcraft.jsch.LocalIdentityRepository) == false) { $pc6 = 15; continue $sw6; }
-                    ((com.jcraft.jsch.LocalIdentityRepository) r6).j6(r4);
-                    return;
-                }
-                case 15: {
-                    if ((r4 instanceof com.jcraft.jsch.IdentityFile) == true) { $pc6 = 17; continue $sw6; }
-                    $pc6 = 19; continue $sw6;
-                }
-                case 19: {
-                    monitor-enter(this);
-                    $pc6 = 26; continue $sw6;
-                }
-                case 26: {
-                    th = $ex6;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 21: {
-                    if ((this.Zo instanceof com.jcraft.jsch.IdentityRepository.Wrapper) == true) { $pc6 = 23; continue $sw6; }
-                    try {
-                        j6(new com.jcraft.jsch.IdentityRepository.Wrapper(this.Zo));
-                    } catch (java.lang.Throwable $t) {
-                        $ex6 = $t;
-                        $pc6 = 26; continue $sw6;
+        synchronized (this) {
+            com.jcraft.jsch.IdentityRepository r6 = null;
+            byte[] r0 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex6 = null;
+            int $pc6 = -1;
+            $sw6: while (true) {
+                switch ($pc6) {
+                    case -1: {
+                        if (r5 != null) { $pc6 = 31; continue $sw6; }
+                        $pc6 = 11; continue $sw6;
                     }
-                    $pc6 = 23; continue $sw6;
-                }
-                case 23: {
-                    try {
-                        monitor-exit(this);
-                    } catch (java.lang.Throwable $t) {
-                        $ex6 = $t;
-                        $pc6 = 26; continue $sw6;
+                    case 11: {
+                        r6 = this.Zo;
+                        if ((r6 instanceof com.jcraft.jsch.LocalIdentityRepository) == false) { $pc6 = 15; continue $sw6; }
+                        ((com.jcraft.jsch.LocalIdentityRepository) r6).j6(r4);
+                        return;
                     }
-                    ((com.jcraft.jsch.IdentityRepository.Wrapper) this.Zo).j6(r4);
-                    return;
-                }
-                case 17: {
-                    if (r4.DW() == true) { $pc6 = 19; continue $sw6; }
-                    this.Zo.j6(((com.jcraft.jsch.IdentityFile) r4).Hw().DW());
-                    return;
-                }
-                case 31: {
-                    try {
-                        r0 = new byte[r5.length];
-                        java.lang.System.arraycopy(r5, 0, r0, 0, r5.length);
-                    } catch (java.lang.Throwable $t) {
-                        $ex6 = $t;
-                        $pc6 = 8; continue $sw6;
+                    case 15: {
+                        if ((r4 instanceof com.jcraft.jsch.IdentityFile) == true) { $pc6 = 17; continue $sw6; }
+                        $pc6 = 19; continue $sw6;
                     }
-                    try {
-                        r4.j6(r0);
-                    } catch (java.lang.Throwable $t) {
-                        $ex6 = $t;
-                        $pc6 = 6; continue $sw6;
+                    case 19: {
+                        $pc6 = 21; continue $sw6;
                     }
-                    com.jcraft.jsch.Util.DW(r0);
-                    $pc6 = 6; continue $sw6;
+                    case 26: {
+                        th = $ex6;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    case 21: {
+                        if ((this.Zo instanceof com.jcraft.jsch.IdentityRepository.Wrapper) == true) { $pc6 = 23; continue $sw6; }
+                        try {
+                            j6(new com.jcraft.jsch.IdentityRepository.Wrapper(this.Zo));
+                        } catch (java.lang.Throwable $t) {
+                            $ex6 = $t;
+                            $pc6 = 26; continue $sw6;
+                        }
+                        $pc6 = 23; continue $sw6;
+                    }
+                    case 23: {
+                        try {
+                        } catch (java.lang.Throwable $t) {
+                            $ex6 = $t;
+                            $pc6 = 26; continue $sw6;
+                        }
+                        ((com.jcraft.jsch.IdentityRepository.Wrapper) this.Zo).j6(r4);
+                        return;
+                    }
+                    case 17: {
+                        if (r4.DW() == true) { $pc6 = 19; continue $sw6; }
+                        this.Zo.j6(((com.jcraft.jsch.IdentityFile) r4).Hw().DW());
+                        return;
+                    }
+                    case 31: {
+                        try {
+                            r0 = new byte[r5.length];
+                            java.lang.System.arraycopy(r5, 0, r0, 0, r5.length);
+                        } catch (java.lang.Throwable $t) {
+                            $ex6 = $t;
+                            $pc6 = 8; continue $sw6;
+                        }
+                        try {
+                            r4.j6(r0);
+                        } catch (java.lang.Throwable $t) {
+                            $ex6 = $t;
+                            $pc6 = 6; continue $sw6;
+                        }
+                        com.jcraft.jsch.Util.DW(r0);
+                        $pc6 = 9; continue $sw6;
+                    }
+                    case 6: {
+                        th = th;
+                        r5 = r0;
+                        $pc6 = 9; continue $sw6;
+                    }
+                    case 9: {
+                        com.jcraft.jsch.Util.DW(r5);
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    case 8: {
+                        th = th;
+                        { $pc6 = 9; continue $sw6; }
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 6: {
-                    th = th;
-                    r5 = r0;
-                    $pc6 = 9; continue $sw6;
-                }
-                case 9: {
-                    com.jcraft.jsch.Util.DW(r5);
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 8: {
-                    th = th;
-                    { $pc6 = 9; continue $sw6; }
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 
     public synchronized void j6(com.jcraft.jsch.IdentityRepository r1) {
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex7 = null;
-        int $pc7 = -1;
-        $sw7: while (true) {
-            switch ($pc7) {
-                case -1: {
-                    monitor-enter(this);
-                    if (r1 != null) { $pc7 = 5; continue $sw7; }
-                    try {
-                        this.Zo = this.v5;
-                    } catch (java.lang.Throwable $t) {
-                        $ex7 = $t;
-                        $pc7 = 8; continue $sw7;
+        synchronized (this) {
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex7 = null;
+            int $pc7 = -1;
+            $sw7: while (true) {
+                switch ($pc7) {
+                    case -1: {
+                        if (r1 != null) { $pc7 = 5; continue $sw7; }
+                        try {
+                            this.Zo = this.v5;
+                        } catch (java.lang.Throwable $t) {
+                            $ex7 = $t;
+                            $pc7 = 8; continue $sw7;
+                        }
+                        $pc7 = 6; continue $sw7;
                     }
-                    $pc7 = 6; continue $sw7;
-                }
-                case 6: {
-                    monitor-exit(this);
-                    return;
-                }
-                case 5: {
-                    try {
-                        this.Zo = r1;
-                    } catch (java.lang.Throwable $t) {
-                        $ex7 = $t;
-                        $pc7 = 8; continue $sw7;
+                    case 6: {
+                        return;
                     }
-                    $pc7 = 8; continue $sw7;
+                    case 5: {
+                        try {
+                            this.Zo = r1;
+                        } catch (java.lang.Throwable $t) {
+                            $ex7 = $t;
+                            $pc7 = 8; continue $sw7;
+                        }
+                        return;
+                    }
+                    case 8: {
+                        th = $ex7;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 8: {
-                    th = $ex7;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 
     protected void j6(com.jcraft.jsch.Session r3) {
-        java.util.Vector r0 = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex8 = null;
-        int $pc8 = -1;
-        $sw8: while (true) {
-            switch ($pc8) {
-                case -1: {
-                    r0 = this.Hw;
-                    monitor-enter(r0);
-                    try {
-                        this.Hw.addElement(r3);
-                        monitor-exit(r0);
-                    } catch (java.lang.Throwable $t) {
-                        $ex8 = $t;
-                        $pc8 = 7; continue $sw8;
+        synchronized (this.Hw) {
+            java.util.Vector r0 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex8 = null;
+            int $pc8 = -1;
+            $sw8: while (true) {
+                switch ($pc8) {
+                    case -1: {
+                        r0 = this.Hw;
+                        try {
+                            this.Hw.addElement(r3);
+                        } catch (java.lang.Throwable $t) {
+                            $ex8 = $t;
+                            $pc8 = 7; continue $sw8;
+                        }
+                        return;
                     }
-                    return;
+                    case 7: {
+                        th = $ex8;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 7: {
-                    th = $ex8;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 
     public void j6(java.io.InputStream r3) {
-        com.jcraft.jsch.HostKeyRepository r0 = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex9 = null;
-        int $pc9 = -1;
-        $sw9: while (true) {
-            switch ($pc9) {
-                case -1: {
-                    if (this.gn != null) { $pc9 = 5; continue $sw9; }
-                    this.gn = new com.jcraft.jsch.KnownHosts(this);
-                    $pc9 = 5; continue $sw9;
-                }
-                case 5: {
-                    r0 = this.gn;
-                    if ((r0 instanceof com.jcraft.jsch.KnownHosts) == false) { $pc9 = 14; continue $sw9; }
-                    monitor-enter(r0);
-                    try {
-                        ((com.jcraft.jsch.KnownHosts) this.gn).j6(r3);
-                        monitor-exit(r0);
-                    } catch (java.lang.Throwable $t) {
-                        $ex9 = $t;
-                        $pc9 = 11; continue $sw9;
+        synchronized (this.gn) {
+            com.jcraft.jsch.HostKeyRepository r0 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex9 = null;
+            int $pc9 = -1;
+            $sw9: while (true) {
+                switch ($pc9) {
+                    case -1: {
+                        if (this.gn != null) { $pc9 = 5; continue $sw9; }
+                        this.gn = new com.jcraft.jsch.KnownHosts(this);
+                        $pc9 = 5; continue $sw9;
                     }
-                    return;
+                    case 5: {
+                        r0 = this.gn;
+                        if ((r0 instanceof com.jcraft.jsch.KnownHosts) == false) { $pc9 = 14; continue $sw9; }
+                        try {
+                            ((com.jcraft.jsch.KnownHosts) this.gn).j6(r3);
+                        } catch (java.lang.Throwable $t) {
+                            $ex9 = $t;
+                            $pc9 = 11; continue $sw9;
+                        }
+                        return;
+                    }
+                    case 11: {
+                        th = $ex9;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    case 14: {
+                        return;
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 11: {
-                    th = $ex9;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 14: {
-                    return;
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 

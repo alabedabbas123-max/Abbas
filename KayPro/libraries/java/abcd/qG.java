@@ -789,7 +789,7 @@ public class qG implements java.lang.Iterable<abcd.dG> {
                 }
                 case 6: {
                     r6 = false;
-                    $pc23 = 9; continue $sw23;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 9: {
                     th = $ex23;

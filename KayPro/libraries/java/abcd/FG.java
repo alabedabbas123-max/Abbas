@@ -99,7 +99,7 @@ public class FG extends abcd.AbstractjF {
                         if ($t instanceof java.io.FileNotFoundException) { $pc0 = 17; continue $sw0; }
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
                     }
-                    $pc0 = 11; continue $sw0;
+                    return;
                 }
                 case 11: {
                     e = $ex0;

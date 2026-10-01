@@ -175,7 +175,7 @@ public class fw implements abcd.Zv {
                         $ex1 = $t;
                         $pc1 = 14; continue $sw1;
                     }
-                    $pc1 = 14; continue $sw1;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 14: {
                     th = $ex1;

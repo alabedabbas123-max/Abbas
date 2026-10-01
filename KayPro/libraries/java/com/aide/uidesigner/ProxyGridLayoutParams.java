@@ -84,7 +84,7 @@ public class ProxyGridLayoutParams {
         java.lang.reflect.Field r0 = null;
         java.lang.Throwable th = null;
         java.lang.Throwable $ex1 = null;
-        int $pc1 = 35;
+        int $pc1 = 3;
         $sw1: while (true) {
             switch ($pc1) {
                 case 35: {

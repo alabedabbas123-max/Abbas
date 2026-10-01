@@ -507,8 +507,8 @@ public abstract class AbstractAa {
         $sw14: while (true) {
             switch ($pc14) {
                 case -1: {
-                    r0 = -1873808331444597780;
-                    $pc14 = 12; continue $sw14;
+                    r0 = -1873808331444597780L;
+                    $pc14 = 16; continue $sw14;
                 }
                 case 12: {
                     th = $ex14;
@@ -657,8 +657,8 @@ public abstract class AbstractAa {
         $sw18: while (true) {
             switch ($pc18) {
                 case -1: {
-                    r0 = -1238879461921243856;
-                    $pc18 = 12; continue $sw18;
+                    r0 = -1238879461921243856L;
+                    $pc18 = 16; continue $sw18;
                 }
                 case 12: {
                     th = $ex18;
@@ -1223,8 +1223,8 @@ public abstract class AbstractAa {
         $sw34: while (true) {
             switch ($pc34) {
                 case -1: {
-                    r0 = 2941961060510501136;
-                    $pc34 = 12; continue $sw34;
+                    r0 = 2941961060510501136L;
+                    $pc34 = 16; continue $sw34;
                 }
                 case 12: {
                     th = $ex34;

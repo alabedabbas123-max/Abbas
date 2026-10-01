@@ -91,13 +91,13 @@ class ba {
                     throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
                 }
                 case 17: {
-                    $pc0 = 18; continue $sw0;
+                    return;
                 }
                 case 18: {
-                    $pc0 = 19; continue $sw0;
+                    return;
                 }
                 case 19: {
-                    $pc0 = 20; continue $sw0;
+                    return;
                 }
                 case 20: {
                     return;

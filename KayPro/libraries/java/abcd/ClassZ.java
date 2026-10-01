@@ -379,32 +379,33 @@ public final class ClassZ {
     }
 
     public static void j6(long r2, java.io.PrintWriter r4, int r5) {
-        java.lang.Object r0 = null;
-        int r3 = 0;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex4 = null;
-        int $pc4 = -1;
-        $sw4: while (true) {
-            switch ($pc4) {
-                case -1: {
-                    r0 = j6;
-                    monitor-enter(r0);
-                    try {
-                        r3 = j6(r2, r5);
-                        r4.print(new java.lang.String(DW, 0, r3));
-                        monitor-exit(r0);
-                    } catch (java.lang.Throwable $t) {
-                        $ex4 = $t;
-                        $pc4 = 7; continue $sw4;
+        synchronized (j6) {
+            java.lang.Object r0 = null;
+            int r3 = 0;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex4 = null;
+            int $pc4 = -1;
+            $sw4: while (true) {
+                switch ($pc4) {
+                    case -1: {
+                        r0 = j6;
+                        try {
+                            r3 = j6(r2, r5);
+                            r4.print(new java.lang.String(DW, 0, r3));
+                        } catch (java.lang.Throwable $t) {
+                            $ex4 = $t;
+                            $pc4 = 7; continue $sw4;
+                        }
+                        return;
                     }
-                    return;
+                    case 7: {
+                        th = $ex4;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 7: {
-                    th = $ex4;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 }

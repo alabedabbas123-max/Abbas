@@ -1096,7 +1096,7 @@ public class OConsole extends android.view.View implements com.aide.ui.views.edi
                         if ($t instanceof java.lang.ArrayIndexOutOfBoundsException) { $pc9 = 34; continue $sw9; }
                         $pc9 = 41; continue $sw9;
                     }
-                    $pc9 = 34; continue $sw9;
+                    $pc9 = 37; continue $sw9;
                 }
                 case 34: {
                     e = $ex9;

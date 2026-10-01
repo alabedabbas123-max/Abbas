@@ -30,7 +30,7 @@ class ClassI {
                     return;
                 }
                 case 6: {
-                    $pc0 = 7; continue $sw0;
+                    return;
                 }
                 case 7: {
                     return;

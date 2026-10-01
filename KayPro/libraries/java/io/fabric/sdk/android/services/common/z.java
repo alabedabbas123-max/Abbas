@@ -450,90 +450,92 @@ public class z implements java.io.Closeable {
     }
 
     public synchronized boolean DW() {
-        boolean r0 = false;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex12 = null;
-        int $pc12 = -1;
-        $sw12: while (true) {
-            switch ($pc12) {
-                case -1: {
-                    monitor-enter(this);
-                    if (this.Hw != 0) { $pc12 = 6; continue $sw12; }
-                    r0 = true;
-                    $pc12 = 7; continue $sw12;
+        synchronized (this) {
+            boolean r0 = false;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex12 = null;
+            int $pc12 = -1;
+            $sw12: while (true) {
+                switch ($pc12) {
+                    case -1: {
+                        if (this.Hw != 0) { $pc12 = 6; continue $sw12; }
+                        r0 = true;
+                        $pc12 = 7; continue $sw12;
+                    }
+                    case 7: {
+                        return r0;
+                    }
+                    case 6: {
+                        r0 = false;
+                        throw new java.lang.IllegalStateException();
+                    }
+                    case 9: {
+                        th = $ex12;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 7: {
-                    monitor-exit(this);
-                    return r0;
-                }
-                case 6: {
-                    r0 = false;
-                    $pc12 = 9; continue $sw12;
-                }
-                case 9: {
-                    th = $ex12;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 
     public synchronized void FH() {
-        int r0 = 0;
-        int r2 = 0;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex13 = null;
-        int $pc13 = -1;
-        $sw13: while (true) {
-            switch ($pc13) {
-                case -1: {
-                    monitor-enter(this);
-                    $pc13 = 13; continue $sw13;
-                }
-                case 13: {
-                    th = $ex13;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 4: {
-                    if (DW() == true) { $pc13 = 12; continue $sw13; }
-                    if (this.Hw != 1) { $pc13 = 8; continue $sw13; }
-                    try {
-                        j6();
-                    } catch (java.lang.Throwable $t) {
-                        $ex13 = $t;
-                        $pc13 = 13; continue $sw13;
+        synchronized (this) {
+            int r0 = 0;
+            int r2 = 0;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex13 = null;
+            int $pc13 = -1;
+            $sw13: while (true) {
+                switch ($pc13) {
+                    case -1: {
+                        $pc13 = 4; continue $sw13;
                     }
-                    $pc13 = 9; continue $sw13;
-                }
-                case 9: {
-                    monitor-exit(this);
-                    return;
-                }
-                case 8: {
-                    try {
-                        r0 = Hw((this.v5.DW + 4) + this.v5.FH);
-                        j6(r0, this.VH, 0, 4);
-                        r2 = j6(this.VH, 0);
-                        j6(this.FH, this.Hw - 1, r0, this.Zo.DW);
-                        this.Hw--;
-                        this.v5 = new io.fabric.sdk.android.services.common.z.a(r0, r2);
-                    } catch (java.lang.Throwable $t) {
-                        $ex13 = $t;
-                        $pc13 = 13; continue $sw13;
+                    case 13: {
+                        th = $ex13;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
                     }
-                    { $pc13 = 9; continue $sw13; }
-                }
-                case 12: {
-                    try {
-                        throw new java.util.NoSuchElementException();
-                    } catch (java.lang.Throwable $t) {
-                        $ex13 = $t;
-                        $pc13 = 13; continue $sw13;
+                    case 4: {
+                        if (DW() == true) { $pc13 = 12; continue $sw13; }
+                        if (this.Hw != 1) { $pc13 = 8; continue $sw13; }
+                        try {
+                            j6();
+                        } catch (java.lang.Throwable $t) {
+                            $ex13 = $t;
+                            $pc13 = 13; continue $sw13;
+                        }
+                        $pc13 = 9; continue $sw13;
                     }
+                    case 9: {
+                        return;
+                    }
+                    case 8: {
+                        try {
+                            r0 = Hw((this.v5.DW + 4) + this.v5.FH);
+                            j6(r0, this.VH, 0, 4);
+                            r2 = j6(this.VH, 0);
+                            j6(this.FH, this.Hw - 1, r0, this.Zo.DW);
+                            this.Hw--;
+                            this.v5 = new io.fabric.sdk.android.services.common.z.a(r0, r2);
+                        } catch (java.lang.Throwable $t) {
+                            $ex13 = $t;
+                            $pc13 = 13; continue $sw13;
+                        }
+                        { $pc13 = 9; continue $sw13; }
+                    }
+                    case 12: {
+                        try {
+                            throw new java.util.NoSuchElementException();
+                        } catch (java.lang.Throwable $t) {
+                            $ex13 = $t;
+                            $pc13 = 13; continue $sw13;
+                        }
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 
@@ -566,119 +568,122 @@ public class z implements java.io.Closeable {
 
     @Override
     public synchronized void close() {
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex15 = null;
-        int $pc15 = -1;
-        $sw15: while (true) {
-            switch ($pc15) {
-                case -1: {
-                    monitor-enter(this);
-                    try {
-                        this.DW.close();
-                    } catch (java.lang.Throwable $t) {
-                        $ex15 = $t;
-                        $pc15 = 6; continue $sw15;
+        synchronized (this) {
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex15 = null;
+            int $pc15 = -1;
+            $sw15: while (true) {
+                switch ($pc15) {
+                    case -1: {
+                        try {
+                            this.DW.close();
+                        } catch (java.lang.Throwable $t) {
+                            $ex15 = $t;
+                            $pc15 = 6; continue $sw15;
+                        }
+                        return;
                     }
-                    monitor-exit(this);
-                    return;
+                    case 6: {
+                        th = $ex15;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 6: {
-                    th = $ex15;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 
     public synchronized void j6() {
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex16 = null;
-        int $pc16 = -1;
-        $sw16: while (true) {
-            switch ($pc16) {
-                case -1: {
-                    monitor-enter(this);
-                    try {
-                        j6(4096, 0, 0, 0);
-                        this.Hw = 0;
-                        this.v5 = io.fabric.sdk.android.services.common.z.a.j6;
-                        this.Zo = io.fabric.sdk.android.services.common.z.a.j6;
-                    } catch (java.lang.Throwable $t) {
-                        $ex16 = $t;
-                        $pc16 = 10; continue $sw16;
+        synchronized (this) {
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex16 = null;
+            int $pc16 = -1;
+            $sw16: while (true) {
+                switch ($pc16) {
+                    case -1: {
+                        try {
+                            j6(4096, 0, 0, 0);
+                            this.Hw = 0;
+                            this.v5 = io.fabric.sdk.android.services.common.z.a.j6;
+                            this.Zo = io.fabric.sdk.android.services.common.z.a.j6;
+                        } catch (java.lang.Throwable $t) {
+                            $ex16 = $t;
+                            $pc16 = 10; continue $sw16;
+                        }
+                        if (this.FH <= 4096) { $pc16 = 7; continue $sw16; }
+                        try {
+                            FH(4096);
+                        } catch (java.lang.Throwable $t) {
+                            $ex16 = $t;
+                            $pc16 = 10; continue $sw16;
+                        }
+                        $pc16 = 7; continue $sw16;
                     }
-                    if (this.FH <= 4096) { $pc16 = 7; continue $sw16; }
-                    try {
-                        FH(4096);
-                    } catch (java.lang.Throwable $t) {
-                        $ex16 = $t;
-                        $pc16 = 10; continue $sw16;
+                    case 7: {
+                        try {
+                            this.FH = 4096;
+                        } catch (java.lang.Throwable $t) {
+                            $ex16 = $t;
+                            $pc16 = 10; continue $sw16;
+                        }
+                        return;
                     }
-                    $pc16 = 7; continue $sw16;
-                }
-                case 7: {
-                    try {
-                        this.FH = 4096;
-                    } catch (java.lang.Throwable $t) {
-                        $ex16 = $t;
-                        $pc16 = 10; continue $sw16;
+                    case 10: {
+                        th = $ex16;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
                     }
-                    monitor-exit(this);
-                    return;
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 10: {
-                    th = $ex16;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 
     public synchronized void j6(io.fabric.sdk.android.services.common.z.c r5) {
-        int r0 = 0;
-        int r1 = 0;
-        io.fabric.sdk.android.services.common.z.a r2 = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex17 = null;
-        int $pc17 = -1;
-        $sw17: while (true) {
-            switch ($pc17) {
-                case -1: {
-                    monitor-enter(this);
-                    try {
-                        r0 = this.v5.DW;
-                    } catch (java.lang.Throwable $t) {
-                        $ex17 = $t;
-                        $pc17 = 10; continue $sw17;
+        synchronized (this) {
+            int r0 = 0;
+            int r1 = 0;
+            io.fabric.sdk.android.services.common.z.a r2 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex17 = null;
+            int $pc17 = -1;
+            $sw17: while (true) {
+                switch ($pc17) {
+                    case -1: {
+                        try {
+                            r0 = this.v5.DW;
+                        } catch (java.lang.Throwable $t) {
+                            $ex17 = $t;
+                            $pc17 = 10; continue $sw17;
+                        }
+                        r1 = 0;
+                        $pc17 = 5; continue $sw17;
                     }
-                    r1 = 0;
-                    $pc17 = 5; continue $sw17;
-                }
-                case 5: {
-                    if (r1 >= this.Hw) { $pc17 = 8; continue $sw17; }
-                    try {
-                        r2 = DW(r0);
-                        r5.j6(new io.fabric.sdk.android.services.common.z.b(this, r2, null), r2.FH);
-                        r0 = Hw((r2.DW + 4) + r2.FH);
-                    } catch (java.lang.Throwable $t) {
-                        $ex17 = $t;
-                        $pc17 = 10; continue $sw17;
+                    case 5: {
+                        if (r1 >= this.Hw) { $pc17 = 8; continue $sw17; }
+                        try {
+                            r2 = DW(r0);
+                            r5.j6(new io.fabric.sdk.android.services.common.z.b(this, r2, null), r2.FH);
+                            r0 = Hw((r2.DW + 4) + r2.FH);
+                        } catch (java.lang.Throwable $t) {
+                            $ex17 = $t;
+                            $pc17 = 10; continue $sw17;
+                        }
+                        r1 = r1 + 1;
+                        { $pc17 = 5; continue $sw17; }
                     }
-                    r1 = r1 + 1;
-                    { $pc17 = 5; continue $sw17; }
+                    case 8: {
+                        return;
+                    }
+                    case 10: {
+                        th = $ex17;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 8: {
-                    monitor-exit(this);
-                    return;
-                }
-                case 10: {
-                    th = $ex17;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 
@@ -687,109 +692,110 @@ public class z implements java.io.Closeable {
     }
 
     public synchronized void j6(byte[] r7, int r8, int r9) {
-        boolean r0 = false;
-        int r2 = 0;
-        io.fabric.sdk.android.services.common.z.a r3 = null;
-        int r10 = 0;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex18 = null;
-        int $pc18 = -1;
-        $sw18: while (true) {
-            switch ($pc18) {
-                case -1: {
-                    monitor-enter(this);
-                    try {
-                        DW(r7, "buffer");
-                    } catch (java.lang.Throwable $t) {
-                        $ex18 = $t;
-                        $pc18 = 22; continue $sw18;
+        synchronized (this) {
+            boolean r0 = false;
+            int r2 = 0;
+            io.fabric.sdk.android.services.common.z.a r3 = null;
+            int r10 = 0;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex18 = null;
+            int $pc18 = -1;
+            $sw18: while (true) {
+                switch ($pc18) {
+                    case -1: {
+                        try {
+                            DW(r7, "buffer");
+                        } catch (java.lang.Throwable $t) {
+                            $ex18 = $t;
+                            $pc18 = 22; continue $sw18;
+                        }
+                        if ((r8 | r9) < 0) { $pc18 = 21; continue $sw18; }
+                        if (r9 > (r7.length - r8)) { $pc18 = 21; continue $sw18; }
+                        try {
+                            j6(r9);
+                            r0 = DW();
+                        } catch (java.lang.Throwable $t) {
+                            $ex18 = $t;
+                            $pc18 = 22; continue $sw18;
+                        }
+                        if (r0 == false) { $pc18 = 10; continue $sw18; }
+                        r2 = 16;
+                        $pc18 = 11; continue $sw18;
                     }
-                    if ((r8 | r9) < 0) { $pc18 = 21; continue $sw18; }
-                    if (r9 > (r7.length - r8)) { $pc18 = 21; continue $sw18; }
-                    try {
-                        j6(r9);
-                        r0 = DW();
-                    } catch (java.lang.Throwable $t) {
-                        $ex18 = $t;
-                        $pc18 = 22; continue $sw18;
+                    case 11: {
+                        try {
+                            r3 = new io.fabric.sdk.android.services.common.z.a(r2, r9);
+                            DW(this.VH, 0, r9);
+                            DW(r3.DW, this.VH, 0, 4);
+                            DW(r3.DW + 4, r7, r8, r9);
+                        } catch (java.lang.Throwable $t) {
+                            $ex18 = $t;
+                            $pc18 = 22; continue $sw18;
+                        }
+                        if (r0 == false) { $pc18 = 14; continue $sw18; }
+                        try {
+                            r10 = r3.DW;
+                        } catch (java.lang.Throwable $t) {
+                            $ex18 = $t;
+                            $pc18 = 22; continue $sw18;
+                        }
+                        $pc18 = 15; continue $sw18;
                     }
-                    if (r0 == false) { $pc18 = 10; continue $sw18; }
-                    r2 = 16;
-                    $pc18 = 11; continue $sw18;
+                    case 15: {
+                        try {
+                            j6(this.FH, this.Hw + 1, r10, r3.DW);
+                            this.Zo = r3;
+                            this.Hw++;
+                        } catch (java.lang.Throwable $t) {
+                            $ex18 = $t;
+                            $pc18 = 22; continue $sw18;
+                        }
+                        if (r0 == false) { $pc18 = 18; continue $sw18; }
+                        try {
+                            this.v5 = this.Zo;
+                        } catch (java.lang.Throwable $t) {
+                            $ex18 = $t;
+                            $pc18 = 22; continue $sw18;
+                        }
+                        $pc18 = 18; continue $sw18;
+                    }
+                    case 18: {
+                        return;
+                    }
+                    case 14: {
+                        try {
+                            r10 = this.v5.DW;
+                        } catch (java.lang.Throwable $t) {
+                            $ex18 = $t;
+                            $pc18 = 22; continue $sw18;
+                        }
+                        { $pc18 = 15; continue $sw18; }
+                    }
+                    case 10: {
+                        try {
+                            r2 = Hw((this.Zo.DW + 4) + this.Zo.FH);
+                        } catch (java.lang.Throwable $t) {
+                            $ex18 = $t;
+                            $pc18 = 22; continue $sw18;
+                        }
+                        $pc18 = 21; continue $sw18;
+                    }
+                    case 21: {
+                        try {
+                            throw new java.lang.IndexOutOfBoundsException();
+                        } catch (java.lang.Throwable $t) {
+                            $ex18 = $t;
+                            $pc18 = 22; continue $sw18;
+                        }
+                    }
+                    case 22: {
+                        th = $ex18;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 11: {
-                    try {
-                        r3 = new io.fabric.sdk.android.services.common.z.a(r2, r9);
-                        DW(this.VH, 0, r9);
-                        DW(r3.DW, this.VH, 0, 4);
-                        DW(r3.DW + 4, r7, r8, r9);
-                    } catch (java.lang.Throwable $t) {
-                        $ex18 = $t;
-                        $pc18 = 22; continue $sw18;
-                    }
-                    if (r0 == false) { $pc18 = 14; continue $sw18; }
-                    try {
-                        r10 = r3.DW;
-                    } catch (java.lang.Throwable $t) {
-                        $ex18 = $t;
-                        $pc18 = 22; continue $sw18;
-                    }
-                    $pc18 = 15; continue $sw18;
-                }
-                case 15: {
-                    try {
-                        j6(this.FH, this.Hw + 1, r10, r3.DW);
-                        this.Zo = r3;
-                        this.Hw++;
-                    } catch (java.lang.Throwable $t) {
-                        $ex18 = $t;
-                        $pc18 = 22; continue $sw18;
-                    }
-                    if (r0 == false) { $pc18 = 18; continue $sw18; }
-                    try {
-                        this.v5 = this.Zo;
-                    } catch (java.lang.Throwable $t) {
-                        $ex18 = $t;
-                        $pc18 = 22; continue $sw18;
-                    }
-                    $pc18 = 18; continue $sw18;
-                }
-                case 18: {
-                    monitor-exit(this);
-                    return;
-                }
-                case 14: {
-                    try {
-                        r10 = this.v5.DW;
-                    } catch (java.lang.Throwable $t) {
-                        $ex18 = $t;
-                        $pc18 = 22; continue $sw18;
-                    }
-                    { $pc18 = 15; continue $sw18; }
-                }
-                case 10: {
-                    try {
-                        r2 = Hw((this.Zo.DW + 4) + this.Zo.FH);
-                    } catch (java.lang.Throwable $t) {
-                        $ex18 = $t;
-                        $pc18 = 22; continue $sw18;
-                    }
-                    $pc18 = 21; continue $sw18;
-                }
-                case 21: {
-                    try {
-                        throw new java.lang.IndexOutOfBoundsException();
-                    } catch (java.lang.Throwable $t) {
-                        $ex18 = $t;
-                        $pc18 = 22; continue $sw18;
-                    }
-                }
-                case 22: {
-                    th = $ex18;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 

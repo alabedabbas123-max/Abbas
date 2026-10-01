@@ -138,7 +138,7 @@ public interface s extends android.os.IInterface {
                                 $ex1 = $t;
                                 $pc1 = 14; continue $sw1;
                             }
-                            $pc1 = 14; continue $sw1;
+                            return;
                         }
                         case 14: {
                             th = $ex1;
@@ -263,7 +263,7 @@ public interface s extends android.os.IInterface {
                                 $ex3 = $t;
                                 $pc3 = 14; continue $sw3;
                             }
-                            $pc3 = 14; continue $sw3;
+                            return;
                         }
                         case 14: {
                             th = $ex3;

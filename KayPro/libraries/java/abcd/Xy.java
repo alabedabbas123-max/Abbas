@@ -86,76 +86,78 @@ public abstract class Xy<Params, Progress, Result> {
 
         @Override
         public synchronized void execute(java.lang.Runnable r3) {
-            java.lang.Throwable th = null;
-            java.lang.Throwable $ex1 = null;
-            int $pc1 = -1;
-            $sw1: while (true) {
-                switch ($pc1) {
-                    case -1: {
-                        monitor-enter(this);
-                        try {
-                            this.j6.offer(new abcd.Yy(this, r3));
-                        } catch (java.lang.Throwable $t) {
-                            $ex1 = $t;
-                            $pc1 = 8; continue $sw1;
+            synchronized (this) {
+                java.lang.Throwable th = null;
+                java.lang.Throwable $ex1 = null;
+                int $pc1 = -1;
+                $sw1: while (true) {
+                    switch ($pc1) {
+                        case -1: {
+                            try {
+                                this.j6.offer(new abcd.Yy(this, r3));
+                            } catch (java.lang.Throwable $t) {
+                                $ex1 = $t;
+                                $pc1 = 8; continue $sw1;
+                            }
+                            if (this.DW != null) { $pc1 = 6; continue $sw1; }
+                            try {
+                                j6();
+                            } catch (java.lang.Throwable $t) {
+                                $ex1 = $t;
+                                $pc1 = 8; continue $sw1;
+                            }
+                            $pc1 = 6; continue $sw1;
                         }
-                        if (this.DW != null) { $pc1 = 6; continue $sw1; }
-                        try {
-                            j6();
-                        } catch (java.lang.Throwable $t) {
-                            $ex1 = $t;
-                            $pc1 = 8; continue $sw1;
+                        case 6: {
+                            return;
                         }
-                        $pc1 = 6; continue $sw1;
+                        case 8: {
+                            th = $ex1;
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                        }
+                        default: throw new java.lang.IllegalStateException();
                     }
-                    case 6: {
-                        monitor-exit(this);
-                        return;
-                    }
-                    case 8: {
-                        th = $ex1;
-                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                    }
-                    default: throw new java.lang.IllegalStateException();
                 }
+        
             }
         }
 
         protected synchronized void j6() {
-            java.lang.Runnable r0 = null;
-            java.lang.Throwable th = null;
-            java.lang.Throwable $ex2 = null;
-            int $pc2 = -1;
-            $sw2: while (true) {
-                switch ($pc2) {
-                    case -1: {
-                        monitor-enter(this);
-                        try {
-                            r0 = this.j6.poll();
-                            this.DW = r0;
-                        } catch (java.lang.Throwable $t) {
-                            $ex2 = $t;
-                            $pc2 = 8; continue $sw2;
+            synchronized (this) {
+                java.lang.Runnable r0 = null;
+                java.lang.Throwable th = null;
+                java.lang.Throwable $ex2 = null;
+                int $pc2 = -1;
+                $sw2: while (true) {
+                    switch ($pc2) {
+                        case -1: {
+                            try {
+                                r0 = this.j6.poll();
+                                this.DW = r0;
+                            } catch (java.lang.Throwable $t) {
+                                $ex2 = $t;
+                                $pc2 = 8; continue $sw2;
+                            }
+                            if (r0 == null) { $pc2 = 6; continue $sw2; }
+                            try {
+                                abcd.Xy.Zo.execute(this.DW);
+                            } catch (java.lang.Throwable $t) {
+                                $ex2 = $t;
+                                $pc2 = 8; continue $sw2;
+                            }
+                            $pc2 = 6; continue $sw2;
                         }
-                        if (r0 == null) { $pc2 = 6; continue $sw2; }
-                        try {
-                            abcd.Xy.Zo.execute(this.DW);
-                        } catch (java.lang.Throwable $t) {
-                            $ex2 = $t;
-                            $pc2 = 8; continue $sw2;
+                        case 6: {
+                            return;
                         }
-                        $pc2 = 6; continue $sw2;
+                        case 8: {
+                            th = $ex2;
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                        }
+                        default: throw new java.lang.IllegalStateException();
                     }
-                    case 6: {
-                        monitor-exit(this);
-                        return;
-                    }
-                    case 8: {
-                        th = $ex2;
-                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                    }
-                    default: throw new java.lang.IllegalStateException();
                 }
+        
             }
         }
     }

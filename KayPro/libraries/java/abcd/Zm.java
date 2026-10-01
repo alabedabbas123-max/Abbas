@@ -837,7 +837,7 @@ public final class Zm {
                         if ($t instanceof abcd.an) { $pc17 = 12; continue $sw17; }
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
                     }
-                    $pc17 = 12; continue $sw17;
+                    $pc17 = 5; continue $sw17;
                 }
                 case 12: {
                     e = $ex17;
@@ -1233,7 +1233,7 @@ public final class Zm {
                     r7 = r19 + 1;
                     r4 = r18;
                     r6 = r20;
-                    $pc25 = 25; continue $sw25;
+                    $pc25 = 28; continue $sw25;
                 }
                 case 25: {
                     e = $ex25;
@@ -1412,7 +1412,7 @@ public final class Zm {
                 case 64: {
                     if (r45 == r41.VH()) { $pc25 = 66; continue $sw25; }
                     this.tp[r42] = abcd.Qs.QX;
-                    $pc25 = 67; continue $sw25;
+                    $pc25 = 70; continue $sw25;
                 }
                 case 67: {
                     e = e;

@@ -110,7 +110,7 @@ public final class Um {
                         if ($t instanceof abcd.an) { $pc1 = 14; continue $sw1; }
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
                     }
-                    $pc1 = 14; continue $sw1;
+                    $pc1 = 17; continue $sw1;
                 }
                 case 14: {
                     e = $ex1;

@@ -65,7 +65,7 @@ public class vI implements abcd.ZI {
                     }
                     case 6: {
                         r6 = 0;
-                        $pc0 = 12; continue $sw0;
+                        return;
                     }
                     case 12: {
                         e = $ex0;

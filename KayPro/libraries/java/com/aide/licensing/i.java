@@ -180,7 +180,7 @@ public class i {
         java.lang.Throwable e = null;
         java.lang.Throwable th = null;
         java.lang.Throwable $ex4 = null;
-        int $pc4 = 11;
+        int $pc4 = 4;
         $sw4: while (true) {
             switch ($pc4) {
                 case 11: {
@@ -413,7 +413,7 @@ public class i {
             switch ($pc9) {
                 case -1: {
                     r1 = "(default)";
-                    $pc9 = 23; continue $sw9;
+                    $pc9 = 28; continue $sw9;
                 }
                 case 23: {
                     th = $ex9;
@@ -528,11 +528,11 @@ public class i {
                 }
                 case 12: {
                     r7 = "(default)";
-                    $pc9 = 9; continue $sw9;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 9: {
                     r6 = "(default)";
-                    $pc9 = 13; continue $sw9;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 13: {
                     r7 = "(default)";
@@ -540,10 +540,10 @@ public class i {
                     { $pc9 = 45; continue $sw9; }
                 }
                 case 30: {
-                    $pc9 = 31; continue $sw9;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 31: {
-                    $pc9 = 32; continue $sw9;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 32: {
                     throw new java.lang.IllegalStateException();

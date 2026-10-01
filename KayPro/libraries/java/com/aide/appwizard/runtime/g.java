@@ -208,46 +208,46 @@ class g {
                     throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
                 }
                 case 36: {
-                    $pc0 = 37; continue $sw0;
+                    return;
                 }
                 case 37: {
-                    $pc0 = 38; continue $sw0;
+                    return;
                 }
                 case 38: {
-                    $pc0 = 39; continue $sw0;
+                    return;
                 }
                 case 39: {
-                    $pc0 = 40; continue $sw0;
+                    return;
                 }
                 case 40: {
-                    $pc0 = 41; continue $sw0;
+                    return;
                 }
                 case 41: {
-                    $pc0 = 42; continue $sw0;
+                    return;
                 }
                 case 42: {
-                    $pc0 = 43; continue $sw0;
+                    return;
                 }
                 case 43: {
-                    $pc0 = 44; continue $sw0;
+                    return;
                 }
                 case 44: {
-                    $pc0 = 45; continue $sw0;
+                    return;
                 }
                 case 45: {
-                    $pc0 = 46; continue $sw0;
+                    return;
                 }
                 case 46: {
-                    $pc0 = 47; continue $sw0;
+                    return;
                 }
                 case 47: {
-                    $pc0 = 48; continue $sw0;
+                    return;
                 }
                 case 48: {
-                    $pc0 = 49; continue $sw0;
+                    return;
                 }
                 case 49: {
-                    $pc0 = 50; continue $sw0;
+                    return;
                 }
                 case 50: {
                     return;

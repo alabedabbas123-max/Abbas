@@ -23,7 +23,7 @@ class Sa implements java.lang.Runnable {
         java.lang.Throwable e = null;
         java.lang.Throwable th = null;
         java.lang.Throwable $ex0 = null;
-        int $pc0 = 11;
+        int $pc0 = 4;
         $sw0: while (true) {
             switch ($pc0) {
                 case 11: {
@@ -76,8 +76,8 @@ class Sa implements java.lang.Runnable {
         $sw1: while (true) {
             switch ($pc1) {
                 case -1: {
-                    r0 = 3509514631334873775;
-                    $pc1 = 14; continue $sw1;
+                    r0 = 3509514631334873775L;
+                    $pc1 = 18; continue $sw1;
                 }
                 case 14: {
                     th = $ex1;

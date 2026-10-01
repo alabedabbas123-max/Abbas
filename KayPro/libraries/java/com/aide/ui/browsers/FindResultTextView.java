@@ -206,7 +206,7 @@ public class FindResultTextView extends android.widget.TextView {
             switch ($pc4) {
                 case -1: {
                     com.almlkaide.kaypro.aide.AdvancedSetting.setFindResultTextView(this);
-                    $pc4 = 7; continue $sw4;
+                    $pc4 = 11; continue $sw4;
                 }
                 case 7: {
                     th = $ex4;
@@ -266,7 +266,7 @@ public class FindResultTextView extends android.widget.TextView {
             switch ($pc5) {
                 case -1: {
                     r8 = r19;
-                    $pc5 = 40; continue $sw5;
+                    $pc5 = 45; continue $sw5;
                 }
                 case 40: {
                     th = $ex5;

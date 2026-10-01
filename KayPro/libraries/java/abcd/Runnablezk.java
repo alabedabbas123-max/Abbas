@@ -66,7 +66,7 @@ class Runnablezk implements java.lang.Runnable {
             */
         /*
             this = this;
-            r0 = 1653122031737615703
+            r0 = 1653122031737615703L
             boolean r2 = abcd.Runnablezk.j6     // Catch: java.lang.Throwable -> L60
             if (r2 == 0) goto Lc
             abcd.wu.j6(r0, r6)     // Catch: java.lang.Throwable -> L60

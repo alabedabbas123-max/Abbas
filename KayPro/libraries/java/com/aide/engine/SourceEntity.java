@@ -1013,7 +1013,7 @@ public class SourceEntity implements android.os.Parcelable {
             switch ($pc16) {
                 case -1: {
                     r0 = "";
-                    $pc16 = 11; continue $sw16;
+                    $pc16 = 15; continue $sw16;
                 }
                 case 11: {
                     th = $ex16;
@@ -1474,7 +1474,7 @@ public class SourceEntity implements android.os.Parcelable {
         int r1 = 0;
         java.lang.Throwable th = null;
         java.lang.Throwable $ex23 = null;
-        int $pc23 = 24;
+        int $pc23 = 4;
         $sw23: while (true) {
             switch ($pc23) {
                 case 24: {
@@ -1542,7 +1542,7 @@ public class SourceEntity implements android.os.Parcelable {
                         $ex23 = $t;
                         $pc23 = 24; continue $sw23;
                     }
-                    $pc23 = 15; continue $sw23;
+                    $pc23 = 17; continue $sw23;
                 }
                 case 15: {
                     try {
@@ -1563,7 +1563,7 @@ public class SourceEntity implements android.os.Parcelable {
                     $pc23 = 31; continue $sw23;
                 }
                 case 31: {
-                    $pc23 = 22; continue $sw23;
+                    $pc23 = 19; continue $sw23;
                 }
                 case 22: {
                     try {
@@ -1641,7 +1641,7 @@ public class SourceEntity implements android.os.Parcelable {
         /*
             this = this;
             monitor-enter(r4)
-            r0 = -5804322842405221625
+            r0 = -5804322842405221625L
             boolean r2 = com.aide.engine.SourceEntity.j6     // Catch: java.lang.Throwable -> L11 java.lang.Throwable -> L13
             if (r2 == 0) goto Ld
             abcd.wu.j6(r0, r4)     // Catch: java.lang.Throwable -> L11 java.lang.Throwable -> L13
@@ -2366,7 +2366,7 @@ public class SourceEntity implements android.os.Parcelable {
         /*
             this = this;
             monitor-enter(r4)
-            r0 = -5856710280193112691
+            r0 = -5856710280193112691L
             boolean r2 = com.aide.engine.SourceEntity.j6     // Catch: java.lang.Throwable -> L11 java.lang.Throwable -> L13
             if (r2 == 0) goto Ld
             abcd.wu.j6(r0, r4)     // Catch: java.lang.Throwable -> L11 java.lang.Throwable -> L13
@@ -2465,134 +2465,135 @@ public class SourceEntity implements android.os.Parcelable {
 
     @abcd.Interfacesu(method = 763039993172977111L)
     protected synchronized void j6(abcd.C0133Ea r9, abcd.C0404Va r10, abcd.C0085Ba r11) {
-        abcd.AbstractAa r0 = null;
-        abcd.Da r1 = null;
-        java.lang.String r2 = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex41 = null;
-        int $pc41 = -1;
-        $sw41: while (true) {
-            switch ($pc41) {
-                case -1: {
-                    monitor-enter(this);
-                    $pc41 = 23; continue $sw41;
-                }
-                case 23: {
-                    th = $ex41;
-                    if (DW == false) { $pc41 = 27; continue $sw41; }
-                    try {
-                        abcd.wu.j6(th, -1504377028070106045L, this, r9, r10, r11);
-                    } catch (java.lang.Throwable $t) {
-                        $ex41 = $t;
-                        $pc41 = 21; continue $sw41;
+        synchronized (this) {
+            abcd.AbstractAa r0 = null;
+            abcd.Da r1 = null;
+            java.lang.String r2 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex41 = null;
+            int $pc41 = -1;
+            $sw41: while (true) {
+                switch ($pc41) {
+                    case -1: {
+                        $pc41 = 27; continue $sw41;
                     }
-                    $pc41 = 27; continue $sw41;
-                }
-                case 27: {
-                    try {
+                    case 23: {
+                        th = $ex41;
+                        if (DW == false) { $pc41 = 27; continue $sw41; }
+                        try {
+                            abcd.wu.j6(th, -1504377028070106045L, this, r9, r10, r11);
+                        } catch (java.lang.Throwable $t) {
+                            $ex41 = $t;
+                            $pc41 = 21; continue $sw41;
+                        }
+                        $pc41 = 27; continue $sw41;
+                    }
+                    case 27: {
+                        try {
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                        } catch (java.lang.Throwable $t) {
+                            $ex41 = $t;
+                            $pc41 = 21; continue $sw41;
+                        }
+                    }
+                    case 4: {
+                        if (j6 == false) { $pc41 = 6; continue $sw41; }
+                        try {
+                            abcd.wu.j6(-1504377028070106045L, this, r9, r10, r11);
+                        } catch (java.lang.Throwable $t) {
+                            $ex41 = $t;
+                            if ($t instanceof java.lang.Throwable) { $pc41 = 23; continue $sw41; }
+                            $pc41 = 21; continue $sw41;
+                        }
+                        $pc41 = 6; continue $sw41;
+                    }
+                    case 6: {
+                        try {
+                            r0 = r11.FH(this.U2);
+                        } catch (java.lang.Throwable $t) {
+                            $ex41 = $t;
+                            if ($t instanceof java.lang.Throwable) { $pc41 = 23; continue $sw41; }
+                            $pc41 = 21; continue $sw41;
+                        }
+                        if (r0 != null) { $pc41 = 9; continue $sw41; }
+                        $pc41 = 19; continue $sw41;
+                    }
+                    case 19: {
+                        return;
+                    }
+                    case 9: {
+                        if (r0.P8() == false) { $pc41 = 12; continue $sw41; }
+                        try {
+                            r0 = ((abcd.C0292Oa) r0).aj();
+                        } catch (java.lang.Throwable $t) {
+                            $ex41 = $t;
+                            if ($t instanceof java.lang.Throwable) { $pc41 = 23; continue $sw41; }
+                            $pc41 = 21; continue $sw41;
+                        }
+                        $pc41 = 12; continue $sw41;
+                    }
+                    case 12: {
+                        if (r0.vy() == false) { $pc41 = 14; continue $sw41; }
+                        try {
+                            this.v5 = true;
+                            this.gn = j6(r9, r11);
+                            this.VH = "";
+                        } catch (java.lang.Throwable $t) {
+                            $ex41 = $t;
+                            if ($t instanceof java.lang.Throwable) { $pc41 = 23; continue $sw41; }
+                            $pc41 = 21; continue $sw41;
+                        }
+                        { $pc41 = 19; continue $sw41; }
+                    }
+                    case 14: {
+                        try {
+                            this.v5 = true;
+                            this.Hw = true;
+                            this.gn = j6(r9, r11);
+                            this.VH = r0.gn();
+                            r1 = r0.Zo();
+                        } catch (java.lang.Throwable $t) {
+                            $ex41 = $t;
+                            if ($t instanceof java.lang.Throwable) { $pc41 = 23; continue $sw41; }
+                            $pc41 = 21; continue $sw41;
+                        }
+                        if (r1 != null) { $pc41 = 17; continue $sw41; }
+                        r2 = "";
+                        $pc41 = 18; continue $sw41;
+                    }
+                    case 18: {
+                        try {
+                            this.Mr = r2;
+                            this.J0 = r0.J8();
+                            this.J8 = r0.Ws();
+                            this.Ws = r0.J0();
+                            this.QX = r0.v5();
+                            this.XL = r0.Hw();
+                        } catch (java.lang.Throwable $t) {
+                            $ex41 = $t;
+                            if ($t instanceof java.lang.Throwable) { $pc41 = 23; continue $sw41; }
+                            $pc41 = 21; continue $sw41;
+                        }
+                        { $pc41 = 19; continue $sw41; }
+                    }
+                    case 17: {
+                        try {
+                            r2 = r1.XL();
+                        } catch (java.lang.Throwable $t) {
+                            $ex41 = $t;
+                            if ($t instanceof java.lang.Throwable) { $pc41 = 23; continue $sw41; }
+                            $pc41 = 21; continue $sw41;
+                        }
+                        return;
+                    }
+                    case 21: {
+                        th = $ex41;
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                    } catch (java.lang.Throwable $t) {
-                        $ex41 = $t;
-                        $pc41 = 21; continue $sw41;
                     }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 4: {
-                    if (j6 == false) { $pc41 = 6; continue $sw41; }
-                    try {
-                        abcd.wu.j6(-1504377028070106045L, this, r9, r10, r11);
-                    } catch (java.lang.Throwable $t) {
-                        $ex41 = $t;
-                        if ($t instanceof java.lang.Throwable) { $pc41 = 23; continue $sw41; }
-                        $pc41 = 21; continue $sw41;
-                    }
-                    $pc41 = 6; continue $sw41;
-                }
-                case 6: {
-                    try {
-                        r0 = r11.FH(this.U2);
-                    } catch (java.lang.Throwable $t) {
-                        $ex41 = $t;
-                        if ($t instanceof java.lang.Throwable) { $pc41 = 23; continue $sw41; }
-                        $pc41 = 21; continue $sw41;
-                    }
-                    if (r0 != null) { $pc41 = 9; continue $sw41; }
-                    $pc41 = 19; continue $sw41;
-                }
-                case 19: {
-                    monitor-exit(this);
-                    return;
-                }
-                case 9: {
-                    if (r0.P8() == false) { $pc41 = 12; continue $sw41; }
-                    try {
-                        r0 = ((abcd.C0292Oa) r0).aj();
-                    } catch (java.lang.Throwable $t) {
-                        $ex41 = $t;
-                        if ($t instanceof java.lang.Throwable) { $pc41 = 23; continue $sw41; }
-                        $pc41 = 21; continue $sw41;
-                    }
-                    $pc41 = 12; continue $sw41;
-                }
-                case 12: {
-                    if (r0.vy() == false) { $pc41 = 14; continue $sw41; }
-                    try {
-                        this.v5 = true;
-                        this.gn = j6(r9, r11);
-                        this.VH = "";
-                    } catch (java.lang.Throwable $t) {
-                        $ex41 = $t;
-                        if ($t instanceof java.lang.Throwable) { $pc41 = 23; continue $sw41; }
-                        $pc41 = 21; continue $sw41;
-                    }
-                    { $pc41 = 19; continue $sw41; }
-                }
-                case 14: {
-                    try {
-                        this.v5 = true;
-                        this.Hw = true;
-                        this.gn = j6(r9, r11);
-                        this.VH = r0.gn();
-                        r1 = r0.Zo();
-                    } catch (java.lang.Throwable $t) {
-                        $ex41 = $t;
-                        if ($t instanceof java.lang.Throwable) { $pc41 = 23; continue $sw41; }
-                        $pc41 = 21; continue $sw41;
-                    }
-                    if (r1 != null) { $pc41 = 17; continue $sw41; }
-                    r2 = "";
-                    $pc41 = 18; continue $sw41;
-                }
-                case 18: {
-                    try {
-                        this.Mr = r2;
-                        this.J0 = r0.J8();
-                        this.J8 = r0.Ws();
-                        this.Ws = r0.J0();
-                        this.QX = r0.v5();
-                        this.XL = r0.Hw();
-                    } catch (java.lang.Throwable $t) {
-                        $ex41 = $t;
-                        if ($t instanceof java.lang.Throwable) { $pc41 = 23; continue $sw41; }
-                        $pc41 = 21; continue $sw41;
-                    }
-                    { $pc41 = 19; continue $sw41; }
-                }
-                case 17: {
-                    try {
-                        r2 = r1.XL();
-                    } catch (java.lang.Throwable $t) {
-                        $ex41 = $t;
-                        if ($t instanceof java.lang.Throwable) { $pc41 = 23; continue $sw41; }
-                        $pc41 = 21; continue $sw41;
-                    }
-                    $pc41 = 21; continue $sw41;
-                }
-                case 21: {
-                    th = $ex41;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 
@@ -2838,7 +2839,7 @@ public class SourceEntity implements android.os.Parcelable {
                         if ($t instanceof abcd.jc) { $pc43 = 34; continue $sw43; }
                         $pc43 = 37; continue $sw43;
                     }
-                    $pc43 = 34; continue $sw43;
+                    $pc43 = 56; continue $sw43;
                 }
                 case 34: {
                     try {
@@ -2967,7 +2968,7 @@ public class SourceEntity implements android.os.Parcelable {
         /*
             this = this;
             monitor-enter(r4)
-            r0 = -396108393497593800
+            r0 = -396108393497593800L
             boolean r2 = com.aide.engine.SourceEntity.j6     // Catch: java.lang.Throwable -> L11 java.lang.Throwable -> L13
             if (r2 == 0) goto Ld
             abcd.wu.j6(r0, r4)     // Catch: java.lang.Throwable -> L11 java.lang.Throwable -> L13
@@ -3037,7 +3038,7 @@ public class SourceEntity implements android.os.Parcelable {
         /*
             this = this;
             monitor-enter(r4)
-            r0 = 4177381733189925492
+            r0 = 4177381733189925492L
             boolean r2 = com.aide.engine.SourceEntity.j6     // Catch: java.lang.Throwable -> L11 java.lang.Throwable -> L13
             if (r2 == 0) goto Ld
             abcd.wu.j6(r0, r4)     // Catch: java.lang.Throwable -> L11 java.lang.Throwable -> L13

@@ -167,7 +167,7 @@ class f implements java.util.concurrent.Callable<java.util.Map<java.lang.String,
                 case 19: {
                     e = e;
                     r9 = null;
-                    $pc2 = 17; continue $sw2;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 17: {
                     th = th;

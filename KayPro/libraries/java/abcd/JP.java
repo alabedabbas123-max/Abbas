@@ -154,7 +154,7 @@ public class JP {
                         if ($t instanceof java.security.GeneralSecurityException) { $pc3 = 8; continue $sw3; }
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
                     }
-                    $pc3 = 8; continue $sw3;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 8: {
                     e = $ex3;

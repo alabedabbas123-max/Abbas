@@ -41,49 +41,49 @@ public final class Os implements java.lang.Comparable<abcd.Os> {
     }
 
     private static abcd.Os DW(abcd.Os r3) {
-        java.util.HashMap<java.lang.String, abcd.Os> r0 = null;
-        java.lang.String r1 = null;
-        abcd.Os r2 = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex1 = null;
-        int $pc1 = -1;
-        $sw1: while (true) {
-            switch ($pc1) {
-                case -1: {
-                    r0 = j6;
-                    monitor-enter(r0);
-                    try {
-                        r1 = r3.Hw();
-                        r2 = j6.get(r1);
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        $pc1 = 11; continue $sw1;
+        synchronized (j6) {
+            java.util.HashMap<java.lang.String, abcd.Os> r0 = null;
+            java.lang.String r1 = null;
+            abcd.Os r2 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex1 = null;
+            int $pc1 = -1;
+            $sw1: while (true) {
+                switch ($pc1) {
+                    case -1: {
+                        r0 = j6;
+                        try {
+                            r1 = r3.Hw();
+                            r2 = j6.get(r1);
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            $pc1 = 11; continue $sw1;
+                        }
+                        if (r2 == null) { $pc1 = 8; continue $sw1; }
+                        try {
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            $pc1 = 11; continue $sw1;
+                        }
+                        return r2;
                     }
-                    if (r2 == null) { $pc1 = 8; continue $sw1; }
-                    try {
-                        monitor-exit(r0);
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        $pc1 = 11; continue $sw1;
+                    case 8: {
+                        try {
+                            j6.put(r1, r3);
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            $pc1 = 11; continue $sw1;
+                        }
+                        return r3;
                     }
-                    return r2;
-                }
-                case 8: {
-                    try {
-                        j6.put(r1, r3);
-                        monitor-exit(r0);
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        $pc1 = 11; continue $sw1;
+                    case 11: {
+                        th = $ex1;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
                     }
-                    return r3;
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 11: {
-                    th = $ex1;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 
@@ -172,99 +172,100 @@ public final class Os implements java.lang.Comparable<abcd.Os> {
     }
 
     public static abcd.Os j6(java.lang.String r8) {
-        java.util.HashMap<java.lang.String, abcd.Os> r0 = null;
-        abcd.Os r1 = null;
-        abcd.Qs[] r2 = null;
-        int r3 = 0;
-        int r4 = 0;
-        int r5 = 0;
-        char r6 = 0;
-        int r7 = 0;
-        int r9 = 0;
-        int r10 = 0;
-        abcd.Qs r11 = null;
-        abcd.Ps r12 = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex4 = null;
-        int $pc4 = -1;
-        $sw4: while (true) {
-            switch ($pc4) {
-                case -1: {
-                    if (r8 == null) { $pc4 = 34; continue $sw4; }
-                    r0 = j6;
-                    monitor-enter(r0);
-                    try {
-                        r1 = j6.get(r8);
-                        monitor-exit(r0);
-                    } catch (java.lang.Throwable $t) {
-                        $ex4 = $t;
-                        $pc4 = 30; continue $sw4;
+        synchronized (j6) {
+            java.util.HashMap<java.lang.String, abcd.Os> r0 = null;
+            abcd.Os r1 = null;
+            abcd.Qs[] r2 = null;
+            int r3 = 0;
+            int r4 = 0;
+            int r5 = 0;
+            char r6 = 0;
+            int r7 = 0;
+            int r9 = 0;
+            int r10 = 0;
+            abcd.Qs r11 = null;
+            abcd.Ps r12 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex4 = null;
+            int $pc4 = -1;
+            $sw4: while (true) {
+                switch ($pc4) {
+                    case -1: {
+                        if (r8 == null) { $pc4 = 34; continue $sw4; }
+                        r0 = j6;
+                        try {
+                            r1 = j6.get(r8);
+                        } catch (java.lang.Throwable $t) {
+                            $ex4 = $t;
+                            $pc4 = 30; continue $sw4;
+                        }
+                        if (r1 == null) { $pc4 = 9; continue $sw4; }
+                        return r1;
                     }
-                    if (r1 == null) { $pc4 = 9; continue $sw4; }
-                    return r1;
+                    case 9: {
+                        r2 = DW(r8);
+                        r3 = 0;
+                        r4 = 1;
+                        r5 = 0;
+                        $pc4 = 10; continue $sw4;
+                    }
+                    case 10: {
+                        r6 = r8.charAt(r4);
+                        if (r6 == ')') { $pc4 = 12; continue $sw4; }
+                        r7 = r4;
+                        $pc4 = 19; continue $sw4;
+                    }
+                    case 19: {
+                        if (r6 != '[') { $pc4 = 22; continue $sw4; }
+                        r7 = r7 + 1;
+                        r6 = r8.charAt(r7);
+                        { $pc4 = 19; continue $sw4; }
+                    }
+                    case 22: {
+                        if (r6 != 'L') { $pc4 = 28; continue $sw4; }
+                        r9 = r8.indexOf(59, r7);
+                        if (r9 == (-1)) { $pc4 = 27; continue $sw4; }
+                        r10 = r9 + 1;
+                        $pc4 = 29; continue $sw4;
+                    }
+                    case 29: {
+                        r2[r5] = abcd.Qs.j6(r8.substring(r4, r10));
+                        r5 = r5 + 1;
+                        r4 = r10;
+                        { $pc4 = 10; continue $sw4; }
+                    }
+                    case 27: {
+                        throw new java.lang.IllegalArgumentException("bad descriptor");
+                    }
+                    case 28: {
+                        r10 = r7 + 1;
+                        { $pc4 = 29; continue $sw4; }
+                    }
+                    case 12: {
+                        r11 = abcd.Qs.FH(r8.substring(r4 + 1));
+                        r12 = new abcd.Ps(r5);
+                        $pc4 = 13; continue $sw4;
+                    }
+                    case 13: {
+                        if (r3 >= r5) { $pc4 = 16; continue $sw4; }
+                        r12.j6(r3, r2[r3]);
+                        r3 = r3 + 1;
+                        { $pc4 = 13; continue $sw4; }
+                    }
+                    case 16: {
+                        return DW(new abcd.Os(r8, r11, r12));
+                    }
+                    case 30: {
+                        th = $ex4;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    case 34: {
+                        throw new java.lang.NullPointerException("descriptor == null");
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 9: {
-                    r2 = DW(r8);
-                    r3 = 0;
-                    r4 = 1;
-                    r5 = 0;
-                    $pc4 = 10; continue $sw4;
-                }
-                case 10: {
-                    r6 = r8.charAt(r4);
-                    if (r6 == ')') { $pc4 = 12; continue $sw4; }
-                    r7 = r4;
-                    $pc4 = 19; continue $sw4;
-                }
-                case 19: {
-                    if (r6 != '[') { $pc4 = 22; continue $sw4; }
-                    r7 = r7 + 1;
-                    r6 = r8.charAt(r7);
-                    { $pc4 = 19; continue $sw4; }
-                }
-                case 22: {
-                    if (r6 != 'L') { $pc4 = 28; continue $sw4; }
-                    r9 = r8.indexOf(59, r7);
-                    if (r9 == (-1)) { $pc4 = 27; continue $sw4; }
-                    r10 = r9 + 1;
-                    $pc4 = 29; continue $sw4;
-                }
-                case 29: {
-                    r2[r5] = abcd.Qs.j6(r8.substring(r4, r10));
-                    r5 = r5 + 1;
-                    r4 = r10;
-                    { $pc4 = 10; continue $sw4; }
-                }
-                case 27: {
-                    throw new java.lang.IllegalArgumentException("bad descriptor");
-                }
-                case 28: {
-                    r10 = r7 + 1;
-                    { $pc4 = 29; continue $sw4; }
-                }
-                case 12: {
-                    r11 = abcd.Qs.FH(r8.substring(r4 + 1));
-                    r12 = new abcd.Ps(r5);
-                    $pc4 = 13; continue $sw4;
-                }
-                case 13: {
-                    if (r3 >= r5) { $pc4 = 16; continue $sw4; }
-                    r12.j6(r3, r2[r3]);
-                    r3 = r3 + 1;
-                    { $pc4 = 13; continue $sw4; }
-                }
-                case 16: {
-                    return DW(new abcd.Os(r8, r11, r12));
-                }
-                case 30: {
-                    th = $ex4;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 34: {
-                    throw new java.lang.NullPointerException("descriptor == null");
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 

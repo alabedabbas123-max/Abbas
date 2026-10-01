@@ -102,7 +102,7 @@ class xa {
                 }
                 case 17: {
                     e = e;
-                    $pc1 = 15; continue $sw1;
+                    $pc1 = 5; continue $sw1;
                 }
                 case 15: {
                     th = th;
@@ -177,7 +177,7 @@ class xa {
                 }
                 case 12: {
                     e = e;
-                    $pc2 = 10; continue $sw2;
+                    return;
                 }
                 case 10: {
                     th = th;
@@ -245,7 +245,7 @@ class xa {
                 }
                 case 12: {
                     e = e;
-                    $pc3 = 10; continue $sw3;
+                    return;
                 }
                 case 10: {
                     th = th;

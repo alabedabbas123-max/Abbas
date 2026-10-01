@@ -56,7 +56,7 @@ public class Lw extends abcd.Jw {
                     { $pc0 = 4; continue $sw0; }
                 }
                 case 11: {
-                    $pc0 = 12; continue $sw0;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 12: {
                     throw new java.lang.IllegalStateException();

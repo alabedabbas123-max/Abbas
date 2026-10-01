@@ -47,7 +47,7 @@ public final class ClassD {
                         { $pc0 = 17; continue $sw0; }
                     }
                     case 18: {
-                        $pc0 = 8; continue $sw0;
+                        $pc0 = 10; continue $sw0;
                     }
                     case 8: {
                         e = $ex0;

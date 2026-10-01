@@ -47,7 +47,7 @@ class Nv implements java.lang.Thread.UncaughtExceptionHandler {
                         $ex0 = $t;
                         $pc0 = 8; continue $sw0;
                     }
-                    $pc0 = 8; continue $sw0;
+                    return;
                 }
                 case 8: {
                     th = $ex0;

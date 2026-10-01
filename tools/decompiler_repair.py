@@ -239,6 +239,29 @@ def transform_body(body: str, indent: str, uid: int, void: bool, stats: dict):
     if len(set(ids)) != len(ids):
         raise Unsupported('duplicate block labels')
 
+    # ---- handler blocks ----------------------------------------------------
+    # A block is an exception handler entry when some statement names it as a
+    # catch target, or when it opens with the Dalvik `move-exception`.  Such a
+    # block is only ever reached by a thrown exception, never by falling off
+    # the end of the preceding block -- jadx hoists them ahead of the code they
+    # protect, so they must be skipped when wiring up fall-through edges.
+    handlers = set()
+    for _lbl, stmts in blocks:
+        for it in stmts:
+            if it.catch:
+                for _t, tgt in it.catch:
+                    handlers.add(tgt)
+    for lbl, stmts in blocks:
+        if lbl is not None and stmts and MOVE_EXC.match(stmts[0].text):
+            handlers.add(lbl)
+
+    def fallthrough(idx):
+        """Next block reached by falling off the end of blocks[idx]."""
+        for j in range(idx + 1, len(blocks)):
+            if ids[j] not in handlers:
+                return ids[j]
+        return None
+
     # ---- edges -------------------------------------------------------------
     incoming = set()
     for lbl, stmts in blocks:
@@ -246,22 +269,28 @@ def transform_body(body: str, indent: str, uid: int, void: bool, stats: dict):
             for g in GOTO_RE.finditer(it.text):
                 incoming.add(int(g.group(1)))
             if it.catch:
-                for _, tgt in it.catch:
+                for _t, tgt in it.catch:
                     incoming.add(tgt)
-    for idx in range(len(blocks) - 1):
+    for idx in range(len(blocks)):
         stmts = blocks[idx][1]
         if not stmts or not is_terminal(stmts[-1].text):
-            incoming.add(ids[idx + 1])
+            tgt = fallthrough(idx)
+            if tgt is not None:
+                incoming.add(tgt)
 
     if prologue:
         entry = ENTRY_ID
     else:
-        roots = [i for i in ids if i not in incoming]
+        roots = [i for i in ids if i not in incoming and i not in handlers]
         if len(roots) == 1:
             entry = roots[0]
         else:
-            entry = ids[0]
-            stats['ambiguous_entry'] += 1
+            # Labels are bytecode offsets, so the lowest non-handler label is
+            # the method entry.
+            candidates = sorted(i for i in ids if i not in handlers)
+            entry = candidates[0] if candidates else ids[0]
+            if len(roots) != 1:
+                stats['ambiguous_entry'] += 1
 
     # ---- exception variables ----------------------------------------------
     exc_vars = set()
@@ -381,8 +410,9 @@ def transform_body(body: str, indent: str, uid: int, void: bool, stats: dict):
         # fall-through
         last_real = stmts[-1].text if stmts else ''
         if not stmts or not is_terminal(last_real):
-            if idx + 1 < len(blocks):
-                out.append(f'{i5}    {pc} = {ids[idx + 1]}; continue {sw};')
+            nxt = fallthrough(idx)
+            if nxt is not None:
+                out.append(f'{i5}    {pc} = {nxt}; continue {sw};')
             elif void:
                 out.append(f'{i5}    return;')
             else:

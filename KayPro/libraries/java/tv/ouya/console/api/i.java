@@ -146,7 +146,7 @@ public class i implements android.content.ServiceConnection {
                 }
                 case 14: {
                     this.tp = new tv.ouya.console.api.i.b(r1, r2, r4);
-                    $pc1 = 13; continue $sw1;
+                    $pc1 = 9; continue $sw1;
                 }
                 case 13: {
                     android.util.Log.w("OUYAF", "Error looking up deviceEnum for: " + r3);

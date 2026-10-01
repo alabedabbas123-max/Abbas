@@ -123,7 +123,7 @@ public class AlgorithmParametersSpi extends java.security.AlgorithmParametersSpi
                     throw new java.io.IOException("Not a valid DH Parameter encoding.");
                 }
                 case 8: {
-                    $pc4 = 10; continue $sw4;
+                    return;
                 }
                 case 10: {
                     return;

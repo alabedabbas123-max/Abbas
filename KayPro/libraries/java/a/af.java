@@ -178,7 +178,7 @@ public class af {
                 }
                 case 30: {
                     r6 = r0;
-                    $pc2 = 24; continue $sw2;
+                    return;
                 }
                 case 24: {
                     e = $ex2;

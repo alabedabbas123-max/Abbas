@@ -32,7 +32,7 @@ class bA implements abcd.InterfacelA {
             switch ($pc0) {
                 case -1: {
                     r1 = null;
-                    $pc0 = 23; continue $sw0;
+                    $pc0 = 24; continue $sw0;
                 }
                 case 23: {
                     e = e;
@@ -83,7 +83,7 @@ class bA implements abcd.InterfacelA {
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
                     }
                     r1 = r3;
-                    $pc0 = 18; continue $sw0;
+                    $pc0 = 12; continue $sw0;
                 }
                 case 18: {
                     e = e;
@@ -166,7 +166,7 @@ class bA implements abcd.InterfacelA {
                     return null;
                 }
                 case 21: {
-                    $pc1 = 18; continue $sw1;
+                    $pc1 = 7; continue $sw1;
                 }
                 case 18: {
                     e = $ex1;

@@ -127,7 +127,7 @@ public abstract class AbstractbH implements java.lang.Iterable<abcd.AbstractbH.b
                     throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
                 }
                 case 13: {
-                    $pc1 = 14; continue $sw1;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 14: {
                     throw new java.lang.IllegalStateException();

@@ -78,29 +78,30 @@ public class jz implements _y<abcd.Interfacelz>, abcd.Interfacehz, abcd.Interfac
     }
 
     public synchronized java.util.Collection<abcd.Interfacelz> FH() {
-        java.util.Collection<abcd.Interfacelz> r0 = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex2 = null;
-        int $pc2 = -1;
-        $sw2: while (true) {
-            switch ($pc2) {
-                case -1: {
-                    monitor-enter(this);
-                    try {
-                        r0 = java.util.Collections.unmodifiableCollection(this.j6);
-                    } catch (java.lang.Throwable $t) {
-                        $ex2 = $t;
-                        $pc2 = 6; continue $sw2;
+        synchronized (this) {
+            java.util.Collection<abcd.Interfacelz> r0 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex2 = null;
+            int $pc2 = -1;
+            $sw2: while (true) {
+                switch ($pc2) {
+                    case -1: {
+                        try {
+                            r0 = java.util.Collections.unmodifiableCollection(this.j6);
+                        } catch (java.lang.Throwable $t) {
+                            $ex2 = $t;
+                            $pc2 = 6; continue $sw2;
+                        }
+                        return r0;
                     }
-                    monitor-exit(this);
-                    return r0;
+                    case 6: {
+                        th = $ex2;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 6: {
-                    th = $ex2;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 
@@ -110,28 +111,29 @@ public class jz implements _y<abcd.Interfacelz>, abcd.Interfacehz, abcd.Interfac
     }
 
     public synchronized void j6(abcd.Interfacelz r2) {
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex3 = null;
-        int $pc3 = -1;
-        $sw3: while (true) {
-            switch ($pc3) {
-                case -1: {
-                    monitor-enter(this);
-                    try {
-                        this.j6.add(r2);
-                    } catch (java.lang.Throwable $t) {
-                        $ex3 = $t;
-                        $pc3 = 6; continue $sw3;
+        synchronized (this) {
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex3 = null;
+            int $pc3 = -1;
+            $sw3: while (true) {
+                switch ($pc3) {
+                    case -1: {
+                        try {
+                            this.j6.add(r2);
+                        } catch (java.lang.Throwable $t) {
+                            $ex3 = $t;
+                            $pc3 = 6; continue $sw3;
+                        }
+                        return;
                     }
-                    monitor-exit(this);
-                    return;
+                    case 6: {
+                        th = $ex3;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 6: {
-                    th = $ex3;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 
@@ -146,28 +148,29 @@ public class jz implements _y<abcd.Interfacelz>, abcd.Interfacehz, abcd.Interfac
 
     @Override
     public synchronized void j6(boolean r2) {
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex4 = null;
-        int $pc4 = -1;
-        $sw4: while (true) {
-            switch ($pc4) {
-                case -1: {
-                    monitor-enter(this);
-                    try {
-                        this.DW.set(r2);
-                    } catch (java.lang.Throwable $t) {
-                        $ex4 = $t;
-                        $pc4 = 6; continue $sw4;
+        synchronized (this) {
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex4 = null;
+            int $pc4 = -1;
+            $sw4: while (true) {
+                switch ($pc4) {
+                    case -1: {
+                        try {
+                            this.DW.set(r2);
+                        } catch (java.lang.Throwable $t) {
+                            $ex4 = $t;
+                            $pc4 = 6; continue $sw4;
+                        }
+                        return;
                     }
-                    monitor-exit(this);
-                    return;
+                    case 6: {
+                        th = $ex4;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 6: {
-                    th = $ex4;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 

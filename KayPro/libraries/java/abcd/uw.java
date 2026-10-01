@@ -62,60 +62,59 @@ public class uw {
     }
 
     private static java.io.File j6(java.io.File r2) {
-        java.lang.Object r0 = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex2 = null;
-        int $pc2 = -1;
-        $sw2: while (true) {
-            switch ($pc2) {
-                case -1: {
-                    if (r2.exists() == true) { $pc2 = 22; continue $sw2; }
-                    r0 = j6;
-                    monitor-enter(r0);
-                    $pc2 = 19; continue $sw2;
-                }
-                case 19: {
-                    th = $ex2;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 7: {
-                    if (r2.exists() == false) { $pc2 = 9; continue $sw2; }
-                    $pc2 = 17; continue $sw2;
-                }
-                case 17: {
-                    try {
-                        monitor-exit(r0);
-                    } catch (java.lang.Throwable $t) {
-                        $ex2 = $t;
-                        $pc2 = 19; continue $sw2;
+        synchronized (j6) {
+            java.lang.Object r0 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex2 = null;
+            int $pc2 = -1;
+            $sw2: while (true) {
+                switch ($pc2) {
+                    case -1: {
+                        if (r2.exists() == true) { $pc2 = 22; continue $sw2; }
+                        r0 = j6;
+                        $pc2 = 7; continue $sw2;
                     }
-                    { $pc2 = 22; continue $sw2; }
-                }
-                case 9: {
-                    if (r2.mkdirs() == true) { $pc2 = 17; continue $sw2; }
-                    if (r2.exists() == false) { $pc2 = 15; continue $sw2; }
-                    try {
-                        monitor-exit(r0);
-                    } catch (java.lang.Throwable $t) {
-                        $ex2 = $t;
-                        $pc2 = 19; continue $sw2;
+                    case 19: {
+                        th = $ex2;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
                     }
-                    return r2;
-                }
-                case 15: {
-                    try {
-                        monitor-exit(r0);
-                    } catch (java.lang.Throwable $t) {
-                        $ex2 = $t;
-                        $pc2 = 19; continue $sw2;
+                    case 7: {
+                        if (r2.exists() == false) { $pc2 = 9; continue $sw2; }
+                        $pc2 = 17; continue $sw2;
                     }
-                    return null;
+                    case 17: {
+                        try {
+                        } catch (java.lang.Throwable $t) {
+                            $ex2 = $t;
+                            $pc2 = 19; continue $sw2;
+                        }
+                        { $pc2 = 22; continue $sw2; }
+                    }
+                    case 9: {
+                        if (r2.mkdirs() == true) { $pc2 = 17; continue $sw2; }
+                        if (r2.exists() == false) { $pc2 = 15; continue $sw2; }
+                        try {
+                        } catch (java.lang.Throwable $t) {
+                            $ex2 = $t;
+                            $pc2 = 19; continue $sw2;
+                        }
+                        return r2;
+                    }
+                    case 15: {
+                        try {
+                        } catch (java.lang.Throwable $t) {
+                            $ex2 = $t;
+                            $pc2 = 19; continue $sw2;
+                        }
+                        return null;
+                    }
+                    case 22: {
+                        return r2;
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 22: {
-                    return r2;
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 }

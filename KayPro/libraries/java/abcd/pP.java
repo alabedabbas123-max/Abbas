@@ -338,7 +338,7 @@ public final class pP extends java.security.Provider implements abcd.InterfacegP
                         if ($t instanceof java.lang.Exception) { $pc1 = 17; continue $sw1; }
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
                     }
-                    $pc1 = 17; continue $sw1;
+                    $pc1 = 20; continue $sw1;
                 }
                 case 17: {
                     e = $ex1;
@@ -350,7 +350,7 @@ public final class pP extends java.security.Provider implements abcd.InterfacegP
                     { $pc1 = 4; continue $sw1; }
                 }
                 case 5: {
-                    $pc1 = 13; continue $sw1;
+                    return;
                 }
                 case 13: {
                     return;

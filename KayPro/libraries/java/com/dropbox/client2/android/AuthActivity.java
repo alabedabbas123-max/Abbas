@@ -145,31 +145,32 @@ public class AuthActivity extends android.app.Activity {
     }
 
     private static com.dropbox.client2.android.AuthActivity.a Hw() {
-        java.lang.Object r0 = null;
-        com.dropbox.client2.android.AuthActivity.a r1 = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex3 = null;
-        int $pc3 = -1;
-        $sw3: while (true) {
-            switch ($pc3) {
-                case -1: {
-                    r0 = FH;
-                    monitor-enter(r0);
-                    try {
-                        r1 = DW;
-                        monitor-exit(r0);
-                    } catch (java.lang.Throwable $t) {
-                        $ex3 = $t;
-                        $pc3 = 7; continue $sw3;
+        synchronized (FH) {
+            java.lang.Object r0 = null;
+            com.dropbox.client2.android.AuthActivity.a r1 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex3 = null;
+            int $pc3 = -1;
+            $sw3: while (true) {
+                switch ($pc3) {
+                    case -1: {
+                        r0 = FH;
+                        try {
+                            r1 = DW;
+                        } catch (java.lang.Throwable $t) {
+                            $ex3 = $t;
+                            $pc3 = 7; continue $sw3;
+                        }
+                        return r1;
                     }
-                    return r1;
+                    case 7: {
+                        th = $ex3;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 7: {
-                    th = $ex3;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 
@@ -432,11 +433,11 @@ public class AuthActivity extends android.app.Activity {
                 }
                 case 22: {
                     r11 = null;
-                    $pc8 = 18; continue $sw8;
+                    $pc8 = 21; continue $sw8;
                 }
                 case 18: {
                     r6 = null;
-                    $pc8 = 19; continue $sw8;
+                    $pc8 = 21; continue $sw8;
                 }
                 case 19: {
                     r5 = null;
@@ -444,7 +445,7 @@ public class AuthActivity extends android.app.Activity {
                 }
                 case 21: {
                     r6 = r5;
-                    $pc8 = 20; continue $sw8;
+                    return;
                 }
                 case 20: {
                     r2 = null;

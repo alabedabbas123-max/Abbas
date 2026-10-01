@@ -20,47 +20,47 @@ final class fy<TResult> implements ny<TResult> {
     }
 
     public final void j6(abcd.Yx r2) {
-        java.lang.Object r3 = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex0 = null;
-        int $pc0 = -1;
-        $sw0: while (true) {
-            switch ($pc0) {
-                case -1: {
-                    if (r2.FH() == false) { $pc0 = 15; continue $sw0; }
-                    r3 = this.DW;
-                    monitor-enter(r3);
-                    $pc0 = 12; continue $sw0;
-                }
-                case 12: {
-                    th = $ex0;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 7: {
-                    if (this.FH != null) { $pc0 = 10; continue $sw0; }
-                    try {
-                        monitor-exit(r3);
-                    } catch (java.lang.Throwable $t) {
-                        $ex0 = $t;
-                        $pc0 = 12; continue $sw0;
+        synchronized (this.DW) {
+            java.lang.Object r3 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex0 = null;
+            int $pc0 = -1;
+            $sw0: while (true) {
+                switch ($pc0) {
+                    case -1: {
+                        if (r2.FH() == false) { $pc0 = 15; continue $sw0; }
+                        r3 = this.DW;
+                        $pc0 = 7; continue $sw0;
                     }
-                    return;
-                }
-                case 10: {
-                    try {
-                        monitor-exit(r3);
-                    } catch (java.lang.Throwable $t) {
-                        $ex0 = $t;
-                        $pc0 = 12; continue $sw0;
+                    case 12: {
+                        th = $ex0;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
                     }
-                    this.j6.execute(new abcd.Runnablegy(this));
-                    return;
+                    case 7: {
+                        if (this.FH != null) { $pc0 = 10; continue $sw0; }
+                        try {
+                        } catch (java.lang.Throwable $t) {
+                            $ex0 = $t;
+                            $pc0 = 12; continue $sw0;
+                        }
+                        return;
+                    }
+                    case 10: {
+                        try {
+                        } catch (java.lang.Throwable $t) {
+                            $ex0 = $t;
+                            $pc0 = 12; continue $sw0;
+                        }
+                        this.j6.execute(new abcd.Runnablegy(this));
+                        return;
+                    }
+                    case 15: {
+                        return;
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 15: {
-                    return;
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 }

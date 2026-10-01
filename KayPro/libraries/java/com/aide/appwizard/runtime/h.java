@@ -101,16 +101,16 @@ class h {
                     throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
                 }
                 case 18: {
-                    $pc0 = 19; continue $sw0;
+                    return;
                 }
                 case 19: {
-                    $pc0 = 20; continue $sw0;
+                    return;
                 }
                 case 20: {
-                    $pc0 = 21; continue $sw0;
+                    return;
                 }
                 case 21: {
-                    $pc0 = 22; continue $sw0;
+                    return;
                 }
                 case 22: {
                     return;

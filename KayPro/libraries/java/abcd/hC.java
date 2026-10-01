@@ -272,16 +272,16 @@ public class hC {
                     return r1;
                 }
                 case 13: {
-                    $pc1 = 14; continue $sw1;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 14: {
-                    $pc1 = 15; continue $sw1;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 15: {
-                    $pc1 = 16; continue $sw1;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 16: {
-                    $pc1 = 17; continue $sw1;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 17: {
                     throw new java.lang.IllegalStateException();

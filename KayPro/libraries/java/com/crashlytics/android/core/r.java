@@ -10,7 +10,7 @@ class r {
     <T> T DW(java.util.concurrent.Callable<T> r6) {
         java.lang.Throwable e = null;
         java.lang.Throwable $ex0 = null;
-        int $pc0 = 12;
+        int $pc0 = 4;
         $sw0: while (true) {
             switch ($pc0) {
                 case 12: {

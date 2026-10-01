@@ -217,7 +217,7 @@ public class mF {
                         if ($t instanceof abcd.YC) { $pc6 = 7; continue $sw6; }
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
                     }
-                    $pc6 = 7; continue $sw6;
+                    $pc6 = 10; continue $sw6;
                 }
                 case 7: {
                     e = $ex6;

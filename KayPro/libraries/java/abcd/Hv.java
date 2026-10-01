@@ -606,7 +606,7 @@ public class Hv {
                     VH = new abcd.Fv();
                     Zo.post(VH);
                     r0.registerActivityLifecycleCallbacks(new abcd.Gv());
-                    $pc11 = 16; continue $sw11;
+                    return;
                 }
                 case 16: {
                     return;

@@ -123,216 +123,208 @@ class ClassQ extends java.io.Reader {
     @Override
     @abcd.Interfacesu(method = 1854250374981214893L)
     public int read() {
-        com.aide.ui.views.editor.Interfaceo r2 = null;
-        int r3 = 0;
-        com.aide.ui.views.editor.Interfaceo r4 = null;
-        int r5 = 0;
-        char r6 = 0;
-        char r7 = 0;
-        char[] r8 = null;
-        int r9 = 0;
-        char r10 = 0;
-        char r11 = 0;
-        com.aide.ui.views.editor.Interfaceo r12 = null;
-        int r13 = 0;
-        char r14 = 0;
-        char r15 = 0;
-        char[] r16 = null;
-        int r17 = 0;
-        char r18 = 0;
-        char r19 = 0;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex2 = null;
-        int $pc2 = 4;
-        $sw2: while (true) {
-            switch ($pc2) {
-                case 61: {
-                    th = $ex2;
-                    if (DW == false) { $pc2 = 65; continue $sw2; }
-                    abcd.wu.j6(th, -213908543651208097L, this);
-                    $pc2 = 65; continue $sw2;
-                }
-                case 65: {
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 4: {
-                    if (j6 == false) { $pc2 = 6; continue $sw2; }
-                    try {
-                        abcd.wu.j6(-213908543651208097L, this);
-                    } catch (java.lang.Throwable $t) {
-                        $ex2 = $t;
-                        $pc2 = 61; continue $sw2;
+        synchronized (this.FH) {
+            com.aide.ui.views.editor.Interfaceo r2 = null;
+            int r3 = 0;
+            com.aide.ui.views.editor.Interfaceo r4 = null;
+            int r5 = 0;
+            char r6 = 0;
+            char r7 = 0;
+            char[] r8 = null;
+            int r9 = 0;
+            char r10 = 0;
+            char r11 = 0;
+            com.aide.ui.views.editor.Interfaceo r12 = null;
+            int r13 = 0;
+            char r14 = 0;
+            char r15 = 0;
+            char[] r16 = null;
+            int r17 = 0;
+            char r18 = 0;
+            char r19 = 0;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex2 = null;
+            int $pc2 = 4;
+            $sw2: while (true) {
+                switch ($pc2) {
+                    case 61: {
+                        th = $ex2;
+                        if (DW == false) { $pc2 = 65; continue $sw2; }
+                        abcd.wu.j6(th, -213908543651208097L, this);
+                        $pc2 = 65; continue $sw2;
                     }
-                    $pc2 = 6; continue $sw2;
-                }
-                case 6: {
-                    try {
-                        r2 = this.FH;
-                        monitor-enter(r2);
-                    } catch (java.lang.Throwable $t) {
-                        $ex2 = $t;
-                        $pc2 = 61; continue $sw2;
-                    }
-                    try {
-                        r3 = this.FH.v5();
-                    } catch (java.lang.Throwable $t) {
-                        $ex2 = $t;
-                        $pc2 = 58; continue $sw2;
-                    }
-                    if (this.v5 >= this.VH) { $pc2 = 30; continue $sw2; }
-                    if (this.v5 >= r3) { $pc2 = 30; continue $sw2; }
-                    if (this.Hw >= this.FH.EQ(this.v5)) { $pc2 = 22; continue $sw2; }
-                    try {
-                        r4 = this.FH;
-                        r5 = this.Hw;
-                        this.Hw = r5 + 1;
-                        r6 = r4.FH(r5, this.v5);
-                    } catch (java.lang.Throwable $t) {
-                        $ex2 = $t;
-                        $pc2 = 58; continue $sw2;
-                    }
-                    if (r6 == '\t') { $pc2 = 18; continue $sw2; }
-                    try {
-                        monitor-exit(r2);
-                    } catch (java.lang.Throwable $t) {
-                        $ex2 = $t;
-                        $pc2 = 58; continue $sw2;
-                    }
-                    return r6;
-                }
-                case 18: {
-                    try {
-                        r7 = this.gn;
-                        monitor-exit(r2);
-                    } catch (java.lang.Throwable $t) {
-                        $ex2 = $t;
-                        $pc2 = 58; continue $sw2;
-                    }
-                    return r7;
-                }
-                case 22: {
-                    if (this.u7 >= (this.tp.length - 1)) { $pc2 = 26; continue $sw2; }
-                    try {
-                        r8 = this.tp;
-                        r9 = this.u7;
-                        this.u7 = r9 + 1;
-                        r10 = r8[r9];
-                        monitor-exit(r2);
-                    } catch (java.lang.Throwable $t) {
-                        $ex2 = $t;
-                        $pc2 = 58; continue $sw2;
-                    }
-                    return r10;
-                }
-                case 26: {
-                    try {
-                        this.u7 = 0;
-                        this.Hw = 0;
-                        this.v5++;
-                        r11 = this.tp[this.tp.length - 1];
-                        monitor-exit(r2);
-                    } catch (java.lang.Throwable $t) {
-                        $ex2 = $t;
-                        $pc2 = 58; continue $sw2;
-                    }
-                    return r11;
-                }
-                case 30: {
-                    if (this.v5 == this.VH) { $pc2 = 32; continue $sw2; }
-                    $pc2 = 56; continue $sw2;
-                }
-                case 56: {
-                    try {
-                        monitor-exit(r2);
-                    } catch (java.lang.Throwable $t) {
-                        $ex2 = $t;
-                        $pc2 = 58; continue $sw2;
-                    }
-                    return -1;
-                }
-                case 32: {
-                    if (this.v5 >= r3) { $pc2 = 56; continue $sw2; }
-                    if (this.Hw <= this.Zo) { $pc2 = 36; continue $sw2; }
-                    $pc2 = 54; continue $sw2;
-                }
-                case 54: {
-                    try {
-                        monitor-exit(r2);
-                    } catch (java.lang.Throwable $t) {
-                        $ex2 = $t;
-                        $pc2 = 58; continue $sw2;
-                    }
-                    return -1;
-                }
-                case 36: {
-                    if (this.Hw > this.FH.EQ(this.v5)) { $pc2 = 54; continue $sw2; }
-                    if (this.Hw >= this.FH.EQ(this.v5)) { $pc2 = 47; continue $sw2; }
-                    try {
-                        r12 = this.FH;
-                        r13 = this.Hw;
-                        this.Hw = r13 + 1;
-                        r14 = r12.FH(r13, this.v5);
-                    } catch (java.lang.Throwable $t) {
-                        $ex2 = $t;
-                        $pc2 = 58; continue $sw2;
-                    }
-                    if (r14 == '\t') { $pc2 = 43; continue $sw2; }
-                    try {
-                        monitor-exit(r2);
-                    } catch (java.lang.Throwable $t) {
-                        $ex2 = $t;
-                        $pc2 = 58; continue $sw2;
-                    }
-                    return r14;
-                }
-                case 43: {
-                    try {
-                        r15 = this.gn;
-                        monitor-exit(r2);
-                    } catch (java.lang.Throwable $t) {
-                        $ex2 = $t;
-                        $pc2 = 58; continue $sw2;
-                    }
-                    return r15;
-                }
-                case 47: {
-                    if (this.u7 >= (this.tp.length - 1)) { $pc2 = 51; continue $sw2; }
-                    try {
-                        r16 = this.tp;
-                        r17 = this.u7;
-                        this.u7 = r17 + 1;
-                        r18 = r16[r17];
-                        monitor-exit(r2);
-                    } catch (java.lang.Throwable $t) {
-                        $ex2 = $t;
-                        $pc2 = 58; continue $sw2;
-                    }
-                    return r18;
-                }
-                case 51: {
-                    try {
-                        this.u7 = 0;
-                        this.Hw = 0;
-                        this.v5++;
-                        r19 = this.tp[this.tp.length - 1];
-                        monitor-exit(r2);
-                    } catch (java.lang.Throwable $t) {
-                        $ex2 = $t;
-                        $pc2 = 58; continue $sw2;
-                    }
-                    return r19;
-                }
-                case 58: {
-                    th = $ex2;
-                    try {
+                    case 65: {
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                    } catch (java.lang.Throwable $t) {
-                        $ex2 = $t;
-                        $pc2 = 61; continue $sw2;
                     }
+                    case 4: {
+                        if (j6 == false) { $pc2 = 6; continue $sw2; }
+                        try {
+                            abcd.wu.j6(-213908543651208097L, this);
+                        } catch (java.lang.Throwable $t) {
+                            $ex2 = $t;
+                            $pc2 = 61; continue $sw2;
+                        }
+                        $pc2 = 6; continue $sw2;
+                    }
+                    case 6: {
+                        try {
+                            r2 = this.FH;
+                        } catch (java.lang.Throwable $t) {
+                            $ex2 = $t;
+                            $pc2 = 61; continue $sw2;
+                        }
+                        try {
+                            r3 = this.FH.v5();
+                        } catch (java.lang.Throwable $t) {
+                            $ex2 = $t;
+                            $pc2 = 58; continue $sw2;
+                        }
+                        if (this.v5 >= this.VH) { $pc2 = 30; continue $sw2; }
+                        if (this.v5 >= r3) { $pc2 = 30; continue $sw2; }
+                        if (this.Hw >= this.FH.EQ(this.v5)) { $pc2 = 22; continue $sw2; }
+                        try {
+                            r4 = this.FH;
+                            r5 = this.Hw;
+                            this.Hw = r5 + 1;
+                            r6 = r4.FH(r5, this.v5);
+                        } catch (java.lang.Throwable $t) {
+                            $ex2 = $t;
+                            $pc2 = 58; continue $sw2;
+                        }
+                        if (r6 == '\t') { $pc2 = 18; continue $sw2; }
+                        try {
+                        } catch (java.lang.Throwable $t) {
+                            $ex2 = $t;
+                            $pc2 = 58; continue $sw2;
+                        }
+                        return r6;
+                    }
+                    case 18: {
+                        try {
+                            r7 = this.gn;
+                        } catch (java.lang.Throwable $t) {
+                            $ex2 = $t;
+                            $pc2 = 58; continue $sw2;
+                        }
+                        return r7;
+                    }
+                    case 22: {
+                        if (this.u7 >= (this.tp.length - 1)) { $pc2 = 26; continue $sw2; }
+                        try {
+                            r8 = this.tp;
+                            r9 = this.u7;
+                            this.u7 = r9 + 1;
+                            r10 = r8[r9];
+                        } catch (java.lang.Throwable $t) {
+                            $ex2 = $t;
+                            $pc2 = 58; continue $sw2;
+                        }
+                        return r10;
+                    }
+                    case 26: {
+                        try {
+                            this.u7 = 0;
+                            this.Hw = 0;
+                            this.v5++;
+                            r11 = this.tp[this.tp.length - 1];
+                        } catch (java.lang.Throwable $t) {
+                            $ex2 = $t;
+                            $pc2 = 58; continue $sw2;
+                        }
+                        return r11;
+                    }
+                    case 30: {
+                        if (this.v5 == this.VH) { $pc2 = 32; continue $sw2; }
+                        $pc2 = 56; continue $sw2;
+                    }
+                    case 56: {
+                        try {
+                        } catch (java.lang.Throwable $t) {
+                            $ex2 = $t;
+                            $pc2 = 58; continue $sw2;
+                        }
+                        return -1;
+                    }
+                    case 32: {
+                        if (this.v5 >= r3) { $pc2 = 56; continue $sw2; }
+                        if (this.Hw <= this.Zo) { $pc2 = 36; continue $sw2; }
+                        $pc2 = 54; continue $sw2;
+                    }
+                    case 54: {
+                        try {
+                        } catch (java.lang.Throwable $t) {
+                            $ex2 = $t;
+                            $pc2 = 58; continue $sw2;
+                        }
+                        return -1;
+                    }
+                    case 36: {
+                        if (this.Hw > this.FH.EQ(this.v5)) { $pc2 = 54; continue $sw2; }
+                        if (this.Hw >= this.FH.EQ(this.v5)) { $pc2 = 47; continue $sw2; }
+                        try {
+                            r12 = this.FH;
+                            r13 = this.Hw;
+                            this.Hw = r13 + 1;
+                            r14 = r12.FH(r13, this.v5);
+                        } catch (java.lang.Throwable $t) {
+                            $ex2 = $t;
+                            $pc2 = 58; continue $sw2;
+                        }
+                        if (r14 == '\t') { $pc2 = 43; continue $sw2; }
+                        try {
+                        } catch (java.lang.Throwable $t) {
+                            $ex2 = $t;
+                            $pc2 = 58; continue $sw2;
+                        }
+                        return r14;
+                    }
+                    case 43: {
+                        try {
+                            r15 = this.gn;
+                        } catch (java.lang.Throwable $t) {
+                            $ex2 = $t;
+                            $pc2 = 58; continue $sw2;
+                        }
+                        return r15;
+                    }
+                    case 47: {
+                        if (this.u7 >= (this.tp.length - 1)) { $pc2 = 51; continue $sw2; }
+                        try {
+                            r16 = this.tp;
+                            r17 = this.u7;
+                            this.u7 = r17 + 1;
+                            r18 = r16[r17];
+                        } catch (java.lang.Throwable $t) {
+                            $ex2 = $t;
+                            $pc2 = 58; continue $sw2;
+                        }
+                        return r18;
+                    }
+                    case 51: {
+                        try {
+                            this.u7 = 0;
+                            this.Hw = 0;
+                            this.v5++;
+                            r19 = this.tp[this.tp.length - 1];
+                        } catch (java.lang.Throwable $t) {
+                            $ex2 = $t;
+                            $pc2 = 58; continue $sw2;
+                        }
+                        return r19;
+                    }
+                    case 58: {
+                        th = $ex2;
+                        try {
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                        } catch (java.lang.Throwable $t) {
+                            $ex2 = $t;
+                            $pc2 = 61; continue $sw2;
+                        }
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 
@@ -419,7 +411,7 @@ class ClassQ extends java.io.Reader {
                     }
                     r12 = r12 + 1;
                     r2 = r4;
-                    $pc3 = 25; continue $sw3;
+                    $pc3 = 27; continue $sw3;
                 }
                 case 25: {
                     th = th;

@@ -370,10 +370,10 @@ public abstract class UE {
                     return u7(r14);
                 }
                 case 38: {
-                    $pc0 = 82; continue $sw0;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 82: {
-                    $pc0 = 146; continue $sw0;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 146: {
                     throw new java.lang.IllegalStateException();

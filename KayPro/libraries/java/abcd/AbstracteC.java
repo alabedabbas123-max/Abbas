@@ -93,13 +93,13 @@ public abstract class AbstracteC {
                     return r1;
                 }
                 case 12: {
-                    $pc0 = 13; continue $sw0;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 13: {
-                    $pc0 = 14; continue $sw0;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 14: {
-                    $pc0 = 15; continue $sw0;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 15: {
                     throw new java.lang.IllegalStateException();
@@ -174,7 +174,7 @@ public abstract class AbstracteC {
                     return r1;
                 }
                 case 10: {
-                    $pc2 = 11; continue $sw2;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 11: {
                     throw new java.lang.IllegalStateException();

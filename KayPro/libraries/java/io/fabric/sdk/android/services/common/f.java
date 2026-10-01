@@ -29,7 +29,7 @@ public class f {
                         if ($t instanceof java.lang.Exception) { $pc0 = 16; continue $sw0; }
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
                     }
-                    $pc0 = 14; continue $sw0;
+                    $pc0 = 17; continue $sw0;
                 }
                 case 14: {
                     e = e;

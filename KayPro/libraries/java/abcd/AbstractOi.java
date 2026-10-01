@@ -515,7 +515,7 @@ public abstract class AbstractOi {
                         $ex8 = $t;
                         $pc8 = 19; continue $sw8;
                     }
-                    $pc8 = 24; continue $sw8;
+                    return;
                 }
                 case 24: {
                     return;

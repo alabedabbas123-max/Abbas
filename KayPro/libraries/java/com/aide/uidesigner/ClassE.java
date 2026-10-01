@@ -56,7 +56,7 @@ public class ClassE {
             switch ($pc1) {
                 case -1: {
                     r0 = null;
-                    $pc1 = 12; continue $sw1;
+                    $pc1 = 16; continue $sw1;
                 }
                 case 12: {
                     th = $ex1;
@@ -375,11 +375,11 @@ public class ClassE {
                         if ($t instanceof java.lang.Exception) { $pc4 = 39; continue $sw4; }
                         $pc4 = 29; continue $sw4;
                     }
-                    $pc4 = 22; continue $sw4;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 22: {
                     r5 = null;
-                    $pc4 = 20; continue $sw4;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 20: {
                     th = th;
@@ -387,13 +387,13 @@ public class ClassE {
                     { $pc4 = 26; continue $sw4; }
                 }
                 case 36: {
-                    $pc4 = 37; continue $sw4;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 37: {
-                    $pc4 = 38; continue $sw4;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 38: {
-                    $pc4 = 39; continue $sw4;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 39: {
                     throw new java.lang.IllegalStateException();
@@ -806,7 +806,7 @@ public class ClassE {
                 }
                 case 8: {
                     if (r9.trim().length() != 0) { $pc11 = 10; continue $sw11; }
-                    $pc11 = 15; continue $sw11;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 15: {
                     return null;

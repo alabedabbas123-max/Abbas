@@ -204,7 +204,7 @@ public abstract class AbstractGp extends abcd.Abstractvp implements java.lang.Co
             switch ($pc7) {
                 case -1: {
                     r3.Hw(this.j6);
-                    $pc7 = 10; continue $sw7;
+                    $pc7 = 4; continue $sw7;
                 }
                 case 10: {
                     e = $ex7;

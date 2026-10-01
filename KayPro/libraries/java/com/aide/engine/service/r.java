@@ -239,7 +239,7 @@ public interface r extends android.os.IInterface {
                                 $ex3 = $t;
                                 $pc3 = 14; continue $sw3;
                             }
-                            $pc3 = 14; continue $sw3;
+                            return;
                         }
                         case 14: {
                             th = $ex3;

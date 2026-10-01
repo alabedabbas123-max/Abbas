@@ -123,7 +123,7 @@ class FC {
                         if ($t instanceof abcd.EC.a) { $pc0 = 37; continue $sw0; }
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
                     }
-                    $pc0 = 37; continue $sw0;
+                    $pc0 = 51; continue $sw0;
                 }
                 case 37: {
                     this.Zo = true;

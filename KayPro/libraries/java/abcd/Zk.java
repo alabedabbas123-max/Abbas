@@ -1257,8 +1257,8 @@ public class Zk {
         $sw25: while (true) {
             switch ($pc25) {
                 case -1: {
-                    r0 = 14875035873500811;
-                    $pc25 = 12; continue $sw25;
+                    r0 = 14875035873500811L;
+                    $pc25 = 16; continue $sw25;
                 }
                 case 12: {
                     th = $ex25;

@@ -46,7 +46,7 @@ public abstract class GF {
                         if ($t instanceof java.util.MissingResourceException) { $pc0 = 17; continue $sw0; }
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
                     }
-                    $pc0 = 11; continue $sw0;
+                    $pc0 = 20; continue $sw0;
                 }
                 case 11: {
                     e = $ex0;

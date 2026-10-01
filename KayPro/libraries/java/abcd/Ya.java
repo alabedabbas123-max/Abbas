@@ -199,10 +199,10 @@ public class Ya extends abcd.AbstractAa {
                     return null;
                 }
                 case 47: {
-                    $pc2 = 48; continue $sw2;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 48: {
-                    $pc2 = 49; continue $sw2;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 49: {
                     throw new java.lang.IllegalStateException();
@@ -1271,10 +1271,10 @@ public class Ya extends abcd.AbstractAa {
                     return null;
                 }
                 case 47: {
-                    $pc20 = 48; continue $sw20;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 48: {
-                    $pc20 = 49; continue $sw20;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 49: {
                     throw new java.lang.IllegalStateException();

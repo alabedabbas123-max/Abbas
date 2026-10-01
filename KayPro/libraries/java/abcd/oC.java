@@ -111,13 +111,13 @@ public class oC extends abcd.AbstractqC {
                         return r1;
                     }
                     case 12: {
-                        $pc1 = 13; continue $sw1;
+                        throw new java.lang.IllegalStateException();
                     }
                     case 13: {
-                        $pc1 = 14; continue $sw1;
+                        throw new java.lang.IllegalStateException();
                     }
                     case 14: {
-                        $pc1 = 15; continue $sw1;
+                        throw new java.lang.IllegalStateException();
                     }
                     case 15: {
                         throw new java.lang.IllegalStateException();

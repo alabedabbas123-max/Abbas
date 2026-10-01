@@ -240,7 +240,7 @@ public class kO {
                         if ($t instanceof java.io.IOException) { $pc5 = 15; continue $sw5; }
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
                     }
-                    $pc5 = 15; continue $sw5;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 15: {
                     e = $ex5;

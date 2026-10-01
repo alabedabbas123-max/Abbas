@@ -1291,84 +1291,85 @@ public class ClassG extends com.aide.ui.views.editor.Abstractb implements com.ai
 
     @abcd.Interfacesu(method = 2277871039800396412L)
     private synchronized void cb() {
-        long r2 = 0L;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex19 = null;
-        int $pc19 = -1;
-        $sw19: while (true) {
-            switch ($pc19) {
-                case -1: {
-                    monitor-enter(this);
-                    $pc19 = 13; continue $sw19;
-                }
-                case 13: {
-                    th = $ex19;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 15: {
-                    th = $ex19;
-                    if (Zo == false) { $pc19 = 19; continue $sw19; }
-                    try {
-                        abcd.wu.j6(th, -2252267740310457219L, this);
-                    } catch (java.lang.Throwable $t) {
-                        $ex19 = $t;
-                        $pc19 = 13; continue $sw19;
+        synchronized (this) {
+            long r2 = 0L;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex19 = null;
+            int $pc19 = -1;
+            $sw19: while (true) {
+                switch ($pc19) {
+                    case -1: {
+                        $pc19 = 19; continue $sw19;
                     }
-                    $pc19 = 19; continue $sw19;
-                }
-                case 19: {
-                    try {
+                    case 13: {
+                        th = $ex19;
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                    } catch (java.lang.Throwable $t) {
-                        $ex19 = $t;
-                        $pc19 = 13; continue $sw19;
                     }
-                }
-                case 5: {
-                    if (v5 == false) { $pc19 = 7; continue $sw19; }
-                    try {
-                        abcd.wu.j6(-2252267740310457219L, this);
-                    } catch (java.lang.Throwable $t) {
-                        $ex19 = $t;
-                        if ($t instanceof java.lang.Throwable) { $pc19 = 15; continue $sw19; }
-                        $pc19 = 13; continue $sw19;
+                    case 15: {
+                        th = $ex19;
+                        if (Zo == false) { $pc19 = 19; continue $sw19; }
+                        try {
+                            abcd.wu.j6(th, -2252267740310457219L, this);
+                        } catch (java.lang.Throwable $t) {
+                            $ex19 = $t;
+                            $pc19 = 13; continue $sw19;
+                        }
+                        $pc19 = 19; continue $sw19;
                     }
-                    $pc19 = 7; continue $sw19;
-                }
-                case 7: {
-                    try {
-                        r2 = java.lang.System.currentTimeMillis();
-                    } catch (java.lang.Throwable $t) {
-                        $ex19 = $t;
-                        if ($t instanceof java.lang.Throwable) { $pc19 = 15; continue $sw19; }
-                        $pc19 = 13; continue $sw19;
+                    case 19: {
+                        try {
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                        } catch (java.lang.Throwable $t) {
+                            $ex19 = $t;
+                            $pc19 = 13; continue $sw19;
+                        }
                     }
-                    if (r2 > this.J0) { $pc19 = 10; continue $sw19; }
-                    try {
-                        this.J0++;
-                    } catch (java.lang.Throwable $t) {
-                        $ex19 = $t;
-                        if ($t instanceof java.lang.Throwable) { $pc19 = 15; continue $sw19; }
-                        $pc19 = 13; continue $sw19;
+                    case 5: {
+                        if (v5 == false) { $pc19 = 7; continue $sw19; }
+                        try {
+                            abcd.wu.j6(-2252267740310457219L, this);
+                        } catch (java.lang.Throwable $t) {
+                            $ex19 = $t;
+                            if ($t instanceof java.lang.Throwable) { $pc19 = 15; continue $sw19; }
+                            $pc19 = 13; continue $sw19;
+                        }
+                        $pc19 = 7; continue $sw19;
                     }
-                    $pc19 = 11; continue $sw19;
-                }
-                case 11: {
-                    monitor-exit(this);
-                    return;
-                }
-                case 10: {
-                    try {
-                        this.J0 = r2;
-                    } catch (java.lang.Throwable $t) {
-                        $ex19 = $t;
-                        if ($t instanceof java.lang.Throwable) { $pc19 = 15; continue $sw19; }
-                        $pc19 = 13; continue $sw19;
+                    case 7: {
+                        try {
+                            r2 = java.lang.System.currentTimeMillis();
+                        } catch (java.lang.Throwable $t) {
+                            $ex19 = $t;
+                            if ($t instanceof java.lang.Throwable) { $pc19 = 15; continue $sw19; }
+                            $pc19 = 13; continue $sw19;
+                        }
+                        if (r2 > this.J0) { $pc19 = 10; continue $sw19; }
+                        try {
+                            this.J0++;
+                        } catch (java.lang.Throwable $t) {
+                            $ex19 = $t;
+                            if ($t instanceof java.lang.Throwable) { $pc19 = 15; continue $sw19; }
+                            $pc19 = 13; continue $sw19;
+                        }
+                        $pc19 = 11; continue $sw19;
                     }
-                    { $pc19 = 11; continue $sw19; }
+                    case 11: {
+                        return;
+                    }
+                    case 10: {
+                        try {
+                            this.J0 = r2;
+                        } catch (java.lang.Throwable $t) {
+                            $ex19 = $t;
+                            if ($t instanceof java.lang.Throwable) { $pc19 = 15; continue $sw19; }
+                            $pc19 = 13; continue $sw19;
+                        }
+                        { $pc19 = 11; continue $sw19; }
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 
@@ -1862,199 +1863,201 @@ public class ClassG extends com.aide.ui.views.editor.Abstractb implements com.ai
     }
 
     public void DW(int r12, int r13, char r14, java.lang.Object r15) {
-        com.aide.ui.views.editor.A r1 = null;
-        char[] r2 = null;
-        char[] r8 = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex30 = null;
-        int $pc30 = 3;
-        $sw30: while (true) {
-            switch ($pc30) {
-                case 22: {
-                    th = $ex30;
-                    if (Zo == false) { $pc30 = 26; continue $sw30; }
-                    abcd.wu.j6(th, 189920549290108400L, this, new java.lang.Integer(r12), new java.lang.Integer(r13), new java.lang.Character(r14), r15);
-                    $pc30 = 26; continue $sw30;
-                }
-                case 26: {
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 3: {
-                    if (v5 == false) { $pc30 = 5; continue $sw30; }
-                    try {
-                        abcd.wu.j6(189920549290108400L, this, new java.lang.Integer(r12), new java.lang.Integer(r13), new java.lang.Character(r14), r15);
-                    } catch (java.lang.Throwable $t) {
-                        $ex30 = $t;
-                        $pc30 = 22; continue $sw30;
+        synchronized (this) {
+            com.aide.ui.views.editor.A r1 = null;
+            char[] r2 = null;
+            char[] r8 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex30 = null;
+            int $pc30 = 3;
+            $sw30: while (true) {
+                switch ($pc30) {
+                    case 22: {
+                        th = $ex30;
+                        if (Zo == false) { $pc30 = 26; continue $sw30; }
+                        abcd.wu.j6(th, 189920549290108400L, this, new java.lang.Integer(r12), new java.lang.Integer(r13), new java.lang.Character(r14), r15);
+                        $pc30 = 26; continue $sw30;
                     }
-                    $pc30 = 5; continue $sw30;
-                }
-                case 5: {
-                    try {
-                        this.tp = true;
-                        monitor-enter(this);
-                    } catch (java.lang.Throwable $t) {
-                        $ex30 = $t;
-                        $pc30 = 22; continue $sw30;
-                    }
-                    try {
-                        r1 = this.u7.elementAt(r13);
-                    } catch (java.lang.Throwable $t) {
-                        $ex30 = $t;
-                        $pc30 = 19; continue $sw30;
-                    }
-                    if (r12 >= r1.FH()) { $pc30 = 10; continue $sw30; }
-                    try {
-                        r2 = new char[]{r1.j6(r12)};
-                    } catch (java.lang.Throwable $t) {
-                        $ex30 = $t;
-                        $pc30 = 19; continue $sw30;
-                    }
-                    $pc30 = 11; continue $sw30;
-                }
-                case 11: {
-                    try {
-                        r8 = new char[]{r14};
-                        r1.DW(r14, r12);
-                    } catch (java.lang.Throwable $t) {
-                        $ex30 = $t;
-                        $pc30 = 19; continue $sw30;
-                    }
-                    if (this.we == null) { $pc30 = 14; continue $sw30; }
-                    try {
-                        this.we.j6(r13, r12, r2, r8, this, r15);
-                    } catch (java.lang.Throwable $t) {
-                        $ex30 = $t;
-                        $pc30 = 19; continue $sw30;
-                    }
-                    $pc30 = 14; continue $sw30;
-                }
-                case 14: {
-                    try {
-                        cb();
-                        monitor-exit(this);
-                    } catch (java.lang.Throwable $t) {
-                        $ex30 = $t;
-                        $pc30 = 19; continue $sw30;
-                    }
-                    $pc30 = 17; continue $sw30;
-                }
-                case 17: {
-                    try {
-                        J8(r13, r13 + 1);
-                        j6(r12, r13, 1, r2);
-                        sh();
-                    } catch (java.lang.Throwable $t) {
-                        $ex30 = $t;
-                        $pc30 = 22; continue $sw30;
-                    }
-                    return;
-                }
-                case 10: {
-                    try {
-                        r2 = new char[0];
-                    } catch (java.lang.Throwable $t) {
-                        $ex30 = $t;
-                        $pc30 = 19; continue $sw30;
-                    }
-                    $pc30 = 19; continue $sw30;
-                }
-                case 19: {
-                    th = $ex30;
-                    try {
+                    case 26: {
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                    } catch (java.lang.Throwable $t) {
-                        $ex30 = $t;
-                        $pc30 = 22; continue $sw30;
                     }
+                    case 3: {
+                        if (v5 == false) { $pc30 = 5; continue $sw30; }
+                        try {
+                            abcd.wu.j6(189920549290108400L, this, new java.lang.Integer(r12), new java.lang.Integer(r13), new java.lang.Character(r14), r15);
+                        } catch (java.lang.Throwable $t) {
+                            $ex30 = $t;
+                            $pc30 = 22; continue $sw30;
+                        }
+                        $pc30 = 5; continue $sw30;
+                    }
+                    case 5: {
+                        try {
+                            this.tp = true;
+                        } catch (java.lang.Throwable $t) {
+                            $ex30 = $t;
+                            $pc30 = 22; continue $sw30;
+                        }
+                        try {
+                            r1 = this.u7.elementAt(r13);
+                        } catch (java.lang.Throwable $t) {
+                            $ex30 = $t;
+                            $pc30 = 19; continue $sw30;
+                        }
+                        if (r12 >= r1.FH()) { $pc30 = 10; continue $sw30; }
+                        try {
+                            r2 = new char[]{r1.j6(r12)};
+                        } catch (java.lang.Throwable $t) {
+                            $ex30 = $t;
+                            $pc30 = 19; continue $sw30;
+                        }
+                        $pc30 = 11; continue $sw30;
+                    }
+                    case 11: {
+                        try {
+                            r8 = new char[]{r14};
+                            r1.DW(r14, r12);
+                        } catch (java.lang.Throwable $t) {
+                            $ex30 = $t;
+                            $pc30 = 19; continue $sw30;
+                        }
+                        if (this.we == null) { $pc30 = 14; continue $sw30; }
+                        try {
+                            this.we.j6(r13, r12, r2, r8, this, r15);
+                        } catch (java.lang.Throwable $t) {
+                            $ex30 = $t;
+                            $pc30 = 19; continue $sw30;
+                        }
+                        $pc30 = 14; continue $sw30;
+                    }
+                    case 14: {
+                        try {
+                            cb();
+                        } catch (java.lang.Throwable $t) {
+                            $ex30 = $t;
+                            $pc30 = 19; continue $sw30;
+                        }
+                        $pc30 = 17; continue $sw30;
+                    }
+                    case 17: {
+                        try {
+                            J8(r13, r13 + 1);
+                            j6(r12, r13, 1, r2);
+                            sh();
+                        } catch (java.lang.Throwable $t) {
+                            $ex30 = $t;
+                            $pc30 = 22; continue $sw30;
+                        }
+                        return;
+                    }
+                    case 10: {
+                        try {
+                            r2 = new char[0];
+                        } catch (java.lang.Throwable $t) {
+                            $ex30 = $t;
+                            $pc30 = 19; continue $sw30;
+                        }
+                        return;
+                    }
+                    case 19: {
+                        th = $ex30;
+                        try {
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                        } catch (java.lang.Throwable $t) {
+                            $ex30 = $t;
+                            $pc30 = 22; continue $sw30;
+                        }
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 
     public void DW(int r9, int r10, java.lang.Object r11) {
-        com.aide.ui.views.editor.A r0 = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex31 = null;
-        int $pc31 = 3;
-        $sw31: while (true) {
-            switch ($pc31) {
-                case 18: {
-                    th = $ex31;
-                    if (Zo == false) { $pc31 = 22; continue $sw31; }
-                    abcd.wu.j6(th, -4632816123887875728L, this, new java.lang.Integer(r9), new java.lang.Integer(r10), r11);
-                    $pc31 = 22; continue $sw31;
-                }
-                case 22: {
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 3: {
-                    if (v5 == false) { $pc31 = 5; continue $sw31; }
-                    try {
-                        abcd.wu.j6(-4632816123887875728L, this, new java.lang.Integer(r9), new java.lang.Integer(r10), r11);
-                    } catch (java.lang.Throwable $t) {
-                        $ex31 = $t;
-                        $pc31 = 18; continue $sw31;
+        synchronized (this) {
+            com.aide.ui.views.editor.A r0 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex31 = null;
+            int $pc31 = 3;
+            $sw31: while (true) {
+                switch ($pc31) {
+                    case 18: {
+                        th = $ex31;
+                        if (Zo == false) { $pc31 = 22; continue $sw31; }
+                        abcd.wu.j6(th, -4632816123887875728L, this, new java.lang.Integer(r9), new java.lang.Integer(r10), r11);
+                        $pc31 = 22; continue $sw31;
                     }
-                    $pc31 = 5; continue $sw31;
-                }
-                case 5: {
-                    try {
-                        this.tp = true;
-                        monitor-enter(this);
-                    } catch (java.lang.Throwable $t) {
-                        $ex31 = $t;
-                        $pc31 = 18; continue $sw31;
-                    }
-                    try {
-                        r0 = this.u7.elementAt(r10);
-                    } catch (java.lang.Throwable $t) {
-                        $ex31 = $t;
-                        $pc31 = 15; continue $sw31;
-                    }
-                    if (this.we == null) { $pc31 = 10; continue $sw31; }
-                    try {
-                        this.we.DW(r10, r9, r0.j6(r9), this, r11);
-                    } catch (java.lang.Throwable $t) {
-                        $ex31 = $t;
-                        $pc31 = 15; continue $sw31;
-                    }
-                    $pc31 = 10; continue $sw31;
-                }
-                case 10: {
-                    try {
-                        r0.FH(r9);
-                        cb();
-                        monitor-exit(this);
-                    } catch (java.lang.Throwable $t) {
-                        $ex31 = $t;
-                        $pc31 = 15; continue $sw31;
-                    }
-                    $pc31 = 13; continue $sw31;
-                }
-                case 13: {
-                    try {
-                        J8(r10, r10 + 1);
-                        FH(r9, r10, r9, r10);
-                        sh();
-                    } catch (java.lang.Throwable $t) {
-                        $ex31 = $t;
-                        $pc31 = 18; continue $sw31;
-                    }
-                    return;
-                }
-                case 15: {
-                    th = $ex31;
-                    try {
+                    case 22: {
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                    } catch (java.lang.Throwable $t) {
-                        $ex31 = $t;
-                        $pc31 = 18; continue $sw31;
                     }
+                    case 3: {
+                        if (v5 == false) { $pc31 = 5; continue $sw31; }
+                        try {
+                            abcd.wu.j6(-4632816123887875728L, this, new java.lang.Integer(r9), new java.lang.Integer(r10), r11);
+                        } catch (java.lang.Throwable $t) {
+                            $ex31 = $t;
+                            $pc31 = 18; continue $sw31;
+                        }
+                        $pc31 = 5; continue $sw31;
+                    }
+                    case 5: {
+                        try {
+                            this.tp = true;
+                        } catch (java.lang.Throwable $t) {
+                            $ex31 = $t;
+                            $pc31 = 18; continue $sw31;
+                        }
+                        try {
+                            r0 = this.u7.elementAt(r10);
+                        } catch (java.lang.Throwable $t) {
+                            $ex31 = $t;
+                            $pc31 = 15; continue $sw31;
+                        }
+                        if (this.we == null) { $pc31 = 10; continue $sw31; }
+                        try {
+                            this.we.DW(r10, r9, r0.j6(r9), this, r11);
+                        } catch (java.lang.Throwable $t) {
+                            $ex31 = $t;
+                            $pc31 = 15; continue $sw31;
+                        }
+                        $pc31 = 10; continue $sw31;
+                    }
+                    case 10: {
+                        try {
+                            r0.FH(r9);
+                            cb();
+                        } catch (java.lang.Throwable $t) {
+                            $ex31 = $t;
+                            $pc31 = 15; continue $sw31;
+                        }
+                        $pc31 = 13; continue $sw31;
+                    }
+                    case 13: {
+                        try {
+                            J8(r10, r10 + 1);
+                            FH(r9, r10, r9, r10);
+                            sh();
+                        } catch (java.lang.Throwable $t) {
+                            $ex31 = $t;
+                            $pc31 = 18; continue $sw31;
+                        }
+                        return;
+                    }
+                    case 15: {
+                        th = $ex31;
+                        try {
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                        } catch (java.lang.Throwable $t) {
+                            $ex31 = $t;
+                            $pc31 = 18; continue $sw31;
+                        }
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 
@@ -2716,7 +2719,7 @@ public class ClassG extends com.aide.ui.views.editor.Abstractb implements com.ai
         /*
             this = this;
             monitor-enter(r4)
-            r0 = 127190277693457996
+            r0 = 127190277693457996L
             boolean r2 = com.aide.ui.views.editor.ClassG.v5     // Catch: java.lang.Throwable -> L11 java.lang.Throwable -> L13
             if (r2 == 0) goto Ld
             abcd.wu.j6(r0, r4)     // Catch: java.lang.Throwable -> L11 java.lang.Throwable -> L13
@@ -3182,116 +3185,116 @@ public class ClassG extends com.aide.ui.views.editor.Abstractb implements com.ai
     }
 
     public abcd.fm j6(int r14, int r15, boolean r16, int r17, java.io.Reader r18, java.lang.Object r19) {
-        char[] r0 = null;
-        com.aide.ui.views.editor.ClassG.c r12 = null;
-        java.io.IOException r1 = null;
-        abcd.fm r2 = null;
-        java.lang.Throwable e = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex60 = null;
-        int $pc60 = -1;
-        $sw60: while (true) {
-            switch ($pc60) {
-                case -1: {
-                    if (v5 == false) { $pc60 = 7; continue $sw60; }
-                    abcd.wu.j6(-684180865250764128L, this, new java.lang.Object[]{new java.lang.Integer(r14), new java.lang.Integer(r15), new java.lang.Boolean(r16), new java.lang.Integer(r17), r18, r19});
-                    $pc60 = 7; continue $sw60;
-                }
-                case 7: {
-                    if (r15 >= this.u7.size()) { $pc60 = 44; continue $sw60; }
-                    r0 = new char[32768];
-                    r12 = new com.aide.ui.views.editor.ClassG.c(this, r14, r15, r16, r17);
-                    r1 = null;
-                    monitor-enter(this);
-                    try {
-                        com.aide.ui.views.editor.ra.j6(r18, r12, r0);
-                    } catch (java.lang.Throwable $t) {
-                        $ex60 = $t;
-                        if ($t instanceof java.io.IOException) { $pc60 = 14; continue $sw60; }
-                        $pc60 = 12; continue $sw60;
+        synchronized (this) {
+            char[] r0 = null;
+            com.aide.ui.views.editor.ClassG.c r12 = null;
+            java.io.IOException r1 = null;
+            abcd.fm r2 = null;
+            java.lang.Throwable e = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex60 = null;
+            int $pc60 = -1;
+            $sw60: while (true) {
+                switch ($pc60) {
+                    case -1: {
+                        if (v5 == false) { $pc60 = 7; continue $sw60; }
+                        abcd.wu.j6(-684180865250764128L, this, new java.lang.Object[]{new java.lang.Integer(r14), new java.lang.Integer(r15), new java.lang.Boolean(r16), new java.lang.Integer(r17), r18, r19});
+                        $pc60 = 7; continue $sw60;
                     }
-                    $pc60 = 47; continue $sw60;
-                }
-                case 47: {
-                    try {
-                        r18.close();
-                    } catch (java.lang.Throwable $t) {
-                        $ex60 = $t;
-                        if ($t instanceof java.io.IOException) { $pc60 = 18; continue $sw60; }
-                        $pc60 = 12; continue $sw60;
+                    case 7: {
+                        if (r15 >= this.u7.size()) { $pc60 = 44; continue $sw60; }
+                        r0 = new char[32768];
+                        r12 = new com.aide.ui.views.editor.ClassG.c(this, r14, r15, r16, r17);
+                        r1 = null;
+                        try {
+                            com.aide.ui.views.editor.ra.j6(r18, r12, r0);
+                        } catch (java.lang.Throwable $t) {
+                            $ex60 = $t;
+                            if ($t instanceof java.io.IOException) { $pc60 = 14; continue $sw60; }
+                            $pc60 = 12; continue $sw60;
+                        }
+                        $pc60 = 47; continue $sw60;
                     }
-                    $pc60 = 21; continue $sw60;
-                }
-                case 21: {
-                    e = r1;
-                    $pc60 = 23; continue $sw60;
-                }
-                case 23: {
-                    if (r15 != r12.Hw) { $pc60 = 32; continue $sw60; }
-                    if (r14 != r12.FH) { $pc60 = 32; continue $sw60; }
-                    if (e != null) { $pc60 = 30; continue $sw60; }
-                    try {
-                        r2 = new abcd.fm(r12.Hw, r12.FH);
-                        monitor-exit(this);
-                    } catch (java.lang.Throwable $t) {
-                        $ex60 = $t;
-                        $pc60 = 12; continue $sw60;
+                    case 47: {
+                        try {
+                            r18.close();
+                        } catch (java.lang.Throwable $t) {
+                            $ex60 = $t;
+                            if ($t instanceof java.io.IOException) { $pc60 = 18; continue $sw60; }
+                            $pc60 = 12; continue $sw60;
+                        }
+                        $pc60 = 21; continue $sw60;
                     }
-                    return r2;
-                }
-                case 30: {
-                    try {
+                    case 21: {
+                        e = r1;
+                        $pc60 = 23; continue $sw60;
+                    }
+                    case 23: {
+                        if (r15 != r12.Hw) { $pc60 = 32; continue $sw60; }
+                        if (r14 != r12.FH) { $pc60 = 32; continue $sw60; }
+                        if (e != null) { $pc60 = 30; continue $sw60; }
+                        try {
+                            r2 = new abcd.fm(r12.Hw, r12.FH);
+                        } catch (java.lang.Throwable $t) {
+                            $ex60 = $t;
+                            $pc60 = 12; continue $sw60;
+                        }
+                        return r2;
+                    }
+                    case 30: {
+                        try {
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(e);
+                        } catch (java.lang.Throwable $t) {
+                            $ex60 = $t;
+                            $pc60 = 12; continue $sw60;
+                        }
+                    }
+                    case 32: {
+                        if (this.we == null) { $pc60 = 34; continue $sw60; }
+                        try {
+                            this.we.j6(r15, r14, r12.Hw, r12.FH - 1, this, r19);
+                        } catch (java.lang.Throwable $t) {
+                            $ex60 = $t;
+                            $pc60 = 12; continue $sw60;
+                        }
+                        $pc60 = 34; continue $sw60;
+                    }
+                    case 34: {
+                        try {
+                            cb();
+                        } catch (java.lang.Throwable $t) {
+                            $ex60 = $t;
+                            $pc60 = 12; continue $sw60;
+                        }
+                        DW(r14, r15, r12.FH - 1, r12.Hw);
+                        sh();
+                        if (e == null) { $pc60 = 39; continue $sw60; }
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(e);
-                    } catch (java.lang.Throwable $t) {
-                        $ex60 = $t;
-                        $pc60 = 12; continue $sw60;
                     }
-                }
-                case 32: {
-                    if (this.we == null) { $pc60 = 34; continue $sw60; }
-                    try {
-                        this.we.j6(r15, r14, r12.Hw, r12.FH - 1, this, r19);
-                    } catch (java.lang.Throwable $t) {
-                        $ex60 = $t;
-                        $pc60 = 12; continue $sw60;
+                    case 39: {
+                        return new abcd.fm(r12.Hw, r12.FH);
                     }
-                    $pc60 = 34; continue $sw60;
-                }
-                case 34: {
-                    try {
-                        cb();
-                        monitor-exit(this);
-                    } catch (java.lang.Throwable $t) {
-                        $ex60 = $t;
-                        $pc60 = 12; continue $sw60;
+                    case 18: {
+                        e = e;
+                        if (r1 != null) { $pc60 = 21; continue $sw60; }
+                        $pc60 = 44; continue $sw60;
                     }
-                    DW(r14, r15, r12.FH - 1, r12.Hw);
-                    sh();
-                    if (e == null) { $pc60 = 39; continue $sw60; }
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(e);
+                    case 12: {
+                        th = $ex60;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    case 14: {
+                        e = $ex60;
+                        r1 = e;
+                        { $pc60 = 47; continue $sw60; }
+                    }
+                    case 44: {
+                        throw new java.lang.InternalError();
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 39: {
-                    return new abcd.fm(r12.Hw, r12.FH);
-                }
-                case 18: {
-                    e = e;
-                    if (r1 != null) { $pc60 = 21; continue $sw60; }
-                    $pc60 = 12; continue $sw60;
-                }
-                case 12: {
-                    th = $ex60;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 14: {
-                    e = $ex60;
-                    r1 = e;
-                    { $pc60 = 47; continue $sw60; }
-                }
-                case 44: {
-                    throw new java.lang.InternalError();
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 
@@ -3342,178 +3345,179 @@ public class ClassG extends com.aide.ui.views.editor.Abstractb implements com.ai
     }
 
     public synchronized com.aide.ui.views.editor.ClassG.e j6(char[] r11) {
-        char[] r9 = null;
-        int r12 = 0;
-        int r5 = 0;
-        com.aide.ui.views.editor.A r3 = null;
-        int r4 = 0;
-        int r6 = 0;
-        int r7 = 0;
-        int r8 = 0;
-        char[] r10 = null;
-        char[] r13 = null;
-        com.aide.ui.views.editor.ClassG.e r14 = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex62 = null;
-        int $pc62 = -1;
-        $sw62: while (true) {
-            switch ($pc62) {
-                case -1: {
-                    monitor-enter(this);
-                    $pc62 = 31; continue $sw62;
-                }
-                case 31: {
-                    th = $ex62;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 33: {
-                    th = th;
-                    r9 = r11;
-                    $pc62 = 36; continue $sw62;
-                }
-                case 36: {
-                    if (Zo == false) { $pc62 = 38; continue $sw62; }
-                    try {
-                        abcd.wu.j6(th, -94997327232740885L, this, r9);
-                    } catch (java.lang.Throwable $t) {
-                        $ex62 = $t;
-                        $pc62 = 31; continue $sw62;
+        synchronized (this) {
+            char[] r9 = null;
+            int r12 = 0;
+            int r5 = 0;
+            com.aide.ui.views.editor.A r3 = null;
+            int r4 = 0;
+            int r6 = 0;
+            int r7 = 0;
+            int r8 = 0;
+            char[] r10 = null;
+            char[] r13 = null;
+            com.aide.ui.views.editor.ClassG.e r14 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex62 = null;
+            int $pc62 = -1;
+            $sw62: while (true) {
+                switch ($pc62) {
+                    case -1: {
+                        $pc62 = 36; continue $sw62;
                     }
-                    $pc62 = 38; continue $sw62;
-                }
-                case 38: {
-                    try {
+                    case 31: {
+                        th = $ex62;
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                    } catch (java.lang.Throwable $t) {
-                        $ex62 = $t;
-                        $pc62 = 31; continue $sw62;
                     }
-                }
-                case 5: {
-                    if (v5 == false) { $pc62 = 8; continue $sw62; }
-                    try {
-                        abcd.wu.j6(-94997327232740885L, this, r11);
-                    } catch (java.lang.Throwable $t) {
-                        $ex62 = $t;
-                        if ($t instanceof java.lang.Throwable) { $pc62 = 33; continue $sw62; }
-                        $pc62 = 31; continue $sw62;
+                    case 33: {
+                        th = th;
+                        r9 = r11;
+                        $pc62 = 36; continue $sw62;
                     }
-                    $pc62 = 8; continue $sw62;
-                }
-                case 8: {
-                    if (this.u7 == null) { $pc62 = 30; continue $sw62; }
-                    if (r11 != null) { $pc62 = 11; continue $sw62; }
-                    try {
-                        r11 = new char[32768];
-                    } catch (java.lang.Throwable $t) {
-                        $ex62 = $t;
-                        if ($t instanceof java.lang.Throwable) { $pc62 = 33; continue $sw62; }
-                        $pc62 = 31; continue $sw62;
+                    case 36: {
+                        if (Zo == false) { $pc62 = 38; continue $sw62; }
+                        try {
+                            abcd.wu.j6(th, -94997327232740885L, this, r9);
+                        } catch (java.lang.Throwable $t) {
+                            $ex62 = $t;
+                            $pc62 = 31; continue $sw62;
+                        }
+                        $pc62 = 38; continue $sw62;
                     }
-                    $pc62 = 11; continue $sw62;
-                }
-                case 11: {
-                    r9 = r11;
-                    r12 = 0;
-                    r5 = 0;
-                    $pc62 = 43; continue $sw62;
-                }
-                case 43: {
-                    $pc62 = 27; continue $sw62;
-                }
-                case 27: {
-                    th = th;
-                    { $pc62 = 36; continue $sw62; }
-                }
-                case 13: {
-                    if (r12 >= this.u7.size()) { $pc62 = 24; continue $sw62; }
-                    try {
-                        r3 = this.u7.elementAt(r12);
-                        r4 = r3.FH();
-                        r6 = r5 + r4;
-                        r7 = r6 + 1;
-                    } catch (java.lang.Throwable $t) {
-                        $ex62 = $t;
-                        if ($t instanceof java.lang.Throwable) { $pc62 = 31; continue $sw62; }
-                        $pc62 = 27; continue $sw62;
+                    case 38: {
+                        try {
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                        } catch (java.lang.Throwable $t) {
+                            $ex62 = $t;
+                            $pc62 = 31; continue $sw62;
+                        }
                     }
-                    if (r7 <= r9.length) { $pc62 = 21; continue $sw62; }
-                    try {
-                        r8 = r9.length;
-                    } catch (java.lang.Throwable $t) {
-                        $ex62 = $t;
-                        if ($t instanceof java.lang.Throwable) { $pc62 = 31; continue $sw62; }
-                        $pc62 = 27; continue $sw62;
+                    case 5: {
+                        if (v5 == false) { $pc62 = 8; continue $sw62; }
+                        try {
+                            abcd.wu.j6(-94997327232740885L, this, r11);
+                        } catch (java.lang.Throwable $t) {
+                            $ex62 = $t;
+                            if ($t instanceof java.lang.Throwable) { $pc62 = 33; continue $sw62; }
+                            $pc62 = 31; continue $sw62;
+                        }
+                        $pc62 = 8; continue $sw62;
                     }
-                    $pc62 = 17; continue $sw62;
+                    case 8: {
+                        if (this.u7 == null) { $pc62 = 30; continue $sw62; }
+                        if (r11 != null) { $pc62 = 11; continue $sw62; }
+                        try {
+                            r11 = new char[32768];
+                        } catch (java.lang.Throwable $t) {
+                            $ex62 = $t;
+                            if ($t instanceof java.lang.Throwable) { $pc62 = 33; continue $sw62; }
+                            $pc62 = 31; continue $sw62;
+                        }
+                        $pc62 = 11; continue $sw62;
+                    }
+                    case 11: {
+                        r9 = r11;
+                        r12 = 0;
+                        r5 = 0;
+                        $pc62 = 43; continue $sw62;
+                    }
+                    case 43: {
+                        $pc62 = 13; continue $sw62;
+                    }
+                    case 27: {
+                        th = th;
+                        { $pc62 = 36; continue $sw62; }
+                    }
+                    case 13: {
+                        if (r12 >= this.u7.size()) { $pc62 = 24; continue $sw62; }
+                        try {
+                            r3 = this.u7.elementAt(r12);
+                            r4 = r3.FH();
+                            r6 = r5 + r4;
+                            r7 = r6 + 1;
+                        } catch (java.lang.Throwable $t) {
+                            $ex62 = $t;
+                            if ($t instanceof java.lang.Throwable) { $pc62 = 31; continue $sw62; }
+                            $pc62 = 27; continue $sw62;
+                        }
+                        if (r7 <= r9.length) { $pc62 = 21; continue $sw62; }
+                        try {
+                            r8 = r9.length;
+                        } catch (java.lang.Throwable $t) {
+                            $ex62 = $t;
+                            if ($t instanceof java.lang.Throwable) { $pc62 = 31; continue $sw62; }
+                            $pc62 = 27; continue $sw62;
+                        }
+                        $pc62 = 17; continue $sw62;
+                    }
+                    case 17: {
+                        try {
+                            r8 = r8 * 2;
+                        } catch (java.lang.Throwable $t) {
+                            $ex62 = $t;
+                            if ($t instanceof java.lang.Throwable) { $pc62 = 31; continue $sw62; }
+                            $pc62 = 27; continue $sw62;
+                        }
+                        if (r7 > r8) { $pc62 = 17; continue $sw62; }
+                        try {
+                            r10 = new char[r8];
+                            java.lang.System.arraycopy(r9, 0, r10, 0, r5);
+                        } catch (java.lang.Throwable $t) {
+                            $ex62 = $t;
+                            if ($t instanceof java.lang.Throwable) { $pc62 = 31; continue $sw62; }
+                            $pc62 = 27; continue $sw62;
+                        }
+                        r9 = r10;
+                        $pc62 = 21; continue $sw62;
+                    }
+                    case 21: {
+                        if (r4 <= 0) { $pc62 = 23; continue $sw62; }
+                        try {
+                            r3.j6(0, r4, r9, r5);
+                        } catch (java.lang.Throwable $t) {
+                            $ex62 = $t;
+                            if ($t instanceof java.lang.Throwable) { $pc62 = 31; continue $sw62; }
+                            $pc62 = 27; continue $sw62;
+                        }
+                        r5 = r6;
+                        $pc62 = 23; continue $sw62;
+                    }
+                    case 23: {
+                        try {
+                            r9[r5] = '\n';
+                            r12 = r12 + 1;
+                            r5 = r5 + 1;
+                        } catch (java.lang.Throwable $t) {
+                            $ex62 = $t;
+                            if ($t instanceof java.lang.Throwable) { $pc62 = 31; continue $sw62; }
+                            $pc62 = 27; continue $sw62;
+                        }
+                        { $pc62 = 43; continue $sw62; }
+                    }
+                    case 24: {
+                        r13 = r9;
+                        try {
+                            r14 = new com.aide.ui.views.editor.ClassG.e(r13, r5, this.J0, null);
+                        } catch (java.lang.Throwable $t) {
+                            $ex62 = $t;
+                            if ($t instanceof java.lang.Throwable) { $pc62 = 31; continue $sw62; }
+                            $pc62 = 27; continue $sw62;
+                        }
+                        return r14;
+                    }
+                    case 30: {
+                        try {
+                            throw new java.io.IOException();
+                        } catch (java.lang.Throwable $t) {
+                            $ex62 = $t;
+                            if ($t instanceof java.lang.Throwable) { $pc62 = 33; continue $sw62; }
+                            $pc62 = 31; continue $sw62;
+                        }
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 17: {
-                    try {
-                        r8 = r8 * 2;
-                    } catch (java.lang.Throwable $t) {
-                        $ex62 = $t;
-                        if ($t instanceof java.lang.Throwable) { $pc62 = 31; continue $sw62; }
-                        $pc62 = 27; continue $sw62;
-                    }
-                    if (r7 > r8) { $pc62 = 17; continue $sw62; }
-                    try {
-                        r10 = new char[r8];
-                        java.lang.System.arraycopy(r9, 0, r10, 0, r5);
-                    } catch (java.lang.Throwable $t) {
-                        $ex62 = $t;
-                        if ($t instanceof java.lang.Throwable) { $pc62 = 31; continue $sw62; }
-                        $pc62 = 27; continue $sw62;
-                    }
-                    r9 = r10;
-                    $pc62 = 21; continue $sw62;
-                }
-                case 21: {
-                    if (r4 <= 0) { $pc62 = 23; continue $sw62; }
-                    try {
-                        r3.j6(0, r4, r9, r5);
-                    } catch (java.lang.Throwable $t) {
-                        $ex62 = $t;
-                        if ($t instanceof java.lang.Throwable) { $pc62 = 31; continue $sw62; }
-                        $pc62 = 27; continue $sw62;
-                    }
-                    r5 = r6;
-                    $pc62 = 23; continue $sw62;
-                }
-                case 23: {
-                    try {
-                        r9[r5] = '\n';
-                        r12 = r12 + 1;
-                        r5 = r5 + 1;
-                    } catch (java.lang.Throwable $t) {
-                        $ex62 = $t;
-                        if ($t instanceof java.lang.Throwable) { $pc62 = 31; continue $sw62; }
-                        $pc62 = 27; continue $sw62;
-                    }
-                    { $pc62 = 43; continue $sw62; }
-                }
-                case 24: {
-                    r13 = r9;
-                    try {
-                        r14 = new com.aide.ui.views.editor.ClassG.e(r13, r5, this.J0, null);
-                    } catch (java.lang.Throwable $t) {
-                        $ex62 = $t;
-                        if ($t instanceof java.lang.Throwable) { $pc62 = 31; continue $sw62; }
-                        $pc62 = 27; continue $sw62;
-                    }
-                    monitor-exit(this);
-                    return r14;
-                }
-                case 30: {
-                    try {
-                        throw new java.io.IOException();
-                    } catch (java.lang.Throwable $t) {
-                        $ex62 = $t;
-                        if ($t instanceof java.lang.Throwable) { $pc62 = 33; continue $sw62; }
-                        $pc62 = 31; continue $sw62;
-                    }
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 
@@ -3552,424 +3556,429 @@ public class ClassG extends com.aide.ui.views.editor.Abstractb implements com.ai
     }
 
     public void j6(int r10, int r11, char r12, java.lang.Object r13) {
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex64 = null;
-        int $pc64 = 3;
-        $sw64: while (true) {
-            switch ($pc64) {
-                case 17: {
-                    th = $ex64;
-                    if (Zo == false) { $pc64 = 21; continue $sw64; }
-                    abcd.wu.j6(th, -1235922568279209720L, this, new java.lang.Integer(r10), new java.lang.Integer(r11), new java.lang.Character(r12), r13);
-                    $pc64 = 21; continue $sw64;
-                }
-                case 21: {
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 3: {
-                    if (v5 == false) { $pc64 = 5; continue $sw64; }
-                    try {
-                        abcd.wu.j6(-1235922568279209720L, this, new java.lang.Integer(r10), new java.lang.Integer(r11), new java.lang.Character(r12), r13);
-                    } catch (java.lang.Throwable $t) {
-                        $ex64 = $t;
-                        $pc64 = 17; continue $sw64;
+        synchronized (this) {
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex64 = null;
+            int $pc64 = 3;
+            $sw64: while (true) {
+                switch ($pc64) {
+                    case 17: {
+                        th = $ex64;
+                        if (Zo == false) { $pc64 = 21; continue $sw64; }
+                        abcd.wu.j6(th, -1235922568279209720L, this, new java.lang.Integer(r10), new java.lang.Integer(r11), new java.lang.Character(r12), r13);
+                        $pc64 = 21; continue $sw64;
                     }
-                    $pc64 = 5; continue $sw64;
-                }
-                case 5: {
-                    try {
-                        this.tp = true;
-                        monitor-enter(this);
-                    } catch (java.lang.Throwable $t) {
-                        $ex64 = $t;
-                        $pc64 = 17; continue $sw64;
-                    }
-                    try {
-                        this.u7.elementAt(r11).j6(r12, r10);
-                    } catch (java.lang.Throwable $t) {
-                        $ex64 = $t;
-                        $pc64 = 14; continue $sw64;
-                    }
-                    if (this.we == null) { $pc64 = 10; continue $sw64; }
-                    try {
-                        this.we.j6(r11, r10, r12, this, r13);
-                    } catch (java.lang.Throwable $t) {
-                        $ex64 = $t;
-                        $pc64 = 14; continue $sw64;
-                    }
-                    $pc64 = 10; continue $sw64;
-                }
-                case 10: {
-                    try {
-                        cb();
-                        monitor-exit(this);
-                    } catch (java.lang.Throwable $t) {
-                        $ex64 = $t;
-                        $pc64 = 14; continue $sw64;
-                    }
-                    try {
-                        DW(r10, r11, r10, r11);
-                        sh();
-                    } catch (java.lang.Throwable $t) {
-                        $ex64 = $t;
-                        $pc64 = 17; continue $sw64;
-                    }
-                    return;
-                }
-                case 14: {
-                    th = $ex64;
-                    try {
+                    case 21: {
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                    } catch (java.lang.Throwable $t) {
-                        $ex64 = $t;
-                        $pc64 = 17; continue $sw64;
                     }
+                    case 3: {
+                        if (v5 == false) { $pc64 = 5; continue $sw64; }
+                        try {
+                            abcd.wu.j6(-1235922568279209720L, this, new java.lang.Integer(r10), new java.lang.Integer(r11), new java.lang.Character(r12), r13);
+                        } catch (java.lang.Throwable $t) {
+                            $ex64 = $t;
+                            $pc64 = 17; continue $sw64;
+                        }
+                        $pc64 = 5; continue $sw64;
+                    }
+                    case 5: {
+                        try {
+                            this.tp = true;
+                        } catch (java.lang.Throwable $t) {
+                            $ex64 = $t;
+                            $pc64 = 17; continue $sw64;
+                        }
+                        try {
+                            this.u7.elementAt(r11).j6(r12, r10);
+                        } catch (java.lang.Throwable $t) {
+                            $ex64 = $t;
+                            $pc64 = 14; continue $sw64;
+                        }
+                        if (this.we == null) { $pc64 = 10; continue $sw64; }
+                        try {
+                            this.we.j6(r11, r10, r12, this, r13);
+                        } catch (java.lang.Throwable $t) {
+                            $ex64 = $t;
+                            $pc64 = 14; continue $sw64;
+                        }
+                        $pc64 = 10; continue $sw64;
+                    }
+                    case 10: {
+                        try {
+                            cb();
+                        } catch (java.lang.Throwable $t) {
+                            $ex64 = $t;
+                            $pc64 = 14; continue $sw64;
+                        }
+                        try {
+                            DW(r10, r11, r10, r11);
+                            sh();
+                        } catch (java.lang.Throwable $t) {
+                            $ex64 = $t;
+                            $pc64 = 17; continue $sw64;
+                        }
+                        return;
+                    }
+                    case 14: {
+                        th = $ex64;
+                        try {
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                        } catch (java.lang.Throwable $t) {
+                            $ex64 = $t;
+                            $pc64 = 17; continue $sw64;
+                        }
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 
     public void j6(int r11, int r12, int r13, java.lang.Object r14) {
-        com.aide.ui.views.editor.A r1 = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex65 = null;
-        int $pc65 = 3;
-        $sw65: while (true) {
-            switch ($pc65) {
-                case 20: {
-                    th = $ex65;
-                    if (Zo == false) { $pc65 = 24; continue $sw65; }
-                    abcd.wu.j6(th, 3703218051326028000L, this, new java.lang.Integer(r11), new java.lang.Integer(r12), new java.lang.Integer(r13), r14);
-                    $pc65 = 24; continue $sw65;
-                }
-                case 24: {
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 3: {
-                    if (v5 == false) { $pc65 = 5; continue $sw65; }
-                    try {
-                        abcd.wu.j6(3703218051326028000L, this, new java.lang.Integer(r11), new java.lang.Integer(r12), new java.lang.Integer(r13), r14);
-                    } catch (java.lang.Throwable $t) {
-                        $ex65 = $t;
-                        $pc65 = 20; continue $sw65;
+        synchronized (this) {
+            com.aide.ui.views.editor.A r1 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex65 = null;
+            int $pc65 = 3;
+            $sw65: while (true) {
+                switch ($pc65) {
+                    case 20: {
+                        th = $ex65;
+                        if (Zo == false) { $pc65 = 24; continue $sw65; }
+                        abcd.wu.j6(th, 3703218051326028000L, this, new java.lang.Integer(r11), new java.lang.Integer(r12), new java.lang.Integer(r13), r14);
+                        $pc65 = 24; continue $sw65;
                     }
-                    $pc65 = 5; continue $sw65;
-                }
-                case 5: {
-                    if (r13 <= 0) { $pc65 = 19; continue $sw65; }
-                    try {
-                        this.tp = true;
-                        monitor-enter(this);
-                    } catch (java.lang.Throwable $t) {
-                        $ex65 = $t;
-                        $pc65 = 20; continue $sw65;
-                    }
-                    try {
-                        r1 = this.u7.elementAt(r12);
-                    } catch (java.lang.Throwable $t) {
-                        $ex65 = $t;
-                        $pc65 = 16; continue $sw65;
-                    }
-                    if (this.we == null) { $pc65 = 11; continue $sw65; }
-                    try {
-                        this.we.DW(r12, r11, r12, (r11 + r13) - 1, this, r14);
-                    } catch (java.lang.Throwable $t) {
-                        $ex65 = $t;
-                        $pc65 = 16; continue $sw65;
-                    }
-                    $pc65 = 11; continue $sw65;
-                }
-                case 11: {
-                    try {
-                        r1.j6(r13, r11);
-                        cb();
-                        monitor-exit(this);
-                    } catch (java.lang.Throwable $t) {
-                        $ex65 = $t;
-                        $pc65 = 16; continue $sw65;
-                    }
-                    $pc65 = 14; continue $sw65;
-                }
-                case 14: {
-                    try {
-                        J8(r12, r12 + 1);
-                        FH(r11, r12, (r11 + r13) - 1, r12);
-                        sh();
-                    } catch (java.lang.Throwable $t) {
-                        $ex65 = $t;
-                        $pc65 = 20; continue $sw65;
-                    }
-                    return;
-                }
-                case 16: {
-                    th = $ex65;
-                    try {
+                    case 24: {
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                    } catch (java.lang.Throwable $t) {
-                        $ex65 = $t;
-                        $pc65 = 20; continue $sw65;
                     }
+                    case 3: {
+                        if (v5 == false) { $pc65 = 5; continue $sw65; }
+                        try {
+                            abcd.wu.j6(3703218051326028000L, this, new java.lang.Integer(r11), new java.lang.Integer(r12), new java.lang.Integer(r13), r14);
+                        } catch (java.lang.Throwable $t) {
+                            $ex65 = $t;
+                            $pc65 = 20; continue $sw65;
+                        }
+                        $pc65 = 5; continue $sw65;
+                    }
+                    case 5: {
+                        if (r13 <= 0) { $pc65 = 19; continue $sw65; }
+                        try {
+                            this.tp = true;
+                        } catch (java.lang.Throwable $t) {
+                            $ex65 = $t;
+                            $pc65 = 20; continue $sw65;
+                        }
+                        try {
+                            r1 = this.u7.elementAt(r12);
+                        } catch (java.lang.Throwable $t) {
+                            $ex65 = $t;
+                            $pc65 = 16; continue $sw65;
+                        }
+                        if (this.we == null) { $pc65 = 11; continue $sw65; }
+                        try {
+                            this.we.DW(r12, r11, r12, (r11 + r13) - 1, this, r14);
+                        } catch (java.lang.Throwable $t) {
+                            $ex65 = $t;
+                            $pc65 = 16; continue $sw65;
+                        }
+                        $pc65 = 11; continue $sw65;
+                    }
+                    case 11: {
+                        try {
+                            r1.j6(r13, r11);
+                            cb();
+                        } catch (java.lang.Throwable $t) {
+                            $ex65 = $t;
+                            $pc65 = 16; continue $sw65;
+                        }
+                        $pc65 = 14; continue $sw65;
+                    }
+                    case 14: {
+                        try {
+                            J8(r12, r12 + 1);
+                            FH(r11, r12, (r11 + r13) - 1, r12);
+                            sh();
+                        } catch (java.lang.Throwable $t) {
+                            $ex65 = $t;
+                            $pc65 = 20; continue $sw65;
+                        }
+                        return;
+                    }
+                    case 16: {
+                        th = $ex65;
+                        try {
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                        } catch (java.lang.Throwable $t) {
+                            $ex65 = $t;
+                            $pc65 = 20; continue $sw65;
+                        }
+                    }
+                    case 19: {
+                        return;
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 19: {
-                    return;
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 
     public void j6(int r9, int r10, java.lang.Object r11) {
-        com.aide.ui.views.editor.A r0 = null;
-        int r3 = 0;
-        char[] r1 = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex66 = null;
-        int $pc66 = 3;
-        $sw66: while (true) {
-            switch ($pc66) {
-                case 17: {
-                    th = $ex66;
-                    if (Zo == false) { $pc66 = 21; continue $sw66; }
-                    abcd.wu.j6(th, 1535268916816492440L, this, new java.lang.Integer(r9), new java.lang.Integer(r10), r11);
-                    $pc66 = 21; continue $sw66;
-                }
-                case 21: {
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 3: {
-                    if (v5 == false) { $pc66 = 5; continue $sw66; }
-                    try {
-                        abcd.wu.j6(1535268916816492440L, this, new java.lang.Integer(r9), new java.lang.Integer(r10), r11);
-                    } catch (java.lang.Throwable $t) {
-                        $ex66 = $t;
-                        $pc66 = 17; continue $sw66;
+        synchronized (this) {
+            com.aide.ui.views.editor.A r0 = null;
+            int r3 = 0;
+            char[] r1 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex66 = null;
+            int $pc66 = 3;
+            $sw66: while (true) {
+                switch ($pc66) {
+                    case 17: {
+                        th = $ex66;
+                        if (Zo == false) { $pc66 = 21; continue $sw66; }
+                        abcd.wu.j6(th, 1535268916816492440L, this, new java.lang.Integer(r9), new java.lang.Integer(r10), r11);
+                        $pc66 = 21; continue $sw66;
                     }
-                    $pc66 = 5; continue $sw66;
-                }
-                case 5: {
-                    try {
-                        this.tp = true;
-                        monitor-enter(this);
-                    } catch (java.lang.Throwable $t) {
-                        $ex66 = $t;
-                        $pc66 = 17; continue $sw66;
-                    }
-                    try {
-                        r0 = this.u7.elementAt(r10);
-                        r3 = r10 + 1;
-                        this.u7.insertElementAt(vy(), r3);
-                        r1 = new char[r0.FH() - r9];
-                        r0.j6(r9, r0.FH() - r9, r1, 0);
-                        this.u7.elementAt(r3).j6(r1);
-                        r0.j6(r0.FH() - r9, r9);
-                    } catch (java.lang.Throwable $t) {
-                        $ex66 = $t;
-                        $pc66 = 14; continue $sw66;
-                    }
-                    if (this.we == null) { $pc66 = 10; continue $sw66; }
-                    try {
-                        this.we.j6(r10, r9, this, r11);
-                    } catch (java.lang.Throwable $t) {
-                        $ex66 = $t;
-                        $pc66 = 14; continue $sw66;
-                    }
-                    $pc66 = 10; continue $sw66;
-                }
-                case 10: {
-                    try {
-                        cb();
-                        monitor-exit(this);
-                    } catch (java.lang.Throwable $t) {
-                        $ex66 = $t;
-                        $pc66 = 14; continue $sw66;
-                    }
-                    try {
-                        P8();
-                        DW(r9, r10, -1, r3);
-                        sh();
-                    } catch (java.lang.Throwable $t) {
-                        $ex66 = $t;
-                        $pc66 = 17; continue $sw66;
-                    }
-                    return;
-                }
-                case 14: {
-                    th = $ex66;
-                    try {
+                    case 21: {
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                    } catch (java.lang.Throwable $t) {
-                        $ex66 = $t;
-                        $pc66 = 17; continue $sw66;
                     }
+                    case 3: {
+                        if (v5 == false) { $pc66 = 5; continue $sw66; }
+                        try {
+                            abcd.wu.j6(1535268916816492440L, this, new java.lang.Integer(r9), new java.lang.Integer(r10), r11);
+                        } catch (java.lang.Throwable $t) {
+                            $ex66 = $t;
+                            $pc66 = 17; continue $sw66;
+                        }
+                        $pc66 = 5; continue $sw66;
+                    }
+                    case 5: {
+                        try {
+                            this.tp = true;
+                        } catch (java.lang.Throwable $t) {
+                            $ex66 = $t;
+                            $pc66 = 17; continue $sw66;
+                        }
+                        try {
+                            r0 = this.u7.elementAt(r10);
+                            r3 = r10 + 1;
+                            this.u7.insertElementAt(vy(), r3);
+                            r1 = new char[r0.FH() - r9];
+                            r0.j6(r9, r0.FH() - r9, r1, 0);
+                            this.u7.elementAt(r3).j6(r1);
+                            r0.j6(r0.FH() - r9, r9);
+                        } catch (java.lang.Throwable $t) {
+                            $ex66 = $t;
+                            $pc66 = 14; continue $sw66;
+                        }
+                        if (this.we == null) { $pc66 = 10; continue $sw66; }
+                        try {
+                            this.we.j6(r10, r9, this, r11);
+                        } catch (java.lang.Throwable $t) {
+                            $ex66 = $t;
+                            $pc66 = 14; continue $sw66;
+                        }
+                        $pc66 = 10; continue $sw66;
+                    }
+                    case 10: {
+                        try {
+                            cb();
+                        } catch (java.lang.Throwable $t) {
+                            $ex66 = $t;
+                            $pc66 = 14; continue $sw66;
+                        }
+                        try {
+                            P8();
+                            DW(r9, r10, -1, r3);
+                            sh();
+                        } catch (java.lang.Throwable $t) {
+                            $ex66 = $t;
+                            $pc66 = 17; continue $sw66;
+                        }
+                        return;
+                    }
+                    case 14: {
+                        th = $ex66;
+                        try {
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                        } catch (java.lang.Throwable $t) {
+                            $ex66 = $t;
+                            $pc66 = 17; continue $sw66;
+                        }
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 
     public void j6(int r10, int r11, char[] r12, java.lang.Object r13) {
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex67 = null;
-        int $pc67 = 3;
-        $sw67: while (true) {
-            switch ($pc67) {
-                case 17: {
-                    th = $ex67;
-                    if (Zo == false) { $pc67 = 21; continue $sw67; }
-                    abcd.wu.j6(th, -701893467255853320L, this, new java.lang.Integer(r10), new java.lang.Integer(r11), r12, r13);
-                    $pc67 = 21; continue $sw67;
-                }
-                case 21: {
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 3: {
-                    if (v5 == false) { $pc67 = 5; continue $sw67; }
-                    try {
-                        abcd.wu.j6(-701893467255853320L, this, new java.lang.Integer(r10), new java.lang.Integer(r11), r12, r13);
-                    } catch (java.lang.Throwable $t) {
-                        $ex67 = $t;
-                        $pc67 = 17; continue $sw67;
+        synchronized (this) {
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex67 = null;
+            int $pc67 = 3;
+            $sw67: while (true) {
+                switch ($pc67) {
+                    case 17: {
+                        th = $ex67;
+                        if (Zo == false) { $pc67 = 21; continue $sw67; }
+                        abcd.wu.j6(th, -701893467255853320L, this, new java.lang.Integer(r10), new java.lang.Integer(r11), r12, r13);
+                        $pc67 = 21; continue $sw67;
                     }
-                    $pc67 = 5; continue $sw67;
-                }
-                case 5: {
-                    try {
-                        this.tp = true;
-                        monitor-enter(this);
-                    } catch (java.lang.Throwable $t) {
-                        $ex67 = $t;
-                        $pc67 = 17; continue $sw67;
-                    }
-                    try {
-                        this.u7.elementAt(r11).j6(r12, r10);
-                    } catch (java.lang.Throwable $t) {
-                        $ex67 = $t;
-                        $pc67 = 14; continue $sw67;
-                    }
-                    if (this.we == null) { $pc67 = 10; continue $sw67; }
-                    try {
-                        this.we.j6(r11, r10, r11, (r12.length + r10) - 1, this, r13);
-                    } catch (java.lang.Throwable $t) {
-                        $ex67 = $t;
-                        $pc67 = 14; continue $sw67;
-                    }
-                    $pc67 = 10; continue $sw67;
-                }
-                case 10: {
-                    try {
-                        cb();
-                        monitor-exit(this);
-                    } catch (java.lang.Throwable $t) {
-                        $ex67 = $t;
-                        $pc67 = 14; continue $sw67;
-                    }
-                    try {
-                        DW(r10, r11, (r12.length + r10) - 1, r11);
-                        sh();
-                    } catch (java.lang.Throwable $t) {
-                        $ex67 = $t;
-                        $pc67 = 17; continue $sw67;
-                    }
-                    return;
-                }
-                case 14: {
-                    th = $ex67;
-                    try {
+                    case 21: {
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                    } catch (java.lang.Throwable $t) {
-                        $ex67 = $t;
-                        $pc67 = 17; continue $sw67;
                     }
+                    case 3: {
+                        if (v5 == false) { $pc67 = 5; continue $sw67; }
+                        try {
+                            abcd.wu.j6(-701893467255853320L, this, new java.lang.Integer(r10), new java.lang.Integer(r11), r12, r13);
+                        } catch (java.lang.Throwable $t) {
+                            $ex67 = $t;
+                            $pc67 = 17; continue $sw67;
+                        }
+                        $pc67 = 5; continue $sw67;
+                    }
+                    case 5: {
+                        try {
+                            this.tp = true;
+                        } catch (java.lang.Throwable $t) {
+                            $ex67 = $t;
+                            $pc67 = 17; continue $sw67;
+                        }
+                        try {
+                            this.u7.elementAt(r11).j6(r12, r10);
+                        } catch (java.lang.Throwable $t) {
+                            $ex67 = $t;
+                            $pc67 = 14; continue $sw67;
+                        }
+                        if (this.we == null) { $pc67 = 10; continue $sw67; }
+                        try {
+                            this.we.j6(r11, r10, r11, (r12.length + r10) - 1, this, r13);
+                        } catch (java.lang.Throwable $t) {
+                            $ex67 = $t;
+                            $pc67 = 14; continue $sw67;
+                        }
+                        $pc67 = 10; continue $sw67;
+                    }
+                    case 10: {
+                        try {
+                            cb();
+                        } catch (java.lang.Throwable $t) {
+                            $ex67 = $t;
+                            $pc67 = 14; continue $sw67;
+                        }
+                        try {
+                            DW(r10, r11, (r12.length + r10) - 1, r11);
+                            sh();
+                        } catch (java.lang.Throwable $t) {
+                            $ex67 = $t;
+                            $pc67 = 17; continue $sw67;
+                        }
+                        return;
+                    }
+                    case 14: {
+                        th = $ex67;
+                        try {
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                        } catch (java.lang.Throwable $t) {
+                            $ex67 = $t;
+                            $pc67 = 17; continue $sw67;
+                        }
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 
     public void j6(int r8, java.lang.Object r9) {
-        com.aide.ui.views.editor.A r0 = null;
-        int r1 = 0;
-        int r3 = 0;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex68 = null;
-        int $pc68 = 3;
-        $sw68: while (true) {
-            switch ($pc68) {
-                case 16: {
-                    th = $ex68;
-                    if (Zo == false) { $pc68 = 20; continue $sw68; }
-                    abcd.wu.j6(th, 4167142714279021920L, this, new java.lang.Integer(r8), r9);
-                    $pc68 = 20; continue $sw68;
-                }
-                case 20: {
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 3: {
-                    if (v5 == false) { $pc68 = 5; continue $sw68; }
-                    try {
-                        abcd.wu.j6(4167142714279021920L, this, new java.lang.Integer(r8), r9);
-                    } catch (java.lang.Throwable $t) {
-                        $ex68 = $t;
-                        $pc68 = 16; continue $sw68;
+        synchronized (this) {
+            com.aide.ui.views.editor.A r0 = null;
+            int r1 = 0;
+            int r3 = 0;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex68 = null;
+            int $pc68 = 3;
+            $sw68: while (true) {
+                switch ($pc68) {
+                    case 16: {
+                        th = $ex68;
+                        if (Zo == false) { $pc68 = 20; continue $sw68; }
+                        abcd.wu.j6(th, 4167142714279021920L, this, new java.lang.Integer(r8), r9);
+                        $pc68 = 20; continue $sw68;
                     }
-                    $pc68 = 5; continue $sw68;
-                }
-                case 5: {
-                    try {
-                        monitor-enter(this);
-                    } catch (java.lang.Throwable $t) {
-                        $ex68 = $t;
-                        $pc68 = 16; continue $sw68;
-                    }
-                    try {
-                        r0 = this.u7.elementAt(r8);
-                        r1 = r0.FH();
-                        r3 = r8 + 1;
-                        r0.j6(this.u7.elementAt(r3).j6());
-                        this.u7.removeElementAt(r3);
-                    } catch (java.lang.Throwable $t) {
-                        $ex68 = $t;
-                        $pc68 = 13; continue $sw68;
-                    }
-                    if (this.we == null) { $pc68 = 9; continue $sw68; }
-                    try {
-                        this.we.DW(r8, r1, this, r9);
-                    } catch (java.lang.Throwable $t) {
-                        $ex68 = $t;
-                        $pc68 = 13; continue $sw68;
-                    }
-                    $pc68 = 9; continue $sw68;
-                }
-                case 9: {
-                    try {
-                        cb();
-                        monitor-exit(this);
-                    } catch (java.lang.Throwable $t) {
-                        $ex68 = $t;
-                        $pc68 = 13; continue $sw68;
-                    }
-                    try {
-                        P8();
-                        FH(r1, r8, -1, r3);
-                        sh();
-                    } catch (java.lang.Throwable $t) {
-                        $ex68 = $t;
-                        $pc68 = 16; continue $sw68;
-                    }
-                    return;
-                }
-                case 13: {
-                    th = $ex68;
-                    try {
+                    case 20: {
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                    } catch (java.lang.Throwable $t) {
-                        $ex68 = $t;
-                        $pc68 = 16; continue $sw68;
                     }
+                    case 3: {
+                        if (v5 == false) { $pc68 = 5; continue $sw68; }
+                        try {
+                            abcd.wu.j6(4167142714279021920L, this, new java.lang.Integer(r8), r9);
+                        } catch (java.lang.Throwable $t) {
+                            $ex68 = $t;
+                            $pc68 = 16; continue $sw68;
+                        }
+                        $pc68 = 5; continue $sw68;
+                    }
+                    case 5: {
+                        try {
+                        } catch (java.lang.Throwable $t) {
+                            $ex68 = $t;
+                            $pc68 = 16; continue $sw68;
+                        }
+                        try {
+                            r0 = this.u7.elementAt(r8);
+                            r1 = r0.FH();
+                            r3 = r8 + 1;
+                            r0.j6(this.u7.elementAt(r3).j6());
+                            this.u7.removeElementAt(r3);
+                        } catch (java.lang.Throwable $t) {
+                            $ex68 = $t;
+                            $pc68 = 13; continue $sw68;
+                        }
+                        if (this.we == null) { $pc68 = 9; continue $sw68; }
+                        try {
+                            this.we.DW(r8, r1, this, r9);
+                        } catch (java.lang.Throwable $t) {
+                            $ex68 = $t;
+                            $pc68 = 13; continue $sw68;
+                        }
+                        $pc68 = 9; continue $sw68;
+                    }
+                    case 9: {
+                        try {
+                            cb();
+                        } catch (java.lang.Throwable $t) {
+                            $ex68 = $t;
+                            $pc68 = 13; continue $sw68;
+                        }
+                        try {
+                            P8();
+                            FH(r1, r8, -1, r3);
+                            sh();
+                        } catch (java.lang.Throwable $t) {
+                            $ex68 = $t;
+                            $pc68 = 16; continue $sw68;
+                        }
+                        return;
+                    }
+                    case 13: {
+                        th = $ex68;
+                        try {
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                        } catch (java.lang.Throwable $t) {
+                            $ex68 = $t;
+                            $pc68 = 16; continue $sw68;
+                        }
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 
@@ -4016,180 +4025,181 @@ public class ClassG extends com.aide.ui.views.editor.Abstractb implements com.ai
     }
 
     public void j6(abcd.hm r13, java.lang.Object r14) {
-        int r0 = 0;
-        int r8 = 0;
-        int r1 = 0;
-        int r2 = 0;
-        int r3 = 0;
-        int r10 = 0;
-        int r11 = 0;
-        int r12 = 0;
-        int r4 = 0;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex70 = null;
-        int $pc70 = 36;
-        $sw70: while (true) {
-            switch ($pc70) {
-                case 36: {
-                    th = $ex70;
-                    if (Zo == false) { $pc70 = 41; continue $sw70; }
-                    abcd.wu.j6(th, 93188867496325403L, this, r13, r14);
-                    $pc70 = 41; continue $sw70;
-                }
-                case 41: {
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 3: {
-                    if (v5 == false) { $pc70 = 5; continue $sw70; }
-                    try {
-                        abcd.wu.j6(93188867496325403L, this, r13, r14);
-                    } catch (java.lang.Throwable $t) {
-                        $ex70 = $t;
-                        $pc70 = 36; continue $sw70;
+        synchronized (this) {
+            int r0 = 0;
+            int r8 = 0;
+            int r1 = 0;
+            int r2 = 0;
+            int r3 = 0;
+            int r10 = 0;
+            int r11 = 0;
+            int r12 = 0;
+            int r4 = 0;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex70 = null;
+            int $pc70 = 3;
+            $sw70: while (true) {
+                switch ($pc70) {
+                    case 36: {
+                        th = $ex70;
+                        if (Zo == false) { $pc70 = 41; continue $sw70; }
+                        abcd.wu.j6(th, 93188867496325403L, this, r13, r14);
+                        $pc70 = 41; continue $sw70;
                     }
-                    $pc70 = 5; continue $sw70;
-                }
-                case 5: {
-                    try {
-                        r0 = r13.Hw();
-                        r8 = r13.FH();
-                        r1 = r13.DW();
-                        r2 = r13.j6();
-                    } catch (java.lang.Throwable $t) {
-                        $ex70 = $t;
-                        $pc70 = 36; continue $sw70;
-                    }
-                    if (r0 <= r1) { $pc70 = 8; continue $sw70; }
-                    return;
-                }
-                case 8: {
-                    if (r0 != r1) { $pc70 = 12; continue $sw70; }
-                    if (r2 >= r8) { $pc70 = 12; continue $sw70; }
-                    return;
-                }
-                case 12: {
-                    if (r1 < v5()) { $pc70 = 16; continue $sw70; }
-                    try {
-                        r1 = v5() - 1;
-                        r3 = EQ(r1);
-                    } catch (java.lang.Throwable $t) {
-                        $ex70 = $t;
-                        $pc70 = 36; continue $sw70;
-                    }
-                    $pc70 = 14; continue $sw70;
-                }
-                case 14: {
-                    try {
-                        r2 = r3 - 1;
-                    } catch (java.lang.Throwable $t) {
-                        $ex70 = $t;
-                        $pc70 = 36; continue $sw70;
-                    }
-                    $pc70 = 18; continue $sw70;
-                }
-                case 18: {
-                    r10 = r1;
-                    r11 = r2;
-                    try {
-                        this.tp = true;
-                        monitor-enter(this);
-                    } catch (java.lang.Throwable $t) {
-                        $ex70 = $t;
-                        $pc70 = 36; continue $sw70;
-                    }
-                    $pc70 = 33; continue $sw70;
-                }
-                case 33: {
-                    th = $ex70;
-                    try {
+                    case 41: {
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                    } catch (java.lang.Throwable $t) {
-                        $ex70 = $t;
-                        $pc70 = 36; continue $sw70;
                     }
+                    case 3: {
+                        if (v5 == false) { $pc70 = 5; continue $sw70; }
+                        try {
+                            abcd.wu.j6(93188867496325403L, this, r13, r14);
+                        } catch (java.lang.Throwable $t) {
+                            $ex70 = $t;
+                            $pc70 = 36; continue $sw70;
+                        }
+                        $pc70 = 5; continue $sw70;
+                    }
+                    case 5: {
+                        try {
+                            r0 = r13.Hw();
+                            r8 = r13.FH();
+                            r1 = r13.DW();
+                            r2 = r13.j6();
+                        } catch (java.lang.Throwable $t) {
+                            $ex70 = $t;
+                            $pc70 = 36; continue $sw70;
+                        }
+                        if (r0 <= r1) { $pc70 = 8; continue $sw70; }
+                        return;
+                    }
+                    case 8: {
+                        if (r0 != r1) { $pc70 = 12; continue $sw70; }
+                        if (r2 >= r8) { $pc70 = 12; continue $sw70; }
+                        return;
+                    }
+                    case 12: {
+                        if (r1 < v5()) { $pc70 = 16; continue $sw70; }
+                        try {
+                            r1 = v5() - 1;
+                            r3 = EQ(r1);
+                        } catch (java.lang.Throwable $t) {
+                            $ex70 = $t;
+                            $pc70 = 36; continue $sw70;
+                        }
+                        $pc70 = 14; continue $sw70;
+                    }
+                    case 14: {
+                        try {
+                            r2 = r3 - 1;
+                        } catch (java.lang.Throwable $t) {
+                            $ex70 = $t;
+                            $pc70 = 36; continue $sw70;
+                        }
+                        $pc70 = 18; continue $sw70;
+                    }
+                    case 18: {
+                        r10 = r1;
+                        r11 = r2;
+                        try {
+                            this.tp = true;
+                        } catch (java.lang.Throwable $t) {
+                            $ex70 = $t;
+                            $pc70 = 36; continue $sw70;
+                        }
+                        $pc70 = 21; continue $sw70;
+                    }
+                    case 33: {
+                        th = $ex70;
+                        try {
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                        } catch (java.lang.Throwable $t) {
+                            $ex70 = $t;
+                            $pc70 = 36; continue $sw70;
+                        }
+                    }
+                    case 21: {
+                        if (this.we == null) { $pc70 = 23; continue $sw70; }
+                        try {
+                            this.we.DW(r0, r8, r10, r11, this, r14);
+                        } catch (java.lang.Throwable $t) {
+                            $ex70 = $t;
+                            $pc70 = 33; continue $sw70;
+                        }
+                        $pc70 = 23; continue $sw70;
+                    }
+                    case 23: {
+                        if (r0 != r10) { $pc70 = 25; continue $sw70; }
+                        try {
+                            this.u7.elementAt(r0).j6((r11 - r8) + 1, r8);
+                        } catch (java.lang.Throwable $t) {
+                            $ex70 = $t;
+                            $pc70 = 33; continue $sw70;
+                        }
+                        $pc70 = 29; continue $sw70;
+                    }
+                    case 29: {
+                        try {
+                            cb();
+                        } catch (java.lang.Throwable $t) {
+                            $ex70 = $t;
+                            $pc70 = 33; continue $sw70;
+                        }
+                        try {
+                            FH(r13.FH(), r13.Hw(), r13.j6(), r13.DW());
+                            sh();
+                        } catch (java.lang.Throwable $t) {
+                            $ex70 = $t;
+                            $pc70 = 36; continue $sw70;
+                        }
+                        return;
+                    }
+                    case 25: {
+                        try {
+                            this.u7.elementAt(r0).j6(this.u7.elementAt(r0).FH() - r8, r8);
+                            r12 = r10 - 1;
+                        } catch (java.lang.Throwable $t) {
+                            $ex70 = $t;
+                            $pc70 = 33; continue $sw70;
+                        }
+                        $pc70 = 26; continue $sw70;
+                    }
+                    case 26: {
+                        if (r12 <= r0) { $pc70 = 28; continue $sw70; }
+                        try {
+                            this.u7.removeElementAt(r12);
+                            r12 = r12 - 1;
+                        } catch (java.lang.Throwable $t) {
+                            $ex70 = $t;
+                            $pc70 = 33; continue $sw70;
+                        }
+                        { $pc70 = 26; continue $sw70; }
+                    }
+                    case 28: {
+                        try {
+                            r4 = r0 + 1;
+                            this.u7.elementAt(r4).j6(r11 + 1, 0);
+                            this.u7.elementAt(r0).j6(this.u7.elementAt(r4).j6());
+                            this.u7.removeElementAt(r4);
+                        } catch (java.lang.Throwable $t) {
+                            $ex70 = $t;
+                            $pc70 = 33; continue $sw70;
+                        }
+                        { $pc70 = 29; continue $sw70; }
+                    }
+                    case 16: {
+                        if (r2 < EQ(r1)) { $pc70 = 18; continue $sw70; }
+                        try {
+                            r3 = EQ(r1);
+                        } catch (java.lang.Throwable $t) {
+                            $ex70 = $t;
+                            $pc70 = 36; continue $sw70;
+                        }
+                        { $pc70 = 14; continue $sw70; }
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 21: {
-                    if (this.we == null) { $pc70 = 23; continue $sw70; }
-                    try {
-                        this.we.DW(r0, r8, r10, r11, this, r14);
-                    } catch (java.lang.Throwable $t) {
-                        $ex70 = $t;
-                        $pc70 = 33; continue $sw70;
-                    }
-                    $pc70 = 23; continue $sw70;
-                }
-                case 23: {
-                    if (r0 != r10) { $pc70 = 25; continue $sw70; }
-                    try {
-                        this.u7.elementAt(r0).j6((r11 - r8) + 1, r8);
-                    } catch (java.lang.Throwable $t) {
-                        $ex70 = $t;
-                        $pc70 = 33; continue $sw70;
-                    }
-                    $pc70 = 29; continue $sw70;
-                }
-                case 29: {
-                    try {
-                        cb();
-                        monitor-exit(this);
-                    } catch (java.lang.Throwable $t) {
-                        $ex70 = $t;
-                        $pc70 = 33; continue $sw70;
-                    }
-                    try {
-                        FH(r13.FH(), r13.Hw(), r13.j6(), r13.DW());
-                        sh();
-                    } catch (java.lang.Throwable $t) {
-                        $ex70 = $t;
-                        $pc70 = 36; continue $sw70;
-                    }
-                    return;
-                }
-                case 25: {
-                    try {
-                        this.u7.elementAt(r0).j6(this.u7.elementAt(r0).FH() - r8, r8);
-                        r12 = r10 - 1;
-                    } catch (java.lang.Throwable $t) {
-                        $ex70 = $t;
-                        $pc70 = 33; continue $sw70;
-                    }
-                    $pc70 = 26; continue $sw70;
-                }
-                case 26: {
-                    if (r12 <= r0) { $pc70 = 28; continue $sw70; }
-                    try {
-                        this.u7.removeElementAt(r12);
-                        r12 = r12 - 1;
-                    } catch (java.lang.Throwable $t) {
-                        $ex70 = $t;
-                        $pc70 = 33; continue $sw70;
-                    }
-                    { $pc70 = 26; continue $sw70; }
-                }
-                case 28: {
-                    try {
-                        r4 = r0 + 1;
-                        this.u7.elementAt(r4).j6(r11 + 1, 0);
-                        this.u7.elementAt(r0).j6(this.u7.elementAt(r4).j6());
-                        this.u7.removeElementAt(r4);
-                    } catch (java.lang.Throwable $t) {
-                        $ex70 = $t;
-                        $pc70 = 33; continue $sw70;
-                    }
-                    { $pc70 = 29; continue $sw70; }
-                }
-                case 16: {
-                    if (r2 < EQ(r1)) { $pc70 = 18; continue $sw70; }
-                    try {
-                        r3 = EQ(r1);
-                    } catch (java.lang.Throwable $t) {
-                        $ex70 = $t;
-                        $pc70 = 36; continue $sw70;
-                    }
-                    { $pc70 = 14; continue $sw70; }
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 
@@ -4362,182 +4372,183 @@ public class ClassG extends com.aide.ui.views.editor.Abstractb implements com.ai
     }
 
     public void j6(java.io.Reader r12, java.lang.Object r13) {
-        int r0 = 0;
-        int r1 = 0;
-        char[] r2 = null;
-        com.aide.ui.views.editor.ClassG.c r3 = null;
-        java.io.IOException e2 = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex75 = null;
-        int $pc75 = 3;
-        $sw75: while (true) {
-            switch ($pc75) {
-                case 47: {
-                    th = $ex75;
-                    if (Zo == false) { $pc75 = 51; continue $sw75; }
-                    abcd.wu.j6(th, -1410040917256614929L, this, r12, r13);
-                    $pc75 = 51; continue $sw75;
-                }
-                case 51: {
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 3: {
-                    if (v5 == false) { $pc75 = 5; continue $sw75; }
-                    try {
-                        abcd.wu.j6(-1410040917256614929L, this, r12, r13);
-                    } catch (java.lang.Throwable $t) {
-                        $ex75 = $t;
-                        $pc75 = 47; continue $sw75;
+        synchronized (this) {
+            int r0 = 0;
+            int r1 = 0;
+            char[] r2 = null;
+            com.aide.ui.views.editor.ClassG.c r3 = null;
+            java.io.IOException e2 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex75 = null;
+            int $pc75 = 3;
+            $sw75: while (true) {
+                switch ($pc75) {
+                    case 47: {
+                        th = $ex75;
+                        if (Zo == false) { $pc75 = 51; continue $sw75; }
+                        abcd.wu.j6(th, -1410040917256614929L, this, r12, r13);
+                        $pc75 = 51; continue $sw75;
                     }
-                    $pc75 = 5; continue $sw75;
-                }
-                case 5: {
-                    try {
-                        BT();
-                        r0 = v5() - 1;
-                        r1 = EQ(r0) - 1;
-                    } catch (java.lang.Throwable $t) {
-                        $ex75 = $t;
-                        $pc75 = 47; continue $sw75;
-                    }
-                    if (r1 != (-1)) { $pc75 = 8; continue $sw75; }
-                    if (r0 != 0) { $pc75 = 8; continue $sw75; }
-                    $pc75 = 9; continue $sw75;
-                }
-                case 9: {
-                    try {
-                        r2 = new char[32768];
-                        r3 = new com.aide.ui.views.editor.ClassG.c(this, 0, 0, false, 0);
-                    } catch (java.lang.Throwable $t) {
-                        $ex75 = $t;
-                        $pc75 = 47; continue $sw75;
-                    }
-                    e2 = null;
-                    try {
-                        monitor-enter(this);
-                    } catch (java.lang.Throwable $t) {
-                        $ex75 = $t;
-                        $pc75 = 47; continue $sw75;
-                    }
-                    try {
-                        com.aide.ui.views.editor.ra.j6(r12, r3, r2);
-                    } catch (java.lang.Throwable $t) {
-                        $ex75 = $t;
-                        if ($t instanceof java.io.IOException) { $pc75 = 15; continue $sw75; }
-                        $pc75 = 13; continue $sw75;
-                    }
-                    $pc75 = 52; continue $sw75;
-                }
-                case 52: {
-                    try {
-                        r12.close();
-                    } catch (java.lang.Throwable $t) {
-                        $ex75 = $t;
-                        if ($t instanceof java.io.IOException) { $pc75 = 18; continue $sw75; }
-                        $pc75 = 13; continue $sw75;
-                    }
-                    $pc75 = 21; continue $sw75;
-                }
-                case 21: {
-                    e = e2;
-                    $pc75 = 23; continue $sw75;
-                }
-                case 23: {
-                    if (r3.Hw != 0) { $pc75 = 30; continue $sw75; }
-                    if (r3.FH != 0) { $pc75 = 30; continue $sw75; }
-                    if (e == null) { $pc75 = 30; continue $sw75; }
-                    try {
-                        throw e;
-                    } catch (java.lang.Throwable $t) {
-                        $ex75 = $t;
-                        $pc75 = 13; continue $sw75;
-                    }
-                }
-                case 30: {
-                    if (this.we == null) { $pc75 = 32; continue $sw75; }
-                    try {
-                        this.we.j6(0, 0, r3.Hw, r3.FH - 1, this, r13);
-                    } catch (java.lang.Throwable $t) {
-                        $ex75 = $t;
-                        $pc75 = 13; continue $sw75;
-                    }
-                    $pc75 = 32; continue $sw75;
-                }
-                case 32: {
-                    try {
-                        cb();
-                        monitor-exit(this);
-                    } catch (java.lang.Throwable $t) {
-                        $ex75 = $t;
-                        $pc75 = 13; continue $sw75;
-                    }
-                    try {
-                        DW(0, 0, r3.FH - 1, r3.Hw);
-                    } catch (java.lang.Throwable $t) {
-                        $ex75 = $t;
-                        $pc75 = 47; continue $sw75;
-                    }
-                    if (e == null) { $pc75 = 37; continue $sw75; }
-                    $pc75 = 41; continue $sw75;
-                }
-                case 41: {
-                    try {
-                        gW();
-                    } catch (java.lang.Throwable $t) {
-                        $ex75 = $t;
-                        $pc75 = 47; continue $sw75;
-                    }
-                    if (e != null) { $pc75 = 44; continue $sw75; }
-                    return;
-                }
-                case 44: {
-                    try {
-                        throw e;
-                    } catch (java.lang.Throwable $t) {
-                        $ex75 = $t;
-                        $pc75 = 47; continue $sw75;
-                    }
-                }
-                case 37: {
-                    if (r3.v5 == true) { $pc75 = 41; continue $sw75; }
-                    if (r3.Hw == 0) { $pc75 = 41; continue $sw75; }
-                    try {
-                        j6(r3.Hw - 1, r13);
-                    } catch (java.lang.Throwable $t) {
-                        $ex75 = $t;
-                        $pc75 = 47; continue $sw75;
-                    }
-                    $pc75 = 18; continue $sw75;
-                }
-                case 18: {
-                    e = e;
-                    if (e2 != null) { $pc75 = 21; continue $sw75; }
-                    $pc75 = 15; continue $sw75;
-                }
-                case 15: {
-                    e2 = e;
-                    $pc75 = 13; continue $sw75;
-                }
-                case 13: {
-                    th = $ex75;
-                    try {
+                    case 51: {
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                    } catch (java.lang.Throwable $t) {
-                        $ex75 = $t;
-                        $pc75 = 47; continue $sw75;
                     }
-                }
-                case 8: {
-                    try {
-                        j6(new abcd.hm(0, 0, r0, r1), this);
-                    } catch (java.lang.Throwable $t) {
-                        $ex75 = $t;
-                        $pc75 = 47; continue $sw75;
+                    case 3: {
+                        if (v5 == false) { $pc75 = 5; continue $sw75; }
+                        try {
+                            abcd.wu.j6(-1410040917256614929L, this, r12, r13);
+                        } catch (java.lang.Throwable $t) {
+                            $ex75 = $t;
+                            $pc75 = 47; continue $sw75;
+                        }
+                        $pc75 = 5; continue $sw75;
                     }
-                    { $pc75 = 9; continue $sw75; }
+                    case 5: {
+                        try {
+                            BT();
+                            r0 = v5() - 1;
+                            r1 = EQ(r0) - 1;
+                        } catch (java.lang.Throwable $t) {
+                            $ex75 = $t;
+                            $pc75 = 47; continue $sw75;
+                        }
+                        if (r1 != (-1)) { $pc75 = 8; continue $sw75; }
+                        if (r0 != 0) { $pc75 = 8; continue $sw75; }
+                        $pc75 = 9; continue $sw75;
+                    }
+                    case 9: {
+                        try {
+                            r2 = new char[32768];
+                            r3 = new com.aide.ui.views.editor.ClassG.c(this, 0, 0, false, 0);
+                        } catch (java.lang.Throwable $t) {
+                            $ex75 = $t;
+                            $pc75 = 47; continue $sw75;
+                        }
+                        e2 = null;
+                        try {
+                        } catch (java.lang.Throwable $t) {
+                            $ex75 = $t;
+                            $pc75 = 47; continue $sw75;
+                        }
+                        try {
+                            com.aide.ui.views.editor.ra.j6(r12, r3, r2);
+                        } catch (java.lang.Throwable $t) {
+                            $ex75 = $t;
+                            if ($t instanceof java.io.IOException) { $pc75 = 15; continue $sw75; }
+                            $pc75 = 13; continue $sw75;
+                        }
+                        $pc75 = 52; continue $sw75;
+                    }
+                    case 52: {
+                        try {
+                            r12.close();
+                        } catch (java.lang.Throwable $t) {
+                            $ex75 = $t;
+                            if ($t instanceof java.io.IOException) { $pc75 = 18; continue $sw75; }
+                            $pc75 = 13; continue $sw75;
+                        }
+                        $pc75 = 21; continue $sw75;
+                    }
+                    case 21: {
+                        e = e2;
+                        $pc75 = 23; continue $sw75;
+                    }
+                    case 23: {
+                        if (r3.Hw != 0) { $pc75 = 30; continue $sw75; }
+                        if (r3.FH != 0) { $pc75 = 30; continue $sw75; }
+                        if (e == null) { $pc75 = 30; continue $sw75; }
+                        try {
+                            throw e;
+                        } catch (java.lang.Throwable $t) {
+                            $ex75 = $t;
+                            $pc75 = 13; continue $sw75;
+                        }
+                    }
+                    case 30: {
+                        if (this.we == null) { $pc75 = 32; continue $sw75; }
+                        try {
+                            this.we.j6(0, 0, r3.Hw, r3.FH - 1, this, r13);
+                        } catch (java.lang.Throwable $t) {
+                            $ex75 = $t;
+                            $pc75 = 13; continue $sw75;
+                        }
+                        $pc75 = 32; continue $sw75;
+                    }
+                    case 32: {
+                        try {
+                            cb();
+                        } catch (java.lang.Throwable $t) {
+                            $ex75 = $t;
+                            $pc75 = 13; continue $sw75;
+                        }
+                        try {
+                            DW(0, 0, r3.FH - 1, r3.Hw);
+                        } catch (java.lang.Throwable $t) {
+                            $ex75 = $t;
+                            $pc75 = 47; continue $sw75;
+                        }
+                        if (e == null) { $pc75 = 37; continue $sw75; }
+                        $pc75 = 41; continue $sw75;
+                    }
+                    case 41: {
+                        try {
+                            gW();
+                        } catch (java.lang.Throwable $t) {
+                            $ex75 = $t;
+                            $pc75 = 47; continue $sw75;
+                        }
+                        if (e != null) { $pc75 = 44; continue $sw75; }
+                        return;
+                    }
+                    case 44: {
+                        try {
+                            throw e;
+                        } catch (java.lang.Throwable $t) {
+                            $ex75 = $t;
+                            $pc75 = 47; continue $sw75;
+                        }
+                    }
+                    case 37: {
+                        if (r3.v5 == true) { $pc75 = 41; continue $sw75; }
+                        if (r3.Hw == 0) { $pc75 = 41; continue $sw75; }
+                        try {
+                            j6(r3.Hw - 1, r13);
+                        } catch (java.lang.Throwable $t) {
+                            $ex75 = $t;
+                            $pc75 = 47; continue $sw75;
+                        }
+                        $pc75 = 8; continue $sw75;
+                    }
+                    case 18: {
+                        e = e;
+                        if (e2 != null) { $pc75 = 21; continue $sw75; }
+                        $pc75 = 8; continue $sw75;
+                    }
+                    case 15: {
+                        e2 = e;
+                        $pc75 = 8; continue $sw75;
+                    }
+                    case 13: {
+                        th = $ex75;
+                        try {
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                        } catch (java.lang.Throwable $t) {
+                            $ex75 = $t;
+                            $pc75 = 47; continue $sw75;
+                        }
+                    }
+                    case 8: {
+                        try {
+                            j6(new abcd.hm(0, 0, r0, r1), this);
+                        } catch (java.lang.Throwable $t) {
+                            $ex75 = $t;
+                            $pc75 = 47; continue $sw75;
+                        }
+                        { $pc75 = 9; continue $sw75; }
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 

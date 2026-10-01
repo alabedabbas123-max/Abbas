@@ -331,7 +331,7 @@ public final class ho {
                     return r2;
                 }
                 case 21: {
-                    $pc6 = 23; continue $sw6;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 23: {
                     throw new java.lang.IllegalStateException();

@@ -69,47 +69,48 @@ public final class Ks extends abcd.Ms {
     }
 
     public static abcd.Ks DW(abcd.Qs r3) {
-        java.util.HashMap<abcd.Qs, abcd.Ks> r0 = null;
-        abcd.Ks r1 = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex1 = null;
-        int $pc1 = -1;
-        $sw1: while (true) {
-            switch ($pc1) {
-                case -1: {
-                    r0 = j6;
-                    monitor-enter(r0);
-                    try {
-                        r1 = j6.get(r3);
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        $pc1 = 9; continue $sw1;
+        synchronized (j6) {
+            java.util.HashMap<abcd.Qs, abcd.Ks> r0 = null;
+            abcd.Ks r1 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex1 = null;
+            int $pc1 = -1;
+            $sw1: while (true) {
+                switch ($pc1) {
+                    case -1: {
+                        r0 = j6;
+                        try {
+                            r1 = j6.get(r3);
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            $pc1 = 9; continue $sw1;
+                        }
+                        if (r1 != null) { $pc1 = 7; continue $sw1; }
+                        try {
+                            r1 = new abcd.Ks(r3);
+                            j6.put(r3, r1);
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            $pc1 = 9; continue $sw1;
+                        }
+                        $pc1 = 7; continue $sw1;
                     }
-                    if (r1 != null) { $pc1 = 7; continue $sw1; }
-                    try {
-                        r1 = new abcd.Ks(r3);
-                        j6.put(r3, r1);
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        $pc1 = 9; continue $sw1;
+                    case 7: {
+                        try {
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            $pc1 = 9; continue $sw1;
+                        }
+                        return r1;
                     }
-                    $pc1 = 7; continue $sw1;
-                }
-                case 7: {
-                    try {
-                        monitor-exit(r0);
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        $pc1 = 9; continue $sw1;
+                    case 9: {
+                        th = $ex1;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
                     }
-                    return r1;
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 9: {
-                    th = $ex1;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 

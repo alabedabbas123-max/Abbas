@@ -104,7 +104,7 @@ class La {
                             throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
                         }
                         r2 = r4;
-                        $pc0 = 36; continue $sw0;
+                        $pc0 = 26; continue $sw0;
                     }
                     case 36: {
                         java.lang.Thread.currentThread().interrupt();
@@ -138,7 +138,7 @@ class La {
                             if ($t instanceof java.lang.InterruptedException) { $pc0 = 7; continue $sw0; }
                             throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
                         }
-                        $pc0 = 7; continue $sw0;
+                        return;
                     }
                     case 7: {
                         java.lang.Thread.currentThread().interrupt();
@@ -222,239 +222,241 @@ class La {
     }
 
     java.util.List<com.crashlytics.android.core.Ka> DW() {
-        java.lang.Object r0 = null;
-        java.io.File[] r1 = null;
-        java.io.File[] r2 = null;
-        java.io.File[] r3 = null;
-        java.util.LinkedList r4 = null;
-        int r5 = 0;
-        int r6 = 0;
-        int r7 = 0;
-        java.io.File r8 = null;
-        java.util.HashMap r9 = null;
-        int r10 = 0;
-        int r11 = 0;
-        java.io.File r12 = null;
-        java.lang.String r13 = null;
-        java.util.Iterator r14 = null;
-        java.lang.String r15 = null;
-        java.util.List r16 = null;
-        int r17 = 0;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex3 = null;
-        int $pc3 = -1;
-        $sw3: while (true) {
-            switch ($pc3) {
-                case -1: {
-                    io.fabric.sdk.android.Fabric.getLogger().Hw("CrashlyticsCore", "Checking for crash reports...");
-                    r0 = this.FH;
-                    monitor-enter(r0);
-                    try {
-                        r1 = this.Zo.FH();
-                        r2 = this.Zo.DW();
-                        r3 = this.Zo.j6();
-                        monitor-exit(r0);
-                    } catch (java.lang.Throwable $t) {
-                        $ex3 = $t;
-                        $pc3 = 31; continue $sw3;
+        synchronized (this.FH) {
+            java.lang.Object r0 = null;
+            java.io.File[] r1 = null;
+            java.io.File[] r2 = null;
+            java.io.File[] r3 = null;
+            java.util.LinkedList r4 = null;
+            int r5 = 0;
+            int r6 = 0;
+            int r7 = 0;
+            java.io.File r8 = null;
+            java.util.HashMap r9 = null;
+            int r10 = 0;
+            int r11 = 0;
+            java.io.File r12 = null;
+            java.lang.String r13 = null;
+            java.util.Iterator r14 = null;
+            java.lang.String r15 = null;
+            java.util.List r16 = null;
+            int r17 = 0;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex3 = null;
+            int $pc3 = -1;
+            $sw3: while (true) {
+                switch ($pc3) {
+                    case -1: {
+                        io.fabric.sdk.android.Fabric.getLogger().Hw("CrashlyticsCore", "Checking for crash reports...");
+                        r0 = this.FH;
+                        try {
+                            r1 = this.Zo.FH();
+                            r2 = this.Zo.DW();
+                            r3 = this.Zo.j6();
+                        } catch (java.lang.Throwable $t) {
+                            $ex3 = $t;
+                            $pc3 = 31; continue $sw3;
+                        }
+                        r4 = new java.util.LinkedList();
+                        r5 = 0;
+                        if (r1 == null) { $pc3 = 11; continue $sw3; }
+                        r6 = r1.length;
+                        r7 = 0;
+                        $pc3 = 9; continue $sw3;
                     }
-                    r4 = new java.util.LinkedList();
-                    r5 = 0;
-                    if (r1 == null) { $pc3 = 11; continue $sw3; }
-                    r6 = r1.length;
-                    r7 = 0;
-                    $pc3 = 9; continue $sw3;
+                    case 9: {
+                        if (r7 >= r6) { $pc3 = 11; continue $sw3; }
+                        r8 = r1[r7];
+                        io.fabric.sdk.android.Fabric.getLogger().Hw("CrashlyticsCore", "Found crash report " + r8.getPath());
+                        r4.add(new com.crashlytics.android.core.Oa(r8));
+                        r7 = r7 + 1;
+                        $pc3 = 11; continue $sw3;
+                    }
+                    case 11: {
+                        r9 = new java.util.HashMap();
+                        if (r2 == null) { $pc3 = 19; continue $sw3; }
+                        r10 = r2.length;
+                        r11 = 0;
+                        $pc3 = 14; continue $sw3;
+                    }
+                    case 14: {
+                        if (r11 >= r10) { $pc3 = 19; continue $sw3; }
+                        r12 = r2[r11];
+                        r13 = com.crashlytics.android.core.W.j6(r12);
+                        if (r9.containsKey(r13) == true) { $pc3 = 18; continue $sw3; }
+                        r9.put(r13, new java.util.LinkedList());
+                        $pc3 = 18; continue $sw3;
+                    }
+                    case 18: {
+                        ((java.util.List) r9.get(r13)).add(r12);
+                        r11 = r11 + 1;
+                        $pc3 = 19; continue $sw3;
+                    }
+                    case 19: {
+                        r14 = r9.keySet().iterator();
+                        $pc3 = 21; continue $sw3;
+                    }
+                    case 21: {
+                        if (r14.hasNext() == false) { $pc3 = 23; continue $sw3; }
+                        r15 = (java.lang.String) r14.next();
+                        io.fabric.sdk.android.Fabric.getLogger().Hw("CrashlyticsCore", "Found invalid session: " + r15);
+                        r16 = (java.util.List) r9.get(r15);
+                        r4.add(new com.crashlytics.android.core.sa(r15, (java.io.File[]) r16.toArray(new java.io.File[r16.size()])));
+                        { $pc3 = 21; continue $sw3; }
+                    }
+                    case 23: {
+                        if (r3 == null) { $pc3 = 28; continue $sw3; }
+                        r17 = r3.length;
+                        $pc3 = 25; continue $sw3;
+                    }
+                    case 25: {
+                        if (r5 >= r17) { $pc3 = 28; continue $sw3; }
+                        r4.add(new com.crashlytics.android.core.Ca(r3[r5]));
+                        r5 = r5 + 1;
+                        $pc3 = 28; continue $sw3;
+                    }
+                    case 28: {
+                        if (r4.isEmpty() == false) { $pc3 = 30; continue $sw3; }
+                        io.fabric.sdk.android.Fabric.getLogger().Hw("CrashlyticsCore", "No reports found.");
+                        $pc3 = 30; continue $sw3;
+                    }
+                    case 30: {
+                        return r4;
+                    }
+                    case 31: {
+                        th = $ex3;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 9: {
-                    if (r7 >= r6) { $pc3 = 11; continue $sw3; }
-                    r8 = r1[r7];
-                    io.fabric.sdk.android.Fabric.getLogger().Hw("CrashlyticsCore", "Found crash report " + r8.getPath());
-                    r4.add(new com.crashlytics.android.core.Oa(r8));
-                    r7 = r7 + 1;
-                    $pc3 = 11; continue $sw3;
-                }
-                case 11: {
-                    r9 = new java.util.HashMap();
-                    if (r2 == null) { $pc3 = 19; continue $sw3; }
-                    r10 = r2.length;
-                    r11 = 0;
-                    $pc3 = 14; continue $sw3;
-                }
-                case 14: {
-                    if (r11 >= r10) { $pc3 = 19; continue $sw3; }
-                    r12 = r2[r11];
-                    r13 = com.crashlytics.android.core.W.j6(r12);
-                    if (r9.containsKey(r13) == true) { $pc3 = 18; continue $sw3; }
-                    r9.put(r13, new java.util.LinkedList());
-                    $pc3 = 18; continue $sw3;
-                }
-                case 18: {
-                    ((java.util.List) r9.get(r13)).add(r12);
-                    r11 = r11 + 1;
-                    $pc3 = 19; continue $sw3;
-                }
-                case 19: {
-                    r14 = r9.keySet().iterator();
-                    $pc3 = 21; continue $sw3;
-                }
-                case 21: {
-                    if (r14.hasNext() == false) { $pc3 = 23; continue $sw3; }
-                    r15 = (java.lang.String) r14.next();
-                    io.fabric.sdk.android.Fabric.getLogger().Hw("CrashlyticsCore", "Found invalid session: " + r15);
-                    r16 = (java.util.List) r9.get(r15);
-                    r4.add(new com.crashlytics.android.core.sa(r15, (java.io.File[]) r16.toArray(new java.io.File[r16.size()])));
-                    { $pc3 = 21; continue $sw3; }
-                }
-                case 23: {
-                    if (r3 == null) { $pc3 = 28; continue $sw3; }
-                    r17 = r3.length;
-                    $pc3 = 25; continue $sw3;
-                }
-                case 25: {
-                    if (r5 >= r17) { $pc3 = 28; continue $sw3; }
-                    r4.add(new com.crashlytics.android.core.Ca(r3[r5]));
-                    r5 = r5 + 1;
-                    $pc3 = 28; continue $sw3;
-                }
-                case 28: {
-                    if (r4.isEmpty() == false) { $pc3 = 30; continue $sw3; }
-                    io.fabric.sdk.android.Fabric.getLogger().Hw("CrashlyticsCore", "No reports found.");
-                    $pc3 = 30; continue $sw3;
-                }
-                case 30: {
-                    return r4;
-                }
-                case 31: {
-                    th = $ex3;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 
     public synchronized void j6(float r2, com.crashlytics.android.core.La.d r3) {
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex4 = null;
-        int $pc4 = -1;
-        $sw4: while (true) {
-            switch ($pc4) {
-                case -1: {
-                    monitor-enter(this);
-                    $pc4 = 11; continue $sw4;
-                }
-                case 11: {
-                    th = $ex4;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 4: {
-                    if (this.gn == null) { $pc4 = 8; continue $sw4; }
-                    try {
-                        io.fabric.sdk.android.Fabric.getLogger().Hw("CrashlyticsCore", "Report upload has already been started.");
-                    } catch (java.lang.Throwable $t) {
-                        $ex4 = $t;
-                        $pc4 = 11; continue $sw4;
+        synchronized (this) {
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex4 = null;
+            int $pc4 = -1;
+            $sw4: while (true) {
+                switch ($pc4) {
+                    case -1: {
+                        $pc4 = 4; continue $sw4;
                     }
-                    monitor-exit(this);
-                    return;
-                }
-                case 8: {
-                    try {
-                        this.gn = new java.lang.Thread(new com.crashlytics.android.core.La.e(this, r2, r3), "Crashlytics Report Uploader");
-                        this.gn.start();
-                    } catch (java.lang.Throwable $t) {
-                        $ex4 = $t;
-                        $pc4 = 11; continue $sw4;
+                    case 11: {
+                        th = $ex4;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
                     }
-                    monitor-exit(this);
-                    return;
+                    case 4: {
+                        if (this.gn == null) { $pc4 = 8; continue $sw4; }
+                        try {
+                            io.fabric.sdk.android.Fabric.getLogger().Hw("CrashlyticsCore", "Report upload has already been started.");
+                        } catch (java.lang.Throwable $t) {
+                            $ex4 = $t;
+                            $pc4 = 11; continue $sw4;
+                        }
+                        return;
+                    }
+                    case 8: {
+                        try {
+                            this.gn = new java.lang.Thread(new com.crashlytics.android.core.La.e(this, r2, r3), "Crashlytics Report Uploader");
+                            this.gn.start();
+                        } catch (java.lang.Throwable $t) {
+                            $ex4 = $t;
+                            $pc4 = 11; continue $sw4;
+                        }
+                        return;
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 
     boolean j6(com.crashlytics.android.core.Ka r8) {
-        java.lang.Object r0 = null;
-        boolean r1 = false;
-        boolean r2 = false;
-        io.fabric.sdk.android.m r3 = null;
-        java.lang.StringBuilder r5 = null;
-        java.lang.String r6 = null;
-        java.lang.Throwable e = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex5 = null;
-        int $pc5 = -1;
-        $sw5: while (true) {
-            switch ($pc5) {
-                case -1: {
-                    r0 = this.FH;
-                    monitor-enter(r0);
-                    r1 = false;
-                    try {
-                        r2 = this.Hw.j6(new com.crashlytics.android.core.ja(this.v5, r8));
-                        r3 = io.fabric.sdk.android.Fabric.getLogger();
-                        r5 = new java.lang.StringBuilder();
-                        r5.append("Crashlytics report upload ");
-                    } catch (java.lang.Throwable $t) {
-                        $ex5 = $t;
-                        if ($t instanceof java.lang.Exception) { $pc5 = 15; continue $sw5; }
-                        $pc5 = 13; continue $sw5;
+        synchronized (this.FH) {
+            java.lang.Object r0 = null;
+            boolean r1 = false;
+            boolean r2 = false;
+            io.fabric.sdk.android.m r3 = null;
+            java.lang.StringBuilder r5 = null;
+            java.lang.String r6 = null;
+            java.lang.Throwable e = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex5 = null;
+            int $pc5 = -1;
+            $sw5: while (true) {
+                switch ($pc5) {
+                    case -1: {
+                        r0 = this.FH;
+                        r1 = false;
+                        try {
+                            r2 = this.Hw.j6(new com.crashlytics.android.core.ja(this.v5, r8));
+                            r3 = io.fabric.sdk.android.Fabric.getLogger();
+                            r5 = new java.lang.StringBuilder();
+                            r5.append("Crashlytics report upload ");
+                        } catch (java.lang.Throwable $t) {
+                            $ex5 = $t;
+                            if ($t instanceof java.lang.Exception) { $pc5 = 15; continue $sw5; }
+                            $pc5 = 13; continue $sw5;
+                        }
+                        if (r2 == false) { $pc5 = 8; continue $sw5; }
+                        r6 = "complete: ";
+                        $pc5 = 9; continue $sw5;
                     }
-                    if (r2 == false) { $pc5 = 8; continue $sw5; }
-                    r6 = "complete: ";
-                    $pc5 = 9; continue $sw5;
-                }
-                case 9: {
-                    try {
-                        r5.append(r6);
-                        r5.append(r8.DW());
-                        r3.v5("CrashlyticsCore", r5.toString());
-                    } catch (java.lang.Throwable $t) {
-                        $ex5 = $t;
-                        if ($t instanceof java.lang.Exception) { $pc5 = 15; continue $sw5; }
-                        $pc5 = 13; continue $sw5;
+                    case 9: {
+                        try {
+                            r5.append(r6);
+                            r5.append(r8.DW());
+                            r3.v5("CrashlyticsCore", r5.toString());
+                        } catch (java.lang.Throwable $t) {
+                            $ex5 = $t;
+                            if ($t instanceof java.lang.Exception) { $pc5 = 15; continue $sw5; }
+                            $pc5 = 13; continue $sw5;
+                        }
+                        if (r2 == false) { $pc5 = 17; continue $sw5; }
+                        try {
+                            r8.remove();
+                        } catch (java.lang.Throwable $t) {
+                            $ex5 = $t;
+                            if ($t instanceof java.lang.Exception) { $pc5 = 15; continue $sw5; }
+                            $pc5 = 13; continue $sw5;
+                        }
+                        r1 = true;
+                        { $pc5 = 17; continue $sw5; }
                     }
-                    if (r2 == false) { $pc5 = 17; continue $sw5; }
-                    try {
-                        r8.remove();
-                    } catch (java.lang.Throwable $t) {
-                        $ex5 = $t;
-                        if ($t instanceof java.lang.Exception) { $pc5 = 15; continue $sw5; }
-                        $pc5 = 13; continue $sw5;
+                    case 17: {
+                        try {
+                        } catch (java.lang.Throwable $t) {
+                            $ex5 = $t;
+                            $pc5 = 13; continue $sw5;
+                        }
+                        return r1;
                     }
-                    r1 = true;
-                    { $pc5 = 17; continue $sw5; }
-                }
-                case 17: {
-                    try {
-                        monitor-exit(r0);
-                    } catch (java.lang.Throwable $t) {
-                        $ex5 = $t;
-                        $pc5 = 13; continue $sw5;
+                    case 8: {
+                        r6 = "FAILED: ";
+                        throw new java.lang.IllegalStateException();
                     }
-                    return r1;
-                }
-                case 8: {
-                    r6 = "FAILED: ";
-                    $pc5 = 13; continue $sw5;
-                }
-                case 13: {
-                    th = $ex5;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 15: {
-                    e = $ex5;
-                    try {
-                        io.fabric.sdk.android.Fabric.getLogger().FH("CrashlyticsCore", "Error occurred sending report " + r8, e);
-                    } catch (java.lang.Throwable $t) {
-                        $ex5 = $t;
-                        $pc5 = 13; continue $sw5;
+                    case 13: {
+                        th = $ex5;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
                     }
-                    { $pc5 = 17; continue $sw5; }
+                    case 15: {
+                        e = $ex5;
+                        try {
+                            io.fabric.sdk.android.Fabric.getLogger().FH("CrashlyticsCore", "Error occurred sending report " + r8, e);
+                        } catch (java.lang.Throwable $t) {
+                            $ex5 = $t;
+                            $pc5 = 13; continue $sw5;
+                        }
+                        { $pc5 = 17; continue $sw5; }
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 }

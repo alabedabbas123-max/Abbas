@@ -60,7 +60,7 @@ public class IO {
                         if ($t instanceof java.lang.Exception) { $pc0 = 9; continue $sw0; }
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
                     }
-                    $pc0 = 9; continue $sw0;
+                    return;
                 }
                 case 9: {
                     return;
@@ -129,10 +129,10 @@ public class IO {
                         if ($t instanceof java.lang.Exception) { $pc1 = 18; continue $sw1; }
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
                     }
-                    $pc1 = 17; continue $sw1;
+                    return;
                 }
                 case 17: {
-                    $pc1 = 18; continue $sw1;
+                    return;
                 }
                 case 18: {
                     return;

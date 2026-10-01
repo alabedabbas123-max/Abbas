@@ -53,7 +53,7 @@ public class CrashlyticsInitProvider extends android.content.ContentProvider {
                 }
                 case 10: {
                     r9 = false;
-                    $pc0 = 8; continue $sw0;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 8: {
                     e = $ex0;

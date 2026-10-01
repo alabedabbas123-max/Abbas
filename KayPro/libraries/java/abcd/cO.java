@@ -156,7 +156,7 @@ public class cO extends abcd.dO {
                 }
                 case 26: {
                     r11 = null;
-                    $pc1 = 16; continue $sw1;
+                    $pc1 = 11; continue $sw1;
                 }
                 case 16: {
                     e = $ex1;
@@ -218,7 +218,7 @@ public class cO extends abcd.dO {
                         if ($t instanceof abcd.BP) { $pc2 = 26; continue $sw2; }
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
                     }
-                    $pc2 = 26; continue $sw2;
+                    $pc2 = 11; continue $sw2;
                 }
                 case 26: {
                     e = $ex2;

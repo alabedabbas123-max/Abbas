@@ -56,7 +56,7 @@ public class D {
             switch ($pc1) {
                 case -1: {
                     r0 = null;
-                    $pc1 = 12; continue $sw1;
+                    $pc1 = 16; continue $sw1;
                 }
                 case 12: {
                     th = $ex1;
@@ -236,11 +236,11 @@ public class D {
                         if ($t instanceof java.lang.Exception) { $pc2 = 39; continue $sw2; }
                         $pc2 = 29; continue $sw2;
                     }
-                    $pc2 = 22; continue $sw2;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 22: {
                     r5 = null;
-                    $pc2 = 20; continue $sw2;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 20: {
                     th = th;
@@ -248,13 +248,13 @@ public class D {
                     { $pc2 = 26; continue $sw2; }
                 }
                 case 36: {
-                    $pc2 = 37; continue $sw2;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 37: {
-                    $pc2 = 38; continue $sw2;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 38: {
-                    $pc2 = 39; continue $sw2;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 39: {
                     throw new java.lang.IllegalStateException();

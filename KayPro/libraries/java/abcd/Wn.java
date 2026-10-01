@@ -158,7 +158,7 @@ public final class Wn extends abcd.Xt {
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
                     }
                     r3 = r3 + 1;
-                    $pc2 = 21; continue $sw2;
+                    $pc2 = 24; continue $sw2;
                 }
                 case 21: {
                     e = $ex2;

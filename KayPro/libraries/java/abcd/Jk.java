@@ -914,11 +914,11 @@ public class Jk {
                 }
                 case 31: {
                     th = th;
-                    $pc14 = 35; continue $sw14;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 35: {
                     th = th;
-                    $pc14 = 37; continue $sw14;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 37: {
                     th = th;

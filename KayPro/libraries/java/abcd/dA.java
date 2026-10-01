@@ -191,7 +191,7 @@ class dA extends io.fabric.sdk.android.services.common.Abstracta implements abcd
                 case 12: {
                     e = e;
                     r5 = null;
-                    $pc4 = 10; continue $sw4;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 10: {
                     th = th;

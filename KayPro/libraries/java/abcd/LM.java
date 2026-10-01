@@ -71,42 +71,43 @@ class LM extends abcd.FL {
 
     @Override
     public synchronized abcd.InterfaceqL j6(int r2) {
-        abcd.InterfaceqL r3 = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex3 = null;
-        int $pc3 = -1;
-        $sw3: while (true) {
-            switch ($pc3) {
-                case -1: {
-                    monitor-enter(this);
-                    $pc3 = 9; continue $sw3;
-                }
-                case 9: {
-                    th = $ex3;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 4: {
-                    if (this.DW == null) { $pc3 = 6; continue $sw3; }
-                    try {
-                        we();
-                    } catch (java.lang.Throwable $t) {
-                        $ex3 = $t;
-                        $pc3 = 9; continue $sw3;
+        synchronized (this) {
+            abcd.InterfaceqL r3 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex3 = null;
+            int $pc3 = -1;
+            $sw3: while (true) {
+                switch ($pc3) {
+                    case -1: {
+                        $pc3 = 4; continue $sw3;
                     }
-                    $pc3 = 6; continue $sw3;
-                }
-                case 6: {
-                    try {
-                        r3 = super.j6(r2);
-                    } catch (java.lang.Throwable $t) {
-                        $ex3 = $t;
-                        $pc3 = 9; continue $sw3;
+                    case 9: {
+                        th = $ex3;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
                     }
-                    monitor-exit(this);
-                    return r3;
+                    case 4: {
+                        if (this.DW == null) { $pc3 = 6; continue $sw3; }
+                        try {
+                            we();
+                        } catch (java.lang.Throwable $t) {
+                            $ex3 = $t;
+                            $pc3 = 9; continue $sw3;
+                        }
+                        $pc3 = 6; continue $sw3;
+                    }
+                    case 6: {
+                        try {
+                            r3 = super.j6(r2);
+                        } catch (java.lang.Throwable $t) {
+                            $ex3 = $t;
+                            $pc3 = 9; continue $sw3;
+                        }
+                        return r3;
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 
@@ -134,85 +135,86 @@ class LM extends abcd.FL {
 
     @Override
     public synchronized int tp() {
-        int r0 = 0;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex5 = null;
-        int $pc5 = -1;
-        $sw5: while (true) {
-            switch ($pc5) {
-                case -1: {
-                    monitor-enter(this);
-                    $pc5 = 9; continue $sw5;
-                }
-                case 9: {
-                    th = $ex5;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 4: {
-                    if (this.DW == null) { $pc5 = 6; continue $sw5; }
-                    try {
-                        we();
-                    } catch (java.lang.Throwable $t) {
-                        $ex5 = $t;
-                        $pc5 = 9; continue $sw5;
+        synchronized (this) {
+            int r0 = 0;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex5 = null;
+            int $pc5 = -1;
+            $sw5: while (true) {
+                switch ($pc5) {
+                    case -1: {
+                        $pc5 = 4; continue $sw5;
                     }
-                    $pc5 = 6; continue $sw5;
-                }
-                case 6: {
-                    try {
-                        r0 = super.tp();
-                    } catch (java.lang.Throwable $t) {
-                        $ex5 = $t;
-                        $pc5 = 9; continue $sw5;
+                    case 9: {
+                        th = $ex5;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
                     }
-                    monitor-exit(this);
-                    return r0;
+                    case 4: {
+                        if (this.DW == null) { $pc5 = 6; continue $sw5; }
+                        try {
+                            we();
+                        } catch (java.lang.Throwable $t) {
+                            $ex5 = $t;
+                            $pc5 = 9; continue $sw5;
+                        }
+                        $pc5 = 6; continue $sw5;
+                    }
+                    case 6: {
+                        try {
+                            r0 = super.tp();
+                        } catch (java.lang.Throwable $t) {
+                            $ex5 = $t;
+                            $pc5 = 9; continue $sw5;
+                        }
+                        return r0;
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 
     @Override
     public synchronized java.util.Enumeration u7() {
-        java.util.Enumeration r0 = null;
-        abcd.KM r1 = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex6 = null;
-        int $pc6 = -1;
-        $sw6: while (true) {
-            switch ($pc6) {
-                case -1: {
-                    monitor-enter(this);
-                    $pc6 = 11; continue $sw6;
-                }
-                case 11: {
-                    th = $ex6;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 4: {
-                    if (this.DW != null) { $pc6 = 8; continue $sw6; }
-                    try {
-                        r0 = super.u7();
-                    } catch (java.lang.Throwable $t) {
-                        $ex6 = $t;
-                        $pc6 = 11; continue $sw6;
+        synchronized (this) {
+            java.util.Enumeration r0 = null;
+            abcd.KM r1 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex6 = null;
+            int $pc6 = -1;
+            $sw6: while (true) {
+                switch ($pc6) {
+                    case -1: {
+                        $pc6 = 4; continue $sw6;
                     }
-                    monitor-exit(this);
-                    return r0;
-                }
-                case 8: {
-                    try {
-                        r1 = new abcd.KM(this.DW);
-                    } catch (java.lang.Throwable $t) {
-                        $ex6 = $t;
-                        $pc6 = 11; continue $sw6;
+                    case 11: {
+                        th = $ex6;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
                     }
-                    monitor-exit(this);
-                    return r1;
+                    case 4: {
+                        if (this.DW != null) { $pc6 = 8; continue $sw6; }
+                        try {
+                            r0 = super.u7();
+                        } catch (java.lang.Throwable $t) {
+                            $ex6 = $t;
+                            $pc6 = 11; continue $sw6;
+                        }
+                        return r0;
+                    }
+                    case 8: {
+                        try {
+                            r1 = new abcd.KM(this.DW);
+                        } catch (java.lang.Throwable $t) {
+                            $ex6 = $t;
+                            $pc6 = 11; continue $sw6;
+                        }
+                        return r1;
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 

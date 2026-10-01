@@ -522,7 +522,7 @@ public abstract class AbstractjJ {
                         if ($t instanceof java.io.IOException) { $pc13 = 17; continue $sw13; }
                         $pc13 = 13; continue $sw13;
                     }
-                    $pc13 = 13; continue $sw13;
+                    $pc13 = 15; continue $sw13;
                 }
                 case 13: {
                     th = $ex13;
@@ -549,10 +549,10 @@ public abstract class AbstractjJ {
                     return;
                 }
                 case 17: {
-                    $pc13 = 18; continue $sw13;
+                    return;
                 }
                 case 18: {
-                    $pc13 = 19; continue $sw13;
+                    return;
                 }
                 case 19: {
                     return;
@@ -600,7 +600,7 @@ public abstract class AbstractjJ {
                     return r1;
                 }
                 case 10: {
-                    $pc14 = 11; continue $sw14;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 11: {
                     throw new java.lang.IllegalStateException();

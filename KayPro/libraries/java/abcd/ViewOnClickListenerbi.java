@@ -117,7 +117,7 @@ class ViewOnClickListenerbi implements android.view.View.OnClickListener {
                         $ex0 = $t;
                         $pc0 = 26; continue $sw0;
                     }
-                    $pc0 = 33; continue $sw0;
+                    return;
                 }
                 case 33: {
                     return;

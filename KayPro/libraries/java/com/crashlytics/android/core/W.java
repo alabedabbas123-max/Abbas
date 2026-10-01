@@ -524,7 +524,7 @@ class W {
                         $ex10 = $t;
                         $pc10 = 20; continue $sw10;
                     }
-                    $pc10 = 20; continue $sw10;
+                    $pc10 = 21; continue $sw10;
                 }
                 case 20: {
                     th = th;
@@ -538,7 +538,7 @@ class W {
                 case 15: {
                     e = e;
                     r5 = null;
-                    $pc10 = 13; continue $sw10;
+                    return;
                 }
                 case 13: {
                     th = th;
@@ -1253,7 +1253,7 @@ class W {
                 }
                 case 9: {
                     r3 = r3 + 1;
-                    $pc28 = 7; continue $sw28;
+                    $pc28 = 10; continue $sw28;
                 }
                 case 7: {
                     e = $ex28;
@@ -1430,7 +1430,7 @@ class W {
                 case 22: {
                     e = e;
                     r10 = null;
-                    $pc30 = 20; continue $sw30;
+                    $pc30 = 8; continue $sw30;
                 }
                 case 20: {
                     th = th;
@@ -1695,7 +1695,7 @@ class W {
                     }
                     io.fabric.sdk.android.services.common.i.j6(r2, "Failed to flush to non-fatal file.");
                     r1 = r2;
-                    $pc35 = 11; continue $sw35;
+                    $pc35 = 30; continue $sw35;
                 }
                 case 11: {
                     th = th;
@@ -1713,12 +1713,12 @@ class W {
                 }
                 case 29: {
                     th = th;
-                    $pc35 = 19; continue $sw35;
+                    return;
                 }
                 case 19: {
                     e = e;
                     r13 = null;
-                    $pc35 = 17; continue $sw35;
+                    return;
                 }
                 case 17: {
                     th = th;
@@ -2047,30 +2047,31 @@ class W {
     }
 
     synchronized void j6(com.crashlytics.android.core.ia.b r10, java.lang.Thread r11, java.lang.Throwable r12, boolean r13) {
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex44 = null;
-        int $pc44 = -1;
-        $sw44: while (true) {
-            switch ($pc44) {
-                case -1: {
-                    monitor-enter(this);
-                    try {
-                        io.fabric.sdk.android.Fabric.getLogger().Hw("CrashlyticsCore", "Crashlytics is handling uncaught exception \"" + r12 + "\" from thread " + r11.getName());
-                        this.U2.j6();
-                        this.EQ.DW(new com.crashlytics.android.core.T(this, new java.util.Date(), r11, r12, r10, r13));
-                    } catch (java.lang.Throwable $t) {
-                        $ex44 = $t;
-                        $pc44 = 6; continue $sw44;
+        synchronized (this) {
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex44 = null;
+            int $pc44 = -1;
+            $sw44: while (true) {
+                switch ($pc44) {
+                    case -1: {
+                        try {
+                            io.fabric.sdk.android.Fabric.getLogger().Hw("CrashlyticsCore", "Crashlytics is handling uncaught exception \"" + r12 + "\" from thread " + r11.getName());
+                            this.U2.j6();
+                            this.EQ.DW(new com.crashlytics.android.core.T(this, new java.util.Date(), r11, r12, r10, r13));
+                        } catch (java.lang.Throwable $t) {
+                            $ex44 = $t;
+                            $pc44 = 6; continue $sw44;
+                        }
+                        return;
                     }
-                    monitor-exit(this);
-                    return;
+                    case 6: {
+                        th = $ex44;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 6: {
-                    th = $ex44;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 

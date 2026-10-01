@@ -29,32 +29,33 @@ public class qw {
     }
 
     public static void DW() {
-        java.lang.String r0 = null;
-        java.lang.Object r1 = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex0 = null;
-        int $pc0 = -1;
-        $sw0: while (true) {
-            switch ($pc0) {
-                case -1: {
-                    r0 = android.provider.Settings.Secure.getString(abcd.wu.j6().getContentResolver(), "android_id");
-                    r1 = gn;
-                    monitor-enter(r1);
-                    try {
-                        Hw = r0;
-                        monitor-exit(r1);
-                    } catch (java.lang.Throwable $t) {
-                        $ex0 = $t;
-                        $pc0 = 7; continue $sw0;
+        synchronized (gn) {
+            java.lang.String r0 = null;
+            java.lang.Object r1 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex0 = null;
+            int $pc0 = -1;
+            $sw0: while (true) {
+                switch ($pc0) {
+                    case -1: {
+                        r0 = android.provider.Settings.Secure.getString(abcd.wu.j6().getContentResolver(), "android_id");
+                        r1 = gn;
+                        try {
+                            Hw = r0;
+                        } catch (java.lang.Throwable $t) {
+                            $ex0 = $t;
+                            $pc0 = 7; continue $sw0;
+                        }
+                        return;
                     }
-                    return;
+                    case 7: {
+                        th = $ex0;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 7: {
-                    th = $ex0;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 
@@ -402,7 +403,7 @@ public class qw {
                     th = $ex2;
                     r10 = th;
                     r3 = th;
-                    $pc2 = 51; continue $sw2;
+                    $pc2 = 58; continue $sw2;
                 }
                 case 51: {
                     th = $ex2;
@@ -461,7 +462,7 @@ public class qw {
                     th = $ex2;
                     r12 = th;
                     r11 = th;
-                    $pc2 = 66; continue $sw2;
+                    $pc2 = 13; continue $sw2;
                 }
                 case 66: {
                     th = $ex2;
@@ -483,7 +484,7 @@ public class qw {
                         $ex2 = $t;
                         $pc2 = 69; continue $sw2;
                     }
-                    $pc2 = 69; continue $sw2;
+                    $pc2 = 7; continue $sw2;
                 }
                 case 69: {
                     th = th;
@@ -499,7 +500,7 @@ public class qw {
                         $ex2 = $t;
                         $pc2 = 72; continue $sw2;
                     }
-                    $pc2 = 72; continue $sw2;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 72: {
                     th = $ex2;
@@ -575,47 +576,48 @@ public class qw {
     }
 
     private static abcd.qw.a j6(boolean r3) {
-        boolean r0 = false;
-        java.lang.Object r1 = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex5 = null;
-        int $pc5 = -1;
-        $sw5: while (true) {
-            switch ($pc5) {
-                case -1: {
-                    if (FH == false) { $pc5 = 6; continue $sw5; }
-                    return null;
-                }
-                case 6: {
-                    r0 = false;
-                    if (v5() == true) { $pc5 = 16; continue $sw5; }
-                    r1 = gn;
-                    monitor-enter(r1);
-                    try {
-                        r0 = Zo();
-                        monitor-exit(r1);
-                    } catch (java.lang.Throwable $t) {
-                        $ex5 = $t;
-                        $pc5 = 13; continue $sw5;
+        synchronized (gn) {
+            boolean r0 = false;
+            java.lang.Object r1 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex5 = null;
+            int $pc5 = -1;
+            $sw5: while (true) {
+                switch ($pc5) {
+                    case -1: {
+                        if (FH == false) { $pc5 = 6; continue $sw5; }
+                        return null;
                     }
-                    j6 = java.lang.System.currentTimeMillis();
-                    $pc5 = 18; continue $sw5;
+                    case 6: {
+                        r0 = false;
+                        if (v5() == true) { $pc5 = 16; continue $sw5; }
+                        r1 = gn;
+                        try {
+                            r0 = Zo();
+                        } catch (java.lang.Throwable $t) {
+                            $ex5 = $t;
+                            $pc5 = 13; continue $sw5;
+                        }
+                        j6 = java.lang.System.currentTimeMillis();
+                        $pc5 = 18; continue $sw5;
+                    }
+                    case 18: {
+                        VH();
+                        return new abcd.qw.a(abcd.Aw.j6(v5), r0);
+                    }
+                    case 13: {
+                        th = $ex5;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    case 16: {
+                        if (r3 == false) { $pc5 = 18; continue $sw5; }
+                        j6 = java.lang.System.currentTimeMillis();
+                        { $pc5 = 18; continue $sw5; }
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 18: {
-                    VH();
-                    return new abcd.qw.a(abcd.Aw.j6(v5), r0);
-                }
-                case 13: {
-                    th = $ex5;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 16: {
-                    if (r3 == false) { $pc5 = 18; continue $sw5; }
-                    j6 = java.lang.System.currentTimeMillis();
-                    { $pc5 = 18; continue $sw5; }
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 
@@ -728,7 +730,7 @@ public class qw {
                 case 8: {
                     th = th;
                     r4 = null;
-                    $pc6 = 25; continue $sw6;
+                    $pc6 = 35; continue $sw6;
                 }
                 case 25: {
                     th = $ex6;
@@ -746,12 +748,12 @@ public class qw {
                         $ex6 = $t;
                         $pc6 = 32; continue $sw6;
                     }
-                    $pc6 = 32; continue $sw6;
+                    return;
                 }
                 case 32: {
                     th = $ex6;
                     r1.addSuppressed(th);
-                    $pc6 = 27; continue $sw6;
+                    return;
                 }
                 case 27: {
                     th = $ex6;

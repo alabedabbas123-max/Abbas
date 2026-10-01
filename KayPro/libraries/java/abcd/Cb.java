@@ -171,7 +171,7 @@ public class Cb {
         int r0 = 0;
         int r3 = 0;
         java.lang.Throwable $ex3 = null;
-        int $pc3 = 21;
+        int $pc3 = 3;
         $sw3: while (true) {
             switch ($pc3) {
                 case 21: {
@@ -215,7 +215,7 @@ public class Cb {
                     $pc3 = 29; continue $sw3;
                 }
                 case 29: {
-                    $pc3 = 17; continue $sw3;
+                    $pc3 = 10; continue $sw3;
                 }
                 case 17: {
                     th = th;

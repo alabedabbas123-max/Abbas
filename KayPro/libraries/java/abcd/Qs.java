@@ -131,49 +131,49 @@ public final class Qs implements abcd.Rs, java.lang.Comparable<abcd.Qs> {
     }
 
     private static abcd.Qs DW(abcd.Qs r3) {
-        java.util.HashMap<java.lang.String, abcd.Qs> r0 = null;
-        java.lang.String r1 = null;
-        abcd.Qs r2 = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex1 = null;
-        int $pc1 = -1;
-        $sw1: while (true) {
-            switch ($pc1) {
-                case -1: {
-                    r0 = j6;
-                    monitor-enter(r0);
-                    try {
-                        r1 = r3.J8();
-                        r2 = j6.get(r1);
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        $pc1 = 11; continue $sw1;
+        synchronized (j6) {
+            java.util.HashMap<java.lang.String, abcd.Qs> r0 = null;
+            java.lang.String r1 = null;
+            abcd.Qs r2 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex1 = null;
+            int $pc1 = -1;
+            $sw1: while (true) {
+                switch ($pc1) {
+                    case -1: {
+                        r0 = j6;
+                        try {
+                            r1 = r3.J8();
+                            r2 = j6.get(r1);
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            $pc1 = 11; continue $sw1;
+                        }
+                        if (r2 == null) { $pc1 = 8; continue $sw1; }
+                        try {
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            $pc1 = 11; continue $sw1;
+                        }
+                        return r2;
                     }
-                    if (r2 == null) { $pc1 = 8; continue $sw1; }
-                    try {
-                        monitor-exit(r0);
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        $pc1 = 11; continue $sw1;
+                    case 8: {
+                        try {
+                            j6.put(r1, r3);
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            $pc1 = 11; continue $sw1;
+                        }
+                        return r3;
                     }
-                    return r2;
-                }
-                case 8: {
-                    try {
-                        j6.put(r1, r3);
-                        monitor-exit(r0);
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        $pc1 = 11; continue $sw1;
+                    case 11: {
+                        th = $ex1;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
                     }
-                    return r3;
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 11: {
-                    th = $ex1;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 
@@ -219,105 +219,106 @@ public final class Qs implements abcd.Rs, java.lang.Comparable<abcd.Qs> {
     }
 
     public static abcd.Qs j6(java.lang.String r7) {
-        java.util.HashMap<java.lang.String, abcd.Qs> r0 = null;
-        abcd.Qs r1 = null;
-        char r2 = 0;
-        int r3 = 0;
-        int r4 = 0;
-        int r5 = 0;
-        char r6 = 0;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex4 = null;
-        int $pc4 = -1;
-        $sw4: while (true) {
-            switch ($pc4) {
-                case -1: {
-                    r0 = j6;
-                    monitor-enter(r0);
-                    try {
-                        r1 = j6.get(r7);
-                        monitor-exit(r0);
-                    } catch (java.lang.Throwable $t) {
-                        $ex4 = $t;
-                        $pc4 = 48; continue $sw4;
+        synchronized (j6) {
+            java.util.HashMap<java.lang.String, abcd.Qs> r0 = null;
+            abcd.Qs r1 = null;
+            char r2 = 0;
+            int r3 = 0;
+            int r4 = 0;
+            int r5 = 0;
+            char r6 = 0;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex4 = null;
+            int $pc4 = -1;
+            $sw4: while (true) {
+                switch ($pc4) {
+                    case -1: {
+                        r0 = j6;
+                        try {
+                            r1 = j6.get(r7);
+                        } catch (java.lang.Throwable $t) {
+                            $ex4 = $t;
+                            $pc4 = 48; continue $sw4;
+                        }
+                        if (r1 == null) { $pc4 = 55; continue $sw4; }
+                        return r1;
                     }
-                    if (r1 == null) { $pc4 = 55; continue $sw4; }
-                    return r1;
-                }
-                case 55: {
-                    try {
-                        r2 = r7.charAt(0);
-                    } catch (java.lang.Throwable $t) {
-                        $ex4 = $t;
-                        if ($t instanceof java.lang.NullPointerException) { $pc4 = 44; continue $sw4; }
-                        if ($t instanceof java.lang.IndexOutOfBoundsException) { $pc4 = 46; continue $sw4; }
-                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    case 55: {
+                        try {
+                            r2 = r7.charAt(0);
+                        } catch (java.lang.Throwable $t) {
+                            $ex4 = $t;
+                            if ($t instanceof java.lang.NullPointerException) { $pc4 = 44; continue $sw4; }
+                            if ($t instanceof java.lang.IndexOutOfBoundsException) { $pc4 = 46; continue $sw4; }
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                        }
+                        $pc4 = 11; continue $sw4;
                     }
-                    $pc4 = 11; continue $sw4;
+                    case 11: {
+                        if (r2 == '[') { $pc4 = 13; continue $sw4; }
+                        r3 = r7.length();
+                        if (r2 != 'L') { $pc4 = 43; continue $sw4; }
+                        r4 = r3 - 1;
+                        if (r7.charAt(r4) != ';') { $pc4 = 43; continue $sw4; }
+                        r5 = 1;
+                        $pc4 = 19; continue $sw4;
+                    }
+                    case 19: {
+                        if (r5 >= r4) { $pc4 = 41; continue $sw4; }
+                        r6 = r7.charAt(r5);
+                        if (r6 == '(') { $pc4 = 39; continue $sw4; }
+                        if (r6 == ')') { $pc4 = 39; continue $sw4; }
+                        if (r6 == '.') { $pc4 = 39; continue $sw4; }
+                        if (r6 == '/') { $pc4 = 31; continue $sw4; }
+                        if (r6 == ';') { $pc4 = 39; continue $sw4; }
+                        if (r6 == '[') { $pc4 = 39; continue $sw4; }
+                        $pc4 = 35; continue $sw4;
+                    }
+                    case 35: {
+                        r5 = r5 + 1;
+                        { $pc4 = 19; continue $sw4; }
+                    }
+                    case 31: {
+                        if (r5 == 1) { $pc4 = 37; continue $sw4; }
+                        if (r5 == r4) { $pc4 = 37; continue $sw4; }
+                        if (r7.charAt(r5 - 1) != '/') { $pc4 = 35; continue $sw4; }
+                        $pc4 = 37; continue $sw4;
+                    }
+                    case 37: {
+                        throw new java.lang.IllegalArgumentException("bad descriptor: " + r7);
+                    }
+                    case 39: {
+                        throw new java.lang.IllegalArgumentException("bad descriptor: " + r7);
+                    }
+                    case 41: {
+                        return DW(new abcd.Qs(r7, 9));
+                    }
+                    case 43: {
+                        throw new java.lang.IllegalArgumentException("bad descriptor: " + r7);
+                    }
+                    case 13: {
+                        return j6(r7.substring(1)).Hw();
+                    }
+                    case 47: {
+                        throw new java.lang.IllegalArgumentException("descriptor is empty");
+                    }
+                    case 45: {
+                        throw new java.lang.NullPointerException("descriptor == null");
+                    }
+                    case 48: {
+                        th = $ex4;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    case 44: {
+                        throw new java.lang.IllegalStateException();
+                    }
+                    case 46: {
+                        throw new java.lang.IllegalStateException();
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 11: {
-                    if (r2 == '[') { $pc4 = 13; continue $sw4; }
-                    r3 = r7.length();
-                    if (r2 != 'L') { $pc4 = 43; continue $sw4; }
-                    r4 = r3 - 1;
-                    if (r7.charAt(r4) != ';') { $pc4 = 43; continue $sw4; }
-                    r5 = 1;
-                    $pc4 = 19; continue $sw4;
-                }
-                case 19: {
-                    if (r5 >= r4) { $pc4 = 41; continue $sw4; }
-                    r6 = r7.charAt(r5);
-                    if (r6 == '(') { $pc4 = 39; continue $sw4; }
-                    if (r6 == ')') { $pc4 = 39; continue $sw4; }
-                    if (r6 == '.') { $pc4 = 39; continue $sw4; }
-                    if (r6 == '/') { $pc4 = 31; continue $sw4; }
-                    if (r6 == ';') { $pc4 = 39; continue $sw4; }
-                    if (r6 == '[') { $pc4 = 39; continue $sw4; }
-                    $pc4 = 35; continue $sw4;
-                }
-                case 35: {
-                    r5 = r5 + 1;
-                    { $pc4 = 19; continue $sw4; }
-                }
-                case 31: {
-                    if (r5 == 1) { $pc4 = 37; continue $sw4; }
-                    if (r5 == r4) { $pc4 = 37; continue $sw4; }
-                    if (r7.charAt(r5 - 1) != '/') { $pc4 = 35; continue $sw4; }
-                    $pc4 = 37; continue $sw4;
-                }
-                case 37: {
-                    throw new java.lang.IllegalArgumentException("bad descriptor: " + r7);
-                }
-                case 39: {
-                    throw new java.lang.IllegalArgumentException("bad descriptor: " + r7);
-                }
-                case 41: {
-                    return DW(new abcd.Qs(r7, 9));
-                }
-                case 43: {
-                    throw new java.lang.IllegalArgumentException("bad descriptor: " + r7);
-                }
-                case 13: {
-                    return j6(r7.substring(1)).Hw();
-                }
-                case 47: {
-                    throw new java.lang.IllegalArgumentException("descriptor is empty");
-                }
-                case 45: {
-                    throw new java.lang.NullPointerException("descriptor == null");
-                }
-                case 48: {
-                    th = $ex4;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 44: {
-                    $pc4 = 46; continue $sw4;
-                }
-                case 46: {
-                    throw new java.lang.IllegalStateException();
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 

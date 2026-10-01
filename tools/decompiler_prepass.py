@@ -39,7 +39,18 @@ ENUM_VALUEOF = re.compile(
 
 
 def fix_numeric(src):
-    return NUM_ANNOT.sub(r'\1', src)
+    def sub(m):
+        text = m.group(1)
+        try:
+            value = int(text)
+        except ValueError:
+            return text
+        # jadx folded the `L` suffix into the annotation it printed; restore it
+        # whenever the literal no longer fits in an int.
+        if value > 2147483647 or value < -2147483648:
+            return text + 'L'
+        return text
+    return NUM_ANNOT.sub(sub, src)
 
 
 def fix_qq(src):

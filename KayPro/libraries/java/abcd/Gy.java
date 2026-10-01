@@ -1834,42 +1834,43 @@ public final class Gy implements java.lang.Cloneable {
     }
 
     synchronized abcd.Hy tp() {
-        abcd.Hy r0 = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex24 = null;
-        int $pc24 = -1;
-        $sw24: while (true) {
-            switch ($pc24) {
-                case -1: {
-                    monitor-enter(this);
-                    $pc24 = 9; continue $sw24;
-                }
-                case 9: {
-                    th = $ex24;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 4: {
-                    if (this.et != null) { $pc24 = 6; continue $sw24; }
-                    try {
-                        this.et = new abcd.Hy();
-                    } catch (java.lang.Throwable $t) {
-                        $ex24 = $t;
-                        $pc24 = 9; continue $sw24;
+        synchronized (this) {
+            abcd.Hy r0 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex24 = null;
+            int $pc24 = -1;
+            $sw24: while (true) {
+                switch ($pc24) {
+                    case -1: {
+                        $pc24 = 4; continue $sw24;
                     }
-                    $pc24 = 6; continue $sw24;
-                }
-                case 6: {
-                    try {
-                        r0 = this.et;
-                    } catch (java.lang.Throwable $t) {
-                        $ex24 = $t;
-                        $pc24 = 9; continue $sw24;
+                    case 9: {
+                        th = $ex24;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
                     }
-                    monitor-exit(this);
-                    return r0;
+                    case 4: {
+                        if (this.et != null) { $pc24 = 6; continue $sw24; }
+                        try {
+                            this.et = new abcd.Hy();
+                        } catch (java.lang.Throwable $t) {
+                            $ex24 = $t;
+                            $pc24 = 9; continue $sw24;
+                        }
+                        $pc24 = 6; continue $sw24;
+                    }
+                    case 6: {
+                        try {
+                            r0 = this.et;
+                        } catch (java.lang.Throwable $t) {
+                            $ex24 = $t;
+                            $pc24 = 9; continue $sw24;
+                        }
+                        return r0;
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 

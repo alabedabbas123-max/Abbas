@@ -165,7 +165,7 @@ class QJ extends abcd.AbstractaI implements abcd.LI {
                         if ($t instanceof java.io.IOException) { $pc3 = 13; continue $sw3; }
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
                     }
-                    $pc3 = 13; continue $sw3;
+                    return;
                 }
                 case 13: {
                     e = $ex3;
@@ -428,7 +428,7 @@ class QJ extends abcd.AbstractaI implements abcd.LI {
                 }
                 case 32: {
                     th = th;
-                    $pc5 = 35; continue $sw5;
+                    $pc5 = 38; continue $sw5;
                 }
                 case 35: {
                     th = th;
@@ -447,7 +447,7 @@ class QJ extends abcd.AbstractaI implements abcd.LI {
                 }
                 case 37: {
                     th = th;
-                    $pc5 = 40; continue $sw5;
+                    $pc5 = 52; continue $sw5;
                 }
                 case 40: {
                     e = e;
@@ -611,7 +611,7 @@ class QJ extends abcd.AbstractaI implements abcd.LI {
                         if ($t instanceof java.io.IOException) { $pc7 = 24; continue $sw7; }
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
                     }
-                    $pc7 = 24; continue $sw7;
+                    $pc7 = 27; continue $sw7;
                 }
                 case 24: {
                     e = $ex7;

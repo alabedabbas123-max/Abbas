@@ -483,19 +483,19 @@ public class Dv {
                     this.v5 = new java.util.HashMap();
                     this.v5.putAll(this.FH);
                     this.v5.putAll(this.Hw);
-                    $pc4 = 70; continue $sw4;
+                    return;
                 }
                 case 70: {
-                    $pc4 = 71; continue $sw4;
+                    return;
                 }
                 case 71: {
-                    $pc4 = 72; continue $sw4;
+                    return;
                 }
                 case 72: {
-                    $pc4 = 73; continue $sw4;
+                    return;
                 }
                 case 73: {
-                    $pc4 = 74; continue $sw4;
+                    return;
                 }
                 case 74: {
                     return;
@@ -623,7 +623,7 @@ public class Dv {
                     { $pc6 = 4; continue $sw6; }
                 }
                 case 31: {
-                    $pc6 = 32; continue $sw6;
+                    return;
                 }
                 case 32: {
                     return;
@@ -689,7 +689,7 @@ public class Dv {
                     return;
                 }
                 case 14: {
-                    $pc7 = 15; continue $sw7;
+                    return;
                 }
                 case 15: {
                     return;
@@ -862,117 +862,118 @@ public class Dv {
     }
 
     public java.lang.String j6(java.lang.CharSequence r4) {
-        java.util.HashMap<java.lang.CharSequence, java.lang.String> r1 = null;
-        java.lang.Object r2 = null;
-        java.lang.String r5 = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex9 = null;
-        int $pc9 = -1;
-        $sw9: while (true) {
-            switch ($pc9) {
-                case -1: {
-                    if (r4 != null) { $pc9 = 5; continue $sw9; }
-                    $pc9 = 23; continue $sw9;
-                }
-                case 23: {
-                    return null;
-                }
-                case 5: {
-                    if (r4.length() == 0) { $pc9 = 23; continue $sw9; }
-                    r1 = this.v5;
-                    if (r1 != null) { $pc9 = 22; continue $sw9; }
-                    abcd.yw.j6("String resources", "getResourceName() before loading Strings");
-                    r2 = this.Zo;
-                    monitor-enter(r2);
-                    $pc9 = 18; continue $sw9;
-                }
-                case 18: {
-                    th = $ex9;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 12: {
-                    if (this.v5 != null) { $pc9 = 16; continue $sw9; }
-                    try {
-                        r5 = this.v5.get(r4);
-                        monitor-exit(r2);
-                    } catch (java.lang.Throwable $t) {
-                        $ex9 = $t;
-                        $pc9 = 18; continue $sw9;
+        synchronized (this.Zo) {
+            java.util.HashMap<java.lang.CharSequence, java.lang.String> r1 = null;
+            java.lang.Object r2 = null;
+            java.lang.String r5 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex9 = null;
+            int $pc9 = -1;
+            $sw9: while (true) {
+                switch ($pc9) {
+                    case -1: {
+                        if (r4 != null) { $pc9 = 5; continue $sw9; }
+                        $pc9 = 23; continue $sw9;
                     }
-                    return r5;
-                }
-                case 16: {
-                    try {
-                        monitor-exit(r2);
-                    } catch (java.lang.Throwable $t) {
-                        $ex9 = $t;
-                        $pc9 = 18; continue $sw9;
+                    case 23: {
+                        return null;
                     }
-                    return null;
+                    case 5: {
+                        if (r4.length() == 0) { $pc9 = 23; continue $sw9; }
+                        r1 = this.v5;
+                        if (r1 != null) { $pc9 = 22; continue $sw9; }
+                        abcd.yw.j6("String resources", "getResourceName() before loading Strings");
+                        r2 = this.Zo;
+                        $pc9 = 12; continue $sw9;
+                    }
+                    case 18: {
+                        th = $ex9;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    case 12: {
+                        if (this.v5 != null) { $pc9 = 16; continue $sw9; }
+                        try {
+                            r5 = this.v5.get(r4);
+                        } catch (java.lang.Throwable $t) {
+                            $ex9 = $t;
+                            $pc9 = 18; continue $sw9;
+                        }
+                        return r5;
+                    }
+                    case 16: {
+                        try {
+                        } catch (java.lang.Throwable $t) {
+                            $ex9 = $t;
+                            $pc9 = 18; continue $sw9;
+                        }
+                        return null;
+                    }
+                    case 22: {
+                        return r1.get(r4);
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 22: {
-                    return r1.get(r4);
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 
     public void j6(java.util.List<java.lang.String> r4) {
-        java.util.HashMap<java.lang.CharSequence, java.lang.String> r0 = null;
-        java.util.Iterator<java.lang.String> r5 = null;
-        java.lang.String r1 = null;
-        java.lang.Object r6 = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex10 = null;
-        int $pc10 = -1;
-        $sw10: while (true) {
-            switch ($pc10) {
-                case -1: {
-                    r0 = new java.util.HashMap();
-                    r5 = r4.iterator();
-                    $pc10 = 4; continue $sw10;
-                }
-                case 4: {
-                    if (r5.hasNext() == false) { $pc10 = 8; continue $sw10; }
-                    r1 = r5.next();
-                    if (r0.containsKey(r1) == true) { $pc10 = 4; continue $sw10; }
-                    r0.put(r1, DW(r1));
-                    { $pc10 = 4; continue $sw10; }
-                }
-                case 8: {
-                    this.Hw = r0;
-                    r6 = this.Zo;
-                    monitor-enter(r6);
-                    $pc10 = 15; continue $sw10;
-                }
-                case 15: {
-                    th = $ex10;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 11: {
-                    if (this.v5 == null) { $pc10 = 13; continue $sw10; }
-                    try {
-                        this.v5 = new java.util.HashMap();
-                        this.v5.putAll(this.FH);
-                        this.v5.putAll(this.Hw);
-                    } catch (java.lang.Throwable $t) {
-                        $ex10 = $t;
-                        $pc10 = 15; continue $sw10;
+        synchronized (this.Zo) {
+            java.util.HashMap<java.lang.CharSequence, java.lang.String> r0 = null;
+            java.util.Iterator<java.lang.String> r5 = null;
+            java.lang.String r1 = null;
+            java.lang.Object r6 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex10 = null;
+            int $pc10 = -1;
+            $sw10: while (true) {
+                switch ($pc10) {
+                    case -1: {
+                        r0 = new java.util.HashMap();
+                        r5 = r4.iterator();
+                        $pc10 = 4; continue $sw10;
                     }
-                    $pc10 = 13; continue $sw10;
-                }
-                case 13: {
-                    try {
-                        monitor-exit(r6);
-                    } catch (java.lang.Throwable $t) {
-                        $ex10 = $t;
-                        $pc10 = 15; continue $sw10;
+                    case 4: {
+                        if (r5.hasNext() == false) { $pc10 = 8; continue $sw10; }
+                        r1 = r5.next();
+                        if (r0.containsKey(r1) == true) { $pc10 = 4; continue $sw10; }
+                        r0.put(r1, DW(r1));
+                        { $pc10 = 4; continue $sw10; }
                     }
-                    return;
+                    case 8: {
+                        this.Hw = r0;
+                        r6 = this.Zo;
+                        $pc10 = 11; continue $sw10;
+                    }
+                    case 15: {
+                        th = $ex10;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    case 11: {
+                        if (this.v5 == null) { $pc10 = 13; continue $sw10; }
+                        try {
+                            this.v5 = new java.util.HashMap();
+                            this.v5.putAll(this.FH);
+                            this.v5.putAll(this.Hw);
+                        } catch (java.lang.Throwable $t) {
+                            $ex10 = $t;
+                            $pc10 = 15; continue $sw10;
+                        }
+                        $pc10 = 13; continue $sw10;
+                    }
+                    case 13: {
+                        try {
+                        } catch (java.lang.Throwable $t) {
+                            $ex10 = $t;
+                            $pc10 = 15; continue $sw10;
+                        }
+                        return;
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 }

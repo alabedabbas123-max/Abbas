@@ -212,7 +212,7 @@ public class v {
             switch ($pc5) {
                 case -1: {
                     this.FH.lock();
-                    $pc5 = 16; continue $sw5;
+                    $pc5 = 4; continue $sw5;
                 }
                 case 16: {
                     th = $ex5;
@@ -278,43 +278,44 @@ public class v {
     }
 
     synchronized io.fabric.sdk.android.services.common.ClassB DW() {
-        io.fabric.sdk.android.services.common.ClassB r0 = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex7 = null;
-        int $pc7 = -1;
-        $sw7: while (true) {
-            switch ($pc7) {
-                case -1: {
-                    monitor-enter(this);
-                    $pc7 = 9; continue $sw7;
-                }
-                case 9: {
-                    th = $ex7;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 4: {
-                    if (this.J0 == true) { $pc7 = 6; continue $sw7; }
-                    try {
-                        this.we = this.EQ.j6();
-                        this.J0 = true;
-                    } catch (java.lang.Throwable $t) {
-                        $ex7 = $t;
-                        $pc7 = 9; continue $sw7;
+        synchronized (this) {
+            io.fabric.sdk.android.services.common.ClassB r0 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex7 = null;
+            int $pc7 = -1;
+            $sw7: while (true) {
+                switch ($pc7) {
+                    case -1: {
+                        $pc7 = 4; continue $sw7;
                     }
-                    $pc7 = 6; continue $sw7;
-                }
-                case 6: {
-                    try {
-                        r0 = this.we;
-                    } catch (java.lang.Throwable $t) {
-                        $ex7 = $t;
-                        $pc7 = 9; continue $sw7;
+                    case 9: {
+                        th = $ex7;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
                     }
-                    monitor-exit(this);
-                    return r0;
+                    case 4: {
+                        if (this.J0 == true) { $pc7 = 6; continue $sw7; }
+                        try {
+                            this.we = this.EQ.j6();
+                            this.J0 = true;
+                        } catch (java.lang.Throwable $t) {
+                            $ex7 = $t;
+                            $pc7 = 9; continue $sw7;
+                        }
+                        $pc7 = 6; continue $sw7;
+                    }
+                    case 6: {
+                        try {
+                            r0 = this.we;
+                        } catch (java.lang.Throwable $t) {
+                            $ex7 = $t;
+                            $pc7 = 9; continue $sw7;
+                        }
+                        return r0;
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 

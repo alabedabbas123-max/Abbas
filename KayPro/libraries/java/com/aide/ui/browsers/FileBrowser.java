@@ -1141,7 +1141,7 @@ public class FileBrowser extends android.widget.LinearLayout implements abcd.C10
                     r6 = r5.next();
                     if (r6.j6(false) == false) { $pc21 = 10; continue $sw21; }
                     r3.add(com.blankj.utilcode.util.ReflectUtils.reflect(java.lang.Class.forName("com.aide.ui.browsers.FileBrowser$b")).newInstance(new java.lang.Object[]{this, r6}).get());
-                    $pc21 = 26; continue $sw21;
+                    $pc21 = 42; continue $sw21;
                 }
                 case 26: {
                     e = $ex21;
@@ -1188,7 +1188,7 @@ public class FileBrowser extends android.widget.LinearLayout implements abcd.C10
                 }
                 case 40: {
                     r3.add(com.blankj.utilcode.util.ReflectUtils.reflect(java.lang.Class.forName("com.aide.ui.browsers.FileBrowser$b")).newInstance(new java.lang.Object[]{this, r4, "..", new java.lang.Boolean(false)}).get());
-                    $pc21 = 19; continue $sw21;
+                    return;
                 }
                 case 19: {
                     e = $ex21;

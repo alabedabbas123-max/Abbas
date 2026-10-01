@@ -114,16 +114,16 @@ class AC implements java.util.Comparator<abcd.hC> {
                     return r1;
                 }
                 case 13: {
-                    $pc2 = 14; continue $sw2;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 14: {
-                    $pc2 = 15; continue $sw2;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 15: {
-                    $pc2 = 16; continue $sw2;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 16: {
-                    $pc2 = 17; continue $sw2;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 17: {
                     throw new java.lang.IllegalStateException();

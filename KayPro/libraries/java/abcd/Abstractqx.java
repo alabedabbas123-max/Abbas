@@ -41,7 +41,7 @@ public abstract class Abstractqx<T> {
                         if ($t instanceof java.lang.ClassNotFoundException) { $pc0 = 15; continue $sw0; }
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
                     }
-                    $pc0 = 15; continue $sw0;
+                    $pc0 = 19; continue $sw0;
                 }
                 case 15: {
                     e = $ex0;

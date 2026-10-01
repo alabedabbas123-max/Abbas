@@ -1045,7 +1045,7 @@ public class AIDEEditorPager extends android.support.v4.view.ViewPager implement
                         $ex21 = $t;
                         $pc21 = 10; continue $sw21;
                     }
-                    $pc21 = 15; continue $sw21;
+                    return;
                 }
                 case 15: {
                     return;
@@ -2212,8 +2212,8 @@ public class AIDEEditorPager extends android.support.v4.view.ViewPager implement
         $sw48: while (true) {
             switch ($pc48) {
                 case -1: {
-                    r0 = -5289718353106690437;
-                    $pc48 = 12; continue $sw48;
+                    r0 = -5289718353106690437L;
+                    $pc48 = 16; continue $sw48;
                 }
                 case 12: {
                     th = $ex48;

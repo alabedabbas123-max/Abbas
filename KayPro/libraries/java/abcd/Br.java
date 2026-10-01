@@ -117,7 +117,7 @@ public final class Br {
                     { $pc0 = 3; continue $sw0; }
                 }
                 case 23: {
-                    $pc0 = 24; continue $sw0;
+                    return;
                 }
                 case 24: {
                     return;

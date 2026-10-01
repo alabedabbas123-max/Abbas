@@ -123,85 +123,86 @@ class ChannelSession extends com.jcraft.jsch.Channel {
 
     @Override
     public void run() {
-        com.jcraft.jsch.Buffer r0 = null;
-        com.jcraft.jsch.Packet r1 = null;
-        int r2 = 0;
-        java.lang.Thread r3 = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex2 = null;
-        int $pc2 = -1;
-        $sw2: while (true) {
-            switch ($pc2) {
-                case -1: {
-                    r0 = new com.jcraft.jsch.Buffer(this.tp);
-                    r1 = new com.jcraft.jsch.Packet(r0);
-                    $pc2 = 35; continue $sw2;
-                }
-                case 35: {
-                    if (J0() == false) { $pc2 = 24; continue $sw2; }
-                    if (this.we == null) { $pc2 = 24; continue $sw2; }
-                    if (this.EQ == null) { $pc2 = 24; continue $sw2; }
-                    if (this.EQ.j6 == null) { $pc2 = 24; continue $sw2; }
-                    try {
-                        r2 = this.EQ.j6.read(r0.DW, 14, (r0.DW.length - 14) - 84);
-                    } catch (java.lang.Throwable $t) {
-                        $ex2 = $t;
-                        if ($t instanceof java.lang.Exception) { $pc2 = 23; continue $sw2; }
-                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+        synchronized (this.we) {
+            com.jcraft.jsch.Buffer r0 = null;
+            com.jcraft.jsch.Packet r1 = null;
+            int r2 = 0;
+            java.lang.Thread r3 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex2 = null;
+            int $pc2 = -1;
+            $sw2: while (true) {
+                switch ($pc2) {
+                    case -1: {
+                        r0 = new com.jcraft.jsch.Buffer(this.tp);
+                        r1 = new com.jcraft.jsch.Packet(r0);
+                        $pc2 = 35; continue $sw2;
                     }
-                    if (r2 == 0) { $pc2 = 35; continue $sw2; }
-                    if (r2 == (-1)) { $pc2 = 17; continue $sw2; }
-                    if (this.Ws == true) { $pc2 = 24; continue $sw2; }
-                    try {
-                        r1.DW();
-                        r0.j6((byte) 94);
-                        r0.FH(this.Hw);
-                        r0.FH(r2);
-                        r0.v5(r2);
-                        EQ().j6(r1, this, r2);
-                    } catch (java.lang.Throwable $t) {
-                        $ex2 = $t;
-                        if ($t instanceof java.lang.Exception) { $pc2 = 23; continue $sw2; }
-                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    case 35: {
+                        if (J0() == false) { $pc2 = 24; continue $sw2; }
+                        if (this.we == null) { $pc2 = 24; continue $sw2; }
+                        if (this.EQ == null) { $pc2 = 24; continue $sw2; }
+                        if (this.EQ.j6 == null) { $pc2 = 24; continue $sw2; }
+                        try {
+                            r2 = this.EQ.j6.read(r0.DW, 14, (r0.DW.length - 14) - 84);
+                        } catch (java.lang.Throwable $t) {
+                            $ex2 = $t;
+                            if ($t instanceof java.lang.Exception) { $pc2 = 23; continue $sw2; }
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                        }
+                        if (r2 == 0) { $pc2 = 35; continue $sw2; }
+                        if (r2 == (-1)) { $pc2 = 17; continue $sw2; }
+                        if (this.Ws == true) { $pc2 = 24; continue $sw2; }
+                        try {
+                            r1.DW();
+                            r0.j6((byte) 94);
+                            r0.FH(this.Hw);
+                            r0.FH(r2);
+                            r0.v5(r2);
+                            EQ().j6(r1, this, r2);
+                        } catch (java.lang.Throwable $t) {
+                            $ex2 = $t;
+                            if ($t instanceof java.lang.Exception) { $pc2 = 23; continue $sw2; }
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                        }
+                        { $pc2 = 35; continue $sw2; }
                     }
-                    { $pc2 = 35; continue $sw2; }
-                }
-                case 17: {
-                    try {
-                        FH();
-                    } catch (java.lang.Throwable $t) {
-                        $ex2 = $t;
-                        if ($t instanceof java.lang.Exception) { $pc2 = 23; continue $sw2; }
-                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                    case 17: {
+                        try {
+                            FH();
+                        } catch (java.lang.Throwable $t) {
+                            $ex2 = $t;
+                            if ($t instanceof java.lang.Exception) { $pc2 = 23; continue $sw2; }
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                        }
+                        $pc2 = 24; continue $sw2;
                     }
-                    $pc2 = 24; continue $sw2;
-                }
-                case 24: {
-                    r3 = this.we;
-                    if (r3 == null) { $pc2 = 33; continue $sw2; }
-                    monitor-enter(r3);
-                    try {
-                        r3.notifyAll();
-                        monitor-exit(r3);
-                    } catch (java.lang.Throwable $t) {
-                        $ex2 = $t;
-                        $pc2 = 30; continue $sw2;
+                    case 24: {
+                        r3 = this.we;
+                        if (r3 == null) { $pc2 = 33; continue $sw2; }
+                        try {
+                            r3.notifyAll();
+                        } catch (java.lang.Throwable $t) {
+                            $ex2 = $t;
+                            $pc2 = 30; continue $sw2;
+                        }
+                        $pc2 = 33; continue $sw2;
                     }
-                    $pc2 = 30; continue $sw2;
+                    case 30: {
+                        th = $ex2;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    case 33: {
+                        this.we = null;
+                        return;
+                    }
+                    case 23: {
+                        return;
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 30: {
-                    th = $ex2;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 33: {
-                    this.we = null;
-                    $pc2 = 23; continue $sw2;
-                }
-                case 23: {
-                    return;
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 }

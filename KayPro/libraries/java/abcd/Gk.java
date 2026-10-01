@@ -1254,82 +1254,83 @@ public class Gk {
     }
 
     public void j6(boolean r6) {
-        java.lang.Object r2 = null;
-        boolean r3 = false;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex22 = null;
-        int $pc22 = 19;
-        $sw22: while (true) {
-            switch ($pc22) {
-                case 19: {
-                    th = $ex22;
-                    if (FH == false) { $pc22 = 23; continue $sw22; }
-                    abcd.wu.j6(th, 2445964835656656239L, this, new java.lang.Boolean(r6));
-                    $pc22 = 23; continue $sw22;
-                }
-                case 23: {
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 4: {
-                    if (DW == false) { $pc22 = 6; continue $sw22; }
-                    try {
-                        abcd.wu.j6(2445964835656656239L, this, r6);
-                    } catch (java.lang.Throwable $t) {
-                        $ex22 = $t;
-                        $pc22 = 19; continue $sw22;
+        synchronized (this.VH) {
+            java.lang.Object r2 = null;
+            boolean r3 = false;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex22 = null;
+            int $pc22 = 4;
+            $sw22: while (true) {
+                switch ($pc22) {
+                    case 19: {
+                        th = $ex22;
+                        if (FH == false) { $pc22 = 23; continue $sw22; }
+                        abcd.wu.j6(th, 2445964835656656239L, this, new java.lang.Boolean(r6));
+                        $pc22 = 23; continue $sw22;
                     }
-                    $pc22 = 6; continue $sw22;
-                }
-                case 6: {
-                    try {
-                        r2 = this.VH;
-                        monitor-enter(r2);
-                    } catch (java.lang.Throwable $t) {
-                        $ex22 = $t;
-                        $pc22 = 19; continue $sw22;
-                    }
-                    if (r6 == true) { $pc22 = 10; continue $sw22; }
-                    r3 = true;
-                    $pc22 = 24; continue $sw22;
-                }
-                case 24: {
-                    $pc22 = 16; continue $sw22;
-                }
-                case 16: {
-                    th = $ex22;
-                    try {
+                    case 23: {
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                    } catch (java.lang.Throwable $t) {
-                        $ex22 = $t;
-                        $pc22 = 19; continue $sw22;
                     }
-                }
-                case 12: {
-                    if (this.gn == r3) { $pc22 = 14; continue $sw22; }
-                    try {
-                        this.gn = r3;
-                        this.VH.notify();
-                    } catch (java.lang.Throwable $t) {
-                        $ex22 = $t;
-                        $pc22 = 16; continue $sw22;
+                    case 4: {
+                        if (DW == false) { $pc22 = 6; continue $sw22; }
+                        try {
+                            abcd.wu.j6(2445964835656656239L, this, r6);
+                        } catch (java.lang.Throwable $t) {
+                            $ex22 = $t;
+                            $pc22 = 19; continue $sw22;
+                        }
+                        $pc22 = 6; continue $sw22;
                     }
-                    $pc22 = 14; continue $sw22;
-                }
-                case 14: {
-                    try {
-                        monitor-exit(r2);
-                    } catch (java.lang.Throwable $t) {
-                        $ex22 = $t;
-                        $pc22 = 16; continue $sw22;
+                    case 6: {
+                        try {
+                            r2 = this.VH;
+                        } catch (java.lang.Throwable $t) {
+                            $ex22 = $t;
+                            $pc22 = 19; continue $sw22;
+                        }
+                        if (r6 == true) { $pc22 = 10; continue $sw22; }
+                        r3 = true;
+                        $pc22 = 24; continue $sw22;
                     }
-                    return;
+                    case 24: {
+                        $pc22 = 12; continue $sw22;
+                    }
+                    case 16: {
+                        th = $ex22;
+                        try {
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                        } catch (java.lang.Throwable $t) {
+                            $ex22 = $t;
+                            $pc22 = 19; continue $sw22;
+                        }
+                    }
+                    case 12: {
+                        if (this.gn == r3) { $pc22 = 14; continue $sw22; }
+                        try {
+                            this.gn = r3;
+                            this.VH.notify();
+                        } catch (java.lang.Throwable $t) {
+                            $ex22 = $t;
+                            $pc22 = 16; continue $sw22;
+                        }
+                        $pc22 = 14; continue $sw22;
+                    }
+                    case 14: {
+                        try {
+                        } catch (java.lang.Throwable $t) {
+                            $ex22 = $t;
+                            $pc22 = 16; continue $sw22;
+                        }
+                        return;
+                    }
+                    case 10: {
+                        r3 = false;
+                        { $pc22 = 24; continue $sw22; }
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 10: {
-                    r3 = false;
-                    { $pc22 = 24; continue $sw22; }
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 

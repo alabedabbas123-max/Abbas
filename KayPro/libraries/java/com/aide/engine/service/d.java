@@ -182,7 +182,7 @@ class d implements com.aide.engine.Interfaced {
                         if ($t instanceof android.os.RemoteException) { $pc2 = 10; continue $sw2; }
                         $pc2 = 14; continue $sw2;
                     }
-                    $pc2 = 10; continue $sw2;
+                    return;
                 }
                 case 10: {
                     e = $ex2;

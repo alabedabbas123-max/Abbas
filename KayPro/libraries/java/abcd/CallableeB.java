@@ -132,7 +132,7 @@ public class CallableeB implements java.util.concurrent.Callable<abcd.cB> {
                         if ($t instanceof java.io.IOException) { $pc0 = 26; continue $sw0; }
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
                     }
-                    $pc0 = 26; continue $sw0;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 26: {
                     e = $ex0;

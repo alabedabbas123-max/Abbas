@@ -83,7 +83,7 @@ public final class Nr implements abcd.Interfacecu {
                     throw new java.lang.IllegalArgumentException("label < 0");
                 }
                 case 30: {
-                    $pc0 = 36; continue $sw0;
+                    return;
                 }
                 case 36: {
                     return;

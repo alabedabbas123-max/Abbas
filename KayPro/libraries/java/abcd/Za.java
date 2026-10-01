@@ -103,8 +103,8 @@ public class Za {
         $sw2: while (true) {
             switch ($pc2) {
                 case -1: {
-                    r0 = -863417904741332815;
-                    $pc2 = 12; continue $sw2;
+                    r0 = -863417904741332815L;
+                    $pc2 = 16; continue $sw2;
                 }
                 case 12: {
                     th = $ex2;

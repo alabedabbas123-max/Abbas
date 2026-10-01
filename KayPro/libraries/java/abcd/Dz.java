@@ -50,13 +50,13 @@ class Dz {
                     return;
                 }
                 case 8: {
-                    $pc0 = 9; continue $sw0;
+                    return;
                 }
                 case 9: {
-                    $pc0 = 10; continue $sw0;
+                    return;
                 }
                 case 10: {
-                    $pc0 = 11; continue $sw0;
+                    return;
                 }
                 case 11: {
                     return;

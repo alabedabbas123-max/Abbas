@@ -108,16 +108,16 @@ public abstract class DJ {
                     return r1;
                 }
                 case 13: {
-                    $pc0 = 14; continue $sw0;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 14: {
-                    $pc0 = 15; continue $sw0;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 15: {
-                    $pc0 = 16; continue $sw0;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 16: {
-                    $pc0 = 17; continue $sw0;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 17: {
                     throw new java.lang.IllegalStateException();

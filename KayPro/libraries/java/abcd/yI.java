@@ -143,105 +143,106 @@ public class yI {
     }
 
     private synchronized java.util.Map<java.lang.String, abcd.yI.a> DW() {
-        long r0 = 0L;
-        java.util.Map<java.lang.String, abcd.yI.a> r1 = null;
-        java.io.FileInputStream r2 = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex3 = null;
-        int $pc3 = -1;
-        $sw3: while (true) {
-            switch ($pc3) {
-                case -1: {
-                    monitor-enter(this);
-                    try {
-                        r0 = this.DW.lastModified();
-                    } catch (java.lang.Throwable $t) {
-                        $ex3 = $t;
-                        $pc3 = 18; continue $sw3;
+        synchronized (this) {
+            long r0 = 0L;
+            java.util.Map<java.lang.String, abcd.yI.a> r1 = null;
+            java.io.FileInputStream r2 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex3 = null;
+            int $pc3 = -1;
+            $sw3: while (true) {
+                switch ($pc3) {
+                    case -1: {
+                        try {
+                            r0 = this.DW.lastModified();
+                        } catch (java.lang.Throwable $t) {
+                            $ex3 = $t;
+                            $pc3 = 18; continue $sw3;
+                        }
+                        if (r0 != this.FH) { $pc3 = 24; continue $sw3; }
+                        $pc3 = 15; continue $sw3;
                     }
-                    if (r0 != this.FH) { $pc3 = 24; continue $sw3; }
-                    $pc3 = 15; continue $sw3;
-                }
-                case 15: {
-                    try {
-                        r1 = this.Hw;
-                    } catch (java.lang.Throwable $t) {
-                        $ex3 = $t;
-                        $pc3 = 18; continue $sw3;
+                    case 15: {
+                        try {
+                            r1 = this.Hw;
+                        } catch (java.lang.Throwable $t) {
+                            $ex3 = $t;
+                            $pc3 = 18; continue $sw3;
+                        }
+                        return r1;
                     }
-                    monitor-exit(this);
-                    return r1;
-                }
-                case 24: {
-                    try {
-                        r2 = new java.io.FileInputStream(this.DW);
-                    } catch (java.lang.Throwable $t) {
-                        $ex3 = $t;
-                        if ($t instanceof java.io.IOException) { $pc3 = 12; continue $sw3; }
-                        if ($t instanceof java.io.FileNotFoundException) { $pc3 = 13; continue $sw3; }
-                        $pc3 = 18; continue $sw3;
+                    case 24: {
+                        try {
+                            r2 = new java.io.FileInputStream(this.DW);
+                        } catch (java.lang.Throwable $t) {
+                            $ex3 = $t;
+                            if ($t instanceof java.io.IOException) { $pc3 = 12; continue $sw3; }
+                            if ($t instanceof java.io.FileNotFoundException) { $pc3 = 13; continue $sw3; }
+                            $pc3 = 18; continue $sw3;
+                        }
+                        try {
+                            this.Hw = j6(r2);
+                        } catch (java.lang.Throwable $t) {
+                            $ex3 = $t;
+                            $pc3 = 9; continue $sw3;
+                        }
+                        try {
+                            r2.close();
+                        } catch (java.lang.Throwable $t) {
+                            $ex3 = $t;
+                            if ($t instanceof java.io.IOException) { $pc3 = 12; continue $sw3; }
+                            if ($t instanceof java.io.FileNotFoundException) { $pc3 = 13; continue $sw3; }
+                            $pc3 = 18; continue $sw3;
+                        }
+                        $pc3 = 14; continue $sw3;
                     }
-                    try {
-                        this.Hw = j6(r2);
-                    } catch (java.lang.Throwable $t) {
-                        $ex3 = $t;
-                        $pc3 = 9; continue $sw3;
+                    case 14: {
+                        try {
+                            this.FH = r0;
+                        } catch (java.lang.Throwable $t) {
+                            $ex3 = $t;
+                            $pc3 = 18; continue $sw3;
+                        }
+                        throw new java.lang.IllegalStateException();
                     }
-                    try {
-                        r2.close();
-                    } catch (java.lang.Throwable $t) {
-                        $ex3 = $t;
-                        if ($t instanceof java.io.IOException) { $pc3 = 12; continue $sw3; }
-                        if ($t instanceof java.io.FileNotFoundException) { $pc3 = 13; continue $sw3; }
-                        $pc3 = 18; continue $sw3;
+                    case 9: {
+                        th = $ex3;
+                        try {
+                            r2.close();
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                        } catch (java.lang.Throwable $t) {
+                            $ex3 = $t;
+                            if ($t instanceof java.io.IOException) { $pc3 = 12; continue $sw3; }
+                            if ($t instanceof java.io.FileNotFoundException) { $pc3 = 13; continue $sw3; }
+                            $pc3 = 18; continue $sw3;
+                        }
                     }
-                    $pc3 = 14; continue $sw3;
-                }
-                case 14: {
-                    try {
-                        this.FH = r0;
-                    } catch (java.lang.Throwable $t) {
-                        $ex3 = $t;
-                        $pc3 = 18; continue $sw3;
+                    case 13: {
+                        try {
+                            this.Hw = java.util.Collections.emptyMap();
+                        } catch (java.lang.Throwable $t) {
+                            $ex3 = $t;
+                            $pc3 = 18; continue $sw3;
+                        }
+                        throw new java.lang.IllegalStateException();
                     }
-                    $pc3 = 9; continue $sw3;
-                }
-                case 9: {
-                    th = $ex3;
-                    try {
-                        r2.close();
+                    case 12: {
+                        try {
+                            this.Hw = java.util.Collections.emptyMap();
+                        } catch (java.lang.Throwable $t) {
+                            $ex3 = $t;
+                            $pc3 = 18; continue $sw3;
+                        }
+                        throw new java.lang.IllegalStateException();
+                    }
+                    case 18: {
+                        th = $ex3;
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                    } catch (java.lang.Throwable $t) {
-                        $ex3 = $t;
-                        if ($t instanceof java.io.IOException) { $pc3 = 12; continue $sw3; }
-                        if ($t instanceof java.io.FileNotFoundException) { $pc3 = 13; continue $sw3; }
-                        $pc3 = 18; continue $sw3;
                     }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 13: {
-                    try {
-                        this.Hw = java.util.Collections.emptyMap();
-                    } catch (java.lang.Throwable $t) {
-                        $ex3 = $t;
-                        $pc3 = 18; continue $sw3;
-                    }
-                    $pc3 = 12; continue $sw3;
-                }
-                case 12: {
-                    try {
-                        this.Hw = java.util.Collections.emptyMap();
-                    } catch (java.lang.Throwable $t) {
-                        $ex3 = $t;
-                        $pc3 = 18; continue $sw3;
-                    }
-                    $pc3 = 18; continue $sw3;
-                }
-                case 18: {
-                    th = $ex3;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 

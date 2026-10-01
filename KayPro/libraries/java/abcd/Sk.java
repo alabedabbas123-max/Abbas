@@ -297,7 +297,7 @@ public class Sk {
                         if ($t instanceof java.io.IOException) { $pc3 = 53; continue $sw3; }
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
                     }
-                    $pc3 = 53; continue $sw3;
+                    $pc3 = 57; continue $sw3;
                 }
                 case 53: {
                     e = e;
@@ -309,7 +309,7 @@ public class Sk {
                 }
                 case 22: {
                     if (new java.io.File(r9).isFile() == true) { $pc3 = 58; continue $sw3; }
-                    $pc3 = 55; continue $sw3;
+                    $pc3 = 59; continue $sw3;
                 }
                 case 55: {
                     e = e;
@@ -1023,7 +1023,7 @@ public class Sk {
                         $ex11 = $t;
                         $pc11 = 20; continue $sw11;
                     }
-                    $pc11 = 20; continue $sw11;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 20: {
                     th = th;

@@ -60,7 +60,7 @@ public final class jm extends abcd.AbstractAm {
                     throw new java.lang.IllegalArgumentException("maxStack < 0");
                 }
                 case 14: {
-                    $pc0 = 18; continue $sw0;
+                    return;
                 }
                 case 18: {
                     return;

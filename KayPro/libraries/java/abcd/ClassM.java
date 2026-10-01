@@ -111,90 +111,87 @@ public final class ClassM<E> implements java.util.Collection<E>, java.util.Set<E
     }
 
     private void gn(int r6) {
-        java.lang.Object[] r7 = null;
-        java.lang.Object[] r8 = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex2 = null;
-        int $pc2 = -1;
-        $sw2: while (true) {
-            switch ($pc2) {
-                case -1: {
-                    if (r6 != 8) { $pc2 = 17; continue $sw2; }
-                    monitor-enter(abcd.ClassM.class);
-                    $pc2 = 13; continue $sw2;
-                }
-                case 13: {
-                    th = $ex2;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 7: {
-                    if (v5 == null) { $pc2 = 11; continue $sw2; }
-                    try {
-                        r7 = v5;
-                        this.u7 = r7;
-                        v5 = (java.lang.Object[]) r7[0];
-                        this.gn = (int[]) r7[1];
-                        r7[1] = null;
-                        r7[0] = null;
-                        Zo--;
-                        monitor-exit(abcd.ClassM.class);
-                    } catch (java.lang.Throwable $t) {
-                        $ex2 = $t;
-                        $pc2 = 13; continue $sw2;
+        synchronized (abcd.ClassM.class) {
+            java.lang.Object[] r7 = null;
+            java.lang.Object[] r8 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex2 = null;
+            int $pc2 = -1;
+            $sw2: while (true) {
+                switch ($pc2) {
+                    case -1: {
+                        if (r6 != 8) { $pc2 = 17; continue $sw2; }
+                        $pc2 = 7; continue $sw2;
                     }
-                    return;
-                }
-                case 11: {
-                    try {
-                        monitor-exit(abcd.ClassM.class);
-                    } catch (java.lang.Throwable $t) {
-                        $ex2 = $t;
-                        $pc2 = 13; continue $sw2;
+                    case 13: {
+                        th = $ex2;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
                     }
-                    $pc2 = 30; continue $sw2;
-                }
-                case 30: {
-                    this.gn = new int[r6];
-                    this.u7 = new java.lang.Object[r6];
-                    return;
-                }
-                case 17: {
-                    if (r6 != 4) { $pc2 = 30; continue $sw2; }
-                    monitor-enter(abcd.ClassM.class);
-                    $pc2 = 27; continue $sw2;
-                }
-                case 27: {
-                    th = $ex2;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 21: {
-                    if (FH == null) { $pc2 = 25; continue $sw2; }
-                    try {
-                        r8 = FH;
-                        this.u7 = r8;
-                        FH = (java.lang.Object[]) r8[0];
-                        this.gn = (int[]) r8[1];
-                        r8[1] = null;
-                        r8[0] = null;
-                        Hw--;
-                        monitor-exit(abcd.ClassM.class);
-                    } catch (java.lang.Throwable $t) {
-                        $ex2 = $t;
-                        $pc2 = 27; continue $sw2;
+                    case 7: {
+                        if (v5 == null) { $pc2 = 11; continue $sw2; }
+                        try {
+                            r7 = v5;
+                            this.u7 = r7;
+                            v5 = (java.lang.Object[]) r7[0];
+                            this.gn = (int[]) r7[1];
+                            r7[1] = null;
+                            r7[0] = null;
+                            Zo--;
+                        } catch (java.lang.Throwable $t) {
+                            $ex2 = $t;
+                            $pc2 = 13; continue $sw2;
+                        }
+                        return;
                     }
-                    return;
-                }
-                case 25: {
-                    try {
-                        monitor-exit(abcd.ClassM.class);
-                    } catch (java.lang.Throwable $t) {
-                        $ex2 = $t;
-                        $pc2 = 27; continue $sw2;
+                    case 11: {
+                        try {
+                        } catch (java.lang.Throwable $t) {
+                            $ex2 = $t;
+                            $pc2 = 13; continue $sw2;
+                        }
+                        $pc2 = 30; continue $sw2;
                     }
-                    { $pc2 = 30; continue $sw2; }
+                    case 30: {
+                        this.gn = new int[r6];
+                        this.u7 = new java.lang.Object[r6];
+                        return;
+                    }
+                    case 17: {
+                        if (r6 != 4) { $pc2 = 30; continue $sw2; }
+                        $pc2 = 21; continue $sw2;
+                    }
+                    case 27: {
+                        th = $ex2;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    case 21: {
+                        if (FH == null) { $pc2 = 25; continue $sw2; }
+                        try {
+                            r8 = FH;
+                            this.u7 = r8;
+                            FH = (java.lang.Object[]) r8[0];
+                            this.gn = (int[]) r8[1];
+                            r8[1] = null;
+                            r8[0] = null;
+                            Hw--;
+                        } catch (java.lang.Throwable $t) {
+                            $ex2 = $t;
+                            $pc2 = 27; continue $sw2;
+                        }
+                        return;
+                    }
+                    case 25: {
+                        try {
+                        } catch (java.lang.Throwable $t) {
+                            $ex2 = $t;
+                            $pc2 = 27; continue $sw2;
+                        }
+                        { $pc2 = 30; continue $sw2; }
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 
@@ -276,120 +273,119 @@ public final class ClassM<E> implements java.util.Collection<E>, java.util.Set<E
     }
 
     private static void j6(int[] r7, java.lang.Object[] r8, int r9) {
-        int r10 = 0;
-        int r11 = 0;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex5 = null;
-        int $pc5 = -1;
-        $sw5: while (true) {
-            switch ($pc5) {
-                case -1: {
-                    if (r7.length != 8) { $pc5 = 18; continue $sw5; }
-                    monitor-enter(abcd.ClassM.class);
-                    $pc5 = 14; continue $sw5;
-                }
-                case 14: {
-                    th = $ex5;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 7: {
-                    if (Zo >= 10) { $pc5 = 12; continue $sw5; }
-                    try {
-                        r8[0] = v5;
-                        r8[1] = r7;
-                        r10 = r9 - 1;
-                    } catch (java.lang.Throwable $t) {
-                        $ex5 = $t;
-                        $pc5 = 14; continue $sw5;
+        synchronized (abcd.ClassM.class) {
+            int r10 = 0;
+            int r11 = 0;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex5 = null;
+            int $pc5 = -1;
+            $sw5: while (true) {
+                switch ($pc5) {
+                    case -1: {
+                        if (r7.length != 8) { $pc5 = 18; continue $sw5; }
+                        $pc5 = 7; continue $sw5;
                     }
-                    $pc5 = 9; continue $sw5;
-                }
-                case 9: {
-                    if (r10 < 2) { $pc5 = 11; continue $sw5; }
-                    try {
-                        r8[r10] = null;
-                        r10 = r10 - 1;
-                    } catch (java.lang.Throwable $t) {
-                        $ex5 = $t;
-                        $pc5 = 14; continue $sw5;
+                    case 14: {
+                        th = $ex5;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
                     }
-                    { $pc5 = 9; continue $sw5; }
-                }
-                case 11: {
-                    try {
-                        v5 = r8;
-                        Zo++;
-                    } catch (java.lang.Throwable $t) {
-                        $ex5 = $t;
-                        $pc5 = 14; continue $sw5;
+                    case 7: {
+                        if (Zo >= 10) { $pc5 = 12; continue $sw5; }
+                        try {
+                            r8[0] = v5;
+                            r8[1] = r7;
+                            r10 = r9 - 1;
+                        } catch (java.lang.Throwable $t) {
+                            $ex5 = $t;
+                            $pc5 = 14; continue $sw5;
+                        }
+                        $pc5 = 9; continue $sw5;
                     }
-                    $pc5 = 12; continue $sw5;
-                }
-                case 12: {
-                    try {
-                        monitor-exit(abcd.ClassM.class);
-                    } catch (java.lang.Throwable $t) {
-                        $ex5 = $t;
-                        $pc5 = 14; continue $sw5;
+                    case 9: {
+                        if (r10 < 2) { $pc5 = 11; continue $sw5; }
+                        try {
+                            r8[r10] = null;
+                            r10 = r10 - 1;
+                        } catch (java.lang.Throwable $t) {
+                            $ex5 = $t;
+                            $pc5 = 14; continue $sw5;
+                        }
+                        { $pc5 = 9; continue $sw5; }
                     }
-                    return;
-                }
-                case 18: {
-                    if (r7.length == 4) { $pc5 = 20; continue $sw5; }
-                    return;
-                }
-                case 20: {
-                    monitor-enter(abcd.ClassM.class);
-                    $pc5 = 29; continue $sw5;
-                }
-                case 29: {
-                    th = $ex5;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 22: {
-                    if (Hw >= 10) { $pc5 = 27; continue $sw5; }
-                    try {
-                        r8[0] = FH;
-                        r8[1] = r7;
-                        r11 = r9 - 1;
-                    } catch (java.lang.Throwable $t) {
-                        $ex5 = $t;
-                        $pc5 = 29; continue $sw5;
+                    case 11: {
+                        try {
+                            v5 = r8;
+                            Zo++;
+                        } catch (java.lang.Throwable $t) {
+                            $ex5 = $t;
+                            $pc5 = 14; continue $sw5;
+                        }
+                        $pc5 = 12; continue $sw5;
                     }
-                    $pc5 = 24; continue $sw5;
-                }
-                case 24: {
-                    if (r11 < 2) { $pc5 = 26; continue $sw5; }
-                    try {
-                        r8[r11] = null;
-                        r11 = r11 - 1;
-                    } catch (java.lang.Throwable $t) {
-                        $ex5 = $t;
-                        $pc5 = 29; continue $sw5;
+                    case 12: {
+                        try {
+                        } catch (java.lang.Throwable $t) {
+                            $ex5 = $t;
+                            $pc5 = 14; continue $sw5;
+                        }
+                        return;
                     }
-                    { $pc5 = 24; continue $sw5; }
-                }
-                case 26: {
-                    try {
-                        FH = r8;
-                        Hw++;
-                    } catch (java.lang.Throwable $t) {
-                        $ex5 = $t;
-                        $pc5 = 29; continue $sw5;
+                    case 18: {
+                        if (r7.length == 4) { $pc5 = 20; continue $sw5; }
+                        return;
                     }
-                    $pc5 = 27; continue $sw5;
-                }
-                case 27: {
-                    try {
-                        monitor-exit(abcd.ClassM.class);
-                    } catch (java.lang.Throwable $t) {
-                        $ex5 = $t;
-                        $pc5 = 29; continue $sw5;
+                    case 20: {
+                        $pc5 = 22; continue $sw5;
                     }
-                    return;
+                    case 29: {
+                        th = $ex5;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    case 22: {
+                        if (Hw >= 10) { $pc5 = 27; continue $sw5; }
+                        try {
+                            r8[0] = FH;
+                            r8[1] = r7;
+                            r11 = r9 - 1;
+                        } catch (java.lang.Throwable $t) {
+                            $ex5 = $t;
+                            $pc5 = 29; continue $sw5;
+                        }
+                        $pc5 = 24; continue $sw5;
+                    }
+                    case 24: {
+                        if (r11 < 2) { $pc5 = 26; continue $sw5; }
+                        try {
+                            r8[r11] = null;
+                            r11 = r11 - 1;
+                        } catch (java.lang.Throwable $t) {
+                            $ex5 = $t;
+                            $pc5 = 29; continue $sw5;
+                        }
+                        { $pc5 = 24; continue $sw5; }
+                    }
+                    case 26: {
+                        try {
+                            FH = r8;
+                            Hw++;
+                        } catch (java.lang.Throwable $t) {
+                            $ex5 = $t;
+                            $pc5 = 29; continue $sw5;
+                        }
+                        $pc5 = 27; continue $sw5;
+                    }
+                    case 27: {
+                        try {
+                        } catch (java.lang.Throwable $t) {
+                            $ex5 = $t;
+                            $pc5 = 29; continue $sw5;
+                        }
+                        return;
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 

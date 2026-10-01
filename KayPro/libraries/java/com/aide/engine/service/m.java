@@ -129,7 +129,7 @@ public interface m extends android.os.IInterface {
                         }
                         case 10: {
                             r4 = 0;
-                            $pc1 = 14; continue $sw1;
+                            return;
                         }
                         case 14: {
                             th = $ex1;

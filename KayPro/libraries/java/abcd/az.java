@@ -93,7 +93,7 @@ public class az<E extends abcd._y & abcd.Interfacelz & abcd.Interfacehz> extends
                 }
                 case 8: {
                     r3 = true;
-                    $pc2 = 11; continue $sw2;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 11: {
                     th = $ex2;
@@ -398,7 +398,7 @@ public class az<E extends abcd._y & abcd.Interfacelz & abcd.Interfacehz> extends
                 }
                 case 8: {
                     r3 = true;
-                    $pc10 = 11; continue $sw10;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 11: {
                     th = $ex10;

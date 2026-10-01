@@ -307,7 +307,7 @@ public interface o extends android.os.IInterface {
                                 $ex4 = $t;
                                 $pc4 = 13; continue $sw4;
                             }
-                            $pc4 = 13; continue $sw4;
+                            return;
                         }
                         case 13: {
                             th = $ex4;

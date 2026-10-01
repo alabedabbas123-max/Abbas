@@ -1779,7 +1779,7 @@ public class XmlLayoutDesignActivity extends android.app.Activity {
         android.content.Intent r0 = null;
         java.lang.Throwable th = null;
         java.lang.Throwable $ex28 = null;
-        int $pc28 = 14;
+        int $pc28 = 3;
         $sw28: while (true) {
             switch ($pc28) {
                 case 14: {
@@ -2251,7 +2251,7 @@ public class XmlLayoutDesignActivity extends android.app.Activity {
                         $ex32 = $t;
                         $pc32 = 44; continue $sw32;
                     }
-                    $pc32 = 44; continue $sw32;
+                    $pc32 = 48; continue $sw32;
                 }
                 case 44: {
                     th = $ex32;

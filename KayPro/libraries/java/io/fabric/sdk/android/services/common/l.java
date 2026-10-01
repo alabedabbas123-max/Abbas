@@ -80,7 +80,7 @@ public class l {
                 case 20: {
                     r1 = true;
                     r2 = false;
-                    $pc0 = 18; continue $sw0;
+                    $pc0 = 27; continue $sw0;
                 }
                 case 18: {
                     e = $ex0;
@@ -96,44 +96,45 @@ public class l {
     }
 
     public static io.fabric.sdk.android.services.common.l j6(android.content.Context r2) {
-        java.lang.Object r0 = null;
-        io.fabric.sdk.android.services.common.l r3 = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex1 = null;
-        int $pc1 = -1;
-        $sw1: while (true) {
-            switch ($pc1) {
-                case -1: {
-                    r0 = DW;
-                    monitor-enter(r0);
-                    $pc1 = 10; continue $sw1;
-                }
-                case 10: {
-                    th = $ex1;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 5: {
-                    if (j6 != null) { $pc1 = 7; continue $sw1; }
-                    try {
-                        j6 = new io.fabric.sdk.android.services.common.l(r2);
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        $pc1 = 10; continue $sw1;
+        synchronized (DW) {
+            java.lang.Object r0 = null;
+            io.fabric.sdk.android.services.common.l r3 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex1 = null;
+            int $pc1 = -1;
+            $sw1: while (true) {
+                switch ($pc1) {
+                    case -1: {
+                        r0 = DW;
+                        $pc1 = 5; continue $sw1;
                     }
-                    $pc1 = 7; continue $sw1;
-                }
-                case 7: {
-                    try {
-                        r3 = j6;
-                        monitor-exit(r0);
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        $pc1 = 10; continue $sw1;
+                    case 10: {
+                        th = $ex1;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
                     }
-                    return r3;
+                    case 5: {
+                        if (j6 != null) { $pc1 = 7; continue $sw1; }
+                        try {
+                            j6 = new io.fabric.sdk.android.services.common.l(r2);
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            $pc1 = 10; continue $sw1;
+                        }
+                        $pc1 = 7; continue $sw1;
+                    }
+                    case 7: {
+                        try {
+                            r3 = j6;
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            $pc1 = 10; continue $sw1;
+                        }
+                        return r3;
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 

@@ -359,86 +359,88 @@ public class Fabric {
     }
 
     public static io.fabric.sdk.android.Fabric with(android.content.Context r2, io.fabric.sdk.android.Kit... r3) {
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex9 = null;
-        int $pc9 = -1;
-        $sw9: while (true) {
-            switch ($pc9) {
-                case -1: {
-                    if (singleton != null) { $pc9 = 15; continue $sw9; }
-                    monitor-enter(io.fabric.sdk.android.Fabric.class);
-                    $pc9 = 11; continue $sw9;
-                }
-                case 11: {
-                    th = $ex9;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 7: {
-                    if (singleton != null) { $pc9 = 9; continue $sw9; }
-                    try {
-                        setFabric(new io.fabric.sdk.android.Fabric.Builder(r2).j6(r3).j6());
-                    } catch (java.lang.Throwable $t) {
-                        $ex9 = $t;
-                        $pc9 = 11; continue $sw9;
+        synchronized (io.fabric.sdk.android.Fabric.class) {
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex9 = null;
+            int $pc9 = -1;
+            $sw9: while (true) {
+                switch ($pc9) {
+                    case -1: {
+                        if (singleton != null) { $pc9 = 15; continue $sw9; }
+                        $pc9 = 7; continue $sw9;
                     }
-                    $pc9 = 9; continue $sw9;
-                }
-                case 9: {
-                    try {
-                        monitor-exit(io.fabric.sdk.android.Fabric.class);
-                    } catch (java.lang.Throwable $t) {
-                        $ex9 = $t;
-                        $pc9 = 11; continue $sw9;
+                    case 11: {
+                        th = $ex9;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
                     }
-                    $pc9 = 15; continue $sw9;
+                    case 7: {
+                        if (singleton != null) { $pc9 = 9; continue $sw9; }
+                        try {
+                            setFabric(new io.fabric.sdk.android.Fabric.Builder(r2).j6(r3).j6());
+                        } catch (java.lang.Throwable $t) {
+                            $ex9 = $t;
+                            $pc9 = 11; continue $sw9;
+                        }
+                        $pc9 = 9; continue $sw9;
+                    }
+                    case 9: {
+                        try {
+                        } catch (java.lang.Throwable $t) {
+                            $ex9 = $t;
+                            $pc9 = 11; continue $sw9;
+                        }
+                        $pc9 = 15; continue $sw9;
+                    }
+                    case 15: {
+                        return singleton;
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 15: {
-                    return singleton;
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 
     public static io.fabric.sdk.android.Fabric with(io.fabric.sdk.android.Fabric r2) {
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex10 = null;
-        int $pc10 = -1;
-        $sw10: while (true) {
-            switch ($pc10) {
-                case -1: {
-                    if (singleton != null) { $pc10 = 15; continue $sw10; }
-                    monitor-enter(io.fabric.sdk.android.Fabric.class);
-                    $pc10 = 11; continue $sw10;
-                }
-                case 11: {
-                    th = $ex10;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 7: {
-                    if (singleton != null) { $pc10 = 9; continue $sw10; }
-                    try {
-                        setFabric(r2);
-                    } catch (java.lang.Throwable $t) {
-                        $ex10 = $t;
-                        $pc10 = 11; continue $sw10;
+        synchronized (io.fabric.sdk.android.Fabric.class) {
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex10 = null;
+            int $pc10 = -1;
+            $sw10: while (true) {
+                switch ($pc10) {
+                    case -1: {
+                        if (singleton != null) { $pc10 = 15; continue $sw10; }
+                        $pc10 = 7; continue $sw10;
                     }
-                    $pc10 = 9; continue $sw10;
-                }
-                case 9: {
-                    try {
-                        monitor-exit(io.fabric.sdk.android.Fabric.class);
-                    } catch (java.lang.Throwable $t) {
-                        $ex10 = $t;
-                        $pc10 = 11; continue $sw10;
+                    case 11: {
+                        th = $ex10;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
                     }
-                    $pc10 = 15; continue $sw10;
+                    case 7: {
+                        if (singleton != null) { $pc10 = 9; continue $sw10; }
+                        try {
+                            setFabric(r2);
+                        } catch (java.lang.Throwable $t) {
+                            $ex10 = $t;
+                            $pc10 = 11; continue $sw10;
+                        }
+                        $pc10 = 9; continue $sw10;
+                    }
+                    case 9: {
+                        try {
+                        } catch (java.lang.Throwable $t) {
+                            $ex10 = $t;
+                            $pc10 = 11; continue $sw10;
+                        }
+                        $pc10 = 15; continue $sw10;
+                    }
+                    case 15: {
+                        return singleton;
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 15: {
-                    return singleton;
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 

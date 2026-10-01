@@ -506,7 +506,7 @@ public class ca extends io.fabric.sdk.android.Kit<java.lang.Void> {
                         $ex11 = $t;
                         $pc11 = 28; continue $sw11;
                     }
-                    $pc11 = 28; continue $sw11;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 28: {
                     th = $ex11;
@@ -651,7 +651,7 @@ public class ca extends io.fabric.sdk.android.Kit<java.lang.Void> {
                 }
                 case 17: {
                     r3 = null;
-                    $pc14 = 26; continue $sw14;
+                    $pc14 = 30; continue $sw14;
                 }
                 case 26: {
                     e = $ex14;
@@ -747,43 +747,44 @@ public class ca extends io.fabric.sdk.android.Kit<java.lang.Void> {
 
     @java.lang.Deprecated
     public synchronized void setListener(com.crashlytics.android.core.Interfaceea r4) {
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex17 = null;
-        int $pc17 = -1;
-        $sw17: while (true) {
-            switch ($pc17) {
-                case -1: {
-                    monitor-enter(this);
-                    try {
-                        io.fabric.sdk.android.Fabric.getLogger().j6("CrashlyticsCore", "Use of setListener is deprecated.");
-                    } catch (java.lang.Throwable $t) {
-                        $ex17 = $t;
-                        $pc17 = 10; continue $sw17;
+        synchronized (this) {
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex17 = null;
+            int $pc17 = -1;
+            $sw17: while (true) {
+                switch ($pc17) {
+                    case -1: {
+                        try {
+                            io.fabric.sdk.android.Fabric.getLogger().j6("CrashlyticsCore", "Use of setListener is deprecated.");
+                        } catch (java.lang.Throwable $t) {
+                            $ex17 = $t;
+                            $pc17 = 10; continue $sw17;
+                        }
+                        if (r4 == null) { $pc17 = 9; continue $sw17; }
+                        try {
+                            this.v5 = r4;
+                        } catch (java.lang.Throwable $t) {
+                            $ex17 = $t;
+                            $pc17 = 10; continue $sw17;
+                        }
+                        return;
                     }
-                    if (r4 == null) { $pc17 = 9; continue $sw17; }
-                    try {
-                        this.v5 = r4;
-                    } catch (java.lang.Throwable $t) {
-                        $ex17 = $t;
-                        $pc17 = 10; continue $sw17;
+                    case 9: {
+                        try {
+                            throw new java.lang.IllegalArgumentException("listener must not be null.");
+                        } catch (java.lang.Throwable $t) {
+                            $ex17 = $t;
+                            $pc17 = 10; continue $sw17;
+                        }
                     }
-                    monitor-exit(this);
-                    return;
-                }
-                case 9: {
-                    try {
-                        throw new java.lang.IllegalArgumentException("listener must not be null.");
-                    } catch (java.lang.Throwable $t) {
-                        $ex17 = $t;
-                        $pc17 = 10; continue $sw17;
+                    case 10: {
+                        th = $ex17;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
                     }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 10: {
-                    th = $ex17;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 

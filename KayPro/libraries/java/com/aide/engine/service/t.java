@@ -268,15 +268,15 @@ public interface t extends android.os.IInterface {
                                 $ex3 = $t;
                                 $pc3 = 19; continue $sw3;
                             }
-                            $pc3 = 19; continue $sw3;
+                            return;
                         }
                         case 19: {
                             th = th;
-                            $pc3 = 21; continue $sw3;
+                            return;
                         }
                         case 21: {
                             th = th;
-                            $pc3 = 25; continue $sw3;
+                            return;
                         }
                         case 25: {
                             th = th;

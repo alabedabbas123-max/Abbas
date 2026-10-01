@@ -60,7 +60,7 @@ public interface InterfacebQ extends android.os.IInterface {
                         }
                         case 6: {
                             r6 = null;
-                            $pc0 = 10; continue $sw0;
+                            return;
                         }
                         case 10: {
                             th = $ex0;

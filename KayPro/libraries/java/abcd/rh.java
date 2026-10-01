@@ -769,7 +769,7 @@ public class rh extends com.aide.common.Abstractma {
     private int rN(android.app.AlertDialog r5) {
         java.lang.Throwable th = null;
         java.lang.Throwable $ex20 = null;
-        int $pc20 = 10;
+        int $pc20 = 4;
         $sw20: while (true) {
             switch ($pc20) {
                 case 10: {

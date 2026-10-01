@@ -73,7 +73,7 @@ public interface Interfacedx extends android.os.IInterface {
                                 $ex0 = $t;
                                 $pc0 = 14; continue $sw0;
                             }
-                            $pc0 = 14; continue $sw0;
+                            throw new java.lang.IllegalStateException();
                         }
                         case 14: {
                             th = $ex0;

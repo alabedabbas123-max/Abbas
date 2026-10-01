@@ -157,7 +157,7 @@ public final class Om {
                     { $pc3 = 19; continue $sw3; }
                 }
                 case 15: {
-                    $pc3 = 17; continue $sw3;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 17: {
                     throw new java.lang.IllegalStateException();

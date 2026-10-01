@@ -1700,7 +1700,7 @@ public class Cl {
                 }
                 case 9: {
                     r5 = "";
-                    $pc24 = 12; continue $sw24;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 12: {
                     return "";

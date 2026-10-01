@@ -162,28 +162,29 @@ public class Crashlytics extends io.fabric.sdk.android.Kit<java.lang.Void> imple
 
     @java.lang.Deprecated
     public synchronized void setListener(com.crashlytics.android.core.Interfaceea r2) {
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex1 = null;
-        int $pc1 = -1;
-        $sw1: while (true) {
-            switch ($pc1) {
-                case -1: {
-                    monitor-enter(this);
-                    try {
-                        this.core.setListener(r2);
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        $pc1 = 6; continue $sw1;
+        synchronized (this) {
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex1 = null;
+            int $pc1 = -1;
+            $sw1: while (true) {
+                switch ($pc1) {
+                    case -1: {
+                        try {
+                            this.core.setListener(r2);
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            $pc1 = 6; continue $sw1;
+                        }
+                        return;
                     }
-                    monitor-exit(this);
-                    return;
+                    case 6: {
+                        th = $ex1;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 6: {
-                    th = $ex1;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 

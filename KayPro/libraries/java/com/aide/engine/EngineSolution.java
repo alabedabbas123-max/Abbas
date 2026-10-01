@@ -688,7 +688,7 @@ public class EngineSolution implements android.os.Parcelable {
         long r16 = 0L;
         java.lang.Throwable th = null;
         java.lang.Throwable $ex11 = null;
-        int $pc11 = 68;
+        int $pc11 = 4;
         $sw11: while (true) {
             switch ($pc11) {
                 case 68: {
@@ -1028,7 +1028,7 @@ public class EngineSolution implements android.os.Parcelable {
                 case -1: {
                     r6 = r28;
                     r4 = 3077489901940902155L;
-                    $pc12 = 84; continue $sw12;
+                    $pc12 = 87; continue $sw12;
                 }
                 case 84: {
                     th = th;
@@ -1338,7 +1338,7 @@ public class EngineSolution implements android.os.Parcelable {
                         $ex12 = $t;
                         $pc12 = 76; continue $sw12;
                     }
-                    $pc12 = 76; continue $sw12;
+                    $pc12 = 64; continue $sw12;
                 }
                 case 76: {
                     th = th;
@@ -1351,7 +1351,7 @@ public class EngineSolution implements android.os.Parcelable {
                 case 80: {
                     r0 = r26;
                     r4 = 3077489901940902155L;
-                    $pc12 = 81; continue $sw12;
+                    $pc12 = 36; continue $sw12;
                 }
                 case 81: {
                     th = th;

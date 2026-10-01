@@ -179,10 +179,10 @@ public class IJ {
                     return r1;
                 }
                 case 11: {
-                    $pc1 = 12; continue $sw1;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 12: {
-                    $pc1 = 13; continue $sw1;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 13: {
                     throw new java.lang.IllegalStateException();
@@ -298,7 +298,7 @@ public class IJ {
                         if ($t instanceof abcd.nD) { $pc2 = 41; continue $sw2; }
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
                     }
-                    $pc2 = 38; continue $sw2;
+                    $pc2 = 6; continue $sw2;
                 }
                 case 38: {
                     e = $ex2;
@@ -420,7 +420,7 @@ public class IJ {
                 }
                 case 10: {
                     if (this.SI == abcd.AbstracteI.c.j6) { $pc3 = 13; continue $sw3; }
-                    $pc3 = 38; continue $sw3;
+                    $pc3 = 45; continue $sw3;
                 }
                 case 38: {
                     e = $ex3;
@@ -482,7 +482,7 @@ public class IJ {
                 }
                 case 7: {
                     this.we.j6();
-                    $pc4 = 22; continue $sw4;
+                    return;
                 }
                 case 22: {
                     return;
@@ -892,7 +892,7 @@ public class IJ {
                 }
                 case 25: {
                     j6(r2);
-                    $pc7 = 103; continue $sw7;
+                    $pc7 = 8; continue $sw7;
                 }
                 case 103: {
                     e = $ex7;
@@ -1056,7 +1056,7 @@ public class IJ {
                     $pc10 = 97; continue $sw10;
                 }
                 case 97: {
-                    $pc10 = 86; continue $sw10;
+                    $pc10 = 93; continue $sw10;
                 }
                 case 86: {
                     e = $ex10;
@@ -1290,7 +1290,7 @@ public class IJ {
                         $pc10 = 83; continue $sw10;
                     }
                     r13 = r21;
-                    $pc10 = 83; continue $sw10;
+                    $pc10 = 15; continue $sw10;
                 }
                 case 83: {
                     th = $ex10;
@@ -1368,10 +1368,10 @@ public class IJ {
                     return r1;
                 }
                 case 11: {
-                    $pc11 = 12; continue $sw11;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 12: {
-                    $pc11 = 13; continue $sw11;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 13: {
                     throw new java.lang.IllegalStateException();
@@ -1652,7 +1652,7 @@ public class IJ {
                         $pc17 = 20; continue $sw17;
                     }
                     this.gn = null;
-                    $pc17 = 20; continue $sw17;
+                    return;
                 }
                 case 20: {
                     th = $ex17;

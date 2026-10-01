@@ -82,7 +82,7 @@ public class Gw {
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
                     }
                     r8 = r9;
-                    $pc0 = 20; continue $sw0;
+                    $pc0 = 24; continue $sw0;
                 }
                 case 20: {
                     e = $ex0;
@@ -175,7 +175,7 @@ public class Gw {
                 }
                 case 12: {
                     r0 = r2;
-                    $pc1 = 13; continue $sw1;
+                    $pc1 = 42; continue $sw1;
                 }
                 case 13: {
                     e = e;
@@ -225,15 +225,15 @@ public class Gw {
                 }
                 case 15: {
                     r3 = null;
-                    $pc1 = 29; continue $sw1;
+                    $pc1 = 35; continue $sw1;
                 }
                 case 29: {
                     th = th;
-                    $pc1 = 40; continue $sw1;
+                    $pc1 = 35; continue $sw1;
                 }
                 case 40: {
                     e = e;
-                    $pc1 = 31; continue $sw1;
+                    $pc1 = 35; continue $sw1;
                 }
                 case 31: {
                     e = e;
@@ -257,10 +257,10 @@ public class Gw {
                     }
                 }
                 case 19: {
-                    $pc1 = 46; continue $sw1;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 46: {
-                    $pc1 = 47; continue $sw1;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 47: {
                     throw new java.lang.IllegalStateException();
@@ -304,7 +304,7 @@ public class Gw {
                         if ($t instanceof java.io.UnsupportedEncodingException) { $pc2 = 13; continue $sw2; }
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
                     }
-                    $pc2 = 13; continue $sw2;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 13: {
                     return null;
@@ -422,7 +422,7 @@ public class Gw {
                         if ($t instanceof java.lang.NullPointerException) { $pc4 = 39; continue $sw4; }
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
                     }
-                    $pc4 = 10; continue $sw4;
+                    $pc4 = 16; continue $sw4;
                 }
                 case 10: {
                     e = $ex4;
@@ -520,30 +520,31 @@ public class Gw {
     }
 
     private static synchronized org.apache.http.client.HttpClient j6(abcd.Zw r2) {
-        org.apache.http.client.HttpClient r1 = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex5 = null;
-        int $pc5 = -1;
-        $sw5: while (true) {
-            switch ($pc5) {
-                case -1: {
-                    monitor-enter(abcd.Gw.class);
-                    try {
-                        r1 = r2.v5();
-                        j6(r1, r2);
-                    } catch (java.lang.Throwable $t) {
-                        $ex5 = $t;
-                        $pc5 = 7; continue $sw5;
+        synchronized (abcd.Gw.class) {
+            org.apache.http.client.HttpClient r1 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex5 = null;
+            int $pc5 = -1;
+            $sw5: while (true) {
+                switch ($pc5) {
+                    case -1: {
+                        try {
+                            r1 = r2.v5();
+                            j6(r1, r2);
+                        } catch (java.lang.Throwable $t) {
+                            $ex5 = $t;
+                            $pc5 = 7; continue $sw5;
+                        }
+                        return r1;
                     }
-                    monitor-exit(abcd.Gw.class);
-                    return r1;
+                    case 7: {
+                        th = $ex5;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 7: {
-                    th = $ex5;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 

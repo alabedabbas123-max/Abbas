@@ -657,16 +657,16 @@ public class BC {
                     return r1;
                 }
                 case 13: {
-                    $pc11 = 14; continue $sw11;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 14: {
-                    $pc11 = 15; continue $sw11;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 15: {
-                    $pc11 = 16; continue $sw11;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 16: {
-                    $pc11 = 17; continue $sw11;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 17: {
                     throw new java.lang.IllegalStateException();

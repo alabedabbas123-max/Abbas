@@ -404,7 +404,7 @@ public class xJ extends abcd.AbstractsI implements abcd.SJ, abcd.BI {
                             $pc4 = 18; continue $sw4;
                         }
                         r4.close();
-                        $pc4 = 18; continue $sw4;
+                        $pc4 = 22; continue $sw4;
                     }
                     case 18: {
                         th = $ex4;
@@ -712,7 +712,7 @@ public class xJ extends abcd.AbstractsI implements abcd.SJ, abcd.BI {
                         if ($t instanceof abcd.jD) { $pc6 = 50; continue $sw6; }
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
                     }
-                    $pc6 = 50; continue $sw6;
+                    $pc6 = 9; continue $sw6;
                 }
                 case 50: {
                     e = $ex6;
@@ -745,7 +745,7 @@ public class xJ extends abcd.AbstractsI implements abcd.SJ, abcd.BI {
                 }
                 case 11: {
                     r8 = '&';
-                    $pc6 = 52; continue $sw6;
+                    throw new java.lang.IllegalStateException();
                 }
                 case 52: {
                     e = $ex6;
@@ -872,7 +872,7 @@ public class xJ extends abcd.AbstractsI implements abcd.SJ, abcd.BI {
                         $ex8 = $t;
                         $pc8 = 27; continue $sw8;
                     }
-                    $pc8 = 27; continue $sw8;
+                    $pc8 = 9; continue $sw8;
                 }
                 case 27: {
                     th = $ex8;
@@ -1002,7 +1002,7 @@ public class xJ extends abcd.AbstractsI implements abcd.SJ, abcd.BI {
                         if ($t instanceof abcd.jD) { $pc11 = 19; continue $sw11; }
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
                     }
-                    $pc11 = 12; continue $sw11;
+                    $pc11 = 5; continue $sw11;
                 }
                 case 12: {
                     th = $ex11;
@@ -1094,7 +1094,7 @@ public class xJ extends abcd.AbstractsI implements abcd.SJ, abcd.BI {
                         if ($t instanceof abcd.jD) { $pc12 = 22; continue $sw12; }
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
                     }
-                    $pc12 = 15; continue $sw12;
+                    $pc12 = 5; continue $sw12;
                 }
                 case 15: {
                     th = $ex12;

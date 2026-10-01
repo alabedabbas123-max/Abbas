@@ -138,7 +138,7 @@ class OG extends abcd.FE {
                     $pc2 = 16; continue $sw2;
                 }
                 case 16: {
-                    $pc2 = 7; continue $sw2;
+                    $pc2 = 6; continue $sw2;
                 }
                 case 7: {
                     th = $ex2;

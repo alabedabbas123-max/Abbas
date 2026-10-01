@@ -1019,7 +1019,7 @@ public class nH extends abcd.OE {
                     $pc16 = 42; continue $sw16;
                 }
                 case 42: {
-                    $pc16 = 35; continue $sw16;
+                    $pc16 = 27; continue $sw16;
                 }
                 case 35: {
                     th = $ex16;
@@ -1067,7 +1067,7 @@ public class nH extends abcd.OE {
                         $ex16 = $t;
                         $pc16 = 35; continue $sw16;
                     }
-                    $pc16 = 15; continue $sw16;
+                    $pc16 = 19; continue $sw16;
                 }
                 case 15: {
                     e = $ex16;
@@ -1584,7 +1584,7 @@ public class nH extends abcd.OE {
                 }
                 case 9: {
                     r3.v5();
-                    $pc28 = 10; continue $sw28;
+                    $pc28 = 14; continue $sw28;
                 }
                 case 10: {
                     th = $ex28;

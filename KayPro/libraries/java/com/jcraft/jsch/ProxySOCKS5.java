@@ -86,7 +86,7 @@ public class ProxySOCKS5 implements com.jcraft.jsch.Proxy {
                     this.FH = null;
                     this.Hw = null;
                     this.v5 = null;
-                    $pc1 = 13; continue $sw1;
+                    return;
                 }
                 case 13: {
                     return;
@@ -322,7 +322,7 @@ public class ProxySOCKS5 implements com.jcraft.jsch.Proxy {
                         if ($t instanceof java.lang.RuntimeException) { $pc2 = 45; continue $sw2; }
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
                     }
-                    $pc2 = 45; continue $sw2;
+                    $pc2 = 44; continue $sw2;
                 }
                 case 45: {
                     e = $ex2;
@@ -344,10 +344,10 @@ public class ProxySOCKS5 implements com.jcraft.jsch.Proxy {
                     throw new com.jcraft.jsch.JSchException("ProxySOCKS5: " + e.toString(), e);
                 }
                 case 47: {
-                    $pc2 = 48; continue $sw2;
+                    return;
                 }
                 case 48: {
-                    $pc2 = 49; continue $sw2;
+                    return;
                 }
                 case 49: {
                     return;

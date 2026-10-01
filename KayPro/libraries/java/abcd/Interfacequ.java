@@ -270,7 +270,7 @@ public interface Interfacequ extends android.os.IInterface {
                                 $ex3 = $t;
                                 $pc3 = 17; continue $sw3;
                             }
-                            $pc3 = 17; continue $sw3;
+                            throw new java.lang.IllegalStateException();
                         }
                         case 17: {
                             th = $ex3;
@@ -359,7 +359,7 @@ public interface Interfacequ extends android.os.IInterface {
                         }
                         case 10: {
                             r2 = null;
-                            $pc4 = 13; continue $sw4;
+                            throw new java.lang.IllegalStateException();
                         }
                         case 13: {
                             th = $ex4;
@@ -449,7 +449,7 @@ public interface Interfacequ extends android.os.IInterface {
                         }
                         case 10: {
                             r2 = null;
-                            $pc5 = 13; continue $sw5;
+                            throw new java.lang.IllegalStateException();
                         }
                         case 13: {
                             th = $ex5;

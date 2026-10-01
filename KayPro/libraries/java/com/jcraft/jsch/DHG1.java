@@ -277,7 +277,7 @@ public class DHG1 extends com.jcraft.jsch.KeyExchange {
                 }
                 case 19: {
                     java.lang.System.err.println(e);
-                    $pc2 = 17; continue $sw2;
+                    $pc2 = 24; continue $sw2;
                 }
                 case 17: {
                     e = e;
@@ -352,7 +352,7 @@ public class DHG1 extends com.jcraft.jsch.KeyExchange {
                     r110 = r59.j6(r14);
                     if (com.jcraft.jsch.JSch.v5().isEnabled(1) == false) { $pc2 = 38; continue $sw2; }
                     com.jcraft.jsch.JSch.v5().j6(1, "ssh_dss_verify: signature " + r110);
-                    $pc2 = 29; continue $sw2;
+                    $pc2 = 33; continue $sw2;
                 }
                 case 29: {
                     e = e;
@@ -360,7 +360,7 @@ public class DHG1 extends com.jcraft.jsch.KeyExchange {
                 }
                 case 33: {
                     java.lang.System.err.println(e);
-                    $pc2 = 31; continue $sw2;
+                    $pc2 = 37; continue $sw2;
                 }
                 case 31: {
                     e = e;

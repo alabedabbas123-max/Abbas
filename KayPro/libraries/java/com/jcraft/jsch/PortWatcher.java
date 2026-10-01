@@ -78,7 +78,7 @@ class PortWatcher implements java.lang.Runnable {
                         if ($t instanceof java.lang.Exception) { $pc0 = 13; continue $sw0; }
                         throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
                     }
-                    $pc0 = 13; continue $sw0;
+                    return;
                 }
                 case 13: {
                     e = $ex0;
@@ -90,87 +90,87 @@ class PortWatcher implements java.lang.Runnable {
     }
 
     static com.jcraft.jsch.PortWatcher j6(com.jcraft.jsch.Session r5, java.lang.String r6, int r7) {
-        java.net.InetAddress r8 = null;
-        java.util.Vector r0 = null;
-        int r1 = 0;
-        com.jcraft.jsch.PortWatcher r2 = null;
-        java.lang.Throwable e = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex1 = null;
-        int $pc1 = -1;
-        $sw1: while (true) {
-            switch ($pc1) {
-                case -1: {
-                    try {
-                        r8 = java.net.InetAddress.getByName(r6);
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        if ($t instanceof java.net.UnknownHostException) { $pc1 = 27; continue $sw1; }
-                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+        synchronized (j6) {
+            java.net.InetAddress r8 = null;
+            java.util.Vector r0 = null;
+            int r1 = 0;
+            com.jcraft.jsch.PortWatcher r2 = null;
+            java.lang.Throwable e = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex1 = null;
+            int $pc1 = -1;
+            $sw1: while (true) {
+                switch ($pc1) {
+                    case -1: {
+                        try {
+                            r8 = java.net.InetAddress.getByName(r6);
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            if ($t instanceof java.net.UnknownHostException) { $pc1 = 27; continue $sw1; }
+                            throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow($t);
+                        }
+                        r0 = j6;
+                        r1 = 0;
+                        $pc1 = 33; continue $sw1;
                     }
-                    r0 = j6;
-                    monitor-enter(r0);
-                    r1 = 0;
-                    $pc1 = 33; continue $sw1;
-                }
-                case 33: {
-                    $pc1 = 24; continue $sw1;
-                }
-                case 24: {
-                    th = $ex1;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                case 7: {
-                    if (r1 >= j6.size()) { $pc1 = 8; continue $sw1; }
-                    try {
-                        r2 = (com.jcraft.jsch.PortWatcher) j6.elementAt(r1);
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        $pc1 = 24; continue $sw1;
+                    case 33: {
+                        $pc1 = 7; continue $sw1;
                     }
-                    if (r2.FH != r5) { $pc1 = 23; continue $sw1; }
-                    if (r2.Hw != r7) { $pc1 = 23; continue $sw1; }
-                    if (DW == null) { $pc1 = 20; continue $sw1; }
-                    if (r2.VH.equals(DW) == false) { $pc1 = 20; continue $sw1; }
-                    $pc1 = 21; continue $sw1;
-                }
-                case 21: {
-                    try {
-                        monitor-exit(r0);
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        $pc1 = 24; continue $sw1;
+                    case 24: {
+                        th = $ex1;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
                     }
-                    return r2;
-                }
-                case 20: {
-                    if (r2.VH.equals(r8) == true) { $pc1 = 21; continue $sw1; }
-                    $pc1 = 23; continue $sw1;
-                }
-                case 23: {
-                    try {
-                        r1 = r1 + 1;
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        $pc1 = 24; continue $sw1;
+                    case 7: {
+                        if (r1 >= j6.size()) { $pc1 = 8; continue $sw1; }
+                        try {
+                            r2 = (com.jcraft.jsch.PortWatcher) j6.elementAt(r1);
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            $pc1 = 24; continue $sw1;
+                        }
+                        if (r2.FH != r5) { $pc1 = 23; continue $sw1; }
+                        if (r2.Hw != r7) { $pc1 = 23; continue $sw1; }
+                        if (DW == null) { $pc1 = 20; continue $sw1; }
+                        if (r2.VH.equals(DW) == false) { $pc1 = 20; continue $sw1; }
+                        $pc1 = 21; continue $sw1;
                     }
-                    { $pc1 = 33; continue $sw1; }
-                }
-                case 8: {
-                    try {
-                        monitor-exit(r0);
-                    } catch (java.lang.Throwable $t) {
-                        $ex1 = $t;
-                        $pc1 = 24; continue $sw1;
+                    case 21: {
+                        try {
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            $pc1 = 24; continue $sw1;
+                        }
+                        return r2;
                     }
-                    return null;
+                    case 20: {
+                        if (r2.VH.equals(r8) == true) { $pc1 = 21; continue $sw1; }
+                        $pc1 = 23; continue $sw1;
+                    }
+                    case 23: {
+                        try {
+                            r1 = r1 + 1;
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            $pc1 = 24; continue $sw1;
+                        }
+                        { $pc1 = 33; continue $sw1; }
+                    }
+                    case 8: {
+                        try {
+                        } catch (java.lang.Throwable $t) {
+                            $ex1 = $t;
+                            $pc1 = 24; continue $sw1;
+                        }
+                        return null;
+                    }
+                    case 27: {
+                        e = $ex1;
+                        throw new com.jcraft.jsch.JSchException("PortForwardingL: invalid address " + r6 + " specified.", e);
+                    }
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 27: {
-                    e = $ex1;
-                    throw new com.jcraft.jsch.JSchException("PortForwardingL: invalid address " + r6 + " specified.", e);
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 
@@ -226,87 +226,88 @@ class PortWatcher implements java.lang.Runnable {
     }
 
     static void j6(com.jcraft.jsch.Session r7) {
-        java.util.Vector r0 = null;
-        com.jcraft.jsch.PortWatcher[] r1 = null;
-        int r2 = 0;
-        int r3 = 0;
-        int r4 = 0;
-        com.jcraft.jsch.PortWatcher r5 = null;
-        com.jcraft.jsch.PortWatcher r8 = null;
-        java.lang.Throwable th = null;
-        java.lang.Throwable $ex4 = null;
-        int $pc4 = -1;
-        $sw4: while (true) {
-            switch ($pc4) {
-                case -1: {
-                    r0 = j6;
-                    monitor-enter(r0);
-                    try {
-                        r1 = new com.jcraft.jsch.PortWatcher[j6.size()];
-                    } catch (java.lang.Throwable $t) {
-                        $ex4 = $t;
-                        $pc4 = 15; continue $sw4;
+        synchronized (j6) {
+            java.util.Vector r0 = null;
+            com.jcraft.jsch.PortWatcher[] r1 = null;
+            int r2 = 0;
+            int r3 = 0;
+            int r4 = 0;
+            com.jcraft.jsch.PortWatcher r5 = null;
+            com.jcraft.jsch.PortWatcher r8 = null;
+            java.lang.Throwable th = null;
+            java.lang.Throwable $ex4 = null;
+            int $pc4 = -1;
+            $sw4: while (true) {
+                switch ($pc4) {
+                    case -1: {
+                        r0 = j6;
+                        try {
+                            r1 = new com.jcraft.jsch.PortWatcher[j6.size()];
+                        } catch (java.lang.Throwable $t) {
+                            $ex4 = $t;
+                            $pc4 = 15; continue $sw4;
+                        }
+                        r2 = 0;
+                        r3 = 0;
+                        r4 = 0;
+                        $pc4 = 6; continue $sw4;
                     }
-                    r2 = 0;
-                    r3 = 0;
-                    r4 = 0;
-                    $pc4 = 6; continue $sw4;
-                }
-                case 6: {
-                    if (r3 >= j6.size()) { $pc4 = 7; continue $sw4; }
-                    try {
-                        r5 = (com.jcraft.jsch.PortWatcher) j6.elementAt(r3);
-                    } catch (java.lang.Throwable $t) {
-                        $ex4 = $t;
-                        $pc4 = 15; continue $sw4;
+                    case 6: {
+                        if (r3 >= j6.size()) { $pc4 = 7; continue $sw4; }
+                        try {
+                            r5 = (com.jcraft.jsch.PortWatcher) j6.elementAt(r3);
+                        } catch (java.lang.Throwable $t) {
+                            $ex4 = $t;
+                            $pc4 = 15; continue $sw4;
+                        }
+                        if (r5.FH != r7) { $pc4 = 14; continue $sw4; }
+                        try {
+                            r5.j6();
+                            r1[r4] = r5;
+                            r4 = r4 + 1;
+                        } catch (java.lang.Throwable $t) {
+                            $ex4 = $t;
+                            $pc4 = 15; continue $sw4;
+                        }
+                        $pc4 = 14; continue $sw4;
                     }
-                    if (r5.FH != r7) { $pc4 = 14; continue $sw4; }
-                    try {
-                        r5.j6();
-                        r1[r4] = r5;
-                        r4 = r4 + 1;
-                    } catch (java.lang.Throwable $t) {
-                        $ex4 = $t;
-                        $pc4 = 15; continue $sw4;
+                    case 14: {
+                        try {
+                            r3 = r3 + 1;
+                        } catch (java.lang.Throwable $t) {
+                            $ex4 = $t;
+                            $pc4 = 15; continue $sw4;
+                        }
+                        $pc4 = 7; continue $sw4;
                     }
-                    $pc4 = 14; continue $sw4;
-                }
-                case 14: {
-                    try {
-                        r3 = r3 + 1;
-                    } catch (java.lang.Throwable $t) {
-                        $ex4 = $t;
-                        $pc4 = 15; continue $sw4;
+                    case 7: {
+                        if (r2 >= r4) { $pc4 = 8; continue $sw4; }
+                        try {
+                            r8 = r1[r2];
+                            j6.removeElement(r8);
+                            r2 = r2 + 1;
+                        } catch (java.lang.Throwable $t) {
+                            $ex4 = $t;
+                            $pc4 = 15; continue $sw4;
+                        }
+                        { $pc4 = 7; continue $sw4; }
                     }
-                    $pc4 = 7; continue $sw4;
-                }
-                case 7: {
-                    if (r2 >= r4) { $pc4 = 8; continue $sw4; }
-                    try {
-                        r8 = r1[r2];
-                        j6.removeElement(r8);
-                        r2 = r2 + 1;
-                    } catch (java.lang.Throwable $t) {
-                        $ex4 = $t;
-                        $pc4 = 15; continue $sw4;
+                    case 8: {
+                        try {
+                        } catch (java.lang.Throwable $t) {
+                            $ex4 = $t;
+                            $pc4 = 15; continue $sw4;
+                        }
+                        return;
                     }
-                    { $pc4 = 7; continue $sw4; }
-                }
-                case 8: {
-                    try {
-                        monitor-exit(r0);
-                    } catch (java.lang.Throwable $t) {
-                        $ex4 = $t;
-                        $pc4 = 15; continue $sw4;
+                    case 15: {
+                        th = $ex4;
+                        throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
                     }
-                    return;
+                    default: throw new java.lang.IllegalStateException();
                 }
-                case 15: {
-                    th = $ex4;
-                    throw com.almlkaide.kaypro.internal.DecompileSupport.rethrow(th);
-                }
-                default: throw new java.lang.IllegalStateException();
             }
+    
         }
     }
 
@@ -391,7 +392,7 @@ class PortWatcher implements java.lang.Runnable {
                 }
                 case 8: {
                     j6();
-                    $pc6 = 10; continue $sw6;
+                    return;
                 }
                 case 10: {
                     return;

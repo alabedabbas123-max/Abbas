@@ -114,7 +114,7 @@ public class BCDHPrivateKey implements javax.crypto.interfaces.DHPrivateKey, abc
     @Override
     public byte[] getEncoded() {
         java.lang.Throwable $ex2 = null;
-        int $pc2 = 9;
+        int $pc2 = 4;
         $sw2: while (true) {
             switch ($pc2) {
                 case 9: {

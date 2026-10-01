@@ -1,0 +1,81 @@
+name: Build KayPro APK
+
+on:
+  push:
+    branches: [ 'arena/**' ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate manifest, resources & package id
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: android-actions/setup-android@v3
+
+      - name: Assert application id is com.almlkaide.kaypro
+        run: |
+          set -e
+          grep -q "namespace 'com.almlkaide.kaypro'"     KayPro/build.gradle
+          grep -q "applicationId 'com.almlkaide.kaypro'" KayPro/build.gradle
+          grep -q 'package="com.almlkaide.kaypro"'       KayPro/AndroidManifest.xml
+          ! grep -rq 'com\.aide\.pro' KayPro/ || (echo "stale com.aide.pro reference found" && exit 1)
+          echo "package id OK"
+
+      - name: Process resources (independent of engine sources)
+        working-directory: KayPro
+        run: ./gradlew --no-daemon processDebugResources mergeDebugJavaResource
+
+      - name: Upload merged manifest
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: merged-manifest
+          path: KayPro/build/intermediates/merged_manifest/**/AndroidManifest.xml
+          if-no-files-found: ignore
+
+  assemble:
+    name: Assemble debug APK
+    runs-on: ubuntu-latest
+    needs: validate
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: android-actions/setup-android@v3
+
+      - name: assembleDebug
+        working-directory: KayPro
+        run: ./gradlew --no-daemon assembleDebug 2>&1 | tee ../assemble-debug.log
+
+      - name: Upload APK
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: KayPro-debug-apk
+          path: KayPro/build/outputs/apk/debug/*.apk
+          if-no-files-found: ignore
+
+      - name: Upload build log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: assemble-debug-log
+          path: assemble-debug.log
+          if-no-files-found: ignore

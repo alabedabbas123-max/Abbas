@@ -1,0 +1,18 @@
+{
+  "applicationPackage": "com.almlkaide.kaypro",
+  "projectSourceRoot": "java",
+  "librarySourceRoot": "libraries/java",
+  "projectJavaFiles": 187,
+  "libraryJavaFiles": 6518,
+  "projectModules": [
+    "com.almlkaide.kaypro (application code)",
+    "com.almlkaide.kaypro.manifesteditor (manifest editor feature)",
+    "com.almlkaide.kaypro.assetsmanager (assets manager feature)"
+  ],
+  "note": "Use both java and libraries/java as Java source roots.",
+  "buildSourceRoots": [
+    "java",
+    "libraries/java"
+  ],
+  "officialAndroidLibraries": "Resolved by Gradle; embedded official sources removed."
+}

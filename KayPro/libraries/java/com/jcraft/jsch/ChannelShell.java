@@ -1,0 +1,52 @@
+package com.jcraft.jsch;
+
+public class ChannelShell extends com.jcraft.jsch.ChannelSession {
+    ChannelShell() {
+        this.gW = true;
+    }
+
+    @Override
+    public void DW(boolean r1) {
+        super.DW(r1);
+    }
+
+    @Override
+    public void QX() {
+        com.jcraft.jsch.Session r0 = EQ();
+        XL();     // Catch: java.lang.Exception -> L11
+        new com.jcraft.jsch.RequestShell().j6(r0, this);     // Catch: java.lang.Exception -> L11
+        if (this.EQ.j6 == null) goto L20;
+        this.we = new java.lang.Thread(this);
+        this.we.setName("Shell for " + r0.lp);
+        boolean r1 = r0.x9;
+        if (r1 == false) goto L9;
+        this.we.setDaemon(r1);
+    L9:
+        this.we.start();
+        return;
+    L20:
+        return;
+    L11:
+        e = move-exception;
+        if ((e instanceof com.jcraft.jsch.JSchException) == true) goto L17;
+        throw new com.jcraft.jsch.JSchException("ChannelShell", e);
+    L17:
+        throw ((com.jcraft.jsch.JSchException) e);
+    }
+
+    @Override
+    public void j6(boolean r1) {
+        super.j6(r1);
+    }
+
+    @Override
+    public void run() {
+        super.run();
+    }
+
+    @Override
+    void we() {
+        this.EQ.j6(EQ().ro);
+        this.EQ.DW(EQ().cn);
+    }
+}

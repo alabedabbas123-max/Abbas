@@ -1,0 +1,30 @@
+package org.dom4j.tree;
+
+import java.util.Iterator;
+
+public class SingleIterator implements Iterator {
+    private boolean first = true;
+    private Object object;
+
+    public SingleIterator(Object obj) {
+        this.object = obj;
+    }
+
+    @Override
+    public boolean hasNext() {
+        return this.first;
+    }
+
+    @Override
+    public Object next() {
+        Object obj = this.object;
+        this.object = null;
+        this.first = false;
+        return obj;
+    }
+
+    @Override
+    public void remove() {
+        throw new UnsupportedOperationException("remove() is not supported by this iterator");
+    }
+}

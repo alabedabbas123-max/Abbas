@@ -1,0 +1,71 @@
+package abcd;
+
+public interface InterfacehN {
+    public static final abcd.zL BT = null;
+    public static final abcd.zL DW = null;
+    public static final abcd.zL EQ = null;
+    public static final abcd.zL FH = null;
+    public static final abcd.zL Hw = null;
+    public static final abcd.zL J0 = null;
+    public static final abcd.zL J8 = null;
+    public static final abcd.zL Mr = null;
+    public static final abcd.zL P8 = null;
+    public static final abcd.zL QX = null;
+    public static final abcd.zL U2 = null;
+    public static final abcd.zL VH = null;
+    public static final abcd.zL Ws = null;
+    public static final abcd.zL XL = null;
+    public static final abcd.zL Zo = null;
+    public static final abcd.zL a8 = null;
+    public static final abcd.zL aM = null;
+    public static final abcd.zL ei = null;
+    public static final abcd.zL er = null;
+    public static final abcd.zL gW = null;
+    public static final abcd.zL gn = null;
+    public static final abcd.zL j3 = null;
+    public static final abcd.zL j6 = null;
+    public static final abcd.zL lg = null;
+    public static final abcd.zL nw = null;
+    public static final abcd.zL rN = null;
+    public static final abcd.zL tp = null;
+    public static final abcd.zL u7 = null;
+    public static final abcd.zL v5 = null;
+    public static final abcd.zL vy = null;
+    public static final abcd.zL we = null;
+    public static final abcd.zL yS = null;
+
+    static {
+        j6 = new abcd.zL("2.16.840.1.101.3.4");
+        DW = j6.DW("2.1");
+        FH = j6.DW("2.2");
+        Hw = j6.DW("2.3");
+        v5 = j6.DW("2.4");
+        Zo = j6.DW("1");
+        VH = Zo.DW("1");
+        gn = Zo.DW("2");
+        u7 = Zo.DW("3");
+        tp = Zo.DW("4");
+        EQ = Zo.DW("5");
+        we = Zo.DW("6");
+        J0 = Zo.DW("7");
+        J8 = Zo.DW("21");
+        Ws = Zo.DW("22");
+        QX = Zo.DW("23");
+        XL = Zo.DW("24");
+        aM = Zo.DW("25");
+        j3 = Zo.DW("26");
+        Mr = Zo.DW("27");
+        U2 = Zo.DW("41");
+        a8 = Zo.DW("42");
+        lg = Zo.DW("43");
+        rN = Zo.DW("44");
+        er = Zo.DW("45");
+        yS = Zo.DW("46");
+        gW = Zo.DW("47");
+        BT = j6.DW("3");
+        vy = BT.DW("1");
+        P8 = BT.DW("2");
+        ei = BT.DW("3");
+        nw = BT.DW("4");
+    }
+}

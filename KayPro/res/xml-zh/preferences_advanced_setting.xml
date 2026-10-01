@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:key="preference_screen"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceScreen android:title="编辑器">
+        <PreferenceCategory android:title="代码高亮">
+            <Preference android:title="代码高亮配置" android:key="preference_highlight" />
+        </PreferenceCategory>
+        <PreferenceCategory android:title="快捷符号">
+            <Preference android:title="自定义快捷符号" android:key="preference_quick_key" android:summary="自定义编辑框快捷符号" />
+            <SwitchPreference android:title="禁用快捷键" android:key="disable_quickkeybar" android:defaultValue="false" />
+        </PreferenceCategory>
+        <PreferenceCategory android:title="字体">
+            <EditTextPreference android:hint="字体路径" android:selectAllOnFocus="true" android:title="编辑框字体" android:key="advanced_setting_editor_font" android:summary="设置编辑框字体。留空则使用默认" />
+        </PreferenceCategory>
+        <PreferenceCategory android:title="背景">
+            <EditTextPreference android:hint="编辑框背景" android:selectAllOnFocus="true" android:title="图片路径" android:key="advanced_setting_editor_bg" android:summary="设置编辑框背景图片" />
+            <Preference android:title="选择图片" android:key="choose_bg_image" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+    <PreferenceScreen android:title="工程相关">
+        <PreferenceCategory android:title="Gradle">
+            <SwitchPreference android:title="启用Gradle" android:key="advanced_setting_enable_gradle" android:summary="完整的Gradle、SDK、NDK、JDK支持" android:defaultValue="false" />
+            <Preference android:title="Gradle配置" android:key="advanced_setting_pref_gradle_config" />
+        </PreferenceCategory>
+        <PreferenceCategory android:title="Res混淆">
+            <SwitchPreference android:title="启用 Res资源混淆" android:key="advanced_setting_enable_resguard" android:summary="混淆res，简短文件名，减少APK体积。" android:defaultValue="false" />
+            <Preference android:title="添加配置文件到工程" android:key="add_proguard_config" android:summary="添加Res混淆配置文件到工程" />
+        </PreferenceCategory>
+        <PreferenceCategory android:title="StringFog">
+            <SwitchPreference android:title="启用String Fog" android:key="advanced_setting_enable_stringfog" android:summary="编译时加密Class中的字符串" android:defaultValue="false" />
+            <Preference android:title="功能说明" android:key="preference_stringfog" />
+        </PreferenceCategory>
+        <PreferenceCategory android:title="构建">
+            <SwitchPreference android:title="Dex分包修复" android:key="adset_use_dexmerger" android:summary="修复分包会生成几十个dex问题" android:defaultValue="true" />
+            <SwitchPreference android:title="启用 adrt调试文件" android:key="advanced_setting_enable_adrt" android:summary="关闭后将无法使用debug调试模式。重启AIDE并重新构建工程生效" android:defaultValue="true" />
+            <SwitchPreference android:title="重定义Apk构建路径" android:key="advanced_setting_adjust_apk_build_path" android:summary="将打包的apk存放到 -> 工程/build/bin/里面，而不是/sdcard/Android/data/xx/cache/apk/" android:defaultValue="false" />
+        </PreferenceCategory>
+        <PreferenceCategory android:title="工程">
+            <EditTextPreference android:hint="com.mycompany." android:selectAllOnFocus="true" android:title="包名前缀" android:key="advanced_setting_package_prefix" android:summary="设置创建工程的包名前缀，留空则使用默认。包名规范：com(xxx).开发者名.应用名" android:defaultValue="com.mycompany." />
+            <EditTextPreference android:selectAllOnFocus="true" android:title="自定义工程路径" android:key="project_home" android:summary="默认工程路径:/sdcard/AppProject" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+    <PreferenceScreen android:title="界面显示">
+        <PreferenceCategory android:title="主题">
+            <com.almlkaide.kaypro.aide.preference.PreferenceTheme android:title="软件主题" />
+        </PreferenceCategory>
+        <PreferenceCategory android:title="文件浏览器">
+            <SwitchPreference android:title="启用侧滑栏" android:key="advanced_setting_enable_drawer" android:summary="是否启用侧滑栏浏览器" android:defaultValue="true" />
+            <SwitchPreference android:title="启用FAB按钮" android:key="enableMainMasterButton" android:dependency="advanced_setting_enable_drawer" android:defaultValue="false" />
+            <SwitchPreference android:title="启用DrawerToggle" android:key="enableDrawerToggle" android:dependency="advanced_setting_enable_drawer" android:defaultValue="true" />
+        </PreferenceCategory>
+        <PreferenceCategory android:title="窗口">
+            <SwitchPreference android:title="adjustPan模式" android:key="use_adjustPan" android:summary="不希望视图被输入法挤压可开启此项" android:defaultValue="false" />
+            <SwitchPreference android:title="暗状态条" android:key="dark_statusbar" android:summary="要求系统6.0+，并且是默认亮主题" android:defaultValue="false" />
+            <SwitchPreference android:title="调节ActionBar TAB" android:key="adjust_actionbar" android:summary="安卓10的可以试下，重启生效" android:defaultValue="false" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+    <PreferenceScreen android:title="翻译相关">
+        <PreferenceCategory android:title="中文补全">
+            <SwitchPreference android:title="启用中文补全" android:key="advanced_setting_enable_translate" android:summary="补全翻译，添加中文注释（/sdcard/.aide/_data/translate/translate.db）" android:defaultValue="false" />
+            <SwitchPreference android:title="不要自动翻译" android:key="not_translate" android:summary="开启后对数据库仅读" android:defaultValue="false" />
+            <EditTextPreference android:selectAllOnFocus="true" android:title="自定义翻译数据库文件路径" android:key="translate_file" android:summary="不设置则使用默认" />
+            <Preference android:title="清除翻译文件" android:key="clear_translate" android:summary="清除已翻译的内容，清除后下次需重新翻译" />
+        </PreferenceCategory>
+        <PreferenceCategory android:title="代码补全">
+            <SwitchPreference android:title="显示ApiVersion信息" android:key="completion_show_api_info" android:summary="显示Api是在哪个SDK版本中添加/弃用/移除的" android:defaultValue="true" />
+        </PreferenceCategory>
+        <PreferenceCategory android:title="UI设计器">
+            <SwitchPreference android:title="UI设计器中文" android:key="uidesign_language_chinese" android:summary="划掉后台重新打开" android:defaultValue="false" />
+        </PreferenceCategory>
+        <PreferenceCategory android:title="文字翻译">
+            <EditTextPreference android:selectAllOnFocus="true" android:title="设置网页翻译接口" android:key="api_web_translation" android:summary="设置文字翻译接口网址，%s为翻译词" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+    <PreferenceScreen android:title="快捷代码">
+        <PreferenceCategory android:title="菜单栏常用代码">
+            <SwitchPreference android:title="启用" android:key="advanced_setting_enable_menu_code" android:defaultValue="true" />
+            <EditTextPreference android:selectAllOnFocus="true" android:title="自定义常用代码文件路径" android:key="menucode_file" android:summary="不设置则使用默认" />
+            <Preference android:summary="默认/sdcard/.aide/_data/menucode/menucode.txt" />
+        </PreferenceCategory>
+        <PreferenceCategory android:title="Gradle补全">
+            <SwitchPreference android:title="启用" android:key="enable_gradle_comple" android:defaultValue="true" />
+            <Preference android:title="Gradle补全" android:key="gradle_comple" android:summary="一行一条" />
+            <EditTextPreference android:title="自定义Gradle补全文件" android:key="gradle_comple_file" android:summary="txt格式、一行一条" />
+            <Preference android:summary="重启生效" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+</PreferenceScreen>

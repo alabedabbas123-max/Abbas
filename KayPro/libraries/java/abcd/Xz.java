@@ -1,0 +1,4 @@
+package abcd;
+
+interface Xz {
+}

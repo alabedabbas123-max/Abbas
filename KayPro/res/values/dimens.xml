@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <dimen name="ldrawer_drawableSize">50.0dip</dimen>
+    <dimen name="ldrawer_barSize">18.0dip</dimen>
+    <dimen name="ldrawer_topBottomBarArrowSize">11.0dip</dimen>
+    <dimen name="ldrawer_thickness">2.0dip</dimen>
+    <dimen name="ldrawer_gapBetweenBars">3.5dip</dimen>
+    <dimen name="ldrawer_middleBarArrowSize">16.0dip</dimen>
+</resources>

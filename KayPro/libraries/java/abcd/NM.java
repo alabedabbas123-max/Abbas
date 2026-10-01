@@ -1,0 +1,34 @@
+package abcd;
+
+public class NM {
+    private int DW;
+    private java.lang.String j6;
+
+    public NM(java.lang.String r1) {
+        this.j6 = r1;
+        this.DW = 0;
+    }
+
+    public java.lang.String DW() {
+        int r0 = this.DW;
+        if (r0 != (-1)) goto L6;
+        return null;
+    L6:
+        int r1 = this.j6.indexOf(46, r0);
+        if (r1 != (-1)) goto L10;
+        java.lang.String r2 = this.j6.substring(this.DW);
+        this.DW = -1;
+        return r2;
+    L10:
+        java.lang.String r3 = this.j6.substring(this.DW, r1);
+        this.DW = r1 + 1;
+        return r3;
+    }
+
+    public boolean j6() {
+        if (this.DW == (-1)) goto L6;
+        return true;
+    L6:
+        return false;
+    }
+}

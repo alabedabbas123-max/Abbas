@@ -1,0 +1,34 @@
+package org.dom4j.dtd;
+
+public class ElementDecl {
+    private String model;
+    private String name;
+
+    public ElementDecl() {
+    }
+
+    public ElementDecl(String str, String str2) {
+        this.name = str;
+        this.model = str2;
+    }
+
+    public String getModel() {
+        return this.model;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public void setModel(String str) {
+        this.model = str;
+    }
+
+    public void setName(String str) {
+        this.name = str;
+    }
+
+    public String toString() {
+        return new StringBuffer().append("<!ELEMENT ").append(this.name).append(" ").append(this.model).append(">").toString();
+    }
+}

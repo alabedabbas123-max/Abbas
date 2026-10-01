@@ -1,0 +1,35 @@
+package abcd;
+
+public class iO implements abcd.WN {
+    private final java.util.Hashtable j6;
+
+    public iO() {
+        this.j6 = new java.util.Hashtable();
+    }
+
+    @Override
+    public abcd.RM getAttributes(java.util.Map r2) {
+        return new abcd.RM(j6(r2));
+    }
+
+    protected java.util.Hashtable j6(java.util.Map r7) {
+        java.util.Hashtable r0 = (java.util.Hashtable) this.j6.clone();
+        if (r0.containsKey(abcd.SM.j6) == true) goto L8;
+        abcd.oM r1 = (abcd.oM) r7.get("contentType");
+        if (r1 == null) goto L8;
+        abcd.QM r2 = new abcd.QM(abcd.SM.j6, new abcd.vM(r1));
+        r0.put(r2.v5(), r2);
+    L8:
+        if (r0.containsKey(abcd.SM.FH) == true) goto L11;
+        java.util.Date r3 = new java.util.Date();
+        abcd.QM r4 = new abcd.QM(abcd.SM.FH, new abcd.vM(new abcd.ZM(r3)));
+        r0.put(r4.v5(), r4);
+    L11:
+        if (r0.containsKey(abcd.SM.DW) == true) goto L13;
+        byte[] r8 = (byte[]) r7.get("digest");
+        abcd.QM r5 = new abcd.QM(abcd.SM.DW, new abcd.vM(new abcd.pM(r8)));
+        r0.put(r5.v5(), r5);
+    L13:
+        return r0;
+    }
+}

@@ -1,7 +1,7 @@
 # assembleDebug report
 
-- run: 36802057484
-- commit: f8338e98249ff6640a00186411c6569cdad2cc75
+- run: 36802308009
+- commit: 242463551333d720074d25a5316541bea16ff391
 - result: failure
 
 ## error summary
